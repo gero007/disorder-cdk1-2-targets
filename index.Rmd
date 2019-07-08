@@ -1,0 +1,237 @@
+---
+title: "Disorder in Cdk1/2 targets"
+output:
+  html_document:
+    df_print: paged
+    
+---
+```{r setup,echo=FALSE,message=FALSE,warning=FALSE,prompt=FALSE}
+library(jsonlite)
+library(readr)
+
+# yeastDiso is a complex database from MobiDB Saccharomyces cerevisiae. 
+
+yeastDiso<-stream_in(con = file("~/projects/cdk1_cyclinB1/phase_separation/disorder/disorder_UP000002311.mjson"),verbose = F)
+yeastDiso$mobidb_consensus <- yeastDiso$mobidb_consensus$disorder
+colnames(yeastDiso)[5] <- "disorder"
+
+CDK1targetSacCer <- read_delim("~/projects/cdk1_cyclinB1/phase_separation/disorder/CDK1targetSacCer.csv", 
+                          "\t", quote = "\\\"", escape_double = FALSE, 
+                          col_types = cols(X1 = col_skip(), input = col_skip(), 
+                          `yourlist:M201907046746803381A1F0E0DB47453E0216320D4B0BD1N` = col_skip()), 
+                          trim_ws = TRUE)
+
+# Now the comumn "disorder" is a unnamed list with a complex structure for each row of the data frame
+
+```
+
+# MobiDB
+  
+The [MobiDB](mobidb.bio.unipd.it) database of protein disorder and mobility annotations has been significantly updated and upgraded since its last major renewal in 2014. Several curated datasets for intrinsic disorder and folding upon binding have been integrated from specialized databases. The indirect evidence has also been expanded to better capture information available in the PDB, such as high temperature residues in X-ray structures and overall conformational diversity.  
+The database is organize in three layers containing data of different nature: Disorder, Linear Interacting Peptides (LIPs) and Dynamic structure.
+
+![Fig. 1: MobiDB confidence vs. coverage](/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/images/mobiDB_confVScoverage.png)
+
+
+
+
+```{r all data summary ,echo=FALSE,message=FALSE,warning=FALSE}
+
+npredictors=0
+nmobidblite=0
+nsimple=0
+#methods: mobidb-lite, simple
+for (i in 1:nrow(yeastDiso)) {
+  if(!is.null(yeastDiso[i,5]$predictors[[1]])){
+    npredictors=npredictors+1
+    }
+  if( "mobidb-lite" %in% yeastDiso[i,5]$predictors[[1]]$method){
+    nmobidblite=nmobidblite+1
+    }
+  if( "simple" %in% yeastDiso[i,5]$predictors[[1]]$method){
+    nsimple=nsimple+1
+    }  
+  }
+
+
+#methods: full bfactor missing_residues mobile
+nderived=0
+nfull=0
+nbfactor=0
+nmissing_residues=0
+nmobile=0
+
+for (i in 1:nrow(yeastDiso)) {
+  if(!is.null(yeastDiso[i,5]$derived[[1]])){
+    nderived=nderived+1
+  }
+  if( "full" %in% yeastDiso[i,5]$derived[[1]]$method){
+    nfull=nfull+1
+  }
+  if( "bfactor" %in% yeastDiso[i,5]$derived[[1]]$method){
+    nbfactor=nbfactor+1
+  }
+  if( "missing_residues" %in% yeastDiso[i,5]$derived[[1]]$method){
+    nmissing_residues=nmissing_residues+1
+  }
+  if( "mobile" %in% yeastDiso[i,5]$derived[[1]]$method){
+    nmobile=nmobile+1
+  }
+}
+#methods: full
+ndb=0
+for (i in 1:nrow(yeastDiso)) {
+  if(!is.null(yeastDiso[i,5]$db[[1]])){
+    ndb=ndb+1
+    }
+  }
+```
+
+```{r set disorder metrics columns,echo=FALSE,message=FALSE,warning=FALSE}
+
+#All the anotations in the prediction are for disordered regions
+predDisoPercAll <- c()
+for (i in 1:nrow(yeastDiso)) {
+  mat<-yeastDiso$disorder$predictors[[i]]$regions[[1]]
+  #calculate the number of disoredered AAs
+  nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+  proteinLength <- nchar(yeastDiso$sequence[i])
+  predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
+}
+yeastDiso$predDisoPercAll <- predDisoPercAll
+
+#For the derived methods (full -> the third matrix) the anotations could be Disorder, Structure or Conflict
+derivedDisoPercAll <- c()
+for (i in 1:nrow(yeastDiso)) {
+  if (!is.null(yeastDiso$disorder$derived[[i]])) {
+    fullIndex<-which(yeastDiso$disorder$derived[[i]]$method=="full")
+    mat<-yeastDiso$disorder$derived[[i]]$regions[[fullIndex]]
+#getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+    mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+    #calculate the number of disoredered AAs
+    nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+    proteinLength <- nchar(yeastDiso$sequence[i])
+    derivedDisoPercAll <- c(derivedDisoPercAll,(nDiso/proteinLength)*100)
+  } else {
+    derivedDisoPercAll <- c(derivedDisoPercAll,NA)
+  }
+
+}
+yeastDiso$derivedDisoPercAll <- derivedDisoPercAll
+
+#For the db curated assigments (full -> the only matrix) the anotations could be Disorder, Structure or Conflict
+dbDisoPercAll <- c()
+for (i in 1:nrow(yeastDiso)) {
+  if (!is.null(yeastDiso$disorder$db[[i]])) {
+    fullIndex<-which(yeastDiso$disorder$db[[i]]$method=="full")
+    mat<-yeastDiso$disorder$db[[i]]$regions[[fullIndex]]
+#getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+    mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+    #calculate the number of disoredered AAs
+    nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+    proteinLength <- nchar(yeastDiso$sequence[i])
+    dbDisoPercAll <- c(dbDisoPercAll,(nDiso/proteinLength)*100)
+  } else {
+    dbDisoPercAll <- c(dbDisoPercAll,NA)
+  }
+}
+yeastDiso$dbDisoPercAll <- dbDisoPercAll
+```
+
+
+```{r cdk1 targets summary,echo=FALSE,message=FALSE,warning=FALSE}
+
+# _____________________________________________________________
+
+#The row 294 cannot be mapped with the uniprot, I will remove it from CDK1targetsSacCer and yeastDisoCDK1target
+
+yeastDisoCDK1target<-yeastDiso[match(CDK1targetSacCer$Entry,yeastDiso$acc),]
+CDK1targetSacCer<-CDK1targetSacCer[-294,]
+yeastDisoCDK1target <- yeastDisoCDK1target[-294,]
+
+
+
+npredictorsCDK=0
+nmobidbliteCDK=0
+nsimpleCDK=0
+#methods: mobidb-lite, simple
+for (i in 1:nrow(yeastDisoCDK1target)) {
+  if(!is.null(yeastDisoCDK1target[i,5]$predictors[[1]])){
+    npredictorsCDK=npredictorsCDK+1
+    }
+  if( "mobidb-lite" %in% yeastDisoCDK1target[i,5]$predictors[[1]]$method){
+    nmobidbliteCDK=nmobidbliteCDK+1
+    }
+  if( "simple" %in% yeastDisoCDK1target[i,5]$predictors[[1]]$method){
+    nsimpleCDK=nsimpleCDK+1
+    }  
+  }
+
+
+#methods: full bfactor missing_residues mobile
+nderivedCDK=0
+nfullCDK=0
+nbfactorCDK=0
+nmissing_residuesCDK=0
+nmobileCDK=0
+
+for (i in 1:nrow(yeastDisoCDK1target)) {
+  if(!is.null(yeastDisoCDK1target[i,5]$derived[[1]])){
+    nderivedCDK=nderivedCDK+1
+  }
+  if( "full" %in% yeastDisoCDK1target[i,5]$derived[[1]]$method){
+    nfullCDK=nfullCDK+1
+  }
+  if( "bfactor" %in% yeastDisoCDK1target[i,5]$derived[[1]]$method){
+    nbfactorCDK=nbfactorCDK+1
+  }
+  if( "missing_residues" %in% yeastDisoCDK1target[i,5]$derived[[1]]$method){
+    nmissing_residuesCDK=nmissing_residuesCDK+1
+  }
+  if( "mobile" %in% yeastDisoCDK1target[i,5]$derived[[1]]$method){
+    nmobileCDK=nmobileCDK+1
+  }
+}
+#methods: full
+ndbCDK=0
+for (i in 1:nrow(yeastDisoCDK1target)) {
+  if(!is.null(yeastDisoCDK1target[i,5]$db[[1]])){
+    ndbCDK=ndbCDK+1
+    }
+  }
+```
+
+
+```{r explore,echo=FALSE,message=FALSE,warning=FALSE}
+
+predDisoPercAll <- c()
+for (i in 1:nrow(yeastDiso)) {
+  mat<-yeastDiso$disorder$predictors[[i]]$regions[[1]]
+  #calculate the number of disoredered AAs
+  nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+  proteinLength <- nchar(yeastDiso$sequence[i])
+  predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
+}
+hist(predDisoPercAll,breaks = 100)
+
+
+
+
+
+
+predDisoPercCDK1target <- c()
+for (i in 1:nrow(yeastDisoCDK1target)) {
+  mat<-yeastDisoCDK1target$disorder$predictors[[i]]$regions[[1]]
+  #calculate the number of disoredered AAs
+  nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+  proteinLength <- nchar(yeastDisoCDK1target$sequence[i])
+  predDisoPercCDK1target <- c(predDisoPercCDK1target,(nDiso/proteinLength)*100)
+}
+hist(predDisoPercCDK1target,breaks = 100)
+
+
+CDK1targetSacCer$percDiso_predicted <- yeastDisoCDK1target$predDisoPerc
+
+
+```
+
