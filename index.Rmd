@@ -3,6 +3,7 @@ title: "Disorder in Cdk1/2 targets"
 output:
   html_document:
     df_print: paged
+     
     
 ---
 ```{r setup,echo=FALSE,message=FALSE,warning=FALSE,prompt=FALSE}
@@ -27,13 +28,16 @@ CDK1targetSacCer <- read_delim("~/projects/cdk1_cyclinB1/phase_separation/disord
 
 # MobiDB
   
-The [MobiDB](mobidb.bio.unipd.it) database of protein disorder and mobility annotations has been significantly updated and upgraded since its last major renewal in 2014. Several curated datasets for intrinsic disorder and folding upon binding have been integrated from specialized databases. The indirect evidence has also been expanded to better capture information available in the PDB, such as high temperature residues in X-ray structures and overall conformational diversity.  
-The database is organize in three layers containing data of different nature: Disorder, Linear Interacting Peptides (LIPs) and Dynamic structure.
+The [MobiDB](http://mobidb.bio.unipd.it) database of protein disorder and mobility annotations has been significantly updated and upgraded since its last major renewal in 2014. Several curated datasets for intrinsic disorder and folding upon binding have been integrated from specialized databases. The indirect evidence has also been expanded to better capture information available in the PDB, such as high temperature residues in X-ray structures and overall conformational diversity.  
+The database is organize in three layers containing data of different nature: Disorder, Linear Interacting Peptides (LIPs) and Dynamic structure. The "Disorder" database bears data about protein regions without a defined tri-dimensional structure. The "LIPs" layer contains information about regions or residues that interact with other proteins or DNA/RNA preserving a linear (disordered) structure. At last, the data hosted in the "Dynamic structure" layer describes the propensity of a residue to assume a specific secondary structure conformation. When extracted from chemical shifts can be interpreted as a measure of the secondary structure populations in solution.
+Each one of three layers features three quality levels of annotation from high to low quality (Fig. 1), presenting different coverage of the universe of known proteins.
+  
+  
+![Fig. 1: MobiDB confidence vs. coverage. DB refers to manually curated annotations from external databases. Indirect consist in annotations derived/calculated information from experimental data, i.e. PDB structures and/or chemical shifts. Predicted annotations are annotations made using purely bioinformatic tools](/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/images/mobiDB_confVScoverage.png)
 
-![Fig. 1: MobiDB confidence vs. coverage](/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/images/mobiDB_confVScoverage.png)
-
-
-
+## Disorder  
+  
+As a first aproach I explored the Disorder database from Mobidb for the whole annotated proteome of saccharomyces cerevisiae. The data set comprehend information of disordered region over 6721 proteins. As explained before, each entry could have annotations of disorder in three diferent levels (DB, indirect, Predicted) which, at the same time, collect information from several sources in order to arrive to a consensus of the regions with or without a defined tri-demensional structure. I this way, the consensus of each level annotates the regions as structured "S", Disordered "D" or conflict "C", when there are more than one source of information over a protein region that contradict each other.  
 
 ```{r all data summary ,echo=FALSE,message=FALSE,warning=FALSE}
 
@@ -87,6 +91,8 @@ for (i in 1:nrow(yeastDiso)) {
   }
 ```
 
+In order to understand the data the first analysis to do is to evaluate the coverage of the different levels of annotations in the database. In this way we can select a level or a combination of them for assigning the disorder regions to each protein considering the comprimise between the quality of the annotation and the coverage of the protein set of interest.  
+DB is the level with less coverage, since its annotations are manually curated, and it has `r ndb` entries covering a `r round((ndb/nrow(yeastDiso))*100,2)`% of the whole proteome. The data annotated in the "Derived" level holds `r nderived` entries and this covers `r round((nderived/nrow(yeastDiso))*100,2)`% of available proteins for S. cerevisiae. Since the predictors do not have any limitations on wich proteins could this methods be applied, they cover the entire protein set.
 ```{r set disorder metrics columns,echo=FALSE,message=FALSE,warning=FALSE}
 
 #All the anotations in the prediction are for disordered regions
@@ -99,6 +105,28 @@ for (i in 1:nrow(yeastDiso)) {
   predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
 }
 yeastDiso$predDisoPercAll <- predDisoPercAll
+
+#mobidb-lite for comparing with the simple
+predLiteDisoPercAll <- c()
+for (i in 1:nrow(yeastDiso)) {
+  liteIndex<-which(yeastDiso$disorder$predictors[[i]]$method=="mobidb-lite")
+  if (length(liteIndex)!=0) {
+    mat<-yeastDiso$disorder$predictors[[i]]$regions[[liteIndex]]
+    if (class(mat)=="matrix") {
+#getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+      mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+      #calculate the number of disoredered AAs
+      nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+      proteinLength <- nchar(yeastDiso$sequence[i])
+      predLiteDisoPercAll <- c(predLiteDisoPercAll,(nDiso/proteinLength)*100)      
+    } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,0)}
+
+  } else {
+    predLiteDisoPercAll <- c(predLiteDisoPercAll,NA)
+  }
+
+}
+yeastDiso$predLiteDisoPercAll <- predLiteDisoPercAll
 
 #For the derived methods (full -> the third matrix) the anotations could be Disorder, Structure or Conflict
 derivedDisoPercAll <- c()
@@ -137,7 +165,7 @@ for (i in 1:nrow(yeastDiso)) {
 }
 yeastDiso$dbDisoPercAll <- dbDisoPercAll
 ```
-
+Once we have stablished the disorder regions for each protein it is useful to have a metric describing the global disorder status for each entry in order to summarise in one number the degree of disorder and to being able to make comparisons at the protein level. The percentage (or ratio) of disorder aminoacids over the total number of aminoacids of a protein constitute the most direct metric for this means, providing one value that we can assign to each proteins describing its state of disorder.  
 
 ```{r cdk1 targets summary,echo=FALSE,message=FALSE,warning=FALSE}
 
@@ -213,7 +241,6 @@ for (i in 1:nrow(yeastDiso)) {
   predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
 }
 hist(predDisoPercAll,breaks = 100)
-
 
 
 
