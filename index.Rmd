@@ -38,8 +38,8 @@ CDK1targetSacCer <- read_delim("~/projects/cdk1_cyclinB1/phase_separation/disord
 
 # MobiDB
   
-The [MobiDB](http://mobidb.bio.unipd.it) database of protein disorder and mobility annotations has been significantly updated and upgraded since its last major renewal in 2014. Several curated datasets for intrinsic disorder and folding upon binding have been integrated from specialized databases. The indirect evidence has also been expanded to better capture information available in the PDB, such as high temperature residues in X-ray structures and overall conformational diversity.  
-The database is organize in three layers containing data of different nature: Disorder, Linear Interacting Peptides (LIPs) and Dynamic structure. The "Disorder" database bears data about protein regions without a defined tri-dimensional structure. The "LIPs" layer contains information about regions or residues that interact with other proteins or DNA/RNA preserving a linear (disordered) structure. At last, the data hosted in the "Dynamic structure" layer describes the propensity of a residue to assume a specific secondary structure conformation. When extracted from chemical shifts can be interpreted as a measure of the secondary structure populations in solution.
+The [MobiDB](http://mobidb.bio.unipd.it) database of protein disorder and mobility annotations has been significantly updated and upgraded since its last major renewal in 2014. Several curated datasets for intrinsic disorder and folding upon binding have been integrated from specialized databases. The indirect evidence has also been expanded to better capture information available in the PDB, such as high-temperature residues in X-ray structures and overall conformational diversity.  
+The database is organized in three layers containing data of different nature: Disorder, Linear Interacting Peptides (LIPs) and Dynamic structure. The "Disorder" database bears data about protein regions without a defined tri-dimensional structure. The "LIPs" layer contains information about regions or residues that interact with other proteins or DNA/RNA preserving a linear (disordered) structure. At last, the data hosted in the "Dynamic structure" layer describes the propensity of a residue to assume a specific secondary structure conformation. When extracted from chemical shifts can be interpreted as a measure of the secondary structure populations in solution.
 Each one of three layers features three quality levels of annotation from high to low quality (Fig. 1), presenting different coverage of the universe of known proteins.
   
 ```{r confidence pyramid ,echo=FALSE,message=FALSE,warning=FALSE,fig.cap="Figure 1: MobiDB confidence vs. coverage. DB refers to manually curated annotations from external databases. Indirect consist in annotations derived/calculated information from experimental data, i.e. PDB structures and/or chemical shifts. Predicted annotations are made using exclusively bioinformatic tools", out.width = "400px"}
@@ -51,7 +51,7 @@ knitr::include_graphics("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/di
 
 ## Disorder  
   
-As a first aproach I explored the Disorder database from Mobidb for the whole annotated proteome of saccharomyces cerevisiae. The data set comprehend information of disordered region over 6721 proteins. As explained before, each entry could have annotations of disorder in three diferent levels (DB, indirect, Predicted) which, at the same time, collect information from several sources in order to arrive to a consensus of the regions with or without a defined tri-demensional structure. I this way, the consensus of each level annotates the regions as structured "S", Disordered "D" or conflict "C", when there are more than one source of information over a protein region that contradict each other.  
+As a first approach, I explored the Disorder database from Mobidb for the whole annotated proteome of Saccharomyces cerevisiae. The data set comprehends the information of disordered region over 6721 proteins. As explained before, each entry could have annotations of disorder in three different levels (DB, indirect, Predicted) which, at the same time, collect information from several sources in order to reach to a consensus of the regions with or without a defined tri-dimensional structure. I this way, the consensus of each level annotates the regions as structured "S", Disordered "D" or conflict "C", when there is more than one source of information over a protein region that contradicts each other.
 
 ```{r all data summary ,echo=FALSE,message=FALSE,warning=FALSE}
 
@@ -105,8 +105,8 @@ for (i in 1:nrow(yeastDiso)) {
   }
 ```
 
-In order to understand the data the first analysis to do is to evaluate the coverage of the different levels of annotations in the database. In this way we can select a level or a combination of them for assigning the disorder regions to each protein considering the comprimise between the quality of the annotation and the coverage of the protein set of interest.  
-DB is the level with less coverage, since its annotations are manually curated, and it has **`r ndb`** entries covering a **`r round((ndb/nrow(yeastDiso))*100,2)`%** of the whole proteome. The data annotated in the "Derived" level holds **`r nderived`** entries and this covers **`r round((nderived/nrow(yeastDiso))*100,2)`%** of available proteins for S. cerevisiae. Since the predictors do not have any limitations in terms of wich proteins could these methods be applied to, they cover the entire protein set.  
+In order to understand the data the first analysis to do is to evaluate the coverage of the different levels of annotations in the database. In this way, we can select a level or a combination of them for assigning the disorder regions to each protein considering the compromise between the quality of the annotation and the coverage of the protein set of interest.  
+DB is the level with less coverage, since its annotations are manually curated, and it has **`r ndb`** entries covering a **`r round((ndb/nrow(yeastDiso))*100,2)`%** of the whole proteome. The data annotated in the "Derived" level holds **`r nderived`** entries and this covers **`r round((nderived/nrow(yeastDiso))*100,2)`%** of available proteins for S. cerevisiae. Since the predictors do not have any limitations in terms of which proteins could these methods be applied to, they cover the entire protein set.  
   
 | Level      | Method           | N° entries            | Level coverage (%)                            | Method coverage (%)                                 |
 |------------|------------------|-----------------------|-----------------------------------------------|-----------------------------------------------------|
@@ -123,14 +123,16 @@ Table 1:  Percent of covered entries by each Level and method of the MobiDB data
 ### Percentage of disordered aminoacids  
   
   
-Once we have stablished the disorder regions for each protein it is useful to have a metric describing the global disorder status for each entry in order to summarise in one number the degree of disorder and to being able to make comparisons at the protein level. The percentage (or ratio) of disorder aminoacids over the total number of aminoacids of a protein constitute the most direct metric, providing one value that we can assign to each proteins describing its state of disorder.
+Once we have established the disorder regions for each protein it is useful to have a metric describing the global disorder status for each entry in order to summarise in one number the degree of disorder and to being able to make comparisons at the protein level. The percentage (or ratio) of disorder amino acids over the total number of amino acids of a protein constitute the most direct metric, providing one value that we can assign to each proteins describing its state of disorder.
 
 ```{r set disorder metrics columns,echo=FALSE,message=FALSE,warning=FALSE}
 
 #All the anotations in the prediction are for disordered regions
 predDisoPercAll <- c()
+predStretchDist <- c()
 for (i in 1:nrow(yeastDiso)) {
   mat<-yeastDiso$disorder$predictors[[i]]$regions[[1]]
+  predStretchDist <- c(predStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
   #calculate the number of disoredered AAs
   nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
   proteinLength <- nchar(yeastDiso$sequence[i])
@@ -139,6 +141,7 @@ for (i in 1:nrow(yeastDiso)) {
 yeastDiso$predDisoPercAll <- predDisoPercAll
 
 #mobidb-lite for comparing with the simple
+predLiteStretchDist <- c()
 predLiteDisoPercAll <- c()
 for (i in 1:nrow(yeastDiso)) {
   liteIndex<-which(yeastDiso$disorder$predictors[[i]]$method=="mobidb-lite")
@@ -147,6 +150,7 @@ for (i in 1:nrow(yeastDiso)) {
     if (class(mat)=="matrix") {
 #getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
       # mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+      predLiteStretchDist <- c(predLiteStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
       #calculate the number of disoredered AAs
       nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
       proteinLength <- nchar(yeastDiso$sequence[i])
@@ -161,6 +165,7 @@ for (i in 1:nrow(yeastDiso)) {
 yeastDiso$predLiteDisoPercAll <- predLiteDisoPercAll
 
 #For the derived methods (full -> the third matrix) the anotations could be Disorder, Structure or Conflict
+derivedStretchDist <- c()
 derivedDisoPercAll <- c()
 for (i in 1:nrow(yeastDiso)) {
   if (!is.null(yeastDiso$disorder$derived[[i]])) {
@@ -168,6 +173,7 @@ for (i in 1:nrow(yeastDiso)) {
     mat<-yeastDiso$disorder$derived[[i]]$regions[[fullIndex]]
 #getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
     mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+    derivedStretchDist <- c(derivedStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
     #calculate the number of disoredered AAs
     nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
     proteinLength <- nchar(yeastDiso$sequence[i])
@@ -181,6 +187,7 @@ yeastDiso$derivedDisoPercAll <- derivedDisoPercAll
 
 #For the db curated assigments (full -> the only matrix) the anotations could be Disorder, Structure or Conflict
 dbDisoPercAll <- c()
+dbStretchDist <- c()
 for (i in 1:nrow(yeastDiso)) {
   if (!is.null(yeastDiso$disorder$db[[i]])) {
     fullIndex<-which(yeastDiso$disorder$db[[i]]$method=="full")
@@ -188,6 +195,7 @@ for (i in 1:nrow(yeastDiso)) {
 #getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
     mat<-matrix(mat[mat[,3]=="D",],ncol=3)
     #calculate the number of disoredered AAs
+    dbStretchDist <- c(dbStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
     nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
     proteinLength <- nchar(yeastDiso$sequence[i])
     dbDisoPercAll <- c(dbDisoPercAll,(nDiso/proteinLength)*100)
@@ -201,43 +209,65 @@ yeastDiso$dbDisoPercAll <- dbDisoPercAll
 
 ```{r histograms predictors,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 2: Histogram for the disorder percentages estimated by the two predictors"}
 
-ggplot(data = yeastDiso)+geom_histogram(aes(x=predLiteDisoPercAll,fill="MobiDB lite"),bins = 30,alpha=0.5,position = "identity")+geom_histogram(aes(x=predDisoPercAll,fill="Simple"),bins = 30,alpha=0.5,position = "identity") + theme_minimal() + xlab("% of disorder residues") + scale_fill_manual(name = "Predictors", values = c("Simple"="darkorange1","MobiDB lite" = "chartreuse3"))
+ggplot(data = yeastDiso)+geom_histogram(aes(x=predLiteDisoPercAll,fill="MobiDB lite"),bins = 30,alpha=0.5,position = "identity")+geom_histogram(aes(x=predDisoPercAll,fill="Simple"),bins = 30,alpha=0.5,position = "identity") + theme_minimal() + xlab("% of disorder residues") + scale_fill_manual(name = "Predictor", values = c("Simple"="darkorange1","MobiDB lite" = "chartreuse3"))
 ```
   
   
-Both of the predictors featured by the MobiDB database have a notorious discrepancy on the ammount of residues on wich they assign the "Disorder" status. This could be due, in principle, to the differences on their conceptions.  The "Simple" method is basically consensus derived from some of the already stablished disorder bionformatic predictors and features region-wise annotations. In contrast, the method called MobiDB lite  is in fact an *ad hoc* development that not only uses a consensus between these methods but also quantifies the agreement among different predictors, and it is optimized for detecting long intrinsically disorder regions (IDR) and the detection of short regions is filtered out. This could explain why the Figure 1 presents a great proportions of proteins without any disorder residue for the MobiDB lite predictor. It is understandable then, that the ratio of the residues detected as intrisically disorder over the total length of the proteins, by those different methods, are not in agreement and even they seem to be complementary between them.  
+Both of the predictors featured by the MobiDB database have a notorious discrepancy on the number of residues on which they assign the "Disorder" status. This could be due, in principle, to the differences in their conceptions.  The "Simple" method is basically consensus derived from some of the already established disorder bioinformatic predictors and features region-wise annotations. In contrast, the method called MobiDB lite is, in fact, an *ad hoc* development that not only uses a consensus between these methods but also quantifies the agreement among different predictors, and it is optimized for detecting long intrinsically disordered regions (IDR) and the detection of short regions are filtered out. This could explain why Figure 1 presents a great proportion of proteins without any disorder residue for the MobiDB lite predictor. It is understandable then, that the ratio of the residues detected as intrinsically disorder over the total length of the proteins, by those different methods, are not in agreement and even they seem to be complementary between them.  
   
-For the "Derived" and "DB" levels, the identification of IDR has, allegedly, a higher degree of confidence. The comparison the percentage of disorder residues estimated by those levels (Figure 3) and the prediction methods  could help to clarify which prediction is the better option if we want to use the percentage of disordered aminoacids as metric to evaluate disorder at the protein level.  
+For the "Derived" and "DB" levels, the identification of IDR has, allegedly, a higher degree of confidence. The comparison the percentage of disorder residues estimated by those levels (Figure 3) and the prediction methods could help to clarify which prediction is the better option if we want to use the percentage of disordered amino acids as metric to evaluate disorder at the protein level.  
   
   
 ```{r histograms dbANDderived,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 3: Histogram for the disorder percentages estimated for the 'DB' and 'Derived' levels"}
 
-ggplot(data = yeastDiso)+geom_histogram(aes(x=dbDisoPercAll,fill="DB"),bins = 30,alpha=0.5,position = "identity")+geom_histogram(aes(x=derivedDisoPercAll,fill="Derived"),bins = 30,alpha=0.5,position = "identity") + theme_minimal() + xlab("% of disorder residues") + scale_fill_manual(name = "Predictors", values = c("Derived"="darkgoldenrod1","DB" = "deepskyblue2"))
+ggplot(data = yeastDiso)+geom_histogram(aes(x=dbDisoPercAll,fill="DB"),bins = 30,alpha=0.5,position = "identity")+geom_histogram(aes(x=derivedDisoPercAll,fill="Derived"),bins = 30,alpha=0.5,position = "identity") + theme_minimal() + xlab("% of disorder residues") + scale_fill_manual(name = "Level", values = c("Derived"="darkgoldenrod1","DB" = "deepskyblue2"))
 ```
   
-The use of the drived data for assigning IDRs seems to present a distribution of percentage of disorder residues congruent with the MobiDB lite predictor, presenting a considerable proportion of protein not having any disorder residues. 
+The use of the derived data for assigning IDRs seems to present a distribution of the percentage of disorder residues congruent with the MobiDB lite predictor, presenting a considerable proportion of protein not having any disorder residues.
 
+Similar distributions of the percentage of disorder residues, for two different predictors, could be validated if the predictors are assigning similar percentage values to the same proteins. If this is the case, we should be able to find a correlation between the values calculated by different methods. In Figure 4, pairwise comparisons for both of the prediction methods and the Derived and DB annotations are shown, together with the density distributions and the corresponding correlation coefficients. Since we are interested in elucidating how CDK phosphorylation could be involved in the disorder states of its targets, another level of complexity is added to this plot. The percentage of phosphorylatable residues (Ser, Thr, Tyr) were calculated for all the proteins and Low, Mid and High levels of putative phosphorylations sites were defined with arbitrary breaks (0-15%, 15-20%,20-60% ) of the percentage values, based on the quartiles of the distribution.
 
+```{r comparison scatters ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 4: Pairwise comparison of the % of disorder residues determined by the different methods" }
 
-```{r comparison jitters ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 4:" }
 compDataSet <- yeastDiso[,c(2,6:9)]
+phosphorylatableResidues <- numeric()
+for (phosoSites in gregexpr(pattern = "T|Y|S",as.character(compDataSet[,1]))){phosphorylatableResidues<-c(phosphorylatableResidues,length(phosoSites))}
+compDataSet$nPhosphoRes <- phosphorylatableResidues
 compDataSet[,1] <- nchar(as.character(compDataSet[,1]))
 colnames(compDataSet)[1] <- "proteinLength"
+compDataSet$percPhosphoRes <- (compDataSet$nPhosphoRes/compDataSet$proteinLength)*100
+compDataSet$levelPhosphoRes<-cut(compDataSet$percPhosphoRes,breaks = c(0,15,20,60),labels = c("Low","Mid","High"))
 
-GGally::ggpairs(data = compDataSet,columns = 2:5,color=proteinLength,
-    upper = "blank") +
-    theme_minimal() +
-    theme(panel.grid.minor = element_blank())
+print(summary(compDataSet$percPhosphoRes))
+GGally::ggpairs(data = compDataSet,columns = c(2:5), ggplot2::aes(colour=levelPhosphoRes,alpha=0.5),xlab="% of disorder residues", ylab="% of disorder residues",columnLabels=c("Simple predictor","MobiDB-Lite predictor","Derived","DB")) +
+     theme(panel.grid.minor = element_blank(),panel.grid.major = element_blank()) + theme_classic()
 
+```
 
-ggplot(compDataSet, aes(x = predLiteDisoPercAll, y=dbDisoPercAll, color = proteinLength)) +
-    geom_point(shape = 16, size = 5, show.legend = FALSE, alpha = .5) +
-    theme_minimal() +
-    scale_color_gradient(low = "blue", high = "red")
+Any of the methods for estimating the disorder regions of proteins seem to be in agreement with the other methods in the percentage of disorder residues for a given protein. The correlation coefficients are low, and the ratio of putative phosphorylation sites does not have any significant impact on these calculations. Moreover, the distribution of the percentage of phosphorylatable residues appears to be completely random in all the pairwise comparison scatterplots. 
+The lack of correlation in this metric for different methods does not directly implies that the methods are not identifying the same regions. Detection of IDRs of different sizes by different methods or disparities in the lenghts of the disorder streaches could lead to the observed effects.  
+
+```{r stretches of disorder ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 5:distribution of the lenghts of disorder stretches" }
+
+predStretchDist <- cbind(predStretchDist,rep("Simple predictor",length(predStretchDist)))
+predLiteStretchDist <- cbind(predLiteStretchDist,rep("MobiDB-lite predictor",length(predLiteStretchDist)))
+dbStretchDist <- cbind(dbStretchDist,rep("DB",length(dbStretchDist)))
+derivedStretchDist <- cbind(derivedStretchDist,rep("Derived",length(derivedStretchDist)))
+
+stretchData <-rbind(predStretchDist,predLiteStretchDist,dbStretchDist,derivedStretchDist)
+stretchData <-as.data.frame(stretchData)
+colnames(stretchData) <- c("stretchLength","method")
+stretchData$method <- as.factor(stretchData$method)
+stretchData$stretchLength <- as.numeric(stretchData$stretchLength)
+
+ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin()
+
 
 ```
 
 
+Nevertheless, inconsistencies in the measurements of the ratio of disordered amino acids between different methods do not indicate that the metric could not be used as an estimator of global disorder status in proteins. However, we certainly should be cautious about comparing values originated from different sources. 
+If the percentage of disorder residues correlates well with one or more CDK phosphorylation target properties it could be informative regardless if the estimation is highly accurate.
 
 ```{r cdk1 targets summary,echo=FALSE,message=FALSE,warning=FALSE}
 
