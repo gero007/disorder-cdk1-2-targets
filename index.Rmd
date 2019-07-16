@@ -243,9 +243,13 @@ GGally::ggpairs(data = compDataSet,columns = c(2:5), ggplot2::aes(colour=levelPh
      theme(panel.grid.minor = element_blank(),panel.grid.major = element_blank()) + theme_classic()
 
 ```
+  
+  
+### Lenght distribution in the detection of IDRs 
+  
 
-Any of the methods for estimating the disorder regions of proteins seem to be in agreement with the other methods in the percentage of disorder residues for a given protein. The correlation coefficients are low, and the ratio of putative phosphorylation sites does not have any significant impact on these calculations. Moreover, the distribution of the percentage of phosphorylatable residues appears to be completely random in all the pairwise comparison scatterplots. 
-The lack of correlation in this metric for different methods does not directly implies that the methods are not identifying the same regions. Detection of IDRs of different sizes by different methods or disparities in the lenghts of the disorder streaches could lead to the observed effects.  
+None of the methods for estimating the disorder regions of proteins seem to be in agreement with the other methods in the percentage of disorder residues for a given protein. The correlation coefficients are low, and the ratio of putative phosphorylation sites does not have any significant impact on these calculations. Moreover, the distribution of the percentage of phosphorylatable residues appears to be completely random in all the pairwise comparison scatterplots. 
+The lack of correlation in this metric for different methods does not directly imply that the methods are not identifying the same regions. Detection of IDRs of different sizes by different methods or disparities in the lengths of the disorder stretches could lead to these observed effects.  
 
 ```{r stretches of disorder ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 5:distribution of the lenghts of disorder stretches" }
 
