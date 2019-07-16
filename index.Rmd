@@ -262,11 +262,17 @@ stretchData <-rbind(predStretchDist,predLiteStretchDist,dbStretchDist,derivedStr
 stretchData <-as.data.frame(stretchData)
 colnames(stretchData) <- c("stretchLength","method")
 stretchData$method <- as.factor(stretchData$method)
+stretchData$method <- factor(stretchData$method, levels = c("Simple predictor","MobiDB-lite predictor","Derived","DB"))
 stretchData$stretchLength <- as.numeric(stretchData$stretchLength)
 
-ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin()
 
 
+ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin(aes(fill=method), alpha = 0.7,show.legend = FALSE) +
+    theme_minimal() +
+    geom_boxplot(width=0.05) +
+    scale_fill_manual(values = c("Simple predictor"="darkorange1","MobiDB-lite predictor" = "chartreuse3","Derived"="darkgoldenrod1","DB" = "deepskyblue2")) +
+    xlab("Method") + ylab("Lenght of IDR") +
+    scale_y_continuous(limits = c(0,600))
 ```
 
 
