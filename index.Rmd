@@ -346,7 +346,6 @@ for (i in 1:nrow(yeastDiso)) {
   proteinLength <- nchar(yeastDiso$sequence[i])
   predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
 }
-hist(predDisoPercAll,breaks = 100)
 
 
 
@@ -360,7 +359,7 @@ for (i in 1:nrow(yeastDisoCDK1target)) {
   proteinLength <- nchar(yeastDisoCDK1target$sequence[i])
   predDisoPercCDK1target <- c(predDisoPercCDK1target,(nDiso/proteinLength)*100)
 }
-hist(predDisoPercCDK1target,breaks = 100)
+
 
 
 CDK1targetSacCer$percDiso_predicted <- yeastDisoCDK1target$predDisoPerc
