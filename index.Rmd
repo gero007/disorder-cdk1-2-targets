@@ -249,7 +249,7 @@ GGally::ggpairs(data = compDataSet,columns = c(2:5), ggplot2::aes(colour=levelPh
   
 
 None of the methods for estimating the disorder regions of proteins seem to be in agreement with the other methods in the percentage of disorder residues for a given protein. The correlation coefficients are low, and the ratio of putative phosphorylation sites does not have any significant impact on these calculations. Moreover, the distribution of the percentage of phosphorylatable residues appears to be completely random in all the pairwise comparison scatterplots. 
-The lack of correlation in this metric for different methods does not directly imply that the methods are not identifying the same regions. Detection of IDRs of different sizes by different methods or disparities in the lengths of the disorder stretches could lead to these observed effects.  
+The lack of correlation in this metric for different methods does not directly imply that the methods are not identifying the same regions. In fact, all of the aminoacids classified as disordered by the MobiDB lite method, for all the proteins, were also detected by the simple method. Disparities in the lengths of the disorder stretches lead to these observed effects.  
 
 ```{r stretches of disorder ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 5:distribution of the lenghts of disorder stretches" }
 
@@ -274,21 +274,55 @@ ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin(aes(fill=
     xlab("Method") + ylab("Lenght of IDR") +
     scale_y_continuous(limits = c(0,600))
 ```
+  
+
+```{r simple vs. lite ,echo=FALSE,message=FALSE,warning=FALSE}
+
+percCovLiteInSimple <- numeric()
+for (i in 1:nrow(yeastDiso)) {
+  liteIndex<-which(yeastDiso$disorder$predictors[[i]]$method=="mobidb-lite")
+  simpleIndex<-which(yeastDiso$disorder$predictors[[i]]$method=="simple")
+  if (length(liteIndex)!=0) {
+    matLite<-yeastDiso$disorder$predictors[[i]]$regions[[liteIndex]]
+    matSimple<-yeastDiso$disorder$predictors[[i]]$regions[[simpleIndex]]
+    if (class(matLite)=="matrix") {
+#getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+      # mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+      litePos <-numeric()
+      litePos <-apply(matLite, 1, function(x){litePos<-c(litePos,x[1]:x[2])
+                                   return(litePos)})
+      litePos <- as.numeric(unlist(litePos))
+      #print(litePos)
+      simplePos <-numeric()
+      simplePos <-apply(matSimple, 1, function(x){simplePos<-c(simplePos,x[1]:x[2])
+                                   return(simplePos)})
+      simplePos <- as.numeric(unlist(simplePos))
+      # print(simplePos)
+      percCovLiteInSimple <- c(percCovLiteInSimple,(length(which(litePos %in% simplePos))/length(litePos))*100)
+      #print((length(which(litePos %in% simplePos))/length(litePos))*100)
+    } 
+  } 
+}
+
+```
 
 
-Nevertheless, inconsistencies in the measurements of the ratio of disordered amino acids between different methods do not indicate that the metric could not be used as an estimator of global disorder status in proteins. However, we certainly should be cautious about comparing values originated from different sources. 
-If the percentage of disorder residues correlates well with one or more CDK phosphorylation target properties it could be informative regardless if the estimation is highly accurate.
-
+Nevertheless, inconsistencies in the measurements of the ratio of disordered amino acids between different methods do not indicate that the metric could not be used as an estimator of global disorder status in proteins. However, we should certainly  be cautious about comparing values originated from different sources. 
+If the percentage of disorder residues correlates well with one or more CDK phosphorylation target properties it could be informative regardless if the estimation is highly accurate.  
+  
+  
+## Cdk1 targets  
+  
+  
 ```{r cdk1 targets summary,echo=FALSE,message=FALSE,warning=FALSE}
 
 # _____________________________________________________________
 
-#The row 294 cannot be mapped with the uniprot, I will remove it from CDK1targetsSacCer and yeastDisoCDK1target
+#The row 294 cannot be mapped with the uniprot, I will remove it from CDK1targetsSacCer and yeastDisoCDK1target. Slect only the rows wuth P-score > 2 most likely targets based on the paper
 
+CDK1targetSacCer<-subset(CDK1targetSacCer[-294,],`P-Score`>=0)
 yeastDisoCDK1target<-yeastDiso[match(CDK1targetSacCer$Entry,yeastDiso$acc),]
-CDK1targetSacCer<-CDK1targetSacCer[-294,]
-yeastDisoCDK1target <- yeastDisoCDK1target[-294,]
-
+CDK1targetSacCer$length <- nchar(yeastDisoCDK1target$sequence)
 
 
 npredictorsCDK=0
@@ -338,9 +372,123 @@ for (i in 1:nrow(yeastDisoCDK1target)) {
   if(!is.null(yeastDisoCDK1target[i,5]$db[[1]])){
     ndbCDK=ndbCDK+1
     }
+}
+
+
+#_______________________________adding perc of disorder to CDK1targetSacCer____________________
+
+predDisoPercCdkTargets <- c()
+predStretchDist <- c()
+for (i in 1:nrow(yeastDisoCDK1target)) {
+  mat<-yeastDisoCDK1target$disorder$predictors[[i]]$regions[[1]]
+  predStretchDist <- c(predStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+  #calculate the number of disoredered AAs
+  nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+  proteinLength <- nchar(yeastDisoCDK1target$sequence[i])
+  predDisoPercCdkTargets <- c(predDisoPercCdkTargets,(nDiso/proteinLength)*100)
+}
+CDK1targetSacCer$predDisoPercCdkTargets <- predDisoPercCdkTargets
+yeastDisoCDK1target$predDisoPercCdkTargets <- predDisoPercCdkTargets
+
+#mobidb-lite for comparing with the simple
+predLiteStretchDist <- c()
+predLiteDisoPercCdkTargets <- c()
+for (i in 1:nrow(yeastDisoCDK1target)) {
+  liteIndex<-which(yeastDisoCDK1target$disorder$predictors[[i]]$method=="mobidb-lite")
+  if (length(liteIndex)!=0) {
+    mat<-yeastDisoCDK1target$disorder$predictors[[i]]$regions[[liteIndex]]
+    if (class(mat)=="matrix") {
+#getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+      # mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+      predLiteStretchDist <- c(predLiteStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+      #calculate the number of disoredered AAs
+      nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+      proteinLength <- nchar(yeastDisoCDK1target$sequence[i])
+      predLiteDisoPercCdkTargets <- c(predLiteDisoPercCdkTargets,(nDiso/proteinLength)*100)      
+    } else {predLiteDisoPercCdkTargets <- c(predLiteDisoPercCdkTargets,0)}
+
+  } else {
+    predLiteDisoPercCdkTargets <- c(predLiteDisoPercCdkTargets,NA)
   }
+
+}
+
+yeastDisoCDK1target$predLiteDisoPercCdkTargets <- predLiteDisoPercCdkTargets
+CDK1targetSacCer$predLiteDisoPercCdkTargets <- predLiteDisoPercCdkTargets
+
+#For the derived methods (full -> the third matrix) the anotations could be Disorder, Structure or Conflict
+derivedStretchDist <- c()
+derivedDisoPercCdkTargets <- c()
+for (i in 1:nrow(yeastDisoCDK1target)) {
+  if (!is.null(yeastDisoCDK1target$disorder$derived[[i]])) {
+    fullIndex<-which(yeastDisoCDK1target$disorder$derived[[i]]$method=="full")
+    mat<-yeastDisoCDK1target$disorder$derived[[i]]$regions[[fullIndex]]
+#getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+    mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+    derivedStretchDist <- c(derivedStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+    #calculate the number of disoredered AAs
+    nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+    proteinLength <- nchar(yeastDisoCDK1target$sequence[i])
+    derivedDisoPercCdkTargets <- c(derivedDisoPercCdkTargets,(nDiso/proteinLength)*100)
+  } else {
+    derivedDisoPercCdkTargets <- c(derivedDisoPercCdkTargets,NA)
+  }
+
+}
+yeastDisoCDK1target$derivedDisoPercCdkTargets <- derivedDisoPercCdkTargets
+CDK1targetSacCer$derivedDisoPercCdkTargets <- derivedDisoPercCdkTargets
+#For the db curated assigments (full -> the only matrix) the anotations could be Disorder, Structure or Conflict
+dbDisoPercCdkTargets <- c()
+dbStretchDist <- c()
+for (i in 1:nrow(yeastDisoCDK1target)) {
+  if (!is.null(yeastDisoCDK1target$disorder$db[[i]])) {
+    fullIndex<-which(yeastDisoCDK1target$disorder$db[[i]]$method=="full")
+    mat<-yeastDisoCDK1target$disorder$db[[i]]$regions[[fullIndex]]
+#getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+    mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+    #calculate the number of disoredered AAs
+    dbStretchDist <- c(dbStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+    nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+    proteinLength <- nchar(yeastDisoCDK1target$sequence[i])
+    dbDisoPercCdkTargets <- c(dbDisoPercCdkTargets,(nDiso/proteinLength)*100)
+  } else {
+    dbDisoPercCdkTargets <- c(dbDisoPercCdkTargets,NA)
+  }
+}
+yeastDisoCDK1target$dbDisoPercCdkTargets <- dbDisoPercCdkTargets
+CDK1targetSacCer$dbDisoPercCdkTargets <- dbDisoPercCdkTargets
+
+
 ```
 
+```{r cdkTarget ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 6:" }
+
+yeastDisoNONCDK1target<-yeastDiso[-match(subset(CDK1targetSacCer,`P-Score`>=2)$Entry,yeastDiso$acc),]
+disoCDKtargetsData <- cbind(as.numeric(yeastDisoNONCDK1target$predDisoPercAll),rep("Non Cdk1 Targets",nrow(yeastDisoNONCDK1target)))
+disoCDKtargetsData <- rbind(disoCDKtargetsData,cbind(yeastDisoCDK1target$predDisoPercCdkTargets,rep("Cdk1 Targets",nrow(yeastDisoCDK1target))))
+disoCDKtargetsData <-as.data.frame(disoCDKtargetsData)
+disoCDKtargetsData$percOfDisorderLiteRes <- c(yeastDisoNONCDK1target$predLiteDisoPercAll,yeastDisoCDK1target$predLiteDisoPercCdkTargets)
+colnames(disoCDKtargetsData)<-c("percOfDisorderRes","group","percOfDisorderLiteRes")
+disoCDKtargetsData$percOfDisorderRes <- as.numeric(as.character(disoCDKtargetsData$percOfDisorderRes))
+
+ggplot(disoCDKtargetsData)+geom_density(aes(x = percOfDisorderRes,fill = group),alpha=.5)
+ggplot(subset(CDK1targetSacCer,`P-Score`>2))+geom_histogram(aes(x=`[ST]-P`/length))
+ggplot(CDK1targetSacCer)+geom_histogram(aes(x=`[ST]-P-X-[KR]`/length))
+ggplot(CDK1targetSacCer)+geom_histogram(aes(x=`[ST]-P-X-[KR]`))
+ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`/length,y=predDisoPercCdkTargets))+geom_point(aes(color=`[ST]-P-X-[KR]`))+scale_color_continuous(low = "green",high = "red")
+ggplot(CDK1targetSacCer)+geom_histogram(aes(x=`[ST]-P-X-[KR]`))
+ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`/length,y=predDisoPercCdkTargets))+geom_point(aes(color=`[ST]-P`))+scale_color_continuous(low = "green",high = "red")
+ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`/length,y=predLiteDisoPercCdkTargets))+geom_point(aes(color=`[ST]-P-X-[KR]`/length))+scale_color_continuous(low = "green",high = "red")
+ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`/length,y=predLiteDisoPercCdkTargets))+geom_point(aes(color=`[ST]-P`/length))+scale_color_continuous(low = "green",high = "red")
+ggplot(subset(CDK1targetSacCer,`P-Score`>2),aes(y=`P-Score`/length,x=predLiteDisoPercCdkTargets))+geom_point()
+
+
+
+ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`/length,y=`[ST]-P-X-[KR]`/length))+geom_point()+geom_smooth(method=lm, se=FALSE)
+ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`/length,y=`[ST]-P`/length))+geom_point()+geom_smooth(method=lm, se=FALSE)
+
+ggplot(subset(CDK1targetSacCer,`P-Score`>0))+geom_histogram(aes(x=length))
+```
 
 ```{r explore,echo=FALSE,message=FALSE,warning=FALSE}
 
@@ -370,6 +518,29 @@ for (i in 1:nrow(yeastDisoCDK1target)) {
 
 CDK1targetSacCer$percDiso_predicted <- yeastDisoCDK1target$predDisoPerc
 
+predLiteStretchDist <- c()
+predLiteDisoPercAll <- c()
+for (i in 1:nrow(yeastDisoCDK1target)) {
+  liteIndex<-which(yeastDisoCDK1target$disorder$predictors[[i]]$method=="mobidb-lite")
+  if (length(liteIndex)!=0) {
+    mat<-yeastDisoCDK1target$disorder$predictors[[i]]$regions[[liteIndex]]
+    if (class(mat)=="matrix") {
+#getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+      # mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+      predLiteStretchDist <- c(predLiteStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+      #calculate the number of disoredered AAs
+      nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+      proteinLength <- nchar(yeastDisoCDK1target$sequence[i])
+      predLiteDisoPercAll <- c(predLiteDisoPercAll,(nDiso/proteinLength)*100)      
+    } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,0)}
 
+  } else {
+    predLiteDisoPercAll <- c(predLiteDisoPercAll,NA)
+  }
+
+}
+yeastDisoCDK1target$predLiteDisoPercAll <- predLiteDisoPercAll
+
+CDK1targetSacCer$predLiteDisoPercAll <- yeastDisoCDK1target$predLiteDisoPercAll
 ```
 
