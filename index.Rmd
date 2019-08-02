@@ -320,7 +320,7 @@ If the percentage of disorder residues correlates well with one or more CDK phos
 
 #The row 294 cannot be mapped with the uniprot, I will remove it from CDK1targetsSacCer and yeastDisoCDK1target. Slect only the rows wuth P-score > 2 most likely targets based on the paper
 
-CDK1targetSacCer<-subset(CDK1targetSacCer[-294,],`P-Score`>=0)
+CDK1targetSacCer<-subset(CDK1targetSacCer[-294,])
 yeastDisoCDK1target<-yeastDiso[match(CDK1targetSacCer$Entry,yeastDiso$acc),]
 CDK1targetSacCer$length <- nchar(yeastDisoCDK1target$sequence)
 
@@ -458,20 +458,49 @@ for (i in 1:nrow(yeastDisoCDK1target)) {
 yeastDisoCDK1target$dbDisoPercCdkTargets <- dbDisoPercCdkTargets
 CDK1targetSacCer$dbDisoPercCdkTargets <- dbDisoPercCdkTargets
 
-
+CDK1targetSacCer$target<-cut(CDK1targetSacCer$`P-Score`,breaks = c(2),labels = c("Non Cdk1 target","Cdk1 target"))
+CDK1targetSacCer$MW_kDa<-(CDK1targetSacCer$length*120)/1000
+CDK1targetSacCer$nmol<- (CDK1targetSacCer$`Protein Level`/CDK1targetSacCer$MW_kDa)/1000
+CDK1targetSacCer$nEq_STP<- CDK1targetSacCer$nmol*CDK1targetSacCer$`[ST]-P`
+CDK1targetSacCer$nEq_STPXKR<- CDK1targetSacCer$nmol*CDK1targetSacCer$`[ST]-P-X-[KR]`
+CDK1targetSacCer$target<-cut(CDK1targetSacCer$`P-Score`,breaks = c(2),labels = c("Non Cdk1 target","Cdk1 target"))
 ```
+
+
+
+
 
 ```{r cdkTarget ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 6:" }
 
-yeastDisoNONCDK1target<-yeastDiso[-match(subset(CDK1targetSacCer,`P-Score`>=2)$Entry,yeastDiso$acc),]
-disoCDKtargetsData <- cbind(as.numeric(yeastDisoNONCDK1target$predDisoPercAll),rep("Non Cdk1 Targets",nrow(yeastDisoNONCDK1target)))
-disoCDKtargetsData <- rbind(disoCDKtargetsData,cbind(yeastDisoCDK1target$predDisoPercCdkTargets,rep("Cdk1 Targets",nrow(yeastDisoCDK1target))))
-disoCDKtargetsData <-as.data.frame(disoCDKtargetsData)
-disoCDKtargetsData$percOfDisorderLiteRes <- c(yeastDisoNONCDK1target$predLiteDisoPercAll,yeastDisoCDK1target$predLiteDisoPercCdkTargets)
-colnames(disoCDKtargetsData)<-c("percOfDisorderRes","group","percOfDisorderLiteRes")
-disoCDKtargetsData$percOfDisorderRes <- as.numeric(as.character(disoCDKtargetsData$percOfDisorderRes))
 
-ggplot(disoCDKtargetsData)+geom_density(aes(x = percOfDisorderRes,fill = group),alpha=.5)
+
+
+
+
+
+ggplot(CDK1targetSacCer)+geom_density(aes(x = predDisoPercCdkTargets,fill = target),alpha=.5)
+ggplot(CDK1targetSacCer)+geom_density(aes(x = predLiteDisoPercCdkTargets,fill = target),alpha=.5)
+ggplot(CDK1targetSacCer)+geom_density(aes(x = length,fill = target),alpha=.5)
+
+ggplot(CDK1targetSacCer)+geom_histogram(aes(x = `[ST]-P`/length,fill = target),alpha=.5)
+ggplot(CDK1targetSacCer)+geom_density(aes(x = `[ST]-P-X-[KR]`/length,fill = target),alpha=.5)
+
+ggplot(CDK1targetSacCer)+geom_density(aes(x = log10(Phosphorylation/`nEq_STP`),fill = target),alpha=.5,bw=0.5)
+
+ggplot(subset(CDK1targetSacCer,`P-Score`>2),aes(x=log10(`nmol`),y=log10(Phosphorylation)))+geom_point(aes(color=length))+scale_color_continuous(low = "green",high = "red")
+
+
+
+ggplot(subset(CDK1targetSacCer,`P-Score`>2),aes(x=length*0.005,y=`[ST]-P-X-[KR]`))+geom_point(aes(color=length))+scale_color_continuous(low = "green",high = "red")
+
+
+
+ggplot(CDK1targetSacCer)+geom_density(aes(x = log(nEq_STPXKR),fill = target),alpha=.5,bw=0.5)
+
+
+
+
+
 ggplot(subset(CDK1targetSacCer,`P-Score`>2))+geom_histogram(aes(x=`[ST]-P`/length))
 ggplot(CDK1targetSacCer)+geom_histogram(aes(x=`[ST]-P-X-[KR]`/length))
 ggplot(CDK1targetSacCer)+geom_histogram(aes(x=`[ST]-P-X-[KR]`))
@@ -489,6 +518,11 @@ ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`/length,y=`[ST]-P`/le
 
 ggplot(subset(CDK1targetSacCer,`P-Score`>0))+geom_histogram(aes(x=length))
 ```
+P-score does not consider the size nor the number of consensus phospho sites for Cdk1. P-Score = log(Phosphorylation<arbitrary units>/ Protein level <ng>)
+
+For correcting for protein lenght we can do P-Score Mol = log(Phosphorylation<arbitrary units>/ number of protein umols) = log(Phosphorylation<arbitrary units>/ (Protein Level <ng> / (length <AAs>)*120 <g mol/AAs>))
+
+Correcting for number of moles in the reaction or for number of Eq of [ST]-P sites or [ST]-P-X-[KR] doesn't change much, probably due to the fact that this 
 
 ```{r explore,echo=FALSE,message=FALSE,warning=FALSE}
 
