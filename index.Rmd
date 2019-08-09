@@ -4,10 +4,10 @@ output:
   html_document:
     df_print: paged
     fig_caption: yes
+  pdf_document: default
 params:
   d: !r Sys.Date()
-
-    
+bibliography: references.bib
 ---
 updated: `r params$d`  
 
@@ -16,6 +16,8 @@ library(jsonlite)
 library(readr)
 library(ggplot2)
 library(GGally)
+library(vcd)
+library(kableExtra)
 
 # yeastDiso is a complex database from MobiDB Saccharomyces cerevisiae. 
 
@@ -128,17 +130,68 @@ Once we have established the disorder regions for each protein it is useful to h
 ```{r set disorder metrics columns,echo=FALSE,message=FALSE,warning=FALSE}
 
 #All the anotations in the prediction are for disordered regions
-predDisoPercAll <- c()
-predStretchDist <- c()
-for (i in 1:nrow(yeastDiso)) {
-  mat<-yeastDiso$disorder$predictors[[i]]$regions[[1]]
-  predStretchDist <- c(predStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-  #calculate the number of disoredered AAs
-  nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-  proteinLength <- nchar(yeastDiso$sequence[i])
-  predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
+
+
+getPredDiso <- function(df,output){
+  predDisoPercAll <- c()
+  predStretchDist <- c()
+  disoPosList <- list()
+  for (i in 1:nrow(df)) {
+    mat<-df$disorder$predictors[[i]]$regions[[1]]
+    predStretchDist <- c(predStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+    #calculate the number of disoredered AAs
+    nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+    proteinLength <- nchar(df$sequence[i])
+    predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
+    
+    disoPos <-numeric()
+    disoPos <-apply(mat, 1, function(x){disoPos<-c(disoPos,x[1]:x[2])
+                                   return(disoPos)})
+    disoPos <- as.numeric(unlist(disoPos))
+    disoPosList[[i]]<-disoPos
+  }
+if (output=="percentage") {
+    return(predDisoPercAll)
+  } else if (output=="lenghts") {
+    return(predStretchDist)
+  } else if (output=="indices") {
+    return(disoPosList)
+  } else {stop("wrong output specified. Options are 'percentage','lenghts' or 'indices' ")}
 }
-yeastDiso$predDisoPercAll <- predDisoPercAll
+
+yeastDiso$predDisoPercAll <- getPredDiso(yeastDiso,output = "percentage")
+
+getPredLiteDiso <- function(df,output){
+  predLiteDisoPercAll <- c()
+  predLiteStretchDist <- c()
+  disoPosList <- list()
+  for (i in 1:nrow(df)) {
+    liteIndex<-which(df$disorder$predictors[[i]]$method=="mobidb-lite")
+    if (length(liteIndex)!=0) {
+      mat<-df$disorder$predictors[[i]]$regions[[liteIndex]]
+      if (class(mat)=="matrix") {
+        predLiteStretchDist <- c(predLiteStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+        #calculate the number of disoredered AAs
+        nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+        proteinLength <- nchar(df$sequence[i])
+        predLiteDisoPercAll <- c(predLiteDisoPercAll,(nDiso/proteinLength)*100)
+        
+        disoPos <-numeric()
+        disoPos <-apply(mat, 1, function(x){disoPos<-c(disoPos,x[1]:x[2])
+                                       return(disoPos)})
+        disoPos <- as.numeric(unlist(disoPos))
+        disoPosList[[i]]<-disoPos
+      } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,0)}
+    } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,NA)}
+  }
+if (output=="percentage") {
+    return(predLiteDisoPercAll)
+  } else if (output=="lenghts") {
+    return(predLiteStretchDist)
+  } else if (output=="indices") {
+    return(disoPosList)
+  } else {stop("wrong output specified. Options are 'percentage','lenghts' or 'indices' ")}
+}
 
 #mobidb-lite for comparing with the simple
 predLiteStretchDist <- c()
@@ -253,7 +306,9 @@ The lack of correlation in this metric for different methods does not directly i
 
 ```{r stretches of disorder ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 5:distribution of the lenghts of disorder stretches" }
 
+predStretchDist <- getPredDiso(yeastDiso,"lenghts")
 predStretchDist <- cbind(predStretchDist,rep("Simple predictor",length(predStretchDist)))
+predLiteStretchDist <- getPredLiteDiso(yeastDiso,"lenghts")
 predLiteStretchDist <- cbind(predLiteStretchDist,rep("MobiDB-lite predictor",length(predLiteStretchDist)))
 dbStretchDist <- cbind(dbStretchDist,rep("DB",length(dbStretchDist)))
 derivedStretchDist <- cbind(derivedStretchDist,rep("Derived",length(derivedStretchDist)))
@@ -311,9 +366,12 @@ Nevertheless, inconsistencies in the measurements of the ratio of disordered ami
 If the percentage of disorder residues correlates well with one or more CDK phosphorylation target properties it could be informative regardless if the estimation is highly accurate.  
   
   
-## Cdk1 targets  
+# Cdk1 targets  
   
-  
+For defining the targets for Cdk1 in Saccharomyces cerevisiae, I used publicly available data published by David Morgan's group [@Ubersax2003]. In this paper, the authors used a modified version of Cdk1 that allows bulky ATP analogues to bind in the ATP binding pocket (Cdk1-as1). They have used a library of yeast strains, each expressing a unique ORF fused with GST.  In this way, a radiolabelled bulky ATP analogue, N6-(benzyl) ATP, is administered to _in vitro_ perform kinase reactions between purified Cdk1-as1·Clb2 and the lysates from 695 different strains from the library. From the 695 unique ORF-GST selected,  385 correspond to ORFs encodign proteins with two or more Cdk consensus phosphorylation sites (S/T*-P-x-K/R), 137 ORFs encoding proteins with a single Cdk consensus site and whose transcripts are cell-cycle regulated, and 183 randomly chosen ORFs.
+For each reaction, they performed a step of GST tag mediated purification and they measured the levels of tagged phosphate. The authors define the measure __"P-Score"__ as the logarithm of the amount of phosphate incorporated per nanogram of protein, and they have set the treshold of P-Score > 2 for designate the Cdk1 targets.  
+
+
 ```{r cdk1 targets summary,echo=FALSE,message=FALSE,warning=FALSE}
 
 # _____________________________________________________________
@@ -466,8 +524,11 @@ CDK1targetSacCer$nEq_STPXKR<- CDK1targetSacCer$nmol*CDK1targetSacCer$`[ST]-P-X-[
 CDK1targetSacCer$target<-cut(CDK1targetSacCer$`P-Score`,breaks = c(2),labels = c("Non Cdk1 target","Cdk1 target"))
 ```
 
-
-
+```{r cdkTargetTable ,echo=FALSE,message=FALSE,warning=FALSE,rows.print=20}
+CDK1targetSacCer[order(CDK1targetSacCer$`P-Score`,decreasing = T),c(1,11,15,6,7,8,3,4,5)]
+```
+  
+From the original 695 ORFs, I kept 687 which could be unequivocally to a unique Uniprot accesion. This ID will allow us to merge the disorder data obtained from the MobiDB database and the annotations extracted from the Cdk1 targets paper data.   
 
 
 ```{r cdkTarget ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 6:" }
@@ -522,7 +583,7 @@ P-score does not consider the size nor the number of consensus phospho sites for
 
 For correcting for protein lenght we can do P-Score Mol = log(Phosphorylation<arbitrary units>/ number of protein umols) = log(Phosphorylation<arbitrary units>/ (Protein Level <ng> / (length <AAs>)*120 <g mol/AAs>))
 
-Correcting for number of moles in the reaction or for number of Eq of [ST]-P sites or [ST]-P-X-[KR] doesn't change much, probably due to the fact that this 
+Correcting for number of moles in the reaction or for number of Eq of [ST]-P sites or [ST]-P-X-[KR] doesn't change much, probably due to the fact that this correction is linear and the final effect in the logarithm scale of the Score is not relevant  
 
 ```{r explore,echo=FALSE,message=FALSE,warning=FALSE}
 
@@ -577,4 +638,106 @@ yeastDisoCDK1target$predLiteDisoPercAll <- predLiteDisoPercAll
 
 CDK1targetSacCer$predLiteDisoPercAll <- yeastDisoCDK1target$predLiteDisoPercAll
 ```
+
+```{r agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE}
+
+
+
+disorderedRegions <- getPredDiso(df = yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2),],"indices")
+TPphosphoSites <- gregexpr("[ST]P",yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2),]$sequence)
+
+stratContingencyArray <- array(dim = c(2,2,nrow(yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2),])))
+for (i in 1:nrow(yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2),])) {
+  
+  indexProt <- 1:nchar(yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2),]$sequence[[i]])
+  indexDiso <- disorderedRegions[[i]]
+  indexOrd <- setdiff(indexProt,indexDiso)
+  indexPhospho <- as.numeric(TPphosphoSites[[i]])
+  indexNonPhospho <- setdiff(indexProt,indexPhospho)
+  
+  ndp <- length(which(indexPhospho %in% indexDiso))
+  nop <- length(which(indexPhospho %in% indexOrd))
+  ndnp <- length(which(indexNonPhospho %in% indexDiso))
+  nonp<- length(which(indexNonPhospho %in% indexOrd))
+  stratContingencyArray[1,1,i]<-ndp
+  stratContingencyArray[1,2,i]<-nop
+  stratContingencyArray[2,1,i]<-ndnp
+  stratContingencyArray[2,2,i]<-nonp
+  
+}
+woolf_test(stratContingencyArray)
+apply(stratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$p.value)
+     })
+
+
+
+
+liteDisorderedRegions <- getPredLiteDiso(df = yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2 &!is.na(CDK1targetSacCer$predLiteDisoPercCdkTargets)),],"indices")
+liteTPphosphoSites <- gregexpr("[ST]P",yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2 &!is.na(CDK1targetSacCer$predLiteDisoPercCdkTargets)),]$sequence)
+
+liteStratContingencyArray <- array(dim = c(2,2,nrow(yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2 &!is.na(CDK1targetSacCer$predLiteDisoPercCdkTargets)),])))
+for (i in 1:nrow(yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2 &!is.na(CDK1targetSacCer$predLiteDisoPercCdkTargets)),])) {
+  
+  indexProtLite <- 1:nchar(yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2 &!is.na(CDK1targetSacCer$predLiteDisoPercCdkTargets)),]$sequence[[i]])
+  indexDisoLite <- liteDisorderedRegions[[i]]
+  indexOrdLite <- setdiff(indexProtLite,indexDisoLite)
+  indexPhosphoLite <- as.numeric(liteTPphosphoSites[[i]])
+  indexNonPhosphoLite <- setdiff(indexProtLite,indexPhosphoLite)
+  
+  ndpLite <- length(which(indexPhosphoLite %in% indexDisoLite))
+  nopLite <- length(which(indexPhosphoLite %in% indexOrdLite))
+  ndnpLite <- length(which(indexNonPhosphoLite %in% indexDisoLite))
+  nonpLite<- length(which(indexNonPhosphoLite %in% indexOrdLite))
+  liteStratContingencyArray[1,1,i]<-ndpLite
+  liteStratContingencyArray[1,2,i]<-nopLite
+  liteStratContingencyArray[2,1,i]<-ndnpLite
+  liteStratContingencyArray[2,2,i]<-nonpLite
+  
+}
+
+
+
+
+woolf_test(liteStratContingencyArray)
+ors <- apply(liteStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$estimate)
+     })
+
+logors <- log10(ors)
+logors[is.infinite(logors) & logors > 0] <- 2
+logors[is.infinite(logors) & logors < 0] <- -2
+
+ggplot()+geom_bar(aes(x=1:length(logors), y=logors),stat="identity")+ylim(c(-2,2))
+
+
+getAAfrequency <- function(sequences,regions=NULL,complement=FALSE){
+  
+  if (!is.null(regions)) {
+    if (complement) {
+      regionIndex <- lapply(liteDisorderedRegions, function(x){return(-as.integer(x))})
+    } else {
+      regionIndex <- regions
+      }
+  } else {
+    regionIndex <- rep(TRUE,length(sequences))
+    }
+  aaSummary <- 0
+  for (i in 1:length(sequences)) {
+    seqVector<-strsplit(sequences[i],"")[[1]][regionIndex[[i]]]
+    # print(seqVector)
+    aaSummary <- summary(factor(seqVector,levels = c("A","C","D","E","F","G","H","I","K","L","M","N","P","Q","R","S","T","V","W","Y"))) + aaSummary
+    # print(aaSummary)
+    } 
+  return(100*(aaSummary/sum(aaSummary)))
+}
+
+
+
+```
+  
+  
+# Bibliography
 
