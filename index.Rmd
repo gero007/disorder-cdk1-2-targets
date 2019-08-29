@@ -369,7 +369,8 @@ If the percentage of disorder residues correlates well with one or more CDK phos
 # Cdk1 targets  
   
 For defining the targets for Cdk1 in Saccharomyces cerevisiae, I used publicly available data published by David Morgan's group [@Ubersax2003]. In this paper, the authors used a modified version of Cdk1 that allows bulky ATP analogues to bind in the ATP binding pocket (Cdk1-as1). They have used a library of yeast strains, each expressing a unique ORF fused with GST.  In this way, a radiolabelled bulky ATP analogue, N6-(benzyl) ATP, is administered to _in vitro_ perform kinase reactions between purified Cdk1-as1·Clb2 and the lysates from 695 different strains from the library. From the 695 unique ORF-GST selected,  385 correspond to ORFs encodign proteins with two or more Cdk consensus phosphorylation sites (S/T*-P-x-K/R), 137 ORFs encoding proteins with a single Cdk consensus site and whose transcripts are cell-cycle regulated, and 183 randomly chosen ORFs.
-For each reaction, they performed a step of GST tag mediated purification and they measured the levels of tagged phosphate. The authors define the measure __"P-Score"__ as the logarithm of the amount of phosphate incorporated per nanogram of protein, and they have set the treshold of P-Score > 2 for designate the Cdk1 targets.  
+For each reaction, they performed a step of GST tag mediated purification and they measured the levels of tagged phosphate. The authors define the measure __"P-Score"__ as the logarithm of the amount of phosphate incorporated per nanogram of protein, and they have set the treshold of P-Score > 2 for designate the Cdk1 targets.
+
 
 
 ```{r cdk1 targets summary,echo=FALSE,message=FALSE,warning=FALSE}
@@ -521,14 +522,38 @@ CDK1targetSacCer$MW_kDa<-(CDK1targetSacCer$length*120)/1000
 CDK1targetSacCer$nmol<- (CDK1targetSacCer$`Protein Level`/CDK1targetSacCer$MW_kDa)/1000
 CDK1targetSacCer$nEq_STP<- CDK1targetSacCer$nmol*CDK1targetSacCer$`[ST]-P`
 CDK1targetSacCer$nEq_STPXKR<- CDK1targetSacCer$nmol*CDK1targetSacCer$`[ST]-P-X-[KR]`
-CDK1targetSacCer$target<-cut(CDK1targetSacCer$`P-Score`,breaks = c(2),labels = c("Non Cdk1 target","Cdk1 target"))
+CDK1targetSacCer$target<-cut(CDK1targetSacCer$`P-Score`,breaks = c(-Inf,2,Inf),labels = c("Non Cdk1 target","Cdk1 target"),right = F)
+CDK1targetSacCer$targetStrict<-cut(CDK1targetSacCer$`P-Score`,breaks = c(-Inf,3,Inf),labels = c("Non Cdk1 target","Cdk1 target"),right = F)
 ```
 
 ```{r cdkTargetTable ,echo=FALSE,message=FALSE,warning=FALSE,rows.print=20}
 CDK1targetSacCer[order(CDK1targetSacCer$`P-Score`,decreasing = T),c(1,11,15,6,7,8,3,4,5)]
 ```
   
-From the original 695 ORFs, I kept 687 which could be unequivocally to a unique Uniprot accesion. This ID will allow us to merge the disorder data obtained from the MobiDB database and the annotations extracted from the Cdk1 targets paper data.   
+From the original 695 ORFs, I kept 687 which could be unequivocally to a unique Uniprot accesion. This ID will allow us to merge the disorder data obtained from the MobiDB database and the annotations extracted from the Cdk1 targets paper data.  
+  
+## P-Score
+  
+In order to understand the P-Score, I compare its value against P-score normalized by the numbers of mol proteins instead of the mass. For this calculation we consider that the average molar mass of one amino acid is 120 gr/mol:
+
+$$\log(\frac{Phosphorylation_{<arbitrary\ units>}}{Protein Level _{<ng>} / MW _{<ng/nmol>}}) = log(\frac{Phosphorylation_{<arbitrary\ units>}}{Protein Level _{<ng>} / (length _{<amin oacids>} *\ 120 _{<ng/(nmol*amino acids)>}))})$$   
+  
+If we consider every consensus phosphosite as phosphorylatable, we could normalize not only by the number of moles in the reaction, but also by the number of moles of phosphosites. We could think this concept as similar to the definition of one Equivalent. For the two consensus patterns considered (S/T\*-P-x-K/R and S/T\*-P), we could calculate the the number of equivalents of a phsophosite as: 
+$$nEq/mol*nmol = n° (S/T-P-x-K/R)\ or\ n°(S/T-P)*\frac{Protein Level _{<ng>}}{(length _{<amin oacids>} *\ 120 _{<ng/(nmol*amino acids)>}}$$
+
+```{r scores ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 6:" }
+
+scoresData <- CDK1targetSacCer[,c("Phosphorylation","P-Score","Protein Level","nmol","nEq_STP","nEq_STPXKR","target")]
+scoresData$logPhospho <- log10(CDK1targetSacCer$Phosphorylation)
+scoresData$logMol <- log10(CDK1targetSacCer$nmol)
+scoresData$logEq_STP <- log10(CDK1targetSacCer$nEq_STP)
+scoresData$logEq_STPXR <- log10(CDK1targetSacCer$nEq_STPXKR)
+scoresData$targetStrict <- CDK1targetSacCer$target<-cut(CDK1targetSacCer$`P-Score`,breaks = c(-Inf,3,Inf),labels = c("Non Cdk1 target","Cdk1 target"),right = F)
+
+ggplot(scoresData,aes(x=log10(`nmol`),y=log10(Phosphorylation)))+geom_point(aes(color=target))+ geom_smooth(method = "lm")
+
+cor(subset(scoresData,`P-Score`>=2)$nmol,subset(scoresData,`P-Score`>=2)$Phosphorylation)
+```
 
 
 ```{r cdkTarget ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 6:" }
