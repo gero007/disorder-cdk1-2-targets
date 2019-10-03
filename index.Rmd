@@ -18,6 +18,7 @@ library(ggplot2)
 library(GGally)
 library(vcd)
 library(kableExtra)
+library(ggpubr)
 
 # yeastDiso is a complex database from MobiDB Saccharomyces cerevisiae. 
 
@@ -56,7 +57,6 @@ knitr::include_graphics("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/di
 As a first approach, I explored the Disorder database from Mobidb for the whole annotated proteome of Saccharomyces cerevisiae. The data set comprehends the information of disordered region over 6721 proteins. As explained before, each entry could have annotations of disorder in three different levels (DB, indirect, Predicted) which, at the same time, collect information from several sources in order to reach to a consensus of the regions with or without a defined tri-dimensional structure. I this way, the consensus of each level annotates the regions as structured "S", Disordered "D" or conflict "C", when there is more than one source of information over a protein region that contradicts each other.
 
 ```{r all data summary ,echo=FALSE,message=FALSE,warning=FALSE}
-
 npredictors=0
 nmobidblite=0
 nsimple=0
@@ -278,18 +278,18 @@ ggplot(data = yeastDiso)+geom_histogram(aes(x=dbDisoPercAll,fill="DB"),bins = 30
   
 The use of the derived data for assigning IDRs seems to present a distribution of the percentage of disorder residues congruent with the MobiDB lite predictor, presenting a considerable proportion of protein not having any disorder residues.
 
-Similar distributions of the percentage of disorder residues, for two different predictors, could be validated if the predictors are assigning similar percentage values to the same proteins. If this is the case, we should be able to find a correlation between the values calculated by different methods. In Figure 4, pairwise comparisons for both of the prediction methods and the Derived and DB annotations are shown, together with the density distributions and the corresponding correlation coefficients. Since we are interested in elucidating how CDK phosphorylation could be involved in the disorder states of its targets, another level of complexity is added to this plot. The percentage of phosphorylatable residues (Ser, Thr, Tyr) were calculated for all the proteins and Low, Mid and High levels of putative phosphorylations sites were defined with arbitrary breaks (0-15%, 15-20%,20-60% ) of the percentage values, based on the quartiles of the distribution.
+Similar distributions of the percentage of disorder residues, for two different predictors, could be validated if the predictors are assigning similar percentage values to the same proteins. If this is the case, we should be able to find a correlation between the values calculated by different methods. In Figure 4, pairwise comparisons for both of the prediction methods and the Derived and DB annotations are shown, together with the density distributions and the corresponding correlation coefficients. Since we are interested in elucidating how CDK phosphorylation could be involved in the disorder states of its targets, another level of complexity is added to this plot. The percentage of phosphorylatable residues ([ST]P) were calculated for all the proteins and Low, Mid and High levels of putative phosphorylations sites were defined with arbitrary breaks (0-15%, 15-20%,20-60% ) of the percentage values, based on the quartiles of the distribution.
 
 ```{r comparison scatters ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 4: Pairwise comparison of the % of disorder residues determined by the different methods",fig.height=8,fig.width=10 }
 
 compDataSet <- yeastDiso[,c(2,6:9)]
 phosphorylatableResidues <- numeric()
-for (phosoSites in gregexpr(pattern = "T|Y|S",as.character(compDataSet[,1]))){phosphorylatableResidues<-c(phosphorylatableResidues,length(phosoSites))}
+for (phosoSites in gregexpr(pattern = "[ST]P",as.character(compDataSet[,1]))){phosphorylatableResidues<-c(phosphorylatableResidues,length(phosoSites))}
 compDataSet$nPhosphoRes <- phosphorylatableResidues
 compDataSet[,1] <- nchar(as.character(compDataSet[,1]))
 colnames(compDataSet)[1] <- "proteinLength"
 compDataSet$percPhosphoRes <- (compDataSet$nPhosphoRes/compDataSet$proteinLength)*100
-compDataSet$levelPhosphoRes<-cut(compDataSet$percPhosphoRes,breaks = c(0,15,20,60),labels = c("Low","Mid","High"))
+compDataSet$levelPhosphoRes<-cut(compDataSet$percPhosphoRes,breaks = c(0,0.45,1,10),labels = c("Low","Mid","High"))
 
 print(summary(compDataSet$percPhosphoRes))
 GGally::ggpairs(data = compDataSet,columns = c(2:5), ggplot2::aes(colour=levelPhosphoRes,alpha=0.5),xlab="% of disorder residues", ylab="% of disorder residues",columnLabels=c("Simple predictor","MobiDB-Lite predictor","Derived","DB")) +
@@ -319,6 +319,7 @@ colnames(stretchData) <- c("stretchLength","method")
 stretchData$method <- as.factor(stretchData$method)
 stretchData$method <- factor(stretchData$method, levels = c("Simple predictor","MobiDB-lite predictor","Derived","DB"))
 stretchData$stretchLength <- as.numeric(stretchData$stretchLength)
+
 
 
 
@@ -541,34 +542,57 @@ $$\log(\frac{Phosphorylation_{<arbitrary\ units>}}{Protein Level _{<ng>} / MW _{
 If we consider every consensus phosphosite as phosphorylatable, we could normalize not only by the number of moles in the reaction, but also by the number of moles of phosphosites. We could think this concept as similar to the definition of one Equivalent. For the two consensus patterns considered (S/T\*-P-x-K/R and S/T\*-P), we could calculate the the number of equivalents of a phsophosite as: 
 $$nEq/mol*nmol = n° (S/T-P-x-K/R)\ or\ n°(S/T-P)*\frac{Protein Level _{<ng>}}{(length _{<amin oacids>} *\ 120 _{<ng/(nmol*amino acids)>}}$$
 
-```{r scores ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 6:" }
+```{r scores ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 6: Comparision of the dependance of the phosphorylation on the on the ammount of protein" }
 
-scoresData <- CDK1targetSacCer[,c("Phosphorylation","P-Score","Protein Level","nmol","nEq_STP","nEq_STPXKR","target")]
+scoresData <- CDK1targetSacCer[,c("Phosphorylation","P-Score","Protein Level","nmol","nEq_STP","nEq_STPXKR","target","[ST]-P","[ST]-P-X-[KR]")]
 scoresData$logPhospho <- log10(CDK1targetSacCer$Phosphorylation)
 scoresData$logMol <- log10(CDK1targetSacCer$nmol)
 scoresData$logEq_STP <- log10(CDK1targetSacCer$nEq_STP)
 scoresData$logEq_STPXR <- log10(CDK1targetSacCer$nEq_STPXKR)
 scoresData$targetStrict <- CDK1targetSacCer$target<-cut(CDK1targetSacCer$`P-Score`,breaks = c(-Inf,3,Inf),labels = c("Non Cdk1 target","Cdk1 target"),right = F)
 
-ggplot(scoresData,aes(x=log10(`nmol`),y=log10(Phosphorylation)))+geom_point(aes(color=target))+ geom_smooth(method = "lm")
+PhosVsPL<-ggplot(scoresData,aes(x=log10(`Protein Level`),y=log10(Phosphorylation)))+geom_point(aes(color=target)) + theme_linedraw() + xlab("Log10(Protein Level<ng>)") + ylab("Log10(Phosphorylation)")
+PhosVsnM<-ggplot(scoresData,aes(x=log10(`nmol`),y=log10(Phosphorylation)))+geom_point(aes(color=target)) + theme_linedraw() + theme(axis.title.y = element_blank())+ xlab("Log10(nmoles)") + ylab("Log10(Phosphorylation)")
+PhosVsnEqSTP<-ggplot(scoresData,aes(x=log10(`nEq_STP`),y=log10(Phosphorylation)))+geom_point(aes(color=target)) + theme_linedraw()  + xlab("Log10(nEquivalents S/T-P)") + ylab("Log10(Phosphorylation)") 
+PhosVsnEqSTPXKR<-ggplot(scoresData,aes(x=log10(`nEq_STPXKR`),y=log10(Phosphorylation)))+geom_point(aes(color=target)) + theme_linedraw() + theme(axis.title.y = element_blank()) + xlab("Log10(nEquivalents S/T-P-x-K/R)") + ylab("Log10(Phosphorylation)")
 
-cor(subset(scoresData,`P-Score`>=2)$nmol,subset(scoresData,`P-Score`>=2)$Phosphorylation)
+ggarrange(PhosVsPL,PhosVsnM,PhosVsnEqSTP,PhosVsnEqSTPXKR,common.legend = TRUE, legend = "bottom")
 ```
 
 
-```{r cdkTarget ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 6:" }
+```{r cdkTarget ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 7:",fig.height=10}
+
+l_pl_nm<-ggplot(scoresData,aes(x=log10(`Protein Level`),y=log10(`nmol`)))+geom_point(aes(color=target)) + theme_linedraw() + theme(axis.title.x = element_blank()) +  xlab("Log10(Protein Level <ng>)") + ylab("Log10(nMoles)")
+
+l_pl_nES<-ggplot(scoresData,aes(x=log10(`Protein Level`),y=log10(`nEq_STP`)))+geom_point(aes(color=target)) + theme_linedraw() + theme(axis.title.x = element_blank()) +  xlab("Log10(Protein Level <ng>)") + ylab("Log10(nEquivalents S/T-P)")
+l_pl_nEF<-ggplot(scoresData,aes(x=log10(`Protein Level`),y=log10(`nEq_STPXKR`)))+geom_point(aes(color=target)) + theme_linedraw() + xlab("Log10(Protein Level <ng>)") + ylab("Log10(nEquivalents S/T-P-x-K/R)")
 
 
 
 
+pl_nm<-ggplot(scoresData,aes(x=`Protein Level`,y=`nmol`))+geom_point(aes(color=target)) + theme_linedraw()+ theme(axis.title.x = element_blank())  +  xlab("Protein Level <ng>") + ylab("nMoles")
+
+pl_nES<-ggplot(scoresData,aes(x=`Protein Level`,y=`nEq_STP`))+geom_point(aes(color=target)) + theme_linedraw() + theme(axis.title.x =  element_blank()) +  xlab("Protein Level <ng>") + ylab("nEquivalents S/T-P")
+pl_nEF<-ggplot(scoresData,aes(x=`Protein Level`,y=`nEq_STPXKR`))+geom_point(aes(color=target)) + theme_linedraw() + xlab("Protein Level <ng>") + ylab("nEquivalents S/T-P-x-K/R")
+
+ggarrange(l_pl_nm,pl_nm,l_pl_nES,pl_nES,l_pl_nEF,pl_nEF,nrow = 3, ncol = 2,common.legend = TRUE, legend = "bottom")
+```
+
+```{r  ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 8:",fig.height=10}
 
 
+compDataSet$levelPhosphoRes<-cut(compDataSet$percPhosphoRes,breaks = c(0,0.45,1,10),labels = c("Low","Mid","High"))
 
+ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`,y=`[ST]-P-X-[KR]`/length))+geom_point(aes(color=target))+geom_smooth(method=lm, se=FALSE)
+
+
+```
 ggplot(CDK1targetSacCer)+geom_density(aes(x = predDisoPercCdkTargets,fill = target),alpha=.5)
 ggplot(CDK1targetSacCer)+geom_density(aes(x = predLiteDisoPercCdkTargets,fill = target),alpha=.5)
 ggplot(CDK1targetSacCer)+geom_density(aes(x = length,fill = target),alpha=.5)
 
 ggplot(CDK1targetSacCer)+geom_histogram(aes(x = `[ST]-P`/length,fill = target),alpha=.5)
+ggplot(CDK1targetSacCer)+geom_density(aes(x = `[ST]-P`/length,fill = target),alpha=.5)
 ggplot(CDK1targetSacCer)+geom_density(aes(x = `[ST]-P-X-[KR]`/length,fill = target),alpha=.5)
 
 ggplot(CDK1targetSacCer)+geom_density(aes(x = log10(Phosphorylation/`nEq_STP`),fill = target),alpha=.5,bw=0.5)
