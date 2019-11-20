@@ -19,8 +19,46 @@ library(GGally)
 library(vcd)
 library(kableExtra)
 library(ggpubr)
+library(Rcpi)
+library(Biostrings)
+library(eulerr)
+
+#################################
+########### FUCNTIONS ###########
+#################################
+
+#__________Spot disorder__________
+
+
+getSpotDisoMatrix <- function(disoPath){ 
+  output_list <- list()
+  for (disoFile in dir(path = disoPath,pattern = "*.spotd")) {
+    id=strsplit(disoFile,split = "\\.")[[1]][1]
+    # print(id)
+    # print(paste(disoPath,disoFile,sep = ""))
+    auxdf <- read.delim(paste(disoPath,disoFile,sep = ""), header=FALSE, comment.char="#")
+    disoRunningLenghts <- rle(as.vector(auxdf$V4))
+    start=1
+    disoMatrix <- matrix(ncol = 4,nrow = length(disoRunningLenghts$lengths))
+    for (i in 1:length(disoRunningLenghts$lengths)) {
+      end=start+disoRunningLenghts$lengths[i]-1
+      disoMatrix[i,] <- as.character(c(start,end,disoRunningLenghts$values[i],disoRunningLenghts$lengths[i]))
+      # print(c(start,end,test$values[i],test$lengths[i]))
+      start=end+1
+    }
+    output_list[[id]] <- disoMatrix
+  }
+  # print(disoMatrix)
+  # print(which(targetDf$acc==id))
+  return(output_list)
+}
+#__________other functions__________
 
 # yeastDiso is a complex database from MobiDB Saccharomyces cerevisiae. 
+
+#################################
+############# DATA ##############
+#################################
 
 yeastDiso<-stream_in(con = file("~/projects/cdk1_cyclinB1/phase_separation/disorder/disorder_UP000002311.mjson"),verbose = F)
 yeastDiso$mobidb_consensus <- yeastDiso$mobidb_consensus$disorder
@@ -35,6 +73,7 @@ CDK1targetSacCer <- read_delim("~/projects/cdk1_cyclinB1/phase_separation/disord
 # Now the comumn "disorder" is a unnamed list with a complex structure for each row of the data frame
 
 
+spotDisorderList <- getSpotDisoMatrix("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/spot_run_yeast/")
 
 
 ```
@@ -181,8 +220,12 @@ getPredLiteDiso <- function(df,output){
                                        return(disoPos)})
         disoPos <- as.numeric(unlist(disoPos))
         disoPosList[[i]]<-disoPos
-      } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,0)}
-    } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,NA)}
+      } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,0)
+        disoPosList[[i]]<-0
+        }
+    } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,NA)
+      disoPosList[[i]]<-0
+      }
   }
 if (output=="percentage") {
     return(predLiteDisoPercAll)
@@ -258,6 +301,53 @@ for (i in 1:nrow(yeastDiso)) {
 }
 yeastDiso$dbDisoPercAll <- dbDisoPercAll
 
+
+################ SPOT ##################
+getSpotPredDiso <- function(df,output,accession_col){
+  predDisoPercAll <- c()
+  predStretchDist <- c()
+  disoPosList <- list()
+  for (i in 1:nrow(df)) {
+    mat<-spotDisorderList[[df[i,accession_col]]]
+    #select only disordered regions
+    mat <- matrix(mat[mat[,3]=="D",],ncol=4)
+    # print(df$acc[[i]])
+    # print(mat)
+    if (nrow(mat)!=0) {
+      predStretchDist <- c(predStretchDist,as.numeric(mat[,4]))
+      #calculate the number of disoredered AAs
+      nDiso<-sum(as.numeric(mat[,4]))
+      # print(nDiso)
+      proteinLength <- nchar(df$sequence[[i]])
+      # print(proteinLength)
+      predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
+      # print((nDiso/proteinLength)*100)
+      disoPos <-numeric()
+      disoPos <-apply(mat, 1, function(x){disoPos<-c(disoPos,x[1]:x[2])
+                                     return(disoPos)})
+      disoPos <- as.numeric(unlist(disoPos))
+      disoPosList[[i]]<-disoPos
+    } else {
+      nDiso<-0
+      proteinLength <- nchar(df$sequence[i])
+      predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
+      
+      disoPos <-numeric()
+      disoPos <- 0
+      disoPosList[[i]]<-disoPos
+    }
+  }
+  if (output=="percentage") {
+    return(predDisoPercAll)
+  } else if (output=="lenghts") {
+    return(predStretchDist)
+  } else if (output=="indices") {
+    return(disoPosList)
+  } else {stop("wrong output specified. Options are 'percentage','lenghts' or 'indices' ")}
+}
+
+yeastDiso$predSpotDisoPercAll <- getSpotPredDiso(yeastDiso,output = "percentage","acc")
+
 ```
 
 ```{r histograms predictors,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 2: Histogram for the disorder percentages estimated by the two predictors"}
@@ -310,14 +400,17 @@ predStretchDist <- getPredDiso(yeastDiso,"lenghts")
 predStretchDist <- cbind(predStretchDist,rep("Simple predictor",length(predStretchDist)))
 predLiteStretchDist <- getPredLiteDiso(yeastDiso,"lenghts")
 predLiteStretchDist <- cbind(predLiteStretchDist,rep("MobiDB-lite predictor",length(predLiteStretchDist)))
+predSpotStretchDist <- getSpotPredDiso(yeastDiso,"lenghts")
+predSpotStretchDist <- cbind(predSpotStretchDist,rep("SPOT predictor",length(predSpotStretchDist)))
 dbStretchDist <- cbind(dbStretchDist,rep("DB",length(dbStretchDist)))
 derivedStretchDist <- cbind(derivedStretchDist,rep("Derived",length(derivedStretchDist)))
 
-stretchData <-rbind(predStretchDist,predLiteStretchDist,dbStretchDist,derivedStretchDist)
+
+stretchData <-rbind(predStretchDist,predLiteStretchDist,predSpotStretchDist,dbStretchDist,derivedStretchDist)
 stretchData <-as.data.frame(stretchData)
 colnames(stretchData) <- c("stretchLength","method")
 stretchData$method <- as.factor(stretchData$method)
-stretchData$method <- factor(stretchData$method, levels = c("Simple predictor","MobiDB-lite predictor","Derived","DB"))
+stretchData$method <- factor(stretchData$method, levels = c("Simple predictor","MobiDB-lite predictor","SPOT predictor","Derived","DB"))
 stretchData$stretchLength <- as.numeric(stretchData$stretchLength)
 
 
@@ -326,7 +419,7 @@ stretchData$stretchLength <- as.numeric(stretchData$stretchLength)
 ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin(aes(fill=method), alpha = 0.7,show.legend = FALSE) +
     theme_minimal() +
     geom_boxplot(width=0.05) +
-    scale_fill_manual(values = c("Simple predictor"="darkorange1","MobiDB-lite predictor" = "chartreuse3","Derived"="darkgoldenrod1","DB" = "deepskyblue2")) +
+    scale_fill_manual(values = c("Simple predictor"="darkorange1","MobiDB-lite predictor" = "chartreuse3","SPOT predictor" = "firebrick1","Derived"="darkgoldenrod1","DB" = "deepskyblue2")) +
     xlab("Method") + ylab("Lenght of IDR") +
     scale_y_continuous(limits = c(0,600))
 ```
@@ -604,6 +697,7 @@ ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`,y=`[ST]-P-X-[KR]`/le
 
 
 ```
+```{r test1,echo=FALSE,message=FALSE,warning=FALSE}
 ggplot(CDK1targetSacCer)+geom_density(aes(x = predDisoPercCdkTargets,fill = target),alpha=.5)
 ggplot(CDK1targetSacCer)+geom_density(aes(x = predLiteDisoPercCdkTargets,fill = target),alpha=.5)
 ggplot(CDK1targetSacCer)+geom_density(aes(x = length,fill = target),alpha=.5)
@@ -644,6 +738,11 @@ ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`/length,y=`[ST]-P-X-[
 ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`/length,y=`[ST]-P`/length))+geom_point()+geom_smooth(method=lm, se=FALSE)
 
 ggplot(subset(CDK1targetSacCer,`P-Score`>0))+geom_histogram(aes(x=length))
+
+
+simpleDisoPerc<-ggplot(CDK1targetSacCer)+geom_density(aes(x = predDisoPercCdkTargets,fill = target),alpha=.5,bw=6)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100))+ggtitle("Simple Predictor")
+liteDisoPerc<-ggplot(CDK1targetSacCer)+geom_density(aes(x = predLiteDisoPercCdkTargets,fill = target),alpha=.5,bw=4)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100)) + theme(axis.title.y = element_blank())+labs(title="MobiDB-Lite Predictor")
+ggarrange(simpleDisoPerc,liteDisoPerc,nrow = 1, ncol = 2,common.legend = TRUE,legend = "bottom")
 ```
 P-score does not consider the size nor the number of consensus phospho sites for Cdk1. P-Score = log(Phosphorylation<arbitrary units>/ Protein level <ng>)
 
@@ -651,7 +750,7 @@ For correcting for protein lenght we can do P-Score Mol = log(Phosphorylation<ar
 
 Correcting for number of moles in the reaction or for number of Eq of [ST]-P sites or [ST]-P-X-[KR] doesn't change much, probably due to the fact that this correction is linear and the final effect in the logarithm scale of the Score is not relevant  
 
-```{r explore,echo=FALSE,message=FALSE,warning=FALSE}
+```{r explore1,echo=FALSE,message=FALSE,warning=FALSE}
 
 predDisoPercAll <- c()
 for (i in 1:nrow(yeastDiso)) {
@@ -676,7 +775,7 @@ for (i in 1:nrow(yeastDisoCDK1target)) {
 }
 
 
-
+yeastDisoCDK1target$predDisoPerc <- predDisoPercCDK1target
 CDK1targetSacCer$percDiso_predicted <- yeastDisoCDK1target$predDisoPerc
 
 predLiteStretchDist <- c()
@@ -703,12 +802,73 @@ for (i in 1:nrow(yeastDisoCDK1target)) {
 yeastDisoCDK1target$predLiteDisoPercAll <- predLiteDisoPercAll
 
 CDK1targetSacCer$predLiteDisoPercAll <- yeastDisoCDK1target$predLiteDisoPercAll
+
+
+######SPOT######
+
+
+CDK1targetSacCer$predSpotDisoPerc <- yeastDiso$predSpotDisoPercAll[match(CDK1targetSacCer$Entry,yeastDiso$acc)]
 ```
 
 ```{r agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE}
 
+####Yeast Proteome####
+
+disorderedRegions <- getPredDiso(df = yeastDiso,"indices")
+TPphosphoSites <- gregexpr("[ST]P",yeastDiso$sequence)
+
+stratContingencyArray <- array(dim = c(2,2,nrow(yeastDiso)))
+for (i in 1:nrow(yeastDiso)) {
+  
+  indexProt <- 1:nchar(yeastDiso$sequence[[i]])
+  indexDiso <- disorderedRegions[[i]]
+  indexOrd <- setdiff(indexProt,indexDiso)
+  indexPhospho <- as.numeric(TPphosphoSites[[i]])
+  indexNonPhospho <- setdiff(indexProt,indexPhospho)
+  
+  ndp <- length(which(indexPhospho %in% indexDiso))
+  nop <- length(which(indexPhospho %in% indexOrd))
+  ndnp <- length(which(indexNonPhospho %in% indexDiso))
+  nonp<- length(which(indexNonPhospho %in% indexOrd))
+  stratContingencyArray[1,1,i]<-ndp
+  stratContingencyArray[1,2,i]<-nop
+  stratContingencyArray[2,1,i]<-ndnp
+  stratContingencyArray[2,2,i]<-nonp
+  
+}
+woolf_test(stratContingencyArray)
+apply(stratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$p.value)
+     })
 
 
+
+
+liteDisorderedRegions <- getPredLiteDiso(df = yeastDiso,"indices")
+liteTPphosphoSites <- gregexpr("[ST]P",yeastDiso$sequence)
+
+liteStratContingencyArray <- array(dim = c(2,2,nrow(yeastDiso)))
+for (i in 1:nrow(yeastDiso)) {
+  
+  indexProtLite <- 1:nchar(yeastDiso$sequence[[i]])
+  indexDisoLite <- liteDisorderedRegions[[i]]
+  indexOrdLite <- setdiff(indexProtLite,indexDisoLite)
+  indexPhosphoLite <- as.numeric(liteTPphosphoSites[[i]])
+  indexNonPhosphoLite <- setdiff(indexProtLite,indexPhosphoLite)
+  
+  ndpLite <- length(which(indexPhosphoLite %in% indexDisoLite))
+  nopLite <- length(which(indexPhosphoLite %in% indexOrdLite))
+  ndnpLite <- length(which(indexNonPhosphoLite %in% indexDisoLite))
+  nonpLite<- length(which(indexNonPhosphoLite %in% indexOrdLite))
+  liteStratContingencyArray[1,1,i]<-ndpLite
+  liteStratContingencyArray[1,2,i]<-nopLite
+  liteStratContingencyArray[2,1,i]<-ndnpLite
+  liteStratContingencyArray[2,2,i]<-nonpLite
+  
+}
+
+####CDK targets#####
 disorderedRegions <- getPredDiso(df = yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2),],"indices")
 TPphosphoSites <- gregexpr("[ST]P",yeastDisoCDK1target[which(CDK1targetSacCer$`P-Score`>=2),]$sequence)
 
@@ -776,7 +936,7 @@ logors <- log10(ors)
 logors[is.infinite(logors) & logors > 0] <- 2
 logors[is.infinite(logors) & logors < 0] <- -2
 
-ggplot()+geom_bar(aes(x=1:length(logors), y=logors),stat="identity")+ylim(c(-2,2))
+ggplot()+geom_bar(aes(x=1:length(ors), y=ors),stat="identity")+ylim(c(-2,2))
 
 
 getAAfrequency <- function(sequences,regions=NULL,complement=FALSE){
@@ -803,7 +963,166 @@ getAAfrequency <- function(sequences,regions=NULL,complement=FALSE){
 
 
 ```
+```{r agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE} 
   
+summary(CDK1targetSacCer$target)
+sd(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target",])
+sd(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
+sd(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
+var(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
+var(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
+t.test(x=CDK1targetSacCer$predDisoPercCdkTargets,y=CDK1targetSacCer$target)
+t.test(x=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
+t.test(x=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
+t.test(x=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],var.equal = T)
+sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
+sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
+CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"]
+sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],na.rm = T)
+sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
+var(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],na.rm = T)
+var(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
+summary(CDK1targetSacCer$target[!is.na(CDK1targetSacCer$predLiteDisoPercCdkTargets)])
+t.test(x=CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],var.equal = T)
+
+
+simplePhosphosites<-ggplot(CDK1targetSacCer)+geom_density(aes(x = `[ST]-P`,fill = target),alpha=.5,bw=6)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,0.1)) + scale_x_continuous(name="sites",limits = c(0,40))+ggtitle("[ST]-P")
+fullPhosphosites<-ggplot(CDK1targetSacCer)+geom_density(aes(x = `[ST]-P-X-[KR]`,fill = target),alpha=.5,bw=4)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_y_continuous(limits = c(0,0.1)) + scale_x_continuous(name="sites",limits = c(0,40)) + theme(axis.title.y = element_blank())+labs(title="[ST]-P-X-[KR]")
+ggarrange(simplePhosphosites,fullPhosphosites,nrow = 1, ncol = 2,common.legend = TRUE,legend = "bottom")
+
+
+
+```
+
+
+```{r Holt paper data cleansing ,echo=FALSE,message=FALSE,warning=FALSE}
+
+uniprot_yeast <- read_delim("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/uniprot_yeast.tab",
+"\t", escape_double = FALSE, trim_ws = TRUE)
+Holt_MSdata <- read_delim("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/Holt_CDK1targetSacCer.tsv",
+"\t", escape_double = FALSE, trim_ws = TRUE)
+
+#Add Uniprot accesion. 58 entries lost (out of 9067) due to ID conversion
+Holt_MSdata <- Holt_MSdata[which(Holt_MSdata$ORF %in% uniprot_yeast$OLN),]
+
+Holt_MSdata$Uniprot <- uniprot_yeast$`Swiss-Prot-AC`[base::match(Holt_MSdata$ORF,uniprot_yeast$OLN)]
+
+
+#Here I'll select only the phosphosites which are positives under the autors considerations.  
+Holt_MSdata_phosphosites <- Holt_MSdata %>% dplyr::filter(grepl("[st]P",centered_15mer)) %>% dplyr::filter(`log2H/L_asynchronous`<(-1)|`log2H/L_nocodazole`<(-1)|`log2H/L_clb2`<(-1))
+
+
+#select all the phosphosites from the CDK targets (genes with at least one phosphosite experimentallly detected)
+
+cdkTargetList <- unique(Holt_MSdata_phosphosites$Uniprot)
+nonCdkTargetList <- unique(Holt_MSdata[!(Holt_MSdata$Uniprot %in% Holt_MSdata_phosphosites$Uniprot),]$Uniprot)
+Holt_CDK1targetSacCer <- Holt_MSdata[Holt_MSdata$Uniprot %in% cdkTargetList,]
+ 
+yeastDiso_Holt_CDK1target<-yeastDiso[yeastDiso$acc %in% cdkTargetList,]
+
+
+# compare % of disorder
+Holt_proteinInfo <- as.data.frame(rbind(cbind(as.character(cdkTargetList),rep("Cdk1 target",length(cdkTargetList))),cbind(as.character(nonCdkTargetList),rep("Non Cdk1 target",length(nonCdkTargetList)))))
+
+colnames(Holt_proteinInfo) <- c("Uniprot","cdk1_target")
+Holt_proteinInfo$Uniprot <- as.character(Holt_proteinInfo$Uniprot)
+
+Holt_proteinInfo<-merge.data.frame(Holt_proteinInfo,yeastDiso,by.x = "Uniprot",by.y = "acc")
+
+Holt_predDisoPerc <- c()
+for (i in 1:nrow(Holt_proteinInfo)) {
+  mat<-Holt_proteinInfo$disorder$predictors[[i]]$regions[[1]]
+  #calculate the number of disoredered AAs
+  nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+  proteinLength <- nchar(Holt_proteinInfo$sequence[i])
+  Holt_predDisoPerc <- c(Holt_predDisoPerc,(nDiso/proteinLength)*100)
+}
+
+Holt_proteinInfo$predSimpleDisoPerc <- Holt_predDisoPerc
+
+
+Holt_predLiteDisoPerc <- c()
+for (i in 1:nrow(Holt_proteinInfo)) {
+  liteIndex<-which(Holt_proteinInfo$disorder$predictors[[i]]$method=="mobidb-lite")
+  if (length(liteIndex)!=0) {
+    mat<-Holt_proteinInfo$disorder$predictors[[i]]$regions[[liteIndex]]
+    if (class(mat)=="matrix") {
+      #getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+      # mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+      #calculate the number of disoredered AAs
+      nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+      proteinLength <- nchar(Holt_proteinInfo$sequence[i])
+      Holt_predLiteDisoPerc <- c(Holt_predLiteDisoPerc,(nDiso/proteinLength)*100)      
+    } else {Holt_predLiteDisoPerc <- c(Holt_predLiteDisoPerc,0)}
+    
+  } else {
+    Holt_predLiteDisoPerc <- c(Holt_predLiteDisoPerc,NA)
+  }
   
-# Bibliography
+}
+Holt_proteinInfo$predLiteDisoPerc <- Holt_predLiteDisoPerc
+
+
+#plots
+ggplot(Holt_proteinInfo)+geom_density(aes(x = predSimpleDisoPerc,fill = cdk1_target),alpha=.5,position="identity",bw=5)
+ggplot(Holt_proteinInfo)+geom_density(aes(x = predLiteDisoPerc,fill = cdk1_target),alpha=.5,position="identity",bw=5)
+
+
+#Var and SD cheking. t-tests
+var(Holt_proteinInfo$predSimpleDisoPerc[Holt_proteinInfo$cdk1_target=="Non Cdk1 target"])
+var(Holt_proteinInfo$predSimpleDisoPerc[Holt_proteinInfo$cdk1_target=="Cdk1 target"])
+sd(Holt_proteinInfo$predSimpleDisoPerc[Holt_proteinInfo$cdk1_target=="Cdk1 target"])
+sd(Holt_proteinInfo$predSimpleDisoPerc[Holt_proteinInfo$cdk1_target=="Non Cdk1 target"])
+
+t.test(Holt_proteinInfo$predSimpleDisoPerc[Holt_proteinInfo$cdk1_target=="Cdk1 target"],Holt_proteinInfo$predSimpleDisoPerc[Holt_proteinInfo$cdk1_target=="Non Cdk1 target"],var.equal=T)
+
+
+
+var(Holt_proteinInfo$predLiteDisoPerc[Holt_proteinInfo$cdk1_target=="Cdk1 target"],na.rm = T)
+var(Holt_proteinInfo$predLiteDisoPerc[Holt_proteinInfo$cdk1_target=="Non Cdk1 target"],na.rm = T)
+sd(Holt_proteinInfo$predLiteDisoPerc[Holt_proteinInfo$cdk1_target=="Cdk1 target"],na.rm = T)
+sd(Holt_proteinInfo$predLiteDisoPerc[Holt_proteinInfo$cdk1_target=="Non Cdk1 target"],na.rm = T)
+
+t.test(Holt_proteinInfo$predLiteDisoPerc[Holt_proteinInfo$cdk1_target=="Cdk1 target"],Holt_proteinInfo$predLiteDisoPerc[Holt_proteinInfo$cdk1_target=="Non Cdk1 target"],var.equal=T)
+
+########SPOT#############
+Holt_predSpotDisoPerc<-c()
+for (i in 1:nrow(Holt_proteinInfo)) {
+  diso<-yeastDiso[yeastDiso$acc==Holt_proteinInfo$Uniprot[[i]],"predSpotDisoPercAll"]
+  Holt_predSpotDisoPerc<-c(Holt_predSpotDisoPerc,diso)
+}
+Holt_proteinInfo$predSpotDisoPerc <- Holt_predSpotDisoPerc
+
+ggplot(Holt_proteinInfo)+geom_density(aes(x = predSpotDisoPerc,fill = cdk1_target),alpha=.5,position="identity",bw=5)
+
+
+#Var and SD cheking. t-tests
+var(Holt_proteinInfo$predSpotDisoPerc[Holt_proteinInfo$cdk1_target=="Non Cdk1 target"])
+var(Holt_proteinInfo$predSpotDisoPerc[Holt_proteinInfo$cdk1_target=="Cdk1 target"])
+sd(Holt_proteinInfo$predSpotDisoPerc[Holt_proteinInfo$cdk1_target=="Cdk1 target"])
+sd(Holt_proteinInfo$predSpotDisoPerc[Holt_proteinInfo$cdk1_target=="Non Cdk1 target"])
+
+t.test(Holt_proteinInfo$predSpotDisoPerc[Holt_proteinInfo$cdk1_target=="Cdk1 target"],Holt_proteinInfo$predSpotDisoPerc[Holt_proteinInfo$cdk1_target=="Non Cdk1 target"],var.equal=T)
+
+```
+Holt paper
+
+- between the cdk1 targets and non cdk1 targets we've got 1977 proteins with detectable peptides out of 6726 in the Uniprot yeast proteome.
+- The peaks were selected with the consideration of A-score > 13. They don't mention to be acounting for neutral loss
+
+```{r Compare papers,echo=FALSE,message=FALSE,warning=FALSE}
+
+
+sets <- list(Ubersax_cdkTargets=CDK1targetSacCer$Entry[CDK1targetSacCer$`P-Score`>=2],
+             Ubersax_nonCdkTargets=CDK1targetSacCer$Entry[CDK1targetSacCer$`P-Score`<2],
+             Holt_cdkTargets=cdkTargetList,
+             Holt_nonCdkTargets=nonCdkTargetList)
+
+eulerr_options(fills=list(fill=c("darkolivegreen1","deeppink3","darkcyan","darkorange1"),alpha=0.4))
+plot(euler(sets, shape = "ellipse"), quantities = TRUE)
+
+
+```
+
+
 
