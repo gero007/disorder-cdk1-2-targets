@@ -352,7 +352,7 @@ yeastDiso$predSpotDisoPercAll <- getSpotPredDiso(yeastDiso,output = "percentage"
 
 ```{r histograms predictors,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 2: Histogram for the disorder percentages estimated by the two predictors"}
 
-ggplot(data = yeastDiso)+geom_histogram(aes(x=predLiteDisoPercAll,fill="MobiDB lite"),bins = 30,alpha=0.5,position = "identity")+geom_histogram(aes(x=predDisoPercAll,fill="Simple"),bins = 30,alpha=0.5,position = "identity") + theme_minimal() + xlab("% of disorder residues") + scale_fill_manual(name = "Predictor", values = c("Simple"="darkorange1","MobiDB lite" = "chartreuse3"))
+ggplot(data = yeastDiso)+geom_density(aes(x=predLiteDisoPercAll,fill="MobiDB lite"),bins = 30,alpha=0.5,position = "identity")+geom_density(aes(x=predDisoPercAll,fill="Simple"),bins = 30,alpha=0.5,position = "identity") + theme_minimal() + xlab("% of disorder residues") + scale_fill_manual(name = "Predictor", values = c("Simple"="darkorange1","MobiDB lite" = "chartreuse3"))
 ```
   
   
@@ -363,7 +363,7 @@ For the "Derived" and "DB" levels, the identification of IDR has, allegedly, a h
   
 ```{r histograms dbANDderived,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 3: Histogram for the disorder percentages estimated for the 'DB' and 'Derived' levels"}
 
-ggplot(data = yeastDiso)+geom_histogram(aes(x=dbDisoPercAll,fill="DB"),bins = 30,alpha=0.5,position = "identity")+geom_histogram(aes(x=derivedDisoPercAll,fill="Derived"),bins = 30,alpha=0.5,position = "identity") + theme_minimal() + xlab("% of disorder residues") + scale_fill_manual(name = "Level", values = c("Derived"="darkgoldenrod1","DB" = "deepskyblue2"))
+ggplot(data = yeastDiso)+geom_density(aes(x=dbDisoPercAll,fill="DB"),bins = 30,alpha=0.5,position = "identity")+geom_density(aes(x=derivedDisoPercAll,fill="Derived"),bins = 30,alpha=0.5,position = "identity") + theme_minimal() + xlab("% of disorder residues") + scale_fill_manual(name = "Level", values = c("Derived"="darkgoldenrod1","DB" = "deepskyblue2"))
 ```
   
 The use of the derived data for assigning IDRs seems to present a distribution of the percentage of disorder residues congruent with the MobiDB lite predictor, presenting a considerable proportion of protein not having any disorder residues.
@@ -400,7 +400,7 @@ predStretchDist <- getPredDiso(yeastDiso,"lenghts")
 predStretchDist <- cbind(predStretchDist,rep("Simple predictor",length(predStretchDist)))
 predLiteStretchDist <- getPredLiteDiso(yeastDiso,"lenghts")
 predLiteStretchDist <- cbind(predLiteStretchDist,rep("MobiDB-lite predictor",length(predLiteStretchDist)))
-predSpotStretchDist <- getSpotPredDiso(yeastDiso,"lenghts")
+predSpotStretchDist <- getSpotPredDiso(yeastDiso,"lenghts","acc")
 predSpotStretchDist <- cbind(predSpotStretchDist,rep("SPOT predictor",length(predSpotStretchDist)))
 dbStretchDist <- cbind(dbStretchDist,rep("DB",length(dbStretchDist)))
 derivedStretchDist <- cbind(derivedStretchDist,rep("Derived",length(derivedStretchDist)))
@@ -416,7 +416,7 @@ stretchData$stretchLength <- as.numeric(stretchData$stretchLength)
 
 
 
-ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin(aes(fill=method), alpha = 0.7,show.legend = FALSE) +
+ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin(aes(fill=method), alpha = 0.7,show.legend = FALSE,bw=40) +
     theme_minimal() +
     geom_boxplot(width=0.05) +
     scale_fill_manual(values = c("Simple predictor"="darkorange1","MobiDB-lite predictor" = "chartreuse3","SPOT predictor" = "firebrick1","Derived"="darkgoldenrod1","DB" = "deepskyblue2")) +
@@ -963,32 +963,31 @@ getAAfrequency <- function(sequences,regions=NULL,complement=FALSE){
 
 
 ```
-```{r agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE} 
+```{r agreements disorder vs phosposites2 ,echo=FALSE,message=FALSE,warning=FALSE} 
   
-summary(CDK1targetSacCer$target)
-sd(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target",])
-sd(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
-sd(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
-var(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
-var(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
-t.test(x=CDK1targetSacCer$predDisoPercCdkTargets,y=CDK1targetSacCer$target)
-t.test(x=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
-t.test(x=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
-t.test(x=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],var.equal = T)
-sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
-sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
-CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"]
-sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],na.rm = T)
-sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
-var(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],na.rm = T)
-var(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
-summary(CDK1targetSacCer$target[!is.na(CDK1targetSacCer$predLiteDisoPercCdkTargets)])
-t.test(x=CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],var.equal = T)
-
-
-simplePhosphosites<-ggplot(CDK1targetSacCer)+geom_density(aes(x = `[ST]-P`,fill = target),alpha=.5,bw=6)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,0.1)) + scale_x_continuous(name="sites",limits = c(0,40))+ggtitle("[ST]-P")
-fullPhosphosites<-ggplot(CDK1targetSacCer)+geom_density(aes(x = `[ST]-P-X-[KR]`,fill = target),alpha=.5,bw=4)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_y_continuous(limits = c(0,0.1)) + scale_x_continuous(name="sites",limits = c(0,40)) + theme(axis.title.y = element_blank())+labs(title="[ST]-P-X-[KR]")
-ggarrange(simplePhosphosites,fullPhosphosites,nrow = 1, ncol = 2,common.legend = TRUE,legend = "bottom")
+# summary(CDK1targetSacCer$target)
+# sd(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
+# sd(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
+# var(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
+# var(CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
+# t.test(x=CDK1targetSacCer$predDisoPercCdkTargets,y=CDK1targetSacCer$target)
+# t.test(x=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
+# t.test(x=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
+# t.test(x=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],var.equal = T)
+# sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
+# sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"])
+# CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"]
+# sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],na.rm = T)
+# sd(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
+# var(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],na.rm = T)
+# var(CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"])
+# summary(CDK1targetSacCer$target[!is.na(CDK1targetSacCer$predLiteDisoPercCdkTargets)])
+# t.test(x=CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Cdk1 target"],y=CDK1targetSacCer$predLiteDisoPercCdkTargets[CDK1targetSacCer$target=="Non Cdk1 target"],var.equal = T)
+# 
+# 
+# simplePhosphosites<-ggplot(CDK1targetSacCer)+geom_density(aes(x = `[ST]-P`,fill = target),alpha=.5,bw=6)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,0.1)) + scale_x_continuous(name="sites",limits = c(0,40))+ggtitle("[ST]-P")
+# fullPhosphosites<-ggplot(CDK1targetSacCer)+geom_density(aes(x = `[ST]-P-X-[KR]`,fill = target),alpha=.5,bw=4)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_y_continuous(limits = c(0,0.1)) + scale_x_continuous(name="sites",limits = c(0,40)) + theme(axis.title.y = element_blank())+labs(title="[ST]-P-X-[KR]")
+# ggarrange(simplePhosphosites,fullPhosphosites,nrow = 1, ncol = 2,common.legend = TRUE,legend = "bottom")
 
 
 
