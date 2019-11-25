@@ -638,7 +638,7 @@ For understand if the P-Score is the best metric for asses the levels of CDK act
   
 
 
-In the logarithmic scale the difference of considering only the mass, or the number of nano moles/nano equivalents does not show striking effects on the distribution of the dots in the [supplementary figure 6](supplementary/Supp6.html). Then, direct comparisons between the mass of protein meassured and the calculation of moles and equivalents were performed. Is possible to see some dispersion of the dots for high values of protein levels, but still a direct linear correlation between the grmas of protein meassured and the calculations for moles and equivalents. In logarithmic scale there is even a stronger dependency.
+In the logarithmic scale the difference of considering only the mass, or the number of nano moles/nano equivalents does not show striking effects on the distribution of the dots in the [supplementary figure 6](../supplementary/Supp6.html). Then, direct comparisons between the mass of protein meassured and the calculation of moles and equivalents were performed. Is possible to see some dispersion of the dots for high values of protein levels, but still a direct linear correlation between the grmas of protein meassured and the calculations for moles and equivalents. In logarithmic scale there is even a stronger dependency.
 All in all this means that the posible cofunding variables in the protein level meassureements that I have used for normalization (molecular weight and phosphosites) are, in fact, constants.  
 
 
