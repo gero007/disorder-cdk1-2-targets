@@ -382,8 +382,36 @@ for (i in 1:nrow(yeastDiso)) {
 
 Nevertheless, inconsistencies in the measurements of the ratio of disordered amino acids between different methods do not indicate that the metric could not be used as an estimator of global disorder status in proteins. However, we should certainly  be cautious about comparing values originated from different sources. 
 If the percentage of disorder residues correlates well with one or more CDK phosphorylation target properties it could be informative regardless if the estimation is highly accurate.  
-  
-  
+
+```{r cpomposition ,echo=FALSE,message=FALSE,warning=FALSE}
+yeastDiso_seq_Disorder <- character()
+
+for (i in 1:nrow(yeastDiso)) {
+  diso_seq <- character()
+  for (row in 1:nrow(spotDisorderList[[yeastDiso$acc[i]]])) {
+    startIdx <- as.numeric(spotDisorderList[[yeastDiso$acc[i]]][row,1])
+    endIdx <- as.numeric(spotDisorderList[[yeastDiso$acc[i]]][row,2])
+    if (spotDisorderList[[yeastDiso$acc[i]]][row,3]=="D") {diso_seq <- paste(diso_seq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")}
+  }
+  yeastDiso_seq_Disorder <- c(yeastDiso_seq_Disorder,diso_seq)
+}
+# names(yeastDiso_seq_Disorder) <- yeastDiso$acc  
+
+
+yeastSeq<-Biostrings::AAStringSet(yeastDiso$sequence)
+yeastComp<-colSums(alphabetFrequency(yeastSeq))[1:20]/sum(colSums(alphabetFrequency(yeastSeq))[1:20])
+
+yeastSeqDiso <- Biostrings::AAStringSet(yeastDiso_seq_Disorder)
+yeastCompDiso<-colSums(alphabetFrequency(yeastSeqDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDiso))[1:20])
+
+differentialComp <- sort((yeastCompDiso-yeastComp)/yeastComp,decreasing = T)
+
+ggplot()+geom_bar(aes(x=reorder(names(differentialComp),-differentialComp), y=differentialComp),stat="identity")+ylim(c(-0.75,0.75))
+
+
+```
+
+
 # Cdk1 targets  
   
 

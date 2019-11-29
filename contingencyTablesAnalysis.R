@@ -26,3 +26,6 @@ getStratContingencyArray <- function(df,sequence_col,disordered_index_list,phosp
   }
 return(stratContingencyArray)
 }
+
+
+
