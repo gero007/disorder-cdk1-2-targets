@@ -1,5 +1,5 @@
 ---
-title: "Supp 6"
+title: "Supplementary information"
 output:
   html_document:
     df_print: paged
@@ -25,60 +25,63 @@ library(Rcpi)
 library(Biostrings)
 library(eulerr)
 
-#################################
-########### FUCNTIONS ###########
-#################################
+# #################################
+# ########### FUCNTIONS ###########
+# #################################
+# 
+# #__________Spot disorder__________
+# 
+# 
+# getSpotDisoMatrix <- function(disoPath){ 
+#   output_list <- list()
+#   for (disoFile in dir(path = disoPath,pattern = "*.spotd")) {
+#     id=strsplit(disoFile,split = "\\.")[[1]][1]
+#     # print(id)
+#     # print(paste(disoPath,disoFile,sep = ""))
+#     auxdf <- read.delim(paste(disoPath,disoFile,sep = ""), header=FALSE, comment.char="#")
+#     disoRunningLenghts <- rle(as.vector(auxdf$V4))
+#     start=1
+#     disoMatrix <- matrix(ncol = 4,nrow = length(disoRunningLenghts$lengths))
+#     for (i in 1:length(disoRunningLenghts$lengths)) {
+#       end=start+disoRunningLenghts$lengths[i]-1
+#       disoMatrix[i,] <- as.character(c(start,end,disoRunningLenghts$values[i],disoRunningLenghts$lengths[i]))
+#       # print(c(start,end,test$values[i],test$lengths[i]))
+#       start=end+1
+#     }
+#     output_list[[id]] <- disoMatrix
+#   }
+#   # print(disoMatrix)
+#   # print(which(targetDf$acc==id))
+#   return(output_list)
+# }
+# #__________other functions__________
+# 
+# # yeastDiso is a complex database from MobiDB Saccharomyces cerevisiae. 
+# 
+# #################################
+# ############# DATA ##############
+# #################################
+# 
+# yeastDiso<-stream_in(con = file("~/projects/cdk1_cyclinB1/phase_separation/disorder/disorder_UP000002311.mjson"),verbose = F)
+# yeastDiso$mobidb_consensus <- yeastDiso$mobidb_consensus$disorder
+# colnames(yeastDiso)[5] <- "disorder"
+# 
+# CDK1targetSacCer <- read_delim("~/projects/cdk1_cyclinB1/phase_separation/disorder/CDK1targetSacCer.csv", 
+#                           "\t", quote = "\\\"", escape_double = FALSE, 
+#                           col_types = cols(X1 = col_skip(), input = col_skip(), 
+#                           `yourlist:M201907046746803381A1F0E0DB47453E0216320D4B0BD1N` = col_skip()), 
+#                           trim_ws = TRUE)
+# 
+# # Now the comumn "disorder" is a unnamed list with a complex structure for each row of the data frame
+# 
+# 
+# spotDisorderList <- getSpotDisoMatrix("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/spot_run_yeast/")
 
-#__________Spot disorder__________
-
-
-getSpotDisoMatrix <- function(disoPath){ 
-  output_list <- list()
-  for (disoFile in dir(path = disoPath,pattern = "*.spotd")) {
-    id=strsplit(disoFile,split = "\\.")[[1]][1]
-    # print(id)
-    # print(paste(disoPath,disoFile,sep = ""))
-    auxdf <- read.delim(paste(disoPath,disoFile,sep = ""), header=FALSE, comment.char="#")
-    disoRunningLenghts <- rle(as.vector(auxdf$V4))
-    start=1
-    disoMatrix <- matrix(ncol = 4,nrow = length(disoRunningLenghts$lengths))
-    for (i in 1:length(disoRunningLenghts$lengths)) {
-      end=start+disoRunningLenghts$lengths[i]-1
-      disoMatrix[i,] <- as.character(c(start,end,disoRunningLenghts$values[i],disoRunningLenghts$lengths[i]))
-      # print(c(start,end,test$values[i],test$lengths[i]))
-      start=end+1
-    }
-    output_list[[id]] <- disoMatrix
-  }
-  # print(disoMatrix)
-  # print(which(targetDf$acc==id))
-  return(output_list)
-}
-#__________other functions__________
-
-# yeastDiso is a complex database from MobiDB Saccharomyces cerevisiae. 
-
-#################################
-############# DATA ##############
-#################################
-
-yeastDiso<-stream_in(con = file("~/projects/cdk1_cyclinB1/phase_separation/disorder/disorder_UP000002311.mjson"),verbose = F)
-yeastDiso$mobidb_consensus <- yeastDiso$mobidb_consensus$disorder
-colnames(yeastDiso)[5] <- "disorder"
-
-CDK1targetSacCer <- read_delim("~/projects/cdk1_cyclinB1/phase_separation/disorder/CDK1targetSacCer.csv", 
-                          "\t", quote = "\\\"", escape_double = FALSE, 
-                          col_types = cols(X1 = col_skip(), input = col_skip(), 
-                          `yourlist:M201907046746803381A1F0E0DB47453E0216320D4B0BD1N` = col_skip()), 
-                          trim_ws = TRUE)
-
-# Now the comumn "disorder" is a unnamed list with a complex structure for each row of the data frame
-
-
-spotDisorderList <- getSpotDisoMatrix("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/spot_run_yeast/")
-
-
+# load("~/projects/cdk1_cyclinB1/phase_separation/disorder/disoWS.RData")
 ```
+  
+## Supplementary Figure 6  
+  
 
 ```{r scores ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Supplementary Figure 6 A: Comparision of the dependance of the phosphorylation on the on the ammount of protein" }
 
@@ -108,4 +111,39 @@ ggarrange(ps_pm,ps_pes,ps_pef,nrow = 1, ncol = 3,common.legend = TRUE, legend = 
 # ggplot(subset(CDK1targetSacCer,`P-Score`>0),aes(x=`P-Score`,y=`[ST]-P-X-[KR]`/length))+geom_point(aes(color=target))+geom_smooth(method=lm, se=FALSE)
 
 
+```
+  
+## Supplementary Figure   
+  
+```{r Holt disorder percentage all,echo=FALSE,message=FALSE,warning=FALSE,fig.cap=""}
+
+
+dens_simpleDisoPerc<-ggplot(Holt_data)+geom_density(aes(x = predDisoPerc,fill = target_all),alpha=.5,bw=5)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100))+ggtitle("Simple Predictor")
+dens_liteDisoPerc<-ggplot(subset(Holt_data,!is.na(predLiteDisoPerc)))+geom_density(aes(x = predLiteDisoPerc,fill = target_all),alpha=.5,bw=5)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100)) + theme(axis.title.y = element_blank())+labs(title="MobiDB-Lite Predictor")
+dens_spotDisoPerc<-ggplot(Holt_data)+geom_density(aes(x = predSpotDisoPerc,fill = target_all),alpha=.5,bw=5)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100)) + theme(axis.title.y = element_blank())+labs(title="SPOT Predictor")
+
+hist_simpleDisoPerc<-ggplot(Holt_data)+geom_histogram(aes(x = predDisoPerc,fill = target_all),alpha=.5,bins = 50)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5))  + scale_x_continuous(name="% of predicted Disorder",limits = c(-2,102))
+hist_liteDisoPerc<-ggplot(subset(Holt_data,!is.na(predLiteDisoPerc)))+geom_histogram(aes(x = predLiteDisoPerc,fill = target_all),alpha=.5,bins = 50)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5))  + theme(axis.title.y = element_blank())+  scale_x_continuous(name="% of predicted Disorder",limits = c(-2,102)) + theme(axis.title.y = element_blank())
+hist_spotDisoPerc<-ggplot(Holt_data)+geom_histogram(aes(x = predSpotDisoPerc,fill = target_all),alpha=.5,bins = 50)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_x_continuous(name="% of predicted Disorder",limits = c(-2,102)) + theme(axis.title.y = element_blank())
+
+ggarrange(dens_simpleDisoPerc,dens_liteDisoPerc,dens_spotDisoPerc,hist_simpleDisoPerc,hist_liteDisoPerc,hist_spotDisoPerc,nrow = 2, ncol = 3,common.legend = TRUE,legend = "bottom", align = "hv")
+
+
+holt_simple_NonCdk1_VAR <- var(Holt_data$predDisoPerc[Holt_data$target_all=="Non Cdk1 target"],na.rm = T)
+holt_simple_Cdk1_VAR <- var(Holt_data$predDisoPerc[Holt_data$target_all=="Cdk1 target"],na.rm = T)
+holt_simple_Cdk1_SD <- sd(Holt_data$predDisoPerc[Holt_data$target_all=="Cdk1 target"],na.rm = T)
+holt_simple_NonCdk1_SD <- sd(Holt_data$predDisoPerc[Holt_data$target_all=="Non Cdk1 target"],na.rm = T)
+holt_simple_test <- t.test(Holt_data$predDisoPerc[Holt_data$target_all=="Cdk1 target"],Holt_data$predSpotDisoPerc[Holt_data$target_all=="Non Cdk1 target"],var.equal=T)
+
+holt_lite_NonCdk1_VAR <- var(Holt_data$predLiteDisoPerc[Holt_data$target_all=="Non Cdk1 target"],na.rm = T)
+holt_lite_Cdk1_VAR <- var(Holt_data$predLiteDisoPerc[Holt_data$target_all=="Cdk1 target"],na.rm = T)
+holt_lite_Cdk1_SD <- sd(Holt_data$predLiteDisoPerc[Holt_data$target_all=="Cdk1 target"],na.rm = T)
+holt_lite_NonCdk1_SD <- sd(Holt_data$predLiteDisoPerc[Holt_data$target_all=="Non Cdk1 target"],na.rm = T)
+holt_lite_test <- t.test(Holt_data$predLiteDisoPerc[Holt_data$target_all=="Cdk1 target"],Holt_data$predSpotDisoPerc[Holt_data$target_all=="Non Cdk1 target"],var.equal=T)
+
+holt_spot_NonCdk1_VAR <- var(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Non Cdk1 target"])
+holt_spot_Cdk1_VAR <- var(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Cdk1 target"],na.rm = T)
+holt_spot_Cdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Cdk1 target"],na.rm = T)
+holt_spot_NonCdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Non Cdk1 target"],na.rm = T)
+holt_spot_test <- t.test(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Cdk1 target"],Holt_data$predSpotDisoPerc[Holt_data$target_all=="Non Cdk1 target"],var.equal=T)
 ```
