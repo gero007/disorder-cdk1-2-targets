@@ -23,6 +23,7 @@ library(Rcpi)
 library(Biostrings)
 library(eulerr)
 library(flextable)
+library(stringr)
 
 
 source("getDisorder.R")
@@ -345,37 +346,43 @@ dbDisoIdx <- getDBDiso(yeastDiso,"indices")
 dbDisoIdx <- addUniprotToIdx(yeastDiso,dbDisoIdx)
 
 
-sets <- list("Simple predictor"=simpleDisoIdx,"Lite predictor"=liteDisoIdx,"SPOT predictor"=spotDisoIdx,"Derived"=derivedDisoIdx,"DB"=dbDisoIdx)
+sets <- list("Simple predictor"=simpleDisoIdx,"Lite predictor"=liteDisoIdx,"SPOT predictor"=spotDisoIdx)
 
-
-eulerr_options(fills=list(fill=c("darkorange1","chartreuse3","firebrick1","darkgoldenrod1","deepskyblue2"),alpha=0.4))
+eulerr_options(fills=list(fill=c("darkorange1","chartreuse3","firebrick1"),alpha=0.4))
 plot(euler(sets, shape = "ellipse"), quantities = TRUE)
 
-percCovLiteInSimple <- numeric()
-for (i in 1:nrow(yeastDiso)) {
-  liteIndex<-which(yeastDiso$disorder$predictors[[i]]$method=="mobidb-lite")
-  simpleIndex<-which(yeastDiso$disorder$predictors[[i]]$method=="simple")
-  if (length(liteIndex)!=0) {
-    matLite<-yeastDiso$disorder$predictors[[i]]$regions[[liteIndex]]
-    matSimple<-yeastDiso$disorder$predictors[[i]]$regions[[simpleIndex]]
-    if (class(matLite)=="matrix") {
-#getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
-      # mat<-matrix(mat[mat[,3]=="D",],ncol=3)
-      litePos <-numeric()
-      litePos <-apply(matLite, 1, function(x){litePos<-c(litePos,x[1]:x[2])
-                                   return(litePos)})
-      litePos <- as.numeric(unlist(litePos))
-      #print(litePos)
-      simplePos <-numeric()
-      simplePos <-apply(matSimple, 1, function(x){simplePos<-c(simplePos,x[1]:x[2])
-                                   return(simplePos)})
-      simplePos <- as.numeric(unlist(simplePos))
-      # print(simplePos)
-      percCovLiteInSimple <- c(percCovLiteInSimple,(length(which(litePos %in% simplePos))/length(litePos))*100)
-      #print((length(which(litePos %in% simplePos))/length(litePos))*100)
-    } 
-  } 
-}
+
+sets <- list("SPOT predictor"=spotDisoIdx,"Derived"=derivedDisoIdx,"DB"=dbDisoIdx)
+
+eulerr_options(fills=list(fill=c("firebrick1","darkgoldenrod1","deepskyblue2"),alpha=0.4))
+plot(euler(sets, shape = "ellipse"), quantities = TRUE)
+
+
+# percCovLiteInSimple <- numeric()
+# for (i in 1:nrow(yeastDiso)) {
+#   liteIndex<-which(yeastDiso$disorder$predictors[[i]]$method=="mobidb-lite")
+#   simpleIndex<-which(yeastDiso$disorder$predictors[[i]]$method=="simple")
+#   if (length(liteIndex)!=0) {
+#     matLite<-yeastDiso$disorder$predictors[[i]]$regions[[liteIndex]]
+#     matSimple<-yeastDiso$disorder$predictors[[i]]$regions[[simpleIndex]]
+#     if (class(matLite)=="matrix") {
+# #getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+#       # mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+#       litePos <-numeric()
+#       litePos <-apply(matLite, 1, function(x){litePos<-c(litePos,x[1]:x[2])
+#                                    return(litePos)})
+#       litePos <- as.numeric(unlist(litePos))
+#       #print(litePos)
+#       simplePos <-numeric()
+#       simplePos <-apply(matSimple, 1, function(x){simplePos<-c(simplePos,x[1]:x[2])
+#                                    return(simplePos)})
+#       simplePos <- as.numeric(unlist(simplePos))
+#       # print(simplePos)
+#       percCovLiteInSimple <- c(percCovLiteInSimple,(length(which(litePos %in% simplePos))/length(litePos))*100)
+#       #print((length(which(litePos %in% simplePos))/length(litePos))*100)
+#     } 
+#   } 
+# }
 
 ```
 
@@ -383,32 +390,78 @@ for (i in 1:nrow(yeastDiso)) {
 Nevertheless, inconsistencies in the measurements of the ratio of disordered amino acids between different methods do not indicate that the metric could not be used as an estimator of global disorder status in proteins. However, we should certainly  be cautious about comparing values originated from different sources. 
 If the percentage of disorder residues correlates well with one or more CDK phosphorylation target properties it could be informative regardless if the estimation is highly accurate.  
 
-```{r cpomposition ,echo=FALSE,message=FALSE,warning=FALSE}
-yeastDiso_seq_Disorder <- character()
+```{r cpomposition ,echo=FALSE,message=FALSE,warning=FALSE,fig.height=10}
 
-for (i in 1:nrow(yeastDiso)) {
-  diso_seq <- character()
-  for (row in 1:nrow(spotDisorderList[[yeastDiso$acc[i]]])) {
-    startIdx <- as.numeric(spotDisorderList[[yeastDiso$acc[i]]][row,1])
-    endIdx <- as.numeric(spotDisorderList[[yeastDiso$acc[i]]][row,2])
-    if (spotDisorderList[[yeastDiso$acc[i]]][row,3]=="D") {diso_seq <- paste(diso_seq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")}
-  }
-  yeastDiso_seq_Disorder <- c(yeastDiso_seq_Disorder,diso_seq)
-}
-# names(yeastDiso_seq_Disorder) <- yeastDiso$acc  
+yeastSeq<-yeastDiso$sequence
+names(yeastSeq)<-yeastDiso$acc
+yeastSeq<-Biostrings::AAStringSet(yeastSeq)
 
 
-yeastSeq<-Biostrings::AAStringSet(yeastDiso$sequence)
-yeastComp<-colSums(alphabetFrequency(yeastSeq))[1:20]/sum(colSums(alphabetFrequency(yeastSeq))[1:20])
+##DB##
 
-yeastSeqDiso <- Biostrings::AAStringSet(yeastDiso_seq_Disorder)
-yeastCompDiso<-colSums(alphabetFrequency(yeastSeqDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDiso))[1:20])
+# Since the derived assesment of disorder doen't cover the whole proteome I redifine the universe to those protein that have been evaluated.
+yeastSeqDBDiso <- getDBDiso(yeastDiso,"sequences")
+yeastSeqDBDiso <- Biostrings::AAStringSet(unlist(yeastSeqDBDiso))
+yeastCompDBDiso<-colSums(alphabetFrequency(yeastSeqDBDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDBDiso))[1:20])
 
-differentialComp <- sort((yeastCompDiso-yeastComp)/yeastComp,decreasing = T)
+yeastSeqDBAll <- yeastSeq[names(yeastSeq) %in% names(yeastSeqDBDiso)] 
+yeastCompDBALL<-colSums(alphabetFrequency(yeastSeqDBAll))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDBAll))[1:20])
 
-ggplot()+geom_bar(aes(x=reorder(names(differentialComp),-differentialComp), y=differentialComp),stat="identity")+ylim(c(-0.75,0.75))
+DBDifferentialComp <- sort((yeastCompDBDiso-yeastCompDBALL)/yeastCompDBALL,decreasing = T)
 
+######################Set the rainbow color palette for the DB set #####################
+colorPallete_DBOrdered <- rainbow(20)
+names(colorPallete_DBOrdered) <- reorder(names(DBDifferentialComp),-DBDifferentialComp)
+########################################################################################
 
+plotDBDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(DBDifferentialComp),-DBDifferentialComp), fill=reorder(names(DBDifferentialComp),-DBDifferentialComp), y=DBDifferentialComp),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("DB curated")
+##Derived##
+
+# Since the derived assesment of disorder doen't cover the whole proteome I redifine the universe to those protein that have been evaluated.
+yeastSeqDerivedDiso <- getDerivedDiso(yeastDiso,"sequences")
+yeastSeqDerivedDiso <- Biostrings::AAStringSet(unlist(yeastSeqDerivedDiso))
+yeastCompDerivedDiso<-colSums(alphabetFrequency(yeastSeqDerivedDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDerivedDiso))[1:20])
+
+yeastSeqDerivedAll <- yeastSeq[names(yeastSeq) %in% names(yeastSeqDerivedDiso)] 
+yeastCompDerivedALL<-colSums(alphabetFrequency(yeastSeqDerivedAll))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDerivedAll))[1:20])
+
+derivedDifferentialComp <- sort((yeastCompDerivedDiso-yeastCompDerivedALL)/yeastCompDerivedALL,decreasing = T)
+
+plotDerivedDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(derivedDifferentialComp),-derivedDifferentialComp), fill=reorder(names(derivedDifferentialComp),-derivedDifferentialComp), y=derivedDifferentialComp),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("Derived disorder")
+##SPOT##
+yeastCompALL<-colSums(alphabetFrequency(yeastSeq))[1:20]/sum(colSums(alphabetFrequency(yeastSeq))[1:20])
+
+yeastSeqSpotDiso <- getSpotPredDiso(yeastDiso,"sequences","acc")
+yeastSeqSpotDiso <- Biostrings::AAStringSet(unlist(yeastSeqSpotDiso))
+yeastCompSpotDiso<-colSums(alphabetFrequency(yeastSeqSpotDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqSpotDiso))[1:20])
+spotDifferentialComp <- sort((yeastCompSpotDiso-yeastCompALL)/yeastCompALL,decreasing = T)
+
+plotSpotDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(spotDifferentialComp),-spotDifferentialComp), y=spotDifferentialComp,fill=reorder(names(spotDifferentialComp),-spotDifferentialComp)),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("SPOT predictor")
+
+##Simple##
+
+yeastCompALL<-colSums(alphabetFrequency(yeastSeq))[1:20]/sum(colSums(alphabetFrequency(yeastSeq))[1:20])
+
+yeastSeqSimpleDiso <- getPredDiso(yeastDiso,"sequences")
+yeastSeqSimpleDiso <- Biostrings::AAStringSet(unlist(yeastSeqSimpleDiso))
+yeastCompSimpleDiso<-colSums(alphabetFrequency(yeastSeqSimpleDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqSimpleDiso))[1:20])
+SimpleDifferentialComp <- sort((yeastCompSimpleDiso-yeastCompALL)/yeastCompALL,decreasing = T)
+
+plotSimpleDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(SimpleDifferentialComp),-SimpleDifferentialComp), y=SimpleDifferentialComp,fill=reorder(names(SimpleDifferentialComp),-SimpleDifferentialComp)),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("Simple predictor")
+##Lite##
+
+yeastSeqLiteDiso <- getPredLiteDiso(yeastDiso,"sequences")
+yeastSeqLiteAll <- yeastSeq[names(yeastSeq) %in% names(yeastSeqLiteDiso)] 
+yeastCompLiteALL<-colSums(alphabetFrequency(yeastSeqLiteAll))[1:20]/sum(colSums(alphabetFrequency(yeastSeqLiteAll))[1:20])
+
+yeastSeqLiteDiso <- Biostrings::AAStringSet(unlist(yeastSeqLiteDiso))
+yeastCompLiteDiso<-colSums(alphabetFrequency(yeastSeqLiteDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqLiteDiso))[1:20])
+LiteDifferentialComp <- sort((yeastCompLiteDiso-yeastCompLiteALL)/yeastCompLiteALL,decreasing = T)
+
+plotLiteDifferentialComp <- ggplot() + geom_bar(aes(x=reorder(names(LiteDifferentialComp),-LiteDifferentialComp), y=LiteDifferentialComp,fill=reorder(names(LiteDifferentialComp),-LiteDifferentialComp)),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("Lite predictor")
+
+fig<-ggarrange(plotDBDifferentialComp,plotDerivedDifferentialComp,plotSimpleDifferentialComp,plotLiteDifferentialComp,plotSpotDifferentialComp,ncol = 1)
+annotate_figure(fig,left = text_grob("Comp. Disorder - Comp. Universe / Comp. Universe", rot = 90,size = 16))
 ```
 
 
@@ -593,17 +646,6 @@ ubersax_spot_test <- t.test(Ubersax_data$predSpotDisoPerc[Ubersax_data$target=="
 # flextable:::merge_h(ubersaxPercTable,part = "header")
 ```
   
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
-
-New section   |     More      |         Data |
-And more      | With an escaped '\|'         ||  
-  
-
-
 
 ### Holt
 
@@ -638,8 +680,10 @@ holt_spot_Cdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_consensus=="
 holt_spot_NonCdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_consensus=="Non Cdk1 target"],na.rm = T)
 holt_spot_test <- t.test(Holt_data$predSpotDisoPerc[Holt_data$target_consensus=="Cdk1 target"],Holt_data$predSpotDisoPerc[Holt_data$target_consensus=="Non Cdk1 target"],var.equal=T)
 ```
+  
+For boths datasets there is a statistical significative increase in the percentage of predicted disorder aminoacids in yeast proteins for those proteins characterized as CDK1 targets. Moreover, for the Holt dataset a similar result is obtained if we skipped the CDK1 phosporylation site filter. That is, CDK1 targets defined as all the proteins with Serines and Threonines residues presenting a decrease on the phosphorylation upon CDK1 inhibition,regardles if they respect the minimal CDK1 phosphosite consensus motif, show an increase in the percentage of predicted disorder amino acids (<a href="supplementary/Supp.html">Supplementary</a> Fig X).
 
-## Distribution of disorder percentage for Cdk1 tagets in yeast {.tabset .tabset-fade}
+
 
 ```{r explore1,echo=FALSE,message=FALSE,warning=FALSE}
 
@@ -1005,6 +1049,9 @@ Holt paper
 
 
 ```
+## Sequence characteristics of disorder regions in proteins
+
+Considering the analysis performed previously, It seems evident that disorder regions are enriched in certain residues while they presents less proportion of others. Serine, Threonine, Proline Asparagine and charged amino acids are present in a bigger proportion in disorder regions when we compare with the compositions of the entire proteins. Knowing the sequence motif for the minimal consensus phosphosite, the first question that raises is if the higher propensity of CDK1 phosphosites falling into disordered regions is due only by the fact that predictors recognize Ser, Pro and Thr rich regions as IDR.  
 
 <a href="supplementary/Supp.html">Supplementary</a>
 

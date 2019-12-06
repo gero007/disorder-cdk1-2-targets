@@ -8,6 +8,7 @@ getPredDiso <- function(df,output){
   predDisoPercAll <- c()
   predStretchDist <- c()
   disoPosList <- list()
+  disoSeqList <- list()
   for (i in 1:nrow(df)) {
     mat<-df$disorder$predictors[[i]]$regions[[1]]
     predStretchDist <- c(predStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
@@ -21,6 +22,13 @@ getPredDiso <- function(df,output){
     return(disoPos)})
     disoPos <- as.numeric(unlist(disoPos))
     disoPosList[[i]]<-disoPos
+    disoSeq <- character()
+    for (row in 1:nrow(mat)) {
+      startIdx <- as.numeric(mat[row,1])
+      endIdx <- as.numeric(mat[row,2])
+      disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
+    }
+    disoSeqList[[df$acc[[i]]]]<-disoSeq
   }
   if (output=="percentage") {
     return(predDisoPercAll)
@@ -28,6 +36,8 @@ getPredDiso <- function(df,output){
     return(predStretchDist)
   } else if (output=="indices") {
     return(disoPosList)
+  } else if (output=="sequences") {
+    return(disoSeqList)
   } else {stop("wrong output specified. Options are 'percentage','lenghts' or 'indices' ")}
 }
 
@@ -36,6 +46,7 @@ getPredLiteDiso <- function(df,output){
   predLiteDisoPercAll <- c()
   predLiteStretchDist <- c()
   disoPosList <- list()
+  disoSeqList <- list()
   for (i in 1:nrow(df)) {
     liteIndex<-which(df$disorder$predictors[[i]]$method=="mobidb-lite")
     if (length(liteIndex)!=0) {
@@ -52,8 +63,16 @@ getPredLiteDiso <- function(df,output){
         return(disoPos)})
         disoPos <- as.numeric(unlist(disoPos))
         disoPosList[[i]]<-disoPos
+        disoSeq <- character()
+        for (row in 1:nrow(mat)) {
+          startIdx <- as.numeric(mat[row,1])
+          endIdx <- as.numeric(mat[row,2])
+          disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
+        }
+        disoSeqList[[df$acc[[i]]]]<-disoSeq
       } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,0)
-      disoPosList[[i]]<-0
+        disoPosList[[i]]<-0
+        disoSeqList[[df$acc[[i]]]]<-""
       }
     } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,NA)
     disoPosList[[i]]<-NA
@@ -65,6 +84,8 @@ getPredLiteDiso <- function(df,output){
     return(predLiteStretchDist)
   } else if (output=="indices") {
     return(disoPosList)
+  } else if (output=="sequences") {
+    return(disoSeqList)
   } else {stop("wrong output specified. Options are 'percentage','lenghts' or 'indices' ")}
 }
 
@@ -75,6 +96,7 @@ getDerivedDiso <- function(df,output){
   derivedStretchDist <- c()
   derivedDisoPercAll <- c()
   disoPosList <- list()
+  disoSeqList <- list()
   for (i in 1:nrow(yeastDiso)) {
     if (!is.null(yeastDiso$disorder$derived[[i]])) {
       fullIndex<-which(yeastDiso$disorder$derived[[i]]$method=="full")
@@ -93,8 +115,18 @@ getDerivedDiso <- function(df,output){
         disoPos <-apply(mat, 1, function(x){disoPos<-c(disoPos,x[1]:x[2])
         return(disoPos)})
         disoPos <- as.numeric(unlist(disoPos))
-        disoPosList[[i]]<-disoPos        
-      } else {disoPosList[[i]]<- 0 }
+        disoPosList[[i]]<-disoPos
+        disoSeq <- character()
+        for (row in 1:nrow(mat)) {
+          startIdx <- as.numeric(mat[row,1])
+          endIdx <- as.numeric(mat[row,2])
+          disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
+        }
+        disoSeqList[[df$acc[[i]]]]<-disoSeq
+      } else {
+        disoPosList[[i]]<- 0
+        disoSeqList[[df$acc[[i]]]]<-""        
+      }
 
     } else {
       derivedDisoPercAll <- c(derivedDisoPercAll,NA)
@@ -108,6 +140,8 @@ getDerivedDiso <- function(df,output){
     return(derivedStretchDist)
   } else if (output=="indices") {
     return(disoPosList)
+  } else if (output=="sequences") {
+    return(disoSeqList)
   } else {stop("wrong output specified. Options are 'percentage','lenghts' or 'indices' ")}  
 }
 
@@ -117,6 +151,7 @@ getDBDiso <- function(df,output){
   dbDisoPercAll <- c()
   dbStretchDist <- c()
   disoPosList <- list()
+  disoSeqList <- list()
   for (i in 1:nrow(yeastDiso)) {
     if (!is.null(yeastDiso$disorder$db[[i]])) {
       fullIndex<-which(yeastDiso$disorder$db[[i]]$method=="full")
@@ -135,7 +170,17 @@ getDBDiso <- function(df,output){
         return(disoPos)})
         disoPos <- as.numeric(unlist(disoPos))
         disoPosList[[i]]<-disoPos
-      } else {disoPosList[[i]]<- 0 }
+        disoSeq <- character()
+        for (row in 1:nrow(mat)) {
+          startIdx <- as.numeric(mat[row,1])
+          endIdx <- as.numeric(mat[row,2])
+          disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
+        }
+        disoSeqList[[df$acc[[i]]]]<-disoSeq
+      } else {
+        disoPosList[[i]]<- 0
+        disoSeqList[[df$acc[[i]]]]<-""
+      }
       
     } else {
       dbDisoPercAll <- c(dbDisoPercAll,NA)
@@ -148,6 +193,8 @@ getDBDiso <- function(df,output){
     return(dbStretchDist)
   } else if (output=="indices") {
     return(disoPosList)
+  } else if (output=="sequences") {
+    return(disoSeqList)
   } else {stop("wrong output specified. Options are 'percentage','lenghts' or 'indices' ")}  
 }
 # yeastDiso$dbDisoPercAll <- dbDisoPercAll
@@ -185,6 +232,7 @@ getSpotPredDiso <- function(df,output,accession_col){
   predDisoPercAll <- c()
   predStretchDist <- c()
   disoPosList <- list()
+  disoSeqList <- list()
   for (i in 1:nrow(df)) {
     mat<-spotDisorderList[[df[i,accession_col]]]
     #select only disordered regions
@@ -205,6 +253,14 @@ getSpotPredDiso <- function(df,output,accession_col){
       return(disoPos)})
       disoPos <- as.numeric(unlist(disoPos))
       disoPosList[[i]]<-disoPos
+      disoSeq <- character()
+      for (row in 1:nrow(mat)) {
+        startIdx <- as.numeric(mat[row,1])
+        endIdx <- as.numeric(mat[row,2])
+        disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
+      }
+      disoSeqList[[df$acc[[i]]]]<-disoSeq
+
     } else {
       nDiso<-0
       proteinLength <- nchar(df$sequence[i])
@@ -221,6 +277,8 @@ getSpotPredDiso <- function(df,output,accession_col){
     return(predStretchDist)
   } else if (output=="indices") {
     return(disoPosList)
+  } else if (output=="sequences") {
+    return(disoSeqList)
   } else {stop("wrong output specified. Options are 'percentage','lenghts' or 'indices' ")}
 }
 
