@@ -24,7 +24,7 @@ library(Biostrings)
 library(eulerr)
 library(flextable)
 library(stringr)
-
+library(DT)
 
 source("getDisorder.R")
 source("contingencyTablesAnalysis.R")
@@ -534,10 +534,12 @@ For each reaction, they performed a step of GST tag mediated purification and th
 ```
 
 ```{r cdkTargetTable ,echo=FALSE,message=FALSE,warning=FALSE,rows.print=20}
-Ubersax_data[order(Ubersax_data$`P-Score`,decreasing = T),c(1,11,15,6,7,8,3,4,5)]
+datatable(Ubersax_data[order(Ubersax_data$`P-Score`,decreasing = T),c(1,11,15,6,7,8,3,4,5)],options = list(sDom  = '<"top">lrt<"bottom">ip'))
+
+write.table(Ubersax_data[order(Ubersax_data$`P-Score`,decreasing = T),c(1,11,15,6,7,8,3,4,5)],"Ubersax_data_download.tab",quote = F,sep = "\t",row.names = F)
 ```
   
-From the original 695 ORFs, I kept 687 which could be unequivocally mapped to a unique Uniprot accesion. This ID will allow us to merge the disorder data obtained from the MobiDB database and the annotations extracted from the Cdk1 targets paper data.  
+From the original 695 ORFs, I kept 687 which could be unequivocally mapped to a unique Uniprot accesion. This ID will allow us to merge the disorder data obtained from the MobiDB database and the annotations extracted from the Cdk1 targets paper data. The final data is available [here](Ubersax_data_download.tab)  
   
 ### P-Score
   
@@ -684,65 +686,6 @@ holt_spot_test <- t.test(Holt_data$predSpotDisoPerc[Holt_data$target_consensus==
 For boths datasets there is a statistical significative increase in the percentage of predicted disorder aminoacids in yeast proteins for those proteins characterized as CDK1 targets. Moreover, for the Holt dataset a similar result is obtained if we skipped the CDK1 phosporylation site filter. That is, CDK1 targets defined as all the proteins with Serines and Threonines residues presenting a decrease on the phosphorylation upon CDK1 inhibition,regardles if they respect the minimal CDK1 phosphosite consensus motif, show an increase in the percentage of predicted disorder amino acids (<a href="supplementary/Supp.html">Supplementary</a> Fig X).
 
 
-
-```{r explore1,echo=FALSE,message=FALSE,warning=FALSE}
-
-# predDisoPercAll <- c()
-# for (i in 1:nrow(yeastDiso)) {
-#   mat<-yeastDiso$disorder$predictors[[i]]$regions[[1]]
-#   #calculate the number of disoredered AAs
-#   nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-#   proteinLength <- nchar(yeastDiso$sequence[i])
-#   predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
-# }
-# 
-# 
-# 
-# 
-# predDisoPercCDK1target <- c()
-# for (i in 1:nrow(yeastDisoCDK1target)) {
-#   mat<-yeastDisoCDK1target$disorder$predictors[[i]]$regions[[1]]
-#   #calculate the number of disoredered AAs
-#   nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-#   proteinLength <- nchar(yeastDisoCDK1target$sequence[i])
-#   predDisoPercCDK1target <- c(predDisoPercCDK1target,(nDiso/proteinLength)*100)
-# }
-# 
-# 
-# yeastDisoCDK1target$predDisoPerc <- predDisoPercCDK1target
-# Ubersax_data$percDiso_predicted <- yeastDisoCDK1target$predDisoPerc
-# 
-# predLiteStretchDist <- c()
-# predLiteDisoPercAll <- c()
-# for (i in 1:nrow(yeastDisoCDK1target)) {
-#   liteIndex<-which(yeastDisoCDK1target$disorder$predictors[[i]]$method=="mobidb-lite")
-#   if (length(liteIndex)!=0) {
-#     mat<-yeastDisoCDK1target$disorder$predictors[[i]]$regions[[liteIndex]]
-#     if (class(mat)=="matrix") {
-# #getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
-#       # mat<-matrix(mat[mat[,3]=="D",],ncol=3)
-#       predLiteStretchDist <- c(predLiteStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-#       #calculate the number of disoredered AAs
-#       nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-#       proteinLength <- nchar(yeastDisoCDK1target$sequence[i])
-#       predLiteDisoPercAll <- c(predLiteDisoPercAll,(nDiso/proteinLength)*100)      
-#     } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,0)}
-# 
-#   } else {
-#     predLiteDisoPercAll <- c(predLiteDisoPercAll,NA)
-#   }
-# 
-# }
-# yeastDisoCDK1target$predLiteDisoPercAll <- predLiteDisoPercAll
-# 
-# Ubersax_data$predLiteDisoPercAll <- yeastDisoCDK1target$predLiteDisoPercAll
-# 
-# 
-# ######SPOT######
-# 
-# 
-# Ubersax_data$predSpotDisoPerc <- yeastDiso$predSpotDisoPercAll[match(Ubersax_data$Entry,yeastDiso$acc)]
-```
 
 ```{r agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE}
 
@@ -897,6 +840,8 @@ For boths datasets there is a statistical significative increase in the percenta
 
 
 ```
+
+
 ```{r agreements disorder vs phosposites2 ,echo=FALSE,message=FALSE,warning=FALSE} 
   
 # summary(CDK1targetSacCer$target)
