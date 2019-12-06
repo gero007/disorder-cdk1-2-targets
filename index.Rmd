@@ -689,6 +689,99 @@ For boths datasets there is a statistical significative increase in the percenta
 
 ```{r agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE}
 
+UbxCdk1TargetsLiteDisorderedRegions <- getPredLiteDiso(df = yeastDiso_Ubersax_subset[which(Ubersax_data$`P-Score`>=2),],"indices")
+UbxCdk1TargetsLiteStratContingencyArray <- getStratContingencyArray(df = yeastDiso_Ubersax_subset[which(Ubersax_data$`P-Score`>=2),],sequence_col = "sequence",disordered_index_list = UbxCdk1TargetsLiteDisorderedRegions)
+
+woolf_test(UbxCdk1TargetsLiteStratContingencyArray)
+ors <- apply(UbxCdk1TargetsLiteStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$estimate)
+     })
+
+logors <- log10(ors)
+logors[is.infinite(logors) & logors > 0] <- 2
+logors[is.infinite(logors) & logors < 0] <- -2
+
+ggplot()+geom_bar(aes(x=1:length(logors), y=logors),stat="identity")+ylim(c(-2,2))
+
+
+UbxAllLiteDisorderedRegions <- getPredLiteDiso(df = yeastDiso_Ubersax_subset,"indices")
+UbxAllLiteStratContingencyArray <- getStratContingencyArray(df = yeastDiso_Ubersax_subset,sequence_col = "sequence",disordered_index_list = UbxAllLiteDisorderedRegions)
+
+woolf_test(UbxAllLiteStratContingencyArray)
+fisherDF <- data.frame(Ubersax_data$Entry)
+colnames(fisherDF) <- "acc"
+fisherDF$target <- Ubersax_data$target
+fisherDF$ORs <- apply(UbxAllLiteStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$estimate)
+     })
+fisherDF$pvalue <- apply(UbxAllLiteStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$p.value)
+     })
+fisherDF$logPvalue <- -log10(fisherDF$pvalue)
+fisherDF$logOr <- log10(fisherDF$ORs)
+
+fisherDF$logOr[is.infinite(fisherDF$logOr) & fisherDF$logOr > 0] <- 2
+fisherDF$logOr[is.infinite(fisherDF$logOr) & fisherDF$logOr < 0] <- -2
+
+ggplot(fisherDF, aes(x = logOr, y = logPvalue)) +
+  geom_point(aes(color = target)) +
+  # scale_color_manual(values = c("", "grey")) +
+  theme_bw(base_size = 12) + theme(legend.position = "bottom") +
+  scale_y_continuous(trans='log10',limits = c(0.1,10)) +
+  xlim(-2, 2) +
+  scale_shape_manual()+
+  # geom_point(data = subset(fisherDF, log10(ORs) < -2), aes(x = -2, y = -log10(pvalue)), alpha = 0.5,shape=60,size=4) +
+  # geom_point(data = subset(fisherDF, log10(ORs) > 2), aes(x = 2, y = -log10(pvalue)), alpha = 0.5,shape=62,size=4) +
+  geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "red")+
+  annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)
+
+logors <- log10(ors)
+logors[is.infinite(logors) & logors > 0] <- 2
+logors[is.infinite(logors) & logors < 0] <- -2
+
+ggplot()+geom_bar(aes(x=1:length(logors), y=logors),stat="identity")+ylim(c(-2,2))
+
+#####################
+liteDisorderedRegions <- getPredLiteDiso(df = yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),],"indices")
+liteTPphosphoSites <- gregexpr("[ST]P",yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),]$sequence)
+
+liteStratContingencyArray <- array(dim = c(2,2,nrow(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),])))
+for (i in 1:nrow(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),])) {
+
+  indexProtLite <- 1:nchar(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),]$sequence[[i]])
+  indexDisoLite <- liteDisorderedRegions[[i]]
+  indexOrdLite <- setdiff(indexProtLite,indexDisoLite)
+  indexPhosphoLite <- as.numeric(liteTPphosphoSites[[i]])
+  indexNonPhosphoLite <- setdiff(indexProtLite,indexPhosphoLite)
+
+  ndpLite <- length(which(indexPhosphoLite %in% indexDisoLite))
+  nopLite <- length(which(indexPhosphoLite %in% indexOrdLite))
+  ndnpLite <- length(which(indexNonPhosphoLite %in% indexDisoLite))
+  nonpLite<- length(which(indexNonPhosphoLite %in% indexOrdLite))
+  liteStratContingencyArray[1,1,i]<-ndpLite
+  liteStratContingencyArray[1,2,i]<-nopLite
+  liteStratContingencyArray[2,1,i]<-ndnpLite
+  liteStratContingencyArray[2,2,i]<-nonpLite
+
+}
+
+woolf_test(liteStratContingencyArray)
+ors <- apply(liteStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$estimate)
+     })
+
+logors <- log10(ors)
+logors[is.infinite(logors) & logors > 0] <- 2
+logors[is.infinite(logors) & logors < 0] <- -2
+
+ggplot()+geom_bar(aes(x=1:length(ors), y=ors),stat="identity")+ylim(c(-2,2))
+ 
+
+
 ####Ubersax####
 
 # disorderedRegions <- getPredDiso(df = yeastDiso,"indices")
@@ -744,100 +837,6 @@ For boths datasets there is a statistical significative increase in the percenta
 #   liteStratContingencyArray[2,2,i]<-nonpLite
 #   
 # }
-# 
-# ####Ubersax#####
-# disorderedRegions <- getPredDiso(df = yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2),],"indices")
-# TPphosphoSites <- gregexpr("[ST]P",yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2),]$sequence)
-# 
-# stratContingencyArray <- array(dim = c(2,2,nrow(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2),])))
-# for (i in 1:nrow(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2),])) {
-#   
-#   indexProt <- 1:nchar(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2),]$sequence[[i]])
-#   indexDiso <- disorderedRegions[[i]]
-#   indexOrd <- setdiff(indexProt,indexDiso)
-#   indexPhospho <- as.numeric(TPphosphoSites[[i]])
-#   indexNonPhospho <- setdiff(indexProt,indexPhospho)
-#   
-#   ndp <- length(which(indexPhospho %in% indexDiso))
-#   nop <- length(which(indexPhospho %in% indexOrd))
-#   ndnp <- length(which(indexNonPhospho %in% indexDiso))
-#   nonp<- length(which(indexNonPhospho %in% indexOrd))
-#   stratContingencyArray[1,1,i]<-ndp
-#   stratContingencyArray[1,2,i]<-nop
-#   stratContingencyArray[2,1,i]<-ndnp
-#   stratContingencyArray[2,2,i]<-nonp
-#   
-# }
-# woolf_test(stratContingencyArray)
-# apply(stratContingencyArray, 3,function(x){
-#      ft<-fisher.test(x)
-#      return(ft$p.value)
-#      })
-# 
-# 
-# 
-# 
-# liteDisorderedRegions <- getPredLiteDiso(df = yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),],"indices")
-# liteTPphosphoSites <- gregexpr("[ST]P",yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),]$sequence)
-# 
-# liteStratContingencyArray <- array(dim = c(2,2,nrow(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),])))
-# for (i in 1:nrow(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),])) {
-#   
-#   indexProtLite <- 1:nchar(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),]$sequence[[i]])
-#   indexDisoLite <- liteDisorderedRegions[[i]]
-#   indexOrdLite <- setdiff(indexProtLite,indexDisoLite)
-#   indexPhosphoLite <- as.numeric(liteTPphosphoSites[[i]])
-#   indexNonPhosphoLite <- setdiff(indexProtLite,indexPhosphoLite)
-#   
-#   ndpLite <- length(which(indexPhosphoLite %in% indexDisoLite))
-#   nopLite <- length(which(indexPhosphoLite %in% indexOrdLite))
-#   ndnpLite <- length(which(indexNonPhosphoLite %in% indexDisoLite))
-#   nonpLite<- length(which(indexNonPhosphoLite %in% indexOrdLite))
-#   liteStratContingencyArray[1,1,i]<-ndpLite
-#   liteStratContingencyArray[1,2,i]<-nopLite
-#   liteStratContingencyArray[2,1,i]<-ndnpLite
-#   liteStratContingencyArray[2,2,i]<-nonpLite
-#   
-# }
-# 
-# 
-# 
-# 
-# woolf_test(liteStratContingencyArray)
-# ors <- apply(liteStratContingencyArray, 3,function(x){
-#      ft<-fisher.test(x)
-#      return(ft$estimate)
-#      })
-# 
-# logors <- log10(ors)
-# logors[is.infinite(logors) & logors > 0] <- 2
-# logors[is.infinite(logors) & logors < 0] <- -2
-# 
-# ggplot()+geom_bar(aes(x=1:length(ors), y=ors),stat="identity")+ylim(c(-2,2))
-# 
-# 
-# getAAfrequency <- function(sequences,regions=NULL,complement=FALSE){
-#   
-#   if (!is.null(regions)) {
-#     if (complement) {
-#       regionIndex <- lapply(liteDisorderedRegions, function(x){return(-as.integer(x))})
-#     } else {
-#       regionIndex <- regions
-#       }
-#   } else {
-#     regionIndex <- rep(TRUE,length(sequences))
-#     }
-#   aaSummary <- 0
-#   for (i in 1:length(sequences)) {
-#     seqVector<-strsplit(sequences[i],"")[[1]][regionIndex[[i]]]
-#     # print(seqVector)
-#     aaSummary <- summary(factor(seqVector,levels = c("A","C","D","E","F","G","H","I","K","L","M","N","P","Q","R","S","T","V","W","Y"))) + aaSummary
-#     # print(aaSummary)
-#     } 
-#   return(100*(aaSummary/sum(aaSummary)))
-# }
-# 
-
 
 ```
 
