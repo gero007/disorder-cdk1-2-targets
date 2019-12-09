@@ -704,7 +704,7 @@ logors[is.infinite(logors) & logors < 0] <- -2
 
 ggplot()+geom_bar(aes(x=1:length(logors), y=logors),stat="identity")+ylim(c(-2,2))
 
-
+####Lite####
 UbxAllLiteDisorderedRegions <- getPredLiteDiso(df = yeastDiso_Ubersax_subset,"indices")
 UbxAllLiteStratContingencyArray <- getStratContingencyArray(df = yeastDiso_Ubersax_subset,sequence_col = "sequence",disordered_index_list = UbxAllLiteDisorderedRegions)
 
@@ -726,6 +726,11 @@ fisherDF$logOr <- log10(fisherDF$ORs)
 fisherDF$logOr[is.infinite(fisherDF$logOr) & fisherDF$logOr > 0] <- 2
 fisherDF$logOr[is.infinite(fisherDF$logOr) & fisherDF$logOr < 0] <- -2
 
+
+###Trying to find a way to move the dots out from the logPvalue=0 with random noise(Jitter) in order to asses the amount of points we have there.
+# set.seed(1234)
+# fisherDF$pvalue[fisherDF$pvalue==1]<-abs(jitter(fisherDF$logPvalue[fisherDF$logPvalue==0]))
+
 ggplot(fisherDF, aes(x = logOr, y = logPvalue)) +
   geom_point(aes(color = target)) +
   # scale_color_manual(values = c("", "grey")) +
@@ -738,12 +743,44 @@ ggplot(fisherDF, aes(x = logOr, y = logPvalue)) +
   geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "red")+
   annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)
 
-logors <- log10(ors)
-logors[is.infinite(logors) & logors > 0] <- 2
-logors[is.infinite(logors) & logors < 0] <- -2
+####SPOT####
+UbxAllSPOTDisorderedRegions <- getSpotPredDiso(df = yeastDiso_Ubersax_subset,"indices",accession_col = "acc")
+UbxAllSPOTStratContingencyArray <- getStratContingencyArray(df = yeastDiso_Ubersax_subset,sequence_col = "sequence",disordered_index_list = UbxAllSPOTDisorderedRegions)
 
-ggplot()+geom_bar(aes(x=1:length(logors), y=logors),stat="identity")+ylim(c(-2,2))
+woolf_test(UbxAllSPOTStratContingencyArray)
+fisherSpotDF <- data.frame(Ubersax_data$Entry)
+colnames(fisherDF) <- "acc"
+fisherSpotDF$target <- Ubersax_data$target
+fisherSpotDF$ORs <- apply(UbxAllSPOTStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$estimate)
+     })
+fisherSpotDF$pvalue <- apply(UbxAllSPOTStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$p.value)
+     })
+fisherSpotDF$logPvalue <- -log10(fisherSpotDF$pvalue)
+fisherSpotDF$logOr <- log10(fisherSpotDF$ORs)
 
+fisherSpotDF$logOr[is.infinite(fisherSpotDF$logOr) & fisherSpotDF$logOr > 0] <- 2
+fisherSpotDF$logOr[is.infinite(fisherSpotDF$logOr) & fisherSpotDF$logOr < 0] <- -2
+
+
+###Trying to find a way to move the dots out from the logPvalue=0 with random noise(Jitter) in order to asses the amount of points we have there.
+# set.seed(1234)
+# fisherDF$pvalue[fisherDF$pvalue==1]<-abs(jitter(fisherDF$logPvalue[fisherDF$logPvalue==0]))
+
+ggplot(fisherSpotDF, aes(x = logOr, y = logPvalue)) +
+  geom_point(aes(color = target)) +
+  # scale_color_manual(values = c("", "grey")) +
+  theme_bw(base_size = 12) + theme(legend.position = "bottom") +
+  scale_y_continuous(trans='log10',limits = c(0.1,10)) +
+  xlim(-2, 2) +
+  scale_shape_manual()+
+  # geom_point(data = subset(fisherDF, log10(ORs) < -2), aes(x = -2, y = -log10(pvalue)), alpha = 0.5,shape=60,size=4) +
+  # geom_point(data = subset(fisherDF, log10(ORs) > 2), aes(x = 2, y = -log10(pvalue)), alpha = 0.5,shape=62,size=4) +
+  geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "red")+
+  annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)
 #####################
 liteDisorderedRegions <- getPredLiteDiso(df = yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),],"indices")
 liteTPphosphoSites <- gregexpr("[ST]P",yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),]$sequence)
