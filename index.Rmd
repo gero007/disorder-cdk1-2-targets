@@ -149,7 +149,7 @@ Holt_data$target_consensus <- relevel(Holt_data$target_consensus,"Non Cdk1 targe
 
 ## MobiDB
   
-The [MobiDB](http://mobidb.bio.unipd.it) database of protein disorder and mobility annotations has been significantly updated and upgraded since its last major renewal in 2014. Several curated datasets for intrinsic disorder and folding upon binding have been integrated from specialized databases. The indirect evidence has also been expanded to better capture information available in the PDB, such as high-temperature residues in X-ray structures and overall conformational diversity.  
+The [MobiDB](http://mobidb.bio.unipd.it) is database of protein disorder and mobility annotations. Several curated datasets for intrinsic disorder and folding upon binding have been integrated from specialized databases. The indirect evidence has also been expanded to better capture information available in the PDB, such as high-temperature residues in X-ray structures and overall conformational diversity.  
 The database is organized in three layers containing data of different nature: Disorder, Linear Interacting Peptides (LIPs) and Dynamic structure. The "Disorder" database bears data about protein regions without a defined tri-dimensional structure. The "LIPs" layer contains information about regions or residues that interact with other proteins or DNA/RNA preserving a linear (disordered) structure. At last, the data hosted in the "Dynamic structure" layer describes the propensity of a residue to assume a specific secondary structure conformation. When extracted from chemical shifts can be interpreted as a measure of the secondary structure populations in solution.
 Each one of three layers features three quality levels of annotation from high to low quality (Fig. 1), presenting different coverage of the universe of known proteins.
   
@@ -162,7 +162,7 @@ knitr::include_graphics("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/di
 
 ### Protein disorder  
   
-As a first approach, I explored the Disorder database from Mobidb for the whole annotated proteome of Saccharomyces cerevisiae. The data set comprehends the information of disordered region over 6721 proteins. As explained before, each entry could have annotations of disorder in three different levels (DB, indirect, Predicted) which, at the same time, collect information from several sources in order to reach to a consensus of the regions with or without a defined tri-dimensional structure. I this way, the consensus of each level annotates the regions as structured "S", Disordered "D" or conflict "C", when there is more than one source of information over a protein region that contradicts each other.
+As a first approach, the Mobidb database was explored for the whole annotated proteome of Saccharomyces cerevisiae. The data set comprehends the information of disordered region over 6721 proteins. As explained before, each entry has annotations of disorder in three different levels (DB, indirect, Predicted). At each one of those levels, information from several sources is annotated in order to reach to a consensus of the regions with or without a defined tri-dimensional structure. For the disorder predictors annotated in MobiDB the regions with a predicted disorder regions are marked with a "D". For those levels in which a consensus is reached ("DB" and "Derived") the regions are marked as "S" for structured, "C" for conflicts between different the methods, and "D" for disorder.  
 
 ```{r all data summary ,echo=FALSE,message=FALSE,warning=FALSE}
 npredictors=0
@@ -215,8 +215,8 @@ for (i in 1:nrow(yeastDiso)) {
   }
 ```
 
-In order to understand the data the first analysis to do is to evaluate the coverage of the different levels of annotations in the database. In this way, we can select a level or a combination of them for assigning the disorder regions to each protein considering the compromise between the quality of the annotation and the coverage of the protein set of interest.  
-DB is the level with less coverage, since its annotations are manually curated, and it has **`r ndb`** entries covering a **`r round((ndb/nrow(yeastDiso))*100,2)`%** of the whole proteome. The data annotated in the "Derived" level holds **`r nderived`** entries and this covers **`r round((nderived/nrow(yeastDiso))*100,2)`%** of available proteins for S. cerevisiae. Since the predictors do not have any limitations in terms of which proteins could these methods be applied to, they cover the entire protein set.  
+In order to understand the data the first analysis to do is to evaluate the coverage of the different levels of annotations in the database. In this way, a level or a combination of them can be selected for assigning the disorder regions to each protein considering the compromise between the quality of the annotation and the coverage of the protein set of interest.  
+DB is the level with less coverage, since its annotations are manually curated, and it has **`r ndb`** entries covering a **`r round((ndb/nrow(yeastDiso))*100,2)`%** of the whole yeast proteome. The data annotated in the "Derived" level holds **`r nderived`** entries and this covers **`r round((nderived/nrow(yeastDiso))*100,2)`%** of available proteins for S. cerevisiae. Since the predictors do not have any limitations in terms of which proteins could these methods be applied to, they cover the entire protein set.  
   
 | Level      | Method           | N° entries            | Level coverage (%)                            | Method coverage (%)                                 |
 |------------|------------------|-----------------------|-----------------------------------------------|-----------------------------------------------------|
@@ -229,13 +229,22 @@ DB is the level with less coverage, since its annotations are manually curated, 
 |            | mobidb-lite      | `r nmobidblite`       | `r round((nmobidblite/nsimple)*100,2)`        | `r round((nmobidblite/nrow(yeastDiso))*100,2)`      |
 Table 1:  Percent of covered entries by each Level and method of the MobiDB database.  
 
-## SPOT disorder prediction
+## SPOT disorder prediction  
+  
+For predicting IDRP common deep learning techniques, such as recurrent neural networks and window-based artificial neural networks, while effective at propagating local errors within sequence neighbors, are ineffective at modeling long-range (non-local) interactions between amino acid residues that are structural but not sequence neighbors. Because residue–residue interactions are dominated by structural neighbors, how to account for them is the key for improving sequence-based prediction of protein structural and functional properties.
+The long-range dependence between a series of time-resolved events can be better captured by enforcing the constant error flow so that useful long-range interactions can be memorized. 
+SPOT (Sequence-based Prediction Online Tools for disorder) captures nonlocal interactions that are essential for determining whether a protein will fold (structured) or will not fold (intrinsically disordered) into a unique three-dimensional structure, by employing deep bidirectional LSTM cells. The bidirectional network will allow us to capture both forward and backward information contained in protein sequences. This new method is found to be highly effective in predicting both short and long disordered regions without separated training, despite disordered regions of different sizes having different compositions of amino acids
 
+The evolutionary content is established through the use of a Position-Specific Scoring Matrix (PSSM), generated by three iterations of the PSI-BLAST algorithm (Altschul et al., 1997) against the NCBI’s Non-Redundant (NR) sequence database for each protein. The Shannon entropy is also calculated to represent the information content in these probabilities per residue (Shannon, 1948). The average Shannon entropy over the entire protein is also utilized as an input feature of the general conservation of the whole protein. This leads to a total of 22 evolutionary features used for prediction.
+We also obtained 17 predicted structural features from the SPIDER2 predictor (1 ASA, 1 CN, 4 HSE based on Cα and Cβ atoms, respectively and the 11 predicted SS and sine/cosine of the backbone angle values) (Heffernan et al., 2015, 2016). Finally, seven commonly-used physicochemical properties, including hydrophobicity and polarizability, are used as features as provided by Meiler et al. (2001).
+
+Thus, using these features resulted in a 46-length feature vector for each amino acid. 
 [@Hanson2016]
   
 ## Disorder statistics
 
-transformation of the data in order to have quantitative measurements of protein disorder
+The raw data collected from the MobiDB and the SPOT run for the whole yeast genome should be adjusted and transformed in order to have quantitative measurements of protein disorder that can be compared between the different methods. The processing of the MobiDB database present a bigger challenge since the database is designed as relational and the files fetched (mjson format) when transformed into a flat table format generate columns with nested matrices as values.
+For the SPOT disorder prediction, all the proteins in S. cerevisiae were input into a batch software run, and all IDR estimated were annotated in one file per protein. All the files were scanned with an ad-hoc defined function and the data was added to the disorder tables generated by the parsing of the MobiDB information.
 
 ### Percentage of disordered aminoacids  
   
@@ -315,7 +324,7 @@ stretchData$stretchLength <- as.numeric(stretchData$stretchLength)
 
 
 
-ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin(aes(fill=method), alpha = 0.7,show.legend = FALSE,bw=40) +
+ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin(aes(fill=method), alpha = 0.7,show.legend = FALSE,bw=10) +
     theme_minimal() +
     geom_boxplot(width=0.05) +
     scale_fill_manual(values = c("Simple predictor"="darkorange1","MobiDB-lite predictor" = "chartreuse3","SPOT predictor" = "firebrick1","Derived"="darkgoldenrod1","DB" = "deepskyblue2")) +
@@ -767,20 +776,23 @@ fisherSpotDF$logOr[is.infinite(fisherSpotDF$logOr) & fisherSpotDF$logOr < 0] <- 
 
 
 ###Trying to find a way to move the dots out from the logPvalue=0 with random noise(Jitter) in order to asses the amount of points we have there.
-# set.seed(1234)
-# fisherDF$pvalue[fisherDF$pvalue==1]<-abs(jitter(fisherDF$logPvalue[fisherDF$logPvalue==0]))
+set.seed(1234)
+fisherSpotDF$logPvalue[fisherSpotDF$logPvalue==0]<- 0.1
+fisherSpotDF$logPvalue[fisherSpotDF$logPvalue==0.1]<-abs(jitter(fisherSpotDF$logPvalue[fisherSpotDF$logPvalue==0.1],6))
 
 ggplot(fisherSpotDF, aes(x = logOr, y = logPvalue)) +
   geom_point(aes(color = target)) +
   # scale_color_manual(values = c("", "grey")) +
   theme_bw(base_size = 12) + theme(legend.position = "bottom") +
-  scale_y_continuous(trans='log10',limits = c(0.1,10)) +
+  scale_y_continuous(trans='log10',limits = c(0.01,10)) +
   xlim(-2, 2) +
   scale_shape_manual()+
   # geom_point(data = subset(fisherDF, log10(ORs) < -2), aes(x = -2, y = -log10(pvalue)), alpha = 0.5,shape=60,size=4) +
   # geom_point(data = subset(fisherDF, log10(ORs) > 2), aes(x = 2, y = -log10(pvalue)), alpha = 0.5,shape=62,size=4) +
   geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "red")+
   annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)
+
+
 #####################
 liteDisorderedRegions <- getPredLiteDiso(df = yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),],"indices")
 liteTPphosphoSites <- gregexpr("[ST]P",yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),]$sequence)
