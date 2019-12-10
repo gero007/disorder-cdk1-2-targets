@@ -275,17 +275,17 @@ Similar distributions of the percentage of disorder residues, for two different 
 
 ```{r comparison scatters ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 4: Pairwise comparison of the % of disorder residues determined by the different methods",fig.height=8,fig.width=10 }
 
-compDataSet <- yeastDiso[,c(2,6:10)]
+compDataSet <- yeastDiso[,c("sequence","predDisoPerc","predLiteDisoPerc","predSpotDisoPerc","derivedDisoPerc","dbDisoPerc")]
 phosphorylatableResidues <- numeric()
-for (phosoSites in gregexpr(pattern = "[ST]P",as.character(compDataSet[,1]))){phosphorylatableResidues<-c(phosphorylatableResidues,length(phosoSites))}
+for (phosoSites in gregexpr(pattern = "[ST]P",as.character(compDataSet[,"sequence"]))){phosphorylatableResidues<-c(phosphorylatableResidues,length(phosoSites))}
 compDataSet$nPhosphoRes <- phosphorylatableResidues
-compDataSet[,1] <- nchar(as.character(compDataSet[,1]))
+compDataSet[,"sequence"] <- nchar(as.character(compDataSet[,"sequence"]))
 colnames(compDataSet)[1] <- "proteinLength"
 compDataSet$percPhosphoRes <- (compDataSet$nPhosphoRes/compDataSet$proteinLength)*100
 compDataSet$levelPhosphoRes<-cut(compDataSet$percPhosphoRes,breaks = c(0,0.45,1,10),labels = c("Low","Mid","High"))
 
 # print(summary(compDataSet$percPhosphoRes))
-GGally::ggpairs(data = compDataSet,columns = c(2,3,6,4,5), ggplot2::aes(colour=levelPhosphoRes,alpha=0.5),xlab="% of disorder residues", ylab="% of disorder residues",columnLabels=c("Simple predictor","MobiDB-Lite predictor","SPOT","Derived","DB")) +
+GGally::ggpairs(data = compDataSet,columns = c(2:6), ggplot2::aes(colour=levelPhosphoRes,alpha=0.5),xlab="% of disorder residues", ylab="% of disorder residues",columnLabels=c("Simple predictor","MobiDB-Lite predictor","SPOT","Derived","DB")) +
      theme(panel.grid.minor = element_blank(),panel.grid.major = element_blank()) + theme_classic()
 
 ```
@@ -324,7 +324,7 @@ stretchData$stretchLength <- as.numeric(stretchData$stretchLength)
 
 
 
-ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin(aes(fill=method), alpha = 0.7,show.legend = FALSE,bw=10) +
+ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin(aes(fill=method), alpha = 0.7,show.legend = FALSE,bw=40) +
     theme_minimal() +
     geom_boxplot(width=0.05) +
     scale_fill_manual(values = c("Simple predictor"="darkorange1","MobiDB-lite predictor" = "chartreuse3","SPOT predictor" = "firebrick1","Derived"="darkgoldenrod1","DB" = "deepskyblue2")) +
@@ -793,41 +793,41 @@ ggplot(fisherSpotDF, aes(x = logOr, y = logPvalue)) +
   annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)
 
 
-#####################
-liteDisorderedRegions <- getPredLiteDiso(df = yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),],"indices")
-liteTPphosphoSites <- gregexpr("[ST]P",yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),]$sequence)
-
-liteStratContingencyArray <- array(dim = c(2,2,nrow(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),])))
-for (i in 1:nrow(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),])) {
-
-  indexProtLite <- 1:nchar(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),]$sequence[[i]])
-  indexDisoLite <- liteDisorderedRegions[[i]]
-  indexOrdLite <- setdiff(indexProtLite,indexDisoLite)
-  indexPhosphoLite <- as.numeric(liteTPphosphoSites[[i]])
-  indexNonPhosphoLite <- setdiff(indexProtLite,indexPhosphoLite)
-
-  ndpLite <- length(which(indexPhosphoLite %in% indexDisoLite))
-  nopLite <- length(which(indexPhosphoLite %in% indexOrdLite))
-  ndnpLite <- length(which(indexNonPhosphoLite %in% indexDisoLite))
-  nonpLite<- length(which(indexNonPhosphoLite %in% indexOrdLite))
-  liteStratContingencyArray[1,1,i]<-ndpLite
-  liteStratContingencyArray[1,2,i]<-nopLite
-  liteStratContingencyArray[2,1,i]<-ndnpLite
-  liteStratContingencyArray[2,2,i]<-nonpLite
-
-}
-
-woolf_test(liteStratContingencyArray)
-ors <- apply(liteStratContingencyArray, 3,function(x){
-     ft<-fisher.test(x)
-     return(ft$estimate)
-     })
-
-logors <- log10(ors)
-logors[is.infinite(logors) & logors > 0] <- 2
-logors[is.infinite(logors) & logors < 0] <- -2
-
-ggplot()+geom_bar(aes(x=1:length(ors), y=ors),stat="identity")+ylim(c(-2,2))
+# #####################
+# liteDisorderedRegions <- getPredLiteDiso(df = yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),],"indices")
+# liteTPphosphoSites <- gregexpr("[ST]P",yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),]$sequence)
+# 
+# liteStratContingencyArray <- array(dim = c(2,2,nrow(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),])))
+# for (i in 1:nrow(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),])) {
+# 
+#   indexProtLite <- 1:nchar(yeastDisoCDK1target[which(Ubersax_data$`P-Score`>=2 &!is.na(Ubersax_data$predLiteDisoPercCdkTargets)),]$sequence[[i]])
+#   indexDisoLite <- liteDisorderedRegions[[i]]
+#   indexOrdLite <- setdiff(indexProtLite,indexDisoLite)
+#   indexPhosphoLite <- as.numeric(liteTPphosphoSites[[i]])
+#   indexNonPhosphoLite <- setdiff(indexProtLite,indexPhosphoLite)
+# 
+#   ndpLite <- length(which(indexPhosphoLite %in% indexDisoLite))
+#   nopLite <- length(which(indexPhosphoLite %in% indexOrdLite))
+#   ndnpLite <- length(which(indexNonPhosphoLite %in% indexDisoLite))
+#   nonpLite<- length(which(indexNonPhosphoLite %in% indexOrdLite))
+#   liteStratContingencyArray[1,1,i]<-ndpLite
+#   liteStratContingencyArray[1,2,i]<-nopLite
+#   liteStratContingencyArray[2,1,i]<-ndnpLite
+#   liteStratContingencyArray[2,2,i]<-nonpLite
+# 
+# }
+# 
+# woolf_test(liteStratContingencyArray)
+# ors <- apply(liteStratContingencyArray, 3,function(x){
+#      ft<-fisher.test(x)
+#      return(ft$estimate)
+#      })
+# 
+# logors <- log10(ors)
+# logors[is.infinite(logors) & logors > 0] <- 2
+# logors[is.infinite(logors) & logors < 0] <- -2
+# 
+# ggplot()+geom_bar(aes(x=1:length(ors), y=ors),stat="identity")+ylim(c(-2,2))
  
 
 
