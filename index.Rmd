@@ -39,13 +39,13 @@ source("contingencyTablesAnalysis.R")
 
 # yeastDiso is a complex database from MobiDB Saccharomyces cerevisiae. 
 
-yeastDiso<-stream_in(con = file("~/projects/cdk1_cyclinB1/phase_separation/disorder/disorder_UP000002311.mjson"),verbose = F)
+yeastDiso<-stream_in(con = file("~/disorder_UP000002311.mjson"),verbose = F)
 yeastDiso$mobidb_consensus <- yeastDiso$mobidb_consensus$disorder
 colnames(yeastDiso)[5] <- "disorder"
 
 
 # ___________ SPOT _____________
-spotDisorderList <- getSpotDisoMatrix("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/spot_run_yeast/")
+spotDisorderList <- getSpotDisoMatrix("~/spot_run_yeast/")
 
 
 yeastDiso$length <- nchar(yeastDiso$sequence)
