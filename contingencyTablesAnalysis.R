@@ -1,10 +1,13 @@
 
 
-getStratContingencyArray <- function(df,sequence_col,disordered_index_list,phosphosite_regex="[ST]P"){
+getStratContingencyArray <- function(df,sequence_col,disordered_index_list,phosphosite_regex="[ST]P",pSitesCol=NULL){
   
   disorderedRegions <- disordered_index_list
-  TPphosphoSites <- gregexpr(phosphosite_regex,df[,sequence_col])
-  
+  if(is.null(pSitesCol)){
+    TPphosphoSites <- gregexpr(phosphosite_regex,df[,sequence_col])
+  } else {
+    strsplit(df[,pSitesCol],",")
+  }
   stratContingencyArray <- array(dim = c(2,2,nrow(df)))
   for (i in 1:nrow(df)) {
     

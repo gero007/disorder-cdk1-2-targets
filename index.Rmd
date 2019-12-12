@@ -25,6 +25,7 @@ library(eulerr)
 library(flextable)
 library(stringr)
 library(DT)
+library(dplyr)
 
 source("getDisorder.R")
 source("contingencyTablesAnalysis.R")
@@ -86,7 +87,7 @@ Ubersax_data$predSpotDisoPerc <- yeastDiso_Ubersax_subset$predSpotDisoPerc
 # CDK1targetSacCer$length <- nchar(yeastDisoCDK1target$sequence)
 
 
-Ubersax_data$target<-cut(Ubersax_data$`P-Score`,breaks = c(2),labels = c("Non Cdk1 target","Cdk1 target"))
+# Ubersax_data$target<-cut(Ubersax_data$`P-Score`,breaks = c(2),labels = c("Non Cdk1 target","Cdk1 target"))
 Ubersax_data$MW_kDa<-(Ubersax_data$length*120)/1000
 Ubersax_data$nmol<- (Ubersax_data$`Protein Level`/Ubersax_data$MW_kDa)/1000
 Ubersax_data$nEq_STP<- Ubersax_data$nmol*Ubersax_data$`[ST]-P`
@@ -142,6 +143,13 @@ Holt_consensus$Uniprot <- as.character(Holt_consensus$Uniprot)
 Holt_data<-merge.data.frame(Holt_data,Holt_consensus,by = "Uniprot")
 
 Holt_data$target_consensus <- relevel(Holt_data$target_consensus,"Non Cdk1 target")
+
+# adding psites
+
+holt_phosphosites <-aggregate(substring(site,2,1000) ~ Uniprot, data = Holt_MS_Cdk1_all_phosphosites, paste, collapse=",")
+colnames(holt_phosphosites) <- c("Uniprot","sites")
+# Holt_MS_Cdk1_all_phosphosites has only the Psites with fold Chnge>2 but Holtdata has all the proteins
+Holt_data$phosphosites <- holt_phosphosites$sites[match(Holt_MS_Cdk1_all_phosphosites$Uniprot,holt_phosphosites$Uniprot)]
 ```
 
 
@@ -573,7 +581,7 @@ scoresData$logPhospho <- log10(Ubersax_data$Phosphorylation)
 scoresData$logMol <- log10(Ubersax_data$nmol)
 scoresData$logEq_STP <- log10(Ubersax_data$nEq_STP)
 scoresData$logEq_STPXR <- log10(Ubersax_data$nEq_STPXKR)
-scoresData$targetStrict <- Ubersax_data$target<-cut(Ubersax_data$`P-Score`,breaks = c(-Inf,3,Inf),labels = c("Non Cdk1 target","Cdk1 target"),right = F)
+scoresData$targetStrict <- cut(Ubersax_data$`P-Score`,breaks = c(-Inf,3,Inf),labels = c("Non Cdk1 target","Cdk1 target"),right = F)
 
 l_pl_nm<-ggplot(scoresData,aes(x=log10(`Protein Level`),y=log10(`nmol`)))+geom_point(aes(color=target)) + theme_linedraw() + theme(axis.title.x = element_blank()) +  xlab("Log10(Protein Level <ng>)") + ylab("Log10(nMoles)")
 
@@ -696,59 +704,47 @@ For boths datasets there is a statistical significative increase in the percenta
 
 
 
-```{r agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE}
+```{r Ubersax agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE}
 
-UbxCdk1TargetsLiteDisorderedRegions <- getPredLiteDiso(df = yeastDiso_Ubersax_subset[which(Ubersax_data$`P-Score`>=2),],"indices")
-UbxCdk1TargetsLiteStratContingencyArray <- getStratContingencyArray(df = yeastDiso_Ubersax_subset[which(Ubersax_data$`P-Score`>=2),],sequence_col = "sequence",disordered_index_list = UbxCdk1TargetsLiteDisorderedRegions)
 
-woolf_test(UbxCdk1TargetsLiteStratContingencyArray)
-ors <- apply(UbxCdk1TargetsLiteStratContingencyArray, 3,function(x){
-     ft<-fisher.test(x)
-     return(ft$estimate)
-     })
-
-logors <- log10(ors)
-logors[is.infinite(logors) & logors > 0] <- 2
-logors[is.infinite(logors) & logors < 0] <- -2
-
-ggplot()+geom_bar(aes(x=1:length(logors), y=logors),stat="identity")+ylim(c(-2,2))
 
 ####Lite####
 UbxAllLiteDisorderedRegions <- getPredLiteDiso(df = yeastDiso_Ubersax_subset,"indices")
 UbxAllLiteStratContingencyArray <- getStratContingencyArray(df = yeastDiso_Ubersax_subset,sequence_col = "sequence",disordered_index_list = UbxAllLiteDisorderedRegions)
 
 woolf_test(UbxAllLiteStratContingencyArray)
-fisherDF <- data.frame(Ubersax_data$Entry)
-colnames(fisherDF) <- "acc"
-fisherDF$target <- Ubersax_data$target
-fisherDF$ORs <- apply(UbxAllLiteStratContingencyArray, 3,function(x){
+fisherLiteDF <- data.frame(Ubersax_data$Entry)
+colnames(fisherLiteDF) <- "acc"
+fisherLiteDF$target <- Ubersax_data$target
+fisherLiteDF$ORs <- apply(UbxAllLiteStratContingencyArray, 3,function(x){
      ft<-fisher.test(x)
      return(ft$estimate)
      })
-fisherDF$pvalue <- apply(UbxAllLiteStratContingencyArray, 3,function(x){
+fisherLiteDF$pvalue <- apply(UbxAllLiteStratContingencyArray, 3,function(x){
      ft<-fisher.test(x)
      return(ft$p.value)
      })
-fisherDF$logPvalue <- -log10(fisherDF$pvalue)
-fisherDF$logOr <- log10(fisherDF$ORs)
+fisherLiteDF$logPvalue <- -log10(fisherLiteDF$pvalue)
+fisherLiteDF$logOr <- log10(fisherLiteDF$ORs)
 
-fisherDF$logOr[is.infinite(fisherDF$logOr) & fisherDF$logOr > 0] <- 2
-fisherDF$logOr[is.infinite(fisherDF$logOr) & fisherDF$logOr < 0] <- -2
+fisherLiteDF$logOr[is.infinite(fisherLiteDF$logOr) & fisherLiteDF$logOr > 0] <- 2
+fisherLiteDF$logOr[is.infinite(fisherLiteDF$logOr) & fisherLiteDF$logOr < 0] <- -2
 
 
 ###Trying to find a way to move the dots out from the logPvalue=0 with random noise(Jitter) in order to asses the amount of points we have there.
-# set.seed(1234)
-# fisherDF$pvalue[fisherDF$pvalue==1]<-abs(jitter(fisherDF$logPvalue[fisherDF$logPvalue==0]))
+set.seed(1234)
+fisherLiteDF$logPvalue[fisherLiteDF$logPvalue==0]<- 0.1
+fisherLiteDF$logPvalue[fisherLiteDF$logPvalue==0.1]<-abs(jitter(fisherLiteDF$logPvalue[fisherLiteDF$logPvalue==0.1],6))
 
-ggplot(fisherDF, aes(x = logOr, y = logPvalue)) +
-  geom_point(aes(color = target)) +
+ggplot(fisherLiteDF, aes(x = logOr, y = logPvalue)) +
+  geom_point(aes(color = target),alpha=0.6) +
   # scale_color_manual(values = c("", "grey")) +
   theme_bw(base_size = 12) + theme(legend.position = "bottom") +
   scale_y_continuous(trans='log10',limits = c(0.1,10)) +
   xlim(-2, 2) +
   scale_shape_manual()+
-  # geom_point(data = subset(fisherDF, log10(ORs) < -2), aes(x = -2, y = -log10(pvalue)), alpha = 0.5,shape=60,size=4) +
-  # geom_point(data = subset(fisherDF, log10(ORs) > 2), aes(x = 2, y = -log10(pvalue)), alpha = 0.5,shape=62,size=4) +
+  # geom_point(data = subset(fisherLiteDF, log10(ORs) < -2), aes(x = -2, y = -log10(pvalue)), alpha = 0.5,shape=60,size=4) +
+  # geom_point(data = subset(fisherLiteDF, log10(ORs) > 2), aes(x = 2, y = -log10(pvalue)), alpha = 0.5,shape=62,size=4) +
   geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "red")+
   annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)
 
@@ -758,7 +754,7 @@ UbxAllSPOTStratContingencyArray <- getStratContingencyArray(df = yeastDiso_Ubers
 
 woolf_test(UbxAllSPOTStratContingencyArray)
 fisherSpotDF <- data.frame(Ubersax_data$Entry)
-colnames(fisherDF) <- "acc"
+colnames(fisherSpotDF) <- "acc"
 fisherSpotDF$target <- Ubersax_data$target
 fisherSpotDF$ORs <- apply(UbxAllSPOTStratContingencyArray, 3,function(x){
      ft<-fisher.test(x)
@@ -781,10 +777,10 @@ fisherSpotDF$logPvalue[fisherSpotDF$logPvalue==0]<- 0.1
 fisherSpotDF$logPvalue[fisherSpotDF$logPvalue==0.1]<-abs(jitter(fisherSpotDF$logPvalue[fisherSpotDF$logPvalue==0.1],6))
 
 ggplot(fisherSpotDF, aes(x = logOr, y = logPvalue)) +
-  geom_point(aes(color = target)) +
+  geom_point(aes(color = target),alpha=0.6) +
   # scale_color_manual(values = c("", "grey")) +
   theme_bw(base_size = 12) + theme(legend.position = "bottom") +
-  scale_y_continuous(trans='log10',limits = c(0.01,10)) +
+  scale_y_continuous(trans='log10',limits = c(0.1,10)) +
   xlim(-2, 2) +
   scale_shape_manual()+
   # geom_point(data = subset(fisherDF, log10(ORs) < -2), aes(x = -2, y = -log10(pvalue)), alpha = 0.5,shape=60,size=4) +
@@ -888,7 +884,89 @@ ggplot(fisherSpotDF, aes(x = logOr, y = logPvalue)) +
 # }
 
 ```
+```{r Holt agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE}
+####Lite####
+HltAllLiteDisorderedRegions <- getPredLiteDiso(df = yeastDiso_Ubersax_subset,"indices")
+HltAllLiteStratContingencyArray <- getStratContingencyArray(df = yeastDiso_Ubersax_subset,sequence_col = "sequence",disordered_index_list = HltAllLiteDisorderedRegions)
 
+woolf_test(HltAllLiteStratContingencyArray)
+Hlt_fisherDF <- data.frame(Holt_data$Entry)
+colnames(fisherDF) <- "acc"
+Hlt_fisherDF$target <- Ubersax_data$target
+Hlt_fisherDF$ORs <- apply(HltAllLiteStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$estimate)
+     })
+Hlt_fisherDF$pvalue <- apply(HltAllLiteStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$p.value)
+     })
+Hlt_fisherDF$logPvalue <- -log10(Hlt_fisherDF$pvalue)
+Hlt_fisherDF$logOr <- log10(Hlt_fisherDF$ORs)
+
+Hlt_fisherDF$logOr[is.infinite(Hlt_fisherDF$logOr) & Hlt_fisherDF$logOr > 0] <- 2
+Hlt_fisherDF$logOr[is.infinite(Hlt_fisherDF$logOr) & Hlt_fisherDF$logOr < 0] <- -2
+
+
+###Trying to find a way to move the dots out from the logPvalue=0 with random noise(Jitter) in order to asses the amount of points we have there.
+# set.seed(1234)
+# fisherDF$pvalue[fisherDF$pvalue==1]<-abs(jitter(fisherDF$logPvalue[fisherDF$logPvalue==0]))
+
+ggplot(Hlt_fisherDF, aes(x = logOr, y = logPvalue)) +
+  geom_point(aes(color = target)) +
+  # scale_color_manual(values = c("", "grey")) +
+  theme_bw(base_size = 12) + theme(legend.position = "bottom") +
+  scale_y_continuous(trans='log10',limits = c(0.1,10)) +
+  xlim(-2, 2) +
+  scale_shape_manual()+
+  # geom_point(data = subset(fisherDF, log10(ORs) < -2), aes(x = -2, y = -log10(pvalue)), alpha = 0.5,shape=60,size=4) +
+  # geom_point(data = subset(fisherDF, log10(ORs) > 2), aes(x = 2, y = -log10(pvalue)), alpha = 0.5,shape=62,size=4) +
+  geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "red")+
+  annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)
+
+####SPOT####
+UbxAllSPOTDisorderedRegions <- getSpotPredDiso(df = yeastDiso_Ubersax_subset,"indices",accession_col = "acc")
+UbxAllSPOTStratContingencyArray <- getStratContingencyArray(df = yeastDiso_Ubersax_subset,sequence_col = "sequence",disordered_index_list = UbxAllSPOTDisorderedRegions)
+
+woolf_test(UbxAllSPOTStratContingencyArray)
+fisherSpotDF <- data.frame(Ubersax_data$Entry)
+colnames(fisherDF) <- "acc"
+fisherSpotDF$target <- Ubersax_data$target
+fisherSpotDF$ORs <- apply(UbxAllSPOTStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$estimate)
+     })
+fisherSpotDF$pvalue <- apply(UbxAllSPOTStratContingencyArray, 3,function(x){
+     ft<-fisher.test(x)
+     return(ft$p.value)
+     })
+fisherSpotDF$logPvalue <- -log10(fisherSpotDF$pvalue)
+fisherSpotDF$logOr <- log10(fisherSpotDF$ORs)
+
+fisherSpotDF$logOr[is.infinite(fisherSpotDF$logOr) & fisherSpotDF$logOr > 0] <- 2
+fisherSpotDF$logOr[is.infinite(fisherSpotDF$logOr) & fisherSpotDF$logOr < 0] <- -2
+
+
+###Trying to find a way to move the dots out from the logPvalue=0 with random noise(Jitter) in order to asses the amount of points we have there.
+set.seed(1234)
+fisherSpotDF$logPvalue[fisherSpotDF$logPvalue==0]<- 0.1
+fisherSpotDF$logPvalue[fisherSpotDF$logPvalue==0.1]<-abs(jitter(fisherSpotDF$logPvalue[fisherSpotDF$logPvalue==0.1],6))
+
+ggplot(fisherSpotDF, aes(x = logOr, y = logPvalue)) +
+  geom_point(aes(color = target)) +
+  # scale_color_manual(values = c("", "grey")) +
+  theme_bw(base_size = 12) + theme(legend.position = "bottom") +
+  scale_y_continuous(trans='log10',limits = c(0.01,10)) +
+  xlim(-2, 2) +
+  scale_shape_manual()+
+  # geom_point(data = subset(fisherDF, log10(ORs) < -2), aes(x = -2, y = -log10(pvalue)), alpha = 0.5,shape=60,size=4) +
+  # geom_point(data = subset(fisherDF, log10(ORs) > 2), aes(x = 2, y = -log10(pvalue)), alpha = 0.5,shape=62,size=4) +
+  geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "red")+
+  annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)
+
+
+
+```
 
 ```{r agreements disorder vs phosposites2 ,echo=FALSE,message=FALSE,warning=FALSE} 
   

@@ -147,3 +147,24 @@ holt_all_spot_Cdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Cd
 holt_all_spot_NonCdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Non Cdk1 target"],na.rm = T)
 holt_all_spot_test <- t.test(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Cdk1 target"],Holt_data$predSpotDisoPerc[Holt_data$target_all=="Non Cdk1 target"],var.equal=T)
 ```
+
+```{r test,echo=FALSE,message=FALSE,warning=FALSE,fig.cap=""}
+fullconsPlot <- ggplot(Ubersax_data) + geom_density(aes(x = (`[ST]-P-X-[KR]`/length)*100,fill = target),alpha=.5,bw=0.2)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,1.5)) + scale_x_continuous(name="Number of phosphosites per 100 residues",limits = c(0,3))+ggtitle("[ST]-P-X-[KR]")
+minimalconsPlot <- ggplot(Ubersax_data) + geom_density(aes(x = (`[ST]-P`/length)*100,fill = target),alpha=.5,bw=0.2)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,1.5)) + scale_x_continuous(name="Number of phosphosites per 100 residues",limits = c(0,3))+ggtitle("[ST]-P")
+
+ggarrange(fullconsPlot,minimalconsPlot,nrow = 1, ncol = 2,common.legend = TRUE,legend = "bottom", align = "hv")
+
+
+ubersax_full_NonCdk1_VAR <- var(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
+ubersax_full_Cdk1_VAR <- var(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"],na.rm = T)
+ubersax_full_Cdk1_SD <- sd(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"],na.rm = T)
+ubersax_full_NonCdk1_SD <- sd(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
+ubersax_full_test <- t.test(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"],Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"],var.equal=T)
+
+ubersax_minimal_NonCdk1_VAR <- var(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
+ubersax_minimal_Cdk1_VAR <- var(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"],na.rm = T)
+ubersax_minimal_Cdk1_SD <- sd(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"],na.rm = T)
+ubersax_minimal_NonCdk1_SD <- sd(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
+ubersax_minimal_test <- t.test(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"],Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"],var.equal=T)
+
+```
