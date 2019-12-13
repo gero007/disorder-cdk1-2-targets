@@ -259,7 +259,7 @@ getSpotPredDiso <- function(df,output,accession_col){
         endIdx <- as.numeric(mat[row,2])
         disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
       }
-      disoSeqList[[df$acc[[i]]]]<-disoSeq
+      disoSeqList[[df[i,accession_col]]]<-disoSeq
 
     } else {
       nDiso<-0

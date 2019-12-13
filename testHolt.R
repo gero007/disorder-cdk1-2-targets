@@ -58,30 +58,72 @@ getSpotPredDiso <- function(df,output,accession_col){
 
 holtPsitesTable <- Holt_MS %>% group_by(Uniprot) %>% summarise(sites=paste(substring(site,2,1000), collapse=","))
 holtCDK1PsitesTable <- Holt_MS_Cdk1_all_phosphosites %>% group_by(Uniprot) %>% summarise(sites=paste(substring(site,2,1000), collapse=","))
+holtCDK1PsitesConsTable <- Holt_MS_Cdk1_consensus_phosphosites %>% group_by(Uniprot) %>% summarise(sites=paste(substring(site,2,1000), collapse=","))
+#The contingency table analysis it only make sense in the CDK1 targets if I am comparing T/S phosphorylated in al conditions vs lost T/S phosphorylation upon cdk1 inhibition. Non cdk1 targets don't have lost T/S phosphorylation which makes the first row of the contingency table empty
+
 HoltAllPsites <- merge.data.frame(holtPsitesTable,holtCDK1PsitesTable,by = "Uniprot",all.x = T)
-
-colnames(HoltAllPsites)[2:3] <- c("Psites","Cdk1Psites")
+HoltAllPsites <- merge.data.frame(HoltAllPsites,holtCDK1PsitesConsTable,by = "Uniprot",all.x = T)
+  
+colnames(HoltAllPsites)[2:4] <- c("Psites","Cdk1Psites","Cdk1PsitesCons")
 HoltAllPsites$Psites<-strsplit(HoltAllPsites$Psites,",")
-HoltAllPsites$Cdk1Psites<-strsplit(HoltAllPsites$Cdk1Psites,",")
 
+HoltAllPsites$Cdk1Psites<-strsplit(HoltAllPsites$Cdk1Psites,",")
+HoltAllPsites$Cdk1Psites[is.na(HoltAllPsites$Cdk1Psites)]<-0
+
+HoltAllPsites$Cdk1PsitesCons<-strsplit(HoltAllPsites$Cdk1PsitesCons,",")
+HoltAllPsites$Cdk1PsitesCons[is.na(HoltAllPsites$Cdk1PsitesCons)]<-0
 
 spotDisorderRegions <- getSpotPredDiso(Holt_data,accession_col = "Uniprot",output = "indices")
 
-stratContingencyArray <- array(dim = c(2,2,nrow(HoltAllPsites)))
+
+Psites<-numeric()
+PsitesCdk1<-numeric()
+PsitesCdk1Cons<-numeric()
+
 for (i in 1:nrow(HoltAllPsites)) {
+    indexProt <- 1:nchar(Holt_data[i,"sequence"])
+    indexDiso <- spotDisorderRegions[[i]]
     
-  # indexProt <- 1:nchar(df[i,sequence_col])
-  indexDiso <- spotDisorderRegions[[i]]
-  # indexOrd <- setdiff(indexProt,indexDiso)
-  indexPhospho <- as.numeric(HoltAllPsites$Cdk1Psites[[i]])
-  indexNonPhospho <- setdiff(as.numeric(HoltAllPsites$Psites[[i]]),as.numeric(HoltAllPsites$Cdk1Psites[[i]]))
-  
-    ndp <- length(which(indexPhospho %in% indexDiso))
-    nop <- length(which(!indexPhospho %in% indexDiso))
-    ndnp <- length(which(indexNonPhospho %in% indexDiso))
-    nonp<- length(which(!indexNonPhospho %in% indexDiso))
-    stratContingencyArray[1,1,i]<-ndp
-    stratContingencyArray[1,2,i]<-nop
-    stratContingencyArray[2,1,i]<-ndnp
-    stratContingencyArray[2,2,i]<-nonp
+ 
+    indexPsites <- as.numeric(HoltAllPsites$Psites[[i]])
+    print(indexPsites)
+    indexPsitesCdk1 <- as.numeric(HoltAllPsites$Cdk1Psites[[i]])
+    print(indexPsitesCdk1)
+    indexPsitesCdk1Cons <- as.numeric(HoltAllPsites$Cdk1PsitesCons[[i]])
+    print(indexPsitesCdk1Cons)
+    cDisoPsites <- length(which(indexPsites %in% indexDiso))/length(indexDiso)
+    #when no phsopho is detected we set a 0 value so the length of the index phsopho should be considering the values greater than 0
+    cTotalPsites <- length(which(indexPsites>0))/length(indexProt)
+    Psites[i] <- (cTotalPsites-cTotalPsites)/cTotalPsites
+    
+    cDisoPsitesCdk1 <- length(which(indexPsitesCdk1 %in% indexDiso))/length(indexDiso)
+    cTotalPsitesCdk1 <- length(which(indexPsitesCdk1>0))/length(indexProt)
+    PsitesCdk1[i] <- (cTotalPsitesCdk1-cTotalPsitesCdk1)/cTotalPsitesCdk1
+    
+    cDisoPsitesCdk1Cons <- length(which(indexPsitesCdk1Cons %in% indexDiso))/length(indexDiso)
+    cTotalPsitesCdk1Cons <- length(which(indexPsitesCdk1Cons>0))/length(indexProt)
+    PsitesCdk1Cons[i] <- (cTotalPsitesCdk1Cons-cTotalPsitesCdk1Cons)/cTotalPsitesCdk1Cons
     }
+
+# rbind(cbind(Psites,rep("Phosphosite",length(Psites))),cbind(PsitesCdk1,rep("Phosphosite CDK1",length(PsitesCdk1))),cbind(PsitesCdk1Cons,rep("Phosphosite CDK1 Consensus",length(PsitesCdk1Cons))))
+
+# stratContingencyArray <- array(dim = c(2,2,nrow(HoltAllPsites)))
+# for (i in 1:nrow(HoltAllPsites)) {
+#     
+#   # indexProt <- 1:nchar(df[i,sequence_col])
+#   indexDiso <- spotDisorderRegions[[i]]
+#   # indexOrd <- setdiff(indexProt,indexDiso)
+#   indexPhospho <- as.numeric(HoltAllPsites$Cdk1Psites[[i]])
+#   indexNonPhospho <- setdiff(as.numeric(HoltAllPsites$Psites[[i]]),as.numeric(HoltAllPsites$Cdk1Psites[[i]]))
+#   
+#     ndp <- length(which(indexPhospho %in% indexDiso))
+#     nop <- length(which(!indexPhospho %in% indexDiso))
+#     ndnp <- length(which(indexNonPhospho %in% indexDiso))
+#     nonp<- length(which(!indexNonPhospho %in% indexDiso))
+#     stratContingencyArray[1,1,i]<-ndp
+#     stratContingencyArray[1,2,i]<-nop
+#     stratContingencyArray[2,1,i]<-ndnp
+#     stratContingencyArray[2,2,i]<-nonp
+#     }
+
+

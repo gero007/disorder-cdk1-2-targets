@@ -155,16 +155,16 @@ minimalconsPlot <- ggplot(Ubersax_data) + geom_density(aes(x = (`[ST]-P`/length)
 ggarrange(fullconsPlot,minimalconsPlot,nrow = 1, ncol = 2,common.legend = TRUE,legend = "bottom", align = "hv")
 
 
-ubersax_full_NonCdk1_VAR <- var(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
-ubersax_full_Cdk1_VAR <- var(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"],na.rm = T)
-ubersax_full_Cdk1_SD <- sd(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"],na.rm = T)
-ubersax_full_NonCdk1_SD <- sd(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
-ubersax_full_test <- t.test(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"],Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"],var.equal=T)
+ubersax_full_NonCdk1_VAR <- var((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
+ubersax_full_Cdk1_VAR <- var((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
+ubersax_full_Cdk1_SD <- sd((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
+ubersax_full_NonCdk1_SD <- sd((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
+ubersax_full_test <- t.test((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,var.equal=T)
 
-ubersax_minimal_NonCdk1_VAR <- var(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
-ubersax_minimal_Cdk1_VAR <- var(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"],na.rm = T)
-ubersax_minimal_Cdk1_SD <- sd(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"],na.rm = T)
-ubersax_minimal_NonCdk1_SD <- sd(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
-ubersax_minimal_test <- t.test(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"],Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"],var.equal=T)
+ubersax_minimal_NonCdk1_VAR <- var((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
+ubersax_minimal_Cdk1_VAR <- var((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
+ubersax_minimal_Cdk1_SD <- sd((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
+ubersax_minimal_NonCdk1_SD <- sd((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
+ubersax_minimal_test <- t.test((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,var.equal=T)
 
 ```

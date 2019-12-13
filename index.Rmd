@@ -407,7 +407,7 @@ plot(euler(sets, shape = "ellipse"), quantities = TRUE)
 Nevertheless, inconsistencies in the measurements of the ratio of disordered amino acids between different methods do not indicate that the metric could not be used as an estimator of global disorder status in proteins. However, we should certainly  be cautious about comparing values originated from different sources. 
 If the percentage of disorder residues correlates well with one or more CDK phosphorylation target properties it could be informative regardless if the estimation is highly accurate.  
 
-```{r cpomposition ,echo=FALSE,message=FALSE,warning=FALSE,fig.height=10}
+```{r composition ,echo=FALSE,message=FALSE,warning=FALSE,fig.height=10}
 
 yeastSeq<-yeastDiso$sequence
 names(yeastSeq)<-yeastDiso$acc
