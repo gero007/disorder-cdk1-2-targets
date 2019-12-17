@@ -40,13 +40,13 @@ source("contingencyTablesAnalysis.R")
 
 # yeastDiso is a complex database from MobiDB Saccharomyces cerevisiae. 
 
-yeastDiso<-stream_in(con = file("~/disorder_UP000002311.mjson"),verbose = F)
+yeastDiso<-stream_in(con = file("disorder_UP000002311.mjson"),verbose = F)
 yeastDiso$mobidb_consensus <- yeastDiso$mobidb_consensus$disorder
 colnames(yeastDiso)[5] <- "disorder"
 
 
 # ___________ SPOT _____________
-spotDisorderList <- getSpotDisoMatrix("~/spot_run_yeast/")
+spotDisorderList <- getSpotDisoMatrix("spot_run_yeast/")
 
 
 yeastDiso$length <- nchar(yeastDiso$sequence)
@@ -64,7 +64,7 @@ yeastDiso$predSpotDisoPerc <- getSpotPredDiso(yeastDiso,output = "percentage","a
 
 
 # ___________Ubersax data_____________
-Ubersax_data <- read_delim("~/projects/cdk1_cyclinB1/phase_separation/disorder/CDK1targetSacCer.csv", 
+Ubersax_data <- read_delim("CDK1targetSacCer.csv", 
                           "\t", quote = "\\\"", escape_double = FALSE, 
                           col_types = cols(X1 = col_skip(), input = col_skip(), 
                           `yourlist:M201907046746803381A1F0E0DB47453E0216320D4B0BD1N` = col_skip()), 
@@ -98,11 +98,13 @@ Ubersax_data$targetStrict<-cut(Ubersax_data$`P-Score`,breaks = c(-Inf,3,Inf),lab
 
 
 # ___________Holt Data_____________
-uniprot_yeast <- read_delim("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/uniprot_yeast.tab",
+uniprot_yeast <- read_delim("uniprot_yeast.tab",
 "\t", escape_double = FALSE, trim_ws = TRUE)
-Holt_MS <- read_delim("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/Holt_CDK1targetSacCer.tsv",
+Holt_MS <- read_delim("Holt_CDK1targetSacCer.tsv",
 "\t", escape_double = FALSE, trim_ws = TRUE)
 
+#Remove phosphoTyrosines
+Holt_MS<-subset(Holt_MS,!substr(site,start = 1,stop = 1)=="Y")
 #Add Uniprot accesion. 58 entries lost (out of 9067) due to ID conversion
 Holt_MS <- Holt_MS[which(Holt_MS$ORF %in% uniprot_yeast$OLN),]
 
@@ -111,7 +113,7 @@ Holt_MS$Uniprot <- uniprot_yeast$`Swiss-Prot-AC`[base::match(Holt_MS$ORF,uniprot
 
 #Here I'll select all the phosphorylated S and T under the autors considerations.  
 
-Holt_MS_Cdk1_all_phosphosites <- Holt_MS %>% dplyr::filter(grepl("[st]",centered_15mer)) %>% dplyr::filter(`log2H/L_asynchronous`<(-1)|`log2H/L_nocodazole`<(-1)|`log2H/L_clb2`<(-1))
+Holt_MS_Cdk1_all_phosphosites <- Holt_MS %>% dplyr::filter(`log2H/L_asynchronous`<(-1)|`log2H/L_nocodazole`<(-1)|`log2H/L_clb2`<(-1))
 
 #select all CDK targets (genes with at least one phosphosite experimentallly detected)
 
@@ -144,12 +146,12 @@ Holt_data<-merge.data.frame(Holt_data,Holt_consensus,by = "Uniprot")
 
 Holt_data$target_consensus <- relevel(Holt_data$target_consensus,"Non Cdk1 target")
 
-# adding psites
-
-holt_phosphosites <-aggregate(substring(site,2,1000) ~ Uniprot, data = Holt_MS_Cdk1_all_phosphosites, paste, collapse=",")
-colnames(holt_phosphosites) <- c("Uniprot","sites")
-# Holt_MS_Cdk1_all_phosphosites has only the Psites with fold Chnge>2 but Holtdata has all the proteins
-Holt_data$phosphosites <- holt_phosphosites$sites[match(Holt_MS_Cdk1_all_phosphosites$Uniprot,holt_phosphosites$Uniprot)]
+# # adding psites
+# 
+# holt_phosphosites <-aggregate(substring(site,2,1000) ~ Uniprot, data = Holt_MS_Cdk1_all_phosphosites, paste, collapse=",")
+# colnames(holt_phosphosites) <- c("Uniprot","sites")
+# # Holt_MS_Cdk1_all_phosphosites has only the Psites with fold Chnge>2 but Holtdata has all the proteins
+# Holt_data$phosphosites <- holt_phosphosites$sites[match(Holt_MS_Cdk1_all_phosphosites$Uniprot,holt_phosphosites$Uniprot)]
 ```
 
 

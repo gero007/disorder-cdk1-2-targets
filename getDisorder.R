@@ -235,6 +235,7 @@ getSpotPredDiso <- function(df,output,accession_col){
   disoSeqList <- list()
   for (i in 1:nrow(df)) {
     mat<-spotDisorderList[[df[i,accession_col]]]
+    # print(mat)
     #select only disordered regions
     mat <- matrix(mat[mat[,3]=="D",],ncol=4)
     # print(df$acc[[i]])
