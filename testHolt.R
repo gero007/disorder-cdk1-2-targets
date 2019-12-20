@@ -73,6 +73,7 @@
 
 STPsitesCT<-array(rep(0,4),dim = c(2,2))
 PsitesCdk1CT<-array(rep(0,4),dim = c(2,2))
+PsitesCdk1VSstCT<-array(rep(0,4),dim = c(2,2))
 PsitesCdk1ConsCT<-array(rep(0,4),dim = c(2,2))
 
 for (i in 1:nrow(HoltAllPsites)) {
@@ -80,7 +81,7 @@ for (i in 1:nrow(HoltAllPsites)) {
     indexDiso <- spotDisorderRegions[[i]]
     indexPsites <- as.numeric(strsplit(HoltAllPsites$Psites[[i]],",")[[1]])
     
-    
+    indexST <- gregexpr("[ST]",Holt_data[,"sequence"])
 
     
     indexSTP <-gregexpr("[ST]P",Holt_data[,"sequence"])
@@ -123,7 +124,31 @@ for (i in 1:nrow(HoltAllPsites)) {
       PsitesCdk1CT[2,1]<-PsitesCdk1CT[2,1]+nNonPsitesCdk1Diso
       PsitesCdk1CT[2,2]<-PsitesCdk1CT[2,2]+nNonPsitesCdk1Ord
     } 
-
+    
+    # Compare psites vs all S and T in the protein
+    # -----------------------------------------------------
+    if (!is.na(HoltAllPsites$Cdk1Psites[[i]][1])) {
+      indexPsitesCdk1 <- as.numeric(strsplit(HoltAllPsites$Cdk1Psites[[i]],",")[[1]])
+      nPsitesCdk1Diso <- length(which(indexPsitesCdk1 %in% indexDiso))
+      nPsitesCdk1Ord <- length(which(!(indexPsitesCdk1 %in% indexDiso)))
+      nNonPsitesCdk1Diso <- length(which(setdiff(as.numeric(indexSTP[[i]]),indexPsitesCdk1) %in% indexDiso))#recalculate
+      nNonPsitesCdk1Ord<- length(which(!(setdiff(as.numeric(indexSTP[[i]]),indexPsitesCdk1) %in% indexDiso)))#recalculate
+      # print(nPsitesCdk1Diso+nPsitesCdk1Ord==length(indexPsitesCdk1))
+      # print(nPsitesCdk1Diso+nPsitesCdk1Ord+nNonPsitesCdk1Diso+nNonPsitesCdk1Ord==length(indexPsites))
+      # print("____")
+      # print(indexPsites)
+      # print(indexPsitesCdk1)
+      # print(indexPsitesCdk1Cons)
+      # print(nPsitesCdk1Diso)
+      # print(nPsitesCdk1Ord)
+      # print(nNonPsitesCdk1Diso)
+      # print(nNonPsitesCdk1Ord)
+      PsitesCdk1VSstCT[1,1]<-PsitesCdk1VSstCT[1,1]+nPsitesCdk1Diso
+      PsitesCdk1VSstCT[1,2]<-PsitesCdk1VSstCT[1,2]+nPsitesCdk1Ord
+      PsitesCdk1VSstCT[2,1]<-PsitesCdk1VSstCT[2,1]+nNonPsitesCdk1Diso
+      PsitesCdk1VSstCT[2,2]<-PsitesCdk1VSstCT[2,2]+nNonPsitesCdk1Ord
+    }       
+    # ---------------------------------------------------------
     
     if (!is.na(HoltAllPsites$Cdk1PsitesCons[[i]][1])) {
       indexPsitesCdk1Cons <- as.numeric(strsplit(HoltAllPsites$Cdk1PsitesCons[[i]],",")[[1]])
