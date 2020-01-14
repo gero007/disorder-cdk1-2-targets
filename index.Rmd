@@ -20,6 +20,7 @@ library(vcd)
 library(kableExtra)
 library(ggpubr)
 library(Rcpi)
+#if fails => sudo R CMD javareconf
 library(Biostrings)
 library(eulerr)
 library(flextable)
@@ -328,7 +329,7 @@ compDataSet$percPhosphoRes <- (compDataSet$nPhosphoRes/compDataSet$proteinLength
 compDataSet$levelPhosphoRes<-cut(compDataSet$percPhosphoRes,breaks = c(0,0.45,1,10),labels = c("Low","Mid","High"))
 
 # print(summary(compDataSet$percPhosphoRes))
-GGally::ggpairs(data = compDataSet,columns = c(2:6), ggplot2::aes(colour=levelPhosphoRes,alpha=0.5),xlab="% of disorder residues", ylab="% of disorder residues",columnLabels=c("Simple predictor","MobiDB-Lite predictor","SPOT","Derived","DB")) +
+GGally::ggpairs(data = compDataSet,columns = c(2:6), ggplot2::aes(colour=levelPhosphoRes,alpha=0.5),xlab="% of disorder residues", ylab="% of disorder residues",columnLabels=c("Simple","Lite","SPOT","Derived","DB")) +
      theme(panel.grid.minor = element_blank(),panel.grid.major = element_blank()) + theme_classic()
 
 ```

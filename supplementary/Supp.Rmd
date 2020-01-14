@@ -148,11 +148,13 @@ holt_all_spot_NonCdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_all==
 holt_all_spot_test <- t.test(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Cdk1 target"],Holt_data$predSpotDisoPerc[Holt_data$target_all=="Non Cdk1 target"],var.equal=T)
 ```
 
-```{r test,echo=FALSE,message=FALSE,warning=FALSE,fig.cap=""}
-fullconsPlot <- ggplot(Ubersax_data) + geom_density(aes(x = (`[ST]-P-X-[KR]`/length)*100,fill = target),alpha=.5,bw=0.2)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,1.5)) + scale_x_continuous(name="Number of phosphosites per 100 residues",limits = c(0,3))+ggtitle("[ST]-P-X-[KR]")
-minimalconsPlot <- ggplot(Ubersax_data) + geom_density(aes(x = (`[ST]-P`/length)*100,fill = target),alpha=.5,bw=0.2)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,1.5)) + scale_x_continuous(name="Number of phosphosites per 100 residues",limits = c(0,3))+ggtitle("[ST]-P")
+```{r consensus phosphosites in disorder,echo=FALSE,message=FALSE,warning=FALSE,fig.cap=""}
+#Ubersax
 
-ggarrange(fullconsPlot,minimalconsPlot,nrow = 1, ncol = 2,common.legend = TRUE,legend = "bottom", align = "hv")
+UbersaxFullconsPlot <- ggplot(Ubersax_data) + geom_density(aes(x = (`[ST]-P-X-[KR]`/length)*100,fill = target),alpha=.5,bw=0.2)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,2)) + scale_x_continuous(name="Number of phosphosites per 100 residues",limits = c(0,3))+ggtitle("[ST]-P-X-[KR]")
+UbersaxMinimalconsPlot <- ggplot(Ubersax_data) + geom_density(aes(x = (`[ST]-P`/length)*100,fill = target),alpha=.5,bw=0.2)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,2)) + scale_x_continuous(name="Number of phosphosites per 100 residues",limits = c(0,3))+ggtitle("[ST]-P")
+
+ggarrange(UbersaxFullconsPlot,UbersaxMinimalconsPlot,nrow = 1, ncol = 2,common.legend = TRUE,legend = "bottom", align = "hv")
 
 
 ubersax_full_NonCdk1_VAR <- var((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
@@ -166,5 +168,39 @@ ubersax_minimal_Cdk1_VAR <- var((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk
 ubersax_minimal_Cdk1_SD <- sd((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
 ubersax_minimal_NonCdk1_SD <- sd((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
 ubersax_minimal_test <- t.test((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,var.equal=T)
+
+#Holt
+
+HoltMinCons <- sapply(Holt_data$sequence,function(x){index<-unlist(gregexpr("[ST]P",x),use.names = F)
+                                                      if (index[1]==-1) {return(0)
+                                                      } else {return(length(index))}})
+names(HoltMinCons) <- NULL 
+HoltFullCons <- sapply(Holt_data$sequence,function(x){index<-unlist(gregexpr("[ST]P.[KR]",x),use.names = F)
+                                                      if (index[1]==-1) {return(0)
+                                                      } else {return(length(index))}})
+names(HoltFullCons) <- NULL 
+
+Holt_data$`[ST]-P-X-[KR]`<-HoltFullCons
+Holt_data$`[ST]-P`<-HoltMinCons
+
+
+HoltFullconsPlot <- ggplot(Holt_data) + geom_density(aes(x = (`[ST]-P-X-[KR]`/length)*100,fill = target_all),alpha=.5,bw=0.2)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,2)) + scale_x_continuous(name="Number of phosphosites per 100 residues",limits = c(0,3))+ggtitle("[ST]-P-X-[KR]")
+HoltMinimalconsPlot <- ggplot(Holt_data) + geom_density(aes(x = (`[ST]-P`/length)*100,fill = target_all),alpha=.5,bw=0.2)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,2)) + scale_x_continuous(name="Number of phosphosites per 100 residues",limits = c(0,3))+ggtitle("[ST]-P")
+
+ggarrange(HoltFullconsPlot,HoltMinimalconsPlot,nrow = 1, ncol = 2,common.legend = TRUE,legend = "bottom", align = "hv")
+
+
+ubersax_full_NonCdk1_VAR <- var((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
+ubersax_full_Cdk1_VAR <- var((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
+ubersax_full_Cdk1_SD <- sd((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
+ubersax_full_NonCdk1_SD <- sd((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
+ubersax_full_test <- t.test((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,var.equal=T)
+
+ubersax_minimal_NonCdk1_VAR <- var((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
+ubersax_minimal_Cdk1_VAR <- var((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
+ubersax_minimal_Cdk1_SD <- sd((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
+ubersax_minimal_NonCdk1_SD <- sd((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
+ubersax_minimal_test <- t.test((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,var.equal=T)
+
 
 ```
