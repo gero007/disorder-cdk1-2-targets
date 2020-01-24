@@ -190,17 +190,17 @@ HoltMinimalconsPlot <- ggplot(Holt_data) + geom_density(aes(x = (`[ST]-P`/length
 ggarrange(HoltFullconsPlot,HoltMinimalconsPlot,nrow = 1, ncol = 2,common.legend = TRUE,legend = "bottom", align = "hv")
 
 
-ubersax_full_NonCdk1_VAR <- var((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
-ubersax_full_Cdk1_VAR <- var((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
-ubersax_full_Cdk1_SD <- sd((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
-ubersax_full_NonCdk1_SD <- sd((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
-ubersax_full_test <- t.test((Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,(Ubersax_data$`[ST]-P-X-[KR]`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,var.equal=T)
+Holt_full_NonCdk1_VAR <- var((Holt_data$`[ST]-P-X-[KR]`[Holt_data$target_all=="Non Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Non Cdk1 target"])*100,na.rm = T)
+Holt_full_Cdk1_VAR <- var((Holt_data$`[ST]-P-X-[KR]`[Holt_data$target_all=="Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Cdk1 target"])*100,na.rm = T)
+Holt_full_Cdk1_SD <- sd((Holt_data$`[ST]-P-X-[KR]`[Holt_data$target_all=="Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Cdk1 target"])*100,na.rm = T)
+Holt_full_NonCdk1_SD <- sd((Holt_data$`[ST]-P-X-[KR]`[Holt_data$target_all=="Non Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Non Cdk1 target"])*100,na.rm = T)
+Holt_full_test <- t.test((Holt_data$`[ST]-P-X-[KR]`[Holt_data$target_all=="Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Cdk1 target"])*100,(Holt_data$`[ST]-P-X-[KR]`[Holt_data$target_all=="Non Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Non Cdk1 target"])*100,var.equal=T)
 
-ubersax_minimal_NonCdk1_VAR <- var((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
-ubersax_minimal_Cdk1_VAR <- var((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
-ubersax_minimal_Cdk1_SD <- sd((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,na.rm = T)
-ubersax_minimal_NonCdk1_SD <- sd((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,na.rm = T)
-ubersax_minimal_test <- t.test((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Cdk1 target"])*100,(Ubersax_data$`[ST]-P`[Ubersax_data$target=="Non Cdk1 target"]/Ubersax_data$length[Ubersax_data$target=="Non Cdk1 target"])*100,var.equal=T)
+Holt_minimal_NonCdk1_VAR <- var((Holt_data$`[ST]-P`[Holt_data$target_all=="Non Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Non Cdk1 target"])*100,na.rm = T)
+Holt_minimal_Cdk1_VAR <- var((Holt_data$`[ST]-P`[Holt_data$target_all=="Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Cdk1 target"])*100,na.rm = T)
+Holt_minimal_Cdk1_SD <- sd((Holt_data$`[ST]-P`[Holt_data$target_all=="Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Cdk1 target"])*100,na.rm = T)
+Holt_minimal_NonCdk1_SD <- sd((Holt_data$`[ST]-P`[Holt_data$target_all=="Non Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Non Cdk1 target"])*100,na.rm = T)
+Holt_minimal_test <- t.test((Holt_data$`[ST]-P`[Holt_data$target_all=="Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Cdk1 target"])*100,(Holt_data$`[ST]-P`[Holt_data$target_all=="Non Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Non Cdk1 target"])*100,var.equal=T)
 
 
 ```
