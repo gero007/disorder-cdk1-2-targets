@@ -41,9 +41,13 @@ source("contingencyTablesAnalysis.R")
 
 # yeastDiso is a complex database from MobiDB Saccharomyces cerevisiae. 
 
-yeastDiso<-stream_in(con = file("disorder_UP000002311.mjson"),verbose = F)
+yeastDiso <- stream_in(con = file("disorder_UP000002311.mjson"),verbose = F)
 yeastDiso$mobidb_consensus <- yeastDiso$mobidb_consensus$disorder
 colnames(yeastDiso)[5] <- "disorder"
+
+hsDiso <- stream_in(con = file("disorder_MobiDB_HS.mjson"),verbose = F)
+hsDiso$mobidb_consensus <- hsDiso$mobidb_consensus$disorder
+colnames(hsDiso)[5] <- "disorder"
 
 
 # ___________ SPOT _____________
@@ -176,6 +180,180 @@ Holt_data$target_consensus <- relevel(Holt_data$target_consensus,"Non Cdk1 targe
 
 phosphosite_CDK1famTarget_HS <- read_delim("phosphosite_CDK1famTarget_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
 
+# rows (11,12,13,14,15,16,49,79,80,151,167,168,170,190,206,211,320,321,322,323,324,327,358,412,439,440,443,444,445,446,447,448,449,507,508,509,510,531,532,533,534,596,633,762,834,849,850,851,882)
+# having isoforms of the proteins. Convert them to the canonical form
+
+# AML1 iso8 = Q01196-8  rows(11,12,13,14,15,16)
+#  change 1-5: MRIPV → MASDSIFESFPSYPQCFMRECILGMNPSRDVH, the difference is -27
+# phosphosites "S48"   "S276"   "S293"   "T300"   "S303"   "S424"
+
+phosphosite_CDK1famTarget_HS$`ACC#`[11:16]<- "Q01196"
+phosphosite_CDK1famTarget_HS$MOD_RSD[11]<-"S21"
+phosphosite_CDK1famTarget_HS$MOD_RSD[12]<-"S249"
+phosphosite_CDK1famTarget_HS$MOD_RSD[13]<-"S266"
+phosphosite_CDK1famTarget_HS$MOD_RSD[14]<-"S273"
+phosphosite_CDK1famTarget_HS$MOD_RSD[15]<-"S276"
+phosphosite_CDK1famTarget_HS$MOD_RSD[16]<-"S397"
+
+#------------------
+
+# BIM iso2 = O43521-2 rows(49)
+# change  42-101: Missing.
+# phosphosite S44
+phosphosite_CDK1famTarget_HS$`ACC#`[49]<- "O43521"
+phosphosite_CDK1famTarget_HS$MOD_RSD[49]<-"S104"
+
+#------------------
+
+# CDC25B iso2 = P30305-2 rows(79,80)
+# change  68-81: Missing.
+# phosphosite S146, S307
+
+phosphosite_CDK1famTarget_HS$`ACC#`[79:80]<- "P30305"
+phosphosite_CDK1famTarget_HS$MOD_RSD[79]<-"S160"
+phosphosite_CDK1famTarget_HS$MOD_RSD[80]<-"S321"
+
+#------------------
+
+# dUTPase iso2 = P33316-2 rows(151)
+# change   1-93: MTPLCPRPAL...KAGGSPAPGP → MPCSE
+# phosphosite S11
+
+phosphosite_CDK1famTarget_HS$`ACC#`[151]<- "P33316"
+phosphosite_CDK1famTarget_HS$MOD_RSD[151]<-"S99"
+
+#------------------
+
+# EPB41 iso2 = P11171-2 rows(167,168)
+# change   616-648: Missing.
+# phosphosite T60, S679
+
+phosphosite_CDK1famTarget_HS$`ACC#`[167:168]<- "P11171"
+# T60 doesn't change
+phosphosite_CDK1famTarget_HS$MOD_RSD[168]<-"S712"
+
+#------------------
+
+# ERK1 iso3 = P27361-3 rows(170)
+# change  340-379: PVAEEPFTFAMELDDLPKERLKELIFQETARFQPGVLEAP → VGQSPAAVGLGAGEQGGT
+# phosphosite S343
+# The paper states that phosphorylation only happens in the isoform 3, even if they have evidence of phosphorylation in other sites. They don't investigate other posibles phosphosites
+# I'll remove this row
+phosphosite_CDK1famTarget_HS<- phosphosite_CDK1famTarget_HS[-170,]
+
+#------------------
+
+# FOXM1 iso2 = Q08050-2 rows(189)
+# change    326-340: Missing.
+# phosphosite T596
+
+phosphosite_CDK1famTarget_HS$`ACC#`[189]<- "Q08050"
+phosphosite_CDK1famTarget_HS$MOD_RSD[189]<-"T611"
+
+#------------------
+
+# HMGA1 iso2 = P17096-2 rows(189)
+# change    35-45: Missing.
+# phosphosite T42
+
+phosphosite_CDK1famTarget_HS$`ACC#`[189]<- "Q08050"
+phosphosite_CDK1famTarget_HS$MOD_RSD[189]<-"T53"
+
+#------------------
+
+# ING1 iso2 = Q9UK53-2 rows(210)
+# change    35-45: Missing.
+# phosphosite S126
+
+phosphosite_CDK1famTarget_HS$`ACC#`[189]<- "Q9UK53"
+phosphosite_CDK1famTarget_HS$MOD_RSD[189]<-"S269"
+
+#------------------
+
+# NUP98 iso2 = P52948-2 rows(319,320,321,322,323)
+# change     393-409: Missing.     1502-1576: RHYDLNQLLE...FVLLHIDNSG → S
+# phosphosite T529 T536 S595 S606 T653
+
+phosphosite_CDK1famTarget_HS$`ACC#`[319:323]<- "P52948"
+phosphosite_CDK1famTarget_HS$MOD_RSD[319]<-"T546"
+phosphosite_CDK1famTarget_HS$MOD_RSD[320]<-"T553"
+phosphosite_CDK1famTarget_HS$MOD_RSD[321]<-"S612"
+phosphosite_CDK1famTarget_HS$MOD_RSD[322]<-"S623"
+phosphosite_CDK1famTarget_HS$MOD_RSD[323]<-"T670"
+
+#------------------
+
+# ODF2 iso3 = Q5BJF6-3 rows(326)
+# change     1-41: MSASSSGGSP...PCGAPSVTVT → MKDRSSTPPL...LPKPSATSSQ.   65-83: Missing
+# phosphosite S796
+
+phosphosite_CDK1famTarget_HS$`ACC#`[326]<- "Q5BJF6"
+phosphosite_CDK1famTarget_HS$MOD_RSD[326]<-"S820"
+
+#------------------
+
+# PTPN2 iso2 = P17706-2 rows(357)
+# change      382-415: WLYWQPILTKMGFMSVILVGAFVGWTLFFQQNAL → PRLTDT
+# phosphosite S304
+
+phosphosite_CDK1famTarget_HS$`ACC#`[357]<- "P17706"
+
+#------------------
+
+# SEPT9 iso2 = Q9UHD8-2 rows(411)
+# change     1-25: MKKSYSGGTRTSSGRLRRLGDSSGP → MERDRIS
+# phosphosite T24
+
+phosphosite_CDK1famTarget_HS$`ACC#`[411]<- "Q9UHD8"
+phosphosite_CDK1famTarget_HS$MOD_RSD[411]<-"T38"
+
+#------------------
+
+# Tau iso8 = P10636-8 rows(441:447)
+# change     125-375: Missing.     395-460: Missing.
+# phosphosite  T153 S202 T205 T212 T231 S235 S404
+
+phosphosite_CDK1famTarget_HS$`ACC#`[438:439]<- "P10636"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-441,] <- "T470"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-442,] <- "S519"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-443,] <- "T522"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-444,] <- "T529"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-445,] <- "T548"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-446,] <- "552"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-447,] <- "721"
+
+#------------------
+
+# VGLL4 iso4 = Q14135-4 rows(505:508)
+# change     125-375: Missing.     395-460: Missing.
+# phosphosite  S58 S155 T159 S280
+
+phosphosite_CDK1famTarget_HS$`ACC#`[505:508]<- "Q14135"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-441,] <- "S52"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-442,] <- "S149"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-443,] <- "T153"
+phosphosite_CDK1famTarget_HS$MOD_RSD[-444,] <- "274"
+
+#------------------
+
+# AML1 iso8 = Q01196-8  rows(529:532)
+#  change 1-5: MRIPV → MASDSIFESFPSYPQCFMRECILGMNPSRDVH, the difference is -27
+# phosphosites    "S276"   "S293"   "T300"   "S303"
+
+phosphosite_CDK1famTarget_HS$`ACC#`[529:532]<- "Q01196"
+phosphosite_CDK1famTarget_HS$MOD_RSD[529]<-"S249"
+phosphosite_CDK1famTarget_HS$MOD_RSD[530]<-"S266"
+phosphosite_CDK1famTarget_HS$MOD_RSD[531]<-"S273"
+phosphosite_CDK1famTarget_HS$MOD_RSD[532]<-"S276"
+
+#------------------
+
+# CROCC iso2 = Q5TZA2-2 rows(594)
+# change         1-697: Missing.     1984-1990: Missing.
+# phosphosite S763
+
+phosphosite_CDK1famTarget_HS$`ACC#`[594]<- "Q5TZA2"
+phosphosite_CDK1famTarget_HS$MOD_RSD[594]<-"S1460"
 
 ```
 
@@ -726,6 +904,39 @@ holt_spot_Cdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_consensus=="
 holt_spot_NonCdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_consensus=="Non Cdk1 target"],na.rm = T)
 holt_spot_test <- t.test(Holt_data$predSpotDisoPerc[Holt_data$target_consensus=="Cdk1 target"],Holt_data$predSpotDisoPerc[Holt_data$target_consensus=="Non Cdk1 target"],var.equal=T)
 ```
+
+```{r violin plots ,echo=FALSE,message=FALSE,warning=FALSE}
+
+simpleUbersaxViolin <- cbind(Ubersax_data[,c("predDisoPerc","target")],rep("Ubersax dataset"))
+colnames(simpleUbersaxViolin)[2:3]<-c("Target","Dataset") 
+simpleHoltConsensusViolin <- cbind(Holt_data[,c("predDisoPerc","target_consensus")],rep("Holt dataset consensus"))
+colnames(simpleHoltConsensusViolin)[2:3]<-c("Target","Dataset")
+simpleHoltAllViolin <- cbind(Holt_data[,c("predDisoPerc","target_all")],rep("Holt dataset all"))
+colnames(simpleHoltAllViolin)[2:3]<-c("Target","Dataset")
+
+simpleViolinData <-rbind(simpleUbersaxViolin,simpleHoltConsensusViolin,simpleHoltAllViolin)
+simpleViolinData$Dataset <- as.factor(liteViolinData$Dataset)
+
+simpleViolin <- ggplot(simpleViolinData, aes(x=Target, y=predDisoPerc, fill=Target)) + geom_violin(aes(color=Target),bw=2) + geom_boxplot(width=0.1, aes(fill=Target),color="darkslategrey",outlier.alpha = 0.5,notch = T,outlier.shape = NA)  + stat_compare_means(method = "t.test",label.x = 1.2, label.y = 105,bracket.size = 2)+ theme_linedraw(base_size = 15)+ theme(legend.position = "none") + stat_summary(fun.y=mean, colour="cornsilk1", geom="point",shape=19, size=2)
+
+
+simpleViolin + facet_grid(.~Dataset)
+ 
+liteUbersaxViolin <- cbind(Ubersax_data[,c("predLiteDisoPerc","target")],rep("Ubersax dataset"))
+colnames(liteUbersaxViolin)[2:3]<-c("Target","Dataset") 
+liteHoltConsensusViolin <- cbind(Holt_data[,c("predLiteDisoPerc","target_consensus")],rep("Holt dataset consensus"))
+colnames(liteHoltConsensusViolin)[2:3]<-c("Target","Dataset")
+liteHoltAllViolin <- cbind(Holt_data[,c("predLiteDisoPerc","target_all")],rep("Holt dataset all"))
+colnames(liteHoltAllViolin)[2:3]<-c("Target","Dataset")
+
+liteViolinData <-rbind(liteUbersaxViolin,liteHoltConsensusViolin,liteHoltAllViolin)
+liteViolinData$Dataset <- as.factor(liteViolinData$Dataset)
+
+liteViolin <- ggplot(liteViolinData, aes(x=Target, y=predLiteDisoPerc, fill=Target)) + geom_violin(aes(color=Target),bw=2) + geom_boxplot(width=0.1, aes(fill=Target),color="darkslategrey",outlier.alpha = 0.5,notch = T,outlier.shape = NA)  + stat_compare_means(method = "t.test",label.x = 1.2, label.y = 105,bracket.size = 2)+ theme_linedraw(base_size = 15)+ theme(legend.position = "none") + stat_summary(fun.y=mean, colour="cornsilk1", geom="point",shape=19, size=2)
+
+
+liteViolin + facet_grid(.~Dataset)
+```
   
 For boths datasets there is a statistical significative increase in the percentage of predicted disorder aminoacids in yeast proteins for those proteins characterized as CDK1 targets. Moreover, for the Holt dataset a similar result is obtained if we skipped the CDK1 phosporylation site filter. That is, CDK1 targets defined as all the proteins with Serines and Threonines residues presenting a decrease on the phosphorylation upon CDK1 inhibition,regardles if they respect the minimal CDK1 phosphosite consensus motif, show an increase in the percentage of predicted disorder amino acids (<a href="supplementary/Supp.html">Supplementary</a> Fig X).
 
@@ -1137,14 +1348,17 @@ Holt paper
 - The peaks were selected with the consideration of A-score > 13. They don't mention to be acounting for neutral loss
 
 ```{r Compare papers,echo=FALSE,message=FALSE,warning=FALSE}
-
-
-# sets <- list(Ubersax_cdkTargets=CDK1targetSacCer$Entry[CDK1targetSacCer$`P-Score`>=2],
-#              Ubersax_nonCdkTargets=CDK1targetSacCer$Entry[CDK1targetSacCer$`P-Score`<2],
-#              Holt_cdkTargets=cdkTargetList,
-#              Holt_nonCdkTargets=nonCdkTargetList)
 # 
-# eulerr_options(fills=list(fill=c("darkolivegreen1","deeppink3","darkcyan","darkorange1"),alpha=0.4))
+# 
+# swaffer = c("SPAC11G7.01","SPAC16C9.05","SPAC1B1.04c","SPAC1B2.03c","SPAC22E12.19","SPAC22F8.05","SPAC22H10.11c","SPAC23A1.17","SPAC24B11.07c","SPAC24H6.08","SPAC26H5.02c","SPAC31A2.12","SPAC644.16","SPAC7D4.14c","SPAC821.03c","SPAC8C9.04","SPAC9.11","SPAC9G1.07","SPAC9G1.10c","SPBC13E7.03c","SPBC13E7.07","SPBC1711.05","SPBC17D1.05","SPBC216.01c","SPBC28F2.11","SPBC2D10.04","SPBC2F12.03c","SPBC2G2.14","SPBC428.10","SPBC4F6.12","SPBC609.01","SPBC651.12c","SPBC9B6.03","SPBC9B6.11c","SPBP8B7.26","SPBPB7E8.02","SPCC1450.03","SPCC1739.01","SPCC23B6.04c","adn2","alp14","app1","ase1","ask1","atf1","bdp1","bir1","bit61","bpb1","bqt4","brf1","bun107","byr4","ccq1","cdc10","cdc12","cdc15","cdc25","cip2","clp1","cmk2","cnt6","csx2","cut3","cyk3","dbp10","dis1","dnt1","drc1","eaf7","far11","fat1","fkbp39","fkh2","gef1","hal4","him1","hip1","hsr1","ies2","ies4","jhd1","kin1","klp9","kms2","lem2","lnp1","mac1","mad3","mbo1","mcm10","mcm4","mdb1","mde4","mis4","mkh1","mmi1","mod5","mot1","mpd2","msh6","mug154","mug164","mug176","mvp1","nrf1","nrm1","nsk1","nup124","nup146","nup40","nup60","orc1","orc2","pal1","pch1","pi041","pic1","plo1","pob1","pof1","pol5","pom1","ppc89","ppk29","ppk30","ppk5","pre6","prp3","pst1","puf6","pxa1","pyp1","rad2","rad22","rad4","rga2","rga3","rga4","rga7","rga9","rgf3","rif1","rsd1","rst2","sad1","sap1","sce3","scr1","scw1","sec16","sep1","set3","sfr1","sgm1","sgo2","shf1","sid2","sla1","sld3","snf22","sog2","spo12","spo15","spt2","srk1","sts5","sup35","swi10","taf12","tam10","tea2","tea4","tfg1","thi2","tif32","top2","ulp2","vps5","wis1","wis4","wpl1")
+# 
+# sets <- list(Ubersax_cdkTargets=Ubersax_data$Entry[Ubersax_data$`P-Score`>=2],
+#              Holt_cdkTargets=Holt_data$Uniprot[Holt_data$target_all=="Cdk1 target"],
+#              Swaffer_cdkTargets=swaffer)
+# 
+# 
+# 
+# eulerr_options(fills=list(fill=c("darkolivegreen1","deeppink3","darkcyan"),alpha=0.4))
 # plot(euler(sets, shape = "ellipse"), quantities = TRUE)
 
 
