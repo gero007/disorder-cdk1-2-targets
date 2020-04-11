@@ -1,0 +1,1 @@
+The CIF files contains the sequence but not the position of all the atoms described in the PDB
