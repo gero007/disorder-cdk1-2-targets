@@ -1,5 +1,6 @@
 library(dplyr)
 
+# THis fuction sholud be added to getDisorder.R . Maybe into a general function on SPOT disorder predictor
 getSpotPredDiso <- function(df,output,accession_col){
   predDisoPercAll <- c()
   predStretchDist <- c()
@@ -55,7 +56,7 @@ getSpotPredDiso <- function(df,output,accession_col){
 }
 
 
-
+# ----------------------------------------Data Prep-------------------------------------------------------------
 holtPsitesTable <- Holt_MS %>% group_by(Uniprot) %>% summarise(sites=paste(substring(site,2,1000), collapse=","))
 holtCDK1PsitesTable <- Holt_MS_Cdk1_all_phosphosites %>% group_by(Uniprot) %>% summarise(sites=paste(substring(site,2,1000), collapse=","))
 holtCDK1PsitesConsTable <- Holt_MS_Cdk1_consensus_phosphosites %>% group_by(Uniprot) %>% summarise(sites=paste(substring(site,2,1000), collapse=","))
@@ -72,42 +73,78 @@ HoltAllPsites$Cdk1Psites<-strsplit(HoltAllPsites$Cdk1Psites,",")
 
 HoltAllPsites$Cdk1PsitesCons<-strsplit(HoltAllPsites$Cdk1PsitesCons,",")
 # HoltAllPsites$Cdk1PsitesCons[is.na(HoltAllPsites$Cdk1PsitesCons)]<-0
+# ----------------------------------------------------------------------------------------------------------------
+# Data prep could be added to the first section of the Index.Rmd
 
-spotDisorderRegions <- getSpotPredDiso(Holt_data,accession_col = "Uniprot",output = "percentage")
 
 
-Psites<-numeric()
-PsitesCdk1<-numeric()
-PsitesCdk1Cons<-numeric()
+Holt_indexes_data <- Holt_data[,c(1,3,2,13)]
+Holt_indexes_data$SPOT<- getSpotPredDiso(Holt_data,accession_col = "Uniprot",output = "indices")
+Holt_indexes_data <- merge.data.frame(Holt_indexes_data,HoltAllPsites,by="Uniprot",all.x = T)
+Holt_indexes_data$Psites<-lapply(Holt_indexes_data$Psites,as.numeric)
+Holt_indexes_data$Cdk1Psites<-lapply(Holt_indexes_data$Cdk1Psites,as.numeric)
+Holt_indexes_data$Cdk1PsitesCons<-lapply(Holt_indexes_data$Cdk1PsitesCons,as.numeric)
+Holt_indexes_data$`[S|T]`<-lapply(gregexpr("S|T",Holt_indexes_data$sequence),as.numeric)
+Holt_indexes_data$`[S|T]P`<-lapply(gregexpr("[ST]P",Holt_indexes_data$sequence),as.numeric)
 
-for (i in 1:nrow(HoltAllPsites)) {
-    indexProt <- 1:nchar(Holt_data[i,"sequence"])
-    indexDiso <- spotDisorderRegions[[i]]
-    
- 
-    indexPsites <- as.numeric(HoltAllPsites$Psites[[i]])
-    print(indexPsites)
-    if (!is.na(HoltAllPsites$Cdk1Psites[[i]])) {
-      indexPsitesCdk1 <- as.numeric(HoltAllPsites$Cdk1Psites[[i]])
-    } else {indexPsitesCdk1 <- as.numeric()}
-    if (!is.na(HoltAllPsites$Cdk1PsitesCons[[i]])) {
-      indexPsitesCdk1Cons <- as.numeric(HoltAllPsites$Cdk1PsitesCons[[i]])
-    } else {indexPsitesCdk1Cons <- as.numeric()}
-    print(indexPsitesCdk1)
-    print(indexPsitesCdk1Cons)
-    cDisoPsites <- length(which(indexPsites %in% indexDiso))/length(indexDiso)
-    #when no phsopho is detected we set a 0 value so the length of the index phsopho should be considering the values greater than 0
-    cTotalPsites <- length(which(indexPsites>0))/length(indexProt)
-    Psites[i] <- (cTotalPsites-cTotalPsites)/cTotalPsites
-    
-    cDisoPsitesCdk1 <- length(which(indexPsitesCdk1 %in% indexDiso))/length(indexDiso)
-    cTotalPsitesCdk1 <- length(which(indexPsitesCdk1>0))/length(indexProt)
-    PsitesCdk1[i] <- (cTotalPsitesCdk1-cTotalPsitesCdk1)/cTotalPsitesCdk1
-    
-    cDisoPsitesCdk1Cons <- length(which(indexPsitesCdk1Cons %in% indexDiso))/length(indexDiso)
-    cTotalPsitesCdk1Cons <- length(which(indexPsitesCdk1Cons>0))/length(indexProt)
-    PsitesCdk1Cons[i] <- (cTotalPsitesCdk1Cons-cTotalPsitesCdk1Cons)/cTotalPsitesCdk1Cons
-    }
+Holt_indexes_data_CDK1 <- subset(Holt_indexes_data,target_all=="Cdk1 target")
+
+stratContingencyArray <- array(dim = c(2,2,nrow(Holt_indexes_data_CDK1)))
+for (i in 1:nrow(Holt_indexes_data_CDK1)) {
+
+  indexProt <- 1:nchar(Holt_indexes_data_CDK1$sequence[[i]])
+  indexDiso <- Holt_indexes_data_CDK1$SPOT[[i]]
+  # indexOrd <- setdiff(indexProt,indexDiso)
+  indexST_Phospho <- Holt_indexes_data_CDK1$Cdk1Psites[[i]]
+  indexST_NON_Phospho <- setdiff(Holt_indexes_data_CDK1$`[S|T]`[[i]],Holt_indexes_data_CDK1$Cdk1Psites[[i]])
+  #Check for all the phosphosites fall  into ST positions
+  # if(!all.equal(intersect(Holt_indexes_data_CDK1$Cdk1Psites[[i]],Holt_indexes_data_CDK1$`[S|T]`[[i]]), Holt_indexes_data_CDK1$Cdk1Psites[[i]])){stop(paste('row number ',as.character(i),': One or more phosphosite annotated is not a S or T'))}
+  #Check passed
+  
+  Diso_Phos <- length(which(indexST_Phospho %in% indexDiso))
+  Ord_Phos <- length(which(!(indexST_Phospho %in% indexDiso)))
+  Diso_NONPhos <- length(which(indexST_NON_Phospho %in% indexDiso))
+  Ord_NONPhos<- length(which(!(indexST_NON_Phospho %in% indexDiso)))
+  stratContingencyArray[1,1,i]<-Diso_Phos
+  stratContingencyArray[1,2,i]<-Ord_Phos
+  stratContingencyArray[2,1,i]<-Diso_NONPhos
+  stratContingencyArray[2,2,i]<-Ord_NONPhos
+  }
+
+
+
+# Psites<-numeric()
+# PsitesCdk1<-numeric()
+# PsitesCdk1Cons<-numeric()
+# 
+# for (i in 1:nrow(HoltAllPsites)) {
+#     indexProt <- 1:nchar(Holt_data[i,"sequence"])
+#     indexDiso <- spotDisorderRegions[[i]]
+#     
+#  
+#     indexPsites <- as.numeric(HoltAllPsites$Psites[[i]])
+#     print(indexPsites)
+#     if (!is.na(HoltAllPsites$Cdk1Psites[[i]])) {
+#       indexPsitesCdk1 <- as.numeric(HoltAllPsites$Cdk1Psites[[i]])
+#     } else {indexPsitesCdk1 <- as.numeric()}
+#     if (!is.na(HoltAllPsites$Cdk1PsitesCons[[i]])) {
+#       indexPsitesCdk1Cons <- as.numeric(HoltAllPsites$Cdk1PsitesCons[[i]])
+#     } else {indexPsitesCdk1Cons <- as.numeric()}
+#     print(indexPsitesCdk1)
+#     print(indexPsitesCdk1Cons)
+#     cDisoPsites <- length(which(indexPsites %in% indexDiso))/length(indexDiso)
+#     #when no phsopho is detected we set a 0 value so the length of the index phsopho should be considering the values greater than 0
+#     cTotalPsites <- length(which(indexPsites>0))/length(indexProt)
+#     Psites[i] <- (cTotalPsites-cTotalPsites)/cTotalPsites
+#     
+#     cDisoPsitesCdk1 <- length(which(indexPsitesCdk1 %in% indexDiso))/length(indexDiso)
+#     cTotalPsitesCdk1 <- length(which(indexPsitesCdk1>0))/length(indexProt)
+#     PsitesCdk1[i] <- (cTotalPsitesCdk1-cTotalPsitesCdk1)/cTotalPsitesCdk1
+#     
+#     cDisoPsitesCdk1Cons <- length(which(indexPsitesCdk1Cons %in% indexDiso))/length(indexDiso)
+#     cTotalPsitesCdk1Cons <- length(which(indexPsitesCdk1Cons>0))/length(indexProt)
+#     PsitesCdk1Cons[i] <- (cTotalPsitesCdk1Cons-cTotalPsitesCdk1Cons)/cTotalPsitesCdk1Cons
+#     }
 
 # rbind(cbind(Psites,rep("Phosphosite",length(Psites))),cbind(PsitesCdk1,rep("Phosphosite CDK1",length(PsitesCdk1))),cbind(PsitesCdk1Cons,rep("Phosphosite CDK1 Consensus",length(PsitesCdk1Cons))))
 

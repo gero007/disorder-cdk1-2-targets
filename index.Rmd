@@ -20,7 +20,7 @@ library(vcd)
 library(kableExtra)
 library(ggpubr)
 library(Rcpi)
-#if fails => sudo R CMD javareconf
+#if fails => sudo R CMD javareconf; reinstall; reboot R
 library(Biostrings)
 library(eulerr)
 library(flextable)
@@ -130,7 +130,7 @@ Holt_data$Uniprot <- as.character(Holt_data$Uniprot)
 
 Holt_data<-merge.data.frame(Holt_data,yeastDiso,by.x = "Uniprot",by.y = "acc")
 
-Holt_data$target_all <- relevel(Holt_data$target_all,"Non Cdk1 target")
+Holt_data$target_all <- relevel(factor(Holt_data$target_all),"Non Cdk1 target")
 # Anotate only the phosphosites that respect the minimal consensus motif
 
 Holt_MS_Cdk1_consensus_phosphosites <- Holt_MS %>% dplyr::filter(grepl("[st]P",centered_15mer)) %>% dplyr::filter(`log2H/L_asynchronous`<(-1)|`log2H/L_nocodazole`<(-1)|`log2H/L_clb2`<(-1))
@@ -145,7 +145,7 @@ Holt_consensus$Uniprot <- as.character(Holt_consensus$Uniprot)
 
 Holt_data<-merge.data.frame(Holt_data,Holt_consensus,by = "Uniprot")
 
-Holt_data$target_consensus <- relevel(Holt_data$target_consensus,"Non Cdk1 target")
+Holt_data$target_consensus <- relevel(factor(Holt_data$target_consensus),"Non Cdk1 target")
 
 # # adding psites
 # 
@@ -922,6 +922,8 @@ ggplot(fisherSpotDF, aes(x = logOr, y = logAdjPvalue)) +
 # }
 
 ```
+
+
 ```{r Holt agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE}
 ####Lite####
 HltAllLiteDisorderedRegions <- getPredLiteDiso(df = yeastDiso_Ubersax_subset,"indices")
