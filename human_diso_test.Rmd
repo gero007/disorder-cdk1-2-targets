@@ -1,0 +1,435 @@
+---
+title: "human_diso_test"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(jsonlite)
+library(readr)
+library(ggplot2)
+library(GGally)
+library(vcd)
+library(kableExtra)
+library(ggpubr)
+library(Rcpi)
+#if fails => sudo R CMD javareconf; reinstall; reboot R
+library(Biostrings)
+library(eulerr)
+library(flextable)
+library(stringr)
+library(DT)
+library(dplyr)
+library(tidyr)
+library(RColorBrewer)
+library(reshape2)
+library(AnnotationDbi)
+library(ggridges)
+library(hrbrthemes)
+source('~/phd/cdk1_cyclinB1/phase_separation/disorder/getDisorder_V2.R')
+source("contingencyTablesAnalysis.R")
+
+humanDiso<-stream_in(con = file("swiss_prot/HS_mobiDB_full.mjson"),verbose = F)
+humanDiso$mobidb_data <- humanDiso$mobidb_data$disorder
+colnames(humanDiso)[2] <- "disorder"
+
+human_uniprot_table <- read_delim("swiss_prot/HS_UniprotID_reviewed.tab", "\t", escape_double = FALSE, trim_ws = TRUE)
+
+humanDiso <- merge.data.frame(humanDiso,human_uniprot_table,by.x = "acc",by.y = "Entry")
+# the entry number 3972 in mobidb is broken. I remove it now
+humanDiso <- humanDiso[-3971,]
+
+
+# ___________ SPOT _____________
+# human_spotDisorderList <- getSpotDisoMatrix("spot_run_human/")
+
+# ___________Phosphosite Human Data_____________
+# PSP Search Result Legend	 
+# COLUMN HEADER	DESCRIPTION
+# PROTEIN	Primary name in PhosphoSitePlusÂ® (PSP)
+# GENE	Unique ID (UID) assigned to a gene by the HUGO Nomenclature Committee and adapted by HUPO for the cognate protein.
+# ORGANISM	The species from which either the kinase and/or substrate proteins have been derived
+# ACC_ID	Primary accession ID in PSP
+# MW_(DA)	Molecular weight in Daltons.
+# MOD_RSD	The location within the protein sequence of the amino acid residue that is posttranslationally modified (modsite).
+# SITE_+/-7_AA	The modsite plus flanking sequence (+/- 7 rsds.). The modsite, as well as other residues within the flanking sequence that are known to be posttranslationally modified, are displayed in lower-case letters.
+# SITE_GRP_ID	Unique identifier of the modification site and its homologous sites in all proteoforms and species
+# DOMAIN	The Pfam residue in which the modsite is located.
+# METHOD	The experimental method in which kinase-substrate relationships were reported. Vivo = in vivo: determined from reactions within living cells, cell cultures or organisms. Vitro = in vitro: determined from reactions outside of living cellular structures.
+# LTP_LIT	The number of literature records using low-throughput (LTP) experimental techniques in which the modsite has been reported. LTP results may be more reliable than MS2 results.
+# MS2_LIT	The number of literature records using tandem mass spectrometry (MS2) experimental techniques in which the modsite has been observed.
+# MS2_CST	The number of curation sets (CS) derived from MS2 experiments performed at Cell Signaling Technology (CST) in which the modsite has been observed.
+# CST_CAT#	The catalog number(s) of CST antibodies specific for the associated modsite.
+
+#there's overlapping between the targets. I create 3 differents DF and I will merge them
+
+phosphosite_CDK1Target_HS <- read_delim("phosphosite_CDK1Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosite_CDK2Target_HS <- read_delim("phosphosite_CDK2Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosite_CDK3Target_HS <- read_delim("phosphosite_CDK3Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+
+phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDK1Target_HS,phosphosite_CDK2Target_HS,by = c("GENE","PROTEIN","ACC#","MOD_RSD"),all = T)
+colnames(phosphosite_CDKFamilyTarget_HS)[-(1:4)]<-c("METHOD.CDK1","LTP_LIT.CDK1","MS2_LIT.CDK1","MS2_CST.CDK1","Kinase.CDK1","METHOD.CDK2","LTP_LIT.CDK2","MS2_LIT.CDK2","MS2_CST.CDK2","Kinase.CDK2")
+phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDKFamilyTarget_HS,phosphosite_CDK3Target_HS,by = c("GENE","PROTEIN","ACC#","MOD_RSD"),all = T)
+colnames(phosphosite_CDKFamilyTarget_HS)[-(1:14)]<-c("METHOD.CDK3","LTP_LIT.CDK3","MS2_LIT.CDK3","MS2_CST.CDK3","Kinase.CDK3")
+
+# rows (11,12,13,14,15,16,49,79,80,151,167,168,170,190,206,211,320,321,322,323,324,327,358,412,439,440,443,444,445,446,447,448,449,507,508,509,510,531,532,533,534,596,633,762,834,849,850,851,882)
+# having isoforms of the proteins. Convert them to the canonical form
+
+
+###############################SOLVED############################
+
+# BIM iso2 = O43521-2 rows(62)
+# change  42-101: Missing.
+# phosphosite S44
+phosphosite_CDKFamilyTarget_HS$`ACC#`[62]<- "O43521"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[62]<-"S104"
+
+#------------------
+
+# CDC25B iso2 = P30305-2 rows(117,118)
+# change  68-81: Missing.
+# phosphosite S146, S307
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[117:118]<- "P30305"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[117]<-"S160"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[118]<-"S321"
+
+
+#------------------
+
+# CROCC iso2 = Q5TZA2-2 rows(594)
+# change         1-697: Missing.     1984-1990: Missing.
+# phosphosite S763
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[183]<- "Q5TZA2"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[183]<-"S1460"
+
+#------------------
+
+# dUTPase iso2 = P33316-2 rows(214)
+# change   1-93: MTPLCPRPAL...KAGGSPAPGP → MPCSE
+# phosphosite S11
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[214]<- "P33316"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[214]<-"S99"
+
+#------------------
+
+# EPB41 iso2 = P11171-2 rows(238,168)
+# change   616-648: Missing.
+# phosphosite T60, S679
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[238:239]<- "P11171"
+# T60 doesn't change
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[238]<-"S712"
+
+#------------------
+
+# FOXM1 iso2 = Q08050-2 rows(189)
+# change    326-340: Missing.
+# phosphosite T596
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[267]<- "Q08050"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[267]<-"T611"
+
+#------------------
+
+# HMGA1 iso2 = P17096-2 rows(293)
+# change    35-45: Missing.
+# phosphosite T42
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[293]<- "P17096"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[293]<-"T53"
+
+#------------------
+
+# ING1 iso2 = Q9UK53-2 rows(307)
+# change    35-45: Missing.
+# phosphosite S126
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[307]<- "Q9UK53"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[307]<-"S269"
+
+#------------------
+
+# Tau iso8 = P10636-8 rows(376:382)
+# change     125-375: Missing.     395-460: Missing.
+# phosphosite  T153 S202 T205 T212 T231 S235 S404
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[376:382]<- "P10636"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[379] <- "T470"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[376] <- "S519"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[380] <- "T522"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[381] <- "T529"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[382] <- "T548"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[377] <- "S552"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[378] <- "S721"
+
+#------------------
+
+# NUP98 iso2 = P52948-2 rows(493:497)
+# change     393-409: Missing.     1502-1576: RHYDLNQLLE...FVLLHIDNSG → S
+# phosphosite T529 T536 S595 S606 T653
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[493:497]<- "P52948"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[495]<-"T546"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[496]<-"T553"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[493]<-"S612"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[494]<-"S623"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[497]<-"T670"
+
+#------------------
+
+# ODF2 iso3 = Q5BJF6-3 rows(500)
+# change     1-41: MSASSSGGSP...PCGAPSVTVT → MKDRSSTPPL...LPKPSATSSQ.   65-83: Missing
+# phosphosite S796
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[500]<- "Q5BJF6"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[500]<-"S820"
+
+#------------------
+
+# PTPN2 iso2 = P17706-2 rows(554)
+# change      382-415: WLYWQPILTKMGFMSVILVGAFVGWTLFFQQNAL → PRLTDT
+# phosphosite S304
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[554]<- "P17706"
+
+
+#------------------
+
+
+# AML1 iso8 = Q01196-8  rows(639:644)
+#  change 1-5: MRIPV → MASDSIFESFPSYPQCFMRECILGMNPSRDVH, the difference is -27
+# phosphosites "S48"   "S276"   "S293"   "T300"   "S303"   "S424"
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[639:644]<- "Q01196"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[643]<-"S21"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[639]<-"S249"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[640]<-"S266"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[644]<-"S273"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[641]<-"S276"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[642]<-"S397"
+
+#------------------
+
+# SEPT9 iso2 = Q9UHD8-2 rows(650)
+# change     1-25: MKKSYSGGTRTSSGRLRRLGDSSGP → MERDRIS
+# phosphosite T24
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[650]<- "Q9UHD8"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[650]<-"T38"
+
+#------------------
+
+# SIRT2 iso2 = Q8IXJ6-2 rows(663)
+# change      1-37: Missing
+# phosphosite S331
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[663]<- "Q9UHD8"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[663]<-"S368"
+
+#------------------
+
+# SORBS3  iso10 = O60504_VAR_055019 rows(679)
+# change      1canonical has an SP in that position. keeping the coordinates
+# phosphosite S563
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[679]<- "O60504"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[679]<-"S368"
+
+#------------------
+
+# SUN1  iso9 = O94901-9 rows(695:696)
+# change      1canonical has an SP in that position. keeping the coordinates
+# phosphosite S48 S333
+#S48 doesn't change, S333 isn't present. removal below
+phosphosite_CDKFamilyTarget_HS$`ACC#`[695:696]<- "O94901"
+
+#------------------
+
+# UHRF1  iso2 = Q96T88-2 rows(771)
+# change      1-1: M → MGVFAVPPLSSDTM
+# phosphosite S674
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[771]<- "Q96T88"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[771]<-"S661"
+
+#------------------
+
+# VGLL4 iso4 = Q14135-4 rows(786:789)
+# change      1-22: METPLDVLSRAASLVHADDEKR → MLFMKMDLLNYQYLDKMNNNIGILCYEG
+# phosphosite  S58 S155 T159 S280
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[786:789]<- "Q14135"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[788] <- "S52"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[786] <- "S149"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[789] <- "T153"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[787] <- "S274"
+
+
+#------------------
+
+# ERK1 iso3 = P27361-3 rows(170)
+# change  340-379: PVAEEPFTFAMELDDLPKERLKELIFQETARFQPGVLEAP → VGQSPAAVGLGAGEQGGT
+# phosphosite S343
+# The paper states that phosphorylation only happens in the isoform 3, even if they have evidence of phosphorylation in other sites. They don't investigate other posibles phosphosites
+# removal below
+
+
+phosphosite_CDKFamilyTarget_HS<- phosphosite_CDKFamilyTarget_HS[c(-371,-695),]
+
+
+
+#################################################################
+
+
+
+```
+
+The problem here is that ModDB has almost the entire Uniprot human proteome. For the SPOT runs I only selected the reviewed proteins with isoforms (not present in MobiDB dataset)
+
+n° proteins in MobiDB for humans: 74034
+n° proteins in SPOT: 42248 (some tenths of proteins failed to run)
+
+What is the intersection between the two datasets. Does it cover all the CDK targets?
+
+20313 proteins in the intersection wich is about the number of all human protein coding genes annotated in Uniprot (20596)
+I sholud convert the Phosphosite data on isoforms into the canonical coordinates and forget about working on isoform data
+
+```{r intersect disorder and Phosphosite}
+
+human_swissProt <- intersect(humanDiso$acc,names(human_spotDisorderList))
+
+humanCDKtargets <- unique(phosphosite_CDKFamilyTarget_HS$`ACC#`)
+
+which(!humanCDKtargets %in% human_swissProt)
+
+humanDiso <- subset(humanDiso,acc %in% human_swissProt)
+human_spotDisorderList <- human_spotDisorderList[names(human_spotDisorderList) %in% human_swissProt]
+
+
+```
+The 815 phosphosites (withouth removing common sites between the different kinase of the subfamily) are in 437 proteins. All of those identified CDK1 targets are found in the intersection between Mobid
+
+
+
+Are the disorder fucntions working now?
+
+```{r format_data, echo=FALSE}
+humanDiso_full <- getMobiDB_PredDiso(humanDiso,"acc")
+
+# huge problem: big difference between what was calculated with spot, and what we have in MobiDB in term of accessions
+# humanDiso$predSpotDisoPerc <- getSpotPredDiso(humanDiso,human_spotDisorderList,output = "percentage","acc")
+# humanDiso$predSpotDisoIdx <- getSpotPredDiso(humanDiso,human_spotDisorderList,output = "indices","acc")
+
+```
+```{r percentage disorder distributions}
+
+# Espritz
+# espN -> NMR -> Structure
+# espX -> Xray -> Structure
+# espD -> Disprot -> Database
+# Disembl
+# disHL -> hot loops in SS assigment -> Structure
+# dis465 -> missing X-ray -> Structure
+# jronn -> predict regions of disorder in sequences based on their local similarity with a gold-standard set of disordered protein sequence -> Sequence
+
+disoPerc_cols_idx <-grep("_perc",colnames(humanDiso_full))
+reshaped_disoPerc <- melt(humanDiso_full[,disoPerc_cols_idx])
+colnames(reshaped_disoPerc) <- c("Predictor","Disorder percentage")
+ggplot(data = reshaped_disoPerc) + 
+  geom_violin(aes(x=Predictor, y=`Disorder percentage`,fill=Predictor),bw=) +
+  theme_light()
+
+
+ggplot(reshaped_disoPerc, aes(x = `Disorder percentage`, y = Predictor, fill = stat(x))) +
+  geom_density_ridges_gradient(scale = 1.7) +
+  scale_fill_viridis_c(name = "Temp. [F]", option = "C")
+```
+
+```{r venn comparisons}
+
+addUniprotToIdx <- function(df,disoIdx_col){
+  aux_disoIdx <- strsplit(df[,disoIdx_col], ",")
+  for (i in 1:nrow(df)) {
+    aux_disoIdx[[i]] <- paste(df$acc[[i]],aux_disoIdx[[i]],sep = "_")
+  }
+  return(unlist(aux_disoIdx))
+}
+
+iupl_idx <- addUniprotToIdx(humanDiso_full,"iupl_disoIndexes")
+iups_idx <- addUniprotToIdx(humanDiso_full,"iups_disoIndexes")
+vsl_idx <- addUniprotToIdx(humanDiso_full,"vsl_disoIndexes")
+jronn_idx <- addUniprotToIdx(humanDiso_full,"jronn_disoIndexes")
+espX_idx <- addUniprotToIdx(humanDiso_full,"espD_disoIndexes")
+espD_idx <- addUniprotToIdx(humanDiso_full,"espX_disoIndexes")
+
+sets <- list("IUpred-long"=iupl_idx,"IUpred-short"=iups_idx,"VSL"=vsl_idx,"JRONN"=jronn_idx,"Epritz-X"=espX_idx,"Epritz-D"=espD_idx)
+
+# eulerr_options(fills=list(fill=c("darkorange1","chartreuse3","firebrick1"),alpha=0.4))
+plot(euler(sets, shape = "ellipse"), quantities = TRUE)
+
+
+sets <- list("SPOT predictor"=spotDisoIdx,"Derived"=derivedDisoIdx,"DB"=dbDisoIdx)
+
+eulerr_options(fills=list(fill=c("firebrick1","darkgoldenrod1","deepskyblue2"),alpha=0.4))
+plot(euler(sets, shape = "ellipse"), quantities = TRUE)
+```
+
+
+```{r fraction of disorder}
+
+humanDiso_seqCol_idx <- grep("_disoSeq",colnames(humanDiso_full))
+
+#There are some proteins whihout disorder assesments fromsome of the predictors. If we remove this rows we end up  with 20303 observations.
+#I use drop_na, but I should leave out the disorder, derived and db rows drop_na(humanDiso_full[,c(-2,-3,-4)]), they break the function
+human_total_residues <-  sum(drop_na(humanDiso_full[,c(-2,-3,-4)])$Length)
+
+# I can even use the drop-na function over the subset of the DF having only the sequence columns
+#Mutate all for changing all the columns of a given DF and str_lenght is a vectorized nchar. colSums will make the addition
+print(colSums(mutate_all(drop_na(humanDiso_full[,humanDiso_seqCol_idx]),str_length))/human_total_residues)
+
+
+# MOVE THIS!!!! it belongs to yeast
+
+yeastDiso<-stream_in(con = file("swiss_prot/yeast_mobiDB_full.mjson"),verbose = F)
+yeastDiso$mobidb_data <- yeastDiso$mobidb_data$disorder
+colnames(yeastDiso)[2] <- "disorder"
+
+yeast_uniprot_table <- read_delim("swiss_prot/yeast_UniprotID_reviewed.tab", "\t", escape_double = FALSE, trim_ws = TRUE)
+
+yeastDiso <- merge.data.frame(yeastDiso,yeast_uniprot_table,by.x = "acc",by.y = "Entry")
+
+yeastDiso_full <- getMobiDB_PredDiso(yeastDiso,"acc")
+
+yeastDiso_seqCol_idx <- grep("_disoSeq",colnames(yeastDiso_full))
+yeast_total_residues <-  sum(drop_na(yeastDiso_full[,c(-2,-3,-4)])$Length)
+
+print(colSums(mutate_all(drop_na(yeastDiso_full[,yeastDiso_seqCol_idx]),str_length))/yeast_total_residues)
+
+
+
+
+# MOVE THIS!!!! it belongs to xenopus
+
+xenopusDiso<-stream_in(con = file("swiss_prot/xenopus_mobiDB_full.mjson"),verbose = F)
+xenopusDiso$mobidb_data <- xenopusDiso$mobidb_data$disorder
+colnames(xenopusDiso)[2] <- "disorder"
+
+xenopus_uniprot_table <- read_delim("swiss_prot/Xenopus_UniprotID_ALL.tab", "\t", escape_double = FALSE, trim_ws = TRUE)
+
+xenopusDiso <- merge.data.frame(xenopusDiso,xenopus_uniprot_table,by.x = "acc",by.y = "Entry")
+
+xenopusDiso_full <- getMobiDB_PredDiso(xenopusDiso,"acc")
+
+# jronn is not working. I will remove it
+
+xenopusDiso_full<-xenopusDiso_full[,-grep("jronn",colnames(xenopusDiso_full))]
+
+xenopusDiso_seqCol_idx <- grep("_disoSeq",colnames(xenopusDiso_full))
+xenopus_total_residues <-  sum(drop_na(xenopusDiso_full[,c(-2,-3,-4)])$Length)
+
+print(colSums(mutate_all(drop_na(xenopusDiso_full[,xenopusDiso_seqCol_idx]),str_length))/xenopus_total_residues)
+
+```
+
