@@ -24,6 +24,7 @@ library(ggpubr)
 library(Rcpi)
 library(Biostrings)
 library(eulerr)
+library(Hmisc)
 
 # #################################
 # ########### FUCNTIONS ###########
@@ -117,7 +118,7 @@ ggarrange(ps_pm,ps_pes,ps_pef,nrow = 1, ncol = 3,common.legend = TRUE, legend = 
   
 ```{r Holt disorder percentage all,echo=FALSE,message=FALSE,warning=FALSE,fig.cap=""}
 
-
+#######Histogram versions########
 dens_simpleDisoPerc<-ggplot(Holt_data)+geom_density(aes(x = predDisoPerc,fill = target_all),alpha=.5,bw=5)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100))+ggtitle("Simple Predictor")
 dens_liteDisoPerc<-ggplot(subset(Holt_data,!is.na(predLiteDisoPerc)))+geom_density(aes(x = predLiteDisoPerc,fill = target_all),alpha=.5,bw=5)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100)) + theme(axis.title.y = element_blank())+labs(title="MobiDB-Lite Predictor")
 dens_spotDisoPerc<-ggplot(Holt_data)+geom_density(aes(x = predSpotDisoPerc,fill = target_all),alpha=.5,bw=5)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100)) + theme(axis.title.y = element_blank())+labs(title="SPOT Predictor")
@@ -127,7 +128,36 @@ hist_liteDisoPerc<-ggplot(subset(Holt_data,!is.na(predLiteDisoPerc)))+geom_histo
 hist_spotDisoPerc<-ggplot(Holt_data)+geom_histogram(aes(x = predSpotDisoPerc,fill = target_all),alpha=.5,bins = 50)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_x_continuous(name="% of predicted Disorder",limits = c(-2,102)) + theme(axis.title.y = element_blank())
 
 ggarrange(dens_simpleDisoPerc,dens_liteDisoPerc,dens_spotDisoPerc,hist_simpleDisoPerc,hist_liteDisoPerc,hist_spotDisoPerc,nrow = 2, ncol = 3,common.legend = TRUE,legend = "bottom", align = "hv")
+#####################################
 
+
+
+##### Violion Plot version###########
+
+violin_simpleDisoPerc<-ggplot(Holt_data,aes(y = predDisoPerc,x=target_all)) + geom_violin(aes(fill= target_all),alpha=.5,bw=5) + geom_boxplot(color="darkslategray",width=0.2) +
+theme_linedraw() + theme(plot.title = element_text(hjust = 0.5),legend.position = "none",text = element_text(size=20)) +
+scale_y_continuous(name="% of predicted Disorder",limits = c(0,105)) +
+ggtitle("Simple Predictor") + theme(axis.title.x = element_blank()) +
+stat_compare_means(method = "wilcox.test",paired = F,comparisons = list(c("Cdk1 target","Non Cdk1 target")))
+
+violin_liteDisoPerc<-ggplot(Holt_data,aes(y = predLiteDisoPerc,x=target_all)) + geom_violin(aes(fill= target_all),alpha=.5,bw=5) + geom_boxplot(color="darkslategray",width=0.2) +
+theme_linedraw() + theme(plot.title = element_text(hjust = 0.5),legend.position = "none",text = element_text(size=20)) +
+scale_y_continuous(name="% of predicted Disorder",limits = c(0,105)) +
+ggtitle("MobiDB-Lite Predictor") + theme(axis.title.x = element_blank()) +
+theme(axis.title.y = element_blank()) +
+stat_compare_means(method = "wilcox.test",paired = F,comparisons = list(c("Cdk1 target","Non Cdk1 target")))
+
+
+violin_spotDisoPerc<-ggplot(Holt_data,aes(y = predSpotDisoPerc,x=target_all)) + geom_violin(aes(fill= target_all),alpha=.5,bw=5) + geom_boxplot(color="darkslategray",width=0.2) +
+theme_linedraw() + theme(plot.title = element_text(hjust = 0.5),legend.position = "none",text = element_text(size=20)) +
+scale_y_continuous(name="% of predicted Disorder",limits = c(0,105)) +
+ggtitle("SPOT Predictor") + theme(axis.title.x = element_blank()) +
+theme(axis.title.y = element_blank()) +
+stat_compare_means(method = "wilcox.test",paired = F,comparisons = list(c("Cdk1 target","Non Cdk1 target")))
+
+ggarrange(violin_simpleDisoPerc,violin_liteDisoPerc,violin_spotDisoPerc,nrow = 1, ncol = 3, align = "hv")
+
+####################################
 
 holt_all_simple_NonCdk1_VAR <- var(Holt_data$predDisoPerc[Holt_data$target_all=="Non Cdk1 target"],na.rm = T)
 holt_all_simple_Cdk1_VAR <- var(Holt_data$predDisoPerc[Holt_data$target_all=="Cdk1 target"],na.rm = T)
@@ -146,6 +176,37 @@ holt_all_spot_Cdk1_VAR <- var(Holt_data$predSpotDisoPerc[Holt_data$target_all=="
 holt_all_spot_Cdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Cdk1 target"],na.rm = T)
 holt_all_spot_NonCdk1_SD <- sd(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Non Cdk1 target"],na.rm = T)
 holt_all_spot_test <- t.test(Holt_data$predSpotDisoPerc[Holt_data$target_all=="Cdk1 target"],Holt_data$predSpotDisoPerc[Holt_data$target_all=="Non Cdk1 target"],var.equal=T)
+```
+```{r Ubersax disorder percentage,echo=FALSE,message=FALSE,warning=FALSE}
+
+dens_simpleDisoPerc<-ggplot(Ubersax_data)+geom_density(aes(x = predDisoPerc,fill = target),alpha=.5,bw=5)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100))+ggtitle("Simple Predictor")
+dens_liteDisoPerc<-ggplot(subset(Ubersax_data,!is.na(predLiteDisoPerc)))+geom_density(aes(x = predLiteDisoPerc,fill = target),alpha=.5,bw=5)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100)) + theme(axis.title.y = element_blank())+labs(title="MobiDB-Lite Predictor")
+dens_spotDisoPerc<-ggplot(Ubersax_data)+geom_density(aes(x = predSpotDisoPerc,fill = target),alpha=.5,bw=5)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_y_continuous(limits = c(0,0.05)) + scale_x_continuous(name="% of predicted Disorder",limits = c(0,100)) + theme(axis.title.y = element_blank())+labs(title="SPOT Predictor")
+
+hist_simpleDisoPerc<-ggplot(Ubersax_data)+geom_histogram(aes(x = predDisoPerc,fill = target),alpha=.5,bins = 50)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5))  + scale_x_continuous(name="% of predicted Disorder",limits = c(-2,102))
+hist_liteDisoPerc<-ggplot(subset(Ubersax_data,!is.na(predLiteDisoPerc)))+geom_histogram(aes(x = predLiteDisoPerc,fill = target),alpha=.5,bins = 50)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5))  + theme(axis.title.y = element_blank())+  scale_x_continuous(name="% of predicted Disorder",limits = c(-2,102)) + theme(axis.title.y = element_blank())
+hist_spotDisoPerc<-ggplot(Ubersax_data)+geom_histogram(aes(x = predSpotDisoPerc,fill = target),alpha=.5,bins = 50)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + theme(axis.title.y = element_blank())+ scale_x_continuous(name="% of predicted Disorder",limits = c(-2,102)) + theme(axis.title.y = element_blank())
+
+ggarrange(dens_simpleDisoPerc,dens_liteDisoPerc,dens_spotDisoPerc,hist_simpleDisoPerc,hist_liteDisoPerc,hist_spotDisoPerc,nrow = 2, ncol = 3,common.legend = TRUE,legend = "bottom", align = "hv")
+
+#Var and SD cheking. t-tests
+ubersax_simple_NonCdk1_VAR <- var(Ubersax_data$predDisoPerc[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
+ubersax_simple_Cdk1_VAR <- var(Ubersax_data$predDisoPerc[Ubersax_data$target=="Cdk1 target"],na.rm = T)
+ubersax_simple_Cdk1_SD <- sd(Ubersax_data$predDisoPerc[Ubersax_data$target=="Cdk1 target"],na.rm = T)
+ubersax_simple_NonCdk1_SD <- sd(Ubersax_data$predDisoPerc[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
+ubersax_simple_test <- t.test(Ubersax_data$predDisoPerc[Ubersax_data$target=="Cdk1 target"],Ubersax_data$predSpotDisoPerc[Ubersax_data$target=="Non Cdk1 target"],var.equal=T)
+
+ubersax_lite_NonCdk1_VAR <- var(Ubersax_data$predLiteDisoPerc[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
+ubersax_lite_Cdk1_VAR <- var(Ubersax_data$predLiteDisoPerc[Ubersax_data$target=="Cdk1 target"],na.rm = T)
+ubersax_lite_Cdk1_SD <- sd(Ubersax_data$predLiteDisoPerc[Ubersax_data$target=="Cdk1 target"],na.rm = T)
+ubersax_lite_NonCdk1_SD <- sd(Ubersax_data$predLiteDisoPerc[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
+ubersax_lite_test <- t.test(Ubersax_data$predLiteDisoPerc[Ubersax_data$target=="Cdk1 target"],Ubersax_data$predSpotDisoPerc[Ubersax_data$target=="Non Cdk1 target"],var.equal=T)
+
+ubersax_spot_NonCdk1_VAR <- var(Ubersax_data$predSpotDisoPerc[Ubersax_data$target=="Non Cdk1 target"])
+ubersax_spot_Cdk1_VAR <- var(Ubersax_data$predSpotDisoPerc[Ubersax_data$target=="Cdk1 target"],na.rm = T)
+ubersax_spot_Cdk1_SD <- sd(Ubersax_data$predSpotDisoPerc[Ubersax_data$target=="Cdk1 target"],na.rm = T)
+ubersax_spot_NonCdk1_SD <- sd(Ubersax_data$predSpotDisoPerc[Ubersax_data$target=="Non Cdk1 target"],na.rm = T)
+ubersax_spot_test <- t.test(Ubersax_data$predSpotDisoPerc[Ubersax_data$target=="Cdk1 target"],Ubersax_data$predSpotDisoPerc[Ubersax_data$target=="Non Cdk1 target"],var.equal=T)
 ```
 
 ```{r consensus phosphosites in disorder,echo=FALSE,message=FALSE,warning=FALSE,fig.cap=""}
@@ -171,17 +232,7 @@ ubersax_minimal_test <- t.test((Ubersax_data$`[ST]-P`[Ubersax_data$target=="Cdk1
 
 #Holt
 
-HoltMinCons <- sapply(Holt_data$sequence,function(x){index<-unlist(gregexpr("[ST]P",x),use.names = F)
-                                                      if (index[1]==-1) {return(0)
-                                                      } else {return(length(index))}})
-names(HoltMinCons) <- NULL 
-HoltFullCons <- sapply(Holt_data$sequence,function(x){index<-unlist(gregexpr("[ST]P.[KR]",x),use.names = F)
-                                                      if (index[1]==-1) {return(0)
-                                                      } else {return(length(index))}})
-names(HoltFullCons) <- NULL 
 
-Holt_data$`[ST]-P-X-[KR]`<-HoltFullCons
-Holt_data$`[ST]-P`<-HoltMinCons
 
 
 HoltFullconsPlot <- ggplot(Holt_data) + geom_density(aes(x = (`[ST]-P-X-[KR]`/length)*100,fill = target_all),alpha=.5,bw=0.2)+ theme_linedraw()+theme(plot.title = element_text(hjust = 0.5)) + scale_y_continuous(limits = c(0,2)) + scale_x_continuous(name="Number of phosphosites per 100 residues",limits = c(0,3))+ggtitle("[ST]-P-X-[KR]")
@@ -201,6 +252,35 @@ Holt_minimal_Cdk1_VAR <- var((Holt_data$`[ST]-P`[Holt_data$target_all=="Cdk1 tar
 Holt_minimal_Cdk1_SD <- sd((Holt_data$`[ST]-P`[Holt_data$target_all=="Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Cdk1 target"])*100,na.rm = T)
 Holt_minimal_NonCdk1_SD <- sd((Holt_data$`[ST]-P`[Holt_data$target_all=="Non Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Non Cdk1 target"])*100,na.rm = T)
 Holt_minimal_test <- t.test((Holt_data$`[ST]-P`[Holt_data$target_all=="Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Cdk1 target"])*100,(Holt_data$`[ST]-P`[Holt_data$target_all=="Non Cdk1 target"]/Holt_data$length[Holt_data$target_all=="Non Cdk1 target"])*100,var.equal=T)
+
+
+```
+
+```{r consensus phosphosites in disorder,echo=FALSE,message=FALSE,warning=FALSE,fig.cap=""}
+source("../testHolt.R")
+
+Holt_indexes_data$SpotDisoProb<-Holt_data$predSpotDisoPerc/100
+
+Holt_consInDiso_Spot_ObsVsExp_table <- Holt_indexes_data[,c("SpotDisoProb","sequence","[S|T]P","SPOT","target_all")]
+Holt_consInDiso_Spot_ObsVsExp_table$`nun[S|T]P` <- lapply(Holt_consInDiso_Spot_ObsVsExp_table$`[S|T]P`,function(x){if(x!=-1){return(length(x))}else{return(0)}})
+Holt_consInDiso_Spot_ObsVsExp_table$Expected <- as.numeric(Holt_consInDiso_Spot_ObsVsExp_table$`nun[S|T]P`)*as.numeric(Holt_consInDiso_Spot_ObsVsExp_table$SpotDisoProb)
+
+# if expected is 0 there is no consensus or there is no Disorder regions. In any case those data points are not important because observed will be 0 too
+# removing those values
+Holt_consInDiso_Spot_ObsVsExp_table<-subset(Holt_consInDiso_Spot_ObsVsExp_table,Expected!=0)
+
+Obs_cons_diso <- numeric()
+for (i in 1:nrow(Holt_consInDiso_Spot_ObsVsExp_table)) {
+
+  indexDiso <- Holt_consInDiso_Spot_ObsVsExp_table$SPOT[[i]]
+  indexCons <- Holt_consInDiso_Spot_ObsVsExp_table$`[S|T]P`[[i]]
+  
+  Obs_cons_diso[i] <- length(which(indexCons %in% indexDiso))
+}
+Holt_consInDiso_Spot_ObsVsExp_table$Observed <- Obs_cons_diso
+
+ggplot(Holt_consInDiso_Spot_ObsVsExp_table,aes(x=Observed,y=Expected)) + geom_point(aes(color=target_all)) + geom_abline(slope = 1) + theme_linedraw() + theme(plot.title = element_text(hjust = 0.5),legend.position = "none",text = element_text(size=17)) +
+        scale_y_continuous(name="Expected [S/T]P in disordered regions",limits = c(0,32)) + scale_x_continuous(name="Observed [S/T]P in disordered regions",limits = c(0,32)) + annotate(geom = "text",label="n = 1785",x=3,y=31)
 
 
 ```

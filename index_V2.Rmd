@@ -1,0 +1,1460 @@
+---
+title: "Disorder in Cdk1/2 targets"
+output:
+  html_document:
+    df_print: paged
+    fig_caption: yes
+  pdf_document: default
+params:
+  d: !r Sys.Date()
+bibliography: references.bib
+---
+updated: `r params$d`  
+
+```{r setup,echo=FALSE,message=FALSE,warning=FALSE,prompt=FALSE}
+library(jsonlite)
+library(readr)
+library(ggplot2)
+library(GGally)
+library(vcd)
+library(kableExtra)
+library(ggpubr)
+library(Rcpi)
+#if fails => sudo R CMD javareconf; reinstall; reboot R
+library(Biostrings)
+library(eulerr)
+library(flextable)
+library(stringr)
+library(DT)
+library(dplyr)
+library(tidyr)
+library(RColorBrewer)
+library(reshape2)
+library(AnnotationDbi)
+library(ggridges)
+library(hrbrthemes)
+library(ggrepel)
+
+source("getDisorder_V2.R")
+source("contingencyTablesAnalysis_V2.R")
+
+
+#################################
+######## Disorder data ##########
+#################################
+
+
+# ___________Disorder_____________
+
+# YEAST
+
+yeastDiso<-stream_in(con = file("swiss_prot/yeast_mobiDB_full.mjson"),verbose = F)
+yeastDiso$mobidb_data <- yeastDiso$mobidb_data$disorder
+colnames(yeastDiso)[2] <- "disorder"
+
+yeast_uniprot_table <- read_delim("swiss_prot/yeast_UniprotID_reviewed.tab", "\t", escape_double = FALSE, trim_ws = TRUE)
+
+yeastDiso <- merge.data.frame(yeastDiso,yeast_uniprot_table,by.x = "acc",by.y = "Entry")
+
+yeastDiso_full <- getMobiDB_PredDiso(yeastDiso,"acc",sequence_col = "Sequence")
+## addd SPOT
+yeastDiso_full <- getSpotPredDiso(yeastDiso_full,disoPath = "spot_run_yeast/",accession_col = "acc",length_col = "Length",sequence_col = "Sequence")
+
+# HUMAN
+
+humanDiso<-stream_in(con = file("swiss_prot/HS_mobiDB_full.mjson"),verbose = F)
+humanDiso$mobidb_data <- humanDiso$mobidb_data$disorder
+colnames(humanDiso)[2] <- "disorder"
+
+human_uniprot_table <- read_delim("swiss_prot/HS_UniprotID_reviewed.tab", "\t", escape_double = FALSE, trim_ws = TRUE)
+
+humanDiso <- merge.data.frame(humanDiso,human_uniprot_table,by.x = "acc",by.y = "Entry")
+# the entry number 3972 in mobidb is broken. I remove it now
+humanDiso <- humanDiso[-3971,]
+humanDiso_full <- getMobiDB_PredDiso(humanDiso,"acc",sequence_col = "Sequence")
+humanDiso_full <- getSpotPredDiso(humanDiso_full,disoPath = "spot_run_human/",accession_col = "acc",length_col = "Length",sequence_col = "Sequence")
+
+# XENOPUS
+
+#!!! Xenopus disorder most probably won't be based in Uniprot-MobiDB
+
+# xenopusDiso<-stream_in(con = file("swiss_prot/xenopus_mobiDB_full.mjson"),verbose = F)
+# xenopusDiso$mobidb_data <- xenopusDiso$mobidb_data$disorder
+# colnames(xenopusDiso)[2] <- "disorder"
+# 
+# xenopus_uniprot_table <- read_delim("swiss_prot/Xenopus_UniprotID_ALL.tab", "\t", escape_double = FALSE, trim_ws = TRUE)
+# 
+# xenopusDiso <- merge.data.frame(xenopusDiso,xenopus_uniprot_table,by.x = "acc",by.y = "Entry")
+# 
+# xenopusDiso_full <- getMobiDB_PredDiso(xenopusDiso,"acc")
+# 
+# # jronn is not working. I will remove it
+# 
+# xenopusDiso_full<-xenopusDiso_full[,-grep("jronn",colnames(xenopusDiso_full))]
+
+
+#################################
+###### CDK1 targets data ########
+#################################
+
+
+# ___________Ubersax data_____________
+ubersax_data <- read_delim("CDK1targetSacCer.csv", 
+                          "\t", quote = "\\\"", escape_double = FALSE, 
+                          col_types = cols(X1 = col_skip(), input = col_skip(), 
+                          `yourlist:M201907046746803381A1F0E0DB47453E0216320D4B0BD1N` = col_skip()), 
+                          trim_ws = TRUE)
+
+# Now the comumn "disorder" is a unnamed list with a complex structure for each row of the data frame
+
+#The row 294 cannot be mapped with the uniprot, I will remove it from CDK1targetsSacCer and yeastDisoCDK1target. Slect only the rows wuth P-score > 2 most likely targets based on the paper
+
+ubersax_data<-ubersax_data[-294,]
+# ubersax_data <- merge.data.frame(ubersax_data,yeastDiso_full,by.x = "Entry",by.y = "acc")
+# After the merging 7 uncharacterized protein are left out the dataset. n=680
+
+# SPOT
+# Not for now
+# ubersax_data$dbDisoPerc <- yeastDiso_ubersax_subset$dbDisoPerc
+# ubersax_data$predSpotDisoPerc <- yeastDiso_ubersax_subset$predSpotDisoPerc
+
+
+# ubersax_data$target<-cut(ubersax_data$`P-Score`,breaks = c(2),labels = c("Non Cdk1 target","Cdk1 target"))
+ubersax_data$target<-cut(ubersax_data$`P-Score`,breaks = c(-Inf,2,Inf),labels = c("Non Cdk1 target","Cdk1 target"),right = F)
+ubersax_data$target <- relevel(factor(ubersax_data$target),"Cdk1 target")
+ubersax_data$targetStrict<-cut(ubersax_data$`P-Score`,breaks = c(-Inf,3,Inf),labels = c("Non Cdk1 target","Cdk1 target"),right = F)
+ubersax_data$targetStrict <- relevel(factor(ubersax_data$targetStrict),"Cdk1 target")
+
+
+
+
+
+# ___________Holt Data_____________
+uniprot_yeast <- read_delim("uniprot_yeast.tab",
+"\t", escape_double = FALSE, trim_ws = TRUE)
+holt_MS <- read_delim("Holt_CDK1targetSacCer.tsv",
+"\t", escape_double = FALSE, trim_ws = TRUE)
+
+#Remove phosphoTyrosines
+holt_MS<-subset(holt_MS,!substr(site,start = 1,stop = 1)=="Y")
+#Add Uniprot accesion. 58 entries lost (out of 9067) due to ID conversion
+holt_MS <- holt_MS[which(holt_MS$ORF %in% uniprot_yeast$OLN),]
+
+holt_MS$Uniprot <- uniprot_yeast$`Swiss-Prot-AC`[base::match(holt_MS$ORF,uniprot_yeast$OLN)]
+
+# Create a new column indicating which sites are considered to be phosphorylated 
+holt_MS <- holt_MS %>% mutate(psite=case_when(
+    `log2H/L_asynchronous`<(-1)|`log2H/L_nocodazole`<(-1)|`log2H/L_clb2`<(-1) ~ " phosphorylated",
+    TRUE ~ " non phosphorylated"
+))
+holt_MS$psite <- factor(holt_MS$psite)
+holt_MS$psite <- relevel(holt_MS$psite,ref = " phosphorylated")
+
+# Create a new column indicating which sites are considered to be phosphorylated in an CDK consensus motif 
+holt_MS <- holt_MS %>% mutate(consensus_psite=case_when(
+    (`log2H/L_asynchronous`<(-1)|`log2H/L_nocodazole`<(-1)|`log2H/L_clb2`<(-1)) & grepl("[st]P",centered_15mer) ~ " phosphorylated" ,
+    TRUE ~ " non phosphorylated"
+))
+holt_MS$consensus_psite <- factor(holt_MS$consensus_psite)
+holt_MS$consensus_psite <- relevel(holt_MS$consensus_psite,ref = " phosphorylated")
+
+# The summarise function substrings the sites for removing the first letter, indicating the residue. Since I have to apply the same function for all the columns to be summarized, I added an space at the beggining of the psite and psites values and like this I don't loose the first letter
+# the columns site, psite, and psite consensus are merged in a string separated by commas and grouped by uniprot ID
+holt_data <- holt_MS %>% group_by(Uniprot) %>% summarise_at(c("site","psite","consensus_psite"),function(x){paste(substring(x,2,1000), collapse=",")})
+
+# Convert the psites and consensus_psite columns in target_all and target_consensus columns respectively. If one of the psites is phosphorylated by CDK thats consider a CDK target
+
+holt_data <- holt_data %>% mutate(target_all=case_when(
+    grepl(psite,pattern = "(,|^)phosphorylated") ~ "Cdk1 target",
+    TRUE ~ "Non Cdk1 target"
+))
+
+holt_data <- holt_data %>% mutate(target_consensus=case_when(
+    grepl(consensus_psite,pattern = "(,|^)phosphorylated") ~ "Cdk1 target",
+    TRUE ~ "Non Cdk1 target"
+))
+
+# TIbble df don't like list and vectors as values, it's easier to reconvert to DF
+holt_data <- as.data.frame(holt_data)
+# Select which psites are cdk psites with and withouth consensus
+## site is a vector now
+holt_data$site <- lapply(holt_data$site, function(x){as.numeric(strsplit(x,',')[[1]])})
+## psite and consensus_psite are logical vectors with TRUE="phosphorylated" and FALSE="non phosphorylated"
+holt_data$psite <- lapply(holt_data$psite, function(x){strsplit(x,',')[[1]]=="phosphorylated"})
+holt_data$consensus_psite <- lapply(holt_data$consensus_psite, function(x){strsplit(x,',')[[1]]=="phosphorylated"})
+
+psites <- list()
+consensus_psites <- list()
+for (i in 1:nrow(holt_data)) {
+  psites[[i]] <- holt_data$site[[i]][holt_data$psite[[i]]]
+  consensus_psites[[i]] <- holt_data$site[[i]][holt_data$consensus_psite[[i]]]
+}
+holt_data$psite <- psites
+holt_data$consensus_psite <- consensus_psites
+rm(psites,consensus_psites)
+
+
+
+# ___________Intersection yeast_____________
+
+# The universe is the union between Holt and Ubersax
+yeastIntersect_All_data <- merge.data.frame(ubersax_data[,c("Entry","target","targetStrict")],
+                                            holt_data[,c("Uniprot","psite","consensus_psite","target_all","target_consensus")],
+                                            by.x = "Entry", by.y = "Uniprot",all = T)
+
+ yeastIntersect_All_data <- yeastIntersect_All_data %>% mutate(target_intersect=case_when(
+    ((target=="Cdk1 target") & (target_all=="Cdk1 target")) ~ "Cdk1 target",
+    TRUE ~ "Non Cdk1 target"
+)) %>% as.data.frame()
+
+#####Add disorder to yeast DATA
+# Ubersax
+ubersax_data <- merge.data.frame(ubersax_data,yeastDiso_full,by.x = "Entry",by.y = "acc")
+ubersax_data$MW_kDa<-(ubersax_data$Length*120)/1000
+ubersax_data$nmol<- (ubersax_data$`Protein Level`/ubersax_data$MW_kDa)/1000
+ubersax_data$nEq_STP<- ubersax_data$nmol*ubersax_data$`[ST]-P`
+ubersax_data$nEq_STPXKR<- ubersax_data$nmol*ubersax_data$`[ST]-P-X-[KR]`
+
+# 4 Entries are lost in the conversion, 2 of them target_all="CDK1 target"
+# Holt
+holt_data<-merge.data.frame(holt_data,yeastDiso_full,by.x = "Uniprot",by.y = "acc")
+# adding number of consensus
+holtMinCons <- sapply(holt_data$Sequence,function(x){index<-unlist(gregexpr("[ST]P",x),use.names = F)
+                                                      if (index[1]==-1) {return(0)
+                                                      } else {return(length(index))}})
+names(holtMinCons) <- NULL 
+holtFullCons <- sapply(holt_data$Sequence,function(x){index<-unlist(gregexpr("[ST]P.[KR]",x),use.names = F)
+                                                      if (index[1]==-1) {return(0)
+                                                      } else {return(length(index))}})
+names(holtFullCons) <- NULL 
+
+holt_data$`[ST]-P-X-[KR]`<-holtFullCons
+holt_data$`[ST]-P`<-holtMinCons
+
+# Intersection
+## add disorder MobiDB
+yeastIntersect_All_data <- merge.data.frame(yeastIntersect_All_data,yeastDiso_full,by.x = "Entry",by.y = "acc")
+
+yeastIntersect_CDK1_data <- subset(yeastIntersect_All_data, (target_all == "Cdk1 target") & (target=="Cdk1 target"))
+
+# ___________Phosphosite Human Data_____________
+# PSP Search Result Legend	 
+# COLUMN HEADER	DESCRIPTION
+# PROTEIN	Primary name in PhosphoSitePlusÂ® (PSP)
+# GENE	Unique ID (UID) assigned to a gene by the HUGO Nomenclature Committee and adapted by HUPO for the cognate protein.
+# ORGANISM	The species from which either the kinase and/or substrate proteins have been derived
+# ACC_ID	Primary accession ID in PSP
+# MW_(DA)	Molecular weight in Daltons.
+# MOD_RSD	The location within the protein sequence of the amino acid residue that is posttranslationally modified (modsite).
+# SITE_+/-7_AA	The modsite plus flanking sequence (+/- 7 rsds.). The modsite, as well as other residues within the flanking sequence that are known to be posttranslationally modified, are displayed in lower-case letters.
+# SITE_GRP_ID	Unique identifier of the modification site and its homologous sites in all proteoforms and species
+# DOMAIN	The Pfam residue in which the modsite is located.
+# METHOD	The experimental method in which kinase-substrate relationships were reported. Vivo = in vivo: determined from reactions within living cells, cell cultures or organisms. Vitro = in vitro: determined from reactions outside of living cellular structures.
+# LTP_LIT	The number of literature records using low-throughput (LTP) experimental techniques in which the modsite has been reported. LTP results may be more reliable than MS2 results.
+# MS2_LIT	The number of literature records using tandem mass spectrometry (MS2) experimental techniques in which the modsite has been observed.
+# MS2_CST	The number of curation sets (CS) derived from MS2 experiments performed at Cell Signaling Technology (CST) in which the modsite has been observed.
+# CST_CAT#	The catalog number(s) of CST antibodies specific for the associated modsite.
+
+#there's overlapping between the targets. I create 3 differents DF and I will merge them
+
+phosphosite_CDK1Target_HS <- read_delim("phosphosite_CDK1Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosite_CDK2Target_HS <- read_delim("phosphosite_CDK2Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosite_CDK3Target_HS <- read_delim("phosphosite_CDK3Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+
+phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDK1Target_HS,phosphosite_CDK2Target_HS,by = c("GENE","PROTEIN","ACC#","MOD_RSD"),all = T)
+colnames(phosphosite_CDKFamilyTarget_HS)[-(1:4)]<-c("METHOD.CDK1","LTP_LIT.CDK1","MS2_LIT.CDK1","MS2_CST.CDK1","Kinase.CDK1","METHOD.CDK2","LTP_LIT.CDK2","MS2_LIT.CDK2","MS2_CST.CDK2","Kinase.CDK2")
+phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDKFamilyTarget_HS,phosphosite_CDK3Target_HS,by = c("GENE","PROTEIN","ACC#","MOD_RSD"),all = T)
+colnames(phosphosite_CDKFamilyTarget_HS)[-(1:14)]<-c("METHOD.CDK3","LTP_LIT.CDK3","MS2_LIT.CDK3","MS2_CST.CDK3","Kinase.CDK3")
+
+# rows (11,12,13,14,15,16,49,79,80,151,167,168,170,190,206,211,320,321,322,323,324,327,358,412,439,440,443,444,445,446,447,448,449,507,508,509,510,531,532,533,534,596,633,762,834,849,850,851,882)
+# having isoforms of the proteins. Convert them to the canonical form
+
+
+###############################SOLVED############################
+
+# BIM iso2 = O43521-2 rows(62)
+# change  42-101: Missing.
+# phosphosite S44
+phosphosite_CDKFamilyTarget_HS$`ACC#`[62]<- "O43521"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[62]<-"S104"
+
+#------------------
+
+# CDC25B iso2 = P30305-2 rows(117,118)
+# change  68-81: Missing.
+# phosphosite S146, S307
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[117:118]<- "P30305"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[117]<-"S160"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[118]<-"S321"
+
+
+#------------------
+
+# CROCC iso2 = Q5TZA2-2 rows(594)
+# change         1-697: Missing.     1984-1990: Missing.
+# phosphosite S763
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[183]<- "Q5TZA2"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[183]<-"S1460"
+
+#------------------
+
+# dUTPase iso2 = P33316-2 rows(214)
+# change   1-93: MTPLCPRPAL...KAGGSPAPGP → MPCSE
+# phosphosite S11
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[214]<- "P33316"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[214]<-"S99"
+
+#------------------
+
+# EPB41 iso2 = P11171-2 rows(238,168)
+# change   616-648: Missing.
+# phosphosite T60, S679
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[238:239]<- "P11171"
+# T60 doesn't change
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[238]<-"S712"
+
+#------------------
+
+# FOXM1 iso2 = Q08050-2 rows(189)
+# change    326-340: Missing.
+# phosphosite T596
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[267]<- "Q08050"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[267]<-"T611"
+
+#------------------
+
+# HMGA1 iso2 = P17096-2 rows(293)
+# change    35-45: Missing.
+# phosphosite T42
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[293]<- "P17096"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[293]<-"T53"
+
+#------------------
+
+# ING1 iso2 = Q9UK53-2 rows(307)
+# change    35-45: Missing.
+# phosphosite S126
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[307]<- "Q9UK53"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[307]<-"S269"
+
+#------------------
+
+# Tau iso8 = P10636-8 rows(376:382)
+# change     125-375: Missing.     395-460: Missing.
+# phosphosite  T153 S202 T205 T212 T231 S235 S404
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[376:382]<- "P10636"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[379] <- "T470"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[376] <- "S519"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[380] <- "T522"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[381] <- "T529"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[382] <- "T548"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[377] <- "S552"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[378] <- "S721"
+
+#------------------
+
+# NUP98 iso2 = P52948-2 rows(493:497)
+# change     393-409: Missing.     1502-1576: RHYDLNQLLE...FVLLHIDNSG → S
+# phosphosite T529 T536 S595 S606 T653
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[493:497]<- "P52948"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[495]<-"T546"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[496]<-"T553"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[493]<-"S612"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[494]<-"S623"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[497]<-"T670"
+
+#------------------
+
+# ODF2 iso3 = Q5BJF6-3 rows(500)
+# change     1-41: MSASSSGGSP...PCGAPSVTVT → MKDRSSTPPL...LPKPSATSSQ.   65-83: Missing
+# phosphosite S796
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[500]<- "Q5BJF6"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[500]<-"S820"
+
+#------------------
+
+# PTPN2 iso2 = P17706-2 rows(554)
+# change      382-415: WLYWQPILTKMGFMSVILVGAFVGWTLFFQQNAL → PRLTDT
+# phosphosite S304
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[554]<- "P17706"
+
+
+#------------------
+
+
+# AML1 iso8 = Q01196-8  rows(639:644)
+#  change 1-5: MRIPV → MASDSIFESFPSYPQCFMRECILGMNPSRDVH, the difference is -27
+# phosphosites "S48"   "S276"   "S293"   "T300"   "S303"   "S424"
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[639:644]<- "Q01196"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[643]<-"S21"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[639]<-"S249"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[640]<-"S266"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[644]<-"S273"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[641]<-"S276"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[642]<-"S397"
+
+#------------------
+
+# SEPT9 iso2 = Q9UHD8-2 rows(650)
+# change     1-25: MKKSYSGGTRTSSGRLRRLGDSSGP → MERDRIS
+# phosphosite T24
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[650]<- "Q9UHD8"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[650]<-"T38"
+
+#------------------
+
+# SIRT2 iso2 = Q8IXJ6-2 rows(663)
+# change      1-37: Missing
+# phosphosite S331
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[663]<- "Q9UHD8"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[663]<-"S368"
+
+#------------------
+
+# SORBS3  iso10 = O60504_VAR_055019 rows(679)
+# change      1canonical has an SP in that position. keeping the coordinates
+# phosphosite S563
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[679]<- "O60504"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[679]<-"S368"
+
+#------------------
+
+# SUN1  iso9 = O94901-9 rows(695:696)
+# change      1canonical has an SP in that position. keeping the coordinates
+# phosphosite S48 S333
+#S48 doesn't change, S333 isn't present. removal below
+phosphosite_CDKFamilyTarget_HS$`ACC#`[695:696]<- "O94901"
+
+#------------------
+
+# UHRF1  iso2 = Q96T88-2 rows(771)
+# change      1-1: M → MGVFAVPPLSSDTM
+# phosphosite S674
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[771]<- "Q96T88"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[771]<-"S661"
+
+#------------------
+
+# VGLL4 iso4 = Q14135-4 rows(786:789)
+# change      1-22: METPLDVLSRAASLVHADDEKR → MLFMKMDLLNYQYLDKMNNNIGILCYEG
+# phosphosite  S58 S155 T159 S280
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[786:789]<- "Q14135"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[788] <- "S52"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[786] <- "S149"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[789] <- "T153"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[787] <- "S274"
+
+
+#------------------
+
+# ERK1 iso3 = P27361-3 rows(170)
+# change  340-379: PVAEEPFTFAMELDDLPKERLKELIFQETARFQPGVLEAP → VGQSPAAVGLGAGEQGGT
+# phosphosite S343
+# The paper states that phosphorylation only happens in the isoform 3, even if they have evidence of phosphorylation in other sites. They don't investigate other posibles phosphosites
+# removal below
+
+
+phosphosite_CDKFamilyTarget_HS<- phosphosite_CDKFamilyTarget_HS[c(-371,-695),]
+
+
+
+#################################################################
+
+human_data <- phosphosite_CDKFamilyTarget_HS %>% unite(col = "kinase", Kinase.CDK1,Kinase.CDK2,Kinase.CDK3,sep = ",",remove = T,na.rm=T )
+human_data <- human_data %>% unite(col = "method", METHOD.CDK1,METHOD.CDK2,METHOD.CDK3,sep = ",",remove = T,na.rm=T )
+
+
+human_data <- human_data %>% group_by(`ACC#`,GENE,PROTEIN) %>% summarise_at(c("MOD_RSD","kinase","method"),function(x){paste(x, collapse=",")})
+
+human_data$MOD_RSD <- sapply(human_data$MOD_RSD, function(x){ return(paste(substr(strsplit(x,",")[[1]],start = 2,stop = 2000),collapse = ","))})
+human_data$kinase <- sapply(human_data$kinase, function(x){ return(paste(unique(strsplit(x,",")[[1]]),collapse = ","))})
+# algunos valores tienen espacios, por eso el gsub
+human_data$method <- sapply(human_data$method, function(x){ return(paste(unique(gsub(" ", "", strsplit(x,",")[[1]], fixed = TRUE)),collapse = ","))})
+human_data$target <- rep("Cdk1 target",nrow(human_data))
+
+# human_data<-merge.data.frame(human_data,humanDiso_full,by.x = "ACC#",by.y = "acc",all.y = T)
+human_data$target <- as.factor(human_data$target)
+
+human_data <- as.data.frame(human_data)
+
+human_data$psite_CDK1 <- lapply(human_data$MOD_RSD, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
+human_data <- human_data[,c("GENE","PROTEIN","ACC#","MOD_RSD","method","target","psite_CDK1","kinase")]
+
+# ___________Phosphosite Human Universe_____________
+# Load all the phosphosites in the phosphosite plus database 
+human_universe_data <- read_delim("~/Downloads/PSP/Phosphorylation_site_dataset", 
+    "\t", escape_double = FALSE, col_types = cols(HU_CHR_LOC = col_skip(), 
+        SITE_GRP_ID = col_skip(), MW_kD = col_skip(), 
+        DOMAIN = col_skip(), `SITE_+/-7_AA` = col_skip(), 
+        LT_LIT = col_skip(), MS_LIT = col_skip(), 
+        MS_CST = col_skip(), `CST_CAT#` = col_skip()), 
+    trim_ws = TRUE)
+human_universe_data<-rename(human_universe_data,c(`ACC#`=ACC_ID))
+# Select human proteins
+human_universe_data <- subset(human_universe_data, ORGANISM == "human")
+# Remove all information related to isoforms
+human_universe_data <- subset(human_universe_data, !grepl("-",`ACC#`))
+human_universe_data <- subset(human_universe_data, !grepl(" iso[0-9]",`PROTEIN`))
+# Select targets with pS or pT
+human_universe_data<-subset(human_universe_data,(substr(MOD_RSD,1,1)=="S"|substr(MOD_RSD,1,1)=="T"))
+# format the MOD_RSD column and group by gene/protein/uniprot
+human_universe_data <- human_universe_data %>% mutate(MOD_RSD=substr(MOD_RSD,1,nchar(MOD_RSD)-2)) 
+human_universe_data <- human_universe_data %>% group_by(`ACC#`,GENE,PROTEIN) %>% summarise_at("MOD_RSD",function(x){paste(substr(x,2,2000), collapse=",")})
+# Generate the psite column, with the vectors containing psites (for the contingency table analysis)
+human_universe_data <- as.data.frame(human_universe_data)
+human_universe_data$psite <- lapply(human_universe_data$MOD_RSD, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
+# merge the tables and mark CDK1 targets and non CDK1 targets. Only by ACC, protein names in human data are still with  the isoform nomenclature
+human_data <- merge.data.frame(x = human_data,y = human_universe_data,by = c("ACC#"),all = T,suffixes = c("_CDK1","_ALL"))
+#remove PROTEIN and GENE comumns from x, and rename the y columns
+human_data$GENE_CDK1<-NULL
+human_data$PROTEIN_CDK1<-NULL
+human_data <- rename(human_data,c(PROTEIN=PROTEIN_ALL,GENE=GENE_ALL))
+# Adding the target category "Non Cdk1 target"
+levels(human_data$target) <- c("Cdk1 target","Non Cdk1 target")
+human_data$target[is.na(human_data$target)]<-"Non Cdk1 target"
+
+human_data<-merge.data.frame(human_data,humanDiso_full,by.x = "ACC#",by.y = "acc")
+
+
+# # adding number of consensus
+# humanMinCons <- sapply(human_data$Sequence,function(x){index<-unlist(gregexpr("[ST]P",x),use.names = F)
+#                                                       if (index[1]==-1) {return(0)
+#                                                       } else {return(length(index))}})
+# names(humanMinCons) <- NULL 
+# humanFullCons <- sapply(human_data$Sequence,function(x){index<-unlist(gregexpr("[ST]P.[KR]",x),use.names = F)
+#                                                       if (index[1]==-1) {return(0)
+#                                                       } else {return(length(index))}})
+# names(humanFullCons) <- NULL 
+# 
+# human_data$`[ST]-P-X-[KR]`<-humanFullCons
+# human_data$`[ST]-P`<-humanMinCons
+# rm(humanFullCons,humanMinCons)
+
+
+
+```
+
+
+# Protein Disorder
+
+## MobiDB
+  
+The [MobiDB](http://mobidb.bio.unipd.it) is database of protein disorder and mobility annotations. Several curated datasets for intrinsic disorder and folding upon binding have been integrated from specialized databases. The indirect evidence has also been expanded to better capture information available in the PDB, such as high-temperature residues in X-ray structures and overall conformational diversity.  
+The database is organized in three layers containing data of different nature: Disorder, Linear Interacting Peptides (LIPs) and Dynamic structure. The "Disorder" database bears data about protein regions without a defined tri-dimensional structure. The "LIPs" layer contains information about regions or residues that interact with other proteins or DNA/RNA preserving a linear (disordered) structure. At last, the data hosted in the "Dynamic structure" layer describes the propensity of a residue to assume a specific secondary structure conformation. When extracted from chemical shifts can be interpreted as a measure of the secondary structure populations in solution.
+Each one of three layers features three quality levels of annotation from high to low quality (Fig. 1), presenting different coverage of the universe of known proteins.
+  
+```{r confidence pyramid ,echo=FALSE,message=FALSE,warning=FALSE,fig.cap="Figure 1: MobiDB confidence vs. coverage. DB refers to manually curated annotations from external databases. Indirect consist in annotations derived/calculated information from experimental data, i.e. PDB structures and/or chemical shifts. Predicted annotations are made using exclusively bioinformatic tools", out.width = "400px"}
+
+knitr::include_graphics("/home/gdubra/projects/cdk1_cyclinB1/phase_separation/disorder/images/mobiDB_confVScoverage.png")
+
+```  
+
+
+### Protein disorder  
+  
+As a first approach, the Mobidb database was explored for the whole annotated proteome of Saccharomyces cerevisiae. The data set comprehends the information of disordered region over 6721 proteins. As explained before, each entry has annotations of disorder in three different levels (DB, indirect, Predicted). At each one of those levels, information from several sources is annotated in order to reach to a consensus of the regions with or without a defined tri-dimensional structure. For the disorder predictors annotated in MobiDB the regions with a predicted disorder regions are marked with a "D". For those levels in which a consensus is reached ("DB" and "Derived") the regions are marked as "S" for structured, "C" for conflicts between different the methods, and "D" for disorder.  
+
+```{r all data summary ,echo=FALSE,message=FALSE,warning=FALSE}
+npredictors=0
+nmobidblite=0
+nsimple=0
+#methods: mobidb-lite, simple
+for (i in 1:nrow(yeastDiso)) {
+  if(!is.null(yeastDiso[i,5]$predictors[[1]])){
+    npredictors=npredictors+1
+    }
+  if( "mobidb-lite" %in% yeastDiso[i,5]$predictors[[1]]$method){
+    nmobidblite=nmobidblite+1
+    }
+  if( "simple" %in% yeastDiso[i,5]$predictors[[1]]$method){
+    nsimple=nsimple+1
+    }  
+  }
+
+
+#methods: full bfactor missing_residues mobile
+nderived=0
+nfull=0
+nbfactor=0
+nmissing_residues=0
+nmobile=0
+
+for (i in 1:nrow(yeastDiso)) {
+  if(!is.null(yeastDiso[i,5]$derived[[1]])){
+    nderived=nderived+1
+  }
+  if( "full" %in% yeastDiso[i,5]$derived[[1]]$method){
+    nfull=nfull+1
+  }
+  if( "bfactor" %in% yeastDiso[i,5]$derived[[1]]$method){
+    nbfactor=nbfactor+1
+  }
+  if( "missing_residues" %in% yeastDiso[i,5]$derived[[1]]$method){
+    nmissing_residues=nmissing_residues+1
+  }
+  if( "mobile" %in% yeastDiso[i,5]$derived[[1]]$method){
+    nmobile=nmobile+1
+  }
+}
+#methods: full
+ndb=0
+for (i in 1:nrow(yeastDiso)) {
+  if(!is.null(yeastDiso[i,5]$db[[1]])){
+    ndb=ndb+1
+    }
+  }
+```
+
+In order to understand the data the first analysis to do is to evaluate the coverage of the different levels of annotations in the database. In this way, a level or a combination of them can be selected for assigning the disorder regions to each protein considering the compromise between the quality of the annotation and the coverage of the protein set of interest.  
+DB is the level with less coverage, since its annotations are manually curated, and it has **`r ndb`** entries covering a **`r round((ndb/nrow(yeastDiso))*100,2)`%** of the whole yeast proteome. The data annotated in the "Derived" level holds **`r nderived`** entries and this covers **`r round((nderived/nrow(yeastDiso))*100,2)`%** of available proteins for S. cerevisiae. Since the predictors do not have any limitations in terms of which proteins could these methods be applied to, they cover the entire protein set.  
+  
+| Level      | Method           | N° entries            | Level coverage (%)                            | Method coverage (%)                                 |
+|------------|------------------|-----------------------|-----------------------------------------------|-----------------------------------------------------|
+| DB         | full             | `r ndb`               | `r round((ndb/ndb)*100,2)`                    | `r round((ndb/nrow(yeastDiso))*100,2)`              |
+| Derived    | full             | `r nderived`          | `r round((nderived/nderived)*100,2)`          | `r round((nderived/nrow(yeastDiso))*100,2)`         |
+|            | bfactor          | `r nbfactor`          | `r round((nbfactor/nderived)*100,2)`          | `r round((nbfactor/nrow(yeastDiso))*100,2)`         |
+|            | missing-residues | `r nmissing_residues` | `r round((nmissing_residues/nderived)*100,2)` | `r round((nmissing_residues/nrow(yeastDiso))*100,2)`|
+|            | mobile           | `r nmobile`           | `r round((nmobile/nderived)*100,2)`           | `r round((nmobile/nrow(yeastDiso))*100,2)`          |
+| Predictors | simple           | `r nsimple`           | `r round((nsimple/nsimple)*100,2)`            | `r round((nsimple/nrow(yeastDiso))*100,2)`          |
+|            | mobidb-lite      | `r nmobidblite`       | `r round((nmobidblite/nsimple)*100,2)`        | `r round((nmobidblite/nrow(yeastDiso))*100,2)`      |
+Table 1:  Percent of covered entries by each Level and method of the MobiDB database.  
+
+## SPOT disorder prediction  
+  
+For predicting IDRP common deep learning techniques, such as recurrent neural networks and window-based artificial neural networks, while effective at propagating local errors within sequence neighbors, are ineffective at modeling long-range (non-local) interactions between amino acid residues that are structural but not sequence neighbors. Because residue–residue interactions are dominated by structural neighbors, how to account for them is the key for improving sequence-based prediction of protein structural and functional properties.
+The long-range dependence between a series of time-resolved events can be better captured by enforcing the constant error flow so that useful long-range interactions can be memorized. 
+SPOT (Sequence-based Prediction Online Tools for disorder) captures nonlocal interactions that are essential for determining whether a protein will fold (structured) or will not fold (intrinsically disordered) into a unique three-dimensional structure, by employing deep bidirectional LSTM cells. The bidirectional network will allow us to capture both forward and backward information contained in protein sequences. This new method is found to be highly effective in predicting both short and long disordered regions without separated training, despite disordered regions of different sizes having different compositions of amino acids
+
+The evolutionary content is established through the use of a Position-Specific Scoring Matrix (PSSM), generated by three iterations of the PSI-BLAST algorithm (Altschul et al., 1997) against the NCBI’s Non-Redundant (NR) sequence database for each protein. The Shannon entropy is also calculated to represent the information content in these probabilities per residue (Shannon, 1948). The average Shannon entropy over the entire protein is also utilized as an input feature of the general conservation of the whole protein. This leads to a total of 22 evolutionary features used for prediction.
+We also obtained 17 predicted structural features from the SPIDER2 predictor (1 ASA, 1 CN, 4 HSE based on Cα and Cβ atoms, respectively and the 11 predicted SS and sine/cosine of the backbone angle values) (Heffernan et al., 2015, 2016). Finally, seven commonly-used physicochemical properties, including hydrophobicity and polarizability, are used as features as provided by Meiler et al. (2001).
+
+Thus, using these features resulted in a 46-length feature vector for each amino acid. 
+[@Hanson2016]
+  
+## Disorder statistics
+
+The raw data collected from the MobiDB and the SPOT run for the whole yeast genome should be adjusted and transformed in order to have quantitative measurements of protein disorder that can be compared between the different methods. The processing of the MobiDB database present a bigger challenge since the database is designed as relational and the files fetched (mjson format) when transformed into a flat table format generate columns with nested matrices as values.
+For the SPOT disorder prediction, all the proteins in S. cerevisiae were input into a batch software run, and all IDR estimated were annotated in one file per protein. All the files were scanned with an ad-hoc defined function and the data was added to the disorder tables generated by the parsing of the MobiDB information.
+
+### Percentage of disordered aminoacids  
+  
+  
+Once we have established the disorder regions for each protein it is useful to have a metric describing the global disorder status for each entry in order to summarise in one number the degree of disorder and to being able to make comparisons at the protein level. The percentage (or ratio) of disorder amino acids over the total number of amino acids of a protein constitute the most direct metric, providing one value that we can assign to each proteins describing its state of disorder.
+
+
+
+```{r histograms predictors,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 2: Histogram for the disorder percentages estimated by the two predictors"}
+
+ggplot(data = yeastDiso)+geom_density(aes(x=predLiteDisoPerc,fill="MobiDB lite"),bins = 30,alpha=0.5,position = "identity")+geom_density(aes(x=predDisoPerc,fill="Simple"),bins = 30,alpha=0.5,position = "identity")+ geom_density(aes(x=predSpotDisoPerc,fill="SPOT"),bins = 30,alpha=0.5,position = "identity") + theme_minimal() + xlab("% of disorder residues") + scale_fill_manual(name = "Predictor", values = c("Simple"="darkorange1","MobiDB lite" = "chartreuse3", "SPOT" = "firebrick1"))
+```
+  
+  
+Both of the predictors featured by the MobiDB database have a notorious discrepancy on the number of residues on which they assign the "Disorder" status. This could be due, in principle, to the differences in their conceptions.  The "Simple" method is basically consensus derived from some of the already established disorder bioinformatic predictors and features region-wise annotations. In contrast, the method called MobiDB lite is, in fact, an *ad hoc* development that not only uses a consensus between these methods but also quantifies the agreement among different predictors, and it is optimized for detecting long intrinsically disordered regions (IDR) and the detection of short regions are filtered out. This could explain why Figure 1 presents a great proportion of proteins without any disorder residue for the MobiDB lite predictor. It is understandable then, that the ratio of the residues detected as intrinsically disorder over the total length of the proteins, by those different methods, are not in agreement and even they seem to be complementary between them.  
+  
+For the "Derived" and "DB" levels, the identification of IDR has, allegedly, a higher degree of confidence. The comparison the percentage of disorder residues estimated by those levels (Figure 3) and the prediction methods could help to clarify which prediction is the better option if we want to use the percentage of disordered amino acids as metric to evaluate disorder at the protein level.  
+  
+  
+```{r histograms dbANDderived,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 3: Histogram for the disorder percentages estimated for the 'DB' and 'Derived' levels"}
+
+ggplot(data = yeastDiso)+geom_density(aes(x=dbDisoPerc,fill="DB"),bins = 30,alpha=0.5,position = "identity")+geom_density(aes(x=derivedDisoPerc,fill="Derived"),bins = 30,alpha=0.5,position = "identity") + theme_minimal() + xlab("% of disorder residues") + scale_fill_manual(name = "Method", values = c("Derived"="darkgoldenrod1","DB" = "deepskyblue2"))
+```
+  
+The use of the derived data for assigning IDRs seems to present a distribution of the percentage of disorder residues congruent with the MobiDB lite predictor, presenting a considerable proportion of protein not having any disorder residues.
+
+Similar distributions of the percentage of disorder residues, for two different predictors, could be validated if the predictors are assigning similar percentage values to the same proteins. If this is the case, we should be able to find a correlation between the values calculated by different methods. In Figure 4, pairwise comparisons for both of the prediction methods and the Derived and DB annotations are shown, together with the density distributions and the corresponding correlation coefficients. Since we are interested in elucidating how CDK phosphorylation could be involved in the disorder states of its targets, another level of complexity is added to this plot. The percentage of phosphorylatable residues ([ST]P) were calculated for all the proteins and Low, Mid and High levels of putative phosphorylations sites were defined with arbitrary breaks (0-15%, 15-20%,20-60% ) of the percentage values, based on the quartiles of the distribution.
+
+```{r comparison scatters ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 4: Pairwise comparison of the % of disorder residues determined by the different methods",fig.height=8,fig.width=10 }
+
+compDataSet <- yeastDiso[,c("sequence","predDisoPerc","predLiteDisoPerc","predSpotDisoPerc","derivedDisoPerc","dbDisoPerc")]
+phosphorylatableResidues <- numeric()
+for (phosoSites in gregexpr(pattern = "[ST]P",as.character(compDataSet[,"sequence"]))){phosphorylatableResidues<-c(phosphorylatableResidues,length(phosoSites))}
+compDataSet$nPhosphoRes <- phosphorylatableResidues
+compDataSet[,"sequence"] <- nchar(as.character(compDataSet[,"sequence"]))
+colnames(compDataSet)[1] <- "proteinLength"
+compDataSet$percPhosphoRes <- (compDataSet$nPhosphoRes/compDataSet$proteinLength)*100
+compDataSet$levelPhosphoRes<-cut(compDataSet$percPhosphoRes,breaks = c(0,0.45,1,10),labels = c("Low","Mid","High"))
+
+# print(summary(compDataSet$percPhosphoRes))
+GGally::ggpairs(data = compDataSet,columns = c(2:6), ggplot2::aes(colour=levelPhosphoRes,alpha=0.5),xlab="% of disorder residues", ylab="% of disorder residues",columnLabels=c("Simple","Lite","SPOT","Derived","DB")) +
+     theme(panel.grid.minor = element_blank(),panel.grid.major = element_blank()) + theme_classic()
+
+```
+  
+  
+#### Lenght distribution in the detection of IDRs 
+  
+
+None of the methods for estimating the disorder regions of proteins seem to be in agreement with the other methods in the percentage of disorder residues for a given protein. The correlation coefficients are low, and the ratio of putative phosphorylation sites does not have any significant impact on these calculations. Moreover, the distribution of the percentage of phosphorylatable residues appears to be completely random in all the pairwise comparison scatterplots. 
+The lack of correlation in this metric for different methods does not directly imply that the methods are not identifying the same regions. In fact, all of the aminoacids classified as disordered by the MobiDB lite method, for all the proteins, were also detected by the simple method. Disparities in the lengths of the disorder stretches lead to these observed effects.  
+
+```{r stretches of disorder ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 5:distribution of the lenghts of disorder stretches" }
+
+predStretchDist <- getPredDiso(yeastDiso,"lenghts")
+predStretchDist <- cbind(predStretchDist,rep("Simple predictor",length(predStretchDist)))
+predLiteStretchDist <- getPredLiteDiso(yeastDiso,"lenghts")
+predLiteStretchDist <- cbind(predLiteStretchDist,rep("MobiDB-lite predictor",length(predLiteStretchDist)))
+predSpotStretchDist <- getSpotPredDiso(yeastDiso,"lenghts","acc")
+predSpotStretchDist <- cbind(predSpotStretchDist,rep("SPOT predictor",length(predSpotStretchDist)))
+derivedStretchDist <- getDerivedDiso(yeastDiso,"lenghts")
+derivedStretchDist <- cbind(derivedStretchDist,rep("Derived",length(derivedStretchDist)))
+dbStretchDist <- getDBDiso(yeastDiso,"lenghts")
+dbStretchDist <- cbind(dbStretchDist,rep("DB",length(dbStretchDist)))
+
+
+
+
+
+stretchData <-rbind(predStretchDist,predLiteStretchDist,predSpotStretchDist,dbStretchDist,derivedStretchDist)
+stretchData <-as.data.frame(stretchData)
+colnames(stretchData) <- c("stretchLength","method")
+stretchData$method <- as.factor(stretchData$method)
+stretchData$method <- factor(stretchData$method, levels = c("Simple predictor","MobiDB-lite predictor","SPOT predictor","Derived","DB"))
+stretchData$stretchLength <- as.numeric(stretchData$stretchLength)
+
+
+
+
+ggplot(data = stretchData,aes(x=method,y=stretchLength)) + geom_violin(aes(fill=method), alpha = 0.7,show.legend = FALSE,bw=40) +
+    theme_minimal() +
+    geom_boxplot(width=0.05) +
+    scale_fill_manual(values = c("Simple predictor"="darkorange1","MobiDB-lite predictor" = "chartreuse3","SPOT predictor" = "firebrick1","Derived"="darkgoldenrod1","DB" = "deepskyblue2")) +
+    xlab("Method") + ylab("Lenght of IDR") +
+    scale_y_continuous(limits = c(0,600))
+```
+  
+
+```{r compare index ,echo=FALSE,message=FALSE,warning=FALSE}
+
+addUniprotToIdx <- function(df,disoIdx){
+  aux_disoIdx <- disoIdx
+  for (i in 1:nrow(df)) {
+    aux_disoIdx[[i]] <- paste(df$acc[[i]],aux_disoIdx[[i]],sep = "_")
+  }
+  return(unlist(aux_disoIdx))
+}
+
+simpleDisoIdx <- getPredDiso(yeastDiso,"indices")
+simpleDisoIdx <- addUniprotToIdx(yeastDiso,simpleDisoIdx)
+liteDisoIdx <- getPredLiteDiso(yeastDiso,"indices")
+liteDisoIdx <- addUniprotToIdx(yeastDiso,liteDisoIdx)
+spotDisoIdx <- getSpotPredDiso(yeastDiso,"indices","acc")
+spotDisoIdx <- addUniprotToIdx(yeastDiso,spotDisoIdx)
+derivedDisoIdx <- getDerivedDiso(yeastDiso,"indices")
+derivedDisoIdx <- addUniprotToIdx(yeastDiso,derivedDisoIdx)
+dbDisoIdx <- getDBDiso(yeastDiso,"indices")
+dbDisoIdx <- addUniprotToIdx(yeastDiso,dbDisoIdx)
+
+
+sets <- list("Simple predictor"=simpleDisoIdx,"Lite predictor"=liteDisoIdx,"SPOT predictor"=spotDisoIdx)
+
+eulerr_options(fills=list(fill=c("darkorange1","chartreuse3","firebrick1"),alpha=0.4))
+plot(euler(sets, shape = "ellipse"), quantities = TRUE)
+
+
+sets <- list("SPOT predictor"=spotDisoIdx,"Derived"=derivedDisoIdx,"DB"=dbDisoIdx)
+
+eulerr_options(fills=list(fill=c("firebrick1","darkgoldenrod1","deepskyblue2"),alpha=0.4))
+plot(euler(sets, shape = "ellipse"), quantities = TRUE)
+
+
+# percCovLiteInSimple <- numeric()
+# for (i in 1:nrow(yeastDiso)) {
+#   liteIndex<-which(yeastDiso$disorder$predictors[[i]]$method=="mobidb-lite")
+#   simpleIndex<-which(yeastDiso$disorder$predictors[[i]]$method=="simple")
+#   if (length(liteIndex)!=0) {
+#     matLite<-yeastDiso$disorder$predictors[[i]]$regions[[liteIndex]]
+#     matSimple<-yeastDiso$disorder$predictors[[i]]$regions[[simpleIndex]]
+#     if (class(matLite)=="matrix") {
+# #getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
+#       # mat<-matrix(mat[mat[,3]=="D",],ncol=3)
+#       litePos <-numeric()
+#       litePos <-apply(matLite, 1, function(x){litePos<-c(litePos,x[1]:x[2])
+#                                    return(litePos)})
+#       litePos <- as.numeric(unlist(litePos))
+#       #print(litePos)
+#       simplePos <-numeric()
+#       simplePos <-apply(matSimple, 1, function(x){simplePos<-c(simplePos,x[1]:x[2])
+#                                    return(simplePos)})
+#       simplePos <- as.numeric(unlist(simplePos))
+#       # print(simplePos)
+#       percCovLiteInSimple <- c(percCovLiteInSimple,(length(which(litePos %in% simplePos))/length(litePos))*100)
+#       #print((length(which(litePos %in% simplePos))/length(litePos))*100)
+#     } 
+#   } 
+# }
+
+```
+
+
+Nevertheless, inconsistencies in the measurements of the ratio of disordered amino acids between different methods do not indicate that the metric could not be used as an estimator of global disorder status in proteins. However, we should certainly  be cautious about comparing values originated from different sources. 
+If the percentage of disorder residues correlates well with one or more CDK phosphorylation target properties it could be informative regardless if the estimation is highly accurate.  
+
+```{r composition ,echo=FALSE,message=FALSE,warning=FALSE,fig.height=10}
+
+yeastSeq<-yeastDiso$sequence
+names(yeastSeq)<-yeastDiso$acc
+yeastSeq<-Biostrings::AAStringSet(yeastSeq)
+
+
+##DB##
+
+# Since the derived assesment of disorder doen't cover the whole proteome I redifine the universe to those protein that have been evaluated.
+yeastSeqDBDiso <- getDBDiso(yeastDiso,"sequences")
+yeastSeqDBDiso <- Biostrings::AAStringSet(unlist(yeastSeqDBDiso))
+yeastCompDBDiso<-colSums(alphabetFrequency(yeastSeqDBDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDBDiso))[1:20])
+
+yeastSeqDBAll <- yeastSeq[names(yeastSeq) %in% names(yeastSeqDBDiso)] 
+yeastCompDBALL<-colSums(alphabetFrequency(yeastSeqDBAll))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDBAll))[1:20])
+
+DBDifferentialComp <- sort((yeastCompDBDiso-yeastCompDBALL)/yeastCompDBALL,decreasing = T)
+
+######################Set the rainbow color palette for the DB set #####################
+colorPallete_DBOrdered <- rainbow(20)
+names(colorPallete_DBOrdered) <- reorder(names(DBDifferentialComp),-DBDifferentialComp)
+########################################################################################
+
+plotDBDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(DBDifferentialComp),-DBDifferentialComp), fill=reorder(names(DBDifferentialComp),-DBDifferentialComp), y=DBDifferentialComp),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("DB curated")
+##Derived##
+
+# Since the derived assesment of disorder doen't cover the whole proteome I redifine the universe to those protein that have been evaluated.
+yeastSeqDerivedDiso <- getDerivedDiso(yeastDiso,"sequences")
+yeastSeqDerivedDiso <- Biostrings::AAStringSet(unlist(yeastSeqDerivedDiso))
+yeastCompDerivedDiso<-colSums(alphabetFrequency(yeastSeqDerivedDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDerivedDiso))[1:20])
+
+yeastSeqDerivedAll <- yeastSeq[names(yeastSeq) %in% names(yeastSeqDerivedDiso)] 
+yeastCompDerivedALL<-colSums(alphabetFrequency(yeastSeqDerivedAll))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDerivedAll))[1:20])
+
+derivedDifferentialComp <- sort((yeastCompDerivedDiso-yeastCompDerivedALL)/yeastCompDerivedALL,decreasing = T)
+
+plotDerivedDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(derivedDifferentialComp),-derivedDifferentialComp), fill=reorder(names(derivedDifferentialComp),-derivedDifferentialComp), y=derivedDifferentialComp),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("Derived disorder")
+##SPOT##
+yeastCompALL<-colSums(alphabetFrequency(yeastSeq))[1:20]/sum(colSums(alphabetFrequency(yeastSeq))[1:20])
+
+yeastSeqSpotDiso <- getSpotPredDiso(yeastDiso,"sequences","acc")
+yeastSeqSpotDiso <- Biostrings::AAStringSet(unlist(yeastSeqSpotDiso))
+yeastCompSpotDiso<-colSums(alphabetFrequency(yeastSeqSpotDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqSpotDiso))[1:20])
+spotDifferentialComp <- sort((yeastCompSpotDiso-yeastCompALL)/yeastCompALL,decreasing = T)
+
+plotSpotDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(spotDifferentialComp),-spotDifferentialComp), y=spotDifferentialComp,fill=reorder(names(spotDifferentialComp),-spotDifferentialComp)),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("SPOT predictor")
+
+##Simple##
+
+yeastCompALL<-colSums(alphabetFrequency(yeastSeq))[1:20]/sum(colSums(alphabetFrequency(yeastSeq))[1:20])
+
+yeastSeqSimpleDiso <- getPredDiso(yeastDiso,"sequences")
+yeastSeqSimpleDiso <- Biostrings::AAStringSet(unlist(yeastSeqSimpleDiso))
+yeastCompSimpleDiso<-colSums(alphabetFrequency(yeastSeqSimpleDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqSimpleDiso))[1:20])
+SimpleDifferentialComp <- sort((yeastCompSimpleDiso-yeastCompALL)/yeastCompALL,decreasing = T)
+
+plotSimpleDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(SimpleDifferentialComp),-SimpleDifferentialComp), y=SimpleDifferentialComp,fill=reorder(names(SimpleDifferentialComp),-SimpleDifferentialComp)),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("Simple predictor")
+##Lite##
+
+yeastSeqLiteDiso <- getPredLiteDiso(yeastDiso,"sequences")
+yeastSeqLiteAll <- yeastSeq[names(yeastSeq) %in% names(yeastSeqLiteDiso)] 
+yeastCompLiteALL<-colSums(alphabetFrequency(yeastSeqLiteAll))[1:20]/sum(colSums(alphabetFrequency(yeastSeqLiteAll))[1:20])
+
+yeastSeqLiteDiso <- Biostrings::AAStringSet(unlist(yeastSeqLiteDiso))
+yeastCompLiteDiso<-colSums(alphabetFrequency(yeastSeqLiteDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqLiteDiso))[1:20])
+LiteDifferentialComp <- sort((yeastCompLiteDiso-yeastCompLiteALL)/yeastCompLiteALL,decreasing = T)
+
+plotLiteDifferentialComp <- ggplot() + geom_bar(aes(x=reorder(names(LiteDifferentialComp),-LiteDifferentialComp), y=LiteDifferentialComp,fill=reorder(names(LiteDifferentialComp),-LiteDifferentialComp)),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("Lite predictor")
+
+fig<-ggarrange(plotDBDifferentialComp,plotDerivedDifferentialComp,plotSimpleDifferentialComp,plotLiteDifferentialComp,plotSpotDifferentialComp,ncol = 1)
+annotate_figure(fig,left = text_grob("Comp. Disorder - Comp. Universe / Comp. Universe", rot = 90,size = 16))
+```
+
+
+# Cdk1 targets  
+  
+
+  
+## Ubersax 2003  
+  
+
+For defining the targets for Cdk1 in Saccharomyces cerevisiae, I used publicly available data published by David Morgan's group [@Ubersax2003]. In this paper, the authors used a modified version of Cdk1 that allows bulky ATP analogues to bind in the ATP binding pocket (Cdk1-as1). They have used a library of yeast strains, each expressing a unique ORF fused with GST.  In this way, a radiolabelled bulky ATP analogue, N6-(benzyl) ATP, is administered to _in vitro_ perform kinase reactions between purified Cdk1-as1·Clb2 and the lysates from 695 different strains from the library. From the 695 unique ORF-GST selected,  385 correspond to ORFs encodign proteins with two or more Cdk consensus phosphorylation sites (S/T*-P-x-K/R), 137 ORFs encoding proteins with a single Cdk consensus site and whose transcripts are cell-cycle regulated, and 183 randomly chosen ORFs.
+For each reaction, they performed a step of GST tag mediated purification and they measured the levels of tagged phosphate. The authors define the measure __"P-Score"__ as the logarithm of the amount of phosphate incorporated per nanogram of protein, and they have set the treshold of P-Score > 2 for designate the Cdk1 targets.
+
+
+
+```{r cdk1 targets summary,echo=FALSE,message=FALSE,warning=FALSE}
+
+# _____________________________________________________________
+
+
+
+# npredictorsCDK=0
+# nmobidbliteCDK=0
+# nsimpleCDK=0
+# #methods: mobidb-lite, simple
+# for (i in 1:nrow(yeastDisoCDK1target)) {
+#   if(!is.null(yeastDisoCDK1target[i,5]$predictors[[1]])){
+#     npredictorsCDK=npredictorsCDK+1
+#     }
+#   if( "mobidb-lite" %in% yeastDisoCDK1target[i,5]$predictors[[1]]$method){
+#     nmobidbliteCDK=nmobidbliteCDK+1
+#     }
+#   if( "simple" %in% yeastDisoCDK1target[i,5]$predictors[[1]]$method){
+#     nsimpleCDK=nsimpleCDK+1
+#     }  
+#   }
+# 
+# 
+# #methods: full bfactor missing_residues mobile
+# nderivedCDK=0
+# nfullCDK=0
+# nbfactorCDK=0
+# nmissing_residuesCDK=0
+# nmobileCDK=0
+# 
+# for (i in 1:nrow(yeastDisoCDK1target)) {
+#   if(!is.null(yeastDisoCDK1target[i,5]$derived[[1]])){
+#     nderivedCDK=nderivedCDK+1
+#   }
+#   if( "full" %in% yeastDisoCDK1target[i,5]$derived[[1]]$method){
+#     nfullCDK=nfullCDK+1
+#   }
+#   if( "bfactor" %in% yeastDisoCDK1target[i,5]$derived[[1]]$method){
+#     nbfactorCDK=nbfactorCDK+1
+#   }
+#   if( "missing_residues" %in% yeastDisoCDK1target[i,5]$derived[[1]]$method){
+#     nmissing_residuesCDK=nmissing_residuesCDK+1
+#   }
+#   if( "mobile" %in% yeastDisoCDK1target[i,5]$derived[[1]]$method){
+#     nmobileCDK=nmobileCDK+1
+#   }
+# }
+# #methods: full
+# ndbCDK=0
+# for (i in 1:nrow(yeastDisoCDK1target)) {
+#   if(!is.null(yeastDisoCDK1target[i,5]$db[[1]])){
+#     ndbCDK=ndbCDK+1
+#     }
+# }
+```
+
+```{r cdkTargetTable ,echo=FALSE,message=FALSE,warning=FALSE,rows.print=20}
+datatable(Ubersax_data[order(Ubersax_data$`P-Score`,decreasing = T),c(1,11,15,6,7,8,3,4,5)],options = list(sDom  = '<"top">lrt<"bottom">ip'))
+
+write.table(Ubersax_data[order(Ubersax_data$`P-Score`,decreasing = T),c(1,11,15,6,7,8,3,4,5)],"Ubersax_data_download.tab",quote = F,sep = "\t",row.names = F)
+```
+  
+From the original 695 ORFs, I kept 687 which could be unequivocally mapped to a unique Uniprot accesion. This ID will allow us to merge the disorder data obtained from the MobiDB database and the annotations extracted from the Cdk1 targets paper data. The final data is available [here](Ubersax_data_download.tab)  
+  
+### P-Score
+  
+In order to understand the P-Score, I compare its value against P-score normalized by the numbers of mol proteins instead of the mass. For this calculation we consider that the average molar mass of one amino acid is 120 gr/mol:
+
+$$\log(\frac{Phosphorylation_{<arbitrary\ units>}}{Protein Level _{<ng>} / MW _{<ng/nmol>}}) = log(\frac{Phosphorylation_{<arbitrary\ units>}}{Protein Level _{<ng>} / (length _{<amin oacids>} *\ 120 _{<ng/(nmol*amino acids)>}))})$$   
+  
+If we consider every consensus phosphosite as phosphorylatable, we could normalize not only by the number of moles in the reaction, but also by the number of moles of phosphosites. We could think this concept as similar to the definition of one Equivalent. For the two consensus patterns considered (S/T\*-P-x-K/R and S/T\*-P), we could calculate the the number of equivalents of a phsophosite as: 
+$$nEq/mol*nmol = n° (S/T-P-x-K/R)\ or\ n°(S/T-P)*\frac{Protein Level _{<ng>}}{length _{<amin oacids>} *\ 120 _{<ng/(nmol*amino acids)>}}$$
+For understand if the P-Score is the best metric for asses the levels of CDK activity over an specific target, I compared the levels of Phosphorylation versus the Protein Levels (in nanograms) and the normalization of the protein levels considering the number of nano moles and the numbers of nano equivalents of phosho sites, instead of using only the mass.  
+  
+
+
+In the logarithmic scale the difference of considering only the mass, or the number of nano moles/nano equivalents does not show striking effects on the distribution of the dots in the [supplementary figure 6](../supplementary/Supp6.html). Then, direct comparisons between the mass of protein meassured and the calculation of moles and equivalents were performed. Is possible to see some dispersion of the dots for high values of protein levels, but still a direct linear correlation between the grmas of protein meassured and the calculations for moles and equivalents. In logarithmic scale there is even a stronger dependency.
+All in all this means that the posible cofunding variables in the protein level meassureements that I have used for normalization (molecular weight and phosphosites) are, in fact, constants.  
+
+
+```{r cdkTarget ,echo=FALSE,message=FALSE,warning=FALSE, fig.cap="Figure 6:",fig.height=10}
+
+scoresData <- Ubersax_data[,c("Phosphorylation","P-Score","Protein Level","nmol","nEq_STP","nEq_STPXKR","target","[ST]-P","[ST]-P-X-[KR]")]
+scoresData$logPhospho <- log10(Ubersax_data$Phosphorylation)
+scoresData$logMol <- log10(Ubersax_data$nmol)
+scoresData$logEq_STP <- log10(Ubersax_data$nEq_STP)
+scoresData$logEq_STPXR <- log10(Ubersax_data$nEq_STPXKR)
+scoresData$targetStrict <- cut(Ubersax_data$`P-Score`,breaks = c(-Inf,3,Inf),labels = c("Non Cdk1 target","Cdk1 target"),right = F)
+
+l_pl_nm<-ggplot(scoresData,aes(x=log10(`Protein Level`),y=log10(`nmol`)))+geom_point(aes(color=target)) + theme_linedraw() + theme(axis.title.x = element_blank()) +  xlab("Log10(Protein Level <ng>)") + ylab("Log10(nMoles)")
+
+l_pl_nES<-ggplot(scoresData,aes(x=log10(`Protein Level`),y=log10(`nEq_STP`)))+geom_point(aes(color=target)) + theme_linedraw() + theme(axis.title.x = element_blank()) +  xlab("Log10(Protein Level <ng>)") + ylab("Log10(nEquivalents S/T-P)")
+l_pl_nEF<-ggplot(scoresData,aes(x=log10(`Protein Level`),y=log10(`nEq_STPXKR`)))+geom_point(aes(color=target)) + theme_linedraw() + xlab("Log10(Protein Level <ng>)") + ylab("Log10(nEquivalents S/T-P-x-K/R)")
+
+
+
+
+pl_nm<-ggplot(scoresData,aes(x=`Protein Level`,y=`nmol`))+geom_point(aes(color=target)) + theme_linedraw()+ theme(axis.title.x = element_blank())  +  xlab("Protein Level <ng>") + ylab("nMoles")
+
+pl_nES<-ggplot(scoresData,aes(x=`Protein Level`,y=`nEq_STP`))+geom_point(aes(color=target)) + theme_linedraw() + theme(axis.title.x =  element_blank()) +  xlab("Protein Level <ng>") + ylab("nEquivalents S/T-P")
+pl_nEF<-ggplot(scoresData,aes(x=`Protein Level`,y=`nEq_STPXKR`))+geom_point(aes(color=target)) + theme_linedraw() + xlab("Protein Level <ng>") + ylab("nEquivalents S/T-P-x-K/R")
+
+ggarrange(l_pl_nm,pl_nm,l_pl_nES,pl_nES,l_pl_nEF,pl_nEF,nrow = 3, ncol = 2,common.legend = TRUE, legend = "bottom")
+
+```
+In order to confirm the lack of response of the P-Score on the different normalizations of the protein levels, the values of this metric were compared against the values of the re-calculated P-Scores considering the number of nano moles or nano equivalents of phosphorylatable protein. In all 3 cases the difference between the P-Scores is not significant. As an example, if we consider a cutoff of 6 for the logarithm of the phosphorylation divided by the nano equivalents of [ST]P phosphosites, only 18 values are not consistent between both of the predictions.
+In practical terms, the P-Score doesn't need to be normalized by the length of the protein nor the density of phosphosites.
+
+P-score does not consider the size nor the number of consensus phospho sites for Cdk1. P-Score = log(Phosphorylation<arbitrary units>/ Protein level <ng>)
+
+For correcting for protein lenght we can do P-Score Mol = log(Phosphorylation<arbitrary units>/ number of protein umols) = log(Phosphorylation<arbitrary units>/ (Protein Level <ng> / (length <AAs>)*120 <g mol/AAs>))
+
+Correcting for number of moles in the reaction or for number of Eq of [ST]-P sites or [ST]-P-X-[KR] doesn't change much, probably due to the fact that this correction is linear and the final effect in the logarithm scale of the Score is not relevant  
+  
+## Holt 2009
+  
+[@Holt2009]  
+  
+
+# Protein disorder in Cdk1 targets
+
+## Distribution of disorder percentage for Cdk1 tagets in yeast {.tabset .tabset-fade}
+
+### Ubersax
+```{r Ubersax disorder percentage,echo=FALSE,message=FALSE,warning=FALSE}
+
+ubersax_disoPerc_cols_idx <-grep("_perc",colnames(ubersax_data))
+ubersax_reshaped_disoPerc <- melt(Ubersax_data[,ubersax_disoPerc_cols_idx])
+colnames(ubersax_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
+ubersax_reshaped_disoPerc$target <- rep(Ubersax_data$target,length(ubersax_disoPerc_cols_idx))
+ubersax_reshaped_disoPerc$Predictor <- factor(ubersax_reshaped_disoPerc$Predictor,levels = ordered(levels(ubersax_reshaped_disoPerc$Predictor)))
+
+ggplot(ubersax_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
+    geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
+    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+    ggpubr::theme_pubclean() + 
+    theme(text = element_text(size=20),axis.text.x = element_text(angle=45),legend.position = "none") + 
+    scale_y_continuous(limits = c(-20, 120), breaks = c(seq(0, 100, by = 10)))
+
+```
+  
+
+### Holt
+
+```{r Holt disorder percentage,echo=FALSE,message=FALSE,warning=FALSE}
+
+
+##### Violion Plot version###########
+holt_disoPerc_cols_idx <-grep("_perc",colnames(holt_data))
+holt_reshaped_disoPerc <- melt(holt_data[,holt_disoPerc_cols_idx])
+colnames(holt_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
+holt_reshaped_disoPerc$target <- rep(holt_data$target_all,length(holt_disoPerc_cols_idx))
+holt_reshaped_disoPerc$Predictor <- factor(holt_reshaped_disoPerc$Predictor,levels = ordered(levels(holt_reshaped_disoPerc$Predictor)))
+
+ggplot(holt_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
+    geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
+    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+    ggpubr::theme_pubclean() + 
+    theme(text = element_text(size=20),axis.text.x = element_text(angle=45),legend.position = "none") + 
+    scale_y_continuous(limits = c(-20, 120), breaks = c(seq(0, 100, by = 10)))
+
+####################################
+```
+### Yeast datasets intersection
+
+```{r Holt disorder percentage,echo=FALSE,message=FALSE,warning=FALSE}
+# I should think how to define the universe: universe all proteins in holt in ubersax and CDK1 target only the ones that both techniques discovers a valid???
+
+##### Violion Plot version###########
+yeastIntersect_disoPerc_cols_idx <-grep("_perc",colnames(yeastIntersect_All_data))
+yeastIntersect_reshaped_disoPerc <- melt(yeastIntersect_All_data[,yeastIntersect_disoPerc_cols_idx])
+colnames(yeastIntersect_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
+yeastIntersect_reshaped_disoPerc$target <- rep(yeastIntersect_All_data$target_intersect,length(yeastIntersect_disoPerc_cols_idx))
+yeastIntersect_reshaped_disoPerc$Predictor <- factor(yeastIntersect_reshaped_disoPerc$Predictor,levels = ordered(levels(yeastIntersect_reshaped_disoPerc$Predictor)))
+
+ggplot(yeastIntersect_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
+    geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
+    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+    ggpubr::theme_pubclean() + 
+    theme(text = element_text(size=20),axis.text.x = element_text(angle=45),legend.position = "none") + 
+    scale_y_continuous(limits = c(-20, 120), breaks = c(seq(0, 100, by = 10)))
+
+# Main Figure 4E
+yeastIntersect_reshaped_disoPerc_figure <-  subset(yeastIntersect_reshaped_disoPerc,(Predictor=="iupl_perc")|(Predictor=="vsl_perc")|(Predictor=="spot_perc"))
+
+yeastIntersect_reshaped_disoPerc_figure$Predictor <- 
+  factor(yeastIntersect_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
+
+ggplot(yeastIntersect_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
+geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
+geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+ggpubr::theme_pubclean() +
+theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
+scale_y_continuous(limits = c(-20, 125), breaks = c(seq(0, 100, by = 10))) +
+scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
+geom_segment(aes(x = 0.75, y = 120, xend = 1.25, yend = 120),) + annotate(geom="text", x=1, y=125, label="***") +
+geom_segment(aes(x = 1.75, y = 120, xend = 2.25, yend = 120),) + annotate(geom="text", x=2, y=125, label="***") +
+geom_segment(aes(x = 2.75, y = 120, xend = 3.25, yend = 120),) + annotate(geom="text", x=3, y=125, label="***")
+
+
+####################################
+```
+
+### Human  
+```{r human disorder percentage,echo=FALSE,message=FALSE,warning=FALSE}
+
+##### Violion Plot version###########
+human_disoPerc_cols_idx <-grep("_perc",colnames(human_data))
+human_reshaped_disoPerc <- melt(human_data[,human_disoPerc_cols_idx])
+colnames(human_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
+human_reshaped_disoPerc$target <- rep(human_data$target,length(human_disoPerc_cols_idx))
+human_reshaped_disoPerc$Predictor <- factor(human_reshaped_disoPerc$Predictor,levels = ordered(levels(human_reshaped_disoPerc$Predictor)))
+
+ggplot(human_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
+    geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
+    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+    ggpubr::theme_pubclean() + 
+    theme(text = element_text(size=20),axis.text.x = element_text(angle=45),legend.position = "none") + 
+    scale_y_continuous(limits = c(-20, 120), breaks = c(seq(0, 100, by = 10)))
+
+# Main Figure 4E
+human_reshaped_disoPerc_figure <-  subset(human_reshaped_disoPerc,(Predictor=="iupl_perc")|(Predictor=="vsl_perc")|(Predictor=="spot_perc"))
+
+human_reshaped_disoPerc_figure$Predictor <- 
+  factor(human_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
+
+ggplot(human_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
+geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
+geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+ggpubr::theme_pubclean() +
+theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
+scale_y_continuous(limits = c(-20, 125), breaks = c(seq(0, 100, by = 10))) +
+scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
+geom_segment(aes(x = 0.75, y = 120, xend = 1.25, yend = 120),) + annotate(geom="text", x=1, y=125, label="***") +
+geom_segment(aes(x = 1.75, y = 120, xend = 2.25, yend = 120),) + annotate(geom="text", x=2, y=125, label="***") +
+geom_segment(aes(x = 2.75, y = 120, xend = 3.25, yend = 120),) + annotate(geom="text", x=3, y=125, label="***")
+```
+
+For boths datasets there is a statistical significative increase in the percentage of predicted disorder aminoacids in yeast proteins for those proteins characterized as CDK1 targets. Moreover, for the Holt dataset a similar result is obtained if we skipped the CDK1 phosporylation site filter. That is, CDK1 targets defined as all the proteins with Serines and Threonines residues presenting a decrease on the phosphorylation upon CDK1 inhibition,regardles if they respect the minimal CDK1 phosphosite consensus motif, show an increase in the percentage of predicted disorder amino acids (<a href="supplementary/Supp.html">Supplementary</a> Fig X).
+
+```{r consensus phosphosites in disorder,echo=FALSE,message=FALSE,warning=FALSE,fig.cap=""}
+# Main figure 4F
+#___Yeast Intersection USING IUPRED LONG___
+# adding number of consensus in total and in disorder
+
+yeastIntersectMinCons <- sapply(yeastIntersect_All_data$Sequence,function(x){index<-unlist(gregexpr("[ST]P",x),use.names = F)
+                                                      if (index[1]==-1) {return(0)
+                                                      } else {return(length(index))}})
+names(yeastIntersectMinCons) <- NULL 
+
+expct_yeastIntersectMinCons <- yeastIntersectMinCons*(yeastIntersect_All_data$iupl_perc/100)
+
+obsv_yeastIntersectMinCons <- sapply(yeastIntersect_All_data$iupl_disoSeq,function(x){index<-unlist(gregexpr("[ST]P",x),use.names = F)
+                                                      if (index[1]==-1) {return(0)
+                                                      } else {return(length(index))}})
+names(obsv_yeastIntersectMinCons) <- NULL 
+yeastIntersect_iupl_obsVSexp_data <- as.data.frame(cbind(expct_yeastIntersectMinCons,obsv_yeastIntersectMinCons,yeastIntersect_All_data$target_intersect))
+colnames(yeastIntersect_iupl_obsVSexp_data) <-c("expected","observed","target")
+yeastIntersect_iupl_obsVSexp_data$expected <- as.numeric(yeastIntersect_iupl_obsVSexp_data$expected)
+yeastIntersect_iupl_obsVSexp_data$observed <- as.numeric(yeastIntersect_iupl_obsVSexp_data$observed)
+
+ggplot(yeastIntersect_iupl_obsVSexp_data) + 
+  geom_point(aes(x=observed,y=expected,color=target),size=2,alpha=0.6)+
+    geom_abline(color="darkslategrey",slope = 1,size=1,linetype = "dashed")+
+    ggpubr::theme_classic2() + 
+    theme(text = element_text(size=17),legend.position = "none") + 
+    scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed [S/T]P in IDR") +
+    scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected [S/T]P in IDR")
+# yeastIntersectFullCons <- sapply(yeastIntersect_All_data$Sequence,function(x){index<-unlist(gregexpr("[ST]P.[KR]",x),use.names = F)
+#                                                       if (index[1]==-1) {return(0)
+#                                                       } else {return(length(index))}})
+# names(yeastIntersectFullCons) <- NULL 
+
+
+
+#___human USING IUPRED LONG___
+# adding number of consensus in total and in disorder
+
+humanMinCons <- sapply(human_data$Sequence,function(x){index<-unlist(gregexpr("[ST]P",x),use.names = F)
+                                                      if (index[1]==-1) {return(0)
+                                                      } else {return(length(index))}})
+names(humanMinCons) <- NULL 
+
+expct_humanMinCons <- humanMinCons*(human_data$iupl_perc/100)
+
+obsv_humanMinCons <- sapply(human_data$iupl_disoSeq,function(x){index<-unlist(gregexpr("[ST]P",x),use.names = F)
+                                                      if (index[1]==-1) {return(0)
+                                                      } else {return(length(index))}})
+names(obsv_humanMinCons) <- NULL 
+human_iupl_obsVSexp_data <- as.data.frame(cbind(expct_humanMinCons,obsv_humanMinCons,human_data$target))
+colnames(human_iupl_obsVSexp_data) <-c("expected","observed","target")
+human_iupl_obsVSexp_data$expected <- as.numeric(human_iupl_obsVSexp_data$expected)
+human_iupl_obsVSexp_data$observed <- as.numeric(human_iupl_obsVSexp_data$observed)
+human_iupl_obsVSexp_data$target <- as.factor(human_iupl_obsVSexp_data$target)
+
+ggplot(human_iupl_obsVSexp_data) + 
+  geom_point(aes(x=observed,y=expected,color=target),size=2,alpha=0.5)+
+    geom_abline(color="darkslategrey",slope = 1,size=1,linetype = "dashed")+
+    ggpubr::theme_classic2() + 
+    theme(text = element_text(size=17),legend.position = "none") + 
+    scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed [S/T]P in IDR") +
+    scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected [S/T]P in IDR")
+# humanFullCons <- sapply(human_All_data$Sequence,function(x){index<-unlist(gregexpr("[ST]P.[KR]",x),use.names = F)
+#                                                       if (index[1]==-1) {return(0)
+#                                                       } else {return(length(index))}})
+# names(humanFullCons) <- NULL 
+
+```
+
+
+
+```{r Holt agreements disorder vs phosposites ,echo=FALSE,message=FALSE,warning=FALSE}
+
+# holt_iupredS_StratContingencyArray <- getStratContingencyArray(df = subset(holt_data,target_all=="Cdk1 target"),sequence_col = "Sequence",diso_index_col = "iups_disoIndexes",psites_col = "psite")
+# 
+# woolf_test(holt_iupredS_StratContingencyArray)
+# mantelhaen.test(holt_iupredS_StratContingencyArray)
+# 
+# holt_iupredS_fisherDF <- data.frame(subset(holt_data,target_all=="Cdk1 target")$Uniprot)
+# colnames(fisherDF) <- "Uniprot"
+# 
+# holt_iupredS_fisherDF$ORs <- apply(holt_iupredS_StratContingencyArray, 3,function(x){
+#      ft<-fisher.test(x)
+#      return(ft$estimate)
+#      })
+# holt_iupredS_fisherDF$pvalue <- apply(holt_iupredS_StratContingencyArray, 3,function(x){
+#      ft<-fisher.test(x)
+#      return(ft$p.value)
+#      })
+# holt_iupredS_fisherDF$logPvalue <- -log10(holt_iupredS_fisherDF$pvalue)
+# holt_iupredS_fisherDF$logOr <- log10(holt_iupredS_fisherDF$ORs)
+# 
+# holt_iupredS_fisherDF$logOr[is.infinite(holt_iupredS_fisherDF$logOr) & holt_iupredS_fisherDF$logOr > 0] <- 2
+# holt_iupredS_fisherDF$logOr[is.infinite(holt_iupredS_fisherDF$logOr) & holt_iupredS_fisherDF$logOr < 0] <- -2
+
+
+###Trying to find a way to move the dots out from the logPvalue=0 with random noise(Jitter) in order to asses the amount of points we have there.
+# set.seed(1234)
+# fisherDF$pvalue[fisherDF$pvalue==1]<-abs(jitter(fisherDF$logPvalue[fisherDF$logPvalue==0]))
+
+# ggplot(holt_iupredS_fisherDF, aes(x = logOr, y = logPvalue)) +
+#   geom_point() +
+#   # scale_color_manual(values = c("", "grey")) +
+#   theme_bw(base_size = 12) + theme(legend.position = "bottom") +
+#   scale_y_continuous(trans='log10',limits = c(0.1,10)) +
+#   xlim(-2, 2) +
+#   scale_shape_manual()+
+#   # geom_point(data = subset(fisherDF, log10(ORs) < -2), aes(x = -2, y = -log10(pvalue)), alpha = 0.5,shape=60,size=4) +
+#   # geom_point(data = subset(fisherDF, log10(ORs) > 2), aes(x = 2, y = -log10(pvalue)), alpha = 0.5,shape=62,size=4) +
+#   geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "red")+
+#   annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)
+
+
+# All predictors eval plot Holt
+predictors <- c("Disembl 465","Disembl Hot loops","Espritz DisProt","Espritz NMR","Espritz Xray","GlobProt","IUPred long","IUPred short","JRONN","Pfilt","SEG","SPOT","VSL2b")
+
+
+idx_cols <- sort(colnames(holt_data)[grep(pattern = "_disoIndexes",colnames(holt_data))])
+proteome_length <- sum(yeastDiso_full$Length)
+diso_fraction <- numeric()
+pval <- numeric()
+commonOR <- numeric()
+for (i in 1:length(idx_cols)) {
+  StratContingencyArray <- getStratContingencyArray(df = subset(holt_data,target_all=="Cdk1 target"),
+                                                    sequence_col = "Sequence",
+                                                    diso_index_col = idx_cols[i],
+                                                    psites_col = "psite") 
+  CMHtest <- mantelhaen.test(StratContingencyArray)
+  pval[i]<-CMHtest$p.value
+  commonOR[i]<-CMHtest$estimate
+  diso_fraction[i]<-(sum(lengths(strsplit(subset(yeastDiso_full,yeastDiso_full[, yeastIntersect_idx_cols[i]]!="0")[,idx_cols[i]],","))))/proteome_length
+}
+predictorsCMH_data<-as.data.frame(cbind(predictors,diso_fraction,pval,commonOR))
+predictorsCMH_data$diso_fraction <- as.numeric(predictorsCMH_data$diso_fraction)
+predictorsCMH_data$pval <- as.numeric(predictorsCMH_data$pval)
+predictorsCMH_data$commonOR <- as.numeric(predictorsCMH_data$commonOR)
+
+ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=predictors)) + 
+  geom_point(aes(color=diso_fraction),size=3) + 
+  geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "darkslategrey")+
+  annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)+
+  geom_vline(xintercept=log10(1), linetype="dashed", color = "darkslategrey")+
+  annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)+
+  scale_y_continuous(limits = c(1,100)) +
+  xlim(-2, 2) +
+  geom_label_repel()+
+  theme_minimal(base_size = 12) + 
+  scale_color_gradient(low = "blue",high = "red",limits=c(0,0.5),breaks=c(0,0.25,0.5)) +
+  guides(color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "right"))
+
+ggdotchart(predictorsCMH_data, x = "predictors", y = "commonOR",
+           color = "diso_fraction",                                # Color by groups
+           sorting = "descending",                       # Sort value in descending order
+           add = "segments",                             # Add segments from y = 0 to dots
+           rotate = TRUE,                                # Rotate vertically
+           dot.size = 10,                                 # Large dot size
+           label = round(predictorsCMH_data$commonOR,2),                        # Add mpg values as dot labels
+           font.label = list(color = "white", size = 10, 
+                             vjust = 0.5),               # Adjust label parameters
+           ggtheme = theme_pubr()                        # ggplot2 theme
+) +
+    geom_hline(yintercept=1, linetype="dashed", color = "darkslategrey") +
+    scale_color_gradient(low = "blue",high = "red",limits=c(0,0.5),breaks=c(0,0.25,0.5)) +
+    guides(color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "bottom"))+
+    theme(axis.title.y = element_blank())
+  
+# All predictors eval plot Intersecrt
+predictors <- c("Disembl 465","Disembl Hot loops","Espritz DisProt","Espritz NMR","Espritz Xray","GlobProt","IUPred long","IUPred short","JRONN","Pfilt","SEG","SPOT","VSL2b")
+
+
+idx_cols <- sort(colnames(yeastIntersect_CDK1_data)[grep(pattern = "_disoIndexes",colnames(yeastIntersect_CDK1_data))])
+proteome_length <- sum(yeastDiso_full$Length)
+diso_fraction <- numeric()
+pval <- numeric()
+commonOR <- numeric()
+for (i in 1:length(idx_cols)) {
+  StratContingencyArray <- getStratContingencyArray(df = subset(yeastIntersect_CDK1_data,target_intersect=="Cdk1 target"),
+                                                    sequence_col = "Sequence",
+                                                    diso_index_col = idx_cols[i],
+                                                    psites_col = "psite") 
+  CMHtest <- mantelhaen.test(StratContingencyArray)
+  pval[i]<-CMHtest$p.value
+  commonOR[i]<-CMHtest$estimate
+  diso_fraction[i]<-(sum(lengths(strsplit(subset(yeastDiso_full,idx_cols[i]!="0")[,idx_cols[i]],","))))/proteome_length
+}
+predictorsCMH_data<-as.data.frame(cbind(predictors,diso_fraction,pval,commonOR))
+predictorsCMH_data$diso_fraction <- as.numeric(predictorsCMH_data$diso_fraction)
+predictorsCMH_data$pval <- as.numeric(predictorsCMH_data$pval)
+predictorsCMH_data$commonOR <- as.numeric(predictorsCMH_data$commonOR)
+
+ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=predictors)) + 
+  geom_point(aes(color=diso_fraction),size=3) + 
+  geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "darkslategrey")+
+  annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)+
+  geom_vline(xintercept=log10(1), linetype="dashed", color = "darkslategrey")+
+  annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8)+
+  scale_y_continuous(limits = c(1,30)) +
+  xlim(-2, 2) +
+  geom_label_repel()+
+  theme_minimal(base_size = 12) + 
+  scale_color_gradient(low = "blue",high = "red",limits=c(0,0.5),breaks=c(0,0.25,0.5)) +
+  guides(color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "right"))
+
+ggdotchart(predictorsCMH_data, x = "predictors", y = "commonOR",
+           color = "diso_fraction",                                # Color by groups
+           sorting = "descending",                       # Sort value in descending order
+           add = "segments",                             # Add segments from y = 0 to dots
+           rotate = TRUE,                                # Rotate vertically
+           dot.size = 10,                                 # Large dot size
+           label = round(predictorsCMH_data$commonOR,2),                        # Add mpg values as dot labels
+           font.label = list(color = "white", size = 10, 
+                             vjust = 0.5),               # Adjust label parameters
+           ggtheme = theme_pubr()                        # ggplot2 theme
+) +
+    geom_hline(yintercept=1, linetype="dashed", color = "darkslategrey") +
+    scale_color_gradient(low = "blue",high = "red",limits=c(0,0.5),breaks=c(0,0.25,0.5)) +
+    guides(color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "bottom"))+
+    theme(axis.title.y = element_blank())
+
+###############################
+# Main fig 4e# Main fig 4e
+
+predictors <- c("IUPred long","SPOT","VSL2b")
+
+
+yeastIntersect_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
+yeastIntersect_organism <- (rep("Yeast",length(yeastIntersect_idx_cols)))
+yeastIntersect_proteome_length <- sum(yeastDiso_full$Length)
+yeastIntersect_diso_fraction <- numeric()
+yeastIntersect_pval <- numeric()
+yeastIntersect_commonOR <- numeric()
+for (i in 1:length(yeastIntersect_idx_cols)) {
+  yeastStratContingencyArray <- getStratContingencyArray(df = subset(yeastIntersect_CDK1_data,target_intersect=="Cdk1 target"),
+                                                    sequence_col = "Sequence",
+                                                    diso_index_col = yeastIntersect_idx_cols[i],
+                                                    psites_col = "psite") 
+  yeastIntersect_CMHtest <- mantelhaen.test(yeastStratContingencyArray)
+  yeastIntersect_pval[i]<-yeastIntersect_CMHtest$p.value
+  yeastIntersect_commonOR[i]<-yeastIntersect_CMHtest$estimate
+  yeastIntersect_diso_fraction[i] <-
+    (sum(lengths(strsplit(subset(yeastDiso_full,yeastDiso_full[, yeastIntersect_idx_cols[i]]!="0")[,yeastIntersect_idx_cols[i]],","))))/yeastIntersect_proteome_length
+}
+
+human_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
+human_organism <- (rep("Human",length(human_idx_cols)))
+human_proteome_length <- sum(humanDiso_full$Length)
+human_diso_fraction <- numeric()
+human_pval <- numeric()
+human_commonOR <- numeric()
+for (i in 1:length(human_idx_cols)) {
+  humanStratContingencyArray <- getStratContingencyArray(df = subset(human_data,target=="Cdk1 target"),
+                                                    sequence_col = "Sequence",
+                                                    diso_index_col = human_idx_cols[i],
+                                                    psites_col = "psite_CDK1"
+                                                    ) 
+  human_CMHtest <- mantelhaen.test(humanStratContingencyArray)
+  human_pval[i]<-human_CMHtest$p.value
+  human_commonOR[i]<-human_CMHtest$estimate
+  human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,humanDiso_full[,human_idx_cols[i]]!="0")[,human_idx_cols[i]],","))))/human_proteome_length
+}
+
+
+yeastIntersect_CMH_data <- cbind(predictors,yeastIntersect_diso_fraction,yeastIntersect_pval,yeastIntersect_commonOR,yeastIntersect_organism)
+human_CMH_data <- cbind(predictors,human_diso_fraction,human_pval,human_commonOR,human_organism)
+
+
+predictorsCMH_data<-as.data.frame(rbind(yeastIntersect_CMH_data,human_CMH_data))
+colnames(predictorsCMH_data) <- c("predictors","diso_fraction","pval","commonOR","organism")
+predictorsCMH_data$diso_fraction <- as.numeric(predictorsCMH_data$diso_fraction)
+predictorsCMH_data$pval <- as.numeric(predictorsCMH_data$pval)
+predictorsCMH_data$commonOR <- as.numeric(predictorsCMH_data$commonOR)
+predictorsCMH_data$organism <- as.factor(predictorsCMH_data$organism)
+
+
+ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=predictors)) + 
+    geom_point(aes(color=diso_fraction,shape=organism),size=3) + 
+    geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "darkslategrey")+
+    annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8,size=5)+
+    geom_vline(xintercept=log10(1), linetype="dashed", color = "darkslategrey")+
+    scale_y_continuous(limits = c(1,75)) +
+    xlim(-2, 2) +
+    geom_label_repel(size=5)+
+    theme_minimal(base_size = 15) +
+    # ggpubr::theme_pubclean(base_size=15,) +
+    theme(legend.position = c(0.22,0.75),legend.box.just = "left",legend.box.margin = margin(2, 2, 2, 2),
+          legend.box.background = element_rect(color="darkslategrey"),panel.grid.minor = element_blank()) +
+    scale_color_gradient(low = "blue",high = "red",limits=c(0,0.5),breaks=c(0,0.25,0.5)) +
+    guides(position="bottom",color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "right"),shape=guide_legend(title="Organism"))
+
+
+```
+
+
+ 
+
+Holt paper
+
+- between the cdk1 targets and non cdk1 targets we've got 1977 proteins with detectable peptides out of 6726 in the Uniprot yeast proteome.
+- The peaks were selected with the consideration of A-score > 13. They don't mention to be acounting for neutral loss
+
+```{r Compare papers,echo=FALSE,message=FALSE,warning=FALSE}
+
+
+# sets <- list(Ubersax_cdkTargets=CDK1targetSacCer$Entry[CDK1targetSacCer$`P-Score`>=2],
+#              Ubersax_nonCdkTargets=CDK1targetSacCer$Entry[CDK1targetSacCer$`P-Score`<2],
+#              Holt_cdkTargets=cdkTargetList,
+#              Holt_nonCdkTargets=nonCdkTargetList)
+# 
+# eulerr_options(fills=list(fill=c("darkolivegreen1","deeppink3","darkcyan","darkorange1"),alpha=0.4))
+# plot(euler(sets, shape = "ellipse"), quantities = TRUE)
+
+
+```
+## Sequence characteristics of disorder regions in proteins
+
+Considering the analysis performed previously, It seems evident that disorder regions are enriched in certain residues while they presents less proportion of others. Serine, Threonine, Proline Asparagine and charged amino acids are present in a bigger proportion in disorder regions when we compare with the compositions of the entire proteins. Knowing the sequence motif for the minimal consensus phosphosite, the first question that raises is if the higher propensity of CDK1 phosphosites falling into disordered regions is due only by the fact that predictors recognize Ser, Pro and Thr rich regions as IDR.  
+
+<a href="supplementary/Supp.html">Supplementary</a>
+
+```{r save_env,echo=FALSE,message=FALSE,warning=FALSE}
+save.image("~/projects/cdk1_cyclinB1/phase_separation/disorder/disoWS.RData")
+```
+
+# References  
+  
