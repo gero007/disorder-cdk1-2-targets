@@ -1,0 +1,48 @@
+---
+title: "RMN data"
+output:
+  html_document:
+    df_print: paged
+    fig_caption: yes
+  pdf_document: default
+---
+```{r setup, include=FALSE}
+library(readr)
+library(tidyr)
+library(dplyr)
+```
+
+## PDB NMR
+
+Human data extracted from https://www.ebi.ac.uk/pdbe/entry/search/index/?searchParams=%7B%22q_experimental_method%22:%5B%7B%22value%22:%22solution%20nmr%22,%22condition1%22:%22AND%22,%22condition2%22:%22Contains%22%7D,%7B%22value%22:%22Solution%20NMR%22,%22condition1%22:%22AND%22,%22condition2%22:%22Equal%20to%22%7D%5D,%22q_organism_name%22:%5B%7B%22value%22:%22homo%20sapiens%22,%22condition1%22:%22AND%22,%22condition2%22:%22Equal%20to%22%7D%5D,%22q_molecule_type%22:%5B%7B%22value%22:%22Protein%22,%22condition1%22:%22AND%22,%22condition2%22:%22Equal%20to%22%7D%5D,%22resultState%22:%7B%22tabIndex%22:0,%22paginationIndex%22:1,%22perPage%22:%2210%22,%22sortBy%22:%22Sort%20by%22%7D%7D
+
+```{r load_data}
+
+#################
+##### YEAST #####
+#################
+PDBe_yeast_NMR <- read_csv("../PDBe_search_yeast_NMR.csv", 
+    col_types = cols_only(pdb_id = col_guess(), 
+        uniprot_accession = col_guess()))
+
+Holt_phosphosites_summary <- Holt_MS_Cdk1_all_phosphosites[,c("site","centered_15mer","Uniprot")] %>% group_by(Uniprot) %>% summarise(paste(site,collapse = ","))
+phosohosites_yeast_NMR <- merge.data.frame(Holt_phosphosites_summary,PDBe_holt,by.x = "Uniprot",by.y = "uniprot_accession")
+write.table(phosohosites_yeast_NMR,file = "../yeast_nmr_data.tsv",sep = "\t",quote = F,row.names = F)
+
+
+
+#################
+##### HUMAN #####
+#################
+PDBe_human_NMR <- read_csv("../PDBe_search_human_NMR.csv", 
+    col_types = cols_only(pdb_id = col_guess(), 
+        uniprot_accession = col_guess()))
+PDBe_human_NMR <- PDBe_human_NMR %>% mutate(uniprot_accession = strsplit(uniprot_accession,",")) %>% unnest(uniprot_accession)
+
+phosohosites_human_NMR <- merge.data.frame(PDBe_human_NMR,phosphosite_CDKFamilyTarget_HS[,1:4],by.x = "uniprot_accession",by.y = "ACC#")
+
+phosohosites_human_NMR <- phosohosites_human_NMR %>% group_by(uniprot_accession,pdb_id,GENE,PROTEIN) %>% summarise(paste(MOD_RSD,collapse = ","))
+write.table(phosohosites_human_NMR,file = "../human_nmr_data.tsv",sep = "\t",quote = F,row.names = F)
+
+```
+
