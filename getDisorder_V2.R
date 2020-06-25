@@ -184,13 +184,13 @@ getVSLDisoMatrix <- function(disoPath){
 }
 
 
-getSpotPredDiso <- function(df,spotDisorderList,output,accession_col){
+getSpotPredDiso <- function(df,vslDisorderList,output,accession_col){
   predDisoPercAll <- c()
   predStretchDist <- c()
   disoPosList <- list()
   disoSeqList <- list()
   for (i in 1:nrow(df)) {
-    mat<-spotDisorderList[[df[i,accession_col]]]
+    mat<-vslDisorderList[[df[i,accession_col]]]
     # print(i)
     # print(accession_col)
     #select only disordered regions
