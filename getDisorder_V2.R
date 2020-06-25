@@ -161,3 +161,81 @@ getSpotPredDiso <- function(df,disoPath,accession_col,length_col=NULL,sequence_c
   output_data_frame$spot_disoSeq <- disoSeqList
   return(output_data_frame)
 }
+
+########################################
+################ VSL2B ##################
+########################################
+
+
+getVSLDisoMatrix <- function(disoPath){ 
+  output_list <- list()
+  for (disoFile in dir(path = disoPath,pattern = "*.vsl2b")) {
+    id=strsplit(disoFile,split = "\\.")[[1]][1]
+    # print(id)
+    # print(paste(disoPath,disoFile,sep = ""))
+    lines <- readLines(paste(disoPath,disoFile,sep = ""))
+    lines <- lines[grepl(pattern = "[0-9]-[0-9]",lines)]
+    indexes <- as.numeric(unlist(strsplit(lines,"-")))
+    disoMatrix <- matrix(indexes, ncol = 2, byrow = T)
+    # disoMatrix <- cbind(disoMatrix,rep("D",nrow(disoMatrix))) 
+    output_list[[id]] <- disoMatrix
+  }
+  return(output_list)
+}
+
+
+getSpotPredDiso <- function(df,spotDisorderList,output,accession_col){
+  predDisoPercAll <- c()
+  predStretchDist <- c()
+  disoPosList <- list()
+  disoSeqList <- list()
+  for (i in 1:nrow(df)) {
+    mat<-spotDisorderList[[df[i,accession_col]]]
+    # print(i)
+    # print(accession_col)
+    #select only disordered regions
+    mat <- matrix(mat[mat[,3]=="D",],ncol=4)
+    # print(df$acc[[i]])
+    # print(mat)
+    if (nrow(mat)!=0) {
+      predStretchDist <- c(predStretchDist,as.numeric(mat[,4]))
+      #calculate the number of disoredered AAs
+      nDiso<-sum(as.numeric(mat[,4]))
+      # print(nDiso)
+      proteinLength <- nchar(df$sequence[[i]])
+      # print(proteinLength)
+      predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
+      # print((nDiso/proteinLength)*100)
+      disoPos <-numeric()
+      disoPos <-apply(mat, 1, function(x){disoPos<-c(disoPos,x[1]:x[2])
+      return(disoPos)})
+      disoPos <- as.numeric(unlist(disoPos))
+      disoPosList[[i]]<-disoPos
+      disoSeq <- character()
+      for (row in 1:nrow(mat)) {
+        startIdx <- as.numeric(mat[row,1])
+        endIdx <- as.numeric(mat[row,2])
+        disoSeq <- paste(disoSeq,substr(df[i,"sequence"],startIdx,endIdx),sep = "")
+      }
+      disoSeqList[[df[i,accession_col]]]<-disoSeq
+      
+    } else {
+      nDiso<-0
+      proteinLength <- nchar(df$sequence[i])
+      predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
+      
+      disoPos <-numeric()
+      disoPos <- 0
+      disoPosList[[i]]<-disoPos
+    }
+  }
+  if (output=="percentage") {
+    return(predDisoPercAll)
+  } else if (output=="lenghts") {
+    return(predStretchDist)
+  } else if (output=="indices") {
+    return(disoPosList)
+  } else if (output=="sequences") {
+    return(disoSeqList)
+  } else {stop("wrong output specified. Options are 'percentage','lenghts' or 'indices' ")}
+}

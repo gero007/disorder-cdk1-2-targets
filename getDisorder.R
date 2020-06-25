@@ -10,55 +10,25 @@ getPredDiso <- function(df,output){
   disoPosList <- list()
   disoSeqList <- list()
   for (i in 1:nrow(df)) {
+    mat<-df$disorder$predictors[[i]]$regions[[1]]
+    predStretchDist <- c(predStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+    #calculate the number of disoredered AAs
+    nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
+    proteinLength <- nchar(df$sequence[i])
+    predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
     
-    simpleIndex<-grep("simple",df$disorder$predictors[[i]]$method)
-    if (length(simpleIndex)!=0) {
-      mat<-df$disorder$predictors[[i]]$regions[[simpleIndex]]
-      if (class(mat)[1]=="matrix") {
-        predStretchDist <- c(predStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-        #calculate the number of disoredered AAs
-        nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-        proteinLength <- nchar(df$sequence[i])
-        predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
-        
-        disoPos <-numeric()
-        disoPos <-apply(mat, 1, function(x){disoPos<-c(disoPos,x[1]:x[2])
-        return(disoPos)})
-        disoPos <- as.numeric(unlist(disoPos))
-        disoPosList[[i]]<-disoPos
-        disoSeq <- character()
-        for (row in 1:nrow(mat)) {
-          startIdx <- as.numeric(mat[row,1])
-          endIdx <- as.numeric(mat[row,2])
-          disoSeq <- paste(disoSeq,substr(df[i,"sequence"],startIdx,endIdx),sep = "")
-        }
-        disoSeqList[[df$acc[[i]]]]<-disoSeq
-      } else {predDisoPercAll <- c(predDisoPercAll,0)
-      disoPosList[[i]]<-0
-      disoSeqList[[df$acc[[i]]]]<-""
-      }
-    } else {predDisoPercAll <- c(predDisoPercAll,NA)
-    disoPosList[[i]]<-NA
+    disoPos <-numeric()
+    disoPos <-apply(mat, 1, function(x){disoPos<-c(disoPos,x[1]:x[2])
+    return(disoPos)})
+    disoPos <- as.numeric(unlist(disoPos))
+    disoPosList[[i]]<-disoPos
+    disoSeq <- character()
+    for (row in 1:nrow(mat)) {
+      startIdx <- as.numeric(mat[row,1])
+      endIdx <- as.numeric(mat[row,2])
+      disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
     }
-    # mat<-df$disorder$predictors[[i]]$regions[[simpleIndex]]
-    # predStretchDist <- c(predStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-    # #calculate the number of disoredered AAs
-    # nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-    # proteinLength <- nchar(df$sequence[i])
-    # predDisoPercAll <- c(predDisoPercAll,(nDiso/proteinLength)*100)
-    # 
-    # disoPos <-numeric()
-    # disoPos <-apply(mat, 1, function(x){disoPos<-c(disoPos,x[1]:x[2])
-    # return(disoPos)})
-    # disoPos <- as.numeric(unlist(disoPos))
-    # disoPosList[[i]]<-disoPos
-    # disoSeq <- character()
-    # for (row in 1:nrow(mat)) {
-    #   startIdx <- as.numeric(mat[row,1])
-    #   endIdx <- as.numeric(mat[row,2])
-    #   disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
-    # }
-    # disoSeqList[[df$acc[[i]]]]<-disoSeq
+    disoSeqList[[df$acc[[i]]]]<-disoSeq
   }
   if (output=="percentage") {
     return(predDisoPercAll)
@@ -78,11 +48,10 @@ getPredLiteDiso <- function(df,output){
   disoPosList <- list()
   disoSeqList <- list()
   for (i in 1:nrow(df)) {
-    # the regular expression is meant to capture the names of the methods for human and yeast database. one is dash and the other underscore
-    liteIndex<-grep("mobidb[_-]lite",df$disorder$predictors[[i]]$method)
+    liteIndex<-which(df$disorder$predictors[[i]]$method=="mobidb-lite")
     if (length(liteIndex)!=0) {
       mat<-df$disorder$predictors[[i]]$regions[[liteIndex]]
-      if (class(mat)[1]=="matrix") {
+      if (class(mat)=="matrix") {
         predLiteStretchDist <- c(predLiteStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
         #calculate the number of disoredered AAs
         nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
@@ -98,7 +67,7 @@ getPredLiteDiso <- function(df,output){
         for (row in 1:nrow(mat)) {
           startIdx <- as.numeric(mat[row,1])
           endIdx <- as.numeric(mat[row,2])
-          disoSeq <- paste(disoSeq,substr(df[i,"sequence"],startIdx,endIdx),sep = "")
+          disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
         }
         disoSeqList[[df$acc[[i]]]]<-disoSeq
       } else {predLiteDisoPercAll <- c(predLiteDisoPercAll,0)
@@ -128,16 +97,16 @@ getDerivedDiso <- function(df,output){
   derivedDisoPercAll <- c()
   disoPosList <- list()
   disoSeqList <- list()
-  for (i in 1:nrow(df)) {
-    if (!is.null(df$disorder$derived[[i]])) {
-      fullIndex<-which(df$disorder$derived[[i]]$method=="full")
-      mat<-df$disorder$derived[[i]]$regions[[fullIndex]]
+  for (i in 1:nrow(yeastDiso)) {
+    if (!is.null(yeastDiso$disorder$derived[[i]])) {
+      fullIndex<-which(yeastDiso$disorder$derived[[i]]$method=="full")
+      mat<-yeastDiso$disorder$derived[[i]]$regions[[fullIndex]]
       #getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
       mat<-matrix(mat[mat[,3]=="D",],ncol=3)
       derivedStretchDist <- c(derivedStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
       #calculate the number of disoredered AAs
       nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-      proteinLength <- nchar(df$sequence[i])
+      proteinLength <- nchar(yeastDiso$sequence[i])
       derivedDisoPercAll <- c(derivedDisoPercAll,(nDiso/proteinLength)*100)
       # print((nDiso/proteinLength)*100)
       if (nrow(mat)>0) {
@@ -151,7 +120,7 @@ getDerivedDiso <- function(df,output){
         for (row in 1:nrow(mat)) {
           startIdx <- as.numeric(mat[row,1])
           endIdx <- as.numeric(mat[row,2])
-          disoSeq <- paste(disoSeq,substr(df[i,"sequence"],startIdx,endIdx),sep = "")
+          disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
         }
         disoSeqList[[df$acc[[i]]]]<-disoSeq
       } else {
@@ -183,16 +152,16 @@ getDBDiso <- function(df,output){
   dbStretchDist <- c()
   disoPosList <- list()
   disoSeqList <- list()
-  for (i in 1:nrow(df)) {
-    if (!is.null(df$disorder$db[[i]])) {
-      fullIndex<-which(df$disorder$db[[i]]$method=="full")
-      mat<-df$disorder$db[[i]]$regions[[fullIndex]]
+  for (i in 1:nrow(yeastDiso)) {
+    if (!is.null(yeastDiso$disorder$db[[i]])) {
+      fullIndex<-which(yeastDiso$disorder$db[[i]]$method=="full")
+      mat<-yeastDiso$disorder$db[[i]]$regions[[fullIndex]]
       #getting only the disordered rows. Is really important to reconvert to a matrix of ncol=3 just in case I index only one row and I get a vector. the the subindex mat[,2] will throw incorrect number of dimensions
       mat<-matrix(mat[mat[,3]=="D",],ncol=3)
       #calculate the number of disoredered AAs
       dbStretchDist <- c(dbStretchDist,as.numeric(mat[,2])-as.numeric(mat[,1])+1)
       nDiso<-sum(as.numeric(mat[,2])-as.numeric(mat[,1])+1)
-      proteinLength <- nchar(df$sequence[i])
+      proteinLength <- nchar(yeastDiso$sequence[i])
       dbDisoPercAll <- c(dbDisoPercAll,(nDiso/proteinLength)*100)
       
       if (nrow(mat)>0) {
@@ -205,7 +174,7 @@ getDBDiso <- function(df,output){
         for (row in 1:nrow(mat)) {
           startIdx <- as.numeric(mat[row,1])
           endIdx <- as.numeric(mat[row,2])
-          disoSeq <- paste(disoSeq,substr(df[i,"sequence"],startIdx,endIdx),sep = "")
+          disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
         }
         disoSeqList[[df$acc[[i]]]]<-disoSeq
       } else {
@@ -259,15 +228,14 @@ getSpotDisoMatrix <- function(disoPath){
 }
 
 
-getSpotPredDiso <- function(df,spotDisorderList,output,accession_col){
+getSpotPredDiso <- function(df,output,accession_col){
   predDisoPercAll <- c()
   predStretchDist <- c()
   disoPosList <- list()
   disoSeqList <- list()
   for (i in 1:nrow(df)) {
     mat<-spotDisorderList[[df[i,accession_col]]]
-    # print(i)
-    # print(accession_col)
+    # print(mat)
     #select only disordered regions
     mat <- matrix(mat[mat[,3]=="D",],ncol=4)
     # print(df$acc[[i]])
@@ -290,7 +258,7 @@ getSpotPredDiso <- function(df,spotDisorderList,output,accession_col){
       for (row in 1:nrow(mat)) {
         startIdx <- as.numeric(mat[row,1])
         endIdx <- as.numeric(mat[row,2])
-        disoSeq <- paste(disoSeq,substr(df[i,"sequence"],startIdx,endIdx),sep = "")
+        disoSeq <- paste(disoSeq,substr(yeastDiso[i,"sequence"],startIdx,endIdx),sep = "")
       }
       disoSeqList[[df[i,accession_col]]]<-disoSeq
 
