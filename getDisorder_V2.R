@@ -208,7 +208,7 @@ getVSLPredDiso <- function(df,disoPath,accession_col,length_col=NULL,sequence_co
       # print(mat)
       if (nrow(mat)!=0) {
         #calculate the number of disoredered AAs
-        nDiso<-sum(mat1[,2]-mat1[,1]+1)
+        nDiso<-sum(mat[,2]-mat[,1]+1)
         # print(nDiso)
         if (!is.null(length_col)){
           proteinLength <- as.numeric(df[i,length_col])
