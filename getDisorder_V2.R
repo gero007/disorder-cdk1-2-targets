@@ -184,7 +184,7 @@ getVSLDisoMatrix <- function(disoPath){
 }
 
 
-getSpotPredDiso <- function(df,vslDisorderList,output,accession_col){
+getVSLPredDiso <- function(df,vslDisorderList,output,accession_col){
   predDisoPercAll <- c()
   predStretchDist <- c()
   disoPosList <- list()
