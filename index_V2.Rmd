@@ -93,6 +93,13 @@ humanDiso_full <- getSpotPredDiso(humanDiso_full,disoPath = "spot_run_human/",ac
 # xenopusDiso_full<-xenopusDiso_full[,-grep("jronn",colnames(xenopusDiso_full))]
 
 
+xenopus_MPI<-readAAStringSet("utrech/Xenopus_Database_MPI.FASTA",format = "fasta")
+xenopusDiso<-as.data.frame(xenopus_MPI)
+colnames(xenopusDiso)<-"Sequence"
+xenopusDiso$ID <- str_extract(names(xenopus_MPI), regex( "(?<=\\|)(.*)"))
+row.names(xenopusDiso) <- NULL
+xenopusDiso$Length <-nchar(xenopusDiso$Sequence)
+
 #################################
 ###### CDK1 targets data ########
 #################################
