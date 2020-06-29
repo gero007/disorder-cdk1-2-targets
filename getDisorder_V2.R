@@ -244,3 +244,86 @@ getVSLPredDiso <- function(df,disoPath,accession_col,length_col=NULL,sequence_co
   output_data_frame$vsl_disoSeq <- disoSeqList
   return(output_data_frame)
 }
+
+########################################
+################ VSL2B ##################
+########################################
+
+
+getVSLDisoMatrix <- function(disoPath){ 
+  output_list <- list()
+  for (disoFile in dir(path = disoPath,pattern = "*.vsl2b")) {
+    id=strsplit(disoFile,split = "\\.")[[1]][1]
+    # print(id)
+    # print(paste(disoPath,disoFile,sep = ""))
+    lines <- readLines(paste(disoPath,disoFile,sep = ""))
+    lines <- lines[grepl(pattern = "[0-9]-[0-9]",lines)]
+    indexes <- as.numeric(unlist(strsplit(lines,"-")))
+    disoMatrix <- matrix(indexes, ncol = 2, byrow = T)
+    # disoMatrix <- cbind(disoMatrix,rep("D",nrow(disoMatrix))) 
+    output_list[[id]] <- disoMatrix
+  }
+  return(output_list)
+}
+
+
+getVSLPredDiso <- function(df,disoPath,accession_col,length_col=NULL,sequence_col){
+  vslDisorderList <- getVSLDisoMatrix(disoPath)
+  output_data_frame = df
+  
+  perc <- numeric()
+  disoIdxList <- c()
+  disoSeqList <- c()
+  for (i in 1:nrow(df)) {
+    mat<-vslDisorderList[[df[i,accession_col]]]
+    if (is.null(mat)){
+      nDiso<-NA
+      perc[i] <- nDiso
+      disoIdx <- NA
+      disoIdxList[i]<-disoIdx
+      disoSeq <- NA
+      disoSeqList[i]<-disoSeq
+    } else {
+      # print(i)
+      # print(accession_col)
+      #select only disordered regions
+      # print(df$acc[[i]])
+      # print(mat)
+      if (nrow(mat)!=0) {
+        #calculate the number of disoredered AAs
+        nDiso<-sum(mat[,2]-mat[,1]+1)
+        # print(nDiso)
+        if (!is.null(length_col)){
+          proteinLength <- as.numeric(df[i,length_col])
+        } else {proteinLength <- nchar(df[i,sequence_col])}
+        # print(proteinLength)
+        perc[i] <- (nDiso/proteinLength)*100
+        # print((nDiso/proteinLength)*100)
+        disoIdx <-c()
+        disoIdx <-apply(mat, 1, function(x){disoIdx<-c(disoIdx,x[1]:x[2])
+        return(disoIdx)})
+        disoIdx <- paste(unlist(disoIdx),collapse = ",")
+        disoIdxList[i]<-disoIdx
+        disoSeq <- character()
+        for (row in 1:nrow(mat)) {
+          startIdx <- as.numeric(mat[row,1])
+          endIdx <- as.numeric(mat[row,2])
+          disoSeq <- paste(disoSeq,substr(df[i,sequence_col],startIdx,endIdx),sep = "")
+        }
+        # print(disoSeq)
+        disoSeqList[i]<-disoSeq
+        
+      } else {
+        nDiso<-0
+        perc[i] <- nDiso
+        disoIdx <- "0"
+        disoIdxList[i]<-disoIdx
+        disoSeq <- ""
+        disoSeqList[i]<-disoSeq
+      }}
+  }
+  output_data_frame$vsl_perc <- as.numeric(perc)
+  output_data_frame$vsl_disoIndexes <- disoIdxList
+  output_data_frame$vsl_disoSeq <- disoSeqList
+  return(output_data_frame)
+}
