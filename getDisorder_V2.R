@@ -246,36 +246,45 @@ getVSLPredDiso <- function(df,disoPath,accession_col,length_col=NULL,sequence_co
 }
 
 ########################################
-################ VSL2B ##################
+################ IUpred ##################
 ########################################
 
 
-getVSLDisoMatrix <- function(disoPath){ 
+getIUpredDisoList <- function(disoPath){ 
   output_list <- list()
-  for (disoFile in dir(path = disoPath,pattern = "*.vsl2b")) {
+  for (disoFile in dir(path = disoPath,pattern = "*.iupred")) {
     id=strsplit(disoFile,split = "\\.")[[1]][1]
     # print(id)
     # print(paste(disoPath,disoFile,sep = ""))
-    lines <- readLines(paste(disoPath,disoFile,sep = ""))
-    lines <- lines[grepl(pattern = "[0-9]-[0-9]",lines)]
-    indexes <- as.numeric(unlist(strsplit(lines,"-")))
-    disoMatrix <- matrix(indexes, ncol = 2, byrow = T)
-    # disoMatrix <- cbind(disoMatrix,rep("D",nrow(disoMatrix))) 
+    auxdf <- read.delim(paste(disoPath,disoFile,sep = ""), header=FALSE, comment.char="#")
+    auxdf$V4 <- cut(auxdf$V3,breaks = c(-0.1,0.5,1),labels = c("O","D"))
+    disoRunningLenghts <- rle(as.vector(auxdf$V4))
+    start=1
+    disoMatrix <- matrix(ncol = 4,nrow = length(disoRunningLenghts$lengths))
+    for (i in 1:length(disoRunningLenghts$lengths)) {
+      end=start+disoRunningLenghts$lengths[i]-1
+      disoMatrix[i,] <- as.character(c(start,end,disoRunningLenghts$values[i],disoRunningLenghts$lengths[i]))
+      # print(c(start,end,test$values[i],test$lengths[i]))
+      start=end+1
+    }
     output_list[[id]] <- disoMatrix
   }
+  # print(disoMatrix)
+  # print(which(targetDf$acc==id))
   return(output_list)
 }
 
 
-getVSLPredDiso <- function(df,disoPath,accession_col,length_col=NULL,sequence_col){
-  vslDisorderList <- getVSLDisoMatrix(disoPath)
+
+getIUpredPredDiso <- function(df,disoPath,accession_col,length_col=NULL,sequence_col){
+  IUpredDisorderList <- getIUpredDisoList(disoPath)
   output_data_frame = df
   
   perc <- numeric()
   disoIdxList <- c()
   disoSeqList <- c()
   for (i in 1:nrow(df)) {
-    mat<-vslDisorderList[[df[i,accession_col]]]
+    mat<-IUpredDisorderList[[df[i,accession_col]]]
     if (is.null(mat)){
       nDiso<-NA
       perc[i] <- nDiso
@@ -287,11 +296,12 @@ getVSLPredDiso <- function(df,disoPath,accession_col,length_col=NULL,sequence_co
       # print(i)
       # print(accession_col)
       #select only disordered regions
+      mat <- matrix(mat[mat[,3]=="D",],ncol=4)
       # print(df$acc[[i]])
       # print(mat)
       if (nrow(mat)!=0) {
         #calculate the number of disoredered AAs
-        nDiso<-sum(mat[,2]-mat[,1]+1)
+        nDiso<-sum(as.numeric(mat[,4]))
         # print(nDiso)
         if (!is.null(length_col)){
           proteinLength <- as.numeric(df[i,length_col])
@@ -322,8 +332,8 @@ getVSLPredDiso <- function(df,disoPath,accession_col,length_col=NULL,sequence_co
         disoSeqList[i]<-disoSeq
       }}
   }
-  output_data_frame$vsl_perc <- as.numeric(perc)
-  output_data_frame$vsl_disoIndexes <- disoIdxList
-  output_data_frame$vsl_disoSeq <- disoSeqList
+  output_data_frame$iupred_perc <- as.numeric(perc)
+  output_data_frame$iupred_disoIndexes <- disoIdxList
+  output_data_frame$iupred_disoSeq <- disoSeqList
   return(output_data_frame)
 }
