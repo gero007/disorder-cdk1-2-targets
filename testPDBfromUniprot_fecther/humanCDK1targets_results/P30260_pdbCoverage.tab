@@ -1,0 +1,58 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P30260	Cdc27 peptide	CDC27_HUMAN	Homo sapiens	PF00515	TPR_1	Tetratricopeptide repeat	635	668
+P30260	Cdc27 peptide	CDC27_HUMAN	Homo sapiens	PF00515	TPR_1	Tetratricopeptide repeat	567	600
+P30260	Cdc27 peptide	CDC27_HUMAN	Homo sapiens	PF12895	ANAPC3	Anaphase-promoting complex, cyclosome, subunit 3	17	95
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#34 mappings in 34 PDB chains in 17 PDB entries
+P30260	1	824	6q6h	Cryo-EM structure of the APC/C-Cdc20-Cdk2-cyclinA2-Cks2 complex, the D2 box class	1	824	P	None	None
+P30260	1	824	6q6h	Cryo-EM structure of the APC/C-Cdc20-Cdk2-cyclinA2-Cks2 complex, the D2 box class	1	824	J	None	None
+P30260	1	824	6tlj	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Mitotic checkpoint complex (APC/C-MCC) at 3.8 angstrom resolution	1	824	H	None	None
+P30260	1	824	6tlj	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Mitotic checkpoint complex (APC/C-MCC) at 3.8 angstrom resolution	1	824	F	None	None
+P30260	1	824	5khr	Model of human Anaphase-promoting complex/Cyclosome complex (APC15 deletion mutant) in complex with the E2 UBE2C/UBCH10 poised for ubiquitin ligation to substrate (APC/C-CDC20-substrate-UBE2C)	1	824	H	None	None
+P30260	1	824	5khr	Model of human Anaphase-promoting complex/Cyclosome complex (APC15 deletion mutant) in complex with the E2 UBE2C/UBCH10 poised for ubiquitin ligation to substrate (APC/C-CDC20-substrate-UBE2C)	1	824	F	None	None
+P30260	1	824	4ui9	Atomic structure of the human Anaphase-Promoting Complex	1	824	H	None	None
+P30260	1	824	4ui9	Atomic structure of the human Anaphase-Promoting Complex	1	824	F	None	None
+P30260	1	824	5khu	Model of human Anaphase-promoting complex/Cyclosome (APC15 deletion mutant), in complex with the Mitotic checkpoint complex (APC/C-CDC20-MCC) based on cryo EM data at 4.8 Angstrom resolution	1	824	H	None	None
+P30260	1	824	5khu	Model of human Anaphase-promoting complex/Cyclosome (APC15 deletion mutant), in complex with the Mitotic checkpoint complex (APC/C-CDC20-MCC) based on cryo EM data at 4.8 Angstrom resolution	1	824	F	None	None
+P30260	1	824	6q6g	Cryo-EM structure of the APC/C-Cdc20-Cdk2-cyclinA2-Cks2 complex, the D1 box class	1	824	P	None	None
+P30260	1	824	6q6g	Cryo-EM structure of the APC/C-Cdc20-Cdk2-cyclinA2-Cks2 complex, the D1 box class	1	824	J	None	None
+P30260	1	824	5l9t	Model of human Anaphase-promoting complex/Cyclosome (APC/C-CDH1) with E2 UBE2S poised for polyubiquitination where UBE2S, APC2, and APC11 are modeled into low resolution density	1	824	H	None	None
+P30260	1	824	5l9t	Model of human Anaphase-promoting complex/Cyclosome (APC/C-CDH1) with E2 UBE2S poised for polyubiquitination where UBE2S, APC2, and APC11 are modeled into low resolution density	1	824	F	None	None
+P30260	1	824	5l9u	Model of human Anaphase-promoting complex/Cyclosome (APC/C-CDH1) with a cross linked Ubiquitin variant-substrate-UBE2C (UBCH10) complex representing key features of multiubiquitination	1	824	H	None	None
+P30260	1	824	5l9u	Model of human Anaphase-promoting complex/Cyclosome (APC/C-CDH1) with a cross linked Ubiquitin variant-substrate-UBE2C (UBCH10) complex representing key features of multiubiquitination	1	824	F	None	None
+P30260	1	824	4rg7	Crystal structure of APC3	3	560	A	None	None
+P30260	1	824	4rg7	Crystal structure of APC3	3	560	B	None	None
+P30260	1	824	5a31	Structure of the human APC-Cdh1-Hsl1-UbcH10 complex.	1	824	H	None	None
+P30260	1	824	5a31	Structure of the human APC-Cdh1-Hsl1-UbcH10 complex.	1	824	F	None	None
+P30260	1	824	5g04	Structure of the human APC-Cdc20-Hsl1 complex	1	824	H	None	None
+P30260	1	824	5g04	Structure of the human APC-Cdc20-Hsl1 complex	1	824	F	None	None
+P30260	1	824	5g05	Cryo-EM structure of combined apo phosphorylated APC	1	824	H	None	None
+P30260	1	824	5g05	Cryo-EM structure of combined apo phosphorylated APC	1	824	F	None	None
+P30260	1	824	4rg9	Crystal structure of APC3-APC16 complex (Selenomethionine Derivative)	3	560	A	None	None
+P30260	1	824	4rg9	Crystal structure of APC3-APC16 complex (Selenomethionine Derivative)	3	560	B	None	None
+P30260	1	824	6tm5	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Nek2A substrate at 3.9 angstrom resolution	1	824	H	None	None
+P30260	1	824	6tm5	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Nek2A substrate at 3.9 angstrom resolution	1	824	F	None	None
+P30260	1	824	5lcw	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Mitotic checkpoint complex (APC/C-MCC) at 4.2 angstrom resolution	1	824	H	None	None
+P30260	1	824	5lcw	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Mitotic checkpoint complex (APC/C-MCC) at 4.2 angstrom resolution	1	824	F	None	None
+P30260	1	824	4rg6	Crystal structure of APC3-APC16 complex	3	560	A	None	None
+P30260	1	824	4rg6	Crystal structure of APC3-APC16 complex	3	560	B	None	None
+P30260	821	824	3t1n	Structure of human MICROCEPHALIN (MCPH1) TANDEM BRCT domains in complex with a CDC27 phosphopeptide	1	4	D	821	824
+P30260	821	824	3t1n	Structure of human MICROCEPHALIN (MCPH1) TANDEM BRCT domains in complex with a CDC27 phosphopeptide	1	4	C	821	824
+

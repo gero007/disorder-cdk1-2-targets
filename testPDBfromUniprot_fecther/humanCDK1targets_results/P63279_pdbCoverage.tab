@@ -1,0 +1,54 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P63279	Ubiquitin-conjugating enzyme E2 I	UBC9_HUMAN	Homo sapiens	PF00179	UQ_con	Ubiquitin-conjugating enzyme	8	152
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#32 mappings in 32 PDB chains in 27 PDB entries
+P63279	1	158	2xwu	CRYSTAL STRUCTURE OF IMPORTIN 13 - UBC9 COMPLEX	1	158	A	1	158
+P63279	1	158	2gro	Crystal Structure of human RanGAP1-Ubc9-N85Q	4	161	A	1	None
+P63279	1	158	2grn	Crystal Structure of human RanGAP1-Ubc9	4	161	A	1	None
+P63279	1	158	2grr	Crystal Structure of human RanGAP1-Ubc9-D127S	4	161	A	1	None
+P63279	1	158	2grq	Crystal Structure of human RanGAP1-Ubc9-D127A	4	161	A	1	None
+P63279	1	158	2grp	Crystal Structure of human RanGAP1-Ubc9-Y87A	4	161	A	1	None
+P63279	1	158	3a4s	The crystal structure of the SLD2:Ubc9 complex	6	163	A	None	158
+P63279	1	158	3a4s	The crystal structure of the SLD2:Ubc9 complex	6	163	B	1	158
+P63279	1	158	2o25	Ubiquitin-Conjugating Enzyme E2-25 kDa Complexed With SUMO-1-Conjugating Enzyme UBC9	3	160	C	None	158
+P63279	1	158	2o25	Ubiquitin-Conjugating Enzyme E2-25 kDa Complexed With SUMO-1-Conjugating Enzyme UBC9	3	160	D	None	None
+P63279	1	158	1a3s	HUMAN UBC9	3	160	A	1	158
+P63279	1	158	1z5s	Crystal structure of a complex between UBC9, SUMO-1, RANGAP1 and NUP358/RANBP2	1	158	A	None	None
+P63279	1	158	5d2m	Complex between human SUMO2-RANGAP1, UBC9 and ZNF451	4	161	A	1	None
+P63279	1	158	5d2m	Complex between human SUMO2-RANGAP1, UBC9 and ZNF451	4	161	D	1	None
+P63279	1	158	2px9	The intrinsic affinity between E2 and the Cys domain of E1 in Ubiquitin-like modifications	1	158	B	1	158
+P63279	1	158	3uio	Complex between human RanGAP1-SUMO2, UBC9 and the IR1 domain from RanBP2 containing IR2 Motif II	1	158	A	None	158
+P63279	1	158	3uin	Complex between human RanGAP1-SUMO2, UBC9 and the IR1 domain from RanBP2	1	158	A	None	158
+P63279	1	158	4w5v	Crystal structure of Human SUMO E2-conjugating enzyme (Ubc9) in complex with E1-activating enzyme (Uba2) ubiquitin fold domain (Ufd)	6	163	A	1	158
+P63279	1	158	4y1l	Ubc9 Homodimer The Missing Link in Poly-SUMO Chain Formation	1	158	B	1	None
+P63279	1	158	4y1l	Ubc9 Homodimer The Missing Link in Poly-SUMO Chain Formation	1	158	A	1	158
+P63279	1	158	3uip	Complex between human RanGAP1-SUMO1, UBC9 and the IR1 domain from RanBP2 containing IR2 Motif II	1	158	A	None	158
+P63279	1	158	2pe6	Non-covalent complex between human SUMO-1 and human Ubc9	4	161	A	1	158
+P63279	1	158	5fq2	Crystal structure of human SUMO E1 UFD domain in complex with Ubc9 in a P422 space group.	4	161	A	None	158
+P63279	1	158	1kps	Structural Basis for E2-mediated SUMO conjugation revealed by a complex between ubiquitin conjugating enzyme Ubc9 and RanGAP1	2	159	C	None	158
+P63279	1	158	1kps	Structural Basis for E2-mediated SUMO conjugation revealed by a complex between ubiquitin conjugating enzyme Ubc9 and RanGAP1	2	159	A	1	158
+P63279	2	158	5f6d	Crystal structure of Ubc9 (K48A/K49A/E54A) complexed with Fragment 6	1	157	A	2	None
+P63279	2	158	5f6w	Crystal structure of Ubc9 (K48/K49A/E54A) complexed with Fragment 1 (biphenol)	1	157	A	2	None
+P63279	2	158	5f6v	Crystal structure of Ubc9 (K48/K49A/E54A) complexed with Fragment 1 (biphenol from fragment cocktail screen)	1	157	A	2	None
+P63279	2	158	5f6u	Crystal Structure of Ubc9 (K48A/K49A/E54A) complexed with Fragment 8 (JSS190B146)	1	157	A	2	None
+P63279	2	158	5f6y	Crystal structure of Ubc9 (K48/K49A/E54A) complexed with Fragment 2 (mercaptobenzoxazole)	1	157	A	2	None
+P63279	2	158	5f6x	Crystal structure of Ubc9 (K48/K49A/E54A) complexed with Fragment 2 (mercaptobenzoxazole from cocktail screen)	1	157	A	2	None
+P63279	2	158	5f6e	Crystal Structure of human Ubc9 (K48A/K49A/E54A)	1	157	A	2	None
+

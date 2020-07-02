@@ -1,0 +1,101 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P33981	MONOPOLAR SPINDLE KINASE 1	TTK_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	525	791
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#79 mappings in 79 PDB chains in 71 PDB entries
+P33981	55	210	4h7y	Crystal structure of the tetratricopeptide repeat (TPR) motif of human dual specificity protein kinase Mps1	6	161	A	None	None
+P33981	55	210	4h7y	Crystal structure of the tetratricopeptide repeat (TPR) motif of human dual specificity protein kinase Mps1	6	161	D	None	None
+P33981	55	210	4h7y	Crystal structure of the tetratricopeptide repeat (TPR) motif of human dual specificity protein kinase Mps1	6	161	B	None	None
+P33981	55	210	4h7y	Crystal structure of the tetratricopeptide repeat (TPR) motif of human dual specificity protein kinase Mps1	6	161	C	None	None
+P33981	55	210	4h7x	Crystal structure of the tetratricopeptide repeat (TPR) motif of human dual specificity protein kinase Mps1	6	161	A	None	None
+P33981	55	210	4h7x	Crystal structure of the tetratricopeptide repeat (TPR) motif of human dual specificity protein kinase Mps1	6	161	B	None	None
+P33981	62	239	4b94	Crystal structure of human Mps1 TPR domain	4	181	D	62	None
+P33981	62	239	4b94	Crystal structure of human Mps1 TPR domain	4	181	A	62	None
+P33981	62	239	4b94	Crystal structure of human Mps1 TPR domain	4	181	B	62	None
+P33981	62	239	4b94	Crystal structure of human Mps1 TPR domain	4	181	C	62	None
+P33981	400	808	6gvj	Human Mps1 kinase domain with ordered activation loop	21	429	A	None	None
+P33981	510	809	3hmp	Crystal structure of human Mps1 catalytic domain in complex with a quinazolin ligand Compound 4	43	342	A	None	None
+P33981	510	809	3hmn	Crystal structure of human Mps1 catalytic domain in complex with ATP	43	342	A	None	None
+P33981	510	857	2zmc	Crystal structure of human mitotic checkpoint kinase Mps1 catalytic domain apo form	43	390	A	None	None
+P33981	510	857	2zmd	Crystal structure of human Mps1 catalytic domain T686A mutant in complex with SP600125 inhibitor	43	390	A	None	None
+P33981	510	809	3hmo	Crystal structure of human Mps1 catalytic domain in complex with the inhibitor staurosporine	43	342	A	None	None
+P33981	512	795	4d2s	Human TTK in complex with a Dyrk1B inhibitor	1	284	A	None	None
+P33981	514	828	2x9e	HUMAN MPS1 IN COMPLEX WITH NMS-P715	3	317	A	None	None
+P33981	515	806	6tn9	X-RAY STRUCTURE OF MPS1 IN COMPLEX WITH COMPOUND 16	3	294	A	515	None
+P33981	515	857	3dbq	Crystal structure of TTK kinase domain	1	343	A	515	None
+P33981	515	795	6n6o	Crystal structure of the human TTK in complex with an inhibitor	3	283	A	515	None
+P33981	515	795	6b4w	TTK in Complex with Inhibitor	21	301	A	515	None
+P33981	515	795	4jt3	Crystal Structure of TTK kinase domain with an inhibitor: 400740	1	281	A	515	None
+P33981	515	795	4zeg	Crystal structure of TTK kinase domain in complex with a pyrazolopyrimidine inhibitor	1	281	A	None	795
+P33981	515	795	4o6l	Crystal Structure of TTK kinase domain with an inhibitor: 401498 (N-[(1R)-1-(2-chlorophenyl)propyl]-3-{4-[(1-methylpiperidin-4-yl)oxy]phenyl}-1H-indazole-5-carboxamide)	1	281	A	515	None
+P33981	515	795	4o6l	Crystal Structure of TTK kinase domain with an inhibitor: 401498 (N-[(1R)-1-(2-chlorophenyl)propyl]-3-{4-[(1-methylpiperidin-4-yl)oxy]phenyl}-1H-indazole-5-carboxamide)	1	281	B	515	None
+P33981	515	795	4js8	Crystal structure of TTK kinase domain with an inhibitor: 401348	1	281	A	515	None
+P33981	515	806	6tnb	X-RAY STRUCTURE OF MPS1 IN COMPLEX WITH COMPOUND 41	3	294	A	None	None
+P33981	515	806	6tnc	X-RAY STRUCTURE OF MPS1 IN COMPLEX WITH COMPOUND 46	3	294	A	None	None
+P33981	515	806	6tnd	X-RAY STRUCTURE OF MPS1 IN COMPLEX WITH COMPOUND 79	3	294	A	None	None
+P33981	516	820	3wyy	CRYSTAL STRUCTURE OF HUMAN MPS1 CATALYTIC DOMAIN IN COMPLEX WITH (E)-3-(4-((6-(((3s,5s,7s)-adamantan-1-yl)amino)-4-amino-5-cyanopyridin-2-yl)amino)-2-(cyanomethoxy)phenyl)-N-(2-methoxyethyl)acrylamide	2	306	A	516	None
+P33981	516	820	3wyx	CRYSTAL STRUCTURE OF HUMAN MPS1 CATALYTIC DOMAIN IN COMPLEX WITH 6-((3-(cyanomethoxy)-4-(1-methyl-1H-pyrazol-4-yl)phenyl)amino)-2-(cyclohexylamino)nicotinonitrile	2	306	A	516	None
+P33981	516	820	3wzj	CRYSTAL STRUCTURE OF HUMAN MPS1 CATALYTIC DOMAIN IN COMPLEX WITH 4-(6-(cyclohexylamino)-8-(((tetrahydro-2H-pyran-4-yl)methyl)amino)imidazo[1,2-b]pyridazin-3-yl)-N-cyclopropylbenzamide	2	306	A	516	None
+P33981	516	820	3wzk	CRYSTAL STRUCTURE OF HUMAN MPS1 CATALYTIC DOMAIN IN COMPLEX WITH N-cyclopropyl-4-(8-((thiophen-2-ylmethyl)amino)imidazo[1,2-a]pyrazin-3-yl)benzamide	2	306	A	516	None
+P33981	516	794	5eh0	Rapid Discovery of Pyrido[3,4-d]pyrimidine Inhibitors of Monopolar Spindle kinase 1 (MPS1) Using a Structure-Based Hydridization Approach	1	279	A	516	794
+P33981	516	820	3w1f	Crystal structure of Human MPS1 catalytic domain in complex with 5-(5-ethoxy-6-(1-methyl-1H-pyrazol-4-yl)-1H-indazol-3-yl)-2-methylbenzenesulfonamide	2	306	A	516	None
+P33981	516	820	3vqu	CRYSTAL STRUCTURE OF HUMAN MPS1 CATALYTIC DOMAIN IN COMPLEX WITH 4-[(4-amino-5-cyano-6-ethoxypyridin-2- yl)amino]benzamide	1	305	A	516	None
+P33981	516	808	5ei2	Rapid Discovery of Pyrido[3,4-d]pyrimidine Inhibitors of Monopolar Spindle kinase 1 (MPS1) Using a Structure-Based Hydridization Approach	21	313	A	516	None
+P33981	519	808	4c4h	Structure-based design of orally bioavailable pyrrolopyridine inhibitors of the mitotic kinase MPS1	24	313	A	519	None
+P33981	519	808	4bi1	Scaffold Focused Virtual Screening: Prospective Application to the Discovery of TTK Inhibitor	24	313	A	519	None
+P33981	519	808	5na0	TTK kinase domain in complex with a PEG-linked pyrimido-indolizine	24	313	A	519	None
+P33981	519	808	3cek	Crystal structure of human dual specificity protein kinase (TTK)	24	313	A	519	None
+P33981	519	808	4c4f	Structure-based design of orally bioavailable pyrrolopyridine inhibitors of the mitotic kinase MPS1	24	313	A	519	None
+P33981	519	808	5ei6	Rapid Discovery of Pyrido[3,4-d]pyrimidine Inhibitors of Monopolar Spindle kinase 1 (MPS1) Using a Structure-Based Hydridization Approach	24	313	A	519	None
+P33981	519	808	5ehy	Rapid Discovery of Pyrido[3,4-d]pyrimidine Inhibitors of Monopolar Spindle kinase 1 (MPS1) Using a Structure-Based Hydridization Approach	24	313	A	519	None
+P33981	519	808	4cv9	MPS1 kinase with 3-aminopyridin-2-one inhibitors	24	313	A	519	None
+P33981	519	808	4bi2	Scaffold Focused Virtual Screening: Prospective Application to the Discovery of TTK Inhibitor	24	313	A	519	None
+P33981	519	808	5n84	TTK kinase domain in complex with Mps-BAY2b	24	313	A	519	None
+P33981	519	808	3h9f	Crystal Structure of Human Dual Specificity Protein Kinase (TTK) in complex with a pyrimido-diazepin ligand	24	313	A	519	None
+P33981	519	808	4c4e	Structure-based design of orally bioavailable pyrrolopyridine inhibitors of the mitotic kinase MPS1	24	313	A	519	None
+P33981	519	808	5n7v	TTK kinase domain in complex with MPI-0479605	24	313	A	519	None
+P33981	519	808	5n87	TTK kinase domain in complex with NTRC 0066-0	24	313	A	519	None
+P33981	519	808	4c4j	Structure-based design of orally bioavailable pyrrolopyridine inhibitors of the mitotic kinase MPS1	24	313	A	519	None
+P33981	519	808	3gfw	Crystal Structure of Human Dual Specificity Protein Kinase (TTK) in complex with a pyrolo-pyridin ligand	24	313	A	519	None
+P33981	519	808	5ap2	Naturally Occurring Mutations in the MPS1 Gene Predispose Cells to Kinase Inhibitor Drug Resistance.	24	313	A	519	None
+P33981	519	808	5ap3	Naturally Occurring Mutations in the MPS1 Gene Predispose Cells to Kinase Inhibitor Drug Resistance.	24	313	A	519	None
+P33981	519	808	5ap0	Naturally Occurring Mutations in the MPS1 Gene Predispose Cells to Kinase Inhibitor Drug Resistance.	24	313	A	519	None
+P33981	519	808	5ap1	Naturally Occurring Mutations in the MPS1 Gene Predispose Cells to Kinase Inhibitor Drug Resistance.	24	313	A	519	None
+P33981	519	808	5ap6	Naturally Occurring Mutations in the MPS1 Gene Predispose Cells to Kinase Inhibitor Drug Resistance.	24	313	A	519	None
+P33981	519	808	5ap7	Naturally Occurring Mutations in the MPS1 Gene Predispose Cells to Kinase Inhibitor Drug Resistance.	24	313	A	519	None
+P33981	519	808	5ap4	Naturally Occurring Mutations in the MPS1 Gene Predispose Cells to Kinase Inhibitor Drug Resistance.	24	313	A	519	None
+P33981	519	808	5ap5	Naturally Occurring Mutations in the MPS1 Gene Predispose Cells to Kinase Inhibitor Drug Resistance.	24	313	A	519	None
+P33981	519	808	4bi0	Scaffold Focused Virtual Screening: Prospective Application to the Discovery of TTK Inhibitor	24	313	A	519	None
+P33981	519	808	5nad	TTK kinase domain in complex with BAY 1217389	24	313	A	519	None
+P33981	519	808	4c4i	Structure-based design of orally bioavailable pyrrolopyridine inhibitors of the mitotic kinase MPS1	24	313	A	519	None
+P33981	519	808	5ljj	Crystal structure of human Mps1 (TTK) in complex with Reversine	24	313	A	519	None
+P33981	519	808	4c4g	Structure-based design of orally bioavailable pyrrolopyridine inhibitors of the mitotic kinase MPS1	24	313	A	519	None
+P33981	519	808	5eho	Rapid Discovery of Pyrido[3,4-d]pyrimidine Inhibitors of Monopolar Spindle kinase 1 (MPS1) Using a Structure-Based Hydridization Approach	24	313	A	519	None
+P33981	519	808	5ehl	Rapid Discovery of Pyrido[3,4-d]pyrimidine Inhibitors of Monopolar Spindle kinase 1 (MPS1) Using a Structure-Based Hydridization Approach	24	313	A	519	None
+P33981	519	808	4cv8	MPS1 kinase with 3-aminopyridin-2-one inhibitors	24	313	A	519	None
+P33981	519	808	5o91	Crystal structure of human Mps1 (TTK) C604W mutant in complex with Cpd-5	24	313	A	519	None
+P33981	519	808	4cva	MPS1 kinase with 3-aminopyridin-2-one inhibitors	24	313	A	519	None
+P33981	519	808	5n93	TTK kinase domain in complex with TC-Mps1-12	24	313	A	519	None
+P33981	519	797	5ntt	Crystal structure of human Mps1 (TTK) C604Y mutant in complex with NMS-P715	9	287	A	519	797
+P33981	519	794	6h3k	Introduction of a methyl group curbs metabolism of pyrido[3,4-d]pyrimidine MPS1 inhibitors and enables the discovery of the Phase 1 clinical candidate BOS172722.	4	279	A	519	794
+P33981	519	753	5ei8	Rapid Discovery of Pyrido[3,4-d]pyrimidine Inhibitors of Monopolar Spindle kinase 1 (MPS1) Using a Structure-Based Hydridization Approach	24	258	A	519	753
+P33981	519	808	4bhz	Scaffold Focused Virtual Screening: Prospective Application to the Discovery of TTK Inhibitor	24	313	A	519	None
+P33981	519	808	5n9s	TTK kinase domain in complex with BAY 1161909	24	313	A	519	None
+P33981	519	808	5mrb	Crystal structure of human Mps1 (TTK) in complex with Cpd-5	24	313	A	519	None
+

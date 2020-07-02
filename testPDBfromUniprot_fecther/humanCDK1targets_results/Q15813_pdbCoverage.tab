@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q15813	Tubulin-specific chaperone E	TBCE_HUMAN	Homo sapiens	PF01302	CAP_GLY	CAP-Gly domain	10	75
+Q15813	Tubulin-specific chaperone E	TBCE_HUMAN	Homo sapiens	PF14560	Ubiquitin_2	Ubiquitin-like domain	446	526
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 2 PDB entries
+Q15813	443	527	4icu	Ubiquitin-like domain of human tubulin folding cofactor E - crystal from A	1	85	C	None	527
+Q15813	443	527	4icu	Ubiquitin-like domain of human tubulin folding cofactor E - crystal from A	1	85	D	None	527
+Q15813	443	527	4icu	Ubiquitin-like domain of human tubulin folding cofactor E - crystal from A	1	85	A	None	527
+Q15813	443	527	4icu	Ubiquitin-like domain of human tubulin folding cofactor E - crystal from A	1	85	B	None	527
+Q15813	443	527	4icv	Ubiquitin-like domain of human tubulin folding cofactor E - crystal form B	1	85	A	None	527
+

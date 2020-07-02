@@ -1,0 +1,32 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q99741	Serine/threonine-protein phosphatase 2A regulatory subunit B'' subunit beta - Cell division control protein 6 homolog chimeric construct	CDC6_HUMAN	Homo sapiens	PF09079	Cdc6_C	CDC6, C terminal winged helix domain	465	544
+Q99741	Serine/threonine-protein phosphatase 2A regulatory subunit B'' subunit beta - Cell division control protein 6 homolog chimeric construct	CDC6_HUMAN	Homo sapiens	PF13401	AAA_22	AAA domain	188	323
+Q99741	Serine/threonine-protein phosphatase 2A regulatory subunit B'' subunit beta - Cell division control protein 6 homolog chimeric construct	CDC6_HUMAN	Homo sapiens	PF17872	AAA_lid_10	AAA lid domain	352	411
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 4 PDB entries
+Q99741	70	90	4i5n	Structural mechanism of trimeric PP2A holoenzyme involving PR70: insight for Cdc6 dephosphorylation	393	413	E	None	None
+Q99741	70	90	4i5n	Structural mechanism of trimeric PP2A holoenzyme involving PR70: insight for Cdc6 dephosphorylation	393	413	B	None	None
+Q99741	70	90	4i5l	Structural mechanism of trimeric PP2A holoenzyme involving PR70: insight for Cdc6 dephosphorylation	393	413	E	None	None
+Q99741	70	90	4i5l	Structural mechanism of trimeric PP2A holoenzyme involving PR70: insight for Cdc6 dephosphorylation	393	413	B	None	None
+Q99741	71	100	2cci	Crystal structure of phospho-CDK2 Cyclin A in complex with a peptide containing both the substrate and recruitment sites of CDC6	1	30	I	None	None
+Q99741	71	100	2cci	Crystal structure of phospho-CDK2 Cyclin A in complex with a peptide containing both the substrate and recruitment sites of CDC6	1	30	F	67	96
+Q99741	89	100	2cch	The crystal structure of CDK2 cyclin A in complex with a substrate peptide derived from CDC modified with a gamma-linked ATP analogue	1	12	E	1	12
+Q99741	89	100	2cch	The crystal structure of CDK2 cyclin A in complex with a substrate peptide derived from CDC modified with a gamma-linked ATP analogue	1	12	F	1	12
+

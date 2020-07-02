@@ -1,0 +1,33 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9ULW0	TARGETING PROTEIN FOR XKLP2	TPX2_HUMAN	Homo sapiens	PF06886	TPX2	Targeting protein for Xklp2 (TPX2) domain	660	740
+Q9ULW0	TARGETING PROTEIN FOR XKLP2	TPX2_HUMAN	Homo sapiens	PF06886	TPX2	Targeting protein for Xklp2 (TPX2) domain	540	592
+Q9ULW0	TARGETING PROTEIN FOR XKLP2	TPX2_HUMAN	Homo sapiens	PF09041	Aurora-A_bind	Aurora-A binding	1	68
+Q9ULW0	TARGETING PROTEIN FOR XKLP2	TPX2_HUMAN	Homo sapiens	PF12214	TPX2_importin	Cell cycle regulated microtubule associated protein	361	489
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 6 PDB entries
+Q9ULW0	1	747	6bjc	TPX2_mini decorated GMPCPP-microtubule	1	747	T	None	None
+Q9ULW0	1	747	6bjc	TPX2_mini decorated GMPCPP-microtubule	1	747	P	None	None
+Q9ULW0	1	43	3e5a	Crystal structure of Aurora A in complex with VX-680 and TPX2	2	44	B	None	None
+Q9ULW0	1	43	1ol5	Structure of Aurora-A 122-403, phosphorylated on Thr287, Thr288 and bound to TPX2 1-43	1	43	B	None	43
+Q9ULW0	1	43	3ha6	Crystal structure of aurora A in complex with TPX2 and compound 10	2	44	B	1	None
+Q9ULW0	1	43	4c3p	Structure of dephosphorylated Aurora A (122-403) bound to TPX2 and AMPPCP	1	43	E	None	None
+Q9ULW0	1	43	4c3p	Structure of dephosphorylated Aurora A (122-403) bound to TPX2 and AMPPCP	1	43	B	None	None
+Q9ULW0	6	43	5lxm	Crystal structure of Aurora-A bound to a hydrocarbon-stapled proteomimetic of TPX2	1	38	D	6	43
+

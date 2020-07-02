@@ -1,0 +1,109 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O15530	3-phosphoinositide-dependent protein kinase 1	PDPK1_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	82	342
+O15530	3-phosphoinositide-dependent protein kinase 1	PDPK1_HUMAN	Homo sapiens	PF14593	PH_3	PH domain	446	548
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#86 mappings in 86 PDB chains in 68 PDB entries
+O15530	48	359	3ion	PDK1 in complex with Compound 8h	1	312	A	None	359
+O15530	48	359	3iop	PDK-1 in complex with the inhibitor Compound-8i	1	312	A	None	359
+O15530	48	359	3h9o	Phosphoinositide-dependent protein kinase 1 (PDK-1) in complex with compound 9	1	311	A	None	359
+O15530	48	359	3qcq	Phosphoinositide-Dependent Kinase-1 (PDK1) kinase domain with 6-(3-Amino-1H-indazol-6-yl)-N4-ethyl-2,4-pyrimidinediamine	1	312	A	None	None
+O15530	48	359	3qd0	Phosphoinositide-Dependent Kinase-1 (PDK1) kinase domain with (2R,5S)-1-[2-Amino-6-(3-amino-1H-indazol-6-yl)-4-pyrimidinyl]-6-methyl-N-phenyl-3-piperidinecarboxamide	1	312	A	None	None
+O15530	48	359	3qd3	Phosphoinositide-Dependent Kinase-1 (PDK1) kinase domain with 1,1-Dimethylethyl {(3R,6S)-1-[2-amino-6-(3-amino-1H-indazol-6-yl)-4-pyrimidinyl]-6-methyl-3-piperidinyl}carbamate	1	312	A	None	None
+O15530	48	359	3qd4	Phosphoinositide-Dependent Kinase-1 (PDK1) kinase domain with 1,1-Dimethylethyl{(3R,5R)-1-[2-amino-6-(3-amino-1H-indazol-6-yl)-4-pyrimidinyl]-5-methyl-3-piperidinyl}carbamate	1	312	A	None	None
+O15530	48	359	3qcs	Phosphoinositide-Dependent Kinase-1 (PDK1) kinase domain with 6-[2-Amino-6-(4-morpholinyl)-4-pyrimidinyl]-1H-indazol-3-amine	1	312	A	None	None
+O15530	48	359	3qcy	Phosphoinositide-Dependent Kinase-1 (PDK1) kinase domain with 4-[2-Amino-6-(3-amino-1H-indazol-6-yl)-4-pyrimidinyl]-N-phenyl-2-morpholinecarboxamide	1	312	A	None	None
+O15530	48	359	3qcx	Phosphoinositide-Dependent Kinase-1 (PDK1) kinase domain with 6-{2-Amino-6-[(3R)-3-methyl-4-morpholinyl]-4-pyrimidinyl}-1H-indazol-3-amine	1	312	A	None	None
+O15530	48	359	2r7b	Crystal Structure of the Phosphoinositide-dependent Kinase-1 (PDK-1)Catalytic Domain bound to a dibenzonaphthyridine inhibitor	1	312	A	None	359
+O15530	50	359	5lvl	Human PDK1 Kinase Domain in Complex with Compound PS653 Bound to the ATP-Binding Site	2	311	A	None	359
+O15530	50	359	5lvo	Human PDK1 Kinase Domain in Complex with Allosteric Compound PSE10 Bound to the PIF-Pocket	2	311	A	None	359
+O15530	50	359	5lvn	Human PDK1 Kinase Domain in Complex with Adenosine Bound to the ATP-Binding Site	2	311	A	None	359
+O15530	50	359	4ct1	Human PDK1-PKCzeta Kinase Chimera in Complex with Allosteric Compound PS315 Bound to the PIF-Pocket	2	311	A	None	359
+O15530	50	359	5lvp	Human PDK1 Kinase Domain in Complex with an HM-Peptide Bound to the PIF-Pocket	2	311	C	None	359
+O15530	50	359	5lvp	Human PDK1 Kinase Domain in Complex with an HM-Peptide Bound to the PIF-Pocket	2	311	A	None	359
+O15530	50	359	5lvp	Human PDK1 Kinase Domain in Complex with an HM-Peptide Bound to the PIF-Pocket	2	311	D	None	359
+O15530	50	359	5lvp	Human PDK1 Kinase Domain in Complex with an HM-Peptide Bound to the PIF-Pocket	2	311	B	None	359
+O15530	50	359	3hrf	Crystal structure of Human PDK1 kinase domain in complex with an allosteric activator bound to the PIF-pocket	2	311	A	None	359
+O15530	50	359	3hrc	Crystal structure of a mutant of human PDK1 Kinase domain in complex with ATP	2	311	A	None	359
+O15530	50	359	5mrd	Human PDK1-PKCiota Kinase Chimera in Complex with Allosteric Compound PS267 Bound to the PIF-Pocket	1	310	A	None	359
+O15530	50	359	4xx9	Crystal structure of PDK1 in complex with ATP and the PIF-pocket ligand RF4	1	310	A	None	359
+O15530	50	359	4a07	Human PDK1 Kinase Domain in Complex with Allosteric Activator PS171 Bound to the PIF-Pocket	2	311	A	None	359
+O15530	50	359	3rcj	Rapid preparation of triazolyl substituted NH-heterocyclic kinase inhibitors via one-pot Sonogashira coupling TMS-deprotection CuAAC sequence	2	311	A	None	None
+O15530	50	359	5ack	Human PDK1 Kinase Domain in Complex with Allosteric Compound 7 Bound to the PIF-Pocket	2	311	A	None	359
+O15530	50	359	4rrv	Crystal structure of PDK1 in complex with ATP and PIFtide	2	311	A	None	359
+O15530	50	359	4rqv	Crystal structure of PDK1 in complex with ATP and the PIF-pocket ligand RS2	2	311	A	None	359
+O15530	50	359	4ct2	Human PDK1-PKCzeta Kinase Chimera	2	311	A	None	359
+O15530	50	359	4rqk	Crystal structure of PDK1 in complex with ATP and the PIF-pocket ligand RS1	2	311	A	None	359
+O15530	50	359	4a06	Human PDK1 Kinase Domain in Complex with Allosteric Activator PS114 Bound to the PIF-Pocket	2	311	A	None	359
+O15530	50	359	3sc1	Novel Isoquinolone PDK1 Inhibitors Discovered through Fragment-Based Lead Discovery	2	311	A	None	359
+O15530	50	359	5lvm	Human PDK1 Kinase Domain in Complex with Adenine Bound to the ATP-Binding Site	2	311	A	None	359
+O15530	51	360	1uu7	Structure of human PDK1 kinase domain in complex with BIM-2	1	310	A	None	None
+O15530	51	360	2biy	Structure of PDK1-S241A mutant kinase domain	1	310	A	None	None
+O15530	51	360	1uu8	Structure of human PDK1 kinase domain in complex with BIM-1	1	310	A	None	None
+O15530	51	360	1uu3	Structure of human PDK1 kinase domain in complex with LY333531	1	310	A	None	360
+O15530	51	360	1okz	Structure of human PDK1 kinase domain in complex with UCN-01	1	310	A	None	None
+O15530	51	360	1oky	Structure of human PDK1 kinase domain in complex with staurosporine	1	310	A	None	360
+O15530	51	359	5hkm	DISCOVERY OF NOVEL 7-AZAINDOLES AS PDK1 INHIBITORS	1	309	A	None	None
+O15530	51	359	3rwq	Discovery of a Novel, Potent and Selective Inhibitor of 3-Phosphoinositide Dependent Kinase (PDK1)	3	311	A	None	359
+O15530	51	359	3orx	PDK1 mutant bound to allosteric disulfide fragment inhibitor 1F8	8	316	A	None	359
+O15530	51	359	3orx	PDK1 mutant bound to allosteric disulfide fragment inhibitor 1F8	8	316	D	None	359
+O15530	51	359	3orx	PDK1 mutant bound to allosteric disulfide fragment inhibitor 1F8	8	316	F	None	359
+O15530	51	359	3orx	PDK1 mutant bound to allosteric disulfide fragment inhibitor 1F8	8	316	G	None	359
+O15530	51	359	3orx	PDK1 mutant bound to allosteric disulfide fragment inhibitor 1F8	8	316	E	None	359
+O15530	51	359	3orx	PDK1 mutant bound to allosteric disulfide fragment inhibitor 1F8	8	316	H	None	359
+O15530	51	359	3orx	PDK1 mutant bound to allosteric disulfide fragment inhibitor 1F8	8	316	C	None	359
+O15530	51	359	3orx	PDK1 mutant bound to allosteric disulfide fragment inhibitor 1F8	8	316	B	None	359
+O15530	51	359	3qc4	PDK1 in complex with DFG-OUT inhibitor xxx	6	314	A	None	359
+O15530	51	359	3qc4	PDK1 in complex with DFG-OUT inhibitor xxx	6	314	B	51	359
+O15530	51	359	5ho7	DISCOVERY OF NOVEL 7-AZAINDOLES AS PDK1 INHIBITORS	1	309	A	None	359
+O15530	51	359	2xck	Crystal structure of PDK1 in complex with a pyrazoloquinazoline inhibitor	1	309	A	None	359
+O15530	51	359	3orz	PDK1 mutant bound to allosteric disulfide fragment activator 2A2	8	316	C	None	359
+O15530	51	359	3orz	PDK1 mutant bound to allosteric disulfide fragment activator 2A2	8	316	A	None	359
+O15530	51	359	3orz	PDK1 mutant bound to allosteric disulfide fragment activator 2A2	8	316	D	None	359
+O15530	51	359	3orz	PDK1 mutant bound to allosteric disulfide fragment activator 2A2	8	316	B	None	359
+O15530	51	359	3rwp	Discovery of a Novel, Potent and Selective Inhibitor of 3-Phosphoinositide Dependent Kinase (PDK1)	3	311	A	None	359
+O15530	51	359	2xch	Crystal structure of PDK1 in complex with a pyrazoloquinazoline inhibitor	1	309	A	None	359
+O15530	51	359	5hng	DISCOVERY OF NOVEL 7-AZAINDOLES AS PDK1 INHIBITORS	1	309	A	None	359
+O15530	51	359	3pwy	Crystal structure of an extender (SPD28345)-modified human PDK1 complex 2	3	311	A	None	359
+O15530	51	359	3otu	PDK1 mutant bound to allosteric disulfide fragment activator JS30	8	316	A	None	359
+O15530	51	359	4aw0	Human PDK1 Kinase Domain in Complex with Allosteric Compound PS182 Bound to the PIF-Pocket	3	311	A	None	359
+O15530	51	359	4aw1	Human PDK1 Kinase Domain in Complex with Allosteric Compound PS210 Bound to the PIF-Pocket	3	311	A	None	359
+O15530	51	359	5ho8	DISCOVERY OF NOVEL 7-AZAINDOLES AS PDK1 INHIBITORS	1	309	A	None	None
+O15530	66	362	3nax	PDK1 in complex with inhibitor MP7	15	311	A	None	None
+O15530	66	362	3nay	PDK1 in complex with inhibitor MP6	15	311	B	None	362
+O15530	66	362	3nay	PDK1 in complex with inhibitor MP6	15	311	A	None	362
+O15530	67	358	3nun	phosphoinositide-dependent kinase-1 (PDK1) with lead compound	1	292	A	None	358
+O15530	71	359	1h1w	High resolution crystal structure of the human PDK1 catalytic domain	1	289	A	71	359
+O15530	71	359	1uvr	Structure of human PDK1 kinase domain in complex with BIM-8	1	289	A	71	359
+O15530	72	357	1uu9	Structure of human PDK1 kinase domain in complex with BIM-3	1	286	A	72	357
+O15530	73	358	3nus	phosphoinositide-dependent kinase-1 (PDK1) with fragment8	1	286	A	73	358
+O15530	73	358	3nuu	phosphoinositide-dependent kinase-1 (PDK1) with fragment11	1	286	A	73	358
+O15530	73	358	3nuy	phosphoinositide-dependent kinase-1 (PDK1) with fragment17	1	286	A	73	358
+O15530	74	359	2pe0	CRYSTAL STRUCTURE OF HUMAN PHOSPHOINOSITIDE-DEPENDENT PROTEIN KINASE 1 (PDK1) 5-Hydroxy-3-[1-(1H-pyrrol-2-yl)-eth-(Z)-ylidene]-1,3-dihydro-indol-2-one COMPLEX	1	286	A	74	359
+O15530	74	359	2pe1	CRYSTAL STRUCTURE OF HUMAN PHOSPHOINOSITIDE-DEPENDENT PROTEIN KINASE 1 (PDK1) {2-Oxo-3-[1-(1H-pyrrol-2-yl)-eth-(Z)-ylidene]-2,3-dihydro-1H-indol-5-yl}-urea {BX-517} COMPLEX	1	286	A	74	359
+O15530	74	359	1z5m	Crystal Structure Of N1-[3-[[5-bromo-2-[[3-[(1-pyrrolidinylcarbonyl)amino]phenyl]amino]-4-pyrimidinyl]amino]propyl]-2,2-dimethylpropanediamide Complexed with Human PDK1	1	286	A	74	359
+O15530	74	359	2pe2	CRYSTAL STRUCTURE OF HUMAN PHOSPHOINOSITIDE-DEPENDENT PROTEIN KINASE 1 (PDK1) 3-{5-[2-Oxo-5-ureido-1,2-dihydro-indol-(3Z)-ylidenemethyl]-1H-pyrrol-3-yl}-N-(2-piperidin-1-yl-ethyl)-benzamide COMPLEX	1	286	A	74	359
+O15530	409	556	1w1d	Crystal Structure of the PDK1 Pleckstrin Homology (PH) domain bound to Inositol (1,3,4,5)-tetrakisphosphate	4	151	A	409	None
+O15530	409	556	1w1h	Crystal Structure of the PDK1 Pleckstrin Homology (PH) domain	4	151	B	409	556
+O15530	409	556	1w1h	Crystal Structure of the PDK1 Pleckstrin Homology (PH) domain	4	151	D	None	None
+O15530	409	556	1w1h	Crystal Structure of the PDK1 Pleckstrin Homology (PH) domain	4	151	A	None	556
+O15530	409	556	1w1h	Crystal Structure of the PDK1 Pleckstrin Homology (PH) domain	4	151	C	None	None
+O15530	409	556	2vki	Structure of the PDK1 PH domain K465E mutant	1	148	A	None	None
+O15530	409	556	1w1g	Crystal Structure of the PDK1 Pleckstrin Homology (PH) domain bound to DiC4-phosphatidylinositol (3,4,5)-trisphosphate	4	151	A	409	None
+

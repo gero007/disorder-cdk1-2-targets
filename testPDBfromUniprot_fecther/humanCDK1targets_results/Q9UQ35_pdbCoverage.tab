@@ -1,0 +1,31 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9UQ35	Serine/arginine repetitive matrix protein 2	SRRM2_HUMAN	Homo sapiens	PF08312	cwf21	cwf21 domain	58	101
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#9 mappings in 9 PDB chains in 9 PDB entries
+Q9UQ35	1	2752	6ff7	human Bact spliceosome core structure	1	2752	S	1	None
+Q9UQ35	1	2752	6ff4	human Bact spliceosome core structure	1	2752	S	1	None
+Q9UQ35	1	2752	5mqf	Cryo-EM structure of a human spliceosome activated for step 2 of splicing (C* complex)	1	2752	S	1	None
+Q9UQ35	1	2752	6icz	Cryo-EM structure of a human post-catalytic spliceosome (P complex) at 3.0 angstrom	1	2752	U	1	None
+Q9UQ35	1	2752	5xjc	Cryo-EM structure of the human spliceosome just prior to exon ligation at 3.6 angstrom	1	2752	U	1	None
+Q9UQ35	1	2752	5yzg	The Cryo-EM Structure of Human Catalytic Step I Spliceosome (C complex) at 4.1 angstrom resolution	1	2752	U	1	None
+Q9UQ35	1	2752	5z56	cryo-EM structure of a human activated spliceosome (mature Bact) at 5.1 angstrom.	1	2752	U	1	None
+Q9UQ35	1	2752	5z57	Cryo-EM structure of the human activated spliceosome (late Bact) at 6.5 angstrom	1	2752	U	1	None
+Q9UQ35	1	26	6qdv	Human post-catalytic P complex spliceosome	1	26	R	1	26
+

@@ -1,0 +1,41 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O00443	PHOSPHATIDYLINOSITOL-4-PHOSPHATE 3-KINASE C2 DOMAIN-CONTAINING ALPHA POLYPEPTIDE	P3C2A_HUMAN	Homo sapiens	PF00613	PI3Ka	Phosphoinositide 3-kinase family, accessory domain (PIK domain)	863	1046
+O00443	PHOSPHATIDYLINOSITOL-4-PHOSPHATE 3-KINASE C2 DOMAIN-CONTAINING ALPHA POLYPEPTIDE	P3C2A_HUMAN	Homo sapiens	PF00787	PX	PX domain	1451	1534
+O00443	PHOSPHATIDYLINOSITOL-4-PHOSPHATE 3-KINASE C2 DOMAIN-CONTAINING ALPHA POLYPEPTIDE	P3C2A_HUMAN	Homo sapiens	PF00792	PI3K_C2	Phosphoinositide 3-kinase C2	703	843
+O00443	PHOSPHATIDYLINOSITOL-4-PHOSPHATE 3-KINASE C2 DOMAIN-CONTAINING ALPHA POLYPEPTIDE	P3C2A_HUMAN	Homo sapiens	PF00794	PI3K_rbd	PI3-kinase family, ras-binding domain	409	512
+O00443	PHOSPHATIDYLINOSITOL-4-PHOSPHATE 3-KINASE C2 DOMAIN-CONTAINING ALPHA POLYPEPTIDE	P3C2A_HUMAN	Homo sapiens	PF00168	C2	C2 domain	1572	1680
+O00443	PHOSPHATIDYLINOSITOL-4-PHOSPHATE 3-KINASE C2 DOMAIN-CONTAINING ALPHA POLYPEPTIDE	P3C2A_HUMAN	Homo sapiens	PF00454	PI3_PI4_kinase	Phosphatidylinositol 3- and 4-kinase	1132	1347
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#14 mappings in 14 PDB chains in 8 PDB entries
+O00443	1405	1544	2iwl	Structure of the PX Domain of Phosphoinositide 3-Kinase-C2alpha	1	140	X	None	None
+O00443	1405	1544	6bub	Crystal structure of the PI3KC2alpha PX domain in space group P432	4	143	A	None	None
+O00443	1421	1534	2ar5	Crystal structure of the mammalian C2alpha-PI3 Kinase PX-domain	2	115	A	2	115
+O00443	1421	1532	2red	Crystal structures of C2ALPHA-PI3 kinase PX-domain domain indicate conformational change associated with ligand binding.	2	113	A	1421	1532
+O00443	1421	1532	2rea	Crystal structures of C2ALPHA-PI3 kinase PX-domain domain indicate conformational change associated with ligand binding.	2	113	A	1421	1532
+O00443	1559	1686	6bu0	Crystal structure of the PI3KC2alpha C2 domain in complex with IP6	4	131	A	None	None
+O00443	1559	1686	6bu0	Crystal structure of the PI3KC2alpha C2 domain in complex with IP6	4	131	B	1559	None
+O00443	1559	1686	6bu0	Crystal structure of the PI3KC2alpha C2 domain in complex with IP6	4	131	C	1559	None
+O00443	1559	1686	6bty	Crystal structure of the PI3KC2alpha C2 domain in space group P41212	4	131	A	None	None
+O00443	1559	1686	6bty	Crystal structure of the PI3KC2alpha C2 domain in space group P41212	4	131	B	1559	None
+O00443	1559	1686	6btz	Crystal structure of the PI3KC2alpha C2 domain in space group C121	4	131	A	1559	None
+O00443	1559	1686	6btz	Crystal structure of the PI3KC2alpha C2 domain in space group C121	4	131	B	1559	None
+O00443	1559	1686	6btz	Crystal structure of the PI3KC2alpha C2 domain in space group C121	4	131	C	1559	None
+O00443	1559	1686	6btz	Crystal structure of the PI3KC2alpha C2 domain in space group C121	4	131	D	1559	None
+

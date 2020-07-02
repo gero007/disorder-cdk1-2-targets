@@ -1,0 +1,32 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P30101	Protein disulfide-isomerase A3	PDIA3_HUMAN	Homo sapiens	PF00085	Thioredoxin	Thioredoxin	377	482
+P30101	Protein disulfide-isomerase A3	PDIA3_HUMAN	Homo sapiens	PF00085	Thioredoxin	Thioredoxin	26	130
+P30101	Protein disulfide-isomerase A3	PDIA3_HUMAN	Homo sapiens	PF13848	Thioredoxin_6	Thioredoxin-like domain	160	355
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 5 PDB entries
+P30101	25	505	3f8u	Tapasin/ERp57 heterodimer	1	481	C	25	None
+P30101	25	505	3f8u	Tapasin/ERp57 heterodimer	1	481	A	25	None
+P30101	25	505	6eny	Structure of the human PLC editing module	1	481	D	25	None
+P30101	25	137	2alb	NMR structure of the N-terminal domain a of the glycoprotein chaperone ERp57	1	113	A	1	113
+P30101	134	376	2h8l	Crystal structure of the bb' fragment of ERp57	6	248	A	134	None
+P30101	134	376	2h8l	Crystal structure of the bb' fragment of ERp57	6	248	C	134	None
+P30101	134	376	2h8l	Crystal structure of the bb' fragment of ERp57	6	248	B	None	None
+P30101	357	485	2dmm	The solution structure of the second thioredoxin domain of human Protein disulfide-isomerase A3	8	136	A	8	136
+

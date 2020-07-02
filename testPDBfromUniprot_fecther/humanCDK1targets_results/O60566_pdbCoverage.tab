@@ -1,0 +1,34 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O60566	MITOTIC CHECKPOINT SERINE/THREONINE-PROTEIN KINASE BUB1 BETA	BUB1B_HUMAN	Homo sapiens	PF08311	Mad3_BUB1_I	Mad3/BUB1 homology region 1	57	179
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#12 mappings in 12 PDB chains in 9 PDB entries
+O60566	1	1050	6tlj	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Mitotic checkpoint complex (APC/C-MCC) at 3.8 angstrom resolution	1	1050	S	None	None
+O60566	1	1050	5khu	Model of human Anaphase-promoting complex/Cyclosome (APC15 deletion mutant), in complex with the Mitotic checkpoint complex (APC/C-CDC20-MCC) based on cryo EM data at 4.8 Angstrom resolution	1	1050	Q	None	None
+O60566	1	560	5lcw	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Mitotic checkpoint complex (APC/C-MCC) at 4.2 angstrom resolution	1	342	S	None	560
+O60566	20	42	4ggd	Structural analysis of human Cdc20 supports multisite degron recognition by APC/C.	1	23	D	None	None
+O60566	20	42	4ggd	Structural analysis of human Cdc20 supports multisite degron recognition by APC/C.	1	23	C	None	None
+O60566	57	220	2wvi	Crystal Structure of the N-terminal Domain of BubR1	1	164	A	57	220
+O60566	57	220	3si5	Kinetochore-BUBR1 kinase complex	13	176	A	57	None
+O60566	57	220	3si5	Kinetochore-BUBR1 kinase complex	13	176	B	57	None
+O60566	647	720	5jja	Crystal structure of a PP2A B56gamma/BubR1 complex	2	75	D	None	None
+O60566	647	720	5jja	Crystal structure of a PP2A B56gamma/BubR1 complex	2	75	C	None	None
+O60566	663	681	5k6s	The structure of the PP2A B56 subunit BubR1 complex	1	19	B	None	None
+O60566	668	676	5swf	The structure of the PP2A B56 subunit double phosphorylated BubR1 complex	1	9	B	668	None
+

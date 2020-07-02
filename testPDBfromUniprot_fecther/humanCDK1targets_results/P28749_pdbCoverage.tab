@@ -1,0 +1,33 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P28749	Retinoblastoma-like protein 1	RBL1_HUMAN	Homo sapiens	PF01857	RB_B	Retinoblastoma-associated protein B domain	787	943
+P28749	Retinoblastoma-like protein 1	RBL1_HUMAN	Homo sapiens	PF01858	RB_A	Retinoblastoma-associated protein A domain	385	578
+P28749	Retinoblastoma-like protein 1	RBL1_HUMAN	Homo sapiens	PF11934	DUF3452	Domain of unknown function (DUF3452)	77	212
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#9 mappings in 7 PDB chains in 5 PDB entries
+P28749	391	972	4yoo	p107 pocket domain in complex with LIN52 P29A peptide	4	369	A	391	None
+P28749	676	972	4yoz	p107 pocket domain in complex with HPV E7 peptide	212	371	A	None	None
+P28749	391	593	4yoz	p107 pocket domain in complex with HPV E7 peptide	4	206	A	391	593
+P28749	391	599	4yos	p107 pocket domain complexed with LIN52 peptide	4	212	A	391	None
+P28749	781	972	4yos	p107 pocket domain complexed with LIN52 peptide	214	369	A	None	None
+P28749	653	663	1h28	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p107	1	11	E	None	663
+P28749	653	663	1h28	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p107	1	11	F	None	663
+P28749	994	1031	5tuv	Crystal structure of the E2F5-DP1-p107 ternary complex	4	41	F	None	None
+P28749	994	1031	5tuv	Crystal structure of the E2F5-DP1-p107 ternary complex	4	41	C	None	None
+

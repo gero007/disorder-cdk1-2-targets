@@ -1,0 +1,37 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q13309	SKP2	SKP2_HUMAN	Homo sapiens	PF12937	F-box-like	F-box-like	97	143
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#15 mappings in 15 PDB chains in 6 PDB entries
+Q13309	89	424	2ast	Crystal structure of Skp1-Skp2-Cks1 in complex with a p27 peptide	1	336	B	None	None
+Q13309	89	424	2ass	Crystal structure of the Skp1-Skp2-Cks1 complex	1	336	B	None	None
+Q13309	89	424	1fqv	Insights into scf ubiquitin ligases from the structure of the skp1-skp2 complex	1	336	C	None	None
+Q13309	89	424	1fqv	Insights into scf ubiquitin ligases from the structure of the skp1-skp2 complex	1	336	I	None	None
+Q13309	89	424	1fqv	Insights into scf ubiquitin ligases from the structure of the skp1-skp2 complex	1	336	M	None	None
+Q13309	89	424	1fqv	Insights into scf ubiquitin ligases from the structure of the skp1-skp2 complex	1	336	A	None	None
+Q13309	89	424	1fqv	Insights into scf ubiquitin ligases from the structure of the skp1-skp2 complex	1	336	O	None	None
+Q13309	89	424	1fqv	Insights into scf ubiquitin ligases from the structure of the skp1-skp2 complex	1	336	E	None	None
+Q13309	89	424	1fqv	Insights into scf ubiquitin ligases from the structure of the skp1-skp2 complex	1	336	G	None	None
+Q13309	89	424	1fqv	Insights into scf ubiquitin ligases from the structure of the skp1-skp2 complex	1	336	K	None	None
+Q13309	89	398	1fs2	INSIGHTS INTO SCF UBIQUITIN LIGASES FROM THE STRUCTURE OF THE SKP1-SKP2 COMPLEX	1	272	A	None	None
+Q13309	89	398	1fs2	INSIGHTS INTO SCF UBIQUITIN LIGASES FROM THE STRUCTURE OF THE SKP1-SKP2 COMPLEX	1	272	C	None	None
+Q13309	89	141	1fs1	INSIGHTS INTO SCF UBIQUITIN LIGASES FROM THE STRUCTURE OF THE SKP1-SKP2 COMPLEX	1	53	A	None	None
+Q13309	89	141	1fs1	INSIGHTS INTO SCF UBIQUITIN LIGASES FROM THE STRUCTURE OF THE SKP1-SKP2 COMPLEX	1	53	C	None	None
+Q13309	97	137	1ldk	Structure of the Cul1-Rbx1-Skp1-F boxSkp2 SCF Ubiquitin Ligase Complex	1	41	E	3109	3149
+

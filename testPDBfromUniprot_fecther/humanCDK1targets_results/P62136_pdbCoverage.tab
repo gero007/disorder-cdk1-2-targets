@@ -1,0 +1,72 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P62136	Serine/threonine-protein phosphatase PP1-alpha catalytic subunit	PP1A_HUMAN	Homo sapiens	PF00149	Metallophos	Calcineurin-like phosphoesterase	57	252
+P62136	Serine/threonine-protein phosphatase PP1-alpha catalytic subunit	PP1A_HUMAN	Homo sapiens	PF16891	STPPase_N	Serine-threonine protein phosphatase N-terminal domain	9	56
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#49 mappings in 49 PDB chains in 26 PDB entries
+P62136	1	330	6g0i	Active Fe-PP1	2	331	A	None	None
+P62136	1	330	6g0j	Inactive Fe-PP1	2	331	A	None	None
+P62136	1	330	6dcx	iASPP-PP-1c structure and targeting of p53	10	339	A	None	None
+P62136	1	330	6dcx	iASPP-PP-1c structure and targeting of p53	10	339	B	None	None
+P62136	1	330	4g9j	Protein Ser/Thr phosphatase-1 in complex with cell-permeable peptide	2	331	A	None	None
+P62136	1	330	4g9j	Protein Ser/Thr phosphatase-1 in complex with cell-permeable peptide	2	331	B	None	None
+P62136	1	300	6obn	The crystal structure of coexpressed SDS22:PP1 complex	6	305	A	1	None
+P62136	1	300	6obn	The crystal structure of coexpressed SDS22:PP1 complex	6	305	B	None	None
+P62136	1	300	3n5u	Crystal structure of an Rb C-terminal peptide bound to the catalytic subunit of PP1	1	300	B	None	300
+P62136	1	300	3n5u	Crystal structure of an Rb C-terminal peptide bound to the catalytic subunit of PP1	1	300	A	None	300
+P62136	1	300	6obp	Reconstituted PP1 holoenzyme	6	305	A	1	None
+P62136	7	330	6ghm	Structure of PP1 alpha phosphatase bound to ASPP2	6	329	B	7	None
+P62136	7	330	6ghm	Structure of PP1 alpha phosphatase bound to ASPP2	6	329	A	7	None
+P62136	7	307	3v4y	Crystal Structure of the first Nuclear PP1 holoenzyme	6	306	C	7	None
+P62136	7	307	3v4y	Crystal Structure of the first Nuclear PP1 holoenzyme	6	306	E	7	None
+P62136	7	307	3v4y	Crystal Structure of the first Nuclear PP1 holoenzyme	6	306	G	7	None
+P62136	7	307	3v4y	Crystal Structure of the first Nuclear PP1 holoenzyme	6	306	A	7	None
+P62136	7	330	3egg	Crystal structure of a complex between Protein Phosphatase 1 alpha (PP1) and the PP1 binding and PDZ domains of Spinophilin	6	329	B	7	None
+P62136	7	330	3egg	Crystal structure of a complex between Protein Phosphatase 1 alpha (PP1) and the PP1 binding and PDZ domains of Spinophilin	6	329	A	7	None
+P62136	7	330	3egh	Crystal structure of a complex between Protein Phosphatase 1 alpha (PP1), the PP1 binding and PDZ domains of Spinophilin and the small natural molecular toxin Nodularin-R	6	329	B	7	None
+P62136	7	330	3egh	Crystal structure of a complex between Protein Phosphatase 1 alpha (PP1), the PP1 binding and PDZ domains of Spinophilin and the small natural molecular toxin Nodularin-R	6	329	A	7	None
+P62136	7	330	3hvq	Crystal structure of a complex between Protein Phosphatase 1 alpha (PP1) and the PP1 binding and PDZ domains of Neurabin	6	329	B	7	None
+P62136	7	330	3hvq	Crystal structure of a complex between Protein Phosphatase 1 alpha (PP1) and the PP1 binding and PDZ domains of Neurabin	6	329	A	7	None
+P62136	7	300	5ioh	RepoMan-PP1a (protein phosphatase 1, alpha isoform) holoenzyme complex	6	299	C	7	300
+P62136	7	300	5ioh	RepoMan-PP1a (protein phosphatase 1, alpha isoform) holoenzyme complex	6	299	A	7	None
+P62136	7	300	4mov	1.45 A Resolution Crystal Structure of Protein Phosphatase 1	6	299	B	7	None
+P62136	7	300	4mov	1.45 A Resolution Crystal Structure of Protein Phosphatase 1	6	299	A	7	None
+P62136	7	300	6alz	Crystal structure of Protein Phosphatase 1 bound to the natural inhibitor Tautomycetin	6	299	B	7	None
+P62136	7	300	6alz	Crystal structure of Protein Phosphatase 1 bound to the natural inhibitor Tautomycetin	6	299	A	7	None
+P62136	7	300	4moy	Structure of a second nuclear PP1 Holoenzyme, crystal form 1	6	299	A	7	300
+P62136	7	300	4mp0	Structure of a second nuclear PP1 Holoenzyme, crystal form 2	6	299	C	7	None
+P62136	7	300	4mp0	Structure of a second nuclear PP1 Holoenzyme, crystal form 2	6	299	A	7	300
+P62136	7	300	6dno	Crystal structure of Protein Phosphatase 1 (PP1) bound to the muscle glycogen-targeting subunit (Gm)	6	299	A	7	300
+P62136	7	300	3e7a	Crystal Structure of Protein Phosphatase-1 Bound to the natural toxin Nodularin-R	6	299	B	7	None
+P62136	7	300	3e7a	Crystal Structure of Protein Phosphatase-1 Bound to the natural toxin Nodularin-R	6	299	A	7	None
+P62136	7	300	4xpn	Crystal Structure of Protein Phosphate 1 complexed with PP1 binding domain of GADD34	6	299	C	7	None
+P62136	7	300	4xpn	Crystal Structure of Protein Phosphate 1 complexed with PP1 binding domain of GADD34	6	299	A	7	None
+P62136	7	300	3e7b	Crystal Structure of Protein Phosphatase-1 Bound to the natural toxin inhibitor Tautomycin	6	299	B	7	None
+P62136	7	300	3e7b	Crystal Structure of Protein Phosphatase-1 Bound to the natural toxin inhibitor Tautomycin	6	299	A	7	None
+P62136	7	300	6obs	PP1 Y134K	6	299	B	7	None
+P62136	7	300	6obs	PP1 Y134K	6	299	A	7	None
+P62136	7	300	6obr	PP1 Y134A in complex with Microcystin LR	6	299	B	7	None
+P62136	7	300	6obr	PP1 Y134A in complex with Microcystin LR	6	299	A	7	None
+P62136	7	300	6obq	PP1 H66K in complex with Microcystin LR	6	299	B	7	None
+P62136	7	300	6obq	PP1 H66K in complex with Microcystin LR	6	299	A	7	None
+P62136	7	300	6czo	The KNL1-PP1 Holoenzyme	6	299	C	7	None
+P62136	7	300	6czo	The KNL1-PP1 Holoenzyme	6	299	A	7	None
+P62136	7	300	6obu	PP1 Y134K in complex with Microcystin LR	6	299	B	7	None
+P62136	7	300	6obu	PP1 Y134K in complex with Microcystin LR	6	299	A	7	None
+

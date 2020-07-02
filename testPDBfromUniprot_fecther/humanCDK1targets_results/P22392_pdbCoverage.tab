@@ -1,0 +1,52 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P22392	NUCLEOSIDE DIPHOSPHATE KINASE	NDKB_HUMAN	Homo sapiens	PF00334	NDK	Nucleoside diphosphate kinase	5	139
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#30 mappings in 30 PDB chains in 5 PDB entries
+P22392	1	152	1nsk	THE CRYSTAL STRUCTURE OF A HUMAN NUCLEOSIDE DIPHOSPHATE KINASE, NM23-H2	1	152	T	1	None
+P22392	1	152	1nsk	THE CRYSTAL STRUCTURE OF A HUMAN NUCLEOSIDE DIPHOSPHATE KINASE, NM23-H2	1	152	O	1	None
+P22392	1	152	1nsk	THE CRYSTAL STRUCTURE OF A HUMAN NUCLEOSIDE DIPHOSPHATE KINASE, NM23-H2	1	152	R	1	None
+P22392	1	152	1nsk	THE CRYSTAL STRUCTURE OF A HUMAN NUCLEOSIDE DIPHOSPHATE KINASE, NM23-H2	1	152	U	1	None
+P22392	1	152	1nsk	THE CRYSTAL STRUCTURE OF A HUMAN NUCLEOSIDE DIPHOSPHATE KINASE, NM23-H2	1	152	N	1	None
+P22392	1	152	1nsk	THE CRYSTAL STRUCTURE OF A HUMAN NUCLEOSIDE DIPHOSPHATE KINASE, NM23-H2	1	152	L	1	None
+P22392	2	152	3bbf	Crystal structure of the NM23-H2 transcription factor complex with GDP	1	151	B	2	152
+P22392	2	152	3bbf	Crystal structure of the NM23-H2 transcription factor complex with GDP	1	151	F	2	152
+P22392	2	152	3bbf	Crystal structure of the NM23-H2 transcription factor complex with GDP	1	151	C	2	152
+P22392	2	152	3bbf	Crystal structure of the NM23-H2 transcription factor complex with GDP	1	151	D	2	152
+P22392	2	152	3bbf	Crystal structure of the NM23-H2 transcription factor complex with GDP	1	151	E	2	152
+P22392	2	152	3bbf	Crystal structure of the NM23-H2 transcription factor complex with GDP	1	151	A	2	152
+P22392	2	152	3bbb	Crystal structure of the NM23-H2 transcription factor complex with dinucleotide d(AG)	1	151	C	None	152
+P22392	2	152	3bbb	Crystal structure of the NM23-H2 transcription factor complex with dinucleotide d(AG)	1	151	B	2	152
+P22392	2	152	3bbb	Crystal structure of the NM23-H2 transcription factor complex with dinucleotide d(AG)	1	151	F	2	152
+P22392	2	152	3bbb	Crystal structure of the NM23-H2 transcription factor complex with dinucleotide d(AG)	1	151	D	2	152
+P22392	2	152	3bbb	Crystal structure of the NM23-H2 transcription factor complex with dinucleotide d(AG)	1	151	E	None	152
+P22392	2	152	3bbb	Crystal structure of the NM23-H2 transcription factor complex with dinucleotide d(AG)	1	151	A	2	152
+P22392	2	152	3bbc	Crystal structure of R88A mutant of the NM23-H2 transcription factor	1	151	B	2	152
+P22392	2	152	3bbc	Crystal structure of R88A mutant of the NM23-H2 transcription factor	1	151	F	2	152
+P22392	2	152	3bbc	Crystal structure of R88A mutant of the NM23-H2 transcription factor	1	151	C	2	152
+P22392	2	152	3bbc	Crystal structure of R88A mutant of the NM23-H2 transcription factor	1	151	D	2	152
+P22392	2	152	3bbc	Crystal structure of R88A mutant of the NM23-H2 transcription factor	1	151	E	2	152
+P22392	2	152	3bbc	Crystal structure of R88A mutant of the NM23-H2 transcription factor	1	151	A	2	152
+P22392	2	152	1nue	X-RAY STRUCTURE OF NM23 HUMAN NUCLEOSIDE DIPHOSPHATE KINASE B COMPLEXED WITH GDP AT 2 ANGSTROMS RESOLUTION	1	151	B	2	152
+P22392	2	152	1nue	X-RAY STRUCTURE OF NM23 HUMAN NUCLEOSIDE DIPHOSPHATE KINASE B COMPLEXED WITH GDP AT 2 ANGSTROMS RESOLUTION	1	151	F	2	152
+P22392	2	152	1nue	X-RAY STRUCTURE OF NM23 HUMAN NUCLEOSIDE DIPHOSPHATE KINASE B COMPLEXED WITH GDP AT 2 ANGSTROMS RESOLUTION	1	151	C	2	152
+P22392	2	152	1nue	X-RAY STRUCTURE OF NM23 HUMAN NUCLEOSIDE DIPHOSPHATE KINASE B COMPLEXED WITH GDP AT 2 ANGSTROMS RESOLUTION	1	151	D	2	152
+P22392	2	152	1nue	X-RAY STRUCTURE OF NM23 HUMAN NUCLEOSIDE DIPHOSPHATE KINASE B COMPLEXED WITH GDP AT 2 ANGSTROMS RESOLUTION	1	151	E	2	152
+P22392	2	152	1nue	X-RAY STRUCTURE OF NM23 HUMAN NUCLEOSIDE DIPHOSPHATE KINASE B COMPLEXED WITH GDP AT 2 ANGSTROMS RESOLUTION	1	151	A	2	152
+

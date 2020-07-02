@@ -1,0 +1,47 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q02880	DNA topoisomerase 2-beta	TOP2B_HUMAN	Homo sapiens	PF00521	DNA_topoisoIV	DNA gyrase/topoisomerase IV, subunit A	734	1190
+Q02880	DNA topoisomerase 2-beta	TOP2B_HUMAN	Homo sapiens	PF00204	DNA_gyraseB	DNA gyrase B	287	451
+Q02880	DNA topoisomerase 2-beta	TOP2B_HUMAN	Homo sapiens	PF01751	Toprim	Toprim domain	477	592
+Q02880	DNA topoisomerase 2-beta	TOP2B_HUMAN	Homo sapiens	PF02518	HATPase_c	Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase	97	246
+Q02880	DNA topoisomerase 2-beta	TOP2B_HUMAN	Homo sapiens	PF08070	DTHCT	DTHCT (NUC029) region	1508	1610
+Q02880	DNA topoisomerase 2-beta	TOP2B_HUMAN	Homo sapiens	PF16898	TOPRIM_C	C-terminal associated domain of TOPRIM	594	732
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#20 mappings in 20 PDB chains in 11 PDB entries
+Q02880	450	1206	5gwi	Structure of a Human topoisomerase IIbeta fragment in complex with DNA and E7873R	27	783	A	None	1201
+Q02880	450	1206	5gwi	Structure of a Human topoisomerase IIbeta fragment in complex with DNA and E7873R	27	783	B	None	1201
+Q02880	450	1206	5zad	Human topoisomerase II beta in complex with DNA	27	783	B	None	1201
+Q02880	450	1206	5zad	Human topoisomerase II beta in complex with DNA	27	783	A	None	1201
+Q02880	450	1206	4g0w	Human topoisomerase iibeta in complex with DNA and ametantrone	27	783	A	None	1201
+Q02880	450	1206	4g0w	Human topoisomerase iibeta in complex with DNA and ametantrone	27	783	B	None	1201
+Q02880	450	1206	4g0v	Human topoisomerase iibeta in complex with DNA and mitoxantrone	27	783	A	None	1201
+Q02880	450	1206	4g0v	Human topoisomerase iibeta in complex with DNA and mitoxantrone	27	783	B	None	1201
+Q02880	450	1206	4g0u	Human topoisomerase IIbeta in complex with DNA and amsacrine	27	783	A	None	1201
+Q02880	450	1206	4g0u	Human topoisomerase IIbeta in complex with DNA and amsacrine	27	783	B	None	1201
+Q02880	450	1206	5gwj	Structure of a Human topoisomerase IIbeta fragment in complex with DNA and E7873S	27	783	A	None	1201
+Q02880	450	1206	5gwj	Structure of a Human topoisomerase IIbeta fragment in complex with DNA and E7873S	27	783	B	None	1201
+Q02880	450	1206	5zen	Crystal structure of human topoisomerase II beta in complex with DNA: a new quaternary conformation showing opening of the protein-linked DNA-gate	27	783	A	None	1201
+Q02880	450	1206	5zrf	Crystal structure of human topoisomerase II beta in complex with 5-iodouridine-containing-DNA and etoposide in space group p21	27	783	A	None	1201
+Q02880	450	1206	5zrf	Crystal structure of human topoisomerase II beta in complex with 5-iodouridine-containing-DNA and etoposide in space group p21	27	783	B	None	1201
+Q02880	450	1206	3qx3	Human topoisomerase IIbeta in complex with DNA and etoposide	27	783	A	None	1201
+Q02880	450	1206	3qx3	Human topoisomerase IIbeta in complex with DNA and etoposide	27	783	B	None	1201
+Q02880	450	1206	5zqf	Crystal structure of human topoisomerase II beta in complex with 5-iodouridine-containing-DNA in space group P3221	27	783	A	None	1201
+Q02880	450	1206	4j3n	Human Topoisomerase Iibeta in complex with DNA	27	783	A	None	1201
+Q02880	450	1206	4j3n	Human Topoisomerase Iibeta in complex with DNA	27	783	B	None	1201
+

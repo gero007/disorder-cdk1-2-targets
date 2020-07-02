@@ -1,0 +1,30 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P20338	GTP-binding protein	RAB4A_HUMAN	Homo sapiens	PF00071	Ras	Ras family	15	176
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 4 PDB entries
+P20338	6	189	2bme	high resolution structure of GppNHp-bound human Rab4a	3	186	A	None	None
+P20338	6	189	2bme	high resolution structure of GppNHp-bound human Rab4a	3	186	D	None	None
+P20338	6	189	2bme	high resolution structure of GppNHp-bound human Rab4a	3	186	B	None	None
+P20338	6	189	2bme	high resolution structure of GppNHp-bound human Rab4a	3	186	C	None	None
+P20338	6	189	2bmd	high resolution structure of GDP-bound human Rab4a	3	186	A	None	186
+P20338	7	177	1yu9	GppNHp-Bound Rab4A	5	175	A	2	172
+P20338	7	177	1z0k	Structure of GTP-Bound Rab4Q67L GTPase in complex with the central Rab binding domain of Rabenosyn-5	2	172	C	None	172
+P20338	7	177	1z0k	Structure of GTP-Bound Rab4Q67L GTPase in complex with the central Rab binding domain of Rabenosyn-5	2	172	A	None	172
+

@@ -1,0 +1,27 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q8IZD2	Histone-lysine N-methyltransferase 2E	KMT2E_HUMAN	Homo sapiens	PF00628	PHD	PHD-finger	120	166
+Q8IZD2	Histone-lysine N-methyltransferase 2E	KMT2E_HUMAN	Homo sapiens	PF00856	SET	SET domain	155	447
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 4 PDB chains in 3 PDB entries
+Q8IZD2	109	188	2lv9	Solution NMR structure of the PHD domain of human MLL5, Northeast structural genomics consortium target HR6512A	19	98	A	109	188
+Q8IZD2	117	181	4l58	Crystal structure of the MLL5 PHD finger in complex with H3K4me3	5	69	A	1	65
+Q8IZD2	323	458	5ht6	Crystal structure of the SET domain of the human MLL5 methyltransferase	3	138	A	None	None
+Q8IZD2	323	458	5ht6	Crystal structure of the SET domain of the human MLL5 methyltransferase	3	138	B	None	None
+

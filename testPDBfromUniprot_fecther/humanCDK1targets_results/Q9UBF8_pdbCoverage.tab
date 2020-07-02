@@ -1,0 +1,55 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9UBF8	Phosphatidylinositol 4-kinase beta	PI4KB_HUMAN	Homo sapiens	PF00454	PI3_PI4_kinase	Phosphatidylinositol 3- and 4-kinase	559	763
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#32 mappings in 31 PDB chains in 16 PDB entries
+Q9UBF8	1	68	2n73	Solution structure of the ACBD3:PI4KB complex	13	80	B	113	180
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	S	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	A	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	O	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	M	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	c	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	I	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	W	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	C	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	Q	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	g	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	Y	None	784
+Q9UBF8	121	799	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	3	566	G	None	784
+Q9UBF8	121	799	5c4g	Crystal structure of an engineered construct of phosphatidylinositol 4 kinase III beta with the inhibitor BQR695 in complex with GDP loaded Rab11	5	529	E	None	None
+Q9UBF8	121	799	5euq	Crystal structure of an engineered construct of phosphatidylinositol 4 kinase III beta with a potent and selective inhibitor in complex with GDP loaded Rab11	5	529	E	None	None
+Q9UBF8	121	799	5c46	Crystal structure of an engineered construct of phosphatidylinositol 4 kinase III beta in complex with GTP gamma S loaded Rab11	5	529	E	None	None
+Q9UBF8	121	799	4d0l	Phosphatidylinositol 4-kinase III beta-PIK93 in a complex with Rab11a- GTP gammaS	3	566	E	None	784
+Q9UBF8	121	799	4d0l	Phosphatidylinositol 4-kinase III beta-PIK93 in a complex with Rab11a- GTP gammaS	3	566	C	None	784
+Q9UBF8	121	799	4d0l	Phosphatidylinositol 4-kinase III beta-PIK93 in a complex with Rab11a- GTP gammaS	3	566	A	None	784
+Q9UBF8	128	799	5fbw	PI4KB in complex with Rab11 and the MI369 Inhibitor	1	572	A	128	799
+Q9UBF8	128	799	5fbv	PI4KB in complex with Rab11 and the MI364 Inhibitor	1	572	A	128	799
+Q9UBF8	128	799	5fbr	PI4KB in complex with Rab11 and the MI359 Inhibitor	1	572	A	128	799
+Q9UBF8	128	799	5fbq	PI4KB in complex with Rab11 and the MI358 Inhibitor	1	572	A	128	799
+Q9UBF8	128	799	4wag	Phosphatidylinositol 4-kinase III beta crystallized with MI103 inhibitor	1	572	A	None	None
+Q9UBF8	128	799	5fbl	PI4KB in complex with Rab11 and the MI356 Inhibitor	1	572	A	128	799
+Q9UBF8	128	799	4wae	Phosphatidylinositol 4-kinase III beta crystallized with ATP	1	572	A	None	None
+Q9UBF8	289	297	5nas	Crystal structure of human 14-3-3 zeta in complex with PI4KIIIB peptide	1	9	C	None	297
+Q9UBF8	289	297	5nas	Crystal structure of human 14-3-3 zeta in complex with PI4KIIIB peptide	1	9	D	None	297
+Q9UBF8	292	297	5lx2	Lt 14-3-3 in complex with PI4KIIIB peptide	1	6	B	292	297
+Q9UBF8	317	428	6gl3	Crystal structure of human Phosphatidylinositol 4-kinase III beta (PI4KIIIbeta) in complex with ligand 44	2	113	A	None	None
+Q9UBF8	317	428	6gl3	Crystal structure of human Phosphatidylinositol 4-kinase III beta (PI4KIIIbeta) in complex with ligand 44	2	113	B	None	None
+Q9UBF8	532	798	6gl3	Crystal structure of human Phosphatidylinositol 4-kinase III beta (PI4KIIIbeta) in complex with ligand 44	120	386	A	None	None
+Q9UBF8	532	798	6gl3	Crystal structure of human Phosphatidylinositol 4-kinase III beta (PI4KIIIbeta) in complex with ligand 44	120	386	B	None	798
+

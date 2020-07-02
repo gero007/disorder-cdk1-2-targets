@@ -1,0 +1,62 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q15910	Histone-lysine N-methyltransferase EZH2,Histone-lysine N-methyltransferase EZH2,Histone-lysine N-methyltransferase EZH2	EZH2_HUMAN	Homo sapiens	PF00856	SET	SET domain	623	727
+Q15910	Histone-lysine N-methyltransferase EZH2,Histone-lysine N-methyltransferase EZH2,Histone-lysine N-methyltransferase EZH2	EZH2_HUMAN	Homo sapiens	PF11616	EZH2_WD-Binding	WD repeat binding protein EZH2	39	68
+Q15910	Histone-lysine N-methyltransferase EZH2,Histone-lysine N-methyltransferase EZH2,Histone-lysine N-methyltransferase EZH2	EZH2_HUMAN	Homo sapiens	PF18118	PRC2_HTH_1	Polycomb repressive complex 2 tri-helical domain	158	249
+Q15910	Histone-lysine N-methyltransferase EZH2,Histone-lysine N-methyltransferase EZH2,Histone-lysine N-methyltransferase EZH2	EZH2_HUMAN	Homo sapiens	PF18264	preSET_CXC	CXC domain	559	590
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#33 mappings in 33 PDB chains in 17 PDB entries
+Q15910	1	746	6c24	Cryo-EM structure of PRC2 bound to cofactors AEBP2 and JARID2 in the Extended Active State	1	746	K	None	None
+Q15910	1	746	6c24	Cryo-EM structure of PRC2 bound to cofactors AEBP2 and JARID2 in the Extended Active State	1	746	C	None	None
+Q15910	1	746	6c23	Cryo-EM structure of PRC2 bound to cofactors AEBP2 and JARID2 in the Compact Active State	1	746	K	None	None
+Q15910	1	746	6c23	Cryo-EM structure of PRC2 bound to cofactors AEBP2 and JARID2 in the Compact Active State	1	746	C	None	None
+Q15910	1	746	5hyn	Structure of Human Polycomb Repressive Complex 2 (PRC2) with oncogenic histone H3K27M peptide	1	746	A	None	None
+Q15910	1	746	5hyn	Structure of Human Polycomb Repressive Complex 2 (PRC2) with oncogenic histone H3K27M peptide	1	746	F	None	None
+Q15910	1	746	5hyn	Structure of Human Polycomb Repressive Complex 2 (PRC2) with oncogenic histone H3K27M peptide	1	746	Q	None	None
+Q15910	1	746	5hyn	Structure of Human Polycomb Repressive Complex 2 (PRC2) with oncogenic histone H3K27M peptide	1	746	K	None	None
+Q15910	1	385	5ls6	Structure of Human Polycomb Repressive Complex 2 (PRC2) with inhibitor	11	367	A	None	None
+Q15910	1	385	5ls6	Structure of Human Polycomb Repressive Complex 2 (PRC2) with inhibitor	11	367	G	None	None
+Q15910	1	385	5ls6	Structure of Human Polycomb Repressive Complex 2 (PRC2) with inhibitor	11	367	D	None	None
+Q15910	1	385	5ls6	Structure of Human Polycomb Repressive Complex 2 (PRC2) with inhibitor	11	367	J	None	None
+Q15910	421	746	5ls6	Structure of Human Polycomb Repressive Complex 2 (PRC2) with inhibitor	370	695	A	None	None
+Q15910	421	746	5ls6	Structure of Human Polycomb Repressive Complex 2 (PRC2) with inhibitor	370	695	G	None	None
+Q15910	421	746	5ls6	Structure of Human Polycomb Repressive Complex 2 (PRC2) with inhibitor	370	695	D	None	None
+Q15910	421	746	5ls6	Structure of Human Polycomb Repressive Complex 2 (PRC2) with inhibitor	370	695	J	None	None
+Q15910	2	746	5wg6	Human Polycomb Repressive Complex 2 in complex with GSK126 inhibitor	10	706	A	None	None
+Q15910	2	746	5wg6	Human Polycomb Repressive Complex 2 in complex with GSK126 inhibitor	10	706	C	None	None
+Q15910	39	68	5u62	Crystal structure of EED in complex with H3K27Me3 peptide and 6-(benzo[d][1,3]dioxol-4-ylmethyl)-5,6,7,8-tetrahydroimidazo[1,5-a]pyridin-3-amine	1	30	C	None	68
+Q15910	39	68	5u62	Crystal structure of EED in complex with H3K27Me3 peptide and 6-(benzo[d][1,3]dioxol-4-ylmethyl)-5,6,7,8-tetrahydroimidazo[1,5-a]pyridin-3-amine	1	30	D	None	68
+Q15910	39	68	5u5t	Crystal structure of EED in complex with H3K27Me3 peptide and 3-(benzo[d][1,3]dioxol-4-ylmethyl)piperidine-1-carboximidamide	1	30	C	None	68
+Q15910	39	68	5u5t	Crystal structure of EED in complex with H3K27Me3 peptide and 3-(benzo[d][1,3]dioxol-4-ylmethyl)piperidine-1-carboximidamide	1	30	D	None	68
+Q15910	40	68	5h25	EED in complex with PRC2 allosteric inhibitor compound 11	1	29	C	40	68
+Q15910	40	68	5h25	EED in complex with PRC2 allosteric inhibitor compound 11	1	29	D	40	68
+Q15910	40	68	5h24	EED in complex with PRC2 allosteric inhibitor compound 8	1	29	C	40	68
+Q15910	40	68	5h24	EED in complex with PRC2 allosteric inhibitor compound 8	1	29	D	40	68
+Q15910	40	68	5gsa	EED in complex with an allosteric PRC2 inhibitor	1	29	C	40	68
+Q15910	40	68	5gsa	EED in complex with an allosteric PRC2 inhibitor	1	29	D	40	68
+Q15910	40	68	5h15	EED in complex with PRC2 allosteric inhibitor EED709	1	29	C	40	68
+Q15910	40	68	5h15	EED in complex with PRC2 allosteric inhibitor EED709	1	29	D	40	68
+Q15910	40	68	5h19	EED in complex with PRC2 allosteric inhibitor EED162	1	29	B	40	68
+Q15910	40	68	5h17	EED in complex with PRC2 allosteric inhibitor EED210	1	29	B	40	None
+Q15910	40	68	5h14	EED in complex with an allosteric PRC2 inhibitor EED666	1	29	C	40	68
+Q15910	40	68	5h14	EED in complex with an allosteric PRC2 inhibitor EED666	1	29	D	40	68
+Q15910	41	68	5wuk	Crystal structure of EED [G255D] in complex with EZH2 peptide and EED226 compound	1	28	B	41	68
+Q15910	520	746	4mi0	Human Enhancer of Zeste (Drosophila) Homolog 2(EZH2)	1	227	A	520	None
+Q15910	521	746	4mi5	Crystal structure of the EZH2 SET domain	4	229	A	526	None
+

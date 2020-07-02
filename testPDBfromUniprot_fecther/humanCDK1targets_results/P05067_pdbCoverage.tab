@@ -1,0 +1,446 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P05067	Amyloid Beta Peptide	A4_HUMAN	Homo sapiens	PF00014	Kunitz_BPTI	Kunitz/Bovine pancreatic trypsin inhibitor domain	290	342
+P05067	Amyloid Beta Peptide	A4_HUMAN	Homo sapiens	PF02177	APP_N	Amyloid A4 N-terminal heparin-binding	31	131
+P05067	Amyloid Beta Peptide	A4_HUMAN	Homo sapiens	PF03494	Beta-APP	Beta-amyloid peptide (beta-APP)	675	713
+P05067	Amyloid Beta Peptide	A4_HUMAN	Homo sapiens	PF10515	APP_amyloid	Beta-amyloid precursor protein C-terminus	716	766
+P05067	Amyloid Beta Peptide	A4_HUMAN	Homo sapiens	PF12924	APP_Cu_bd	Copper-binding of amyloid precursor, CuBD	132	188
+P05067	Amyloid Beta Peptide	A4_HUMAN	Homo sapiens	PF12925	APP_E2	E2 domain of amyloid precursor protein	366	548
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#419 mappings in 419 PDB chains in 143 PDB entries
+P05067	18	190	3ktm	Structure of the Heparin-induced E1-Dimer of the Amyloid Precursor Protein (APP)	2	174	D	None	190
+P05067	18	190	3ktm	Structure of the Heparin-induced E1-Dimer of the Amyloid Precursor Protein (APP)	2	174	B	None	190
+P05067	18	190	3ktm	Structure of the Heparin-induced E1-Dimer of the Amyloid Precursor Protein (APP)	2	174	G	None	190
+P05067	18	190	3ktm	Structure of the Heparin-induced E1-Dimer of the Amyloid Precursor Protein (APP)	2	174	C	None	190
+P05067	18	190	3ktm	Structure of the Heparin-induced E1-Dimer of the Amyloid Precursor Protein (APP)	2	174	A	None	190
+P05067	18	190	3ktm	Structure of the Heparin-induced E1-Dimer of the Amyloid Precursor Protein (APP)	2	174	H	None	190
+P05067	18	190	3ktm	Structure of the Heparin-induced E1-Dimer of the Amyloid Precursor Protein (APP)	2	174	F	None	190
+P05067	18	190	3ktm	Structure of the Heparin-induced E1-Dimer of the Amyloid Precursor Protein (APP)	2	174	E	None	190
+P05067	18	190	4pwq	HIGH-RESOLUTION CRYSTAL STRUCTURE OF THE E1-DOMAIN of THE AMYLOID PRECURSOR PROTEIN	2	174	A	None	None
+P05067	18	190	4pwq	HIGH-RESOLUTION CRYSTAL STRUCTURE OF THE E1-DOMAIN of THE AMYLOID PRECURSOR PROTEIN	2	174	B	None	None
+P05067	22	126	4pqd	The longer crystal structure of the grow factor like domain from Beta amypoid precusor protein (APP22-126)	1	105	A	22	126
+P05067	23	185	4jfn	Crystal structure of the N-terminal, growth factor-like domain of the amyloid precursor protein bound to copper	1	163	A	23	None
+P05067	28	123	1mwp	N-TERMINAL DOMAIN OF THE AMYLOID PRECURSOR PROTEIN	1	96	A	28	123
+P05067	124	189	2fkl	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain (Residues 126- 189 of APP)	1	66	B	None	189
+P05067	124	189	2fkl	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain (Residues 126- 189 of APP)	1	66	A	None	189
+P05067	124	189	1owt	Structure of the Alzheimer's disease amyloid precursor protein copper binding domain	1	66	A	124	189
+P05067	133	189	2fjz	Structure of the Alzheimer's Amyloid Precursor Protein (APP) copper binding domain (residues 133 to 189) in 'small unit cell' form, metal-free	3	59	A	133	189
+P05067	133	189	2fma	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'small unit cell' form, atomic resolution	3	59	A	133	189
+P05067	133	189	2fk1	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'small unit cell' form, Cu(II)-bound	3	59	A	133	189
+P05067	133	189	2fk3	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'large unit cell' form	3	59	C	133	189
+P05067	133	189	2fk3	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'large unit cell' form	3	59	E	133	189
+P05067	133	189	2fk3	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'large unit cell' form	3	59	G	133	189
+P05067	133	189	2fk3	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'large unit cell' form	3	59	A	133	189
+P05067	133	189	2fk3	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'large unit cell' form	3	59	D	133	189
+P05067	133	189	2fk3	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'large unit cell' form	3	59	H	133	189
+P05067	133	189	2fk3	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'large unit cell' form	3	59	B	133	189
+P05067	133	189	2fk3	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'large unit cell' form	3	59	F	133	189
+P05067	133	189	2fk2	Structure of the Alzheimer's Amyloid Precursor Protein (APP) Copper Binding Domain in 'small unit cell' form, Cu(I)-bound	3	59	A	133	189
+P05067	287	344	1aap	X-RAY CRYSTAL STRUCTURE OF THE PROTEASE INHIBITOR DOMAIN OF ALZHEIMER'S AMYLOID BETA-PROTEIN PRECURSOR	1	58	A	1	None
+P05067	287	344	1aap	X-RAY CRYSTAL STRUCTURE OF THE PROTEASE INHIBITOR DOMAIN OF ALZHEIMER'S AMYLOID BETA-PROTEIN PRECURSOR	1	58	B	1	None
+P05067	287	344	1taw	BOVINE TRYPSIN COMPLEXED TO APPI	1	58	B	None	None
+P05067	287	342	1brc	RELOCATING A NEGATIVE CHARGE IN THE BINDING POCKET OF TRYPSIN	1	56	I	1	56
+P05067	289	301	5nx3	Combinatorial Engineering of Proteolytically Resistant APPI Variants that Selectively Inhibit Human Kallikrein 6 for Cancer Therapy	13	25	B	3	15
+P05067	306	346	5nx3	Combinatorial Engineering of Proteolytically Resistant APPI Variants that Selectively Inhibit Human Kallikrein 6 for Cancer Therapy	5	45	D	20	None
+P05067	289	346	5nx3	Combinatorial Engineering of Proteolytically Resistant APPI Variants that Selectively Inhibit Human Kallikrein 6 for Cancer Therapy	13	70	C	3	None
+P05067	289	301	5nx1	Combinatorial Engineering of Proteolytically Resistant APPI Variants that Selectively Inhibit Human Kallikrein 6 for Cancer Therapy	13	25	B	3	15
+P05067	302	346	5nx1	Combinatorial Engineering of Proteolytically Resistant APPI Variants that Selectively Inhibit Human Kallikrein 6 for Cancer Therapy	1	45	D	16	None
+P05067	289	346	5nx1	Combinatorial Engineering of Proteolytically Resistant APPI Variants that Selectively Inhibit Human Kallikrein 6 for Cancer Therapy	13	70	C	3	None
+P05067	289	345	1zjd	Crystal Structure of the Catalytic Domain of Coagulation Factor XI in Complex with Kunitz Protease Inhibitor Domain of Protease Nexin II	1	57	B	3	59
+P05067	289	342	1ca0	BOVINE CHYMOTRYPSIN COMPLEXED TO APPI	1	54	I	3	56
+P05067	289	342	1ca0	BOVINE CHYMOTRYPSIN COMPLEXED TO APPI	1	54	D	3	56
+P05067	290	341	3l33	Human mesotrypsin complexed with amyloid precursor protein inhibitor(APPI)	1	52	E	4	55
+P05067	290	341	3l33	Human mesotrypsin complexed with amyloid precursor protein inhibitor(APPI)	1	52	G	4	55
+P05067	290	341	3l33	Human mesotrypsin complexed with amyloid precursor protein inhibitor(APPI)	1	52	F	4	55
+P05067	290	341	3l33	Human mesotrypsin complexed with amyloid precursor protein inhibitor(APPI)	1	52	H	4	55
+P05067	294	346	6gfi	Structure of Human Mesotrypsin in complex with APPI variant T11V/M17R/I18F/F34V	18	70	C	8	None
+P05067	294	346	6gfi	Structure of Human Mesotrypsin in complex with APPI variant T11V/M17R/I18F/F34V	18	70	E	8	None
+P05067	294	346	5c67	Human Mesotrypsin in complex with amyloid precursor protein inhibitor variant APPI-M17G/I18F/F34V	18	70	C	8	None
+P05067	294	346	5c67	Human Mesotrypsin in complex with amyloid precursor protein inhibitor variant APPI-M17G/I18F/F34V	18	70	E	8	None
+P05067	365	570	3nyl	The X-ray structure of an antiparallel dimer of the human amyloid precursor protein E2 domain	5	210	A	None	None
+P05067	365	567	3nyj	Crystal Structure Analysis of APP E2 domain	5	207	A	None	None
+P05067	370	710	5buo	A receptor molecule	2	342	A	None	None
+P05067	370	710	5buo	A receptor molecule	2	342	B	None	None
+P05067	370	575	3umh	X-ray structure of the E2 domain of the human amyloid precursor protein (APP) in complex with cadmium	2	207	A	None	None
+P05067	370	575	3umi	X-ray structure of the E2 domain of the human amyloid precursor protein (APP) in complex with zinc	2	207	A	None	None
+P05067	370	575	3umk	X-ray structure of the E2 domain of the human amyloid precursor protein (APP) in complex with copper	2	207	A	None	None
+P05067	460	569	1tkn	Solution structure of CAPPD*, an independently folded extracellular domain of human Amyloid-beta Precursor Protein	1	110	A	460	569
+P05067	586	595	3ayu	Crystal structure of MMP-2 active site mutant in complex with APP-drived decapeptide inhibitor	1	10	B	1	10
+P05067	671	770	2lp1	The solution NMR structure of the transmembrane C-terminal domain of the amyloid precursor protein (C99)	1	100	A	None	None
+P05067	672	713	2nao	Atomic resolution structure of a disease-relevant Abeta(1-42) amyloid fibril	1	42	D	1	42
+P05067	672	713	2nao	Atomic resolution structure of a disease-relevant Abeta(1-42) amyloid fibril	1	42	C	1	42
+P05067	672	713	2nao	Atomic resolution structure of a disease-relevant Abeta(1-42) amyloid fibril	1	42	A	1	42
+P05067	672	713	2nao	Atomic resolution structure of a disease-relevant Abeta(1-42) amyloid fibril	1	42	E	1	42
+P05067	672	713	2nao	Atomic resolution structure of a disease-relevant Abeta(1-42) amyloid fibril	1	42	B	1	42
+P05067	672	713	2nao	Atomic resolution structure of a disease-relevant Abeta(1-42) amyloid fibril	1	42	F	1	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	R	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	G	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	A	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	N	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	P	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	M	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	B	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	D	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	Q	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	K	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	E	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	J	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	O	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	L	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	I	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	F	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	C	None	42
+P05067	672	713	5kk3	Atomic Resolution Structure of Monomorphic AB42 Amyloid Fibrils	1	42	H	None	42
+P05067	672	713	6rhy	Structure of pore-forming amyloid-beta tetramers	1	42	B	1	42
+P05067	672	713	6rhy	Structure of pore-forming amyloid-beta tetramers	1	42	A	1	42
+P05067	672	713	6rhy	Structure of pore-forming amyloid-beta tetramers	1	42	D	1	42
+P05067	672	713	6rhy	Structure of pore-forming amyloid-beta tetramers	1	42	C	1	42
+P05067	672	713	5oqv	Near-atomic resolution fibril structure of complete amyloid-beta(1-42) by cryo-EM	1	42	D	1	42
+P05067	672	713	5oqv	Near-atomic resolution fibril structure of complete amyloid-beta(1-42) by cryo-EM	1	42	C	1	42
+P05067	672	713	5oqv	Near-atomic resolution fibril structure of complete amyloid-beta(1-42) by cryo-EM	1	42	H	1	42
+P05067	672	713	5oqv	Near-atomic resolution fibril structure of complete amyloid-beta(1-42) by cryo-EM	1	42	G	1	42
+P05067	672	713	5oqv	Near-atomic resolution fibril structure of complete amyloid-beta(1-42) by cryo-EM	1	42	I	1	42
+P05067	672	713	5oqv	Near-atomic resolution fibril structure of complete amyloid-beta(1-42) by cryo-EM	1	42	A	1	42
+P05067	672	713	5oqv	Near-atomic resolution fibril structure of complete amyloid-beta(1-42) by cryo-EM	1	42	E	1	42
+P05067	672	713	5oqv	Near-atomic resolution fibril structure of complete amyloid-beta(1-42) by cryo-EM	1	42	B	1	42
+P05067	672	713	5oqv	Near-atomic resolution fibril structure of complete amyloid-beta(1-42) by cryo-EM	1	42	F	1	42
+P05067	672	713	2beg	3D Structure of Alzheimer's Abeta(1-42) fibrils	1	42	B	None	42
+P05067	672	713	2beg	3D Structure of Alzheimer's Abeta(1-42) fibrils	1	42	D	None	42
+P05067	672	713	2beg	3D Structure of Alzheimer's Abeta(1-42) fibrils	1	42	A	None	42
+P05067	672	713	2beg	3D Structure of Alzheimer's Abeta(1-42) fibrils	1	42	C	None	42
+P05067	672	713	2beg	3D Structure of Alzheimer's Abeta(1-42) fibrils	1	42	E	None	42
+P05067	672	713	1iyt	Solution structure of the Alzheimer's disease amyloid beta-peptide (1-42)	1	42	A	1	42
+P05067	672	713	1z0q	Aqueous Solution Structure of the Alzheimer's Disease Abeta Peptide (1-42)	1	42	A	1	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	G	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	A	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	B	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	D	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	K	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	E	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	J	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	L	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	I	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	F	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	C	None	42
+P05067	672	713	2mxu	42-Residue Beta Amyloid Fibril	1	42	H	None	42
+P05067	672	711	3ifn	X-ray structure of amyloid beta peptide:antibody (Abeta1-40:12A11) complex	1	40	P	None	None
+P05067	672	711	2otk	Structure of Alzheimer Ab peptide in complex with an engineered binding protein	1	40	C	None	40
+P05067	672	711	2m9r	3D NMR structure of a complex between the amyloid beta peptide (1-40) and the polyphenol epsilon-viniferin glucoside	1	40	A	1	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	Q	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	G	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	L	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	M	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	B	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	C	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	O	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	K	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	H	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	A	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	N	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	R	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	P	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	I	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	F	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	D	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	E	None	40
+P05067	672	711	2lmq	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Negative Stagger	1	40	J	None	40
+P05067	672	711	2m9s	3D NMR structure of a complex between the amyloid beta peptide (1-40) and the polyphenol epsilon-viniferin glucoside	1	40	A	1	40
+P05067	672	711	4ong	Fab fragment of 3D6 in complex with amyloid beta 1-40	1	40	P	1	None
+P05067	672	711	4mvl	Crystal structure of an engineered lipocalin (Anticalin H1GA) in complex with the Alzheimer amyloid peptide Abeta1-40	1	40	H	None	None
+P05067	672	711	4mvl	Crystal structure of an engineered lipocalin (Anticalin H1GA) in complex with the Alzheimer amyloid peptide Abeta1-40	1	40	F	None	None
+P05067	672	711	4mvl	Crystal structure of an engineered lipocalin (Anticalin H1GA) in complex with the Alzheimer amyloid peptide Abeta1-40	1	40	G	None	None
+P05067	672	711	4mvl	Crystal structure of an engineered lipocalin (Anticalin H1GA) in complex with the Alzheimer amyloid peptide Abeta1-40	1	40	E	None	None
+P05067	672	711	2mvx	Atomic-resolution 3D structure of amyloid-beta fibrils: the Osaka mutation	1	39	A	1	40
+P05067	672	711	2mvx	Atomic-resolution 3D structure of amyloid-beta fibrils: the Osaka mutation	1	39	B	1	40
+P05067	672	711	2mvx	Atomic-resolution 3D structure of amyloid-beta fibrils: the Osaka mutation	1	39	I	1	40
+P05067	672	711	2mvx	Atomic-resolution 3D structure of amyloid-beta fibrils: the Osaka mutation	1	39	G	1	40
+P05067	672	711	2mvx	Atomic-resolution 3D structure of amyloid-beta fibrils: the Osaka mutation	1	39	J	1	40
+P05067	672	711	2mvx	Atomic-resolution 3D structure of amyloid-beta fibrils: the Osaka mutation	1	39	C	1	40
+P05067	672	711	2mvx	Atomic-resolution 3D structure of amyloid-beta fibrils: the Osaka mutation	1	39	F	1	40
+P05067	672	711	2mvx	Atomic-resolution 3D structure of amyloid-beta fibrils: the Osaka mutation	1	39	H	1	40
+P05067	672	711	2mvx	Atomic-resolution 3D structure of amyloid-beta fibrils: the Osaka mutation	1	39	D	1	40
+P05067	672	711	2mvx	Atomic-resolution 3D structure of amyloid-beta fibrils: the Osaka mutation	1	39	E	1	40
+P05067	672	711	6oc9	S8 phosphorylated beta amyloid 40 fibrils	1	40	A	1	40
+P05067	672	711	6oc9	S8 phosphorylated beta amyloid 40 fibrils	1	40	B	1	40
+P05067	672	711	6oc9	S8 phosphorylated beta amyloid 40 fibrils	1	40	I	1	40
+P05067	672	711	6oc9	S8 phosphorylated beta amyloid 40 fibrils	1	40	G	1	40
+P05067	672	711	6oc9	S8 phosphorylated beta amyloid 40 fibrils	1	40	J	1	40
+P05067	672	711	6oc9	S8 phosphorylated beta amyloid 40 fibrils	1	40	C	1	40
+P05067	672	711	6oc9	S8 phosphorylated beta amyloid 40 fibrils	1	40	F	1	40
+P05067	672	711	6oc9	S8 phosphorylated beta amyloid 40 fibrils	1	40	H	1	40
+P05067	672	711	6oc9	S8 phosphorylated beta amyloid 40 fibrils	1	40	D	1	40
+P05067	672	711	6oc9	S8 phosphorylated beta amyloid 40 fibrils	1	40	E	1	40
+P05067	672	711	4m1c	Crystal Structure Analysis of Fab-Bound Human Insulin Degrading Enzyme (IDE) in Complex with Amyloid-Beta (1-40)	1	40	G	1	None
+P05067	672	711	4m1c	Crystal Structure Analysis of Fab-Bound Human Insulin Degrading Enzyme (IDE) in Complex with Amyloid-Beta (1-40)	1	40	H	1	None
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	Q	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	G	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	L	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	M	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	B	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	C	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	O	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	K	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	H	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	A	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	N	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	R	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	P	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	I	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	F	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	D	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	E	None	40
+P05067	672	711	2lmp	Structural Model for a 40-residue Beta-Amyloid Fibril with Three-Fold Symmetry, Positive Stagger	1	40	J	None	40
+P05067	672	711	2lnq	40-residue D23N beta amyloid fibril	1	40	G	None	40
+P05067	672	711	2lnq	40-residue D23N beta amyloid fibril	1	40	B	None	40
+P05067	672	711	2lnq	40-residue D23N beta amyloid fibril	1	40	C	None	40
+P05067	672	711	2lnq	40-residue D23N beta amyloid fibril	1	40	H	None	40
+P05067	672	711	2lnq	40-residue D23N beta amyloid fibril	1	40	A	None	40
+P05067	672	711	2lnq	40-residue D23N beta amyloid fibril	1	40	F	None	40
+P05067	672	711	2lnq	40-residue D23N beta amyloid fibril	1	40	D	None	40
+P05067	672	711	2lnq	40-residue D23N beta amyloid fibril	1	40	E	None	40
+P05067	672	711	1ba4	THE SOLUTION STRUCTURE OF AMYLOID BETA-PEPTIDE (1-40) IN A WATER-MICELLE ENVIRONMENT. IS THE MEMBRANE-SPANNING DOMAIN WHERE WE THINK IT IS? NMR, 10 STRUCTURES	1	40	A	1	40
+P05067	672	711	1aml	THE ALZHEIMER`S DISEASE AMYLOID A4 PEPTIDE (RESIDUES 1-40)	1	40	A	1	40
+P05067	672	711	2g47	Crystal structure of human insulin-degrading enzyme in complex with amyloid-beta (1-40)	1	40	D	1	None
+P05067	672	711	2g47	Crystal structure of human insulin-degrading enzyme in complex with amyloid-beta (1-40)	1	40	C	1	None
+P05067	672	711	1ba6	SOLUTION STRUCTURE OF THE METHIONINE-OXIDIZED AMYLOID BETA-PEPTIDE (1-40). DOES OXIDATION AFFECT CONFORMATIONAL SWITCHING? NMR, 10 STRUCTURES	1	40	A	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	D	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	H	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	I	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	A	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	E	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	L	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	C	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	K	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	G	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	B	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	F	1	40
+P05067	672	711	6shs	Abeta fibril (Morphology I)	1	40	J	1	40
+P05067	672	711	2lfm	A partially folded structure of amyloid-beta(1 40) in an aqueous environment	1	40	A	1	40
+P05067	672	711	2m4j	40-residue beta-amyloid fibril derived from Alzheimer's disease brain	1	40	A	1	40
+P05067	672	711	2m4j	40-residue beta-amyloid fibril derived from Alzheimer's disease brain	1	40	B	1	40
+P05067	672	711	2m4j	40-residue beta-amyloid fibril derived from Alzheimer's disease brain	1	40	I	1	40
+P05067	672	711	2m4j	40-residue beta-amyloid fibril derived from Alzheimer's disease brain	1	40	G	1	40
+P05067	672	711	2m4j	40-residue beta-amyloid fibril derived from Alzheimer's disease brain	1	40	C	1	40
+P05067	672	711	2m4j	40-residue beta-amyloid fibril derived from Alzheimer's disease brain	1	40	F	1	40
+P05067	672	711	2m4j	40-residue beta-amyloid fibril derived from Alzheimer's disease brain	1	40	H	1	40
+P05067	672	711	2m4j	40-residue beta-amyloid fibril derived from Alzheimer's disease brain	1	40	D	1	40
+P05067	672	711	2m4j	40-residue beta-amyloid fibril derived from Alzheimer's disease brain	1	40	E	1	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	G	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	L	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	B	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	C	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	K	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	H	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	A	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	I	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	F	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	D	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	E	None	40
+P05067	672	711	2lmo	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Negative Stagger	1	40	J	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	G	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	L	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	B	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	C	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	K	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	H	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	A	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	I	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	F	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	D	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	E	None	40
+P05067	672	711	2lmn	Structural Model for a 40-Residue Beta-Amyloid Fibril with Two-Fold Symmetry, Positive Stagger	1	40	J	None	40
+P05067	672	711	4mvi	Crystal structure of an engineered lipocalin (Anticalin US7) in complex with the Alzheimer amyloid peptide Abeta(1-40)	1	40	B	None	None
+P05067	672	711	4nge	Crystal Structure of Human Presequence Protease in Complex with Amyloid-beta (1-40)	1	40	E	None	None
+P05067	672	711	4nge	Crystal Structure of Human Presequence Protease in Complex with Amyloid-beta (1-40)	1	40	B	None	None
+P05067	672	699	1amb	SOLUTION STRUCTURE OF RESIDUES 1-28 OF THE AMYLOID BETA-PEPTIDE	1	28	A	1	28
+P05067	672	699	1bjc	SOLUTION NMR STRUCTURE OF AMYLOID BETA[F16], RESIDUES 1-28, 15 STRUCTURES	1	28	A	1	28
+P05067	672	699	1bjb	SOLUTION NMR STRUCTURE OF AMYLOID BETA[E16], RESIDUES 1-28, 14 STRUCTURES	1	28	A	1	28
+P05067	672	699	3bae	Crystal structure of Fab WO2 bound to the N terminal domain of Amyloid beta peptide (1-28)	1	28	A	None	None
+P05067	672	699	1amc	SOLUTION STRUCTURE OF RESIDUES 1-28 OF THE AMYLOID BETA-PEPTIDE	1	28	A	1	28
+P05067	672	699	4hix	Crystal structure of a humanised 3D6 Fab bound to amyloid beta peptide	1	28	A	1	None
+P05067	672	687	1ze7	Zinc-binding domain of Alzheimer's disease amyloid beta-peptide in water solution at pH 6.5	2	17	A	1	16
+P05067	672	687	1ze9	Zinc-binding domain of Alzheimer's disease amyloid beta-peptide complexed with a zinc (II) cation	2	17	A	1	16
+P05067	672	687	2mgt	Zinc induced dimer of the metal binding domain 1-16 of human amyloid beta-peptide with Alzheimer's disease pathogenic English mutation H6R	2	17	A	1	16
+P05067	672	687	2mgt	Zinc induced dimer of the metal binding domain 1-16 of human amyloid beta-peptide with Alzheimer's disease pathogenic English mutation H6R	2	17	B	1	16
+P05067	672	687	5w3p	ANTIBODY C706 IN COMPLEX WTH BETA-AMYLOID PEPTIDE 1-16	2	17	P	1	16
+P05067	672	687	3bkj	Crystal structure of Fab wo2 bound to the n terminal domain of amyloid beta peptide (1-16)	1	16	A	None	None
+P05067	672	687	2bp4	Zinc-binding domain of Alzheimer's disease amyloid beta-peptide in TFE-water (80-20) solution	1	16	A	1	16
+P05067	672	682	6co3	aducanumab abeta complex	1	11	Q	None	None
+P05067	672	682	5csz	CRYSTAL STRUCTURE OF GANTENERUMAB FAB FRAGMENT IN COMPLEX WITH ABETA 1-11	1	11	D	1	11
+P05067	672	682	5csz	CRYSTAL STRUCTURE OF GANTENERUMAB FAB FRAGMENT IN COMPLEX WITH ABETA 1-11	1	11	E	1	None
+P05067	672	713	2wk3	Crystal structure of human insulin-degrading enzyme in complex with amyloid-beta (1-42)	1	42	D	1	None
+P05067	672	713	2wk3	Crystal structure of human insulin-degrading enzyme in complex with amyloid-beta (1-42)	1	42	C	1	None
+P05067	672	681	5lfy	Zinc bound dimer of the fragment of human amyloid-beta peptide with Alzheimer's disease pathogenic Taiwanese mutation D7H	1	10	A	1	10
+P05067	672	681	5lfy	Zinc bound dimer of the fragment of human amyloid-beta peptide with Alzheimer's disease pathogenic Taiwanese mutation D7H	1	10	B	1	10
+P05067	672	679	2ipu	PFA1 Fab fragment complexed with Abeta 1-8 peptide	1	8	P	None	8
+P05067	672	679	2ipu	PFA1 Fab fragment complexed with Abeta 1-8 peptide	1	8	Q	None	8
+P05067	672	679	3jq5	Phospholipase A2 Prevents the Aggregation of Amyloid Beta Peptides: Crystal Structure of the Complex of Phospholipase A2 with Octapeptide Fragment of Amyloid Beta Peptide, Asp-Ala-Glu-Phe-Arg-His-Asp-Ser at 2 A Resolution	1	8	B	1	8
+P05067	672	679	2r0w	PFA2 FAB complexed with Abeta1-8	1	8	Q	None	8
+P05067	672	679	4ojf	Humanised 3D6 Fab complexed to amyloid beta 1-8	1	8	A	1	None
+P05067	672	678	3ifl	X-ray structure of amyloid beta peptide:antibody (Abeta1-7:12A11) complex	1	7	P	1	7
+P05067	672	678	3ifp	X-ray structure of amyloid beta peptide:antibody (Abeta1-7:12B4) complex	1	7	P	None	7
+P05067	672	678	3ifp	X-ray structure of amyloid beta peptide:antibody (Abeta1-7:12B4) complex	1	7	S	None	None
+P05067	672	678	3ifp	X-ray structure of amyloid beta peptide:antibody (Abeta1-7:12B4) complex	1	7	Q	None	7
+P05067	672	678	3ifp	X-ray structure of amyloid beta peptide:antibody (Abeta1-7:12B4) complex	1	7	R	None	7
+P05067	672	678	3ifo	X-ray structure of amyloid beta peptide:antibody (Abeta1-7:10D5) complex	1	7	P	None	7
+P05067	672	678	3ifo	X-ray structure of amyloid beta peptide:antibody (Abeta1-7:10D5) complex	1	7	Q	None	7
+P05067	672	678	4onf	Fab fragment of 3D6 in complex with amyloid beta 1-7	1	7	P	1	None
+P05067	674	683	5my4	Structure of Pyroglutamate-Abeta-specific Fab c#17 in complex with human Abeta-pE3-12PEGb	1	10	C	1	None
+P05067	674	689	5myx	Structure of Pyroglutamate-Abeta-specific Fab c#24 in complex with human Abeta-pE3-18	1	16	F	1	16
+P05067	674	689	5myx	Structure of Pyroglutamate-Abeta-specific Fab c#24 in complex with human Abeta-pE3-18	1	16	E	1	None
+P05067	674	683	5myo	Structure of Pyroglutamate-Abeta-specific Fab c#6 in complex with human Abeta-pE3-12-PEGb	1	10	E	1	10
+P05067	675	681	5am8	Crystal structure of the Angiotensin-1 converting enzyme N-domain in complex with amyloid-beta 4-10	1	7	R	None	None
+P05067	675	681	5am8	Crystal structure of the Angiotensin-1 converting enzyme N-domain in complex with amyloid-beta 4-10	1	7	S	None	None
+P05067	675	681	5am8	Crystal structure of the Angiotensin-1 converting enzyme N-domain in complex with amyloid-beta 4-10	1	7	P	None	None
+P05067	675	681	5am8	Crystal structure of the Angiotensin-1 converting enzyme N-domain in complex with amyloid-beta 4-10	1	7	Q	None	None
+P05067	681	706	1hz3	ALZHEIMER'S DISEASE AMYLOID-BETA PEPTIDE (RESIDUES 10-35)	1	26	A	1	26
+P05067	682	696	5vzy	Crystal structure of crenezumab Fab in complex with Abeta	1	15	A	None	None
+P05067	683	699	4xxd	Crystal Structure of mid-region amyloid beta capture by solanezumab	1	17	F	None	None
+P05067	683	699	4xxd	Crystal Structure of mid-region amyloid beta capture by solanezumab	1	17	C	None	None
+P05067	686	726	2llm	Structure of amyloid precursor protein's transmembrane domain	3	43	A	3	43
+P05067	686	726	2loh	Dimeric structure of transmembrane domain of amyloid precursor protein in micellar environment	3	43	A	3	43
+P05067	686	726	2loh	Dimeric structure of transmembrane domain of amyloid precursor protein in micellar environment	3	43	B	3	43
+P05067	686	713	5aef	Electron cryo-microscopy of an Abeta(1-42)amyloid fibril	1	28	B	15	42
+P05067	686	713	5aef	Electron cryo-microscopy of an Abeta(1-42)amyloid fibril	1	28	A	15	42
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	J	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	Y	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	B	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	C	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	Q	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	T	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	M	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	L	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	S	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	A	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	D	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	X	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	N	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	O	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	E	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	P	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	K	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	I	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	W	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	a	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	V	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	G	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	U	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	F	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	Z	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	H	15	40
+P05067	686	711	2mpz	Atomic model of the Abeta D23N "Iowa" mutant using solid-state NMR, EM and Rosetta modeling	1	26	R	15	40
+P05067	687	697	6o4j	Amyloid Beta KLVFFAENVGS 16-26 D23N Iowa mutation	2	12	B	16	26
+P05067	687	697	6o4j	Amyloid Beta KLVFFAENVGS 16-26 D23N Iowa mutation	2	12	A	16	26
+P05067	687	692	2y29	Structure of segment KLVFFA from the amyloid-beta peptide (Ab, residues 16-21), alternate polymorph III	1	6	A	2	7
+P05067	687	692	3ow9	Structure of an amyloid forming peptide KLVFFA from amyloid beta, alternate polymorph II	1	6	B	1	6
+P05067	687	692	3ow9	Structure of an amyloid forming peptide KLVFFA from amyloid beta, alternate polymorph II	1	6	A	1	6
+P05067	687	692	3ovj	Structure of an amyloid forming peptide KLVFFA from amyloid beta in complex with orange G	1	6	B	1	6
+P05067	687	692	3ovj	Structure of an amyloid forming peptide KLVFFA from amyloid beta in complex with orange G	1	6	C	1	6
+P05067	687	692	3ovj	Structure of an amyloid forming peptide KLVFFA from amyloid beta in complex with orange G	1	6	A	1	6
+P05067	687	692	3ovj	Structure of an amyloid forming peptide KLVFFA from amyloid beta in complex with orange G	1	6	D	1	6
+P05067	687	692	3jql	Crystal Structure of the Complex Formed Between Phospholipase A2 and a Hexapeptide Fragment of Amyloid Beta Peptide, Lys-Leu-Val-Phe-Phe-Ala at 1.2 A Resolution	1	6	B	1	6
+P05067	687	692	2y2a	Structure of segment KLVFFA from the amyloid-beta peptide (Ab, residues 16-21), alternate polymorph I	1	6	A	2	7
+P05067	688	770	6iyc	Recognition of the Amyloid Precursor Protein by Human gamma-secretase	2	84	E	1	None
+P05067	688	707	5hox	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. Synchrotron data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	A	2	21
+P05067	688	707	5hox	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. Synchrotron data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	C	2	21
+P05067	688	707	5hox	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. Synchrotron data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	D	2	21
+P05067	688	707	5hox	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. Synchrotron data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	E	2	21
+P05067	688	707	5hox	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. Synchrotron data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	F	2	21
+P05067	688	707	5hox	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. Synchrotron data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	B	2	21
+P05067	688	707	5how	X-ray crystallographic structure of an Abeta 17-36 beta-hairpin. LV(PHI)FAEDCGSNKCAII(SAR)L(ORN)V	2	21	A	2	21
+P05067	688	707	5how	X-ray crystallographic structure of an Abeta 17-36 beta-hairpin. LV(PHI)FAEDCGSNKCAII(SAR)L(ORN)V	2	21	C	2	21
+P05067	688	707	5how	X-ray crystallographic structure of an Abeta 17-36 beta-hairpin. LV(PHI)FAEDCGSNKCAII(SAR)L(ORN)V	2	21	D	2	21
+P05067	688	707	5how	X-ray crystallographic structure of an Abeta 17-36 beta-hairpin. LV(PHI)FAEDCGSNKCAII(SAR)L(ORN)V	2	21	E	2	21
+P05067	688	707	5how	X-ray crystallographic structure of an Abeta 17-36 beta-hairpin. LV(PHI)FAEDCGSNKCAII(SAR)L(ORN)V	2	21	F	2	21
+P05067	688	707	5how	X-ray crystallographic structure of an Abeta 17-36 beta-hairpin. LV(PHI)FAEDCGSNKCAII(SAR)L(ORN)V	2	21	B	2	21
+P05067	688	707	5hoy	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. X-ray diffractometer data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	A	2	21
+P05067	688	707	5hoy	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. X-ray diffractometer data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	C	2	21
+P05067	688	707	5hoy	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. X-ray diffractometer data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	D	2	21
+P05067	688	707	5hoy	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. X-ray diffractometer data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	E	2	21
+P05067	688	707	5hoy	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. X-ray diffractometer data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	F	2	21
+P05067	688	707	5hoy	X-ray crystallographic structure of an A-beta 17_36 beta-hairpin. X-ray diffractometer data set. (LVFFAEDCGSNKCAII(SAR)LMV).	2	21	B	2	21
+P05067	688	705	2mj1	NMR structure of the soluble A beta 17-34 peptide	1	18	A	1	18
+P05067	689	712	3moq	Amyloid beta(18-41) peptide fusion with new antigen receptor variable domain from sharks	88	111	B	88	111
+P05067	689	712	3moq	Amyloid beta(18-41) peptide fusion with new antigen receptor variable domain from sharks	88	111	A	88	111
+P05067	689	712	3moq	Amyloid beta(18-41) peptide fusion with new antigen receptor variable domain from sharks	88	111	D	88	111
+P05067	689	712	3moq	Amyloid beta(18-41) peptide fusion with new antigen receptor variable domain from sharks	88	111	C	88	111
+P05067	689	694	4mvk	Crystal structure of an engineered lipocalin (Anticalin US7) in complex with the Alzheimer amyloid peptide fragment VFFAED	2	7	B	18	23
+P05067	691	705	6nb9	Amyloid-Beta (20-34) with L-isoaspartate 23	1	15	A	20	34
+P05067	691	705	6oiz	Amyloid-Beta (20-34) wild type	1	15	A	20	34
+P05067	695	705	5vos	VGSNKGAIIGL from Amyloid Beta determined by MicroED	1	11	A	24	34
+P05067	696	706	1qyt	Solution structure of fragment (25-35) of beta amyloid peptide in SDS micellar solution	1	11	A	25	35
+P05067	696	706	1qwp	NMR analysis of 25-35 fragment of beta amyloid peptide	1	11	A	25	35
+P05067	696	706	1qcm	AMYLOID BETA PEPTIDE (25-35), NMR, 20 STRUCTURES	1	11	A	1	11
+P05067	696	706	1qxc	NMR structure of the fragment 25-35 of beta amyloid peptide in 20/80 v:v hexafluoroisopropanol/water mixture	1	11	A	25	35
+P05067	698	703	5txd	Structure of amyloid-beta derived peptide - NKGAIF	1	6	Z	1	6
+P05067	698	703	3q2x	Structure of an amyloid forming peptide NKGAII (residues 27-32) from amyloid beta	1	6	A	1	6
+P05067	699	726	2lz3	Solution NMR structure of transmembrane domain of amyloid precursor protein WT	4	31	A	5	32
+P05067	699	726	2lz3	Solution NMR structure of transmembrane domain of amyloid precursor protein WT	4	31	B	5	32
+P05067	699	706	3jti	Crystal structure of the complex formed between Phospholipase A2 with beta-amyloid fragment, Lys-Gly-Ala-Ile-Ile-Gly-Leu-Met at 1.8 A resolution	1	8	B	1	8
+P05067	699	726	2lz4	Solution NMR structure of transmembrane domain of amyloid precursor protein V44M	4	31	A	5	32
+P05067	699	726	2lz4	Solution NMR structure of transmembrane domain of amyloid precursor protein V44M	4	31	B	5	32
+P05067	700	705	3pzz	Structure of an amyloid forming peptide GAIIGL (29-34) from amyloid beta	1	6	B	1	6
+P05067	700	705	3pzz	Structure of an amyloid forming peptide GAIIGL (29-34) from amyloid beta	1	6	A	1	6
+P05067	700	704	5onq	Alzheimer's Amyloid-Beta Peptide Fragment 29-40 in Complex with Cd-substituted Thermolysin	1	5	B	29	33
+P05067	700	704	5onp	Alzheimer's Amyloid-Beta Peptide Fragment 1-40 in Complex with Cd-substituted Thermolysin	1	5	B	29	33
+P05067	701	711	3u0t	Fab-antibody complex	1	11	F	30	40
+P05067	701	711	3u0t	Fab-antibody complex	1	11	E	30	40
+P05067	701	706	2y3j	Structure of segment AIIGLM from the amyloid-beta peptide (Ab, residues 30-35)	1	6	A	1	6
+P05067	701	706	2y3j	Structure of segment AIIGLM from the amyloid-beta peptide (Ab, residues 30-35)	1	6	G	1	6
+P05067	701	706	2y3j	Structure of segment AIIGLM from the amyloid-beta peptide (Ab, residues 30-35)	1	6	F	1	6
+P05067	701	706	2y3j	Structure of segment AIIGLM from the amyloid-beta peptide (Ab, residues 30-35)	1	6	D	1	6
+P05067	701	706	2y3j	Structure of segment AIIGLM from the amyloid-beta peptide (Ab, residues 30-35)	1	6	B	1	6
+P05067	701	706	2y3j	Structure of segment AIIGLM from the amyloid-beta peptide (Ab, residues 30-35)	1	6	E	1	6
+P05067	701	706	2y3j	Structure of segment AIIGLM from the amyloid-beta peptide (Ab, residues 30-35)	1	6	H	1	6
+P05067	701	706	2y3j	Structure of segment AIIGLM from the amyloid-beta peptide (Ab, residues 30-35)	1	6	C	1	6
+P05067	702	704	5onr	Alzheimer's Amyloid-Beta Peptide Fragment 1-40 in Complex with Thermolysin	1	3	B	31	33
+P05067	706	713	2y3l	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 2	1	8	A	1	8
+P05067	706	713	2y3l	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 2	1	8	C	1	8
+P05067	706	713	2y3l	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 2	1	8	G	1	8
+P05067	706	713	2y3l	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 2	1	8	B	1	8
+P05067	706	713	5amb	Crystal structure of the Angiotensin-1 converting enzyme N-domain in complex with amyloid-beta 35-42	1	8	Q	None	42
+P05067	706	713	5amb	Crystal structure of the Angiotensin-1 converting enzyme N-domain in complex with amyloid-beta 35-42	1	8	P	None	42
+P05067	706	711	5lv0	Structure of Human Neurolysin (E475Q) in complex with amyloid-beta 35-40 peptide product	1	6	D	None	6
+P05067	706	711	5lv0	Structure of Human Neurolysin (E475Q) in complex with amyloid-beta 35-40 peptide product	1	6	C	None	6
+P05067	706	713	2y3k	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 1	1	8	A	1	8
+P05067	706	713	2y3k	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 1	1	8	B	1	8
+P05067	706	713	2y3k	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 1	1	8	D	1	8
+P05067	706	713	2y3k	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 1	1	8	F	1	8
+P05067	706	713	2y3k	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 1	1	8	C	1	8
+P05067	706	713	2y3k	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 1	1	8	E	1	8
+P05067	706	713	2y3k	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 1	1	8	H	1	8
+P05067	706	713	2y3k	Structure of segment MVGGVVIA from the amyloid-beta peptide (Ab, residues 35-42), alternate polymorph 1	1	8	G	1	8
+P05067	707	713	3gci	Crystal Structure of the Complex Formed Between a New Isoform of Phospholipase A2 with C-terminal Amyloid Beta Heptapeptide at 2 A Resolution	1	7	P	1	7
+P05067	739	770	3dxd	Crystal structure of the intracellular domain of human APP (T668E mutant) in complex with Fe65-PTB2	4	35	D	None	None
+P05067	739	770	3dxd	Crystal structure of the intracellular domain of human APP (T668E mutant) in complex with Fe65-PTB2	4	35	B	None	None
+P05067	739	770	3dxc	Crystal structure of the intracellular domain of human APP in complex with Fe65-PTB2	4	35	D	None	None
+P05067	739	770	3dxc	Crystal structure of the intracellular domain of human APP in complex with Fe65-PTB2	4	35	B	None	None
+P05067	739	770	3dxe	Crystal structure of the intracellular domain of human APP (T668A mutant) in complex with Fe65-PTB2	4	35	D	None	None
+P05067	739	770	3dxe	Crystal structure of the intracellular domain of human APP (T668A mutant) in complex with Fe65-PTB2	4	35	B	None	None
+P05067	754	766	1x11	X11 PTB DOMAIN	1	13	C	1	None
+P05067	754	766	1x11	X11 PTB DOMAIN	1	13	D	1	13
+P05067	754	767	3sv1	Crystal structure of APP peptide bound rat Mint2 PARM	1	14	F	None	None
+P05067	754	767	3sv1	Crystal structure of APP peptide bound rat Mint2 PARM	1	14	D	754	767
+P05067	754	767	3sv1	Crystal structure of APP peptide bound rat Mint2 PARM	1	14	E	None	None
+P05067	754	762	3mxc	Structures of Grb2-SH2 Domain and AICD peptide Complexes Reveal a Conformational Switch and Their Functional Implications.	1	9	L	None	687
+P05067	754	762	3mxy	Structures of Grb2-SH2 Domain and AICD peptide Complexes Reveal a Conformational Switch and Their Functional Implications.	1	9	L	None	687
+P05067	755	766	6itu	Crystal Structure of the GULP1 PTB domain-APP peptide complex	1	12	B	2	13
+P05067	758	767	4mdr	Crystal structure of adaptor protein complex 4 (AP-4) mu4 subunit C-terminal domain D190A mutant, in complex with a sorting peptide from the amyloid precursor protein (APP)	1	10	B	None	692
+P05067	761	767	3l81	Crystal structure of adaptor protein complex 4 (AP-4) mu4 subunit C-terminal domain, in complex with a sorting peptide from the amyloid precursor protein (APP)	1	7	B	686	692
+

@@ -1,0 +1,27 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P29692	Elongation factor 1-delta	EF1D_HUMAN	Homo sapiens	PF00736	EF1_GNE	EF-1 guanine nucleotide exchange domain	197	281
+P29692	Elongation factor 1-delta	EF1D_HUMAN	Homo sapiens	PF10587	EF-1_beta_acid	Eukaryotic elongation factor 1 beta central acidic region	159	186
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 4 PDB chains in 4 PDB entries
+P29692	1	30	5jpo	Complex structure of human elongation factor 1B gamma GST-liked domain and delta N-terminal domain	3	32	E	1	30
+P29692	153	192	2mvm	Solution structure of eEF1Bdelta CAR domain	5	44	A	153	192
+P29692	153	192	2mvn	Solution structure of eEF1Bdelta CAR domain in TCTP-bound state	5	44	A	153	192
+P29692	153	281	2n51	NMR structure of the C-terminal region of human eukaryotic elongation factor 1B	5	133	A	153	281
+

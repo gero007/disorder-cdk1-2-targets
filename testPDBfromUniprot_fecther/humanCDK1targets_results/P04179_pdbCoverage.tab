@@ -1,0 +1,89 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P04179	Superoxide dismutase [Mn], mitochondrial	SODM_HUMAN	Homo sapiens	PF00081	Sod_Fe_N	Iron/manganese superoxide dismutases, alpha-hairpin domain	25	106
+P04179	Superoxide dismutase [Mn], mitochondrial	SODM_HUMAN	Homo sapiens	PF02777	Sod_Fe_C	Iron/manganese superoxide dismutases, C-terminal domain	113	216
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#66 mappings in 66 PDB chains in 30 PDB entries
+P04179	24	222	5vf9	Native human manganese superoxide dismutase	1	199	B	0	198
+P04179	24	222	5vf9	Native human manganese superoxide dismutase	1	199	A	0	198
+P04179	24	222	5t30	Human MnSOD-azide complex	1	199	B	0	198
+P04179	24	222	5t30	Human MnSOD-azide complex	1	199	A	0	198
+P04179	25	222	1xil	HYDROGEN BONDING IN HUMAN MANGANESE SUPEROXIDE DISMUTASE CONTAINING 3-FLUOROTYROSINE	1	198	A	1	198
+P04179	25	222	1xil	HYDROGEN BONDING IN HUMAN MANGANESE SUPEROXIDE DISMUTASE CONTAINING 3-FLUOROTYROSINE	1	198	B	1	198
+P04179	25	222	1em1	X-RAY CRYSTAL STRUCTURE FOR HUMAN MANGANESE SUPEROXIDE DISMUTASE, Q143A	1	198	A	1	198
+P04179	25	222	1em1	X-RAY CRYSTAL STRUCTURE FOR HUMAN MANGANESE SUPEROXIDE DISMUTASE, Q143A	1	198	B	1	198
+P04179	25	222	5gxo	Discovery of a compound that activates SIRT3 to deacetylate Manganese Superoxide Dismutase	1	198	B	25	None
+P04179	25	222	5gxo	Discovery of a compound that activates SIRT3 to deacetylate Manganese Superoxide Dismutase	1	198	A	25	None
+P04179	25	222	1var	MITOCHONDRIAL MANGANESE SUPEROXIDE DISMUTASE VARIANT WITH ILE 58 REPLACED BY THR	1	198	A	1	198
+P04179	25	222	1var	MITOCHONDRIAL MANGANESE SUPEROXIDE DISMUTASE VARIANT WITH ILE 58 REPLACED BY THR	1	198	B	1	198
+P04179	25	222	1zuq	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Superoxide Dismutase	1	198	A	1	198
+P04179	25	222	1zuq	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Superoxide Dismutase	1	198	B	1	198
+P04179	25	222	1ja8	Kinetic Analysis of Product Inhibition in Human Manganese Superoxide Dismutase	1	198	A	1	198
+P04179	25	222	1ja8	Kinetic Analysis of Product Inhibition in Human Manganese Superoxide Dismutase	1	198	B	1	198
+P04179	25	222	1pm9	CRYSTAL STRUCTURE OF HUMAN MNSOD H30N, Y166F MUTANT	1	198	A	1	None
+P04179	25	222	1pm9	CRYSTAL STRUCTURE OF HUMAN MNSOD H30N, Y166F MUTANT	1	198	B	1	198
+P04179	25	222	1zsp	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Superoxide Dismutase	1	198	A	1	198
+P04179	25	222	1zsp	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Superoxide Dismutase	1	198	B	1	198
+P04179	25	222	1szx	Role Of Hydrogen Bonding In The Active Site Of Human Manganese Superoxide Dismutase	1	198	A	1	198
+P04179	25	222	1szx	Role Of Hydrogen Bonding In The Active Site Of Human Manganese Superoxide Dismutase	1	198	B	1	198
+P04179	25	222	1pl4	Crystal Structure of human MnSOD Y166F mutant	1	198	A	1	198
+P04179	25	222	1pl4	Crystal Structure of human MnSOD Y166F mutant	1	198	D	1	None
+P04179	25	222	1pl4	Crystal Structure of human MnSOD Y166F mutant	1	198	B	1	None
+P04179	25	222	1pl4	Crystal Structure of human MnSOD Y166F mutant	1	198	C	1	None
+P04179	25	222	1xdc	Hydrogen Bonding in Human Manganese Superoxide Dismutase containing 3-Fluorotyrosine	1	198	A	1	198
+P04179	25	222	1xdc	Hydrogen Bonding in Human Manganese Superoxide Dismutase containing 3-Fluorotyrosine	1	198	B	1	198
+P04179	25	222	1zte	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Suerpoxide Dismutase	1	198	A	1	198
+P04179	25	222	1zte	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Suerpoxide Dismutase	1	198	D	1	198
+P04179	25	222	1zte	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Suerpoxide Dismutase	1	198	B	1	198
+P04179	25	222	1zte	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Suerpoxide Dismutase	1	198	C	1	198
+P04179	25	222	1ap6	TYR34->PHE MUTANT OF HUMAN MITOCHONDRIAL MANGANESE SUPEROXIDE DISMUTASE	1	198	A	1	198
+P04179	25	222	1ap6	TYR34->PHE MUTANT OF HUMAN MITOCHONDRIAL MANGANESE SUPEROXIDE DISMUTASE	1	198	B	1	198
+P04179	25	222	2gds	Interrupting the Hydrogen Bonding Network at the Active Site of Human Manganese Superoxide Dismutase	1	198	A	1	198
+P04179	25	222	2gds	Interrupting the Hydrogen Bonding Network at the Active Site of Human Manganese Superoxide Dismutase	1	198	D	1	198
+P04179	25	222	2gds	Interrupting the Hydrogen Bonding Network at the Active Site of Human Manganese Superoxide Dismutase	1	198	B	1	198
+P04179	25	222	2gds	Interrupting the Hydrogen Bonding Network at the Active Site of Human Manganese Superoxide Dismutase	1	198	C	1	198
+P04179	25	222	3c3s	Role of a Glutamate Bridge Spanning the Dimeric Interface of Human Manganese Superoxide Dismutase	1	198	A	1	None
+P04179	25	222	3c3s	Role of a Glutamate Bridge Spanning the Dimeric Interface of Human Manganese Superoxide Dismutase	1	198	B	1	None
+P04179	25	222	1ap5	TYR34->PHE MUTANT OF HUMAN MITOCHONDRIAL MANGANESE SUPEROXIDE DISMUTASE	1	198	A	1	198
+P04179	25	222	1ap5	TYR34->PHE MUTANT OF HUMAN MITOCHONDRIAL MANGANESE SUPEROXIDE DISMUTASE	1	198	B	1	198
+P04179	25	222	1msd	COMPARISON OF THE CRYSTAL STRUCTURES OF GENETICALLY ENGINEERED HUMAN MANGANESE SUPEROXIDE DISMUTASE AND MANGANESE SUPEROXIDE DISMUTASE FROM THERMUS THERMOPHILUS. DIFFERENCES IN DIMER-DIMER INTERACTIONS.	1	198	A	1	198
+P04179	25	222	1msd	COMPARISON OF THE CRYSTAL STRUCTURES OF GENETICALLY ENGINEERED HUMAN MANGANESE SUPEROXIDE DISMUTASE AND MANGANESE SUPEROXIDE DISMUTASE FROM THERMUS THERMOPHILUS. DIFFERENCES IN DIMER-DIMER INTERACTIONS.	1	198	B	1	198
+P04179	25	222	3c3t	Role of a Glutamate Bridge Spanning the Dimeric Interface of Human Manganese Superoxide Dismutase	1	198	A	1	None
+P04179	25	222	3c3t	Role of a Glutamate Bridge Spanning the Dimeric Interface of Human Manganese Superoxide Dismutase	1	198	B	1	None
+P04179	25	222	1luv	CATALYTIC AND STRUCTURAL EFFECTS OF AMINO-ACID SUBSTITUTION AT HIS 30 IN HUMAN MANGANESE SUPEROXIDE DISMUTASE: INSERTION OF VAL CGAMMA INTO THE SUBSTRATE ACCESS CHANNEL	1	198	A	1	198
+P04179	25	222	1luv	CATALYTIC AND STRUCTURAL EFFECTS OF AMINO-ACID SUBSTITUTION AT HIS 30 IN HUMAN MANGANESE SUPEROXIDE DISMUTASE: INSERTION OF VAL CGAMMA INTO THE SUBSTRATE ACCESS CHANNEL	1	198	B	1	198
+P04179	25	222	1luw	CATALYTIC AND STRUCTURAL EFFECTS OF AMINO-ACID SUBSTITUTION AT HIS 30 IN HUMAN MANGANESE SUPEROXIDE DISMUTASE: INSERTION OF VAL CGAMMA INTO THE SUBSTRATE ACCESS CHANNEL	1	198	A	1	198
+P04179	25	222	1luw	CATALYTIC AND STRUCTURAL EFFECTS OF AMINO-ACID SUBSTITUTION AT HIS 30 IN HUMAN MANGANESE SUPEROXIDE DISMUTASE: INSERTION OF VAL CGAMMA INTO THE SUBSTRATE ACCESS CHANNEL	1	198	B	1	198
+P04179	25	222	1qnm	HUMAN MANGANESE SUPEROXIDE DISMUTASE MUTANT Q143N	1	198	A	1	198
+P04179	25	222	1qnm	HUMAN MANGANESE SUPEROXIDE DISMUTASE MUTANT Q143N	1	198	B	1	198
+P04179	25	222	2adq	Human Manganese Superoxide Dismutase	1	198	B	1	None
+P04179	25	222	2adp	Nitrated Human Manganese Superoxide Dismutase	1	198	A	1	None
+P04179	25	222	1n0j	The Structure of Human Mitochondrial MN3+ Superoxide Dismutase Reveals a Novel Tetrameric Interface of Two 4-Helix Bundles	2	199	A	1	198
+P04179	25	222	1n0j	The Structure of Human Mitochondrial MN3+ Superoxide Dismutase Reveals a Novel Tetrameric Interface of Two 4-Helix Bundles	2	199	B	1	198
+P04179	25	222	2p4k	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Superoxide Dismutase	1	198	A	1	198
+P04179	25	222	2p4k	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Superoxide Dismutase	1	198	D	1	198
+P04179	25	222	2p4k	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Superoxide Dismutase	1	198	B	1	198
+P04179	25	222	2p4k	Contribution to Structure and Catalysis of Tyrosine 34 in Human Manganese Superoxide Dismutase	1	198	C	1	198
+P04179	25	222	1n0n	Catalytic and Structural Effects of Amino-Acid Substitution at His30 in Human Manganese Superoxide Dismutase	2	199	A	1	198
+P04179	25	222	1n0n	Catalytic and Structural Effects of Amino-Acid Substitution at His30 in Human Manganese Superoxide Dismutase	2	199	B	1	198
+P04179	25	220	2qka	Structural and Kinetic Study of the Differences between Human and E.coli Manganese Superoxide Dismutases	1	196	A	1	196
+P04179	25	220	2qka	Structural and Kinetic Study of the Differences between Human and E.coli Manganese Superoxide Dismutases	1	196	C	1	196
+P04179	25	220	2qkc	Structural and Kinetic Study of the Differences between Human and E.coli Manganese Superoxide Dismutases	1	196	A	1	196
+P04179	25	220	2qkc	Structural and Kinetic Study of the Differences between Human and E.coli Manganese Superoxide Dismutases	1	196	C	1	196
+

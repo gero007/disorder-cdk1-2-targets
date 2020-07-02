@@ -1,0 +1,33 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q06830	Peroxiredoxin-1	PRDX1_HUMAN	Homo sapiens	PF00578	AhpC-TSA	AhpC/TSA family	8	142
+Q06830	Peroxiredoxin-1	PRDX1_HUMAN	Homo sapiens	PF10417	1-cysPrx_C	C-terminal domain of 1-Cys peroxiredoxin	162	197
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#10 mappings in 10 PDB chains in 3 PDB entries
+Q06830	1	199	3hy2	Crystal Structure of Sulfiredoxin in Complex with Peroxiredoxin I and ATP:Mg2+	1	199	A	None	None
+Q06830	1	199	3hy2	Crystal Structure of Sulfiredoxin in Complex with Peroxiredoxin I and ATP:Mg2+	1	199	B	None	None
+Q06830	1	199	2rii	Crystal Structure of Human Peroxiredoxin I in complex with Sulfiredoxin	1	199	A	None	None
+Q06830	1	199	2rii	Crystal Structure of Human Peroxiredoxin I in complex with Sulfiredoxin	1	199	B	None	None
+Q06830	1	199	4xcs	Human peroxiredoxin-1 C83S mutant	21	219	A	1	None
+Q06830	1	199	4xcs	Human peroxiredoxin-1 C83S mutant	21	219	D	None	None
+Q06830	1	199	4xcs	Human peroxiredoxin-1 C83S mutant	21	219	F	1	None
+Q06830	1	199	4xcs	Human peroxiredoxin-1 C83S mutant	21	219	C	1	None
+Q06830	1	199	4xcs	Human peroxiredoxin-1 C83S mutant	21	219	E	None	None
+Q06830	1	199	4xcs	Human peroxiredoxin-1 C83S mutant	21	219	B	None	None
+

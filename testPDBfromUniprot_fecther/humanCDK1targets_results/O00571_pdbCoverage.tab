@@ -1,0 +1,47 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O00571	ATP-DEPENDENT RNA HELICASE DDX3X	DDX3X_HUMAN	Homo sapiens	PF00270	DEAD	DEAD/DEAH box helicase	204	392
+O00571	ATP-DEPENDENT RNA HELICASE DDX3X	DDX3X_HUMAN	Homo sapiens	PF00271	Helicase_C	Helicase conserved C-terminal domain	426	536
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#24 mappings in 24 PDB chains in 13 PDB entries
+O00571	2	10	4o2c	An Nt-acetylated peptide complexed with HLA-B*3901	2	10	C	1	9
+O00571	2	10	4o2e	A peptide complexed with HLA-B*3901	1	9	F	1	9
+O00571	2	10	4o2e	A peptide complexed with HLA-B*3901	1	9	C	1	9
+O00571	3	10	4o2f	A peptide complexed with HLA-B*3901	1	8	C	1	8
+O00571	3	10	4o2f	A peptide complexed with HLA-B*3901	1	8	F	1	8
+O00571	71	90	3jrv	Structure of poxvirus K7 protein in complex with RNA helicase DDX3	1	20	D	None	None
+O00571	71	90	3jrv	Structure of poxvirus K7 protein in complex with RNA helicase DDX3	1	20	E	None	None
+O00571	71	90	3jrv	Structure of poxvirus K7 protein in complex with RNA helicase DDX3	1	20	C	None	None
+O00571	132	607	6o5f	Crystal structure of DEAD-box RNA helicase DDX3X at pre-unwound state	1	476	A	None	None
+O00571	132	607	6o5f	Crystal structure of DEAD-box RNA helicase DDX3X at pre-unwound state	1	476	B	None	None
+O00571	132	607	6cz5	Crystal structure of small molecule AMP-acrylamide covalently bound to DDX3 S228C	5	480	A	None	None
+O00571	133	584	5e7i	Crystal structure of the active catalytic core of the human DEAD-box protein DDX3	1	452	A	None	None
+O00571	133	584	5e7i	Crystal structure of the active catalytic core of the human DEAD-box protein DDX3	1	452	B	None	None
+O00571	133	584	5e7i	Crystal structure of the active catalytic core of the human DEAD-box protein DDX3	1	452	C	None	None
+O00571	133	584	5e7j	Crystal structure of the active catalytic core of the human DEAD-box protein DDX3 bound to AMP	1	452	A	133	584
+O00571	133	584	5e7m	Crystal structure of the active catalytic core of the human DEAD-box protein DDX3 bound to AMPPNP	1	452	A	None	None
+O00571	135	582	4pxa	DEAD-box RNA helicase DDX3X Cancer-associated mutant D354V	20	467	A	135	None
+O00571	135	407	4px9	DEAD-box RNA helicase DDX3X Domain 1 with N-terminal ATP-binding Loop	20	292	C	135	407
+O00571	135	407	4px9	DEAD-box RNA helicase DDX3X Domain 1 with N-terminal ATP-binding Loop	20	292	A	135	407
+O00571	135	407	4px9	DEAD-box RNA helicase DDX3X Domain 1 with N-terminal ATP-binding Loop	20	292	B	135	407
+O00571	168	582	2i4i	Crystal Structure of human DEAD-box RNA helicase DDX3X	3	417	A	168	None
+O00571	409	580	2jgn	DDX3 helicase domain	14	185	B	408	None
+O00571	409	580	2jgn	DDX3 helicase domain	14	185	A	None	None
+O00571	409	580	2jgn	DDX3 helicase domain	14	185	C	None	None
+

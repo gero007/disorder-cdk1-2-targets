@@ -1,0 +1,33 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P61978	Heterogeneous nuclear ribonucleoprotein K	HNRPK_HUMAN	Homo sapiens	PF00013	KH_1	KH domain	389	453
+P61978	Heterogeneous nuclear ribonucleoprotein K	HNRPK_HUMAN	Homo sapiens	PF00013	KH_1	KH domain	146	211
+P61978	Heterogeneous nuclear ribonucleoprotein K	HNRPK_HUMAN	Homo sapiens	PF00013	KH_1	KH domain	44	105
+P61978	Heterogeneous nuclear ribonucleoprotein K	HNRPK_HUMAN	Homo sapiens	PF08067	ROKNT	ROKNT (NUC014) domain	1	43
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 5 PDB entries
+P61978	375	463	1khm	C-TERMINAL KH DOMAIN OF HNRNP K (KH3)	1	89	A	1	89
+P61978	379	463	1j5k	COMPLEX OF THE KH3 DOMAIN OF HNRNP K WITH A SINGLE_STRANDED 10MER DNA OLIGONUCLEOTIDE	5	89	A	None	None
+P61978	385	463	1zzj	Structure of the third KH domain of hnRNP K in complex with 15-mer ssDNA	4	82	C	11	None
+P61978	385	463	1zzj	Structure of the third KH domain of hnRNP K in complex with 15-mer ssDNA	4	82	A	11	None
+P61978	385	463	1zzj	Structure of the third KH domain of hnRNP K in complex with 15-mer ssDNA	4	82	B	11	None
+P61978	385	463	1zzi	Crystal Structure Analysis of the third KH domain of hnRNP K in complex with ssDNA	4	82	A	11	89
+P61978	385	463	1zzi	Crystal Structure Analysis of the third KH domain of hnRNP K in complex with ssDNA	4	82	B	11	89
+P61978	385	463	1zzk	Crystal Structure of the third KH domain of hnRNP K at 0.95A resolution	4	82	A	11	89
+

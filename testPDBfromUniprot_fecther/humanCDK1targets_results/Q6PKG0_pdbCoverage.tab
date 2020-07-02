@@ -1,0 +1,39 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q6PKG0	La-related protein 1	LARP1_HUMAN	Homo sapiens	PF05383	La	La domain	407	463
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#17 mappings in 17 PDB chains in 6 PDB entries
+Q6PKG0	873	1023	5v7c	Crystal structure of LARP1-unique domain DM15 bound 5'TOP RNA sequence	12	162	B	796	None
+Q6PKG0	873	1023	4zc4	Crystal structure of LARP1-unique domain DM15	12	162	B	796	946
+Q6PKG0	873	1023	4zc4	Crystal structure of LARP1-unique domain DM15	12	162	D	None	None
+Q6PKG0	873	1023	4zc4	Crystal structure of LARP1-unique domain DM15	12	162	A	796	None
+Q6PKG0	873	1023	4zc4	Crystal structure of LARP1-unique domain DM15	12	162	C	None	None
+Q6PKG0	873	1023	6pw3	LARP1 DM15 FYRE (F844Y, R847E) mutant bound to m7GpppG dinucleotide (capG)	12	162	C	None	None
+Q6PKG0	873	1023	6pw3	LARP1 DM15 FYRE (F844Y, R847E) mutant bound to m7GpppG dinucleotide (capG)	12	162	A	796	None
+Q6PKG0	873	1023	6pw3	LARP1 DM15 FYRE (F844Y, R847E) mutant bound to m7GpppG dinucleotide (capG)	12	162	D	None	None
+Q6PKG0	873	1023	6pw3	LARP1 DM15 FYRE (F844Y, R847E) mutant bound to m7GpppG dinucleotide (capG)	12	162	B	None	None
+Q6PKG0	873	1023	5v87	Crystal structure of LARP1-unique domain DM15 bound to m7GpppC	12	162	B	796	None
+Q6PKG0	873	1023	5v87	Crystal structure of LARP1-unique domain DM15 bound to m7GpppC	12	162	A	796	None
+Q6PKG0	873	1023	5v4r	Crystal structure of LARP1-unique domain DM15 bound to m7GTP	12	162	B	796	946
+Q6PKG0	873	1023	5v4r	Crystal structure of LARP1-unique domain DM15 bound to m7GTP	12	162	A	796	None
+Q6PKG0	873	1023	5c0v	Structure of the LARP1-unique domain DM15	12	162	D	796	None
+Q6PKG0	873	1023	5c0v	Structure of the LARP1-unique domain DM15	12	162	B	796	None
+Q6PKG0	873	1023	5c0v	Structure of the LARP1-unique domain DM15	12	162	A	796	None
+Q6PKG0	873	1023	5c0v	Structure of the LARP1-unique domain DM15	12	162	C	None	None
+

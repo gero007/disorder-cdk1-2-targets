@@ -1,0 +1,61 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P31749	RAC-alpha serine/threonine-protein kinase	AKT1_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	150	408
+P31749	RAC-alpha serine/threonine-protein kinase	AKT1_HUMAN	Homo sapiens	PF00169	PH	PH domain	6	108
+P31749	RAC-alpha serine/threonine-protein kinase	AKT1_HUMAN	Homo sapiens	PF00433	Pkinase_C	Protein kinase C terminal domain	429	474
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#37 mappings in 37 PDB chains in 32 PDB entries
+P31749	1	123	1unr	Crystal structure of the PH domain of PKB alpha in complex with a sulfate molecule	3	125	A	None	None
+P31749	1	123	2uzs	A transforming mutation in the pleckstrin homology domain of AKT1 in cancer (AKT1-PH_E17K)	3	125	A	1	None
+P31749	1	123	1unq	High resolution crystal structure of the Pleckstrin Homology Domain Of Protein Kinase B/Akt Bound To Ins(1,3,4,5)-Tetrakisphophate	3	125	A	1	None
+P31749	1	123	2uzr	A transforming mutation in the pleckstrin homology domain of AKT1 in cancer (AKT1-PH_E17K)	2	124	A	None	None
+P31749	1	123	2uvm	Structure of PKBalpha PH domain in complex with a novel inositol headgroup surrogate, benzene 1,2,3,4-tetrakisphosphate	1	123	A	1	None
+P31749	1	123	1h10	HIGH RESOLUTION STRUCTURE OF THE PLECKSTRIN HOMOLOGY DOMAIN OF PROTEIN KINASE B/AKT BOUND TO INS(1,3,4,5)-TETRAKISPHOPHATE	3	125	A	1	None
+P31749	1	121	1unp	Crystal structure of the pleckstrin homology domain of PKB alpha	1	121	A	None	121
+P31749	2	446	6s9w	Crystal Structure of AKT1 in Complex with Covalent-Allosteric AKT Inhibitor 16a	2	446	A	None	None
+P31749	2	446	5kcv	Crystal structure of allosteric inhibitor, ARQ 092, in complex with autoinhibited form of AKT1	16	460	A	None	None
+P31749	2	443	3o96	Crystal Structure of Human AKT1 with an Allosteric Inhibitor	5	446	A	2	None
+P31749	2	446	6hhf	Crystal Structure of AKT1 in Complex with Covalent-Allosteric AKT Inhibitor Borussertib	2	446	A	None	None
+P31749	2	446	6hhg	Crystal Structure of AKT1 in Complex with Covalent-Allosteric AKT Inhibitor 27	2	446	A	None	None
+P31749	2	446	6hhj	Crystal Structure of AKT1 in Complex with Covalent-Allosteric AKT Inhibitor 24b	2	446	A	None	None
+P31749	2	446	6hhh	Crystal Structure of AKT1 in Complex with Covalent-Allosteric AKT Inhibitor 31	2	446	A	2	None
+P31749	2	446	6hhi	Crystal Structure of AKT1 in Complex with Covalent-Allosteric AKT Inhibitor 30b	2	446	A	None	None
+P31749	2	446	6s9x	Crystal Structure of AKT1 in Complex with Covalent-Allosteric AKT Inhibitor 15c	2	446	A	None	None
+P31749	2	446	4ejn	Crystal structure of autoinhibited form of AKT1 in complex with N-(4-(5-(3-acetamidophenyl)-2-(2-aminopyridin-3-yl)-3H-imidazo[4,5-b]pyridin-3-yl)benzyl)-3-fluorobenzamide	2	446	A	None	None
+P31749	123	480	6npz	Crystal structure of Akt1 (aa 123-480) kinase with a bisubstrate	1	358	A	None	None
+P31749	123	480	6npz	Crystal structure of Akt1 (aa 123-480) kinase with a bisubstrate	1	358	B	None	None
+P31749	144	480	3mvh	Crystal structure of Akt-1-inhibitor complexes	6	342	A	None	None
+P31749	144	480	3mv5	Crystal structure of Akt-1-inhibitor complexes	6	342	A	144	None
+P31749	144	480	3ocb	Akt1 kinase domain with pyrrolopyrimidine inhibitor	5	341	B	144	None
+P31749	144	480	3ocb	Akt1 kinase domain with pyrrolopyrimidine inhibitor	5	341	A	144	None
+P31749	144	480	4ekl	Akt1 with GDC0068	5	341	A	144	None
+P31749	144	480	3cqu	Crystal Structure of Akt-1 complexed with substrate peptide and inhibitor	6	342	A	144	None
+P31749	144	480	3cqw	Crystal Structure of Akt-1 complexed with substrate peptide and inhibitor	6	342	A	144	None
+P31749	144	466	6ccy	Crystal structure of Akt1 in complex with a selective inhibitor	4	326	A	144	None
+P31749	144	480	4ekk	Akt1 with AMP-PNP	5	341	B	144	None
+P31749	144	480	4ekk	Akt1 with AMP-PNP	5	341	A	144	None
+P31749	144	480	3qkm	Spirocyclic sulfonamides as AKT inhibitors	5	341	A	144	None
+P31749	144	480	3qkl	Spirochromane Akt Inhibitors	5	341	A	144	None
+P31749	144	480	6buu	Crystal structure of AKT1 (aa 144-480) with a bisubstrate	1	337	B	144	None
+P31749	144	480	6buu	Crystal structure of AKT1 (aa 144-480) with a bisubstrate	1	337	A	144	None
+P31749	144	480	3qkk	Spirochromane Akt Inhibitors	5	341	A	144	None
+P31749	144	480	3ow4	Discovery of dihydrothieno- and dihydrofuropyrimidines as potent pan Akt inhibitors	5	341	B	144	None
+P31749	144	480	3ow4	Discovery of dihydrothieno- and dihydrofuropyrimidines as potent pan Akt inhibitors	5	341	A	144	None
+P31749	144	480	4gv1	PKB alpha in complex with AZD5363	4	340	A	144	None
+

@@ -1,0 +1,60 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P54132	BLOOM SYNDROME PROTEIN	BLM_HUMAN	Homo sapiens	PF00570	HRDC	HRDC domain	1215	1282
+P54132	BLOOM SYNDROME PROTEIN	BLM_HUMAN	Homo sapiens	PF00270	DEAD	DEAD/DEAH box helicase	669	841
+P54132	BLOOM SYNDROME PROTEIN	BLM_HUMAN	Homo sapiens	PF00271	Helicase_C	Helicase conserved C-terminal domain	874	984
+P54132	BLOOM SYNDROME PROTEIN	BLM_HUMAN	Homo sapiens	PF08072	BDHCT	BDHCT (NUC031) domain	372	411
+P54132	BLOOM SYNDROME PROTEIN	BLM_HUMAN	Homo sapiens	PF09382	RQC	RQC domain	1071	1198
+P54132	BLOOM SYNDROME PROTEIN	BLM_HUMAN	Homo sapiens	PF16124	RecQ_Zn_bind	RecQ zinc-binding	995	1067
+P54132	BLOOM SYNDROME PROTEIN	BLM_HUMAN	Homo sapiens	PF16202	BLM_N	N-terminal region of Bloom syndrome protein	1	367
+P54132	BLOOM SYNDROME PROTEIN	BLM_HUMAN	Homo sapiens	PF16204	BDHCT_assoc	BDHCT-box associated domain on Bloom syndrome protein	425	647
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#31 mappings in 31 PDB chains in 11 PDB entries
+P54132	297	309	5u6k	Crystal structure of TopBP1 BRCT4/5 in complex with a BLM phosphopeptide	1	13	M	None	None
+P54132	297	309	5u6k	Crystal structure of TopBP1 BRCT4/5 in complex with a BLM phosphopeptide	1	13	O	None	309
+P54132	297	309	5u6k	Crystal structure of TopBP1 BRCT4/5 in complex with a BLM phosphopeptide	1	13	N	None	None
+P54132	297	309	5u6k	Crystal structure of TopBP1 BRCT4/5 in complex with a BLM phosphopeptide	1	13	L	None	None
+P54132	362	414	5mk5	Structures of DHBN domain of human BLM helicase	2	54	B	362	None
+P54132	362	414	5mk5	Structures of DHBN domain of human BLM helicase	2	54	C	362	None
+P54132	362	414	5mk5	Structures of DHBN domain of human BLM helicase	2	54	D	None	None
+P54132	362	414	5mk5	Structures of DHBN domain of human BLM helicase	2	54	A	None	414
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	B	362	None
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	D	362	414
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	C	362	414
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	G	362	None
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	I	None	None
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	F	362	None
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	A	None	None
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	L	None	None
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	E	362	414
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	J	None	None
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	K	None	None
+P54132	362	414	5lup	Structures of DHBN domain of human BLM helicase	2	54	H	362	None
+P54132	636	1298	4cdg	Crystal structure of the Bloom's syndrome helicase BLM in complex with Nanobody	3	665	A	None	None
+P54132	636	1298	4cdg	Crystal structure of the Bloom's syndrome helicase BLM in complex with Nanobody	3	665	B	None	None
+P54132	636	1298	4cgz	Crystal structure of the Bloom's syndrome helicase BLM in complex with DNA	3	665	A	None	None
+P54132	640	1298	4o3m	Ternary complex of Bloom's syndrome helicase	1	659	A	640	None
+P54132	1067	1210	2mh9	Resonance assignment of RQC domain of human Bloom syndrome protein	1	144	A	1	None
+P54132	1068	1209	3we2	Structure of BLM RQC domain bound to a phosphate ion	6	147	A	None	None
+P54132	1068	1209	3we2	Structure of BLM RQC domain bound to a phosphate ion	6	147	B	None	None
+P54132	1068	1209	3we3	Structure of BLM RQC domain bound to an arsenate ion	6	147	A	None	None
+P54132	1068	1209	3we3	Structure of BLM RQC domain bound to an arsenate ion	6	147	B	None	None
+P54132	1200	1295	2rrd	Structure of HRDC domain from human Bloom syndrome protein, BLM	6	101	A	6	101
+P54132	1210	1294	2kv2	Solution Structure of the human BLM HRDC domain	1	85	A	1	85
+

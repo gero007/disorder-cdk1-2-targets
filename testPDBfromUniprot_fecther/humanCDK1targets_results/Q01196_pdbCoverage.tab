@@ -1,0 +1,35 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q01196	CORE-BINDING FACTOR ALPHA SUBUNIT1	RUNX1_HUMAN	Homo sapiens	PF00853	Runt	Runt domain	51	180
+Q01196	CORE-BINDING FACTOR ALPHA SUBUNIT1	RUNX1_HUMAN	Homo sapiens	PF08504	RunxI	Runx inhibition domain	362	453
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#12 mappings in 12 PDB chains in 5 PDB entries
+Q01196	50	183	1e50	AML1/CBFbeta complex	1	134	C	None	None
+Q01196	50	183	1e50	AML1/CBFbeta complex	1	134	A	None	None
+Q01196	50	183	1e50	AML1/CBFbeta complex	1	134	E	None	None
+Q01196	50	183	1e50	AML1/CBFbeta complex	1	134	Q	None	None
+Q01196	50	183	1e50	AML1/CBFbeta complex	1	134	G	None	None
+Q01196	50	183	1e50	AML1/CBFbeta complex	1	134	R	None	None
+Q01196	50	183	1h9d	Aml1/cbf-beta/dna complex	1	134	A	None	None
+Q01196	50	183	1h9d	Aml1/cbf-beta/dna complex	1	134	C	None	None
+Q01196	51	181	1ljm	DNA recognition is mediated by conformational transition and by DNA bending	1	131	A	None	None
+Q01196	51	181	1ljm	DNA recognition is mediated by conformational transition and by DNA bending	1	131	B	None	None
+Q01196	52	178	1cmo	IMMUNOGLOBULIN MOTIF DNA-RECOGNITION AND HETERODIMERIZATION FOR THE PEBP2/CBF RUNT-DOMAIN	1	127	A	52	178
+Q01196	61	175	1co1	FOLD OF THE CBFA	1	115	A	21	135
+

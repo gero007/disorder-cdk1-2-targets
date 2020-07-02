@@ -1,0 +1,36 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P05412	CJUN	JUN_HUMAN	Homo sapiens	PF00170	bZIP_1	bZIP transcription factor	250	313
+P05412	CJUN	JUN_HUMAN	Homo sapiens	PF03957	Jun	Jun-like transcription factor	5	241
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#13 mappings in 13 PDB chains in 8 PDB entries
+P05412	253	308	1a02	STRUCTURE OF THE DNA BINDING DOMAINS OF NFAT, FOS AND JUN BOUND TO DNA	1	56	J	None	318
+P05412	254	315	1jnm	Crystal Structure of the Jun/CRE Complex	1	62	B	254	None
+P05412	254	315	1jnm	Crystal Structure of the Jun/CRE Complex	1	62	A	254	None
+P05412	254	315	1fos	TWO HUMAN C-FOS:C-JUN:DNA COMPLEXES	1	62	H	None	None
+P05412	254	315	1fos	TWO HUMAN C-FOS:C-JUN:DNA COMPLEXES	1	62	F	None	None
+P05412	254	314	1t2k	Structure Of The DNA Binding Domains Of IRF3, ATF-2 and Jun Bound To DNA	2	62	C	254	314
+P05412	254	315	5t01	Human c-Jun DNA binding domain homodimer in complex with methylated DNA	3	64	B	254	None
+P05412	254	315	5t01	Human c-Jun DNA binding domain homodimer in complex with methylated DNA	3	64	A	254	None
+P05412	257	308	1s9k	Crystal Structure of Human NFAT1 and Fos-Jun on the IL-2 ARRE1 Site	1	52	E	267	318
+P05412	276	315	1jun	NMR STUDY OF C-JUN HOMODIMER	5	44	A	276	315
+P05412	276	315	1jun	NMR STUDY OF C-JUN HOMODIMER	5	44	B	276	315
+P05412	277	308	5fv8	Structure of cJun-FosW coiled coil complex.	4	35	D	3	None
+P05412	277	308	5fv8	Structure of cJun-FosW coiled coil complex.	4	35	E	3	34
+

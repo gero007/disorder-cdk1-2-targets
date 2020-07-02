@@ -1,0 +1,29 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q08999	Retinoblastoma-like protein 2	RBL2_HUMAN	Homo sapiens	PF01857	RB_B	Retinoblastoma-associated protein B domain	835	1018
+Q08999	Retinoblastoma-like protein 2	RBL2_HUMAN	Homo sapiens	PF01858	RB_A	Retinoblastoma-associated protein A domain	417	609
+Q08999	Retinoblastoma-like protein 2	RBL2_HUMAN	Homo sapiens	PF11934	DUF3452	Domain of unknown function (DUF3452)	104	239
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 2 PDB entries
+Q08999	416	423	5c1d	Human OGT in complex with UDP-5S-GlcNAc and substrate peptide (RB2L)	1	8	C	1	8
+Q08999	416	422	4xi9	Human OGT in complex with UDP-5S-GlcNAc and substrate peptide (RBL2)	1	7	E	1416	1422
+Q08999	416	422	4xi9	Human OGT in complex with UDP-5S-GlcNAc and substrate peptide (RBL2)	1	7	H	1416	1422
+Q08999	416	422	4xi9	Human OGT in complex with UDP-5S-GlcNAc and substrate peptide (RBL2)	1	7	G	1416	1422
+Q08999	416	422	4xi9	Human OGT in complex with UDP-5S-GlcNAc and substrate peptide (RBL2)	1	7	F	1416	1422
+

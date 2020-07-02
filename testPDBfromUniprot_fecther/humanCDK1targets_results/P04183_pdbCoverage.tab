@@ -1,0 +1,48 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P04183	Thymidine kinase	KITH_HUMAN	Homo sapiens	PF00265	TK	Thymidine kinase	19	189
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#26 mappings in 26 PDB chains in 4 PDB entries
+P04183	1	234	2orv	human Thymidine Kinase 1 in complex with TP4A	1	234	A	None	None
+P04183	1	234	2orv	human Thymidine Kinase 1 in complex with TP4A	1	234	B	None	None
+P04183	1	193	1xbt	Crystal Structure of Human Thymidine Kinase 1	1	193	D	None	None
+P04183	1	193	1xbt	Crystal Structure of Human Thymidine Kinase 1	1	193	C	None	None
+P04183	1	193	1xbt	Crystal Structure of Human Thymidine Kinase 1	1	193	H	None	None
+P04183	1	193	1xbt	Crystal Structure of Human Thymidine Kinase 1	1	193	A	None	None
+P04183	1	193	1xbt	Crystal Structure of Human Thymidine Kinase 1	1	193	F	None	None
+P04183	1	193	1xbt	Crystal Structure of Human Thymidine Kinase 1	1	193	E	None	None
+P04183	1	193	1xbt	Crystal Structure of Human Thymidine Kinase 1	1	193	B	None	None
+P04183	1	193	1xbt	Crystal Structure of Human Thymidine Kinase 1	1	193	G	None	None
+P04183	1	193	2wvj	Mutation of Thr163 to Ser in Human Thymidine Kinase Shifts the Specificity from Thymidine towards the Nucleoside Analogue Azidothymidine	1	193	D	None	None
+P04183	1	193	2wvj	Mutation of Thr163 to Ser in Human Thymidine Kinase Shifts the Specificity from Thymidine towards the Nucleoside Analogue Azidothymidine	1	193	C	None	None
+P04183	1	193	2wvj	Mutation of Thr163 to Ser in Human Thymidine Kinase Shifts the Specificity from Thymidine towards the Nucleoside Analogue Azidothymidine	1	193	H	None	None
+P04183	1	193	2wvj	Mutation of Thr163 to Ser in Human Thymidine Kinase Shifts the Specificity from Thymidine towards the Nucleoside Analogue Azidothymidine	1	193	A	None	None
+P04183	1	193	2wvj	Mutation of Thr163 to Ser in Human Thymidine Kinase Shifts the Specificity from Thymidine towards the Nucleoside Analogue Azidothymidine	1	193	F	None	None
+P04183	1	193	2wvj	Mutation of Thr163 to Ser in Human Thymidine Kinase Shifts the Specificity from Thymidine towards the Nucleoside Analogue Azidothymidine	1	193	E	None	None
+P04183	1	193	2wvj	Mutation of Thr163 to Ser in Human Thymidine Kinase Shifts the Specificity from Thymidine towards the Nucleoside Analogue Azidothymidine	1	193	B	None	None
+P04183	1	193	2wvj	Mutation of Thr163 to Ser in Human Thymidine Kinase Shifts the Specificity from Thymidine towards the Nucleoside Analogue Azidothymidine	1	193	G	None	None
+P04183	15	194	1w4r	Structure of a type II thymidine kinase with bound dTTP	16	195	D	None	None
+P04183	15	194	1w4r	Structure of a type II thymidine kinase with bound dTTP	16	195	C	None	None
+P04183	15	194	1w4r	Structure of a type II thymidine kinase with bound dTTP	16	195	H	None	None
+P04183	15	194	1w4r	Structure of a type II thymidine kinase with bound dTTP	16	195	A	None	None
+P04183	15	194	1w4r	Structure of a type II thymidine kinase with bound dTTP	16	195	F	None	None
+P04183	15	194	1w4r	Structure of a type II thymidine kinase with bound dTTP	16	195	E	None	None
+P04183	15	194	1w4r	Structure of a type II thymidine kinase with bound dTTP	16	195	B	None	None
+P04183	15	194	1w4r	Structure of a type II thymidine kinase with bound dTTP	16	195	G	None	None
+

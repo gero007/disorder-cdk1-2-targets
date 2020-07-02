@@ -1,0 +1,37 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P08621	U1 small nuclear ribonucleoprotein 70 kDa	RU17_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	105	175
+P08621	U1 small nuclear ribonucleoprotein 70 kDa	RU17_HUMAN	Homo sapiens	PF12220	U1snRNP70_N	U1 small nuclear ribonucleoprotein of 70kDa MW N terminal	3	94
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#14 mappings in 14 PDB chains in 7 PDB entries
+P08621	1	437	3pgw	Crystal structure of human U1 snRNP	1	437	S	None	None
+P08621	1	437	3pgw	Crystal structure of human U1 snRNP	1	437	L	None	None
+P08621	1	437	6qx9	Structure of a human fully-assembled precatalytic spliceosome (pre-B complex).	1	437	1K	None	None
+P08621	1	216	3cw1	Crystal Structure of Human Spliceosomal U1 snRNP	1	216	8	None	None
+P08621	1	216	3cw1	Crystal Structure of Human Spliceosomal U1 snRNP	1	216	7	None	None
+P08621	1	216	3cw1	Crystal Structure of Human Spliceosomal U1 snRNP	1	216	K	None	None
+P08621	1	216	3cw1	Crystal Structure of Human Spliceosomal U1 snRNP	1	216	6	None	None
+P08621	2	60	4pjo	Minimal U1 snRNP	2	60	N	None	None
+P08621	2	60	4pjo	Minimal U1 snRNP	2	60	K	2	None
+P08621	2	60	4pjo	Minimal U1 snRNP	2	60	n	2	None
+P08621	2	60	4pjo	Minimal U1 snRNP	2	60	k	None	None
+P08621	60	215	4pkd	U1-70k in complex with U1 snRNA stem-loops 1 and U1-A RRM in complex with stem-loop 2	124	279	B	None	None
+P08621	131	151	2l5i	structure of the spliceosomal phosphopeptide P140 (non-phosphorylated form)	1	21	A	1	21
+P08621	131	151	2l5j	structure of the spliceosomal phosphopeptide P140 (phosphorylated form)	1	21	A	1	21
+

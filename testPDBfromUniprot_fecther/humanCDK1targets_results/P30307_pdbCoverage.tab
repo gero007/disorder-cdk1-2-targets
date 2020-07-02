@@ -1,0 +1,32 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P30307	Synthetic peptide	MPIP3_HUMAN	Homo sapiens	PF00581	Rhodanese	Rhodanese-like domain	308	422
+P30307	Synthetic peptide	MPIP3_HUMAN	Homo sapiens	PF06617	M-inducer_phosp	M-phase inducer phosphatase	191	271
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#9 mappings in 9 PDB chains in 6 PDB entries
+P30307	126	134	3bzi	Molecular and structural basis of polo-like kinase 1 substrate recognition: Implications in centrosomal localization	1	9	E	1	None
+P30307	126	134	2ojx	Molecular and structural basis of polo-like kinase 1 substrate recognition: Implications in centrosomal localization	1	9	E	1	None
+P30307	207	244	5m36	The molecular tweezer CLR01 stabilizes a disordered protein-protein interface	1	38	D	None	None
+P30307	207	244	5m36	The molecular tweezer CLR01 stabilizes a disordered protein-protein interface	1	38	C	207	None
+P30307	207	226	5m37	The molecular tweezer CLR01 stabilizes a disordered protein-protein interface	1	20	D	207	None
+P30307	207	226	5m37	The molecular tweezer CLR01 stabilizes a disordered protein-protein interface	1	20	C	207	None
+P30307	211	220	5m35	The molecular tweezer CLR01 stabilizes a disordered protein-protein interface	1	10	C	211	220
+P30307	213	219	5m35	The molecular tweezer CLR01 stabilizes a disordered protein-protein interface	1	7	D	213	219
+P30307	270	462	3op3	Crystal Structure of Cell Division Cycle 25C Protein Isoform A from Homo sapiens	24	216	A	None	None
+

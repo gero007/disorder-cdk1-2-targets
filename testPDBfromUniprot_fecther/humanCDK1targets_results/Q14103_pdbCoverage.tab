@@ -1,0 +1,32 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q14103	Heterogeneous nuclear ribonucleoprotein D0	HNRPD_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	184	255
+Q14103	Heterogeneous nuclear ribonucleoprotein D0	HNRPD_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	99	168
+Q14103	Heterogeneous nuclear ribonucleoprotein D0	HNRPD_HUMAN	Homo sapiens	PF08143	CBFNT	CBFNT (NUC161) domain	1	78
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 7 PDB entries
+Q14103	93	175	5im0	Crystal structure of the RNA recognition motif of mRNA decay regulator AUF1	5	87	A	None	None
+Q14103	96	175	5im0	Crystal structure of the RNA recognition motif of mRNA decay regulator AUF1	2	81	B	77	156
+Q14103	98	172	1hd1	HETEROGENEOUS NUCLEAR RIBONUCLEOPROTEIN D0 (HNRNP D0 RBD1), NMR	1	75	A	98	172
+Q14103	98	172	1hd0	HETEROGENEOUS NUCLEAR RIBONUCLEOPROTEIN D0 (HNRNP D0 RBD1), NMR	1	75	A	98	172
+Q14103	181	259	1x0f	Complex structure of the C-terminal RNA-binding domain of hnRNP D(AUF1) with telomeric DNA	1	79	A	181	259
+Q14103	181	259	1wtb	Complex structure of the C-terminal RNA-binding domain of hnRNP D (AUF1) with telomere DNA	1	79	A	181	259
+Q14103	183	257	1iqt	Solution structure of the C-terminal RNA-binding domain of heterogeneous nuclear ribonucleoprotein D0 (AUF1)	1	75	A	183	257
+Q14103	332	355	2z5n	Complex of Transportin 1 with hnRNP D NLS	1	24	B	None	355
+

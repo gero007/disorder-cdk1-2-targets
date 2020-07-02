@@ -1,0 +1,88 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	2554	2643
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	2426	2513
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	2329	2417
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	2235	2322
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	2143	2227
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	2044	2131
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	1862	1949
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	1773	1857
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	1639	1737
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	1542	1633
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	1445	1536
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	1352	1439
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	1252	1346
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	1157	1246
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	1064	1151
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	968	1058
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	869	962
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	766	863
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	669	760
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	573	660
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	477	567
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	378	471
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00630	Filamin	Filamin/ABP280 repeat	278	371
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00307	CH	Calponin homology (CH) domain	166	270
+P21333	Filamin-A	FLNA_HUMAN	Homo sapiens	PF00307	CH	Calponin homology (CH) domain	43	150
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#42 mappings in 42 PDB chains in 22 PDB entries
+P21333	1	278	6d8c	Cryo-EM structure of FLNaABD E254K bound to phalloidin-stabilized F-actin	29	306	E	None	None
+P21333	1	278	6d8c	Cryo-EM structure of FLNaABD E254K bound to phalloidin-stabilized F-actin	29	306	C	None	None
+P21333	1	278	6d8c	Cryo-EM structure of FLNaABD E254K bound to phalloidin-stabilized F-actin	29	306	D	None	None
+P21333	1	278	6d8c	Cryo-EM structure of FLNaABD E254K bound to phalloidin-stabilized F-actin	29	306	A	None	None
+P21333	1	278	6d8c	Cryo-EM structure of FLNaABD E254K bound to phalloidin-stabilized F-actin	29	306	B	None	None
+P21333	1	278	2wfn	Filamin A actin binding domain	1	278	A	None	278
+P21333	1	278	2wfn	Filamin A actin binding domain	1	278	B	None	278
+P21333	2	269	3hoc	Structure of the actin-binding domain of human filamin A mutant E254K	5	272	A	None	None
+P21333	2	269	3hoc	Structure of the actin-binding domain of human filamin A mutant E254K	5	272	B	None	269
+P21333	2	269	3hop	Structure of the actin-binding domain of human filamin A	5	272	B	None	269
+P21333	2	269	3hop	Structure of the actin-binding domain of human filamin A	5	272	A	None	269
+P21333	2	269	3hor	Structure of the actin-binding domain of human filamin A (reduced)	5	272	A	None	None
+P21333	2	269	3hor	Structure of the actin-binding domain of human filamin A (reduced)	5	272	B	None	269
+P21333	478	766	6ew1	Crystal structure of the Filamin A Ig-like domains 3-5 mutant P637Q	3	291	A	478	None
+P21333	478	766	4m9p	Crystal structure of the human filamin A Ig-like domains 3-5	3	291	A	478	766
+P21333	1158	1252	3rgh	Structure of filamin A immunoglobulin-like repeat 10 from Homo sapiens	6	100	B	158	252
+P21333	1158	1252	3rgh	Structure of filamin A immunoglobulin-like repeat 10 from Homo sapiens	6	100	A	158	252
+P21333	1772	1956	2k7p	Filamin A Ig-like domains 16-17	4	188	A	1772	1956
+P21333	1862	1956	2bp3	Crystal structure of Filamin A domain 17 and GPIb alpha cytoplasmic domain complex	3	97	B	None	None
+P21333	1862	1956	2bp3	Crystal structure of Filamin A domain 17 and GPIb alpha cytoplasmic domain complex	3	97	A	-1	None
+P21333	1863	1956	2aav	Solution NMR structure of Filamin A domain 17	5	98	A	1863	1956
+P21333	1954	2141	2k7q	Filamin A Ig-like domains 18-19	4	191	A	1954	2141
+P21333	2045	2329	2j3s	Crystal structure of the human filamin A Ig domains 19 to 21	4	288	B	2045	2329
+P21333	2045	2329	2j3s	Crystal structure of the human filamin A Ig domains 19 to 21	4	288	A	2045	2329
+P21333	2152	2329	4p3w	Crystal structure of the human filamin A Ig-like domains 20-21 in complex with migfilin peptide	5	182	A	None	2329
+P21333	2152	2329	4p3w	Crystal structure of the human filamin A Ig-like domains 20-21 in complex with migfilin peptide	5	182	B	None	2329
+P21333	2152	2329	4p3w	Crystal structure of the human filamin A Ig-like domains 20-21 in complex with migfilin peptide	5	182	F	None	None
+P21333	2152	2329	4p3w	Crystal structure of the human filamin A Ig-like domains 20-21 in complex with migfilin peptide	5	182	E	None	None
+P21333	2152	2329	4p3w	Crystal structure of the human filamin A Ig-like domains 20-21 in complex with migfilin peptide	5	182	D	None	None
+P21333	2152	2329	4p3w	Crystal structure of the human filamin A Ig-like domains 20-21 in complex with migfilin peptide	5	182	C	None	None
+P21333	2236	2329	3isw	Crystal structure of filamin-A immunoglobulin-like repeat 21 bound to an N-terminal peptide of CFTR	6	99	A	2236	None
+P21333	2236	2329	3isw	Crystal structure of filamin-A immunoglobulin-like repeat 21 bound to an N-terminal peptide of CFTR	6	99	B	2236	2329
+P21333	2236	2329	2w0p	Crystal structure of the filamin A repeat 21 complexed with the migfilin peptide	1	94	A	2236	None
+P21333	2236	2329	2w0p	Crystal structure of the filamin A repeat 21 complexed with the migfilin peptide	1	94	B	2236	2329
+P21333	2236	2329	2jf1	CRYSTAL STRUCTURE OF THE FILAMIN A REPEAT 21 COMPLEXED WITH THE INTEGRIN BETA2 CYTOPLASMIC TAIL PEPTIDE	4	97	A	None	None
+P21333	2236	2330	2mtp	The structure of Filamin repeat 21 bound to integrin	1	95	A	2236	2330
+P21333	2236	2329	5xr1	Structure of FLN IG21 domain in complex with C-terminal peptide of beta-2	42	135	A	23	116
+P21333	2236	2329	2brq	Crystal structure of the filamin A repeat 21 complexed with the integrin beta7 cytoplasmic tail peptide	4	97	A	2236	2329
+P21333	2236	2329	2brq	Crystal structure of the filamin A repeat 21 complexed with the integrin beta7 cytoplasmic tail peptide	4	97	B	2236	2329
+P21333	2427	2522	2k3t	Solution Structure of IG-Like Domain 23 from Human Filamin A	4	99	A	2427	2522
+P21333	2559	2647	3cnk	Crystal Structure of the dimerization domain of human filamin A	1	89	B	2559	2647
+P21333	2559	2647	3cnk	Crystal Structure of the dimerization domain of human filamin A	1	89	A	2559	2647
+

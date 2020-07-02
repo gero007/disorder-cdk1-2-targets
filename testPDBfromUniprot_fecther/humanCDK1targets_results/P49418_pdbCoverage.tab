@@ -1,0 +1,36 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P49418	Amphiphysin	AMPH_HUMAN	Homo sapiens	PF03114	BAR	BAR domain	13	233
+P49418	Amphiphysin	AMPH_HUMAN	Homo sapiens	PF14604	SH3_9	Variant SH3 domain	629	692
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#13 mappings in 13 PDB chains in 6 PDB entries
+P49418	1	242	4atm	Crystal structure of the BAR domain of human Amphiphysin, isoform 1 at 1.8 Angstrom resolution featuring increased order at the N- terminus.	2	243	A	None	None
+P49418	34	236	3sog	Crystal structure of the BAR domain of human Amphiphysin, isoform 1	3	205	A	None	None
+P49418	322	331	1ky7	THE AP-2 CLATHRIN ADAPTOR ALPHA-APPENDAGE IN COMPLEX WITH AMPHIPHYSIN FXDXF	1	10	P	322	None
+P49418	349	360	5m61	Clathrin heavy chain N-terminal domain bound to an extended amphiphysin clathrin-box motif	1	12	G	1	12
+P49418	349	360	5m61	Clathrin heavy chain N-terminal domain bound to an extended amphiphysin clathrin-box motif	1	12	H	1	12
+P49418	349	360	5m61	Clathrin heavy chain N-terminal domain bound to an extended amphiphysin clathrin-box motif	1	12	F	1	None
+P49418	349	360	5m61	Clathrin heavy chain N-terminal domain bound to an extended amphiphysin clathrin-box motif	1	12	E	1	None
+P49418	349	358	5m5s	Clathrin heavy chain N-terminal domain bound to amphiphysin clathrin-box motif	1	10	F	1	None
+P49418	349	358	5m5s	Clathrin heavy chain N-terminal domain bound to amphiphysin clathrin-box motif	1	10	E	1	None
+P49418	349	358	5m5s	Clathrin heavy chain N-terminal domain bound to amphiphysin clathrin-box motif	1	10	G	1	10
+P49418	349	358	5m5s	Clathrin heavy chain N-terminal domain bound to amphiphysin clathrin-box motif	1	10	H	1	10
+P49418	379	387	1utc	Clathrin terminal domain complexed with TLPWDLWTT	1	9	P	1	None
+P49418	379	387	1utc	Clathrin terminal domain complexed with TLPWDLWTT	1	9	Q	1	None
+

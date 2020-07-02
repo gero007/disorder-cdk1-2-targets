@@ -1,0 +1,186 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P98170	APOPTOSIS INHIBITOR IAP HOMOLOG	XIAP_HUMAN	Homo sapiens	PF00653	BIR	Inhibitor of Apoptosis domain	268	331
+P98170	APOPTOSIS INHIBITOR IAP HOMOLOG	XIAP_HUMAN	Homo sapiens	PF00653	BIR	Inhibitor of Apoptosis domain	166	231
+P98170	APOPTOSIS INHIBITOR IAP HOMOLOG	XIAP_HUMAN	Homo sapiens	PF00653	BIR	Inhibitor of Apoptosis domain	29	94
+P98170	APOPTOSIS INHIBITOR IAP HOMOLOG	XIAP_HUMAN	Homo sapiens	PF13920	zf-C3HC4_3	Zinc finger, C3HC4 type (RING finger)	446	490
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#161 mappings in 155 PDB chains in 68 PDB entries
+P98170	10	100	2pop	The Crystal Structure of TAB1 and BIR1 complex	5	95	B	None	1100
+P98170	10	100	2pop	The Crystal Structure of TAB1 and BIR1 complex	5	95	D	None	None
+P98170	10	99	2poi	Crystal structure of XIAP BIR1 domain (I222 form)	5	94	A	None	99
+P98170	10	99	4oxc	Crystal structure of XIAP BIR1 domain	22	111	C	None	99
+P98170	10	99	4oxc	Crystal structure of XIAP BIR1 domain	22	111	A	None	99
+P98170	10	99	4oxc	Crystal structure of XIAP BIR1 domain	22	111	D	None	None
+P98170	10	99	4oxc	Crystal structure of XIAP BIR1 domain	22	111	B	None	None
+P98170	10	99	2qra	Crystal structure of XIAP BIR1 domain (P21 form)	22	111	A	None	99
+P98170	10	99	2qra	Crystal structure of XIAP BIR1 domain (P21 form)	22	111	D	None	3099
+P98170	10	99	2qra	Crystal structure of XIAP BIR1 domain (P21 form)	22	111	B	None	1099
+P98170	10	99	2qra	Crystal structure of XIAP BIR1 domain (P21 form)	22	111	C	None	2099
+P98170	10	99	6gjw	Structure of XIAP-BIR1 domain in complex with an NF023 analog	22	111	A	None	None
+P98170	10	99	6gjw	Structure of XIAP-BIR1 domain in complex with an NF023 analog	22	111	D	None	None
+P98170	10	99	6gjw	Structure of XIAP-BIR1 domain in complex with an NF023 analog	22	111	B	None	None
+P98170	10	99	6gjw	Structure of XIAP-BIR1 domain in complex with an NF023 analog	22	111	C	None	None
+P98170	10	99	4mtz	Structure of XIAP-BIR1 in complex with NF023	22	111	A	None	None
+P98170	10	99	4mtz	Structure of XIAP-BIR1 in complex with NF023	22	111	D	None	None
+P98170	10	99	4mtz	Structure of XIAP-BIR1 in complex with NF023	22	111	B	None	None
+P98170	10	99	4mtz	Structure of XIAP-BIR1 in complex with NF023	22	111	C	None	None
+P98170	10	99	6qci	Structure of XIAP-BIR1 V86E mutant	22	111	A	None	None
+P98170	10	99	6qci	Structure of XIAP-BIR1 V86E mutant	22	111	D	None	None
+P98170	10	99	6qci	Structure of XIAP-BIR1 V86E mutant	22	111	B	None	None
+P98170	10	99	6qci	Structure of XIAP-BIR1 V86E mutant	22	111	C	None	None
+P98170	120	260	1i4o	CRYSTAL STRUCTURE OF THE XIAP/CASPASE-7 COMPLEX	1	141	D	None	None
+P98170	120	260	1i4o	CRYSTAL STRUCTURE OF THE XIAP/CASPASE-7 COMPLEX	1	141	C	None	None
+P98170	124	240	1i3o	CRYSTAL STRUCTURE OF THE COMPLEX OF XIAP-BIR2 AND CASPASE 3	5	121	F	None	None
+P98170	124	240	1i3o	CRYSTAL STRUCTURE OF THE COMPLEX OF XIAP-BIR2 AND CASPASE 3	5	121	E	None	None
+P98170	124	242	1kmc	Crystal Structure of the Caspase-7 / XIAP-BIR2 Complex	1	119	D	None	None
+P98170	124	242	1kmc	Crystal Structure of the Caspase-7 / XIAP-BIR2 Complex	1	119	C	None	None
+P98170	124	240	1i51	CRYSTAL STRUCTURE OF CASPASE-7 COMPLEXED WITH XIAP	1	117	F	None	None
+P98170	124	240	1i51	CRYSTAL STRUCTURE OF CASPASE-7 COMPLEXED WITH XIAP	1	117	E	None	None
+P98170	124	240	1c9q	AVERAGE NMR SOLUTION STRUCTURE OF THE BIR-2 DOMAIN OF XIAP	1	117	A	1	117
+P98170	152	236	4kju	Crystal structure of XIAP-Bir2 with a bound benzodiazepinone inhibitor.	2	86	C	None	None
+P98170	152	236	4kju	Crystal structure of XIAP-Bir2 with a bound benzodiazepinone inhibitor.	2	86	A	152	None
+P98170	152	236	4j46	Crystal structure of XIAP-BIR2 domain with AVPI bound	2	86	A	152	None
+P98170	152	236	4j46	Crystal structure of XIAP-BIR2 domain with AVPI bound	2	86	C	None	None
+P98170	152	236	4kjv	Crystal structure of XIAP-Bir2 with a bound spirocyclic benzoxazepinone inhibitor.	2	86	A	152	None
+P98170	152	236	4kjv	Crystal structure of XIAP-Bir2 with a bound spirocyclic benzoxazepinone inhibitor.	2	86	C	None	None
+P98170	152	236	4j47	Crystal structure of XIAP-BIR2 domain with SVPI bound	2	86	A	152	None
+P98170	152	236	4j47	Crystal structure of XIAP-BIR2 domain with SVPI bound	2	86	C	None	None
+P98170	152	236	4j44	Crystal structure of XIAP-BIR2 domain with AIAV bound	2	86	A	152	None
+P98170	152	236	4j44	Crystal structure of XIAP-BIR2 domain with AIAV bound	2	86	C	None	None
+P98170	152	236	4j3y	Crystal structure of XIAP-BIR2 domain	2	86	A	152	None
+P98170	152	236	4j3y	Crystal structure of XIAP-BIR2 domain	2	86	C	None	None
+P98170	152	236	4j45	Crystal structure of XIAP-BIR2 domain with ATAA bound	2	86	A	152	None
+P98170	152	236	4j45	Crystal structure of XIAP-BIR2 domain with ATAA bound	2	86	C	None	None
+P98170	152	236	4j48	Crystal structure of XIAP-BIR2 domain with AMRV bound	2	86	A	152	None
+P98170	152	236	4j48	Crystal structure of XIAP-BIR2 domain with AMRV bound	2	86	C	None	None
+P98170	156	231	4wvs	Crystal structure of XIAP-BIR2 domain complexed with (S)-3-(4-methoxyphenyl)-2-((S)-2-((S)-1-((S)-2-((S)-2-(methylamino)propanamido)pent-4-ynoyl)pyrrolidine-2-carboxamido)-3-phenylpropanamido)propanoic acid	23	98	A	156	231
+P98170	156	231	4wvu	CRYSTAL STRUCTURE OF XIAP-BIR2 DOMAIN COMPLEXED WITH LIGAND BOUND	23	98	A	156	231
+P98170	156	231	4wvt	Crystal structure of XIAP-BIR2 domain complexed with ligand bound	23	98	A	156	231
+P98170	156	231	4wvt	Crystal structure of XIAP-BIR2 domain complexed with ligand bound	23	98	B	156	231
+P98170	238	358	1g73	CRYSTAL STRUCTURE OF SMAC BOUND TO XIAP-BIR3 DOMAIN	1	121	D	None	None
+P98170	238	358	1g73	CRYSTAL STRUCTURE OF SMAC BOUND TO XIAP-BIR3 DOMAIN	1	121	C	None	None
+P98170	238	357	4hy0	Crystal structure of XIAP BIR3 with T3256336	6	125	D	None	None
+P98170	238	357	4hy0	Crystal structure of XIAP BIR3 with T3256336	6	125	C	None	None
+P98170	238	357	4hy0	Crystal structure of XIAP BIR3 with T3256336	6	125	H	None	None
+P98170	238	357	4hy0	Crystal structure of XIAP BIR3 with T3256336	6	125	A	None	None
+P98170	238	357	4hy0	Crystal structure of XIAP BIR3 with T3256336	6	125	F	None	None
+P98170	238	357	4hy0	Crystal structure of XIAP BIR3 with T3256336	6	125	E	None	None
+P98170	238	357	4hy0	Crystal structure of XIAP BIR3 with T3256336	6	125	B	None	None
+P98170	238	357	4hy0	Crystal structure of XIAP BIR3 with T3256336	6	125	G	None	None
+P98170	241	356	2jk7	XIAP BIR3 bound to a Smac Mimetic	1	116	A	None	None
+P98170	241	356	4ec4	XIAP-BIR3 in complex with a potent divalent Smac mimetic	1	116	D	None	None
+P98170	241	356	4ec4	XIAP-BIR3 in complex with a potent divalent Smac mimetic	1	116	C	None	None
+P98170	241	356	4ec4	XIAP-BIR3 in complex with a potent divalent Smac mimetic	1	116	L	None	None
+P98170	241	356	4ec4	XIAP-BIR3 in complex with a potent divalent Smac mimetic	1	116	A	None	None
+P98170	241	356	4ec4	XIAP-BIR3 in complex with a potent divalent Smac mimetic	1	116	K	None	None
+P98170	241	356	4ec4	XIAP-BIR3 in complex with a potent divalent Smac mimetic	1	116	G	None	None
+P98170	241	356	4ec4	XIAP-BIR3 in complex with a potent divalent Smac mimetic	1	116	E	None	None
+P98170	241	356	4ec4	XIAP-BIR3 in complex with a potent divalent Smac mimetic	1	116	B	None	None
+P98170	241	356	4ec4	XIAP-BIR3 in complex with a potent divalent Smac mimetic	1	116	F	None	None
+P98170	241	356	4ec4	XIAP-BIR3 in complex with a potent divalent Smac mimetic	1	116	J	None	None
+P98170	241	356	6ey2	Crystal structure of XIAP-BIR3 in complex with a cIAP1-selective SM	31	146	D	None	None
+P98170	241	356	6ey2	Crystal structure of XIAP-BIR3 in complex with a cIAP1-selective SM	31	146	C	None	None
+P98170	241	356	6ey2	Crystal structure of XIAP-BIR3 in complex with a cIAP1-selective SM	31	146	H	None	None
+P98170	241	356	6ey2	Crystal structure of XIAP-BIR3 in complex with a cIAP1-selective SM	31	146	A	None	None
+P98170	241	356	6ey2	Crystal structure of XIAP-BIR3 in complex with a cIAP1-selective SM	31	146	F	None	None
+P98170	241	356	6ey2	Crystal structure of XIAP-BIR3 in complex with a cIAP1-selective SM	31	146	E	None	None
+P98170	241	356	6ey2	Crystal structure of XIAP-BIR3 in complex with a cIAP1-selective SM	31	146	B	None	None
+P98170	241	356	6ey2	Crystal structure of XIAP-BIR3 in complex with a cIAP1-selective SM	31	146	G	None	None
+P98170	241	356	1g3f	NMR STRUCTURE OF A 9 RESIDUE PEPTIDE FROM SMAC/DIABLO COMPLEXED TO THE BIR3 DOMAIN OF XIAP	2	117	A	241	356
+P98170	241	356	1f9x	AVERAGE NMR SOLUTION STRUCTURE OF THE BIR-3 DOMAIN OF XIAP	5	120	A	241	356
+P98170	241	356	1tft	NMR Structure of an Antagonists of the XIAP-Caspase-9 Interaction Complexed to the BIR3 domain of XIAP	2	117	A	241	356
+P98170	241	356	3eyl	Crystal structure of XIAP BIR3 domain in complex with a Smac-mimetic compound	1	116	A	None	None
+P98170	241	356	3eyl	Crystal structure of XIAP BIR3 domain in complex with a Smac-mimetic compound	1	116	B	None	None
+P98170	241	356	3cm7	Crystal Structure of XIAP-BIR3 domain in complex with Smac-mimetic compuond, Smac005	15	130	A	None	None
+P98170	241	356	3cm7	Crystal Structure of XIAP-BIR3 domain in complex with Smac-mimetic compuond, Smac005	15	130	C	None	None
+P98170	241	356	3cm7	Crystal Structure of XIAP-BIR3 domain in complex with Smac-mimetic compuond, Smac005	15	130	D	None	None
+P98170	241	356	3cm7	Crystal Structure of XIAP-BIR3 domain in complex with Smac-mimetic compuond, Smac005	15	130	B	None	None
+P98170	241	356	3g76	Crystal structure of XIAP-BIR3 in complex with a bivalent compound	1	116	F	None	356
+P98170	241	356	3g76	Crystal structure of XIAP-BIR3 in complex with a bivalent compound	1	116	B	None	356
+P98170	241	356	3g76	Crystal structure of XIAP-BIR3 in complex with a bivalent compound	1	116	C	None	None
+P98170	241	356	3g76	Crystal structure of XIAP-BIR3 in complex with a bivalent compound	1	116	H	None	356
+P98170	241	356	3g76	Crystal structure of XIAP-BIR3 in complex with a bivalent compound	1	116	A	None	None
+P98170	241	356	3g76	Crystal structure of XIAP-BIR3 in complex with a bivalent compound	1	116	D	None	356
+P98170	241	356	3g76	Crystal structure of XIAP-BIR3 in complex with a bivalent compound	1	116	E	None	None
+P98170	241	356	3g76	Crystal structure of XIAP-BIR3 in complex with a bivalent compound	1	116	G	None	None
+P98170	241	356	3clx	Crystal structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac005	15	130	A	None	None
+P98170	241	356	3clx	Crystal structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac005	15	130	B	None	None
+P98170	241	356	3clx	Crystal structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac005	15	130	C	None	None
+P98170	241	356	3clx	Crystal structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac005	15	130	D	None	None
+P98170	241	356	1tfq	NMR Structure of an Antagonists of the XIAP-Caspase-9 Interaction Complexed to the BIR3 domain of XIAP	2	117	A	241	356
+P98170	241	356	3cm2	Crystal Structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac010	15	130	I	None	None
+P98170	241	356	3cm2	Crystal Structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac010	15	130	C	None	None
+P98170	241	356	3cm2	Crystal Structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac010	15	130	D	None	None
+P98170	241	356	3cm2	Crystal Structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac010	15	130	H	None	None
+P98170	241	356	3cm2	Crystal Structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac010	15	130	F	None	None
+P98170	241	356	3cm2	Crystal Structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac010	15	130	E	None	None
+P98170	241	356	3cm2	Crystal Structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac010	15	130	A	None	None
+P98170	241	356	3cm2	Crystal Structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac010	15	130	J	None	356
+P98170	241	356	3cm2	Crystal Structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac010	15	130	G	None	None
+P98170	241	356	3cm2	Crystal Structure of XIAP BIR3 domain in complex with a Smac-mimetic compound, Smac010	15	130	B	None	None
+P98170	245	354	5c0l	Fragment-Based Drug Discovery Targeting Inhibitor of Apoptosis Proteins: Compound 2	1	110	A	None	354
+P98170	248	354	6h6r	Fragment Derived XIAP inhibitor	21	127	A	248	354
+P98170	246	246	6h6r	Fragment Derived XIAP inhibitor	19	19	A	None	None
+P98170	248	354	6h6q	Fragment Derived XIAP inhibitor	21	127	A	None	354
+P98170	248	354	6h6q	Fragment Derived XIAP inhibitor	21	127	B	248	None
+P98170	246	246	6h6q	Fragment Derived XIAP inhibitor	19	19	A	None	None
+P98170	246	246	6h6q	Fragment Derived XIAP inhibitor	19	19	B	None	None
+P98170	249	354	5c0k	Fragment-Based Drug Discovery Targeting Inhibitor of Apoptosis Proteins: Compound 3	5	110	A	249	None
+P98170	249	354	5m6m	Small Molecule inhibitors of IAP	22	127	A	249	None
+P98170	249	354	5c7a	Fragment-Based Drug Discovery Targeting Inhibitor of Apoptosis Proteins: Compound 7	5	110	A	249	354
+P98170	249	354	5m6h	Small Molecule inhibitors of IAP	22	127	A	249	None
+P98170	249	354	5c3h	Fragment-Based Drug Discovery Targeting Inhibitor of Apoptosis Proteins: Compound 1	5	110	A	249	354
+P98170	249	354	5c3k	Fragment-Based Drug Discovery Targeting Inhibitor of Apoptosis Proteins: Compound 4	5	110	A	249	354
+P98170	249	354	5m6f	Small Molecule inhibitors of IAP	22	127	A	249	None
+P98170	249	354	5oqw	XIAP in complex with small molecule	22	127	B	249	354
+P98170	249	354	5oqw	XIAP in complex with small molecule	22	127	A	249	354
+P98170	249	354	5c84	Fragment-Based Drug Discovery Targeting Inhibitor of Apoptosis Proteins: Compound 20	5	110	A	249	354
+P98170	249	354	5c7c	Fragment-Based Drug Discovery Targeting Inhibitor of Apoptosis Proteins: Compound 18	5	110	A	249	354
+P98170	249	354	5c83	Fragment-Based Drug Discovery Targeting Inhibitor of Apoptosis Proteins: Compound 21	5	110	A	249	354
+P98170	249	354	5m6e	Small Molecule inhibitors of IAP	22	127	A	249	None
+P98170	249	354	5c7b	Fragment-Based Drug Discovery Targeting Inhibitor of Apoptosis Proteins: Compound 5	5	110	A	249	354
+P98170	249	354	5c7d	Fragment-Based Drug Discovery Targeting Inhibitor of Apoptosis Proteins: Compound 17	5	110	A	249	354
+P98170	249	354	5m6l	Small Molecule inhibitors of IAP	22	127	A	249	None
+P98170	249	354	2opy	Smac mimic bound to BIR3-XIAP	1	106	A	249	354
+P98170	249	357	2opz	AVPF bound to BIR3-XIAP	1	109	D	249	357
+P98170	249	357	2opz	AVPF bound to BIR3-XIAP	1	109	A	249	357
+P98170	249	357	2opz	AVPF bound to BIR3-XIAP	1	109	B	249	357
+P98170	249	357	2opz	AVPF bound to BIR3-XIAP	1	109	C	249	357
+P98170	250	345	2vsl	Crystal Structure of XIAP BIR3 with a Bivalent Smac Mimetic	1	96	A	250	345
+P98170	253	350	1nw9	STRUCTURE OF CASPASE-9 IN AN INHIBITORY COMPLEX WITH XIAP-BIR3	1	98	A	None	None
+P98170	256	348	4kmp	Structure of XIAP-BIR3 and inhibitor	6	98	A	256	348
+P98170	256	348	4kmp	Structure of XIAP-BIR3 and inhibitor	6	98	B	256	348
+P98170	256	346	3hl5	Crystal structure of XIAP BIR3 with CS3	5	95	B	256	None
+P98170	256	346	3hl5	Crystal structure of XIAP BIR3 with CS3	5	95	A	256	346
+P98170	336	348	3uw5	Crystal structure of the BIR domain of MLIAP bound to GDC0152	104	116	B	160	None
+P98170	336	348	3uw5	Crystal structure of the BIR domain of MLIAP bound to GDC0152	104	116	A	160	None
+P98170	326	327	3uw5	Crystal structure of the BIR domain of MLIAP bound to GDC0152	94	95	B	150	151
+P98170	326	327	3uw5	Crystal structure of the BIR domain of MLIAP bound to GDC0152	94	95	A	150	151
+P98170	338	348	3uw4	Crystal structure of cIAP1 BIR3 bound to GDC0152	82	92	A	330	None
+P98170	326	327	3uw4	Crystal structure of cIAP1 BIR3 bound to GDC0152	70	71	A	318	319
+P98170	357	449	2kna	Solution structure of UBA domain of XIAP	12	104	A	12	104
+P98170	429	497	4ic3	Crystal structure of the F495L mutant XIAP RING domain	6	74	A	None	None
+P98170	429	497	4ic3	Crystal structure of the F495L mutant XIAP RING domain	6	74	B	None	497
+P98170	429	497	4ic2	Crystal structure of the XIAP RING domain	6	74	A	None	None
+P98170	429	497	4ic2	Crystal structure of the XIAP RING domain	6	74	B	None	497
+P98170	430	497	2ecg	Solution structure of the ring domain of the Baculoviral IAP repeat-containing protein 4 from Homo sapiens	8	75	A	8	75
+P98170	434	497	5o6t	BIRC4 RING in complex with dimeric ubiquitin variant	3	66	B	None	497
+P98170	434	497	5o6t	BIRC4 RING in complex with dimeric ubiquitin variant	3	66	A	434	497
+

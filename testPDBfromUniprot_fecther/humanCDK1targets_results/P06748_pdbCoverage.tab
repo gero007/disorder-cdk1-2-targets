@@ -1,0 +1,55 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P06748	Nucleophosmin	NPM_HUMAN	Homo sapiens	PF03066	Nucleoplasmin	Nucleoplasmin/nucleophosmin domain	18	117
+P06748	Nucleophosmin	NPM_HUMAN	Homo sapiens	PF16276	NPM1-C	Nucleophosmin C-terminal domain	245	293
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#32 mappings in 32 PDB chains in 4 PDB entries
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	b	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	G	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	D	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	a	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	I	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	e	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	C	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	f	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	c	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	g	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	H	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	A	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	F	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	J	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	B	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	j	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	i	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	h	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	d	None	None
+P06748	9	124	5ehd	Crystal structure of human nucleophosmin-core in complex with cytochrome c	1	116	E	None	None
+P06748	9	122	2p1b	Crystal structure of human nucleophosmin-core	1	114	D	None	None
+P06748	9	122	2p1b	Crystal structure of human nucleophosmin-core	1	114	C	None	None
+P06748	9	122	2p1b	Crystal structure of human nucleophosmin-core	1	114	I	None	None
+P06748	9	122	2p1b	Crystal structure of human nucleophosmin-core	1	114	H	None	None
+P06748	9	122	2p1b	Crystal structure of human nucleophosmin-core	1	114	A	None	None
+P06748	9	122	2p1b	Crystal structure of human nucleophosmin-core	1	114	F	None	None
+P06748	9	122	2p1b	Crystal structure of human nucleophosmin-core	1	114	E	None	None
+P06748	9	122	2p1b	Crystal structure of human nucleophosmin-core	1	114	B	None	None
+P06748	9	122	2p1b	Crystal structure of human nucleophosmin-core	1	114	G	None	None
+P06748	9	122	2p1b	Crystal structure of human nucleophosmin-core	1	114	J	None	None
+P06748	225	294	2llh	NMR structure of Npm1_c70	5	74	A	1	70
+P06748	243	294	2vxd	The structure of the C-terminal domain of Nucleophosmin	3	54	A	3	54
+

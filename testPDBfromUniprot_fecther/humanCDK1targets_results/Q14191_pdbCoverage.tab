@@ -1,0 +1,41 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q14191	Werner syndrome protein variant	WRN_HUMAN	Homo sapiens	PF00570	HRDC	HRDC domain	1153	1219
+Q14191	Werner syndrome protein variant	WRN_HUMAN	Homo sapiens	PF00270	DEAD	DEAD/DEAH box helicase	550	713
+Q14191	Werner syndrome protein variant	WRN_HUMAN	Homo sapiens	PF00271	Helicase_C	Helicase conserved C-terminal domain	748	859
+Q14191	Werner syndrome protein variant	WRN_HUMAN	Homo sapiens	PF01612	DNA_pol_A_exo1	3'-5' exonuclease	57	230
+Q14191	Werner syndrome protein variant	WRN_HUMAN	Homo sapiens	PF09382	RQC	RQC domain	953	1066
+Q14191	Werner syndrome protein variant	WRN_HUMAN	Homo sapiens	PF14493	HTH_40	Helix-turn-helix domain	1258	1352
+Q14191	Werner syndrome protein variant	WRN_HUMAN	Homo sapiens	PF16124	RecQ_Zn_bind	RecQ zinc-binding	870	940
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#13 mappings in 13 PDB chains in 12 PDB entries
+Q14191	8	23	6tyv	Structure of Ku80 von Willebrand domain complexed with WRN Ku Binding Motif	1	16	B	8	None
+Q14191	38	236	2fbx	WRN exonuclease, Mg complex	7	205	A	38	None
+Q14191	38	236	2fby	WRN exonuclease, Eu complex	7	205	A	38	None
+Q14191	38	236	2fc0	WRN exonuclease, Mn dGMP complex	7	205	A	38	None
+Q14191	38	236	2fbv	WRN exonuclease, Mn complex	7	205	A	38	None
+Q14191	38	236	2fbt	WRN exonuclease	7	205	A	38	None
+Q14191	517	1093	6yhr	Crystal structure of Werner syndrome helicase	2	578	A	None	None
+Q14191	949	1079	3aaf	Structure of WRN RQC domain bound to double-stranded DNA	4	134	A	None	None
+Q14191	949	1079	3aaf	Structure of WRN RQC domain bound to double-stranded DNA	4	134	B	None	None
+Q14191	949	1092	2axl	Solution structure of a multifunctional DNA- and protein-binding domain of human Werner syndrome protein	1	144	A	1	144
+Q14191	1140	1239	2dgz	Solution structure of the Helicase and RNase D C-terminal domain in Werner syndrome ATP-dependent helicase	8	107	A	1140	1239
+Q14191	1142	1242	2e1e	Crystal structure of the HRDC Domain of Human Werner Syndrome Protein, WRN	3	103	A	1142	None
+Q14191	1142	1242	2e1f	Crystal structure of the HRDC Domain of Human Werner Syndrome Protein, WRN	3	103	A	1142	None
+

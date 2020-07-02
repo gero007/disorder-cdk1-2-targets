@@ -1,0 +1,38 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P84022	Mothers against decapentaplegic homolog 3	SMAD3_HUMAN	Homo sapiens	PF03165	MH1	MH1 domain	31	131
+P84022	Mothers against decapentaplegic homolog 3	SMAD3_HUMAN	Homo sapiens	PF03166	MH2	MH2 domain	230	401
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#15 mappings in 15 PDB chains in 10 PDB entries
+P84022	1	144	1ozj	Crystal structure of Smad3-MH1 bound to DNA at 2.4 A resolution	1	144	B	None	None
+P84022	1	144	1ozj	Crystal structure of Smad3-MH1 bound to DNA at 2.4 A resolution	1	144	A	None	None
+P84022	1	132	1mhd	CRYSTAL STRUCTURE OF A SMAD MH1 DOMAIN BOUND TO DNA	1	132	A	None	132
+P84022	1	132	1mhd	CRYSTAL STRUCTURE OF A SMAD MH1 DOMAIN BOUND TO DNA	1	132	B	None	132
+P84022	11	135	5od6	Crystal structure of Smad3-MH1 bound to the GGCGC site.	4	128	B	11	135
+P84022	11	135	5od6	Crystal structure of Smad3-MH1 bound to the GGCGC site.	4	128	A	11	None
+P84022	11	135	5odg	Crystal structure of Smad3-MH1 bound to the GGCT site.	4	128	B	11	None
+P84022	11	135	5odg	Crystal structure of Smad3-MH1 bound to the GGCT site.	4	128	A	11	135
+P84022	178	189	2lb2	Structure of the second domain of human Nedd4L in complex with a phosphorylated pTPY motif derived from human Smad3	1	12	B	178	189
+P84022	202	211	2laj	Third WW domain of human Nedd4L in complex with doubly phosphorylated human smad3 derived peptide	1	10	B	202	211
+P84022	220	425	1mk2	SMAD3 SBD complex	1	206	A	219	None
+P84022	220	416	5xoc	Crystal structure of human Smad3-FoxH1 complex	3	199	A	None	None
+P84022	228	425	1u7f	Crystal Structure of the phosphorylated Smad3/Smad4 heterotrimeric complex	1	198	C	None	425
+P84022	228	425	1u7f	Crystal Structure of the phosphorylated Smad3/Smad4 heterotrimeric complex	1	198	A	228	425
+P84022	229	425	1mjs	MH2 domain of transcriptional factor SMAD3	1	197	A	228	None
+

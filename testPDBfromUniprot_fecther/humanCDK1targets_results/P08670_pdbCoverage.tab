@@ -1,0 +1,73 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P08670	VIMENTIN	VIME_HUMAN	Homo sapiens	PF00038	Filament	Intermediate filament protein	102	410
+P08670	VIMENTIN	VIME_HUMAN	Homo sapiens	PF04732	Filament_head	Intermediate filament head (DNA binding) region	6	101
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#50 mappings in 50 PDB chains in 22 PDB entries
+P08670	59	71	4md0	Immune Receptor	1	13	C	1	13
+P08670	59	71	4mcz	Immune Receptor	1	13	C	1	13
+P08670	59	71	6atf	HLA-DRB1*1402 in complex with Vimentin59-71	1	13	C	1	13
+P08670	59	71	6atf	HLA-DRB1*1402 in complex with Vimentin59-71	1	13	F	1	13
+P08670	59	71	6ati	HLA-DRB1*1402 in complex with Vimentin-64Cit59-71	1	13	C	1	13
+P08670	59	71	6ati	HLA-DRB1*1402 in complex with Vimentin-64Cit59-71	1	13	F	1	13
+P08670	66	78	4mcy	Immune Receptor	1	13	C	1	13
+P08670	66	78	4mdi	Immune Receptor	1	13	C	1	13
+P08670	66	78	4mdj	Immune Receptor	1	13	C	1	13
+P08670	66	78	4md5	Immune Receptor	1	13	C	1	13
+P08670	99	189	3ssu	Crystal structure of vimentin coil1A/1B fragment	3	93	A	None	189
+P08670	99	189	3ssu	Crystal structure of vimentin coil1A/1B fragment	3	93	B	None	None
+P08670	99	189	3s4r	Crystal structure of vimentin coil1A/1B fragment with a stabilizing mutation	3	93	B	99	189
+P08670	99	189	3s4r	Crystal structure of vimentin coil1A/1B fragment with a stabilizing mutation	3	93	A	None	189
+P08670	101	138	1gk7	HUMAN VIMENTIN COIL 1A FRAGMENT (1A)	2	39	A	101	138
+P08670	102	138	3g1e	X-ray crystal structure of coil 1A of human vimentin	2	38	B	102	138
+P08670	102	138	3g1e	X-ray crystal structure of coil 1A of human vimentin	2	38	A	102	138
+P08670	144	251	3uf1	Crystal Structure of Vimentin (fragment 144-251) from Homo sapiens, Northeast Structural Genomics Consortium Target HR4796B	12	119	C	144	None
+P08670	144	251	3uf1	Crystal Structure of Vimentin (fragment 144-251) from Homo sapiens, Northeast Structural Genomics Consortium Target HR4796B	12	119	B	144	None
+P08670	144	251	3uf1	Crystal Structure of Vimentin (fragment 144-251) from Homo sapiens, Northeast Structural Genomics Consortium Target HR4796B	12	119	D	144	None
+P08670	144	251	3uf1	Crystal Structure of Vimentin (fragment 144-251) from Homo sapiens, Northeast Structural Genomics Consortium Target HR4796B	12	119	A	None	None
+P08670	153	238	3swk	Crystal structure of vimentin coil1B fragment	1	86	B	153	None
+P08670	153	238	3swk	Crystal structure of vimentin coil1B fragment	1	86	A	153	238
+P08670	153	238	5whf	Crystal structure of vimentin coil 1B packed in a high-order filamentous form	5	90	G	153	None
+P08670	153	238	5whf	Crystal structure of vimentin coil 1B packed in a high-order filamentous form	5	90	E	153	None
+P08670	153	238	5whf	Crystal structure of vimentin coil 1B packed in a high-order filamentous form	5	90	C	153	None
+P08670	153	238	5whf	Crystal structure of vimentin coil 1B packed in a high-order filamentous form	5	90	D	153	None
+P08670	153	238	5whf	Crystal structure of vimentin coil 1B packed in a high-order filamentous form	5	90	F	153	None
+P08670	153	238	5whf	Crystal structure of vimentin coil 1B packed in a high-order filamentous form	5	90	A	153	238
+P08670	153	238	5whf	Crystal structure of vimentin coil 1B packed in a high-order filamentous form	5	90	H	153	None
+P08670	153	238	5whf	Crystal structure of vimentin coil 1B packed in a high-order filamentous form	5	90	B	None	None
+P08670	161	243	4ypc	Trimeric crystal structure of vimentin coil1B fragment	1	83	A	161	243
+P08670	161	238	4yv3	Trimeric crystal structure of vimentin coil1B fragment	1	78	B	None	238
+P08670	161	238	4yv3	Trimeric crystal structure of vimentin coil1B fragment	1	78	A	None	238
+P08670	161	238	4yv3	Trimeric crystal structure of vimentin coil1B fragment	1	78	C	None	238
+P08670	261	335	3trt	Crystal structure of stabilised vimentin coil2 fragment	3	77	A	261	335
+P08670	261	335	3trt	Crystal structure of stabilised vimentin coil2 fragment	3	77	B	None	None
+P08670	263	334	3klt	Crystal structure of a vimentin fragment	1	72	A	None	334
+P08670	263	334	3klt	Crystal structure of a vimentin fragment	1	72	D	None	334
+P08670	263	334	3klt	Crystal structure of a vimentin fragment	1	72	B	None	334
+P08670	263	334	3klt	Crystal structure of a vimentin fragment	1	72	C	263	None
+P08670	328	411	1gk4	HUMAN VIMENTIN COIL 2B FRAGMENT (CYS2)	1	84	D	None	None
+P08670	328	411	1gk4	HUMAN VIMENTIN COIL 2B FRAGMENT (CYS2)	1	84	C	None	None
+P08670	328	411	1gk4	HUMAN VIMENTIN COIL 2B FRAGMENT (CYS2)	1	84	B	328	None
+P08670	328	411	1gk4	HUMAN VIMENTIN COIL 2B FRAGMENT (CYS2)	1	84	F	None	None
+P08670	328	411	1gk4	HUMAN VIMENTIN COIL 2B FRAGMENT (CYS2)	1	84	A	328	None
+P08670	328	411	1gk4	HUMAN VIMENTIN COIL 2B FRAGMENT (CYS2)	1	84	E	None	None
+P08670	385	412	1gk6	Human vimentin coil 2B fragment linked to GCN4 leucine zipper (Z2B)	32	59	A	385	None
+P08670	385	412	1gk6	Human vimentin coil 2B fragment linked to GCN4 leucine zipper (Z2B)	32	59	B	385	None
+P08670	419	431	6bir	HLA-DRB1 in complex with citrullinated Vimentin peptide	1	13	C	1	13
+

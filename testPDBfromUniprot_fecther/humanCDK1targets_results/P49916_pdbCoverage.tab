@@ -1,0 +1,36 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P49916	DNA ligase 3	DNLI3_HUMAN	Homo sapiens	PF00645	zf-PARP	Poly(ADP-ribose) polymerase and DNA-Ligase Zn-finger region	96	181
+P49916	DNA ligase 3	DNLI3_HUMAN	Homo sapiens	PF01068	DNA_ligase_A_M	ATP dependent DNA ligase domain	483	677
+P49916	DNA ligase 3	DNLI3_HUMAN	Homo sapiens	PF04675	DNA_ligase_A_N	DNA ligase N terminus	263	434
+P49916	DNA ligase 3	DNLI3_HUMAN	Homo sapiens	PF04679	DNA_ligase_A_C	ATP dependent DNA ligase C terminal region	704	814
+P49916	DNA ligase 3	DNLI3_HUMAN	Homo sapiens	PF16759	LIG3_BRCT	DNA ligase 3 BRCT domain	933	1005
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#10 mappings in 10 PDB chains in 7 PDB entries
+P49916	88	204	1uw0	Solution structure of the zinc-finger domain from DNA ligase IIIa	1	117	A	1	117
+P49916	257	833	3l2p	Human DNA Ligase III Recognizes DNA Ends by Dynamic Switching Between Two DNA Bound States	3	579	A	170	746
+P49916	924	1009	1imo	NMR STRUCTURE OF HUMAN DNA LIGASE IIIALPHA BRCT DOMAIN	3	88	A	837	922
+P49916	924	1009	1in1	NMR STRUCTURE OF HUMAN DNA LIGASE IIIALPHA BRCT DOMAIN	3	88	A	837	922
+P49916	924	1009	3pc7	X-ray crystal structure of the DNA ligase III-alpha BRCT domain.	3	88	B	None	922
+P49916	924	1009	3pc7	X-ray crystal structure of the DNA ligase III-alpha BRCT domain.	3	88	A	None	922
+P49916	924	1008	3qvg	XRCC1 bound to DNA ligase	4	88	A	None	921
+P49916	924	1008	3qvg	XRCC1 bound to DNA ligase	4	88	C	None	921
+P49916	924	1008	3pc8	X-ray crystal structure of the heterodimeric complex of XRCC1 and DNA ligase III-alpha BRCT domains.	3	87	C	None	921
+P49916	924	1008	3pc8	X-ray crystal structure of the heterodimeric complex of XRCC1 and DNA ligase III-alpha BRCT domains.	3	87	D	None	921
+

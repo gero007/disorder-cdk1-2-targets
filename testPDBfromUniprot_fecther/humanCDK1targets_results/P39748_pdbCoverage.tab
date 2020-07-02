@@ -1,0 +1,44 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P39748	Flap endonuclease 1 (Fen1) peptide	FEN1_HUMAN	Homo sapiens	PF00752	XPG_N	XPG N-terminal domain	1	107
+P39748	Flap endonuclease 1 (Fen1) peptide	FEN1_HUMAN	Homo sapiens	PF00867	XPG_I	XPG I-region	146	233
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#21 mappings in 21 PDB chains in 16 PDB entries
+P39748	1	380	6tnz	Human polymerase delta-FEN1-PCNA toolbelt	1	380	H	None	None
+P39748	1	336	5fv7	Human Fen1 in complex with an N-hydroxyurea compound	1	336	A	None	336
+P39748	1	336	5fv7	Human Fen1 in complex with an N-hydroxyurea compound	1	336	B	None	None
+P39748	1	333	5zoe	Crystal Structure of D181A hFen1 in complex with DNA	1	333	A	None	333
+P39748	1	333	5zof	Crystal Structure of D181A/R192F hFen1 in complex with DNA	1	333	A	None	333
+P39748	1	333	5zog	Crystal Structure of R192F hFen1 in complex with DNA	1	333	A	None	333
+P39748	1	333	5zod	Crystal Structure of hFen1 in apo form	1	333	A	None	None
+P39748	2	336	3q8m	Crystal Structure of Human Flap Endonuclease FEN1 (D181A) in complex with substrate 5'-flap DNA and K+	1	335	B	2	None
+P39748	2	336	3q8m	Crystal Structure of Human Flap Endonuclease FEN1 (D181A) in complex with substrate 5'-flap DNA and K+	1	335	A	2	336
+P39748	2	336	5kse	Flap endonuclease 1 (FEN1) R100A with 5'-flap substrate DNA and Sm3+	1	335	A	2	336
+P39748	2	336	5k97	Flap endonuclease 1 (FEN1) D233N with cleaved product fragment and Sm3+	1	335	A	2	336
+P39748	2	380	1ul1	Crystal structure of the human FEN1-PCNA complex	1	379	Z	2	None
+P39748	2	380	1ul1	Crystal structure of the human FEN1-PCNA complex	1	379	X	2	None
+P39748	2	380	1ul1	Crystal structure of the human FEN1-PCNA complex	1	379	Y	2	None
+P39748	2	336	3q8k	Crystal Structure of Human Flap Endonuclease FEN1 (WT) in complex with product 5'-flap DNA, SM3+, and K+	1	335	A	2	336
+P39748	2	336	3q8l	Crystal Structure of Human Flap Endonuclease FEN1 (WT) in complex with substrate 5'-flap DNA, SM3+, and K+	1	335	A	2	336
+P39748	2	336	5um9	Flap endonuclease 1 (FEN1) D86N with 5'-flap substrate DNA and Sm3+	1	335	A	2	336
+P39748	331	350	1u7b	Crystal structure of hPCNA bound to residues 331-350 of the flap endonuclease-1 (FEN1)	1	20	B	None	None
+P39748	335	350	5e0v	Human PCNA variant (S228I) complexed with FEN1 at 2.1 Angstroms	1	16	D	335	None
+P39748	335	350	5e0v	Human PCNA variant (S228I) complexed with FEN1 at 2.1 Angstroms	1	16	C	335	None
+P39748	352	370	3uvu	Structural basis of nuclear import of Flap endonuclease 1 (FEN1)	1	19	B	352	370
+

@@ -1,0 +1,32 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9UKY1	Zinc fingers and homeoboxes protein 1	ZHX1_HUMAN	Homo sapiens	PF00046	Homeodomain	Homeodomain	665	717
+Q9UKY1	Zinc fingers and homeoboxes protein 1	ZHX1_HUMAN	Homo sapiens	PF00046	Homeodomain	Homeodomain	573	623
+Q9UKY1	Zinc fingers and homeoboxes protein 1	ZHX1_HUMAN	Homo sapiens	PF00046	Homeodomain	Homeodomain	467	521
+Q9UKY1	Zinc fingers and homeoboxes protein 1	ZHX1_HUMAN	Homo sapiens	PF00046	Homeodomain	Homeodomain	297	339
+Q9UKY1	Zinc fingers and homeoboxes protein 1	ZHX1_HUMAN	Homo sapiens	PF11569	Homez	Homeodomain leucine-zipper encoding, Homez	783	826
+Q9UKY1	Zinc fingers and homeoboxes protein 1	ZHX1_HUMAN	Homo sapiens	PF18387	zf_C2H2_ZHX	Zinc-fingers and homeoboxes C2H2 finger domain	98	150
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 4 PDB entries
+Q9UKY1	60	153	2ghf	Solution structure of the complete zinc-finger region of human zinc-fingers and homeoboxes 1 (ZHX1)	9	102	A	60	153
+Q9UKY1	462	532	2ly9	Solution NMR Structure of Homeobox 2 Domain from Human ZHX1 repressor, Northeast Structural Genomics Consortium (NESG) Target HR7907F	4	74	A	4	74
+Q9UKY1	565	640	2ecb	The solution structure of the third homeobox domain of human zinc fingers and homeoboxes protein	8	83	A	8	83
+Q9UKY1	655	731	3nar	Crystal structure of ZHX1 HD4 (zinc-fingers and homeoboxes protein 1, homeodomain 4)	20	96	A	None	731
+Q9UKY1	655	731	3nar	Crystal structure of ZHX1 HD4 (zinc-fingers and homeoboxes protein 1, homeodomain 4)	20	96	B	None	731
+

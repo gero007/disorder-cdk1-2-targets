@@ -1,0 +1,227 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P00338	L-lactate dehydrogenase A chain	LDHA_HUMAN	Homo sapiens	PF00056	Ldh_1_N	lactate/malate dehydrogenase, NAD binding domain	21	160
+P00338	L-lactate dehydrogenase A chain	LDHA_HUMAN	Homo sapiens	PF02866	Ldh_1_C	lactate/malate dehydrogenase, alpha/beta C-terminal domain	163	331
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#204 mappings in 204 PDB chains in 38 PDB entries
+P00338	1	332	5w8i	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 23 and Zinc	1	332	B	None	331
+P00338	1	332	5w8i	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 23 and Zinc	1	332	D	None	331
+P00338	1	332	5w8i	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 23 and Zinc	1	332	A	None	331
+P00338	1	332	5w8i	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 23 and Zinc	1	332	C	None	331
+P00338	1	332	6mv8	LDHA structure in complex with inhibitor 14	1	332	B	None	331
+P00338	1	332	6mv8	LDHA structure in complex with inhibitor 14	1	332	D	None	331
+P00338	1	332	6mv8	LDHA structure in complex with inhibitor 14	1	332	A	None	331
+P00338	1	332	6mv8	LDHA structure in complex with inhibitor 14	1	332	C	None	331
+P00338	1	332	5w8l	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 59 and NADH	1	332	B	None	331
+P00338	1	332	5w8l	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 59 and NADH	1	332	D	None	331
+P00338	1	332	5w8l	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 59 and NADH	1	332	A	None	331
+P00338	1	332	5w8l	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 59 and NADH	1	332	C	None	331
+P00338	1	332	5w8h	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 11	1	332	B	None	331
+P00338	1	332	5w8h	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 11	1	332	D	None	331
+P00338	1	332	5w8h	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 11	1	332	A	None	331
+P00338	1	332	5w8h	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 11	1	332	C	None	331
+P00338	1	332	5w8j	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 29	1	332	B	None	331
+P00338	1	332	5w8j	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 29	1	332	D	None	331
+P00338	1	332	5w8j	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 29	1	332	A	None	331
+P00338	1	332	5w8j	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 29	1	332	C	None	331
+P00338	1	332	5w8k	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 29 and NADH	1	332	B	None	331
+P00338	1	332	5w8k	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 29 and NADH	1	332	D	None	331
+P00338	1	332	5w8k	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 29 and NADH	1	332	A	None	331
+P00338	1	332	5w8k	Crystal Structure of Lactate Dehydrogenase A in complex with inhibitor compound 29 and NADH	1	332	C	None	331
+P00338	1	332	6mva	LDHA structure in complex with inhibitor 14	1	332	B	None	331
+P00338	1	332	6mva	LDHA structure in complex with inhibitor 14	1	332	D	None	331
+P00338	1	332	6mva	LDHA structure in complex with inhibitor 14	1	332	A	None	331
+P00338	1	332	6mva	LDHA structure in complex with inhibitor 14	1	332	C	None	331
+P00338	1	332	4zvv	Lactate dehydrogenase A in complex with a trisubstituted piperidine-2,4-dione inhibitor GNE-140	1	332	B	None	331
+P00338	1	332	4zvv	Lactate dehydrogenase A in complex with a trisubstituted piperidine-2,4-dione inhibitor GNE-140	1	332	D	None	331
+P00338	1	332	4zvv	Lactate dehydrogenase A in complex with a trisubstituted piperidine-2,4-dione inhibitor GNE-140	1	332	A	None	331
+P00338	1	332	4zvv	Lactate dehydrogenase A in complex with a trisubstituted piperidine-2,4-dione inhibitor GNE-140	1	332	C	None	331
+P00338	2	332	1i10	HUMAN MUSCLE L-LACTATE DEHYDROGENASE M CHAIN, TERNARY COMPLEX WITH NADH AND OXAMATE	1	331	E	1	331
+P00338	2	332	1i10	HUMAN MUSCLE L-LACTATE DEHYDROGENASE M CHAIN, TERNARY COMPLEX WITH NADH AND OXAMATE	1	331	D	1	331
+P00338	2	332	1i10	HUMAN MUSCLE L-LACTATE DEHYDROGENASE M CHAIN, TERNARY COMPLEX WITH NADH AND OXAMATE	1	331	A	1	331
+P00338	2	332	1i10	HUMAN MUSCLE L-LACTATE DEHYDROGENASE M CHAIN, TERNARY COMPLEX WITH NADH AND OXAMATE	1	331	B	1	331
+P00338	2	332	1i10	HUMAN MUSCLE L-LACTATE DEHYDROGENASE M CHAIN, TERNARY COMPLEX WITH NADH AND OXAMATE	1	331	F	1	331
+P00338	2	332	1i10	HUMAN MUSCLE L-LACTATE DEHYDROGENASE M CHAIN, TERNARY COMPLEX WITH NADH AND OXAMATE	1	331	C	1	331
+P00338	2	332	1i10	HUMAN MUSCLE L-LACTATE DEHYDROGENASE M CHAIN, TERNARY COMPLEX WITH NADH AND OXAMATE	1	331	H	1	331
+P00338	2	332	1i10	HUMAN MUSCLE L-LACTATE DEHYDROGENASE M CHAIN, TERNARY COMPLEX WITH NADH AND OXAMATE	1	331	G	1	331
+P00338	2	332	4qo7	Lactate Dehydrogenase A in complex with substituted 3-Hydroxy-2-mercaptocyclohex-2-enone compound 7	1	331	B	1	331
+P00338	2	332	4qo7	Lactate Dehydrogenase A in complex with substituted 3-Hydroxy-2-mercaptocyclohex-2-enone compound 7	1	331	D	1	331
+P00338	2	332	4qo7	Lactate Dehydrogenase A in complex with substituted 3-Hydroxy-2-mercaptocyclohex-2-enone compound 7	1	331	A	1	331
+P00338	2	332	4qo7	Lactate Dehydrogenase A in complex with substituted 3-Hydroxy-2-mercaptocyclohex-2-enone compound 7	1	331	C	1	331
+P00338	2	332	4qt0	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 1, 3-{[3-CARBAMOYL-7-(2,4-DIMETHOXYPYRIMIDIN-5-YL)QUINOLIN-4-YL]AMINO}BENZOIC ACID	1	331	B	2	332
+P00338	2	332	4qt0	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 1, 3-{[3-CARBAMOYL-7-(2,4-DIMETHOXYPYRIMIDIN-5-YL)QUINOLIN-4-YL]AMINO}BENZOIC ACID	1	331	C	2	332
+P00338	2	332	4qt0	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 1, 3-{[3-CARBAMOYL-7-(2,4-DIMETHOXYPYRIMIDIN-5-YL)QUINOLIN-4-YL]AMINO}BENZOIC ACID	1	331	H	2	332
+P00338	2	332	4qt0	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 1, 3-{[3-CARBAMOYL-7-(2,4-DIMETHOXYPYRIMIDIN-5-YL)QUINOLIN-4-YL]AMINO}BENZOIC ACID	1	331	E	2	332
+P00338	2	332	4qt0	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 1, 3-{[3-CARBAMOYL-7-(2,4-DIMETHOXYPYRIMIDIN-5-YL)QUINOLIN-4-YL]AMINO}BENZOIC ACID	1	331	G	2	332
+P00338	2	332	4qt0	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 1, 3-{[3-CARBAMOYL-7-(2,4-DIMETHOXYPYRIMIDIN-5-YL)QUINOLIN-4-YL]AMINO}BENZOIC ACID	1	331	D	2	332
+P00338	2	332	4qt0	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 1, 3-{[3-CARBAMOYL-7-(2,4-DIMETHOXYPYRIMIDIN-5-YL)QUINOLIN-4-YL]AMINO}BENZOIC ACID	1	331	A	2	332
+P00338	2	332	4qt0	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 1, 3-{[3-CARBAMOYL-7-(2,4-DIMETHOXYPYRIMIDIN-5-YL)QUINOLIN-4-YL]AMINO}BENZOIC ACID	1	331	F	2	332
+P00338	2	332	4qo8	Lactate Dehydrogenase A in complex with substituted 3-Hydroxy-2-mercaptocyclohex-2-enone compound 104	1	331	B	1	331
+P00338	2	332	4qo8	Lactate Dehydrogenase A in complex with substituted 3-Hydroxy-2-mercaptocyclohex-2-enone compound 104	1	331	D	1	331
+P00338	2	332	4qo8	Lactate Dehydrogenase A in complex with substituted 3-Hydroxy-2-mercaptocyclohex-2-enone compound 104	1	331	A	1	331
+P00338	2	332	4qo8	Lactate Dehydrogenase A in complex with substituted 3-Hydroxy-2-mercaptocyclohex-2-enone compound 104	1	331	C	1	331
+P00338	2	332	4rls	Lactate Dehydrogenase in complex with inhibitor compound 47	1	331	B	1	331
+P00338	2	332	4rls	Lactate Dehydrogenase in complex with inhibitor compound 47	1	331	D	1	331
+P00338	2	332	4rls	Lactate Dehydrogenase in complex with inhibitor compound 47	1	331	A	1	331
+P00338	2	332	4rls	Lactate Dehydrogenase in complex with inhibitor compound 47	1	331	C	1	331
+P00338	2	332	4ojn	Crystal structure of human muscle L-lactate dehydrogenase	1	331	B	2	332
+P00338	2	332	4ojn	Crystal structure of human muscle L-lactate dehydrogenase	1	331	C	2	332
+P00338	2	332	4ojn	Crystal structure of human muscle L-lactate dehydrogenase	1	331	H	2	332
+P00338	2	332	4ojn	Crystal structure of human muscle L-lactate dehydrogenase	1	331	E	2	332
+P00338	2	332	4ojn	Crystal structure of human muscle L-lactate dehydrogenase	1	331	G	2	332
+P00338	2	332	4ojn	Crystal structure of human muscle L-lactate dehydrogenase	1	331	D	2	332
+P00338	2	332	4ojn	Crystal structure of human muscle L-lactate dehydrogenase	1	331	A	2	332
+P00338	2	332	4ojn	Crystal structure of human muscle L-lactate dehydrogenase	1	331	F	2	332
+P00338	2	332	4ajp	Human LDHA in complex with 2-((4-(4-((3-((2-methyl-1,3-benzothiazol- 6yl)amino)-3-oxo-propyl)amino)-4-oxo-butyl)phenyl)methyl)propanedioic acid	1	331	B	1	331
+P00338	2	332	4ajp	Human LDHA in complex with 2-((4-(4-((3-((2-methyl-1,3-benzothiazol- 6yl)amino)-3-oxo-propyl)amino)-4-oxo-butyl)phenyl)methyl)propanedioic acid	1	331	D	1	331
+P00338	2	332	4ajp	Human LDHA in complex with 2-((4-(4-((3-((2-methyl-1,3-benzothiazol- 6yl)amino)-3-oxo-propyl)amino)-4-oxo-butyl)phenyl)methyl)propanedioic acid	1	331	A	1	331
+P00338	2	332	4ajp	Human LDHA in complex with 2-((4-(4-((3-((2-methyl-1,3-benzothiazol- 6yl)amino)-3-oxo-propyl)amino)-4-oxo-butyl)phenyl)methyl)propanedioic acid	1	331	C	1	331
+P00338	2	332	4qsm	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 2, 3-{[7-(2,4-dimethoxypyrimidin-5-yl)-3-sulfamoylquinolin-4-yl]amino}benzoic acid	1	331	B	2	332
+P00338	2	332	4qsm	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 2, 3-{[7-(2,4-dimethoxypyrimidin-5-yl)-3-sulfamoylquinolin-4-yl]amino}benzoic acid	1	331	C	2	332
+P00338	2	332	4qsm	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 2, 3-{[7-(2,4-dimethoxypyrimidin-5-yl)-3-sulfamoylquinolin-4-yl]amino}benzoic acid	1	331	H	2	332
+P00338	2	332	4qsm	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 2, 3-{[7-(2,4-dimethoxypyrimidin-5-yl)-3-sulfamoylquinolin-4-yl]amino}benzoic acid	1	331	E	2	332
+P00338	2	332	4qsm	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 2, 3-{[7-(2,4-dimethoxypyrimidin-5-yl)-3-sulfamoylquinolin-4-yl]amino}benzoic acid	1	331	G	2	332
+P00338	2	332	4qsm	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 2, 3-{[7-(2,4-dimethoxypyrimidin-5-yl)-3-sulfamoylquinolin-4-yl]amino}benzoic acid	1	331	D	2	332
+P00338	2	332	4qsm	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 2, 3-{[7-(2,4-dimethoxypyrimidin-5-yl)-3-sulfamoylquinolin-4-yl]amino}benzoic acid	1	331	A	2	332
+P00338	2	332	4qsm	Crystal structure of human muscle L-lactate dehydrogenase in complex with inhibitor 2, 3-{[7-(2,4-dimethoxypyrimidin-5-yl)-3-sulfamoylquinolin-4-yl]amino}benzoic acid	1	331	F	2	332
+P00338	2	332	4okn	Crystal structure of human muscle L-lactate dehydrogenase, ternary complex with NADH and oxalate	1	331	B	2	332
+P00338	2	332	4okn	Crystal structure of human muscle L-lactate dehydrogenase, ternary complex with NADH and oxalate	1	331	C	2	332
+P00338	2	332	4okn	Crystal structure of human muscle L-lactate dehydrogenase, ternary complex with NADH and oxalate	1	331	H	2	332
+P00338	2	332	4okn	Crystal structure of human muscle L-lactate dehydrogenase, ternary complex with NADH and oxalate	1	331	E	2	332
+P00338	2	332	4okn	Crystal structure of human muscle L-lactate dehydrogenase, ternary complex with NADH and oxalate	1	331	G	2	332
+P00338	2	332	4okn	Crystal structure of human muscle L-lactate dehydrogenase, ternary complex with NADH and oxalate	1	331	D	2	332
+P00338	2	332	4okn	Crystal structure of human muscle L-lactate dehydrogenase, ternary complex with NADH and oxalate	1	331	A	2	332
+P00338	2	332	4okn	Crystal structure of human muscle L-lactate dehydrogenase, ternary complex with NADH and oxalate	1	331	F	2	332
+P00338	2	332	4m49	Lactate Dehydrogenase A in complex with a substituted pyrazine inhibitor compound 18	1	331	B	1	331
+P00338	2	332	4m49	Lactate Dehydrogenase A in complex with a substituted pyrazine inhibitor compound 18	1	331	D	1	331
+P00338	2	332	4m49	Lactate Dehydrogenase A in complex with a substituted pyrazine inhibitor compound 18	1	331	A	1	331
+P00338	2	332	4m49	Lactate Dehydrogenase A in complex with a substituted pyrazine inhibitor compound 18	1	331	C	1	331
+P00338	2	332	6bag	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-((4-fluorophenyl)amino)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	B	1	331
+P00338	2	332	6bag	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-((4-fluorophenyl)amino)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	D	1	331
+P00338	2	332	6bag	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-((4-fluorophenyl)amino)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	A	1	331
+P00338	2	332	6bag	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-((4-fluorophenyl)amino)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	C	1	331
+P00338	2	332	6sbv	X-ray Structure of Human LDH-A with an Allosteric Inhibitor (Compound 7)	2	332	B	2	332
+P00338	2	332	6sbv	X-ray Structure of Human LDH-A with an Allosteric Inhibitor (Compound 7)	2	332	C	2	332
+P00338	2	332	6sbv	X-ray Structure of Human LDH-A with an Allosteric Inhibitor (Compound 7)	2	332	H	2	332
+P00338	2	332	6sbv	X-ray Structure of Human LDH-A with an Allosteric Inhibitor (Compound 7)	2	332	E	2	332
+P00338	2	332	6sbv	X-ray Structure of Human LDH-A with an Allosteric Inhibitor (Compound 7)	2	332	G	2	332
+P00338	2	332	6sbv	X-ray Structure of Human LDH-A with an Allosteric Inhibitor (Compound 7)	2	332	D	2	332
+P00338	2	332	6sbv	X-ray Structure of Human LDH-A with an Allosteric Inhibitor (Compound 7)	2	332	A	2	332
+P00338	2	332	6sbv	X-ray Structure of Human LDH-A with an Allosteric Inhibitor (Compound 7)	2	332	F	2	332
+P00338	2	332	6sbu	X-ray Structure of Human LDHA with an Allosteric Inhibitor (Compound 3)	2	332	B	2	332
+P00338	2	332	6sbu	X-ray Structure of Human LDHA with an Allosteric Inhibitor (Compound 3)	2	332	C	2	332
+P00338	2	332	6sbu	X-ray Structure of Human LDHA with an Allosteric Inhibitor (Compound 3)	2	332	H	2	332
+P00338	2	332	6sbu	X-ray Structure of Human LDHA with an Allosteric Inhibitor (Compound 3)	2	332	E	2	332
+P00338	2	332	6sbu	X-ray Structure of Human LDHA with an Allosteric Inhibitor (Compound 3)	2	332	G	2	332
+P00338	2	332	6sbu	X-ray Structure of Human LDHA with an Allosteric Inhibitor (Compound 3)	2	332	D	2	332
+P00338	2	332	6sbu	X-ray Structure of Human LDHA with an Allosteric Inhibitor (Compound 3)	2	332	A	2	332
+P00338	2	332	6sbu	X-ray Structure of Human LDHA with an Allosteric Inhibitor (Compound 3)	2	332	F	2	332
+P00338	2	332	6bad	Lactate Dehydrogenase in complex with inhibitor (R)-3-((2-chlorophenyl)thio)-6-(3-((4-fluorophenyl)amino)phenyl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	B	1	331
+P00338	2	332	6bad	Lactate Dehydrogenase in complex with inhibitor (R)-3-((2-chlorophenyl)thio)-6-(3-((4-fluorophenyl)amino)phenyl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	D	1	331
+P00338	2	332	6bad	Lactate Dehydrogenase in complex with inhibitor (R)-3-((2-chlorophenyl)thio)-6-(3-((4-fluorophenyl)amino)phenyl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	A	1	331
+P00338	2	332	6bad	Lactate Dehydrogenase in complex with inhibitor (R)-3-((2-chlorophenyl)thio)-6-(3-((4-fluorophenyl)amino)phenyl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	C	1	331
+P00338	2	332	4r68	Lactate Dehydrogenase in complex with inhibitor compound 31	1	331	B	1	331
+P00338	2	332	4r68	Lactate Dehydrogenase in complex with inhibitor compound 31	1	331	D	1	331
+P00338	2	332	4r68	Lactate Dehydrogenase in complex with inhibitor compound 31	1	331	A	1	331
+P00338	2	332	4r68	Lactate Dehydrogenase in complex with inhibitor compound 31	1	331	C	1	331
+P00338	2	332	4r69	Lactate Dehydrogenase in complex with inhibitor compound 13	1	331	B	1	331
+P00338	2	332	4r69	Lactate Dehydrogenase in complex with inhibitor compound 13	1	331	D	1	331
+P00338	2	332	4r69	Lactate Dehydrogenase in complex with inhibitor compound 13	1	331	A	1	331
+P00338	2	332	4r69	Lactate Dehydrogenase in complex with inhibitor compound 13	1	331	C	1	331
+P00338	2	332	4jnk	Lactate Dehydrogenase A in complex with inhibitor compound 22	1	331	B	1	331
+P00338	2	332	4jnk	Lactate Dehydrogenase A in complex with inhibitor compound 22	1	331	D	1	331
+P00338	2	332	4jnk	Lactate Dehydrogenase A in complex with inhibitor compound 22	1	331	A	1	331
+P00338	2	332	4jnk	Lactate Dehydrogenase A in complex with inhibitor compound 22	1	331	C	1	331
+P00338	2	332	6bb2	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	E	1	331
+P00338	2	332	6bb2	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	D	1	331
+P00338	2	332	6bb2	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	A	1	331
+P00338	2	332	6bb2	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	F	1	None
+P00338	2	332	6bb2	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	B	1	331
+P00338	2	332	6bb2	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	C	1	None
+P00338	2	332	6bb2	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	H	1	331
+P00338	2	332	6bb2	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	G	1	331
+P00338	2	332	6bb3	Lactate Dehydrogenase in complex with inhibitor 3-((2-chlorophenyl)thio)-6-(6-((4-fluorophenyl)amino)pyridin-2-yl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	B	1	331
+P00338	2	332	6bb3	Lactate Dehydrogenase in complex with inhibitor 3-((2-chlorophenyl)thio)-6-(6-((4-fluorophenyl)amino)pyridin-2-yl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	D	1	331
+P00338	2	332	6bb3	Lactate Dehydrogenase in complex with inhibitor 3-((2-chlorophenyl)thio)-6-(6-((4-fluorophenyl)amino)pyridin-2-yl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	A	1	331
+P00338	2	332	6bb3	Lactate Dehydrogenase in complex with inhibitor 3-((2-chlorophenyl)thio)-6-(6-((4-fluorophenyl)amino)pyridin-2-yl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	C	1	331
+P00338	2	332	6bb0	Lactate Dehydrogenase in complex with inhibitor (R)-3-((2-chlorophenyl)thio)-6-(3-((4-fluorophenyl)amino)phenyl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	B	1	331
+P00338	2	332	6bb0	Lactate Dehydrogenase in complex with inhibitor (R)-3-((2-chlorophenyl)thio)-6-(3-((4-fluorophenyl)amino)phenyl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	D	1	331
+P00338	2	332	6bb0	Lactate Dehydrogenase in complex with inhibitor (R)-3-((2-chlorophenyl)thio)-6-(3-((4-fluorophenyl)amino)phenyl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	A	1	331
+P00338	2	332	6bb0	Lactate Dehydrogenase in complex with inhibitor (R)-3-((2-chlorophenyl)thio)-6-(3-((4-fluorophenyl)amino)phenyl)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	C	1	331
+P00338	2	332	6bb1	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	E	1	331
+P00338	2	332	6bb1	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	D	1	331
+P00338	2	332	6bb1	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	A	1	331
+P00338	2	332	6bb1	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	C	None	331
+P00338	2	332	6bb1	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	B	1	331
+P00338	2	332	6bb1	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	F	None	None
+P00338	2	332	6bb1	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	H	1	331
+P00338	2	332	6bb1	Lactate Dehydrogenase in complex with inhibitor (R)-5-((2-chlorophenyl)thio)-6'-(4-fluorophenoxy)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	G	1	331
+P00338	2	332	4l4r	Structural Characterisation of the Apo-form of Human Lactate Dehydrogenase M Isozyme	1	331	H	1	331
+P00338	2	332	4l4r	Structural Characterisation of the Apo-form of Human Lactate Dehydrogenase M Isozyme	1	331	A	1	331
+P00338	2	332	4l4s	Structural characterisation of the NADH binary complex of human lactate dehydrogenase M isozyme	1	331	A	1	331
+P00338	2	332	4l4s	Structural characterisation of the NADH binary complex of human lactate dehydrogenase M isozyme	1	331	H	1	331
+P00338	2	332	6baz	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-((4-fluorophenyl)amino)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	B	1	331
+P00338	2	332	6baz	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-((4-fluorophenyl)amino)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	D	1	331
+P00338	2	332	6baz	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-((4-fluorophenyl)amino)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	A	1	331
+P00338	2	332	6baz	Lactate Dehydrogenase in complex with inhibitor (S)-5-((2-chlorophenyl)thio)-6'-((4-fluorophenyl)amino)-4-hydroxy-2-(thiophen-3-yl)-2,3-dihydro-[2,2'-bipyridin]-6(1H)-one	1	331	C	1	331
+P00338	2	332	6bax	Lactate Dehydrogenase in complex with inhibitor 6-(3-aminophenyl)-3-((2-chlorophenyl)thio)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	B	1	331
+P00338	2	332	6bax	Lactate Dehydrogenase in complex with inhibitor 6-(3-aminophenyl)-3-((2-chlorophenyl)thio)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	D	1	331
+P00338	2	332	6bax	Lactate Dehydrogenase in complex with inhibitor 6-(3-aminophenyl)-3-((2-chlorophenyl)thio)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	A	1	331
+P00338	2	332	6bax	Lactate Dehydrogenase in complex with inhibitor 6-(3-aminophenyl)-3-((2-chlorophenyl)thio)-4-hydroxy-6-(thiophen-3-yl)-5,6-dihydro-2H-pyran-2-one	1	331	C	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	E	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	J	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	D	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	A	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	K	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	B	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	F	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	C	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	H	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	G	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	L	1	331
+P00338	2	332	5zjf	LDHA-MA	7	337	I	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	E	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	J	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	D	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	A	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	K	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	B	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	F	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	C	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	H	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	G	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	L	1	331
+P00338	2	332	5zje	LDHA-mla	7	337	I	1	331
+P00338	2	332	5zjd	Lactate dehydrogenase with NADH and MLA	7	337	E	1	331
+P00338	2	332	5zjd	Lactate dehydrogenase with NADH and MLA	7	337	D	1	331
+P00338	2	332	5zjd	Lactate dehydrogenase with NADH and MLA	7	337	A	1	331
+P00338	2	332	5zjd	Lactate dehydrogenase with NADH and MLA	7	337	B	1	331
+P00338	2	332	5zjd	Lactate dehydrogenase with NADH and MLA	7	337	F	1	331
+P00338	2	332	5zjd	Lactate dehydrogenase with NADH and MLA	7	337	C	1	331
+P00338	2	332	5zjd	Lactate dehydrogenase with NADH and MLA	7	337	H	1	331
+P00338	2	332	5zjd	Lactate dehydrogenase with NADH and MLA	7	337	G	1	331
+P00338	2	332	5ixy	Lactate Dehydrogenase in complex with hydroxylactam inhibitor compound 31: (2~{S})-5-(2-chlorophenyl)sulfanyl-2-(4-morpholin-4-ylphenyl)-4-oxidanyl-2-thiophen-3-yl-1,3-dihydropyridin-6-one	1	331	B	1	331
+P00338	2	332	5ixy	Lactate Dehydrogenase in complex with hydroxylactam inhibitor compound 31: (2~{S})-5-(2-chlorophenyl)sulfanyl-2-(4-morpholin-4-ylphenyl)-4-oxidanyl-2-thiophen-3-yl-1,3-dihydropyridin-6-one	1	331	D	1	331
+P00338	2	332	5ixy	Lactate Dehydrogenase in complex with hydroxylactam inhibitor compound 31: (2~{S})-5-(2-chlorophenyl)sulfanyl-2-(4-morpholin-4-ylphenyl)-4-oxidanyl-2-thiophen-3-yl-1,3-dihydropyridin-6-one	1	331	A	1	331
+P00338	2	332	5ixy	Lactate Dehydrogenase in complex with hydroxylactam inhibitor compound 31: (2~{S})-5-(2-chlorophenyl)sulfanyl-2-(4-morpholin-4-ylphenyl)-4-oxidanyl-2-thiophen-3-yl-1,3-dihydropyridin-6-one	1	331	C	1	331
+P00338	2	332	5ixs	Lactate Dehydrogenase in complex with hydroxylactam inhibitor compound 9: (6R)-3-[(2-chlorophenyl)sulfanyl]-4-hydroxy-6-(3-hydroxyphenyl)-6-(thiophen-3-yl)-5,6-dihydropyridin-2(1H)-one	1	331	B	1	331
+P00338	2	332	5ixs	Lactate Dehydrogenase in complex with hydroxylactam inhibitor compound 9: (6R)-3-[(2-chlorophenyl)sulfanyl]-4-hydroxy-6-(3-hydroxyphenyl)-6-(thiophen-3-yl)-5,6-dihydropyridin-2(1H)-one	1	331	D	1	331
+P00338	2	332	5ixs	Lactate Dehydrogenase in complex with hydroxylactam inhibitor compound 9: (6R)-3-[(2-chlorophenyl)sulfanyl]-4-hydroxy-6-(3-hydroxyphenyl)-6-(thiophen-3-yl)-5,6-dihydropyridin-2(1H)-one	1	331	A	1	331
+P00338	2	332	5ixs	Lactate Dehydrogenase in complex with hydroxylactam inhibitor compound 9: (6R)-3-[(2-chlorophenyl)sulfanyl]-4-hydroxy-6-(3-hydroxyphenyl)-6-(thiophen-3-yl)-5,6-dihydropyridin-2(1H)-one	1	331	C	1	331
+

@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q5FBB7	Shugoshin-like 1	SGO1_HUMAN	Homo sapiens	PF07557	Shugoshin_C	Shugoshin C terminus	474	496
+Q5FBB7	Shugoshin-like 1	SGO1_HUMAN	Homo sapiens	PF07558	Shugoshin_N	Shugoshin N-terminal coiled-coil region	22	66
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 3 PDB entries
+Q5FBB7	2	6	4a0i	Crystal structure of Survivin bound to the N-terminal tail of hSgo1	1	5	D	1	None
+Q5FBB7	2	6	4a0i	Crystal structure of Survivin bound to the N-terminal tail of hSgo1	1	5	C	1	None
+Q5FBB7	51	96	3fga	Structural Basis of PP2A and Sgo interaction	2	47	D	51	96
+Q5FBB7	445	463	3q6s	The crystal structure of the heterochromatin protein 1 beta chromoshadow domain complexed with a peptide from Shugoshin 1	1	19	F	445	None
+Q5FBB7	445	463	3q6s	The crystal structure of the heterochromatin protein 1 beta chromoshadow domain complexed with a peptide from Shugoshin 1	1	19	E	None	None
+

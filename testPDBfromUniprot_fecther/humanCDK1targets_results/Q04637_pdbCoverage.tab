@@ -1,0 +1,39 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q04637	EUKARYOTIC TRANSLATION INITIATION FACTOR 4 GAMMA 1	IF4G1_HUMAN	Homo sapiens	PF02020	W2	eIF4-gamma/eIF5/eIF2-epsilon	1520	1599
+Q04637	EUKARYOTIC TRANSLATION INITIATION FACTOR 4 GAMMA 1	IF4G1_HUMAN	Homo sapiens	PF02847	MA3	MA3 domain	1242	1354
+Q04637	EUKARYOTIC TRANSLATION INITIATION FACTOR 4 GAMMA 1	IF4G1_HUMAN	Homo sapiens	PF02854	MIF4G	MIF4G domain	761	989
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#15 mappings in 15 PDB chains in 9 PDB entries
+Q04637	172	199	1lj2	Recognition of eIF4G by Rotavirus NSP3 reveals a basis for mRNA circularization	1	28	D	None	159
+Q04637	172	199	1lj2	Recognition of eIF4G by Rotavirus NSP3 reveals a basis for mRNA circularization	1	28	C	None	159
+Q04637	178	203	4f02	Crystal structure of the PABP-binding site of eIF4G in complex with RRM1-2 of PABP and poly(A)	1	26	F	None	None
+Q04637	178	203	4f02	Crystal structure of the PABP-binding site of eIF4G in complex with RRM1-2 of PABP and poly(A)	1	26	C	None	None
+Q04637	592	653	5t46	Crystal structure of the human eIF4E-eIF4G complex	5	66	D	None	None
+Q04637	592	653	5t46	Crystal structure of the human eIF4E-eIF4G complex	5	66	B	None	None
+Q04637	609	622	5eir	Co-crystal structure of eIF4E with nucleotide mimetic inhibitor.	1	14	B	621	634
+Q04637	609	622	5ehc	Co-crystal structure of eIF4E with nucleotide mimetic inhibitor.	1	14	B	621	634
+Q04637	609	622	2w97	Crystal Structure of eIF4E Bound to Glycerol and eIF4G1 peptide	1	14	F	None	None
+Q04637	609	622	2w97	Crystal Structure of eIF4E Bound to Glycerol and eIF4G1 peptide	1	14	E	621	None
+Q04637	609	622	5ei3	Co-crystal structure of eIF4E with nucleotide mimetic inhibitor.	1	14	B	621	634
+Q04637	609	620	4aza	Improved eIF4E binding peptides by phage display guided design.	2	13	B	51	62
+Q04637	609	620	4aza	Improved eIF4E binding peptides by phage display guided design.	2	13	D	51	62
+Q04637	1233	1571	1ug3	C-terminal portion of human eIF4GI	1	339	B	1234	None
+Q04637	1233	1571	1ug3	C-terminal portion of human eIF4GI	1	339	A	1234	None
+

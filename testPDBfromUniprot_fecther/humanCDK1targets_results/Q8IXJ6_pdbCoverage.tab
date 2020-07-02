@@ -1,0 +1,79 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q8IXJ6	NAD-DEPENDENT PROTEIN DEACETYLASE SIRTUIN-2	SIR2_HUMAN	Homo sapiens	PF02146	SIR2	Sir2 family	84	268
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#57 mappings in 56 PDB chains in 31 PDB entries
+Q8IXJ6	1	356	5fyq	Sirt2 in complex with a 13-mer trifluoroacetylated Ran peptide	5	360	A	None	356
+Q8IXJ6	1	356	5fyq	Sirt2 in complex with a 13-mer trifluoroacetylated Ran peptide	5	360	B	None	356
+Q8IXJ6	309	356	5y5n	Crystal structure of human Sirtuin 2 in complex with a selective inhibitor	289	336	A	None	356
+Q8IXJ6	32	308	5y5n	Crystal structure of human Sirtuin 2 in complex with a selective inhibitor	1	277	A	None	None
+Q8IXJ6	34	356	5g4c	Human SIRT2 catalyse short chain fatty acyl lysine	1	323	A	None	None
+Q8IXJ6	34	356	5g4c	Human SIRT2 catalyse short chain fatty acyl lysine	1	323	B	None	None
+Q8IXJ6	34	356	3zgo	Re-refined structure of the human Sirt2 apoform	3	325	C	None	356
+Q8IXJ6	34	356	3zgo	Re-refined structure of the human Sirt2 apoform	3	325	B	34	356
+Q8IXJ6	34	356	3zgo	Re-refined structure of the human Sirt2 apoform	3	325	A	34	356
+Q8IXJ6	34	356	1j8f	HUMAN SIRT2 HISTONE DEACETYLASE	1	323	B	34	356
+Q8IXJ6	34	356	1j8f	HUMAN SIRT2 HISTONE DEACETYLASE	1	323	C	None	356
+Q8IXJ6	34	356	1j8f	HUMAN SIRT2 HISTONE DEACETYLASE	1	323	A	34	356
+Q8IXJ6	34	356	3zgv	Structure of human SIRT2 in complex with ADP-ribose	3	325	A	None	None
+Q8IXJ6	34	356	3zgv	Structure of human SIRT2 in complex with ADP-ribose	3	325	B	None	None
+Q8IXJ6	38	356	4r8m	Human SIRT2 crystal structure in complex with BHJH-TM1	1	319	A	None	None
+Q8IXJ6	38	356	4r8m	Human SIRT2 crystal structure in complex with BHJH-TM1	1	319	B	None	None
+Q8IXJ6	38	356	6nr0	SIRT2(56-356) with covalent intermediate between mechanism-based inhibitor Glucose-TM-1beta and 1'-SH ADP-ribose	1	319	A	None	None
+Q8IXJ6	38	356	6nr0	SIRT2(56-356) with covalent intermediate between mechanism-based inhibitor Glucose-TM-1beta and 1'-SH ADP-ribose	1	319	B	None	None
+Q8IXJ6	50	356	5d7o	Crystal structure of Sirt2-ADPR at an improved resolution	4	310	A	None	None
+Q8IXJ6	50	356	5d7o	Crystal structure of Sirt2-ADPR at an improved resolution	4	310	B	None	None
+Q8IXJ6	52	356	5y0z	Human SIRT2 in complex with a specific inhibitor, NPD11033	1	293	A	None	356
+Q8IXJ6	52	356	5y0z	Human SIRT2 in complex with a specific inhibitor, NPD11033	1	293	B	None	356
+Q8IXJ6	52	356	4y6l	Human SIRT2 in complex with myristoylated peptide (H3K9myr)	1	293	A	None	None
+Q8IXJ6	52	356	4y6l	Human SIRT2 in complex with myristoylated peptide (H3K9myr)	1	293	B	None	None
+Q8IXJ6	52	356	4y6q	Human SIRT2 in complex with 2-O-myristoyl-ADP-ribose	1	293	A	None	None
+Q8IXJ6	52	356	4y6q	Human SIRT2 in complex with 2-O-myristoyl-ADP-ribose	1	293	D	None	None
+Q8IXJ6	52	356	4y6q	Human SIRT2 in complex with 2-O-myristoyl-ADP-ribose	1	293	B	None	None
+Q8IXJ6	52	356	4y6q	Human SIRT2 in complex with 2-O-myristoyl-ADP-ribose	1	293	C	None	None
+Q8IXJ6	52	356	4y6o	Human SIRT2 in complex with myristoylated peptide (TNF-alphaK20myr)	1	293	A	None	None
+Q8IXJ6	52	356	4y6o	Human SIRT2 in complex with myristoylated peptide (TNF-alphaK20myr)	1	293	B	None	None
+Q8IXJ6	52	355	4x3o	Sirt2 in complex with a myristoyl peptide	1	304	A	52	355
+Q8IXJ6	52	355	4x3p	Sirt2 in complex with a myristoyl peptide	1	304	A	52	355
+Q8IXJ6	55	356	6qcn	Human Sirt2 in complex with ADP-ribose and the inhibitor quercetin	3	304	A	None	None
+Q8IXJ6	55	356	6qcn	Human Sirt2 in complex with ADP-ribose and the inhibitor quercetin	3	304	B	None	None
+Q8IXJ6	55	356	4l3o	Crystal Structure of SIRT2 in complex with the macrocyclic peptide S2iL5	1	302	C	None	356
+Q8IXJ6	55	356	4l3o	Crystal Structure of SIRT2 in complex with the macrocyclic peptide S2iL5	1	302	D	None	356
+Q8IXJ6	55	356	4l3o	Crystal Structure of SIRT2 in complex with the macrocyclic peptide S2iL5	1	302	B	None	356
+Q8IXJ6	55	356	4l3o	Crystal Structure of SIRT2 in complex with the macrocyclic peptide S2iL5	1	302	A	55	356
+Q8IXJ6	56	356	5d7p	Crystal structure of human Sirt2 in complex with ADPR and EX-243	4	304	A	56	None
+Q8IXJ6	56	356	5d7p	Crystal structure of human Sirt2 in complex with ADPR and EX-243	4	304	B	56	None
+Q8IXJ6	56	356	5yqm	Crystal structure of Sirt2 in complex with selective inhibitor A29	6	306	A	56	356
+Q8IXJ6	56	356	5d7q	Crystal structure of human Sirt2 in complex with ADPR and CHIC35	4	304	A	56	None
+Q8IXJ6	56	356	5d7q	Crystal structure of human Sirt2 in complex with ADPR and CHIC35	4	304	B	56	None
+Q8IXJ6	56	356	5dy4	Crystal structure of human Sirt2 in complex with a brominated 2nd generation SirReal inhibitor and NAD+	4	304	A	56	356
+Q8IXJ6	56	356	5mar	Structure of human SIRT2 in complex with 1,2,4-Oxadiazole inhibitor and ADP ribose.	3	303	A	56	None
+Q8IXJ6	56	356	5mar	Structure of human SIRT2 in complex with 1,2,4-Oxadiazole inhibitor and ADP ribose.	3	303	B	56	None
+Q8IXJ6	56	356	5mat	Structure of human Sirtuin 2 in complex with a selective thienopyrimidinone based inhibitor	3	303	C	56	356
+Q8IXJ6	56	356	5mat	Structure of human Sirtuin 2 in complex with a selective thienopyrimidinone based inhibitor	3	303	A	56	356
+Q8IXJ6	56	356	4rmg	Human Sirt2 in complex with SirReal2 and NAD+	4	304	A	56	356
+Q8IXJ6	56	356	4rmi	Human Sirt2 in complex with SirReal1 and Ac-Lys-OTC peptide	4	304	A	56	None
+Q8IXJ6	56	356	4rmh	Human Sirt2 in complex with SirReal2 and Ac-Lys-H3 peptide	4	304	A	56	356
+Q8IXJ6	56	356	5dy5	Crystal structure of human Sirt2 in complex with a SirReal probe fragment	4	304	A	56	356
+Q8IXJ6	56	356	5yqn	Crystal structure of Sirt2 in complex with selective inhibitor L55	6	306	A	56	356
+Q8IXJ6	56	356	5yql	Crystal structure of Sirt2 in complex with selective inhibitor A2I	6	306	A	56	356
+Q8IXJ6	56	356	5yqo	Crystal structure of Sirt2 in complex with selective inhibitor L5C	6	306	A	56	356
+Q8IXJ6	56	356	4rmj	Human Sirt2 in complex with ADP ribose and nicotinamide	4	304	A	56	None
+Q8IXJ6	56	356	4rmj	Human Sirt2 in complex with ADP ribose and nicotinamide	4	304	B	56	None
+

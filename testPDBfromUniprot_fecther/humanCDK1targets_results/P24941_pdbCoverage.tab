@@ -1,0 +1,543 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P24941	CELL DIVISION PROTEIN KINASE 2	CDK2_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	4	286
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#521 mappings in 521 PDB chains in 411 PDB entries
+P24941	1	298	6gue	CDK2/CyclinA in complex with AZD5438	5	302	A	1	298
+P24941	1	298	6gue	CDK2/CyclinA in complex with AZD5438	5	302	C	1	None
+P24941	1	298	5lmk	Structure of phopsho-CDK2-cyclin A in complex with an ATP-competitive inhibitor	2	299	A	1	298
+P24941	1	296	5lmk	Structure of phopsho-CDK2-cyclin A in complex with an ATP-competitive inhibitor	2	297	C	1	296
+P24941	1	298	2c68	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	298	A	1	None
+P24941	1	298	2a0c	Human CDK2 in complex with olomoucine II, a novel 2,6,9-trisubstituted purine cyclin-dependent kinase inhibitor	1	298	X	1	298
+P24941	1	298	2bkz	STRUCTURE OF CDK2-CYCLIN A WITH PHA-404611	6	303	A	1	298
+P24941	1	298	2bkz	STRUCTURE OF CDK2-CYCLIN A WITH PHA-404611	6	303	C	1	None
+P24941	1	298	1okw	Cyclin A binding groove inhibitor Ac-Arg-Arg-Leu-Asn-(m-Cl-Phe)-NH2	1	298	A	1	None
+P24941	1	298	1okw	Cyclin A binding groove inhibitor Ac-Arg-Arg-Leu-Asn-(m-Cl-Phe)-NH2	1	298	C	1	None
+P24941	1	298	1okv	Cyclin A binding groove inhibitor H-Arg-Arg-Leu-Ile-Phe-NH2	1	298	A	1	None
+P24941	1	298	1okv	Cyclin A binding groove inhibitor H-Arg-Arg-Leu-Ile-Phe-NH2	1	298	C	1	None
+P24941	1	298	6q4j	CDK2 in complex with FragLite34	9	306	A	1	298
+P24941	1	298	1h1r	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6086	6	303	A	1	None
+P24941	1	298	1h1r	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6086	6	303	C	1	None
+P24941	1	298	2c6t	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	298	A	1	None
+P24941	1	298	2c6t	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	298	C	1	None
+P24941	1	298	1g5s	CRYSTAL STRUCTURE OF HUMAN CYCLIN DEPENDENT KINASE 2 (CDK2) IN COMPLEX WITH THE INHIBITOR H717	1	298	A	1	298
+P24941	1	298	2j9m	Crystal Structure of CDK2 in complex with Macrocyclic Aminopyrimidine	1	298	A	1	298
+P24941	1	298	2c6o	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	298	A	1	None
+P24941	1	298	2c6m	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	298	A	1	None
+P24941	1	298	2c6l	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	298	A	1	298
+P24941	1	298	2c6k	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	298	A	1	298
+P24941	1	298	2c6i	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	298	A	1	298
+P24941	1	298	3s00	CDK2 in complex with inhibitor L4-14	9	306	A	1	298
+P24941	1	298	2wxv	Structure of CDK2-CYCLIN A with a Pyrazolo(4,3-h) quinazoline-3- carboxamide inhibitor	6	303	C	1	298
+P24941	1	298	2wxv	Structure of CDK2-CYCLIN A with a Pyrazolo(4,3-h) quinazoline-3- carboxamide inhibitor	6	303	A	1	298
+P24941	1	298	1vyw	Structure of CDK2/Cyclin A with PNU-292137	6	303	C	1	298
+P24941	1	298	1vyw	Structure of CDK2/Cyclin A with PNU-292137	6	303	A	1	298
+P24941	1	298	1vyz	Structure of CDK2 complexed with PNU-181227	1	298	A	1	298
+P24941	1	298	4acm	CDK2 IN COMPLEX WITH 3-AMINO-6-(4-{[2-(DIMETHYLAMINO)ETHYL]SULFAMOYL}-PHENYL)-N-PYRIDIN-3-YLPYRAZINE-2-CARBOXAMIDE	2	299	A	1	298
+P24941	1	298	5k4j	Crystal Structure of CDK2 in complex with compound 22	2	299	A	1	298
+P24941	1	298	3rjc	CDK2 in complex with inhibitor L4-12	9	306	A	1	298
+P24941	1	298	2r3q	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	3eoc	Cdk2/CyclinA complexed with a imidazo triazin-2-amine	1	298	A	1	298
+P24941	1	298	3eoc	Cdk2/CyclinA complexed with a imidazo triazin-2-amine	1	298	C	1	None
+P24941	1	298	1p2a	The structure of cyclin dependent kinase 2 (CKD2) with a trisubstituted naphthostyril inhibitor	1	298	A	1	298
+P24941	1	298	1ol1	Cyclin A binding groove inhibitor H-Cit-Cit-Leu-Ile-(p-F-Phe)-NH2	1	298	A	1	None
+P24941	1	298	1ol1	Cyclin A binding groove inhibitor H-Cit-Cit-Leu-Ile-(p-F-Phe)-NH2	1	298	C	1	None
+P24941	1	298	1ol2	Cyclin A binding groove inhibitor H-Arg-Arg-Leu-Asn-(p-F-Phe)-NH2	1	298	A	1	None
+P24941	1	298	1ol2	Cyclin A binding groove inhibitor H-Arg-Arg-Leu-Asn-(p-F-Phe)-NH2	1	298	C	1	None
+P24941	1	298	2wev	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	298	A	1	None
+P24941	1	298	2wev	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	298	C	1	None
+P24941	1	298	3ezv	CDK-2 with indazole inhibitor 9 bound at its active site	3	300	A	1	298
+P24941	1	298	4ek4	Crystal structure of the cdk2 in complex with aminopyrazole inhibitor	2	299	A	1	None
+P24941	1	298	4ek5	Crystal structure of the cdk2 in complex with aminopyrazole inhibitor	2	299	A	1	298
+P24941	1	298	4ek6	Crystal structure of the cdk2 in complex with aminopyrazole inhibitor	2	299	A	1	298
+P24941	1	298	4ek3	Crystal structure of apo CDK2	2	299	A	1	None
+P24941	1	298	4ek8	Crystal structure of the cdk2 in complex with thiazolylpyrimidine inhibitor	2	299	A	1	298
+P24941	1	298	2exm	Human CDK2 in complex with isopentenyladenine	1	298	A	1	298
+P24941	1	298	3pj8	Structure of CDK2 in complex with a Pyrazolo[4,3-d]pyrimidine Bioisostere of Roscovitine.	2	299	A	1	298
+P24941	1	298	3r83	CDK2 in complex with inhibitor KVR-2-92	9	306	A	1	298
+P24941	1	298	1qmz	PHOSPHORYLATED CDK2-CYCLYIN A-SUBSTRATE PEPTIDE COMPLEX	2	299	A	1	None
+P24941	1	298	1qmz	PHOSPHORYLATED CDK2-CYCLYIN A-SUBSTRATE PEPTIDE COMPLEX	2	299	C	1	None
+P24941	1	298	4fkj	Crystal structure of the cdk2 in complex with aminopyrazole inhibitor	2	299	A	1	298
+P24941	1	298	4fki	Crystal Structure of the Cdk2 in Complex with Aminopyrazole Inhibitor	2	299	A	1	298
+P24941	1	298	3f5x	CDK-2-Cyclin complex with indazole inhibitor 9 bound at its active site	1	298	C	1	298
+P24941	1	298	3f5x	CDK-2-Cyclin complex with indazole inhibitor 9 bound at its active site	1	298	A	1	298
+P24941	1	298	4fkl	Crystal structure of the cdk2 in complex with thiazolylpyrimidine inhibitor	2	299	A	1	298
+P24941	1	298	4fkg	Crystal structure of the cdk2 in complex with aminopyrazole inhibitor	2	299	A	1	298
+P24941	1	298	1dm2	HUMAN CYCLIN-DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR HYMENIALDISINE	1	298	A	1	298
+P24941	1	298	1v1k	CDK2 IN COMPLEX WITH A DISUBSTITUTED 4, 6-BIS ANILINO PYRIMIDINE CDK4 INHIBITOR	2	299	A	1	298
+P24941	1	298	4fks	Crystal structure of the cdk2 in complex with oxindole inhibitor	2	299	A	1	None
+P24941	1	298	4fkr	Crystal structure of the cdk2 in complex with oxindole inhibitor	2	299	A	1	298
+P24941	1	298	4fkq	Crystal structure of the cdk2 in complex with oxindole inhibitor	2	299	A	1	298
+P24941	1	298	4fkp	Crystal structure of the cdk2 in complex with oxindole inhibitor	2	299	A	1	298
+P24941	1	298	4fkw	Crystal structure of the cdk2 in complex with oxindole inhibitor	2	299	A	1	298
+P24941	1	298	4fkv	Crystal structure of the cdk2 in complex with oxindole inhibitor	2	299	A	1	298
+P24941	1	298	4fku	Crystal structure of the cdk2 in complex with oxindole inhibitor	2	299	A	1	298
+P24941	1	298	4fkt	Crystal structure of the cdk2 in complex with oxindole inhibitor	2	299	A	1	None
+P24941	1	298	3r8m	CDK2 in complex with inhibitor L3-3	9	306	A	1	298
+P24941	1	298	3r8l	CDK2 in complex with inhibitor L3-4	9	306	A	1	298
+P24941	1	298	2b55	Human cyclin dependent kinase 2 (cdk2) complexed with indenopyraxole DIN-101312	1	298	A	1	298
+P24941	1	298	1f5q	CRYSTAL STRUCTURE OF MURINE GAMMA HERPESVIRUS CYCLIN COMPLEXED TO HUMAN CYCLIN DEPENDENT KINASE 2	1	298	A	1	298
+P24941	1	298	1f5q	CRYSTAL STRUCTURE OF MURINE GAMMA HERPESVIRUS CYCLIN COMPLEXED TO HUMAN CYCLIN DEPENDENT KINASE 2	1	298	C	1	None
+P24941	1	298	2b53	Human cyclin dependent kinase 2 (CDK2) complexed with DIN-234325	1	298	A	1	298
+P24941	1	298	2b52	Human cyclin dependent kinase 2 (CDK2) complexed with DPH-042562	1	298	A	1	298
+P24941	1	298	2v0d	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	A	1	298
+P24941	1	298	3r8z	CDK2 in complex with inhibitor RC-1-136	9	306	A	1	298
+P24941	1	298	3r8v	CDK2 in complex with inhibitor RC-1-135	9	306	A	1	298
+P24941	1	298	3r8u	CDK2 in complex with inhibitor RC-1-132	9	306	A	1	298
+P24941	1	298	3my5	CDk2/cyclinA in complex with DRB	3	300	A	1	298
+P24941	1	298	3my5	CDk2/cyclinA in complex with DRB	3	300	C	1	None
+P24941	1	298	3r8p	CDK2 in complex with inhibitor NSK-MC1-6	9	306	A	1	298
+P24941	1	298	4bzd	Structure of CDK2 in complex with a benzimidazopyrimidine	2	299	A	1	298
+P24941	1	298	3qrt	CDK2 in complex with inhibitor NSK-MC2-55	9	306	A	1	298
+P24941	1	298	3qru	CDK2 in complex with inhibitor NSK-MC1-12	9	306	A	1	298
+P24941	1	298	5l2w	The X-ray co-crystal structure of human CDK2/CyclinE and Dinaciclib.	2	299	A	1	None
+P24941	1	298	3sqq	CDK2 in complex with inhibitor RC-3-96	9	306	A	1	298
+P24941	1	298	2w17	CDK2 in complex with the imidazole pyrimidine amide, compound (S)-8b	2	299	A	1	298
+P24941	1	298	3rni	CDK2 in complex with inhibitor RC-3-86	9	306	A	1	298
+P24941	1	298	4eoi	Thr 160 phosphorylated CDK2 K89D, Q131E - human cyclin A3 complex with the inhibitor RO3306	2	299	A	1	298
+P24941	1	298	4eoi	Thr 160 phosphorylated CDK2 K89D, Q131E - human cyclin A3 complex with the inhibitor RO3306	2	299	C	1	None
+P24941	1	298	4eoj	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with ATP	5	302	A	1	298
+P24941	1	298	4eoj	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with ATP	5	302	C	1	None
+P24941	1	298	4eon	Thr 160 phosphorylated CDK2 H84S, Q85M, Q131E - human cyclin A3 complex with the inhibitor RO3306	3	300	A	1	298
+P24941	1	298	4eon	Thr 160 phosphorylated CDK2 H84S, Q85M, Q131E - human cyclin A3 complex with the inhibitor RO3306	3	300	C	1	None
+P24941	1	298	1h28	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p107	6	303	A	1	None
+P24941	1	298	1h28	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p107	6	303	C	1	None
+P24941	1	298	4d1x	CDK2 in complex with Luciferin	1	298	A	None	298
+P24941	1	298	1h27	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p27	6	303	A	1	None
+P24941	1	298	1h27	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p27	6	303	C	1	None
+P24941	1	298	1h26	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p53	6	303	A	1	None
+P24941	1	298	1h26	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p53	6	303	C	1	None
+P24941	1	298	1fq1	CRYSTAL STRUCTURE OF KINASE ASSOCIATED PHOSPHATASE (KAP) IN COMPLEX WITH PHOSPHO-CDK2	1	298	B	1	None
+P24941	1	298	3tnw	Structure of CDK2/cyclin A in complex with CAN508	3	300	A	1	298
+P24941	1	298	3tnw	Structure of CDK2/cyclin A in complex with CAN508	3	300	C	1	None
+P24941	1	298	2x1n	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	298	A	1	None
+P24941	1	298	2x1n	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	298	C	1	None
+P24941	1	298	4bco	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	300	A	1	298
+P24941	1	298	4bco	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	300	C	1	None
+P24941	1	298	4bcn	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	300	A	1	298
+P24941	1	298	4bcn	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	300	C	1	None
+P24941	1	298	4bcm	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	4	301	A	1	None
+P24941	1	298	4bcm	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	4	301	C	1	None
+P24941	1	298	4bck	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	300	A	1	None
+P24941	1	298	4bck	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	300	C	1	None
+P24941	1	298	2wip	STRUCTURE OF CDK2-CYCLIN A COMPLEXED WITH 8-ANILINO-1-METHYL-4,5-DIHYDRO- 1H-PYRAZOLO[4,3-H] QUINAZOLINE-3-CARBOXYLIC ACID	6	303	A	1	298
+P24941	1	298	2wip	STRUCTURE OF CDK2-CYCLIN A COMPLEXED WITH 8-ANILINO-1-METHYL-4,5-DIHYDRO- 1H-PYRAZOLO[4,3-H] QUINAZOLINE-3-CARBOXYLIC ACID	6	303	C	1	None
+P24941	1	298	3pxf	CDK2 in complex with two molecules of 8-anilino-1-naphthalene sulfonate	9	306	A	1	298
+P24941	1	298	2bhh	HUMAN CYCLIN DEPENDENT PROTEIN KINASE 2 IN COMPLEX WITH THE INHIBITOR 4-HYDROXYPIPERINDINESULFONYL-INDIRUBINE	1	298	A	1	298
+P24941	1	298	2wih	STRUCTURE OF CDK2-CYCLIN A WITH PHA-848125	6	303	C	1	298
+P24941	1	298	2wih	STRUCTURE OF CDK2-CYCLIN A WITH PHA-848125	6	303	A	1	298
+P24941	1	298	3pxy	CDK2 in complex with inhibitor JWS648	9	306	A	1	298
+P24941	1	298	3pxz	CDK2 ternary complex with JWS648 and ANS	9	306	A	1	298
+P24941	1	298	3pxq	CDK2 in complex with 3 molecules of 8-anilino-1-naphthalene sulfonate	9	306	A	1	298
+P24941	1	298	2bhe	HUMAN CYCLIN DEPENDENT PROTEIN KINASE 2 IN COMPLEX WITH THE INHIBITOR 5-BROMO-INDIRUBINE	1	298	A	1	298
+P24941	1	298	4bcq	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	4	301	A	1	None
+P24941	1	298	4bcq	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	4	301	C	1	None
+P24941	1	298	3pxr	Apo CDK2 crystallized from Jeffamine	9	306	A	1	298
+P24941	1	298	2c5x	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	298	A	1	None
+P24941	1	298	2c5x	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	298	C	1	None
+P24941	1	298	2c5y	DIFFERENTIAL BINDING OF INHIBITORS TO ACTIVE AND INACTIVE CDK2 PROVIDES INSIGHTS FOR DRUG DESIGN	1	298	A	1	None
+P24941	1	298	2c5v	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	298	A	1	None
+P24941	1	298	2c5v	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	298	C	1	None
+P24941	1	298	1gz8	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR 2-Amino-6-(3'-methyl-2'-oxo)butoxypurine	2	299	A	1	298
+P24941	1	298	3r7i	CDK2 in complex with inhibitor KVR-1-74	9	306	A	1	298
+P24941	1	298	3r7v	CDK2 in complex with inhibitor KVR-1-9	9	306	A	1	298
+P24941	1	298	3r7u	CDK2 in complex with inhibitor KVR-1-75	9	306	A	1	298
+P24941	1	298	2c5n	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	298	A	1	None
+P24941	1	298	2c5n	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	298	C	1	None
+P24941	1	298	2c5o	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	298	A	1	None
+P24941	1	298	2c5o	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	298	C	1	None
+P24941	1	298	1di8	THE STRUCTURE OF CYCLIN-DEPENDENT KINASE 2 (CDK2) IN COMPLEX WITH 4-[3-HYDROXYANILINO]-6,7-DIMETHOXYQUINAZOLINE	1	298	A	1	298
+P24941	1	298	2ds1	Human cyclin dependent kinase 2 complexed with the CDK4 inhibitor	1	298	A	1	298
+P24941	1	298	3r7y	CDK2 in complex with inhibitor KVR-2-88	9	306	A	1	298
+P24941	1	298	5osj	Cdk2(WT) with covalent adduct at C177	6	303	A	None	None
+P24941	1	298	4d1z	CDK2 in complex with a Luciferin derivate	1	298	A	None	None
+P24941	1	298	1h25	CDK2/Cyclin A in complex with an 11-residue recruitment peptide from retinoblastoma-associated protein	6	303	A	1	None
+P24941	1	298	1h25	CDK2/Cyclin A in complex with an 11-residue recruitment peptide from retinoblastoma-associated protein	6	303	C	1	None
+P24941	1	298	3r73	CDK2 in complex with inhibitor KVR-1-164	9	306	A	1	298
+P24941	1	298	3r71	CDK2 in complex with inhibitor KVR-1-162	9	306	A	1	298
+P24941	1	298	3s0o	CDK2 in complex with inhibitor RC-1-138	9	306	A	1	298
+P24941	1	298	3ns9	Crystal structure of CDK2 in complex with inhibitor BS-194	1	298	A	None	298
+P24941	1	298	5oo1	Cdk2(F80C, C177A) covalent adduct with C37 at F80C	6	303	A	None	298
+P24941	1	298	2vtq	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design.	1	298	A	1	298
+P24941	1	298	5oo3	Cdk2(F80C, C177A) with covalent ligand at F80C	6	303	A	None	None
+P24941	1	298	2vts	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design.	1	298	A	1	298
+P24941	1	298	2vtt	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design.	1	298	A	1	298
+P24941	1	298	2vth	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H-pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design	1	298	A	1	298
+P24941	1	298	1pf8	Crystal Structure of Human Cyclin-Dependent Kinase 2 Complexed with a Nucleoside Inhibitor	1	298	A	1	298
+P24941	1	298	2vtj	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design	1	298	A	1	298
+P24941	1	298	2vtl	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design	1	298	A	1	298
+P24941	1	298	2vtm	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design.	1	298	A	1	298
+P24941	1	298	2vtn	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design.	1	298	A	1	298
+P24941	1	298	2vto	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design.	1	298	A	1	298
+P24941	1	298	2vta	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design.	1	298	A	1	298
+P24941	1	298	3qx4	CDK2 in complex with inhibitor KVR-1-78	9	306	A	1	298
+P24941	1	298	1h1p	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU2058	6	303	A	1	None
+P24941	1	298	1h1p	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU2058	6	303	C	1	None
+P24941	1	298	1h1q	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6094	6	303	A	1	None
+P24941	1	298	1h1q	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6094	6	303	C	1	None
+P24941	1	298	3qx2	CDK2 in complex with inhibitor KVR-1-190	9	306	A	1	298
+P24941	1	298	1h1s	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6102	6	303	A	1	None
+P24941	1	298	1h1s	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6102	6	303	C	1	None
+P24941	1	298	1jst	PHOSPHORYLATED CYCLIN-DEPENDENT KINASE-2 BOUND TO CYCLIN A	1	298	C	1	298
+P24941	1	298	1jst	PHOSPHORYLATED CYCLIN-DEPENDENT KINASE-2 BOUND TO CYCLIN A	1	298	A	1	298
+P24941	1	298	1jsu	P27(KIP1)/CYCLIN A/CDK2 COMPLEX	1	298	A	None	298
+P24941	1	298	1jsv	The structure of cyclin-dependent kinase 2 (CDK2) in complex with 4-[(6-amino-4-pyrimidinyl)amino]benzenesulfonamide	1	298	A	1	298
+P24941	1	298	3s1h	CDK2 in complex with inhibitor RC-2-39	9	306	A	1	298
+P24941	1	298	5cyi	CDK2/Cyclin A covalent complex with 6-(cyclohexylmethoxy)-N-(4-(vinylsulfonyl)phenyl)-9H-purin-2-amine (NU6300)	6	303	A	1	298
+P24941	1	298	5cyi	CDK2/Cyclin A covalent complex with 6-(cyclohexylmethoxy)-N-(4-(vinylsulfonyl)phenyl)-9H-purin-2-amine (NU6300)	6	303	C	1	None
+P24941	1	298	2wmb	Structural and thermodynamic consequences of cyclization of peptide ligands for the recruitment site of cyclin A	6	303	A	1	None
+P24941	1	298	2wmb	Structural and thermodynamic consequences of cyclization of peptide ligands for the recruitment site of cyclin A	6	303	C	1	None
+P24941	1	298	6gva	CDK2/cyclin A2 in complex with pyrazolo[4,3-d]pyrimidine inhibitor LGR4455	2	299	A	1	None
+P24941	1	298	2wma	Structural and thermodynamic consequences of cyclization of peptide ligands for the recruitment site of cyclin A	6	303	A	1	None
+P24941	1	298	2wma	Structural and thermodynamic consequences of cyclization of peptide ligands for the recruitment site of cyclin A	6	303	C	1	None
+P24941	1	298	5a14	Human CDK2 with type II inhibitor	2	299	A	1	None
+P24941	1	298	1hck	HUMAN CYCLIN-DEPENDENT KINASE 2	1	298	A	1	298
+P24941	1	298	1hcl	HUMAN CYCLIN-DEPENDENT KINASE 2	1	298	A	1	298
+P24941	1	298	3qxo	CDK2 in complex with inhibitor KVR-1-84	9	306	A	1	298
+P24941	1	298	3qxp	CDK2 in complex with inhibitor RC-3-89	9	306	A	1	298
+P24941	1	298	4bgh	Crystal Structure of CDK2 in complex with pan-CDK Inhibitor	1	298	A	1	298
+P24941	1	298	2r64	Crystal structure of a 3-aminoindazole compound with CDK2	1	298	A	1	298
+P24941	1	298	5osm	Cdk2(F80C, C177A) with covalent adduct at C80	6	303	A	1	None
+P24941	1	298	6q4b	CDK2 in complex with FragLite13	9	306	A	1	298
+P24941	1	298	6q4a	CDK2 in complex with FragLite14	9	306	A	1	298
+P24941	1	298	2uzl	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	A	1	None
+P24941	1	298	2uzl	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	C	1	None
+P24941	1	298	2uzo	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	A	1	None
+P24941	1	298	2uzn	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	A	1	298
+P24941	1	298	2uze	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	A	1	None
+P24941	1	298	2uze	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	C	1	None
+P24941	1	298	2uzd	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	A	1	None
+P24941	1	298	2uzd	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	C	1	None
+P24941	1	298	3ezr	CDK-2 with indazole inhibitor 17 bound at its active site	3	300	A	1	298
+P24941	1	298	2uzb	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	A	1	None
+P24941	1	298	2uzb	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	298	C	1	None
+P24941	1	298	6gub	CDK2/CyclinA in complex with Flavopiridol	5	302	A	1	None
+P24941	1	298	6gub	CDK2/CyclinA in complex with Flavopiridol	5	302	C	1	None
+P24941	1	298	3rm6	CDK2 in complex with inhibitor KVR-2-80	9	306	A	1	298
+P24941	1	298	3rm7	CDK2 in complex with inhibitor KVR-1-91	9	306	A	1	298
+P24941	1	298	2xnb	Discovery and Characterisation of 2-Anilino-4-(thiazol-5-yl) pyrimidine Transcriptional CDK Inhibitors as Anticancer Agents	1	298	A	1	298
+P24941	1	298	5uq1	Crystal structure of human Cdk2-Spy1 complex	4	301	A	None	None
+P24941	1	298	5uq1	Crystal structure of human Cdk2-Spy1 complex	4	301	C	1	None
+P24941	1	298	5uq3	Crystal structure of human Cdk2-Spy1-P27 ternary complex	4	301	A	None	None
+P24941	1	298	5uq2	Crystal structure of human Cdk2-Spy1 complex	4	301	A	1	None
+P24941	1	298	3rmf	CDK2 in complex with inhibitor RC-2-33	9	306	A	1	298
+P24941	1	298	2w05	Structure of CDK2 in complex with an imidazolyl pyrimidine, compound 5b	1	298	A	1	298
+P24941	1	298	2i40	Cdk2/Cyclin A complexed with a thiophene carboxamide inhibitor	1	298	A	1	None
+P24941	1	298	2i40	Cdk2/Cyclin A complexed with a thiophene carboxamide inhibitor	1	298	C	1	None
+P24941	1	298	3lfn	Crystal structure of CDK2 with SAR57, an aminoindazole type inhibitor	1	298	A	1	298
+P24941	1	298	1e1x	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR NU6027	2	299	A	1	298
+P24941	1	298	2whb	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	298	A	1	None
+P24941	1	298	2whb	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	298	C	1	None
+P24941	1	298	1e1v	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR NU2058	2	299	A	1	298
+P24941	1	298	3ddq	Structure of phosphorylated Thr160 CDK2/cyclin A in complex with the inhibitor roscovitine	2	299	A	1	298
+P24941	1	298	3ddq	Structure of phosphorylated Thr160 CDK2/cyclin A in complex with the inhibitor roscovitine	2	299	C	1	None
+P24941	1	298	3ddp	Structure of phosphorylated Thr160 CDK2/cyclin A in complex with the inhibitor CR8	2	299	A	1	None
+P24941	1	298	3ddp	Structure of phosphorylated Thr160 CDK2/cyclin A in complex with the inhibitor CR8	2	299	C	1	298
+P24941	1	298	3s2p	Crystal structure of CDK2 with a 2-aminopyrimidine compound	1	298	A	1	298
+P24941	1	298	2cch	The crystal structure of CDK2 cyclin A in complex with a substrate peptide derived from CDC modified with a gamma-linked ATP analogue	2	299	A	1	None
+P24941	1	298	2cch	The crystal structure of CDK2 cyclin A in complex with a substrate peptide derived from CDC modified with a gamma-linked ATP analogue	2	299	C	1	None
+P24941	1	298	2cci	Crystal structure of phospho-CDK2 Cyclin A in complex with a peptide containing both the substrate and recruitment sites of CDC6	2	299	A	1	None
+P24941	1	298	2cci	Crystal structure of phospho-CDK2 Cyclin A in complex with a peptide containing both the substrate and recruitment sites of CDC6	2	299	C	1	None
+P24941	1	298	1w8c	CO-CRYSTAL STRUCTURE OF 6-CYCLOHEXYLMETHOXY-8-ISOPROPYL-9H-PURIN-2- YLAMINE AND MONOMERIC CDK2	2	299	A	1	298
+P24941	1	298	3lfs	Crystal structure of CDK2 with SAR37, an aminoindazole type inhibitor	1	298	A	1	298
+P24941	1	298	3lfq	Crystal structure of CDK2 with SAR60, an aminoindazole type inhibitor	1	298	A	1	298
+P24941	1	298	1oir	Imidazopyridines: a potent and selective class of Cyclin-dependent Kinase inhibitors identified through Structure-based hybridisation	2	299	A	1	None
+P24941	1	298	1oiq	Imidazopyridines: a potent and selective class of Cyclin-dependent Kinase inhibitors identified through Structure-based hybridisation	2	299	A	1	298
+P24941	1	298	3r28	CDK2 in complex with inhibitor KVR-1-140	9	306	A	1	298
+P24941	1	298	1oiu	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	5	302	A	1	None
+P24941	1	298	1oiu	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	5	302	C	1	None
+P24941	1	298	1oit	Imidazopyridines: a potent and selective class of Cyclin-dependent Kinase inhibitors identified through Structure-based hybridisation	2	299	A	None	298
+P24941	1	298	1oiy	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	5	302	A	1	None
+P24941	1	298	1oiy	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	5	302	C	1	None
+P24941	1	298	1fin	CYCLIN A-CYCLIN-DEPENDENT KINASE 2 COMPLEX	1	298	C	1	298
+P24941	1	298	1fin	CYCLIN A-CYCLIN-DEPENDENT KINASE 2 COMPLEX	1	298	A	1	298
+P24941	1	298	5nev	CDK2/Cyclin A in complex with compound 73	6	303	A	1	None
+P24941	1	298	5nev	CDK2/Cyclin A in complex with compound 73	6	303	C	1	None
+P24941	1	298	1urc	Cyclin A binding groove inhibitor Ace-Arg-Lys-Leu-Phe-Gly	1	298	A	1	None
+P24941	1	298	1urc	Cyclin A binding groove inhibitor Ace-Arg-Lys-Leu-Phe-Gly	1	298	C	1	None
+P24941	1	298	1oi9	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	5	302	A	1	None
+P24941	1	298	1oi9	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	5	302	C	1	None
+P24941	1	298	1urw	CDK2 IN COMPLEX WITH AN IMIDAZO[1,2-b]PYRIDAZINE	2	299	A	1	298
+P24941	1	298	4bcp	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	300	A	1	298
+P24941	1	298	4bcp	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	300	C	1	None
+P24941	1	298	3qwk	CDK2 in complex with inhibitor KVR-1-150	9	306	A	1	298
+P24941	1	298	3qwj	CDK2 in complex with inhibitor KVR-1-142	9	306	A	1	298
+P24941	1	298	3r7e	CDK2 in complex with inhibitor KVR-1-67	9	306	A	1	298
+P24941	1	298	2w1h	Fragment-Based Discovery of the Pyrazol-4-yl urea (AT9283), a Multi- targeted Kinase Inhibitor with Potent Aurora Kinase Activity	1	298	A	1	298
+P24941	1	298	1buh	CRYSTAL STRUCTURE OF THE HUMAN CDK2 KINASE COMPLEX WITH CELL CYCLE-REGULATORY PROTEIN CKSHS1	1	298	A	1	None
+P24941	1	298	6inl	Crystal structure of CDK2 IN complex with Inhibitor CVT-313	2	299	A	1	298
+P24941	1	298	4erw	CDK2 in complex with staurosporine	9	306	A	1	298
+P24941	1	298	3sw7	Crystal Structure of the CDK2 in complex with thiazolylpyrimidine inhibitor	2	299	A	1	298
+P24941	1	298	3sw4	Crystal Structure of the CDK2 in complex with thiazolylpyrimidine inhibitor	2	299	A	1	298
+P24941	1	298	1gij	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE CDK4 INHIBITOR	1	298	A	1	298
+P24941	1	298	1gii	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE CDK4 INHIBITOR	1	298	A	1	298
+P24941	1	298	1gih	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE CDK4 INHIBITOR	1	298	A	1	298
+P24941	1	298	2cjm	Mechanism of CDK inhibition by active site phosphorylation: CDK2 Y15p T160p in complex with cyclin A structure	1	298	A	1	None
+P24941	1	298	2cjm	Mechanism of CDK inhibition by active site phosphorylation: CDK2 Y15p T160p in complex with cyclin A structure	1	298	C	1	None
+P24941	1	298	3bhv	Structure of phosphorylated Thr160 CDK2/cyclin A in complex with the inhibitor variolin B	3	300	A	1	298
+P24941	1	298	3bhv	Structure of phosphorylated Thr160 CDK2/cyclin A in complex with the inhibitor variolin B	3	300	C	1	None
+P24941	1	298	3bhu	Structure of phosphorylated Thr160 CDK2/cyclin A in complex with the inhibitor meriolin 5	3	300	A	1	298
+P24941	1	298	3bhu	Structure of phosphorylated Thr160 CDK2/cyclin A in complex with the inhibitor meriolin 5	3	300	C	1	None
+P24941	1	298	3bht	Structure of phosphorylated Thr160 CDK2/cyclin A in complex with the inhibitor meriolin 3	3	300	A	1	298
+P24941	1	298	3bht	Structure of phosphorylated Thr160 CDK2/cyclin A in complex with the inhibitor meriolin 3	3	300	C	1	None
+P24941	1	298	6p3w	Crystal structure of the Cyclin A-CDK2-ORC1 complex	1	298	A	1	298
+P24941	1	298	6p3w	Crystal structure of the Cyclin A-CDK2-ORC1 complex	1	298	C	1	None
+P24941	1	298	6q4c	CDK2 in complex with FragLite16	9	306	A	1	298
+P24941	1	298	6guk	CDK2 in complex with CGP74514A	9	306	A	1	298
+P24941	1	298	6guh	CDK2 in complex with AZD5438	9	306	A	1	298
+P24941	1	298	6q4g	CDK2 in complex with FragLite37	9	306	A	1	298
+P24941	1	298	6q4f	CDK2 in complex with FragLite32	9	306	A	1	298
+P24941	1	298	6q4e	CDK2 in complex with FragLite33	9	306	A	1	298
+P24941	1	298	6q4d	CDK2 in complex with FragLite31	9	306	A	1	None
+P24941	1	298	6q4k	CDK2 in complex with FragLite38	9	306	A	1	298
+P24941	1	298	6guc	CDK2/CyclinA in complex with SU9516	5	302	A	1	None
+P24941	1	298	6guc	CDK2/CyclinA in complex with SU9516	5	302	C	1	None
+P24941	1	298	6q4i	CDK2 in complex with FragLite35	9	306	A	1	298
+P24941	1	298	6q4h	CDK2 in complex with FragLite36	9	306	A	1	298
+P24941	1	298	6guf	CDK2/CyclinA in complex with CGP74514A	5	302	A	1	298
+P24941	1	298	6guf	CDK2/CyclinA in complex with CGP74514A	5	302	C	1	None
+P24941	1	298	1h24	CDK2/CyclinA in complex with a 9 residue recruitment peptide from E2F	6	303	A	1	None
+P24941	1	298	1h24	CDK2/CyclinA in complex with a 9 residue recruitment peptide from E2F	6	303	C	1	None
+P24941	1	298	1pye	Crystal structure of CDK2 with inhibitor	1	298	A	1	298
+P24941	1	298	1ke7	CYCLIN-DEPENDENT KINASE 2 (CDK2) COMPLEXED WITH 3-{[(2,2-DIOXIDO-1,3-DIHYDRO-2-BENZOTHIEN-5-YL)AMINO]METHYLENE}-5-(1,3-OXAZOL-5-YL)-1,3-DIHYDRO-2H-INDOL-2-ONE	1	298	A	1	298
+P24941	1	298	1ke6	CYCLIN-DEPENDENT KINASE 2 (CDK2) COMPLEXED WITH N-METHYL-{4-[2-(7-OXO-6,7-DIHYDRO-8H-[1,3]THIAZOLO[5,4-E]INDOL-8-YLIDENE)HYDRAZINO]PHENYL}METHANESULFONAMIDE	1	298	A	1	298
+P24941	1	298	1ke5	CDK2 complexed with N-methyl-4-{[(2-oxo-1,2-dihydro-3H-indol-3-ylidene)methyl]amino}benzenesulfonamide	1	298	A	1	298
+P24941	1	298	3rzb	CDK2 in complex with inhibitor RC-2-23	9	306	A	1	298
+P24941	1	298	1ke9	CYCLIN-DEPENDENT KINASE 2 (CDK2) COMPLEXED WITH 3-{[4-({[AMINO(IMINO)METHYL]AMINOSULFONYL)ANILINO]METHYLENE}-2-OXO-2,3-DIHYDRO-1H-INDOLE	1	298	A	1	298
+P24941	1	298	1ke8	CYCLIN-DEPENDENT KINASE 2 (CDK2) COMPLEXED WITH 4-{[(2-OXO-1,2-DIHYDRO-3H-INDOL-3-YLIDENE)METHYL]AMINO}-N-(1,3-THIAZOL-2-YL)BENZENESULFONAMIDE	1	298	A	1	298
+P24941	1	298	5fp5	Structure of cyclin-dependent kinase 2 with small-molecule ligand 4- fluorobenzoic acid (AT222) in an alternate binding site.	1	298	A	1	None
+P24941	1	298	2c4g	STRUCTURE OF CDK2-CYCLIN A WITH PHA-533514	6	303	C	1	298
+P24941	1	298	2c4g	STRUCTURE OF CDK2-CYCLIN A WITH PHA-533514	6	303	A	1	None
+P24941	1	298	5fp6	Structure of cyclin-dependent kinase 2 with small-molecule ligand 3-(4,7-dichloro-1H-indol-3-yl)prop-2-yn-1-ol (AT17833) in an alternate binding site.	1	298	A	1	None
+P24941	1	298	3r1q	CDK2 in complex with inhibitor KVR-1-102	9	306	A	1	298
+P24941	1	298	3r1s	CDK2 in complex with inhibitor KVR-1-127	9	306	A	1	298
+P24941	1	298	1pw2	APO STRUCTURE OF HUMAN CYCLIN-DEPENDENT KINASE 2	1	298	A	1	298
+P24941	1	298	3r1y	CDK2 in complex with inhibitor KVR-1-134	9	306	A	1	298
+P24941	1	298	1y8y	Crystal structure of human CDK2 complexed with a pyrazolo[1,5-a]pyrimidine inhibitor	1	298	A	1	298
+P24941	1	298	5jq8	Crystal structure of CDK2 in complex with inhibitor ICEC0943	1	298	A	None	298
+P24941	1	298	5jq5	Crystal structure of CDK2 in complex with inhibitor ICEC0942	1	298	A	None	298
+P24941	1	298	3r6x	CDK2 in complex with inhibitor KVR-1-158	9	306	A	1	298
+P24941	1	298	6q49	CDK2 in complex with FragLite6	9	306	A	1	298
+P24941	1	298	6q48	CDK2 in complex with FragLite7	9	306	A	1	None
+P24941	1	298	5iev	Crystal structure of BAY 1000394 (Roniciclib) bound to CDK2	1	298	A	1	298
+P24941	1	298	5iey	Crystal structure of a CDK inhibitor bound to CDK2	1	298	A	1	298
+P24941	1	298	5iex	Crystal structure of (R,S)-S-{4-[(5-Bromo-4-{[(2R,3R)-2-hydroxy-1-methylpropyl]oxy}- pyrimidin-2-yl)amino]phenyl}-S-cyclopropylsulfoximide bound to CDK2	1	298	A	1	298
+P24941	1	298	2c69	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	298	A	1	298
+P24941	1	298	1r78	CDK2 complex with a 4-alkynyl oxindole inhibitor	1	298	A	1	298
+P24941	1	298	2vu3	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design.	1	298	A	1	298
+P24941	1	298	1h07	CDK2 in complex with a disubstituted 4, 6-bis anilino pyrimidine CDK4 inhibitor	2	299	A	1	None
+P24941	1	298	1h01	CDK2 in complex with a disubstituted 2, 4-bis anilino pyrimidine CDK4 inhibitor	1	298	A	1	None
+P24941	1	298	1h00	CDK2 in complex with a disubstituted 4, 6-bis anilino pyrimidine CDK4 inhibitor	2	299	A	1	298
+P24941	1	298	3ti1	CDK2 in complex with SUNITINIB	1	298	A	1	298
+P24941	1	298	1ogu	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2/CYCLIN A COMPLEXED WITH A 2-ARYLAMINO-4-CYCLOHEXYLMETHYL-5-NITROSO-6-AMINOPYRIMIDINE INHIBITOR	5	302	A	1	None
+P24941	1	298	1ogu	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2/CYCLIN A COMPLEXED WITH A 2-ARYLAMINO-4-CYCLOHEXYLMETHYL-5-NITROSO-6-AMINOPYRIMIDINE INHIBITOR	5	302	C	1	None
+P24941	1	298	3rpo	CDK2 in complex with inhibitor KVR-1-156	9	306	A	1	298
+P24941	1	298	4rj3	CDK2 with EGFR inhibitor compound 8	1	298	A	1	None
+P24941	1	298	1h0w	Human cyclin dependent protein kinase 2 in complex with the inhibitor 2-Amino-6-[cyclohex-3-enyl]methoxypurine	1	298	A	1	298
+P24941	1	298	1h0v	Human cyclin dependent protein kinase 2 in complex with the inhibitor 2-Amino-6-[(R)-pyrrolidino-5'-yl]methoxypurine	1	298	A	1	298
+P24941	1	298	3tiz	CDK2 in complex with NSC 111848	1	298	A	None	298
+P24941	1	298	3tiy	CDK2 in complex with NSC 35676	1	298	A	None	298
+P24941	1	298	2v22	REPLACE: A strategy for Iterative Design of Cyclin Binding Groove Inhibitors	1	298	A	1	None
+P24941	1	298	2v22	REPLACE: A strategy for Iterative Design of Cyclin Binding Groove Inhibitors	1	298	C	1	None
+P24941	1	298	1ykr	Crystal structure of cdk2 with an aminoimidazo pyridine inhibitor	1	298	A	1	298
+P24941	1	298	5mhq	CCT068127 in complex with CDK2	9	306	A	1	298
+P24941	1	298	2wpa	Optimisation of 6,6-Dimethyl Pyrrolo 3,4-c pyrazoles: Identification of PHA-793887, a Potent CDK Inhibitor Suitable for Intravenous Dosing	6	303	C	1	298
+P24941	1	298	2wpa	Optimisation of 6,6-Dimethyl Pyrrolo 3,4-c pyrazoles: Identification of PHA-793887, a Potent CDK Inhibitor Suitable for Intravenous Dosing	6	303	A	1	298
+P24941	1	298	1b38	HUMAN CYCLIN-DEPENDENT KINASE 2	2	299	A	1	298
+P24941	1	298	5d1j	CRYSTAL STRUCTURE OF CYCLIN-DEPENDENT KINASE 2 (CDK2-WT) COMPLEX WITH N-[5-[[[5-(1,1-DIMETHYLETHYL)-2-OXAZOLYL] METHYL]THIO]-2-THIAZOLYL]-4-PIPERIDINECARBOXAMIDE (BMS-387032)	1	298	A	1	298
+P24941	1	298	1b39	HUMAN CYCLIN-DEPENDENT KINASE 2 PHOSPHORYLATED ON THR 160	2	299	A	1	298
+P24941	1	298	4kd1	CDK2 in complex with Dinaciclib	1	298	A	1	298
+P24941	1	298	3qtq	CDK2 in complex with inhibitor RC-1-137	9	306	A	1	298
+P24941	1	298	3qtr	CDK2 in complex with inhibitor RC-1-148	9	306	A	1	298
+P24941	1	298	3qts	CDK2 in complex with inhibitor RC-2-12	9	306	A	1	298
+P24941	1	298	3qtu	CDK2 in complex with inhibitor RC-2-132	9	306	A	1	298
+P24941	1	298	3qtw	CDK2 in complex with inhibitor RC-2-13	9	306	A	1	298
+P24941	1	298	3qtx	CDK2 in complex with inhibitor RC-2-35	9	306	A	1	298
+P24941	1	298	3qtz	CDK2 in complex with inhibitor RC-2-36	9	306	A	1	298
+P24941	1	298	2duv	Structure of CDK2 with a 3-hydroxychromones	1	298	A	1	298
+P24941	1	298	5if1	Crystal structure apo CDK2/cyclin A	1	298	A	1	298
+P24941	1	298	5if1	Crystal structure apo CDK2/cyclin A	1	298	C	1	None
+P24941	1	298	3uli	Human Cyclin Dependent Kinase 2 (CDK2) bound to azabenzimidazole derivative	1	298	A	1	298
+P24941	1	298	2btr	STRUCTURE OF CDK2 COMPLEXED WITH PNU-198873	1	298	A	1	298
+P24941	1	298	2bts	STRUCTURE OF CDK2 COMPLEXED WITH PNU-230032	1	298	A	1	298
+P24941	1	298	3rkb	CDK2 in complex with inhibitor RC-2-73	9	306	A	1	298
+P24941	1	298	3le6	The structure of cyclin dependent kinase 2 (CKD2) with a pyrazolobenzodiazepine inhibitor	1	298	A	1	None
+P24941	1	298	4cfu	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	6	303	A	1	298
+P24941	1	298	4cfu	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	6	303	C	1	None
+P24941	1	298	3rpv	CDK2 in complex with inhibitor RC-2-88	9	306	A	1	298
+P24941	1	298	4cfw	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	6	303	A	1	298
+P24941	1	298	4cfw	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	6	303	C	1	None
+P24941	1	298	4cfv	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	6	303	A	1	298
+P24941	1	298	4cfv	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	6	303	C	1	None
+P24941	1	298	3rpr	CDK2 in complex with inhibitor RC-2-49	9	306	A	1	298
+P24941	1	298	4cfx	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	6	303	C	1	298
+P24941	1	298	4cfx	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	6	303	A	1	298
+P24941	1	298	3rpy	CDK2 in complex with inhibitor RC-2-40	9	306	A	1	298
+P24941	1	298	2wfy	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	298	A	1	None
+P24941	1	298	2wfy	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	298	C	1	None
+P24941	1	298	4cfm	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	6	303	A	1	None
+P24941	1	298	4cfm	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	6	303	C	1	None
+P24941	1	298	4cfn	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	5	302	A	1	None
+P24941	1	298	4cfn	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	5	302	C	1	None
+P24941	1	298	3rk9	CDK2 in complex with inhibitor RC-2-74	9	306	A	1	298
+P24941	1	298	1fvv	THE STRUCTURE OF CDK2/CYCLIN A IN COMPLEX WITH AN OXINDOLE INHIBITOR	1	298	C	1	298
+P24941	1	298	1fvv	THE STRUCTURE OF CDK2/CYCLIN A IN COMPLEX WITH AN OXINDOLE INHIBITOR	1	298	A	1	298
+P24941	1	298	1fvt	THE STRUCTURE OF CYCLIN-DEPENDENT KINASE 2 (CDK2) IN COMPLEX WITH AN OXINDOLE INHIBITOR	1	298	A	1	298
+P24941	1	298	3rk7	CDK2 in complex with inhibitor RC-2-71	9	306	A	1	298
+P24941	1	298	3rk5	CDK2 in complex with inhibitor RC-2-72	9	306	A	1	298
+P24941	1	298	1jvp	Crystal structure of human CDK2 (unphosphorylated) in complex with PKF049-365	1	298	P	1	298
+P24941	1	298	6ath	Cdk2/cyclin A/p27-KID-deltaC	3	300	A	None	298
+P24941	1	298	3fz1	Crystal structure of a benzthiophene inhibitor bound to human Cyclin-dependent Kinase-2 (CDK-2)	1	298	A	1	298
+P24941	1	298	2iw8	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A F82H-L83V-H84D MUTANT WITH AN O6-CYCLOHEXYLMETHYLGUANINE INHIBITOR	5	302	A	1	None
+P24941	1	298	2iw8	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A F82H-L83V-H84D MUTANT WITH AN O6-CYCLOHEXYLMETHYLGUANINE INHIBITOR	5	302	C	1	None
+P24941	1	298	2iw9	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A COMPLEXED WITH A BISANILINOPYRIMIDINE INHIBITOR	5	302	A	1	None
+P24941	1	298	2iw9	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A COMPLEXED WITH A BISANILINOPYRIMIDINE INHIBITOR	5	302	C	1	None
+P24941	1	298	1w0x	Crystal structure of human CDK2 in complex with the inhibitor olomoucine.	1	298	C	1	298
+P24941	1	298	2r3p	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	2r3r	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	2iw6	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A COMPLEXED WITH A BISANILINOPYRIMIDINE INHIBITOR	5	302	A	1	None
+P24941	1	298	2iw6	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A COMPLEXED WITH A BISANILINOPYRIMIDINE INHIBITOR	5	302	C	1	None
+P24941	1	298	2r3i	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	2r3h	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	2r3k	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	2r3j	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	2r3m	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	2r3l	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	2r3o	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	2r3n	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	6q3b	CDK2 in complex with FragLite2	9	306	A	1	298
+P24941	1	298	6q3c	CDK2 in complex with FragLite1	9	306	A	None	298
+P24941	1	298	6q3f	CDK2 in complex with FragLite2	9	306	A	1	298
+P24941	1	298	2r3g	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	2r3f	Crystal Structure of Cyclin-Dependent Kinase 2 with inhibitor	2	299	A	1	298
+P24941	1	298	3r9n	CDK2 in complex with inhibitor RC-2-21	9	306	A	1	298
+P24941	1	298	3r9o	CDK2 in complex with inhibitor RC-2-143	9	306	A	1	298
+P24941	1	298	3r9h	CDK2 in complex with inhibitor RC-2-142	9	306	A	1	298
+P24941	1	298	3r9d	CDK2 in complex with inhibitor RC-2-135	9	306	A	1	298
+P24941	1	298	2w06	Structure of CDK2 in complex with an imidazolyl pyrimidine, compound 5c	2	299	A	1	298
+P24941	1	298	2fvd	Cyclin Dependent Kinase 2 (CDK2) with diaminopyrimidine inhibitor	1	298	A	1	298
+P24941	1	298	4gcj	CDK2 in complex with inhibitor RC-3-89	9	306	A	1	298
+P24941	1	298	2xmy	Discovery and Characterisation of 2-Anilino-4-(thiazol-5-yl) pyrimidine Transcriptional CDK Inhibitors as Anticancer Agents	1	298	A	1	298
+P24941	1	298	3qql	CDK2 in complex with inhibitor L3	9	306	A	1	298
+P24941	1	298	3qqk	CDK2 in complex with inhibitor L4	9	306	A	1	298
+P24941	1	298	3qqj	CDK2 in complex with inhibitor L2	9	306	A	1	298
+P24941	1	298	3qqh	CDK2 in complex with inhibitor L2-2	9	306	A	1	298
+P24941	1	298	3qqg	CDK2 in complex with inhibitor L2-5	9	306	A	1	298
+P24941	1	298	3qqf	CDK2 in complex with inhibitor L1	9	306	A	1	298
+P24941	1	298	1aq1	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR STAUROSPORINE	1	298	A	1	298
+P24941	1	298	1ckp	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR PURVALANOL B	1	298	A	1	298
+P24941	1	298	3unj	CDK2 in complex with inhibitor YL1-038-31	1	298	A	1	298
+P24941	1	298	3unk	CDK2 in complex with inhibitor YL5-083	1	298	A	1	298
+P24941	1	298	4fko	Crystal structure of the cdk2 in complex with thiazolylpyrimidine inhibitor	2	299	A	1	298
+P24941	1	298	4ii5	Structure of PCDK2/CYCLINA bound to ADP and 1 MAGNESIUM ION	1	298	A	1	None
+P24941	1	298	4ii5	Structure of PCDK2/CYCLINA bound to ADP and 1 MAGNESIUM ION	1	298	C	1	None
+P24941	1	298	4ez7	CDK2 in complex with staurosporine and 2 molecules of 8-anilino-1-naphthalene sulfonic acid	9	306	A	1	298
+P24941	1	298	2g9x	Structure of Thr 160 phosphorylated CDK2/cyclin A in complex with the inhibitor NU6271	2	299	C	1	298
+P24941	1	298	2g9x	Structure of Thr 160 phosphorylated CDK2/cyclin A in complex with the inhibitor NU6271	2	299	A	1	298
+P24941	1	298	4ez3	CDK2 in complex with NSC 134199	9	306	A	1	298
+P24941	1	298	3ig7	Novel CDK-5 inhibitors - crystal structure of inhibitor EFP with CDK-2	2	299	A	1	298
+P24941	1	298	2a4l	Human cyclin-dependent kinase 2 in complex with roscovitine	1	298	A	1	298
+P24941	1	298	1y91	Crystal structure of human CDK2 complexed with a pyrazolo[1,5-a]pyrimidine inhibitor	1	298	A	1	298
+P24941	1	298	3dog	Structure of Thr 160 phosphorylated CDK2/cyclin A in complex with the inhibitor N-&-N1	2	299	A	1	298
+P24941	1	298	3dog	Structure of Thr 160 phosphorylated CDK2/cyclin A in complex with the inhibitor N-&-N1	2	299	C	1	None
+P24941	1	298	2vtp	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design.	1	298	A	1	298
+P24941	1	298	1p5e	The structure of phospho-CDK2/cyclin A in complex with the inhibitor 4,5,6,7-tetrabromobenzotriazole (TBS)	2	299	A	1	None
+P24941	1	298	1p5e	The structure of phospho-CDK2/cyclin A in complex with the inhibitor 4,5,6,7-tetrabromobenzotriazole (TBS)	2	299	C	1	None
+P24941	1	298	5oo0	Cdk2(WT) covalent adduct with D28 at C177	6	303	A	None	None
+P24941	1	298	2vtr	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design	1	298	A	1	298
+P24941	1	298	3igg	Novel CDK-5 inhibitors - crystal structure of inhibitor EFQ with CDK-2	2	299	A	1	298
+P24941	1	298	1pxp	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR N-[4-(2,4-Dimethyl-thiazol-5-yl)-pyrimidin-2-yl]-N',N'-dimethyl-benzene-1,4-diamine	1	298	A	1	298
+P24941	1	298	3eid	CDK2/CyclinA complexed with a pyrazolopyridazine inhibitor	1	298	A	1	None
+P24941	1	298	3eid	CDK2/CyclinA complexed with a pyrazolopyridazine inhibitor	1	298	C	1	None
+P24941	1	298	4lyn	Crystal structure of cyclin-dependent kinase 2 (cdk2-wt) complex with (2s)-n-(5-(((5-tert-butyl-1,3-oxazol-2-yl)methyl)sulfanyl)-1,3-thiazol-2-yl)-2-phenylpropanamide	1	298	A	1	298
+P24941	1	298	1pxo	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR [4-(2-Amino-4-methyl-thiazol-5-yl)-pyrimidin-2-yl]-(3-nitro-phenyl)-amine	1	298	A	1	298
+P24941	1	298	1pxn	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR 4-[4-(4-Methyl-2-methylamino-thiazol-5-yl)-pyrimidin-2-ylamino]-phenol	1	298	A	1	298
+P24941	1	298	1pxm	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR 3-[4-(2,4-Dimethyl-thiazol-5-yl)-pyrimidin-2-ylamino]-phenol	1	298	A	1	298
+P24941	1	298	1pxl	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR [4-(2,4-Dimethyl-thiazol-5-yl)-pyrimidin-2-yl]-(4-trifluoromethyl-phenyl)-amine	1	298	A	1	298
+P24941	1	298	1pxk	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR N-[4-(2,4-Dimethyl-thiazol-5-yl)pyrimidin-2-yl]-N'-hydroxyiminoformamide	1	298	A	1	298
+P24941	1	298	1pxj	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR 4-(2,4-Dimethyl-thiazol-5-yl)-pyrimidin-2-ylamine	1	298	A	1	298
+P24941	1	298	1pxi	HUMAN CYCLIN DEPENDENT KINASE 2 COMPLEXED WITH THE INHIBITOR 4-(2,5-Dichloro-thiophen-3-yl)-pyrimidin-2-ylamine	1	298	A	1	298
+P24941	1	298	3qzf	CDK2 in complex with inhibitor JWS-6-52	9	306	A	1	298
+P24941	1	298	3qzg	CDK2 in complex with inhibitor JWS-6-76	9	306	A	1	298
+P24941	1	298	2vti	Identification of N-(4-piperidinyl)-4-(2,6-dichlorobenzoylamino)-1H- pyrazole-3-carboxamide (AT7519), a Novel Cyclin Dependent Kinase Inhibitor Using Fragment-Based X-Ray Crystallography and Structure Based Drug Design.	1	298	A	1	298
+P24941	1	298	3qzh	CDK2 in complex with inhibitor KVR-1-124	9	306	A	1	298
+P24941	1	298	3qzi	CDK2 in complex with inhibitor KVR-1-126	9	306	A	1	298
+P24941	1	298	3py0	CDK2 in complex with inhibitor SU9516	9	306	A	1	298
+P24941	1	298	3py1	CDK2 ternary complex with SU9516 and ANS	9	306	A	1	298
+P24941	1	298	6jgm	Crystal structure of CDK2 IN complex with Inhibitor NU-6140	2	299	A	1	298
+P24941	1	298	1h08	CDK2 in complex with a disubstituted 2, 4-bis anilino pyrimidine CDK4 inhibitor	2	299	A	1	298
+P24941	1	298	3ql8	CDK2 in complex with inhibitor JWS-6-260	9	306	A	1	298
+P24941	1	298	4nj3	Modulating the interaction between CDK2 and Cyclin A with a Quinoline-based inhibitor	2	299	A	1	298
+P24941	1	298	3ral	CDK2 in complex with inhibitor RC-2-34	9	306	A	1	298
+P24941	1	298	1wcc	screening for fragment binding by X-ray crystallography	1	298	A	1	298
+P24941	1	298	3rah	CDK2 in complex with inhibitor RC-2-22	9	306	A	1	298
+P24941	1	298	3rai	CDK2 in complex with inhibitor KVR-1-160	9	306	A	1	298
+P24941	1	298	3rak	CDK2 in complex with inhibitor RC-2-32	9	306	A	1	298
+P24941	1	298	5ani	Crystal structure of CDK2 in complex with 6-chloro-7H-purine processed with the CrystalDirect automated mounting and cryo-cooling technology	1	298	A	None	298
+P24941	1	298	5anj	Crystal structure of CDK2 in complex with N-(9H-purin-6-yl)thiophene- 2-carboxamide processed with the CrystalDirect automated mounting and cryo-cooling technology	1	298	A	None	298
+P24941	1	298	5ank	Crystal structure of CDK2 in complex with 2,4,6-trioxo-1-phenyl- hexahydropyrimidine-5-carboxamide processed with the CrystalDirect automated mounting and cryo-cooling technology	1	298	A	1	298
+P24941	1	298	5ano	Crystal structure of CDK2 processed with the CrystalDirect automated mounting and cryo-cooling technology	1	298	A	1	298
+P24941	1	298	5and	Crystal structure of CDK2 in complex with 2-imidazol-1-yl-1H- benzimidazole processed with the CrystalDirect automated mounting and cryo-cooling technology	1	298	A	None	None
+P24941	1	298	5ane	Crystal structure of CDK2 in complex with 6-methoxy-7H-purine processed with the CrystalDirect automated mounting and cryo-cooling technology	1	298	A	1	298
+P24941	1	298	5ang	Crystal structure of CDK2 in complex with 7-hydroxy-4-(morpholinomethyl)chromen-2-one processed with the CrystalDirect automated mounting and cryo-cooling technology	1	298	A	None	298
+P24941	1	298	3ej1	CDK2/CyclinA complexed with a pyrazolopyridazine inhibitor	1	298	A	1	298
+P24941	1	298	3ej1	CDK2/CyclinA complexed with a pyrazolopyridazine inhibitor	1	298	C	1	None
+P24941	1	298	2uue	REPLACE: A strategy for Iterative Design of Cyclin Binding Groove Inhibitors	1	298	A	1	None
+P24941	1	298	2uue	REPLACE: A strategy for Iterative Design of Cyclin Binding Groove Inhibitors	1	298	C	1	None
+P24941	1	298	2vv9	CDK2 in complex with an imidazole piperazine	2	299	A	1	298
+P24941	1	298	2b54	Human cyclin dependent kinase 2 (CKD2)complexed with DIN-232305	1	298	A	1	298
+P24941	1	298	3wbl	Crystal structure of CDK2 in complex with pyrazolopyrimidine inhibitor	1	298	A	1	298
+P24941	1	298	3qu0	CDK2 in complex with inhibitor RC-2-38	9	306	A	1	298
+P24941	1	298	1gy3	pCDK2/cyclin A in complex with MgADP, nitrate and peptide substrate	2	299	A	1	None
+P24941	1	298	1gy3	pCDK2/cyclin A in complex with MgADP, nitrate and peptide substrate	2	299	C	1	None
+P24941	1	298	2clx	4-Arylazo-3,5-diamino-1H-pyrazole CDK Inhibitors: SAR Study, Crystal Structure in Complex with CDK2, Selectivity, and Cellular Effects	1	298	A	1	298
+P24941	1	298	2bpm	STRUCTURE OF CDK2-CYCLIN A WITH PHA-630529	6	303	C	1	298
+P24941	1	298	2bpm	STRUCTURE OF CDK2-CYCLIN A WITH PHA-630529	6	303	A	1	298
+P24941	1	298	4fx3	Crystal Structure of the CDK2/Cyclin A complex with oxindole inhibitor	1	298	C	1	298
+P24941	1	298	4fx3	Crystal Structure of the CDK2/Cyclin A complex with oxindole inhibitor	1	298	A	1	298
+P24941	1	298	3roy	CDK2 in complex with inhibitor KVR-1-154	9	306	A	1	298
+P24941	1	297	4eop	Thr 160 phosphorylated CDK2 Q131E - human cyclin A3 complex with the inhibitor RO3306	4	300	A	1	297
+P24941	1	297	4eop	Thr 160 phosphorylated CDK2 Q131E - human cyclin A3 complex with the inhibitor RO3306	4	300	C	1	None
+P24941	1	297	4eoq	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with ATP	5	301	A	1	297
+P24941	1	297	4eoq	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with ATP	5	301	C	1	None
+P24941	1	297	4eor	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with the inhibitor NU6102	2	298	A	1	297
+P24941	1	297	4eor	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with the inhibitor NU6102	2	298	C	1	None
+P24941	1	297	4eos	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with the inhibitor RO3306	4	300	A	1	297
+P24941	1	297	4eos	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with the inhibitor RO3306	4	300	C	1	None
+P24941	1	297	4eok	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with the inhibitor NU6102	4	300	C	1	297
+P24941	1	297	4eok	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with the inhibitor NU6102	4	300	A	1	297
+P24941	1	297	4eoo	Thr 160 phosphorylated CDK2 Q131E - human cyclin A3 complex with ATP	3	299	A	1	297
+P24941	1	297	4eoo	Thr 160 phosphorylated CDK2 Q131E - human cyclin A3 complex with ATP	3	299	C	1	None
+P24941	1	297	4eol	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with the inhibitor RO3306	4	300	C	1	297
+P24941	1	297	4eol	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with the inhibitor RO3306	4	300	A	1	297
+P24941	1	297	4eom	Thr 160 phosphorylated CDK2 H84S, Q85M, Q131E - human cyclin A3 complex with ATP	5	301	A	1	297
+P24941	1	297	4eom	Thr 160 phosphorylated CDK2 H84S, Q85M, Q131E - human cyclin A3 complex with ATP	5	301	C	1	None
+P24941	1	297	1w98	The structural basis of CDK2 activation by cyclin E	2	298	A	1	297
+P24941	1	296	1pkd	THE CRYSTAL STRUCTURE OF UCN-01 IN COMPLEX WITH PHOSPHO-CDK2/CYCLIN A	2	297	A	1	296
+P24941	1	296	1pkd	THE CRYSTAL STRUCTURE OF UCN-01 IN COMPLEX WITH PHOSPHO-CDK2/CYCLIN A	2	297	C	1	296
+P24941	1	296	4i3z	Structure of pCDK2/CyclinA bound to ADP and 2 Magnesium ions	1	296	A	1	296
+P24941	1	296	4i3z	Structure of pCDK2/CyclinA bound to ADP and 2 Magnesium ions	1	296	C	1	296
+P24941	1	296	3qhw	Structure of a pCDK2/CyclinA transition-state mimic	3	298	A	1	296
+P24941	1	296	3qhw	Structure of a pCDK2/CyclinA transition-state mimic	3	298	C	1	296
+P24941	1	296	1e9h	Thr 160 phosphorylated CDK2 - Human cyclin A3 complex with the inhibitor indirubin-5-sulphonate bound	2	297	A	1	296
+P24941	1	296	1e9h	Thr 160 phosphorylated CDK2 - Human cyclin A3 complex with the inhibitor indirubin-5-sulphonate bound	2	297	C	1	296
+P24941	1	296	3qhr	Structure of a pCDK2/CyclinA transition-state mimic	3	298	A	1	296
+P24941	1	296	3qhr	Structure of a pCDK2/CyclinA transition-state mimic	3	298	C	1	296
+P24941	1	288	2jgz	Crystal structure of phospho-CDK2 in complex with Cyclin B	2	289	A	1	288
+

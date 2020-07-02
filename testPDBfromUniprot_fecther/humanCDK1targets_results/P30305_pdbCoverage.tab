@@ -1,0 +1,45 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P30305	M-phase inducer phosphatase 2	MPIP2_HUMAN	Homo sapiens	PF00581	Rhodanese	Rhodanese-like domain	418	531
+P30305	M-phase inducer phosphatase 2	MPIP2_HUMAN	Homo sapiens	PF06617	M-inducer_phosp	M-phase inducer phosphatase	113	383
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#22 mappings in 22 PDB chains in 17 PDB entries
+P30305	38	46	3fqu	Phosphorylation of self-peptides alters Human Leukocyte Antigen Class I-restricted antigen presentation and generates tumor specific epitopes	1	9	C	1	9
+P30305	38	46	3fqt	Phosphorylation of self-peptides alters Human Leukocyte Antigen Class I-restricted antigen presentation and generates tumor specific epitopes	1	9	C	1	9
+P30305	370	580	1qb0	HUMAN CDC25B CATALYTIC DOMAIN	1	211	A	None	None
+P30305	370	580	1cwr	HUMAN CDC25B CATALYTIC DOMAIN WITHOUT ION IN CATALYTIC SITE	1	211	A	None	None
+P30305	370	580	1cws	HUMAN CDC25B CATALYTIC DOMAIN WITH TUNGSTATE	1	211	A	None	None
+P30305	386	565	4wh9	Structure of the CDC25B Phosphatase Catalytic Domain with Bound Inhibitor	4	183	A	None	551
+P30305	386	565	4wh7	Structure of the CDC25B Phosphatase Catalytic Domain with Bound Ligand	4	183	A	None	551
+P30305	388	565	1cwt	HUMAN CDC25B CATALYTIC DOMAIN WITH METHYL MERCURY	1	178	A	374	551
+P30305	391	564	2a2k	Crystal Structure of an active site mutant, C473S, of Cdc25B Phosphatase Catalytic Domain	2	175	A	377	550
+P30305	391	564	1ym9	Crystal structure of the CDC25B phosphatase catalytic domain with the active site cysteine in the sulfinic form	2	175	A	377	550
+P30305	391	564	1yml	Crystal Structure of the CDC25B phosphatase catalytic domain with the active site cysteine in the sulfenic form	2	175	A	377	550
+P30305	391	564	1ys0	Crystal Structure of the CDC25B phosphatase catalytic domain with the active site cysteine in the disulfide form	2	175	A	377	550
+P30305	391	564	1ymk	Crystal Structure of the CDC25B phosphatase catalytic domain in the apo form	2	175	A	377	550
+P30305	391	564	2ifd	Crystal structure of a remote binding site mutant, R492L, of CDC25B Phosphatase catalytic domain	2	175	A	377	550
+P30305	391	564	1ymd	Crystal Structure of the CDC25B phosphatase catalytic domain with the active site cysteine in the sulfonic form	2	175	A	377	550
+P30305	391	580	2uzq	Protein Phosphatase, New Crystal Form	14	203	E	377	None
+P30305	391	580	2uzq	Protein Phosphatase, New Crystal Form	14	203	B	377	None
+P30305	391	580	2uzq	Protein Phosphatase, New Crystal Form	14	203	F	377	None
+P30305	391	580	2uzq	Protein Phosphatase, New Crystal Form	14	203	C	377	None
+P30305	391	580	2uzq	Protein Phosphatase, New Crystal Form	14	203	A	377	None
+P30305	391	580	2uzq	Protein Phosphatase, New Crystal Form	14	203	D	377	None
+P30305	391	564	2ifv	Crystal structure of an active site mutant, C473D, of CDC25B phosphatase catalytic domain	2	175	A	377	550
+

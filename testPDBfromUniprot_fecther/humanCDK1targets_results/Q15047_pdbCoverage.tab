@@ -1,0 +1,45 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q15047	SETDB1-1170me3 Peptide	SETB1_HUMAN	Homo sapiens	PF00856	SET	SET domain	814	1266
+Q15047	SETDB1-1170me3 Peptide	SETB1_HUMAN	Homo sapiens	PF01429	MBD	Methyl-CpG binding domain	594	668
+Q15047	SETDB1-1170me3 Peptide	SETB1_HUMAN	Homo sapiens	PF05033	Pre-SET	Pre-SET motif	682	795
+Q15047	SETDB1-1170me3 Peptide	SETB1_HUMAN	Homo sapiens	PF18300	DUF5604	Domain of unknown function (DUF5604)	193	250
+Q15047	SETDB1-1170me3 Peptide	SETB1_HUMAN	Homo sapiens	PF18358	Tudor_4	Histone methyltransferase Tudor domain	348	397
+Q15047	SETDB1-1170me3 Peptide	SETB1_HUMAN	Homo sapiens	PF18359	TUDOR_5	Histone methyltransferase Tudor domain 1	258	309
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#18 mappings in 18 PDB chains in 17 PDB entries
+Q15047	190	410	6bhg	Crystal structure of SETDB1 with a modified H3 peptide	19	239	A	190	None
+Q15047	190	410	6bhh	Crystal structure of SETDB1 with a modified H3 peptide	19	239	A	190	None
+Q15047	190	410	6bhi	Crystal structure of SETDB1 with a modified H3 peptide	19	239	A	190	None
+Q15047	190	410	6bhd	Crystal structure of SETDB1 with a modified H3 peptide	19	239	A	190	None
+Q15047	190	410	6bhe	Crystal structure of SETDB1 with a modified H3 peptide	19	239	A	190	None
+Q15047	196	403	5kch	SETDB1 in complex with an early stage, low affinity fragment candidate modelled at reduced occupancy into weak electron density	18	225	A	196	None
+Q15047	196	403	5kco	SETDB1 in complex with an early stage, low affinity fragment candidate modelled at reduced occupancy	18	225	A	196	None
+Q15047	196	402	3dlm	Crystal structure of Tudor domain of human Histone-lysine N-methyltransferase SETDB1	7	213	A	7	None
+Q15047	196	402	6bpi	Crystal structure of SETDB1 Tudor domain with aryl triazole fragment peptide conjugates	7	213	A	196	None
+Q15047	196	402	6au3	Crystal structure of SETDB1 Tudor domain with aryl triazole fragments	7	213	A	196	None
+Q15047	196	402	6au2	Crystal structure of SETDB1 Tudor domain with aryl triazole fragments	7	213	A	196	None
+Q15047	196	402	5ke3	Crystal structure of SETDB1 Tudor domain in complex with fragment MRT0181a	7	213	A	196	None
+Q15047	196	402	5ke2	Crystal structure of SETDB1 Tudor domain in complex with inhibitor XST06472A	7	213	A	196	None
+Q15047	196	400	5kh6	SETDB1 in complex with a fragment candidate	7	211	A	196	400
+Q15047	196	397	5qt2	PanDDA analysis group deposition -- Partial occupancy interpretation of PanDDA event map: SETDB1 in complex with FMOPL000074a	18	219	A	196	397
+Q15047	196	397	5qt1	PanDDA analysis group deposition -- Partial occupancy interpretation of PanDDA event map: SETDB1 in complex with FMOMB000017a	18	219	A	196	397
+Q15047	1165	1174	4x3s	Crystal structure of chromobox homology 7 (CBX7) with SETDB1-1170me3 Peptide	1	10	D	1165	None
+Q15047	1165	1174	4x3s	Crystal structure of chromobox homology 7 (CBX7) with SETDB1-1170me3 Peptide	1	10	C	1165	None
+

@@ -1,0 +1,27 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P16220	Cyclic AMP-responsive element-binding protein 1	CREB1_HUMAN	Homo sapiens	PF00170	bZIP_1	bZIP transcription factor	281	340
+P16220	Cyclic AMP-responsive element-binding protein 1	CREB1_HUMAN	Homo sapiens	PF02173	pKID	pKID domain	113	153
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 4 PDB chains in 3 PDB entries
+P16220	116	149	2lxt	Allosteric communication in the KIX domain proceeds through dynamic re-packing of the hydrophobic core	1	34	C	116	149
+P16220	283	341	5zko	Crystal structure of the CRTC2-CREB-CRE complex	1	59	A	None	None
+P16220	283	341	5zko	Crystal structure of the CRTC2-CREB-CRE complex	1	59	C	None	None
+P16220	283	341	5zk1	Crystal Structure of the CRTC2(SeMet)-CREB-CRE complex	1	59	A	None	None
+

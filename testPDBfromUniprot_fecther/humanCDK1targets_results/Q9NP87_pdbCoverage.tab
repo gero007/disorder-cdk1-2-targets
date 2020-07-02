@@ -1,0 +1,147 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9NP87	human DNA Polymerase Mu	DPOLM_HUMAN	Homo sapiens	PF10391	DNA_pol_lambd_f	Fingers domain of DNA polymerase lambda	238	287
+Q9NP87	human DNA Polymerase Mu	DPOLM_HUMAN	Homo sapiens	PF14716	HHH_8	Helix-hairpin-helix domain	153	218
+Q9NP87	human DNA Polymerase Mu	DPOLM_HUMAN	Homo sapiens	PF14791	DNA_pol_B_thumb	DNA polymerase beta thumb	430	493
+Q9NP87	human DNA Polymerase Mu	DPOLM_HUMAN	Homo sapiens	PF14792	DNA_pol_B_palm	DNA polymerase beta palm	290	386
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#122 mappings in 71 PDB chains in 70 PDB entries
+Q9NP87	2	30	5w4f	Importin binding to pol Mu NLS peptide	1	29	D	None	None
+Q9NP87	2	30	5w4f	Importin binding to pol Mu NLS peptide	1	29	A	2	None
+Q9NP87	21	124	2htf	The solution structure of the BRCT domain from human polymerase reveals homology with the TdT BRCT domain	2	105	A	21	124
+Q9NP87	24	143	2dun	Solution structure of BRCT domain of DNA polymerase mu	8	127	A	8	127
+Q9NP87	132	494	5tyy	DNA Polymerase Mu Product Complex, Mn2+ (60 min)	6	356	A	None	494
+Q9NP87	132	494	5tyf	DNA Polymerase Mu Product Complex, 10 mM Mg2+ (270 min)	6	356	A	None	494
+Q9NP87	132	494	5tyd	DNA Polymerase Mu Reactant Complex, 10 mM Mg2+ (45 min)	6	356	A	None	494
+Q9NP87	132	494	5tye	DNA Polymerase Mu Product Complex, 10 mM Mg2+ (60 min)	6	356	A	None	494
+Q9NP87	132	494	5tyg	DNA Polymerase Mu Product Complex, 10 mM Mg2+ (960 min)	6	356	A	None	494
+Q9NP87	132	494	5tyb	DNA Polymerase Mu Reactant Complex, 10mM Mg2+ (7.5 min)	6	356	A	None	494
+Q9NP87	132	494	5tyc	DNA Polymerase Mu Reactant Complex, 10mM Mg2+ (15 min)	6	356	A	None	494
+Q9NP87	132	494	5tyv	DNA Polymerase Mu Reactant Complex, Mn2+ (7.5 min)	6	356	A	None	494
+Q9NP87	132	494	5tyu	DNA Polymerase Mu Reactant Complex, Mn2+ (4 min)	6	356	A	None	494
+Q9NP87	132	494	5tyw	DNA Polymerase Mu Reactant Complex, Mn2+ (10 min)	6	356	A	None	494
+Q9NP87	132	494	5tyx	DNA Polymerase Mu Product Complex, Mn2+ (15 min)	6	356	A	None	494
+Q9NP87	411	494	6ak8	Pre-catalytic Ternary Complex of Human DNA Polymerase Mu with Templating Adenine and Incoming Ca-8oxodGTP	273	356	A	411	494
+Q9NP87	132	397	6ak8	Pre-catalytic Ternary Complex of Human DNA Polymerase Mu with Templating Adenine and Incoming Ca-8oxodGTP	6	271	A	None	397
+Q9NP87	411	494	6ak9	Pre-catalytic Ternary Complex of Human DNA Polymerase Mu with Templating Cytosine and Incoming Ca-8oxodGTP	273	356	A	411	494
+Q9NP87	132	397	6ak9	Pre-catalytic Ternary Complex of Human DNA Polymerase Mu with Templating Cytosine and Incoming Ca-8oxodGTP	6	271	A	None	397
+Q9NP87	411	494	4lzg	Binary complex of human DNA Polymerase Mu with DNA	273	356	A	411	494
+Q9NP87	132	397	4lzg	Binary complex of human DNA Polymerase Mu with DNA	6	271	A	None	397
+Q9NP87	411	494	6akh	Pre-catalytic Ternary Complex of Human DNA Polymerase Mu with Templating Adenine and Incoming Mn-dUMPNPP	273	356	A	411	494
+Q9NP87	132	397	6akh	Pre-catalytic Ternary Complex of Human DNA Polymerase Mu with Templating Adenine and Incoming Mn-dUMPNPP	6	271	A	None	397
+Q9NP87	411	494	4lzd	Human DNA polymerase mu- Apoenzyme	273	356	A	411	494
+Q9NP87	132	397	4lzd	Human DNA polymerase mu- Apoenzyme	6	271	A	None	397
+Q9NP87	411	494	4m0a	Human DNA Polymerase Mu post-catalytic complex	273	356	A	411	494
+Q9NP87	132	397	4m0a	Human DNA Polymerase Mu post-catalytic complex	6	271	A	None	397
+Q9NP87	411	494	6ipl	Binary Complex of Human DNA Polymerase Mu with MgdATP	273	356	A	411	494
+Q9NP87	132	397	6ipl	Binary Complex of Human DNA Polymerase Mu with MgdATP	6	271	A	None	397
+Q9NP87	411	494	6aeh	Binary complex of human DNA Polymerase Mu with MnUTP	273	356	A	411	494
+Q9NP87	132	397	6aeh	Binary complex of human DNA Polymerase Mu with MnUTP	6	271	A	None	397
+Q9NP87	411	494	6ak6	Binary Complex of Human DNA Polymerase Mu with MnCTP	273	356	A	411	494
+Q9NP87	132	397	6ak6	Binary Complex of Human DNA Polymerase Mu with MnCTP	6	271	A	None	397
+Q9NP87	411	494	6ipf	Post-catalytic Complex of Human DNA Polymerase Mu with Templating Cytosine and Mn-8oxodGMP	273	356	A	411	494
+Q9NP87	132	397	6ipf	Post-catalytic Complex of Human DNA Polymerase Mu with Templating Cytosine and Mn-8oxodGMP	6	271	A	None	397
+Q9NP87	411	494	6ipe	Post-catalytic Complex of Human DNA Polymerase Mu with Templating Adenine and Mg-8oxodGMP	273	356	A	411	494
+Q9NP87	132	397	6ipe	Post-catalytic Complex of Human DNA Polymerase Mu with Templating Adenine and Mg-8oxodGMP	6	271	A	None	397
+Q9NP87	411	494	6ipd	Post-catalytic Complex of Human DNA Polymerase Mu with Templating Adenine and Mn-8oxodGMP	273	356	A	411	494
+Q9NP87	132	397	6ipd	Post-catalytic Complex of Human DNA Polymerase Mu with Templating Adenine and Mn-8oxodGMP	6	271	A	None	397
+Q9NP87	411	494	6ipg	Post-catalytic Complex of Human DNA Polymerase Mu with Templating Cytosine and Mg-8oxodGMP	273	356	A	411	494
+Q9NP87	132	397	6ipg	Post-catalytic Complex of Human DNA Polymerase Mu with Templating Cytosine and Mg-8oxodGMP	6	271	A	None	397
+Q9NP87	411	494	6ak5	Binary Complex of Human DNA Polymerase Mu with MnGTP	273	356	A	411	494
+Q9NP87	132	397	6ak5	Binary Complex of Human DNA Polymerase Mu with MnGTP	6	271	A	None	397
+Q9NP87	411	494	6ipm	Binary Complex of Human DNA Polymerase Mu with MgdCTP	273	356	A	411	494
+Q9NP87	132	397	6ipm	Binary Complex of Human DNA Polymerase Mu with MgdCTP	6	271	A	None	397
+Q9NP87	411	494	4m04	Human DNA Polymerase Mu ternary complex	273	356	A	411	494
+Q9NP87	132	397	4m04	Human DNA Polymerase Mu ternary complex	6	271	A	None	397
+Q9NP87	411	494	6ipk	Binary Complex of Human DNA Polymerase Mu with Mn8oxodGTP	273	356	A	411	494
+Q9NP87	132	397	6ipk	Binary Complex of Human DNA Polymerase Mu with Mn8oxodGTP	6	271	A	None	397
+Q9NP87	411	494	6ipj	Binary Complex of Human DNA Polymerase Mu with MndTTP	273	356	A	411	494
+Q9NP87	132	397	6ipj	Binary Complex of Human DNA Polymerase Mu with MndTTP	6	271	A	None	397
+Q9NP87	411	494	6ipi	Binary Complex of Human DNA Polymerase Mu with MndCTP	273	356	A	411	494
+Q9NP87	132	397	6ipi	Binary Complex of Human DNA Polymerase Mu with MndCTP	6	271	A	None	397
+Q9NP87	411	494	6iph	Binary Complex of Human DNA Polymerase Mu with MndATP	273	356	A	411	494
+Q9NP87	132	397	6iph	Binary Complex of Human DNA Polymerase Mu with MndATP	6	271	A	None	397
+Q9NP87	411	494	5zlc	Binary complex of human DNA Polymerase Mu with MndGTP	273	356	A	411	494
+Q9NP87	132	397	5zlc	Binary complex of human DNA Polymerase Mu with MndGTP	6	271	A	None	397
+Q9NP87	411	494	6ipn	Binary Complex of Human DNA Polymerase Mu with MgdGTP	273	356	A	411	494
+Q9NP87	132	397	6ipn	Binary Complex of Human DNA Polymerase Mu with MgdGTP	6	271	A	None	397
+Q9NP87	411	494	6aec	Binary complex of human DNA Polymerase Mu with MnATP	273	356	A	411	494
+Q9NP87	132	397	6aec	Binary complex of human DNA Polymerase Mu with MnATP	6	271	A	None	397
+Q9NP87	132	494	5txx	DNA Polymerase Mu Pre-Catalytic Ground State Ternary Complex, Ca2+	6	356	A	None	494
+Q9NP87	132	494	5tyz	DNA Polymerase Mu Product Complex, Mn2+ (960 min)	6	356	A	None	494
+Q9NP87	132	494	5txz	DNA Polymerase Mu Reactant Complex, 100mM Mg2+ (15 min)	6	356	A	None	494
+Q9NP87	411	494	5tws	Post-catalytic complex of human Polymerase Mu (H329A) with newly incorporated UTP	271	354	A	411	494
+Q9NP87	134	397	5tws	Post-catalytic complex of human Polymerase Mu (H329A) with newly incorporated UTP	6	269	A	None	397
+Q9NP87	411	494	5twp	Pre-catalytic ternary complex of human Polymerase Mu with incoming nonhydrolyzable UMPNPP	271	354	A	411	494
+Q9NP87	134	397	5twp	Pre-catalytic ternary complex of human Polymerase Mu with incoming nonhydrolyzable UMPNPP	6	269	A	None	397
+Q9NP87	411	494	5twq	Post-catalytic nicked complex of human Polymerase Mu with newly incorporated UTP	271	354	A	411	494
+Q9NP87	134	397	5twq	Post-catalytic nicked complex of human Polymerase Mu with newly incorporated UTP	6	269	A	None	397
+Q9NP87	411	494	5vzd	Pre-catalytic ternary complex of human Polymerase Mu (W434A) mutant with incoming nonhydrolyzable UMPNPP	271	354	A	411	494
+Q9NP87	134	397	5vzd	Pre-catalytic ternary complex of human Polymerase Mu (W434A) mutant with incoming nonhydrolyzable UMPNPP	6	269	A	None	397
+Q9NP87	411	494	5vzb	Post-catalytic complex of human Polymerase Mu (G433S) mutant with incoming UTP	271	354	A	411	494
+Q9NP87	134	397	5vzb	Post-catalytic complex of human Polymerase Mu (G433S) mutant with incoming UTP	6	269	A	None	397
+Q9NP87	411	494	4yd2	Nicked complex of human DNA Polymerase Mu with 2-nt gapped DNA substrate	271	354	A	411	494
+Q9NP87	134	397	4yd2	Nicked complex of human DNA Polymerase Mu with 2-nt gapped DNA substrate	6	269	A	None	397
+Q9NP87	411	494	5vz7	Pre-catalytic ternary complex of human Polymerase Mu (G433A) mutant with incoming nonhydrolyzable UMPNPP	271	354	A	411	494
+Q9NP87	134	397	5vz7	Pre-catalytic ternary complex of human Polymerase Mu (G433A) mutant with incoming nonhydrolyzable UMPNPP	6	269	A	None	397
+Q9NP87	411	494	5vze	Post-catalytic complex of human Polymerase Mu (W434A) mutant with incoming UTP	271	354	A	411	494
+Q9NP87	134	397	5vze	Post-catalytic complex of human Polymerase Mu (W434A) mutant with incoming UTP	6	269	A	None	397
+Q9NP87	411	494	5vz9	Post-catalytic complex of human Polymerase Mu (G433A) mutant with incoming dTTP	271	354	A	411	494
+Q9NP87	134	397	5vz9	Post-catalytic complex of human Polymerase Mu (G433A) mutant with incoming dTTP	6	269	A	None	397
+Q9NP87	411	494	5vz8	Post-catalytic complex of human Polymerase Mu (G433A) mutant with incoming UTP	271	354	A	411	494
+Q9NP87	134	397	5vz8	Post-catalytic complex of human Polymerase Mu (G433A) mutant with incoming UTP	6	269	A	None	397
+Q9NP87	411	494	5vzg	Pre-catalytic ternary complex of human Polymerase Mu (W434H) mutant with incoming nonhydrolyzable UMPNPP	271	354	A	411	494
+Q9NP87	134	397	5vzg	Pre-catalytic ternary complex of human Polymerase Mu (W434H) mutant with incoming nonhydrolyzable UMPNPP	6	269	A	None	397
+Q9NP87	411	494	6p1q	Post-catalytic nicked complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and newly incorporated dCMP	271	354	A	411	494
+Q9NP87	134	397	6p1q	Post-catalytic nicked complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and newly incorporated dCMP	6	269	A	None	397
+Q9NP87	411	494	5vzf	Post-catalytic complex of human Polymerase Mu (W434A) mutant with incoming dTTP	271	354	A	411	494
+Q9NP87	134	397	5vzf	Post-catalytic complex of human Polymerase Mu (W434A) mutant with incoming dTTP	6	269	A	None	397
+Q9NP87	411	494	6p1s	Post-catalytic nicked complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and newly incorporated AMP	271	354	A	411	494
+Q9NP87	134	397	6p1s	Post-catalytic nicked complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and newly incorporated AMP	6	269	A	None	397
+Q9NP87	411	494	6p1r	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and bound incoming AMPNPP	271	354	A	411	494
+Q9NP87	134	397	6p1r	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and bound incoming AMPNPP	6	269	A	None	397
+Q9NP87	411	494	5vzc	Post-catalytic complex of human Polymerase Mu (G433S) mutant with incoming dTTP	271	354	A	411	494
+Q9NP87	134	397	5vzc	Post-catalytic complex of human Polymerase Mu (G433S) mutant with incoming dTTP	6	269	A	None	397
+Q9NP87	411	494	6p1t	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and bound CMPCPP	271	354	A	411	494
+Q9NP87	134	397	6p1t	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and bound CMPCPP	6	269	A	None	397
+Q9NP87	411	494	6p1w	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing undamaged template dG and bound incoming CMPCPP	271	354	A	411	494
+Q9NP87	134	397	6p1w	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing undamaged template dG and bound incoming CMPCPP	6	269	A	None	397
+Q9NP87	411	494	6p1v	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing undamaged template dG and bound incoming dCMPNPP	271	354	A	411	494
+Q9NP87	134	397	6p1v	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing undamaged template dG and bound incoming dCMPNPP	6	269	A	None	397
+Q9NP87	411	494	6p1u	Post-catalytic nicked complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and newly incorporated CMP	271	354	A	411	494
+Q9NP87	134	397	6p1u	Post-catalytic nicked complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and newly incorporated CMP	6	269	A	None	397
+Q9NP87	411	494	5vzh	Post-catalytic complex of human Polymerase Mu (W434H) mutant with incoming UTP	271	354	A	411	494
+Q9NP87	134	397	5vzh	Post-catalytic complex of human Polymerase Mu (W434H) mutant with incoming UTP	6	269	A	None	397
+Q9NP87	411	494	5vza	Pre-catalytic ternary complex of human Polymerase Mu (G433S) mutant with incoming nonhydrolyzable UMPNPP	271	354	A	411	494
+Q9NP87	134	397	5vza	Pre-catalytic ternary complex of human Polymerase Mu (G433S) mutant with incoming nonhydrolyzable UMPNPP	6	269	A	None	397
+Q9NP87	411	494	6p1p	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and bound incoming dCMPNPP	271	354	A	411	494
+Q9NP87	134	397	6p1p	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and bound incoming dCMPNPP	6	269	A	None	397
+Q9NP87	411	494	6p1m	Binary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG	271	354	A	411	494
+Q9NP87	134	397	6p1m	Binary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG	6	269	A	None	397
+Q9NP87	411	494	5vzi	Post-catalytic complex of human Polymerase Mu (W434H) mutant with incoming dTTP	271	354	A	411	494
+Q9NP87	134	397	5vzi	Post-catalytic complex of human Polymerase Mu (W434H) mutant with incoming dTTP	6	269	A	None	397
+Q9NP87	411	494	6p1o	Post-catalytic nicked complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and newly incorporated dAMP	271	354	A	411	494
+Q9NP87	134	397	6p1o	Post-catalytic nicked complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and newly incorporated dAMP	6	269	A	None	397
+Q9NP87	411	494	6p1n	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and bound incoming dAMPNPP	271	354	A	411	494
+Q9NP87	134	397	6p1n	Pre-catalytic ternary complex of human DNA Polymerase Mu with 1-nt gapped substrate containing template 8OG and bound incoming dAMPNPP	6	269	A	None	397
+Q9NP87	134	494	4yd1	Ternary complex of human DNA Polymerase Mu with 2-nt gapped DNA substrate and an incoming nonhydrolyzable dUMPNPP	6	354	A	None	494
+Q9NP87	134	494	4ycx	Binary complex of human DNA Polymerase Mu with 2-nt gapped DNA substrate	6	354	A	None	494
+Q9NP87	411	494	5twr	Pre-catalytic ternary complex of human Polymerase Mu (H329A) mutant with incoming nonhydrolyzable UMPNPP	271	354	A	411	494
+Q9NP87	134	397	5twr	Pre-catalytic ternary complex of human Polymerase Mu (H329A) mutant with incoming nonhydrolyzable UMPNPP	6	269	A	None	397
+

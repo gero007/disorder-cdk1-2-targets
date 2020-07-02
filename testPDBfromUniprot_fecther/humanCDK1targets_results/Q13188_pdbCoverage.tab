@@ -1,0 +1,67 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q13188	ASP-GLY-TPO-MET-LYS-ARG	STK3_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	27	278
+Q13188	ASP-GLY-TPO-MET-LYS-ARG	STK3_HUMAN	Homo sapiens	PF11629	Mst1_SARAH	C terminal SARAH domain of Mst1	437	484
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#44 mappings in 44 PDB chains in 10 PDB entries
+Q13188	9	491	4lgd	Structural Basis for Autoactivation of Human Mst2 Kinase and Its Regulation by RASSF5	10	378	A	None	None
+Q13188	9	491	4lgd	Structural Basis for Autoactivation of Human Mst2 Kinase and Its Regulation by RASSF5	10	378	D	None	None
+Q13188	9	491	4lgd	Structural Basis for Autoactivation of Human Mst2 Kinase and Its Regulation by RASSF5	10	378	B	None	None
+Q13188	9	491	4lgd	Structural Basis for Autoactivation of Human Mst2 Kinase and Its Regulation by RASSF5	10	378	C	None	None
+Q13188	15	313	5dh3	Crystal structure of MST2 in complex with XMU-MP-1	17	315	A	None	None
+Q13188	15	313	5dh3	Crystal structure of MST2 in complex with XMU-MP-1	17	315	B	None	None
+Q13188	16	491	6ao5	Crystal structure of human MST2 in complex with SAV1 SARAH domain	1	362	A	None	None
+Q13188	16	313	4lg4	Structural Basis for Autoactivation of Human Mst2 Kinase and Its Regulation by RASSF5	2	299	D	None	None
+Q13188	16	313	4lg4	Structural Basis for Autoactivation of Human Mst2 Kinase and Its Regulation by RASSF5	2	299	C	None	None
+Q13188	16	313	4lg4	Structural Basis for Autoactivation of Human Mst2 Kinase and Its Regulation by RASSF5	2	299	A	None	None
+Q13188	16	313	4lg4	Structural Basis for Autoactivation of Human Mst2 Kinase and Its Regulation by RASSF5	2	299	F	None	None
+Q13188	16	313	4lg4	Structural Basis for Autoactivation of Human Mst2 Kinase and Its Regulation by RASSF5	2	299	E	None	None
+Q13188	16	313	4lg4	Structural Basis for Autoactivation of Human Mst2 Kinase and Its Regulation by RASSF5	2	299	B	None	None
+Q13188	371	401	5brm	Structural basis for Mob1-dependent activation of the core Mst-Lats kinase cascade in Hippo signaling	1	31	I	None	None
+Q13188	371	401	5brm	Structural basis for Mob1-dependent activation of the core Mst-Lats kinase cascade in Hippo signaling	1	31	M	None	None
+Q13188	371	401	5brm	Structural basis for Mob1-dependent activation of the core Mst-Lats kinase cascade in Hippo signaling	1	31	H	None	None
+Q13188	371	401	5brm	Structural basis for Mob1-dependent activation of the core Mst-Lats kinase cascade in Hippo signaling	1	31	O	None	None
+Q13188	371	401	5brm	Structural basis for Mob1-dependent activation of the core Mst-Lats kinase cascade in Hippo signaling	1	31	N	None	None
+Q13188	371	401	5brm	Structural basis for Mob1-dependent activation of the core Mst-Lats kinase cascade in Hippo signaling	1	31	G	None	None
+Q13188	371	401	5brm	Structural basis for Mob1-dependent activation of the core Mst-Lats kinase cascade in Hippo signaling	1	31	L	None	None
+Q13188	371	401	5brm	Structural basis for Mob1-dependent activation of the core Mst-Lats kinase cascade in Hippo signaling	1	31	J	None	None
+Q13188	371	401	5brm	Structural basis for Mob1-dependent activation of the core Mst-Lats kinase cascade in Hippo signaling	1	31	K	None	None
+Q13188	373	382	6ar2	Structure of human SLMAP FHA domain in complex with pMST2	1	10	D	None	None
+Q13188	373	382	6ar2	Structure of human SLMAP FHA domain in complex with pMST2	1	10	C	None	None
+Q13188	436	484	4oh9	Crystal Structure of the human MST2 SARAH homodimer	3	51	B	3	51
+Q13188	436	484	4oh9	Crystal Structure of the human MST2 SARAH homodimer	3	51	A	3	51
+Q13188	436	484	4hkd	Crystal structure of human MST2 SARAH domain	5	53	C	436	484
+Q13188	436	484	4hkd	Crystal structure of human MST2 SARAH domain	5	53	B	436	484
+Q13188	436	484	4hkd	Crystal structure of human MST2 SARAH domain	5	53	A	436	484
+Q13188	436	484	4hkd	Crystal structure of human MST2 SARAH domain	5	53	D	436	484
+Q13188	436	484	3wws	Crystal structure of Serine/threonine-protein kinase 3	3	51	A	436	484
+Q13188	436	484	3wws	Crystal structure of Serine/threonine-protein kinase 3	1	49	C	436	484
+Q13188	436	484	3wws	Crystal structure of Serine/threonine-protein kinase 3	1	49	D	436	484
+Q13188	436	484	3wws	Crystal structure of Serine/threonine-protein kinase 3	1	49	B	436	484
+Q13188	436	484	4l0n	Crystal structure of STK3 (MST2) SARAH domain	3	51	F	436	484
+Q13188	436	484	4l0n	Crystal structure of STK3 (MST2) SARAH domain	3	51	A	436	484
+Q13188	436	484	4l0n	Crystal structure of STK3 (MST2) SARAH domain	3	51	D	436	484
+Q13188	436	484	4l0n	Crystal structure of STK3 (MST2) SARAH domain	3	51	C	436	484
+Q13188	436	484	4l0n	Crystal structure of STK3 (MST2) SARAH domain	3	51	G	436	484
+Q13188	436	484	4l0n	Crystal structure of STK3 (MST2) SARAH domain	3	51	I	436	484
+Q13188	436	484	4l0n	Crystal structure of STK3 (MST2) SARAH domain	3	51	J	None	484
+Q13188	436	484	4l0n	Crystal structure of STK3 (MST2) SARAH domain	3	51	E	436	484
+Q13188	436	484	4l0n	Crystal structure of STK3 (MST2) SARAH domain	3	51	H	436	484
+Q13188	436	484	4l0n	Crystal structure of STK3 (MST2) SARAH domain	3	51	B	436	484
+

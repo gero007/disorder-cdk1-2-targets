@@ -1,0 +1,93 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9NTG7	NAD-dependent protein deacetylase sirtuin-3, mitochondrial	SIR3_HUMAN	Homo sapiens	PF02146	SIR2	Sir2 family	145	326
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#71 mappings in 71 PDB chains in 31 PDB entries
+Q9NTG7	116	399	4bn4	Structure of human SIRT3 in complex with ADP-ribose	1	284	A	None	None
+Q9NTG7	116	399	4bv3	CRYSTAL STRUCTURE OF SIRT3 IN COMPLEX WITH THE INHIBITOR EX-527 AND NAD	1	284	A	None	None
+Q9NTG7	116	399	4hd8	Crystal structure of human Sirt3 in complex with Fluor-de-Lys peptide and piceatannol	1	284	A	None	None
+Q9NTG7	116	399	4c78	Complex of human Sirt3 with Bromo-Resveratrol and ACS2 peptide	1	284	A	None	None
+Q9NTG7	116	399	4bvb	CRYSTAL STRUCTURE OF HUMAN SIRT3 IN COMPLEX WITH THE INHIBITOR EX-527 AND ADP-RIBOSE	1	284	A	None	None
+Q9NTG7	116	399	4bve	CRYSTAL STRUCTURE OF HUMAN SIRT3 IN COMPLEX WITH THIOALKYLIMIDATE FORMED FROM THIO-ACETYL-LYSINE ACS2-PEPTIDE	1	284	A	None	None
+Q9NTG7	116	399	4bvf	CRYSTAL STRUCTURE OF HUMAN SIRT3 IN COMPLEX WITH THIOALKYLIMIDATE FORMED FROM THIO-ACETYL-LYSINE ACS2-PEPTIDE CRYSTALLIZED IN PRESENCE OF THE INHIBITOR EX-527	1	284	A	None	None
+Q9NTG7	116	399	4bvg	CRYSTAL STRUCTURE OF HUMAN SIRT3 IN COMPLEX WITH NATIVE ALKYLIMIDATE FORMED FROM ACETYL-LYSINE ACS2-PEPTIDE CRYSTALLIZED IN PRESENCE OF THE INHIBITOR EX-527	1	284	A	None	None
+Q9NTG7	116	399	4bvh	CRYSTAL STRUCTURE OF HUMAN SIRT3 IN COMPLEX WITH THE INHIBITOR EX-527 AND 2'-O-ACETYL-ADP-RIBOSE	1	284	A	None	None
+Q9NTG7	116	399	4bvh	CRYSTAL STRUCTURE OF HUMAN SIRT3 IN COMPLEX WITH THE INHIBITOR EX-527 AND 2'-O-ACETYL-ADP-RIBOSE	1	284	B	None	None
+Q9NTG7	116	399	4bvh	CRYSTAL STRUCTURE OF HUMAN SIRT3 IN COMPLEX WITH THE INHIBITOR EX-527 AND 2'-O-ACETYL-ADP-RIBOSE	1	284	C	None	None
+Q9NTG7	116	399	4o8z	Crystal structure of human SIRT3 in complex with compound (2-butylbenzofuran-3-yl)(4-(2-(diethylamino)ethoxy)-3,5-diiodophenyl)methanone	20	303	A	None	None
+Q9NTG7	117	399	5z93	Crystal Structure of SIRT3 in complex with H3K9bhb peptide	1	283	A	None	None
+Q9NTG7	117	399	5z94	Crystal Structure of SIRT3 in complex with H3K4bhb peptide	1	283	A	None	None
+Q9NTG7	117	399	5z94	Crystal Structure of SIRT3 in complex with H3K4bhb peptide	1	283	B	None	None
+Q9NTG7	117	399	4c7b	Complex of human Sirt3 with Bromo-Resveratrol and Fluor-De-Lys peptide	1	283	A	None	None
+Q9NTG7	118	399	4fz3	Crystal structure of SIRT3 in complex with acetyl p53 peptide coupled with 4-amino-7-methylcoumarin	2	283	A	None	None
+Q9NTG7	118	399	3glt	Crystal Structure of Human SIRT3 with ADPR bound to the AceCS2 peptide containing a thioacetyl lysine	4	285	A	None	None
+Q9NTG7	118	399	5bwn	Crystal Structure of SIRT3 with a H3K9 Peptide Containing a Myristoyl Lysine	28	309	A	None	None
+Q9NTG7	118	399	5bwo	Crystal Structure of Human SIRT3 in Complex with a Palmitoyl H3K9 Peptide	28	309	A	None	None
+Q9NTG7	118	399	5y4h	Human SIRT3 in complex with halistanol sulfate	4	285	A	None	None
+Q9NTG7	118	399	3glu	Crystal Structure of Human SIRT3 with AceCS2 peptide	4	285	A	None	None
+Q9NTG7	118	399	3glr	Crystal Structure of human SIRT3 with acetyl-lysine AceCS2 peptide	4	285	A	None	None
+Q9NTG7	118	399	3gls	Crystal Structure of Human SIRT3	4	285	D	None	None
+Q9NTG7	118	399	3gls	Crystal Structure of Human SIRT3	4	285	C	None	None
+Q9NTG7	118	399	3gls	Crystal Structure of Human SIRT3	4	285	A	None	None
+Q9NTG7	118	399	3gls	Crystal Structure of Human SIRT3	4	285	F	None	None
+Q9NTG7	118	399	3gls	Crystal Structure of Human SIRT3	4	285	E	None	None
+Q9NTG7	118	399	3gls	Crystal Structure of Human SIRT3	4	285	B	None	None
+Q9NTG7	118	399	4jsr	Crystal Structure of human SIRT3 with ELT inhibitor 11c [N-{2-[1-(6-carbamoylthieno[3,2-d]pyrimidin-4-yl)piperidin-4-yl]ethyl}-N'-ethylthiophene-2,5-dicarboxamide]	4	285	A	None	None
+Q9NTG7	118	399	4jt8	Crystal Structure of human SIRT3 with ELT inhibitor 28 [4-(4-{2-[(2,2-dimethylpropanoyl)amino]ethyl}piperidin-1-yl)thieno[3,2-d]pyrimidine-6-carboxamide[	4	285	A	None	None
+Q9NTG7	118	399	4jt9	Crystal Structure of human SIRT3 with ELT inhibitor 3 [14-(4-{2-[(methylsulfonyl)amino]ethyl}piperidin-1-yl)thieno[3,2-d]pyrimidine-6-carboxamide]	4	285	A	None	None
+Q9NTG7	118	395	5d7n	Crystal structure of human Sirt3 at an improved resolution	4	281	D	None	None
+Q9NTG7	118	395	5d7n	Crystal structure of human Sirt3 at an improved resolution	4	281	C	None	None
+Q9NTG7	118	395	5d7n	Crystal structure of human Sirt3 at an improved resolution	4	281	A	None	None
+Q9NTG7	118	395	5d7n	Crystal structure of human Sirt3 at an improved resolution	4	281	F	None	None
+Q9NTG7	118	395	5d7n	Crystal structure of human Sirt3 at an improved resolution	4	281	E	None	None
+Q9NTG7	118	395	5d7n	Crystal structure of human Sirt3 at an improved resolution	4	281	B	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	D	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	C	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	I	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	H	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	A	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	F	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	E	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	B	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	G	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	L	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	J	None	None
+Q9NTG7	119	399	4bn5	Structure of human SIRT3 in complex with SRT1720 inhibitor	1	281	K	None	None
+Q9NTG7	121	394	5zgc	Crystal Structure of SIRT3 in complex with H4K16bhb peptide	1	274	D	None	394
+Q9NTG7	121	394	5zgc	Crystal Structure of SIRT3 in complex with H4K16bhb peptide	1	274	F	121	394
+Q9NTG7	121	394	5zgc	Crystal Structure of SIRT3 in complex with H4K16bhb peptide	1	274	E	None	394
+Q9NTG7	121	394	5zgc	Crystal Structure of SIRT3 in complex with H4K16bhb peptide	1	274	C	None	394
+Q9NTG7	121	394	5zgc	Crystal Structure of SIRT3 in complex with H4K16bhb peptide	1	274	A	None	394
+Q9NTG7	121	394	5zgc	Crystal Structure of SIRT3 in complex with H4K16bhb peptide	1	274	B	None	None
+Q9NTG7	121	394	5ytk	Crystal structure of SIRT3 bound to a leucylated AceCS2	1	274	A	121	394
+Q9NTG7	121	394	5ytk	Crystal structure of SIRT3 bound to a leucylated AceCS2	1	274	B	121	394
+Q9NTG7	121	394	5ytk	Crystal structure of SIRT3 bound to a leucylated AceCS2	1	274	F	121	394
+Q9NTG7	121	394	5ytk	Crystal structure of SIRT3 bound to a leucylated AceCS2	1	274	C	None	394
+Q9NTG7	121	394	5ytk	Crystal structure of SIRT3 bound to a leucylated AceCS2	1	274	D	121	394
+Q9NTG7	121	394	5ytk	Crystal structure of SIRT3 bound to a leucylated AceCS2	1	274	E	121	394
+Q9NTG7	121	394	6iso	Human SIRT3 Recognizing H3K4cr	1	274	A	121	394
+Q9NTG7	121	394	6iso	Human SIRT3 Recognizing H3K4cr	1	274	E	None	394
+Q9NTG7	121	394	6iso	Human SIRT3 Recognizing H3K4cr	1	274	I	None	None
+Q9NTG7	121	394	6iso	Human SIRT3 Recognizing H3K4cr	1	274	B	None	394
+Q9NTG7	121	394	6iso	Human SIRT3 Recognizing H3K4cr	1	274	K	None	394
+Q9NTG7	121	394	6iso	Human SIRT3 Recognizing H3K4cr	1	274	G	121	394
+Q9NTG7	121	391	5h4d	Crystal structure of hSIRT3 in complex with a specific agonist Amiodarone hydrochloride	1	271	H	121	391
+Q9NTG7	121	391	5h4d	Crystal structure of hSIRT3 in complex with a specific agonist Amiodarone hydrochloride	1	271	A	121	391
+Q9NTG7	122	395	4fvt	Human SIRT3 bound to Ac-ACS peptide and Carba-NAD	1	274	A	122	395
+

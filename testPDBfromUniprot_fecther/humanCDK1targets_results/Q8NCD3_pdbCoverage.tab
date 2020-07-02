@@ -1,0 +1,26 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q8NCD3	Holliday junction recognition protein	HJURP_HUMAN	Homo sapiens	PF10384	Scm3	Centromere protein Scm3	18	75
+Q8NCD3	Holliday junction recognition protein	HJURP_HUMAN	Homo sapiens	PF12346	HJURP_mid	Holliday junction recognition protein-associated repeat	271	385
+Q8NCD3	Holliday junction recognition protein	HJURP_HUMAN	Homo sapiens	PF12347	HJURP_C	Holliday junction regulator protein family C-terminal repeat	554	613
+Q8NCD3	Holliday junction recognition protein	HJURP_HUMAN	Homo sapiens	PF12347	HJURP_C	Holliday junction regulator protein family C-terminal repeat	409	470
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#1 mappings in 1 PDB chains in 1 PDB entries
+Q8NCD3	1	80	3r45	Structure of a CENP-A-Histone H4 Heterodimer in complex with chaperone HJURP	2	81	C	None	None
+

@@ -1,0 +1,138 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P52732	Chimera protein of Kinesin-like protein KIF11 and Microtubule-associated protein RP/EB family member 1	KIF11_HUMAN	Homo sapiens	PF00225	Kinesin	Kinesin motor domain	24	359
+P52732	Chimera protein of Kinesin-like protein KIF11 and Microtubule-associated protein RP/EB family member 1	KIF11_HUMAN	Homo sapiens	PF13931	Microtub_bind	Kinesin-associated microtubule-binding	916	1053
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#115 mappings in 115 PDB chains in 58 PDB entries
+P52732	1	369	3wpn	Kinesin spindle protein Eg5 in complex with ATP-competitive inhibitor PVZB1194	7	375	A	None	369
+P52732	1	369	4zca	Eg5 motor domain mutant Y231F	1	369	A	None	None
+P52732	1	369	4zca	Eg5 motor domain mutant Y231F	1	369	B	None	None
+P52732	1	369	3hqd	Human kinesin Eg5 motor domain in complex with AMPPNP and Mg2+	1	369	A	None	None
+P52732	1	369	3hqd	Human kinesin Eg5 motor domain in complex with AMPPNP and Mg2+	1	369	B	None	None
+P52732	1	369	3ken	Human Eg5 in complex with S-trityl-L-cysteine	1	369	A	None	None
+P52732	1	369	6ta4	Human kinesin-5 motor domain in the AMPPNP state bound to microtubules	23	391	K	None	None
+P52732	1	369	6ta3	Human kinesin-5 motor domain in the GSK-1 state bound to microtubules (Conformation 1)	23	391	K	None	369
+P52732	1	369	4zhi	Eg5 motor domain mutant E162S	1	369	A	None	None
+P52732	1	369	4zhi	Eg5 motor domain mutant E162S	1	369	B	None	None
+P52732	1	369	6tiw	Human kinesin-5 motor domain in the GSK state bound to microtubules (Conformation 2)	23	391	K	None	369
+P52732	1	368	2uym	Crystal structure of KSP in complex with ADP and thiophene containing inhibitor 37	1	368	A	None	None
+P52732	1	368	2uym	Crystal structure of KSP in complex with ADP and thiophene containing inhibitor 37	1	368	B	None	None
+P52732	1	368	2x2r	Crystal structure of human kinesin Eg5 in complex with (R)-2-amino-3-((4-chlorophenyl)diphenylmethylthio)propanoic acid	1	368	A	None	None
+P52732	1	368	2x2r	Crystal structure of human kinesin Eg5 in complex with (R)-2-amino-3-((4-chlorophenyl)diphenylmethylthio)propanoic acid	1	368	B	None	None
+P52732	1	368	2x2r	Crystal structure of human kinesin Eg5 in complex with (R)-2-amino-3-((4-chlorophenyl)diphenylmethylthio)propanoic acid	1	368	C	None	None
+P52732	1	368	4ap0	The mitotic kinesin Eg5 in complex with Mg-ADP and ispinesib	3	370	A	None	None
+P52732	1	368	4ap0	The mitotic kinesin Eg5 in complex with Mg-ADP and ispinesib	3	370	D	None	None
+P52732	1	368	4ap0	The mitotic kinesin Eg5 in complex with Mg-ADP and ispinesib	3	370	B	None	None
+P52732	1	368	4ap0	The mitotic kinesin Eg5 in complex with Mg-ADP and ispinesib	3	370	C	None	None
+P52732	1	368	6hky	Eg5-inhibitor complex	1	368	A	None	None
+P52732	1	368	6hky	Eg5-inhibitor complex	1	368	B	None	None
+P52732	1	368	6hky	Eg5-inhibitor complex	1	368	C	None	None
+P52732	1	368	6hkx	Eg5-inhibitor complex	1	368	A	None	None
+P52732	1	368	6hkx	Eg5-inhibitor complex	1	368	B	None	None
+P52732	1	368	1ii6	Crystal Structure of the Mitotic Kinesin Eg5 in Complex with Mg-ADP.	1	368	A	None	None
+P52732	1	368	1ii6	Crystal Structure of the Mitotic Kinesin Eg5 in Complex with Mg-ADP.	1	368	B	None	None
+P52732	1	368	2wog	Intermediate and final states of human kinesin Eg5 in complex with S-trityl-L-cysteine	1	368	A	None	None
+P52732	1	368	2wog	Intermediate and final states of human kinesin Eg5 in complex with S-trityl-L-cysteine	1	368	B	None	None
+P52732	1	368	2wog	Intermediate and final states of human kinesin Eg5 in complex with S-trityl-L-cysteine	1	368	C	None	None
+P52732	1	368	2fme	Crystal structure of the mitotic kinesin eg5 (ksp) in complex with mg-adp and (r)-4-(3-hydroxyphenyl)-n,n,7,8-tetramethyl-3,4-dihydroisoquinoline-2(1h)-carboxamide	1	368	A	None	None
+P52732	1	368	2fme	Crystal structure of the mitotic kinesin eg5 (ksp) in complex with mg-adp and (r)-4-(3-hydroxyphenyl)-n,n,7,8-tetramethyl-3,4-dihydroisoquinoline-2(1h)-carboxamide	1	368	B	None	None
+P52732	1	368	4a50	Crystal structure of human kinesin Eg5 in complex with 2-Amino-5-(3-methylphenyl)-5,5-diphenylpentanoic acid	1	368	A	None	None
+P52732	1	368	4a51	Crystal structure of human kinesin Eg5 in complex with 1-(3-(((2-Aminoethyl)thio)diphenylmethyl)phenyl)ethanone hydrochloride	1	368	D	None	None
+P52732	1	368	4a51	Crystal structure of human kinesin Eg5 in complex with 1-(3-(((2-Aminoethyl)thio)diphenylmethyl)phenyl)ethanone hydrochloride	1	368	C	None	None
+P52732	1	368	4a51	Crystal structure of human kinesin Eg5 in complex with 1-(3-(((2-Aminoethyl)thio)diphenylmethyl)phenyl)ethanone hydrochloride	1	368	A	None	None
+P52732	1	368	4a51	Crystal structure of human kinesin Eg5 in complex with 1-(3-(((2-Aminoethyl)thio)diphenylmethyl)phenyl)ethanone hydrochloride	1	368	F	None	None
+P52732	1	368	4a51	Crystal structure of human kinesin Eg5 in complex with 1-(3-(((2-Aminoethyl)thio)diphenylmethyl)phenyl)ethanone hydrochloride	1	368	E	None	None
+P52732	1	368	4a51	Crystal structure of human kinesin Eg5 in complex with 1-(3-(((2-Aminoethyl)thio)diphenylmethyl)phenyl)ethanone hydrochloride	1	368	B	None	None
+P52732	1	368	4a51	Crystal structure of human kinesin Eg5 in complex with 1-(3-(((2-Aminoethyl)thio)diphenylmethyl)phenyl)ethanone hydrochloride	1	368	G	None	None
+P52732	1	368	3l9h	X-ray structure of mitotic kinesin-5 (KSP, KIF11, Eg5)in complex with the hexahydro-2H-pyrano[3,2-c]quinoline EMD 534085	1	368	A	None	None
+P52732	1	368	3l9h	X-ray structure of mitotic kinesin-5 (KSP, KIF11, Eg5)in complex with the hexahydro-2H-pyrano[3,2-c]quinoline EMD 534085	1	368	B	None	None
+P52732	1	368	2pg2	Crystal structure of KSP in complex with ADP and thiophene containing inhibitor 15	1	368	A	None	None
+P52732	1	368	2pg2	Crystal structure of KSP in complex with ADP and thiophene containing inhibitor 15	1	368	B	None	None
+P52732	1	368	2xae	Crystal structure of human kinesin Eg5 in complex with (R)-2-amino-3-((S)-2-methyl-1,1-diphenylbutylthio)propanoic acid	1	368	A	None	None
+P52732	1	368	2xae	Crystal structure of human kinesin Eg5 in complex with (R)-2-amino-3-((S)-2-methyl-1,1-diphenylbutylthio)propanoic acid	1	368	B	None	None
+P52732	1	368	2xae	Crystal structure of human kinesin Eg5 in complex with (R)-2-amino-3-((S)-2-methyl-1,1-diphenylbutylthio)propanoic acid	1	368	C	None	None
+P52732	1	368	4b7b	Eg5-3	1	368	A	None	None
+P52732	1	368	3k5e	The structure of human kinesin-like motor protein Kif11/KSP/Eg5 in complex with ADP and enastrol.	1	368	A	None	None
+P52732	1	368	3k5e	The structure of human kinesin-like motor protein Kif11/KSP/Eg5 in complex with ADP and enastrol.	1	368	B	None	None
+P52732	1	368	3k3b	Co-crystal structure of the human kinesin Eg5 with a novel tetrahydro-beta-carboline	1	368	A	None	None
+P52732	1	368	3k3b	Co-crystal structure of the human kinesin Eg5 with a novel tetrahydro-beta-carboline	1	368	B	None	None
+P52732	1	368	2gm1	Crystal structure of the mitotic kinesin eg5 in complex with mg-adp and n-(3-aminopropyl)-n-((3-benzyl-5-chloro-4-oxo-3,4-dihydropyrrolo[2,1-f][1,2,4]triazin-2-yl)(cyclopropyl)methyl)-4-methylbenzamide	1	368	A	None	None
+P52732	1	368	2gm1	Crystal structure of the mitotic kinesin eg5 in complex with mg-adp and n-(3-aminopropyl)-n-((3-benzyl-5-chloro-4-oxo-3,4-dihydropyrrolo[2,1-f][1,2,4]triazin-2-yl)(cyclopropyl)methyl)-4-methylbenzamide	1	368	B	None	None
+P52732	1	368	2gm1	Crystal structure of the mitotic kinesin eg5 in complex with mg-adp and n-(3-aminopropyl)-n-((3-benzyl-5-chloro-4-oxo-3,4-dihydropyrrolo[2,1-f][1,2,4]triazin-2-yl)(cyclopropyl)methyl)-4-methylbenzamide	1	368	E	None	None
+P52732	1	368	2gm1	Crystal structure of the mitotic kinesin eg5 in complex with mg-adp and n-(3-aminopropyl)-n-((3-benzyl-5-chloro-4-oxo-3,4-dihydropyrrolo[2,1-f][1,2,4]triazin-2-yl)(cyclopropyl)methyl)-4-methylbenzamide	1	368	D	None	None
+P52732	1	368	2x7c	Crystal structure of human kinesin Eg5 in complex with (S)-enastron	1	368	A	None	None
+P52732	1	368	2x7c	Crystal structure of human kinesin Eg5 in complex with (S)-enastron	1	368	B	None	None
+P52732	1	368	1yrs	Crystal structure of KSP in complex with inhibitor 1	1	368	A	None	None
+P52732	1	368	1yrs	Crystal structure of KSP in complex with inhibitor 1	1	368	B	None	None
+P52732	1	368	2x7e	Crystal structure of human kinesin Eg5 in complex with (R)-fluorastrol	1	368	A	None	None
+P52732	1	368	2x7e	Crystal structure of human kinesin Eg5 in complex with (R)-fluorastrol	1	368	B	None	None
+P52732	1	368	2x7d	Crystal structure of human kinesin Eg5 in complex with (S)-dimethylenastron	1	368	A	None	None
+P52732	1	368	2x7d	Crystal structure of human kinesin Eg5 in complex with (S)-dimethylenastron	1	368	B	None	None
+P52732	1	368	4a1z	Eg5-1	1	368	A	None	None
+P52732	1	368	4a1z	Eg5-1	1	368	B	None	None
+P52732	1	368	2uyi	Crystal structure of KSP in complex with ADP and thiophene containing inhibitor 33	1	368	A	None	None
+P52732	1	368	2uyi	Crystal structure of KSP in complex with ADP and thiophene containing inhibitor 33	1	368	B	None	None
+P52732	1	368	2g1q	crystal structure of KSP in complex with inhibitor 9h	1	368	A	None	None
+P52732	1	368	2g1q	crystal structure of KSP in complex with inhibitor 9h	1	368	B	None	None
+P52732	1	368	4bbg	Crystal structure of human kinesin Eg5 in complex with 3-(((2-Aminoethyl)sulfanyl)(3-ethylphenyl) phenylmethyl)phenol	1	368	A	None	None
+P52732	1	368	6g6z	Eg5-inhibitor complex	3	370	A	None	None
+P52732	1	368	4a28	Eg5-2	1	368	A	None	None
+P52732	1	368	4a28	Eg5-2	1	368	B	None	None
+P52732	1	368	4bxn	Eg5(WT) complex	1	368	A	None	None
+P52732	1	368	4bxn	Eg5(WT) complex	1	368	B	None	None
+P52732	1	368	6g6y	Eg5-inhibitor complex	3	370	A	None	None
+P52732	1	368	4a5y	Intermediate state of human kinesin Eg5 in complex with Ispinesib	1	368	A	None	None
+P52732	1	368	4a5y	Intermediate state of human kinesin Eg5 in complex with Ispinesib	1	368	B	None	None
+P52732	1	368	4a5y	Intermediate state of human kinesin Eg5 in complex with Ispinesib	1	368	C	None	None
+P52732	1	368	4as7	Eg5 complex 1	1	368	A	None	None
+P52732	1	367	4aqw	Model of human kinesin-5 motor domain (1II6, 3HQD) and mammalian tubulin heterodimer (1JFF) docked into the 9.5-angstrom cryo-EM map of microtubule-bound kinesin-5 motor domain in the rigor state.	1	367	C	None	None
+P52732	1	367	4ck6	Pseudo-atomic model of microtubule-bound human kinesin-5 motor domain in the ADP.AlFx state, based on cryo-electron microscopy experiment.	1	367	C	None	None
+P52732	1	367	4ck7	Pseudo-atomic model of microtubule-bound human kinesin-5 motor domain in presence of adp.alfx (NECK-LINKER IN ITS DISCONNECTED CONFORMATION, based on cryo-electron microscopy experiment	1	367	C	None	None
+P52732	1	367	4ck5	Pseudo-atomic model of microtubule-bound human kinesin-5 motor domain in the ADP state, based on cryo-electron microscopy experiment.	1	367	C	None	None
+P52732	1	367	4aqv	Model of human kinesin-5 motor domain (3HQD) and mammalian tubulin heterodimer (1JFF) docked into the 9.7-angstrom cryo-EM map of microtubule-bound kinesin-5 motor domain in the AMPPPNP state.	1	367	C	None	None
+P52732	2	368	2ieh	Crystal structure of human kinesin Eg5 in complex with (R)-mon97, a new monastrol-based inhibitor that binds as (R)-enantiomer	1	367	A	None	None
+P52732	2	368	2ieh	Crystal structure of human kinesin Eg5 in complex with (R)-mon97, a new monastrol-based inhibitor that binds as (R)-enantiomer	1	367	B	None	None
+P52732	2	368	2fl2	crystal structure of KSP in complex with inhibitor 19	1	367	A	None	None
+P52732	2	368	2fl2	crystal structure of KSP in complex with inhibitor 19	1	367	B	None	None
+P52732	2	368	2q2y	Crystal Structure of KSP in complex with Inhibitor 1	1	367	A	None	None
+P52732	2	368	2q2y	Crystal Structure of KSP in complex with Inhibitor 1	1	367	B	None	None
+P52732	2	368	3cjo	Crystal structure of KSP in complex with inhibitor 30	1	367	A	None	None
+P52732	2	368	3cjo	Crystal structure of KSP in complex with inhibitor 30	1	367	B	None	None
+P52732	2	368	2q2z	Crystal Structure of KSP in Complex with Inhibitor 22	1	367	A	None	None
+P52732	2	368	2q2z	Crystal Structure of KSP in Complex with Inhibitor 22	1	367	B	None	None
+P52732	2	368	2fl6	crystal structure of KSP in complex with inhibitor 6	1	367	A	None	None
+P52732	2	368	2fl6	crystal structure of KSP in complex with inhibitor 6	1	367	B	None	None
+P52732	2	368	2fky	crystal structure of KSP in complex with inhibitor 13	1	367	A	None	None
+P52732	2	368	2fky	crystal structure of KSP in complex with inhibitor 13	1	367	B	None	None
+P52732	2	368	1q0b	Crystal structure of the motor protein KSP in complex with ADP and monastrol	1	367	A	None	None
+P52732	2	368	1q0b	Crystal structure of the motor protein KSP in complex with ADP and monastrol	1	367	B	None	None
+P52732	10	368	1x88	Human Eg5 motor domain bound to Mg-ADP and monastrol	1	359	A	None	None
+P52732	10	368	1x88	Human Eg5 motor domain bound to Mg-ADP and monastrol	1	359	B	None	None
+P52732	16	363	3zcw	Eg5 - New allosteric binding site	1	348	A	None	363
+P52732	17	369	5zo9	Eg5 motor domain in complex with STLC-type inhibitor PVEI0021 (C2 type)	8	360	A	17	None
+P52732	17	369	5zo9	Eg5 motor domain in complex with STLC-type inhibitor PVEI0021 (C2 type)	8	360	B	17	None
+P52732	17	369	5zo7	Kinesin spindle protein Eg5 in complex with STLC-type inhibitor PVEI0138	8	360	A	17	None
+P52732	17	369	5zo7	Kinesin spindle protein Eg5 in complex with STLC-type inhibitor PVEI0138	8	360	B	17	None
+P52732	17	369	5zo8	Eg5 motor domain in complex with STLC-type inhibitor PVEI0021 (P21 type)	8	360	A	17	None
+P52732	17	369	5zo8	Eg5 motor domain in complex with STLC-type inhibitor PVEI0021 (P21 type)	8	360	B	17	None
+P52732	366	391	5jv3	The neck-linker and alpha 7 helix of Homo sapiens Eg5 fused to EB1	3	28	B	None	28
+P52732	366	391	5jv3	The neck-linker and alpha 7 helix of Homo sapiens Eg5 fused to EB1	3	28	C	3	28
+P52732	366	391	5jv3	The neck-linker and alpha 7 helix of Homo sapiens Eg5 fused to EB1	3	28	D	3	28
+P52732	366	391	5jv3	The neck-linker and alpha 7 helix of Homo sapiens Eg5 fused to EB1	3	28	A	None	28
+

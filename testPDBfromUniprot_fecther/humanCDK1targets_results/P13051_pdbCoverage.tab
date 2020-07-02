@@ -1,0 +1,45 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P13051	Uracil-DNA glycosylase	UNG_HUMAN	Homo sapiens	PF03167	UDG	Uracil DNA glycosylase superfamily	140	302
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#23 mappings in 23 PDB chains in 20 PDB entries
+P13051	73	88	1dpu	SOLUTION STRUCTURE OF THE C-TERMINAL DOMAIN OF HUMAN RPA32 COMPLEXED WITH UNG2(73-88)	1	16	B	73	88
+P13051	91	313	1emj	URACIL-DNA GLYCOSYLASE BOUND TO DNA CONTAINING A 4'-THIO-2'DEOXYURIDINE ANALOG PRODUCT	1	223	A	82	304
+P13051	91	313	1yuo	Optimisation of the surface electrostatics as a strategy for cold adaptation of uracil-DNA N-glycosylase (UNG)from atlantic cod (Gadus morhua)	1	223	A	82	304
+P13051	91	313	1emh	CRYSTAL STRUCTURE OF HUMAN URACIL-DNA GLYCOSYLASE BOUND TO UNCLEAVED SUBSTRATE-CONTAINING DNA	1	223	A	82	304
+P13051	94	313	2oyt	Crystal Structure of UNG2/DNA(TM)	4	223	A	85	304
+P13051	94	313	1akz	HUMAN URACIL-DNA GLYCOSYLASE	4	223	A	85	304
+P13051	94	313	3tkb	crystal structure of human uracil-DNA glycosylase D183G/K302R mutant	4	223	A	85	304
+P13051	94	313	1ssp	WILD-TYPE URACIL-DNA GLYCOSYLASE BOUND TO URACIL-CONTAINING DNA	4	223	E	85	304
+P13051	94	313	5jk7	The X-ray structure of the DDB1-DCAF1-Vpr-UNG2 complex	3	222	G	85	304
+P13051	94	313	5jk7	The X-ray structure of the DDB1-DCAF1-Vpr-UNG2 complex	3	222	D	85	304
+P13051	94	313	2oxm	Crystal structure of a UNG2/modified DNA complex that represent a stabilized short-lived extrahelical state in ezymatic DNA base flipping	4	223	A	85	304
+P13051	94	313	4skn	A NUCLEOTIDE-FLIPPING MECHANISM FROM THE STRUCTURE OF HUMAN URACIL-DNA GLYCOSYLASE BOUND TO DNA	4	223	E	85	304
+P13051	94	313	3fcl	Complex of UNG2 and a fragment-based designed inhibitor	4	223	A	85	304
+P13051	94	313	3fcl	Complex of UNG2 and a fragment-based designed inhibitor	4	223	B	85	304
+P13051	94	313	1ugh	CRYSTAL STRUCTURE OF HUMAN URACIL-DNA GLYCOSYLASE IN COMPLEX WITH A PROTEIN INHIBITOR: PROTEIN MIMICRY OF DNA	4	223	E	85	304
+P13051	94	313	3fck	Complex of UNG2 and a fragment-based design inhibitor	4	223	B	85	304
+P13051	94	313	3fci	Complex of UNG2 and a fragment-based designed inhibitor	4	223	A	85	304
+P13051	94	313	3fcf	Complex of UNG2 and a fragment-based designed inhibitor	4	223	A	85	304
+P13051	94	313	2hxm	Complex of UNG2 and a small Molecule synthetic Inhibitor	4	223	A	85	304
+P13051	94	313	1q3f	Uracil DNA glycosylase bound to a cationic 1-aza-2'-deoxyribose-containing DNA	4	223	A	85	304
+P13051	94	313	5ayr	The crystal structure of SAUGI/human UDG complex	4	223	A	85	304
+P13051	94	313	5ayr	The crystal structure of SAUGI/human UDG complex	4	223	C	85	304
+P13051	94	313	2ssp	LEUCINE-272-ALANINE URACIL-DNA GLYCOSYLASE BOUND TO ABASIC SITE-CONTAINING DNA	4	223	E	85	304
+

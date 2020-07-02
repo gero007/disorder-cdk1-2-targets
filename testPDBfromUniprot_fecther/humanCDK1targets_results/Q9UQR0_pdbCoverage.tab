@@ -1,0 +1,34 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9UQR0	Sex comb on midleg-like protein 2	SCML2_HUMAN	Homo sapiens	PF00536	SAM_1	SAM domain (Sterile alpha motif)	629	695
+Q9UQR0	Sex comb on midleg-like protein 2	SCML2_HUMAN	Homo sapiens	PF02820	MBT	mbt repeat	176	243
+Q9UQR0	Sex comb on midleg-like protein 2	SCML2_HUMAN	Homo sapiens	PF02820	MBT	mbt repeat	67	135
+Q9UQR0	Sex comb on midleg-like protein 2	SCML2_HUMAN	Homo sapiens	PF12140	SLED	SLED domain	356	465
+Q9UQR0	Sex comb on midleg-like protein 2	SCML2_HUMAN	Homo sapiens	PF17208	RBR	RNA binding Region	277	324
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 5 PDB entries
+Q9UQR0	1	243	2biv	Crystal structure of the wild-type MBT domains of Human SCML2	1	243	A	None	243
+Q9UQR0	1	243	2biv	Crystal structure of the wild-type MBT domains of Human SCML2	1	243	C	None	243
+Q9UQR0	1	243	2biv	Crystal structure of the wild-type MBT domains of Human SCML2	1	243	B	None	243
+Q9UQR0	23	243	2vyt	The MBT repeats of human SCML2 bind to peptides containing mono methylated lysine.	1	221	A	None	243
+Q9UQR0	23	243	2vyt	The MBT repeats of human SCML2 bind to peptides containing mono methylated lysine.	1	221	B	None	243
+Q9UQR0	23	243	1oi1	Crystal Structure of the MBT domains of Human SCML2	1	221	A	None	243
+Q9UQR0	29	243	4edu	The MBT repeats of human SCML2 in a complex with histone H2A peptide	1	215	A	None	None
+Q9UQR0	354	468	2mem	Solution NMR structure of SLED domain of Scml2	5	119	A	354	468
+

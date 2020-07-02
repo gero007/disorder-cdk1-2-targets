@@ -1,0 +1,61 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P06401	Progesterone receptor	PRGR_HUMAN	Homo sapiens	PF00104	Hormone_recep	Ligand-binding domain of nuclear hormone receptor	704	891
+P06401	Progesterone receptor	PRGR_HUMAN	Homo sapiens	PF00105	zf-C4	Zinc finger, C4 type (two domains)	565	634
+P06401	Progesterone receptor	PRGR_HUMAN	Homo sapiens	PF02161	Prog_receptor	Progesterone receptor	1	564
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#37 mappings in 37 PDB chains in 20 PDB entries
+P06401	558	642	5cc0	AncSR2 - TSLP nGRE complex	1	85	B	None	None
+P06401	558	642	5cc0	AncSR2 - TSLP nGRE complex	1	85	A	None	None
+P06401	563	640	2c7a	STRUCTURE OF THE PROGESTERONE RECEPTOR-DNA COMPLEX	1	78	A	563	640
+P06401	563	640	2c7a	STRUCTURE OF THE PROGESTERONE RECEPTOR-DNA COMPLEX	1	78	B	563	None
+P06401	673	933	3g8o	Progesterone Receptor with bound Pyrrolidine 1	3	263	A	None	None
+P06401	673	933	3g8o	Progesterone Receptor with bound Pyrrolidine 1	3	263	B	None	None
+P06401	673	933	1sqn	Progesterone Receptor Ligand Binding Domain with bound Norethindrone	1	261	A	None	None
+P06401	673	933	1sqn	Progesterone Receptor Ligand Binding Domain with bound Norethindrone	1	261	B	None	933
+P06401	676	933	1sr7	Progesterone Receptor Hormone Binding Domain with Bound Mometasone Furoate	2	259	A	None	None
+P06401	676	933	1sr7	Progesterone Receptor Hormone Binding Domain with Bound Mometasone Furoate	2	259	B	None	None
+P06401	676	933	1e3k	Human Progesteron Receptor Ligand Binding Domain in complex with the ligand metribolone (R1881)	1	258	A	None	None
+P06401	676	933	1e3k	Human Progesteron Receptor Ligand Binding Domain in complex with the ligand metribolone (R1881)	1	258	B	None	None
+P06401	676	933	1zuc	Progesterone receptor ligand binding domain in complex with the nonsteroidal agonist tanaproget	2	259	A	None	None
+P06401	676	933	1zuc	Progesterone receptor ligand binding domain in complex with the nonsteroidal agonist tanaproget	2	259	B	None	None
+P06401	676	933	3d90	Crystal structure of the human progesterone receptor ligand-binding domain bound to levonorgestrel	1	258	A	None	None
+P06401	676	933	3d90	Crystal structure of the human progesterone receptor ligand-binding domain bound to levonorgestrel	1	258	B	None	None
+P06401	678	933	4apu	PR X-Ray structures in agonist conformations reveal two different mechanisms for partial agonism in 11beta-substituted steroids	5	260	A	None	None
+P06401	678	933	4apu	PR X-Ray structures in agonist conformations reveal two different mechanisms for partial agonism in 11beta-substituted steroids	5	260	B	None	None
+P06401	678	933	1a28	HORMONE-BOUND HUMAN PROGESTERONE RECEPTOR LIGAND-BINDING DOMAIN	1	256	A	None	None
+P06401	678	933	1a28	HORMONE-BOUND HUMAN PROGESTERONE RECEPTOR LIGAND-BINDING DOMAIN	1	256	B	None	None
+P06401	678	933	3zra	Structural basis for agonism and antagonism for a set of chemically related progesterone receptor modulators	5	260	A	None	None
+P06401	678	933	3zra	Structural basis for agonism and antagonism for a set of chemically related progesterone receptor modulators	5	260	B	None	None
+P06401	678	933	4a2j	PR X-Ray structures in agonist conformations reveal two different mechanisms for partial agonism in 11beta-substituted steroids	5	260	A	None	None
+P06401	678	933	4a2j	PR X-Ray structures in agonist conformations reveal two different mechanisms for partial agonism in 11beta-substituted steroids	5	260	B	None	None
+P06401	678	933	3zrb	Structural basis for agonism and antagonism for a set of chemically related progesterone receptor modulators	5	260	A	None	None
+P06401	678	933	3zrb	Structural basis for agonism and antagonism for a set of chemically related progesterone receptor modulators	5	260	B	None	None
+P06401	678	933	4oar	Progesterone receptor with bound ulipristal acetate and a peptide from the co-repressor SMRT	3	258	A	None	None
+P06401	678	933	2ovh	Progesterone Receptor with Bound Asoprisnil and a Peptide from the Co-Repressor SMRT	1	256	A	None	None
+P06401	678	933	3hq5	Progesterone Receptor bound to an Alkylpyrrolidine ligand.	1	256	A	None	None
+P06401	678	933	3hq5	Progesterone Receptor bound to an Alkylpyrrolidine ligand.	1	256	B	None	None
+P06401	678	933	2ovm	Progesterone Receptor with Bound Asoprisnil and a Peptide from the Co-Repressor NCoR	1	256	A	None	None
+P06401	678	933	2w8y	RU486 bound to the progesterone receptor in a destabilized agonistic conformation	5	260	A	None	933
+P06401	678	933	2w8y	RU486 bound to the progesterone receptor in a destabilized agonistic conformation	5	260	B	None	933
+P06401	678	933	3zr7	Structural basis for agonism and antagonism for a set of chemically related progesterone receptor modulators	5	260	A	None	None
+P06401	678	933	3zr7	Structural basis for agonism and antagonism for a set of chemically related progesterone receptor modulators	5	260	B	None	None
+P06401	681	933	3kba	Progesterone receptor bound to sulfonamide pyrrolidine partial agonist	1	253	A	None	933
+P06401	681	933	3kba	Progesterone receptor bound to sulfonamide pyrrolidine partial agonist	1	253	B	None	None
+

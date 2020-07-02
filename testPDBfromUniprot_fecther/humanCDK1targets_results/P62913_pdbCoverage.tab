@@ -1,0 +1,44 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P62913	60S RIBOSOMAL PROTEIN L11	RL11_HUMAN	Homo sapiens	PF00673	Ribosomal_L5_C	ribosomal L5P family C-terminus	67	165
+P62913	60S RIBOSOMAL PROTEIN L11	RL11_HUMAN	Homo sapiens	PF00281	Ribosomal_L5	Ribosomal protein L5	10	63
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#21 mappings in 21 PDB chains in 21 PDB entries
+P62913	1	178	5lks	Structure-function insights reveal the human ribosome as a cancer target for antibiotics	1	178	LJ	None	178
+P62913	1	178	6ip5	Cryo-EM structure of the CMV-stalled human 80S ribosome (Structure ii)	1	178	2E	None	178
+P62913	1	178	4v6x	Structure of the human 80S ribosome	1	178	CJ	None	None
+P62913	1	178	6y2l	Structure of human ribosome in POST state	1	178	LJ	None	178
+P62913	1	178	6ip6	Cryo-EM structure of the CMV-stalled human 80S ribosome with HCV IRES (Structure iii)	1	178	2E	None	178
+P62913	1	178	6ek0	High-resolution cryo-EM structure of the human 80S ribosome	1	178	LJ	None	178
+P62913	1	178	6ip8	Cryo-EM structure of the HCV IRES dependently initiated CMV-stalled 80S ribosome (Structure iv)	1	178	2E	None	178
+P62913	1	178	6y0g	Structure of human ribosome in classical-PRE state	1	178	LJ	None	None
+P62913	1	178	4ug0	STRUCTURE OF THE HUMAN 80S RIBOSOME	1	178	LJ	None	178
+P62913	1	178	5aj0	Cryo electron microscopy of actively translating human polysomes (POST state).	1	178	AJ	None	None
+P62913	1	178	4xxb	Crystal structure of human MDM2-RPL11	1	178	A	None	178
+P62913	1	178	5t2c	CryoEM structure of the human ribosome at 3.6 Angstrom resolution	1	178	q	None	178
+P62913	1	178	6y57	Structure of human ribosome in hybrid-PRE state	1	178	LJ	None	None
+P62913	3	178	6qzp	High-resolution cryo-EM structure of the human 80S ribosome	1	176	LJ	3	178
+P62913	9	177	6olg	Human ribosome nascent chain complex stalled by a drug-like small molecule (CDH1_RNC with PP tRNA)	1	169	AJ	9	177
+P62913	9	177	6oli	Structure of human ribosome nascent chain complex selectively stalled by a drug-like small molecule (USO1-RNC)	1	169	L	9	177
+P62913	9	177	6om7	Human ribosome nascent chain complex (PCSK9-RNC) stalled by a drug-like small molecule with AA and PE tRNAs	1	169	L	9	177
+P62913	9	177	6olz	Human ribosome nascent chain complex (PCSK9-RNC) stalled by a drug-like molecule with PP tRNA	1	169	AJ	9	177
+P62913	9	177	6olf	Human ribosome nascent chain complex (CDH1-RNC) stalled by a drug-like molecule with AA and PE tRNAs	1	169	L	9	177
+P62913	9	177	6ole	Human ribosome nascent chain complex (CDH1-RNC) stalled by a drug-like molecule with AP and PE tRNAs	1	169	L	9	177
+P62913	9	177	6om0	Human ribosome nascent chain complex (PCSK9-RNC) stalled by a drug-like molecule with AP and PE tRNAs	1	169	L	9	177
+

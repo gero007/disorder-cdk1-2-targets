@@ -1,0 +1,30 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q8WUM0	NUCLEAR PORE COMPLEX PROTEIN NUP133	NU133_HUMAN	Homo sapiens	PF03177	Nucleoporin_C	Non-repetitive/WGA-negative nucleoporin C-terminal	594	1024
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 5 PDB entries
+Q8WUM0	1	1156	5a9q	Human nuclear pore complex	1	1156	C	None	1156
+Q8WUM0	1	1156	5a9q	Human nuclear pore complex	1	1156	3	None	1156
+Q8WUM0	1	1156	5a9q	Human nuclear pore complex	1	1156	U	None	1156
+Q8WUM0	1	1156	5a9q	Human nuclear pore complex	1	1156	L	None	1156
+Q8WUM0	67	514	1xks	The crystal structure of the N-terminal domain of Nup133 reveals a beta-propeller fold common to several nucleoporins	3	450	A	None	None
+Q8WUM0	517	1156	3i4r	Nup107(aa658-925)/Nup133(aa517-1156) complex, H.sapiens	5	644	B	None	1156
+Q8WUM0	934	1156	3cqg	Nucleoporin Nup107/Nup133 interaction complex, delta finger mutant	5	227	B	None	1156
+Q8WUM0	935	1156	3cqc	Nucleoporin Nup107/Nup133 interaction complex	6	227	B	935	1156
+

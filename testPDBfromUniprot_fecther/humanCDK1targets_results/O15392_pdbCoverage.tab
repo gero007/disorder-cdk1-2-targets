@@ -1,0 +1,67 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O15392	Apoptosis inhibitor survivin	BIRC5_HUMAN	Homo sapiens	PF00653	BIR	Inhibitor of Apoptosis domain	18	88
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#45 mappings in 45 PDB chains in 25 PDB entries
+O15392	1	142	3ueg	Crystal structure of human Survivin K62A mutant	5	146	B	None	142
+O15392	1	142	3ueg	Crystal structure of human Survivin K62A mutant	5	146	A	None	None
+O15392	1	142	3uef	Crystal structure of human Survivin bound to histone H3 (C2 space group).	5	146	C	None	None
+O15392	1	142	3uef	Crystal structure of human Survivin bound to histone H3 (C2 space group).	5	146	A	None	None
+O15392	1	142	3uee	Crystal structure of human Survivin K62A mutant bound to N-terminal histone H3	5	146	C	None	142
+O15392	1	142	3uee	Crystal structure of human Survivin K62A mutant bound to N-terminal histone H3	5	146	A	None	None
+O15392	1	142	3ued	Crystal structure of human Survivin bound to histone H3 phosphorylated on threonine-3 (C2 space group).	5	146	A	None	None
+O15392	1	142	3ued	Crystal structure of human Survivin bound to histone H3 phosphorylated on threonine-3 (C2 space group).	5	146	C	None	142
+O15392	1	142	3uec	Crystal structure of human Survivin bound to histone H3 phosphorylated on threonine-3.	5	146	A	None	142
+O15392	1	142	3uei	Crystal structure of human Survivin E65A mutant	5	146	B	None	142
+O15392	1	142	3uei	Crystal structure of human Survivin E65A mutant	5	146	A	None	None
+O15392	1	142	3ueh	Crystal structure of human Survivin H80A mutant	5	146	A	None	None
+O15392	1	142	3ueh	Crystal structure of human Survivin H80A mutant	5	146	B	None	None
+O15392	1	142	2qfa	Crystal structure of a Survivin-Borealin-INCENP core complex	1	142	A	None	None
+O15392	1	142	1f3h	X-RAY CRYSTAL STRUCTURE OF THE HUMAN ANTI-APOPTOTIC PROTEIN SURVIVIN	1	142	A	None	None
+O15392	1	142	1f3h	X-RAY CRYSTAL STRUCTURE OF THE HUMAN ANTI-APOPTOTIC PROTEIN SURVIVIN	1	142	B	None	None
+O15392	1	142	4a0i	Crystal structure of Survivin bound to the N-terminal tail of hSgo1	1	142	A	None	None
+O15392	1	142	4a0i	Crystal structure of Survivin bound to the N-terminal tail of hSgo1	1	142	B	None	None
+O15392	1	142	6sho	SAD structure of Human Survivin recovered by continuous rotation data collection and multivariate analysis of Friedel pairs	1	142	A	None	None
+O15392	1	142	6sho	SAD structure of Human Survivin recovered by continuous rotation data collection and multivariate analysis of Friedel pairs	1	142	B	None	None
+O15392	1	142	4a0j	Crystal structure of Survivin bound to the phosphorylated N-terminal tail of histone H3	1	142	A	None	None
+O15392	1	142	4a0j	Crystal structure of Survivin bound to the phosphorylated N-terminal tail of histone H3	1	142	B	None	None
+O15392	1	142	4a0n	Crystal structure of Survivin bound to the phosphorylated N-terminal tail of histone H3	1	142	A	None	None
+O15392	1	142	6yih	Structure of Chromosomal Passenger Complex (CPC) bound to phosphorylated Histone 3 peptide at 2.6 A.	3	144	A	None	None
+O15392	1	142	1e31	SURVIVIN DIMER H. SAPIENS	1	142	B	None	142
+O15392	1	142	1e31	SURVIVIN DIMER H. SAPIENS	1	142	A	None	None
+O15392	1	142	6yie	Structure of a Borealin-INCENP-Survivin complex	3	144	A	None	None
+O15392	1	142	6yie	Structure of a Borealin-INCENP-Survivin complex	3	144	D	None	None
+O15392	1	142	6yif	Structure of Chromosomal Passenger Complex (CPC) bound to phosphorylated Histone 3 peptide at 1.8 A.	3	144	A	None	None
+O15392	1	142	2raw	Crystal structure of the Borealin-Survivin complex	4	145	A	None	None
+O15392	1	142	3uig	crystal structure of human Survivin in complex with T3 phosphorylated H3(1-15) peptide	2	143	A	None	None
+O15392	1	142	3uig	crystal structure of human Survivin in complex with T3 phosphorylated H3(1-15) peptide	2	143	B	None	None
+O15392	1	142	3uik	crystal structure of human Survivin mutant K62Y/H80W in complex with H3(1-10) peptide	2	143	A	None	None
+O15392	1	142	3uik	crystal structure of human Survivin mutant K62Y/H80W in complex with H3(1-10) peptide	2	143	B	None	None
+O15392	1	142	3uij	Crystal structure of human Survivin K62Y/H80W mutant in complex with Smac/DIABLO(1-15) peptide	2	143	A	None	None
+O15392	1	142	3uij	Crystal structure of human Survivin K62Y/H80W mutant in complex with Smac/DIABLO(1-15) peptide	2	143	B	None	None
+O15392	1	142	3uii	crystal structure of human Survivin in complex with H3(1-10) peptide	2	143	A	None	None
+O15392	1	142	3uii	crystal structure of human Survivin in complex with H3(1-10) peptide	2	143	B	None	None
+O15392	1	142	3uih	crystal structure of human Survivin in complex with Smac/DIABLO(1-15) peptide	2	143	A	None	None
+O15392	1	142	3uih	crystal structure of human Survivin in complex with Smac/DIABLO(1-15) peptide	2	143	B	None	None
+O15392	1	120	2rax	Crystal structure of Borealin (20-78) bound to Survivin (1-120)	4	123	A	None	None
+O15392	1	120	2rax	Crystal structure of Borealin (20-78) bound to Survivin (1-120)	4	123	X	None	None
+O15392	1	120	2rax	Crystal structure of Borealin (20-78) bound to Survivin (1-120)	4	123	E	None	None
+O15392	1	117	1xox	SOLUTION STRUCTURE OF HUMAN SURVIVIN	1	117	B	1	117
+O15392	1	117	1xox	SOLUTION STRUCTURE OF HUMAN SURVIVIN	1	117	A	1	117
+

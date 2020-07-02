@@ -1,0 +1,42 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q13330	Metastasis-associated protein MTA1	MTA1_HUMAN	Homo sapiens	PF01426	BAH	BAH domain	4	164
+Q13330	Metastasis-associated protein MTA1	MTA1_HUMAN	Homo sapiens	PF00249	Myb_DNA-binding	Myb-like DNA-binding domain	285	331
+Q13330	Metastasis-associated protein MTA1	MTA1_HUMAN	Homo sapiens	PF00320	GATA	GATA zinc finger	393	430
+Q13330	Metastasis-associated protein MTA1	MTA1_HUMAN	Homo sapiens	PF01448	ELM2	ELM2 domain	167	219
+Q13330	Metastasis-associated protein MTA1	MTA1_HUMAN	Homo sapiens	PF17226	MTA_R1	MTA R1 domain	656	695
+Q13330	Metastasis-associated protein MTA1	MTA1_HUMAN	Homo sapiens	PF17226	MTA_R1	MTA R1 domain	464	541
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#15 mappings in 15 PDB chains in 7 PDB entries
+Q13330	162	354	5icn	HDAC1:MTA1 in complex with inositol-6-phosphate and a novel peptide inhibitor based on histone H4	3	195	A	None	None
+Q13330	162	335	4bkx	The structure of HDAC1 in complex with the dimeric ELM2-SANT domain of MTA1 from the NuRD complex	3	176	A	None	None
+Q13330	464	546	5fxy	Structure of the human RBBP4:MTA1(464-546) complex	3	85	B	None	546
+Q13330	464	546	5fxy	Structure of the human RBBP4:MTA1(464-546) complex	3	85	H	None	546
+Q13330	464	546	5fxy	Structure of the human RBBP4:MTA1(464-546) complex	3	85	F	None	546
+Q13330	464	546	5fxy	Structure of the human RBBP4:MTA1(464-546) complex	3	85	D	None	546
+Q13330	464	546	6g16	Structure of the human RBBP4:MTA1(464-546) complex showing loop exchange	3	85	B	None	546
+Q13330	464	546	6g16	Structure of the human RBBP4:MTA1(464-546) complex showing loop exchange	3	85	H	None	546
+Q13330	464	546	6g16	Structure of the human RBBP4:MTA1(464-546) complex showing loop exchange	3	85	F	None	546
+Q13330	464	546	6g16	Structure of the human RBBP4:MTA1(464-546) complex showing loop exchange	3	85	D	None	546
+Q13330	656	686	4pby	Structure of the human RbAp48-MTA1(656-686) complex	1	31	D	None	686
+Q13330	656	686	4pby	Structure of the human RbAp48-MTA1(656-686) complex	1	31	C	None	686
+Q13330	670	711	4pc0	Structure of the human RbAp48-MTA1(670-711) complex	1	42	D	None	None
+Q13330	670	711	4pc0	Structure of the human RbAp48-MTA1(670-711) complex	1	42	C	None	None
+Q13330	670	695	4pbz	Structure of the human RbAp48-MTA1(670-695) complex	1	26	B	670	None
+

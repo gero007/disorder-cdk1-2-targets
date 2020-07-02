@@ -1,0 +1,58 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00638	Ran_BP1	RanBP1 domain	2922	3043
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00638	Ran_BP1	RanBP1 domain	2321	2442
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00638	Ran_BP1	RanBP1 domain	2024	2145
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00638	Ran_BP1	RanBP1 domain	1183	1304
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00641	zf-RanBP	Zn-finger in Ran binding protein and others	1781	1810
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00641	zf-RanBP	Zn-finger in Ran binding protein and others	1724	1753
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00641	zf-RanBP	Zn-finger in Ran binding protein and others	1665	1694
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00641	zf-RanBP	Zn-finger in Ran binding protein and others	1606	1635
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00641	zf-RanBP	Zn-finger in Ran binding protein and others	1543	1572
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00641	zf-RanBP	Zn-finger in Ran binding protein and others	1479	1508
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00641	zf-RanBP	Zn-finger in Ran binding protein and others	1415	1444
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00641	zf-RanBP	Zn-finger in Ran binding protein and others	1351	1381
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF00160	Pro_isomerase	Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD	3067	3223
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF12185	IR1-M	Nup358/RanBP2 E3 ligase domain	2709	2769
+P49792	NUCLEAR PORE COMPLEX PROTEIN NUP358	RBP2_HUMAN	Homo sapiens	PF12185	IR1-M	Nup358/RanBP2 E3 ligase domain	2631	2693
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#22 mappings in 22 PDB chains in 13 PDB entries
+P49792	1	145	4ga0	Structure of the N-terminal domain of Nup358	6	150	A	None	143
+P49792	1155	1321	5clq	Ran Y39A in complex with GPPNHP and RanBD1	1	167	D	None	None
+P49792	1155	1321	5clq	Ran Y39A in complex with GPPNHP and RanBD1	1	167	B	None	None
+P49792	1155	1321	5cll	Truncated Ran wild type in complex with GDP-BeF and RanBD1	1	167	D	None	None
+P49792	1155	1321	5cll	Truncated Ran wild type in complex with GDP-BeF and RanBD1	1	167	B	None	None
+P49792	1171	1304	1rrp	STRUCTURE OF THE RAN-GPPNHP-RANBD1 COMPLEX	1	134	B	17	150
+P49792	1171	1304	1rrp	STRUCTURE OF THE RAN-GPPNHP-RANBD1 COMPLEX	1	134	D	17	150
+P49792	2027	2154	1xke	Solution structure of the second Ran-binding domain from human RanBP2	2	129	A	2	129
+P49792	2629	2695	3uin	Complex between human RanGAP1-SUMO2, UBC9 and the IR1 domain from RanBP2	3	69	D	2629	None
+P49792	2631	2711	1z5s	Crystal structure of a complex between UBC9, SUMO-1, RANGAP1 and NUP358/RANBP2	3	83	D	2631	None
+P49792	2631	2695	3uio	Complex between human RanGAP1-SUMO2, UBC9 and the IR1 domain from RanBP2 containing IR2 Motif II	3	67	D	2631	None
+P49792	2631	2695	3uip	Complex between human RanGAP1-SUMO1, UBC9 and the IR1 domain from RanBP2 containing IR2 Motif II	3	67	D	2631	None
+P49792	2705	2717	2las	Molecular Determinants of Paralogue-Specific SUMO-SIM Recognition	1	13	B	2705	2717
+P49792	2907	3050	4l6e	Crystal Structure of the RanBD1 fourth domain of E3 SUMO-protein ligase RanBP2. Northeast Structural Genomics Consortium (NESG) Target HR9193b	12	155	A	None	None
+P49792	3057	3224	4lqw	Crystal structure of HIV-1 capsid N-terminal domain in complex with NUP358 cyclophilin	10	177	B	-3	164
+P49792	3057	3224	4lqw	Crystal structure of HIV-1 capsid N-terminal domain in complex with NUP358 cyclophilin	10	177	A	-3	164
+P49792	3062	3224	4i9y	Structure of the C-terminal domain of Nup358	5	167	B	2	164
+P49792	3062	3224	4i9y	Structure of the C-terminal domain of Nup358	5	167	E	2	164
+P49792	3062	3224	4i9y	Structure of the C-terminal domain of Nup358	5	167	D	2	164
+P49792	3062	3224	4i9y	Structure of the C-terminal domain of Nup358	5	167	A	2	164
+P49792	3062	3224	4i9y	Structure of the C-terminal domain of Nup358	5	167	F	2	164
+P49792	3062	3224	4i9y	Structure of the C-terminal domain of Nup358	5	167	C	2	164
+

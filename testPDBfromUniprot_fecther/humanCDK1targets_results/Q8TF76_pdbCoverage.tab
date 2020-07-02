@@ -1,0 +1,49 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q8TF76	Serine/threonine-protein kinase haspin	HASP_HUMAN	Homo sapiens	PF12330	Haspin_kinase	Haspin like kinase domain	407	796
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#27 mappings in 27 PDB chains in 27 PDB entries
+Q8TF76	447	798	2wb8	Crystal structure of Haspin kinase	1	352	A	447	798
+Q8TF76	465	798	6g35	Crystal structure of haspin in complex with 5-bromotubercidin	24	357	A	465	798
+Q8TF76	465	798	6g36	Crystal structure of haspin in complex with 5-chlorotubercidin	24	357	A	24	357
+Q8TF76	465	798	6g37	Crystal structure of haspin in complex with 5-fluorotubercidin	24	357	A	None	798
+Q8TF76	465	798	6g38	Crystal structure of haspin in complex with tubercidin	24	357	A	None	798
+Q8TF76	465	798	6g39	Crystal structure of haspin F605Y mutant in complex with 5-iodotubercidin	24	357	A	None	798
+Q8TF76	465	798	6z5c	Crystal structure of haspin (GSG2) in complex with macrocycle ODS2004070	24	357	A	None	798
+Q8TF76	465	798	6z5b	Crystal structure of haspin (GSG2) in complex with macrocycle ODS2003128	24	357	A	None	798
+Q8TF76	465	798	6z5a	Crystal structure of haspin (GSG2) in complex with macrocycle ODS2002941	24	357	A	465	798
+Q8TF76	465	798	5htc	Crystal structure of haspin (GSG2) in complex with bisubstrate inhibitor ARC-3372	24	357	A	None	798
+Q8TF76	465	798	5htb	Crystal structure of haspin (GSG2) in complex with bisubstrate inhibitor ARC-3353	24	357	A	None	798
+Q8TF76	465	798	6z5e	Crystal structure of haspin (GSG2) in complex with macrocycle ODS2004093	24	357	A	None	798
+Q8TF76	465	798	6z5d	Crystal structure of haspin (GSG2) in complex with macrocycle ODS2004082	24	357	A	None	798
+Q8TF76	465	798	4ouc	Structure of human haspin in complex with histone H3 substrate	24	357	A	None	798
+Q8TF76	465	798	6z57	Crystal structure of haspin (GSG2) in complex with macrocycle ODS2004078	24	357	A	None	798
+Q8TF76	465	798	6z56	Crystal structure of haspin (GSG2) in complex with macrocycle ODS2003208	24	357	A	None	798
+Q8TF76	465	798	3f2n	Crystal Structure of Human Haspin with an Imidazo-pyridazine ligand	24	357	A	None	798
+Q8TF76	465	798	6z59	Crystal structure of haspin (GSG2) in complex with macrocycle ODS2003816	24	357	A	None	798
+Q8TF76	465	798	6z58	Crystal structure of haspin (GSG2) in complex with macrocycle ODS2003791	24	357	A	None	798
+Q8TF76	465	798	2vuw	Structure of human haspin kinase domain	3	336	A	None	798
+Q8TF76	465	798	6g3a	Crystal structure of haspin F605T mutant in complex with 5-iodotubercidin	24	357	A	None	798
+Q8TF76	465	798	3iq7	Crystal Structure of human Haspin in complex with 5-Iodotubercidin	24	357	A	None	798
+Q8TF76	465	798	3dlz	Crystal structure of human haspin in complex with AMP	24	357	A	None	798
+Q8TF76	465	798	4qtc	Structure of human haspin (GSG2) in complex with SCH772984 revealing the first type-I binding mode	24	357	A	None	798
+Q8TF76	465	798	6g34	Crystal structure of haspin in complex with 5-iodotubercidin	24	357	A	None	357
+Q8TF76	470	798	3fmd	Crystal Structure of Human Haspin with an Isoquinoline ligand	29	357	A	470	798
+Q8TF76	471	798	3e7v	Crystal Structure of Human Haspin with a pyrazolo-pyrimidine ligand	30	357	A	471	798
+

@@ -1,0 +1,48 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O75533	Splicing factor 3B subunit 1	SF3B1_HUMAN	Homo sapiens	PF08920	SF3b1	Splicing factor 3B subunit 1	329	452
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#26 mappings in 26 PDB chains in 22 PDB entries
+O75533	1	1304	6y50	5'domain of human 17S U2 snRNP	1	1304	u	None	1304
+O75533	1	1304	6y53	human 17S U2 snRNP low resolution part	1	1304	u	None	None
+O75533	1	1304	5ife	Crystal structure of the human SF3b core complex	1	1304	C	None	1304
+O75533	1	1304	6qx9	Structure of a human fully-assembled precatalytic spliceosome (pre-B complex).	1	1304	B1	None	1304
+O75533	1	1304	5o9z	Cryo-EM structure of a pre-catalytic human spliceosome primed for activation (B complex)	1	1304	v	None	1304
+O75533	1	1304	6ff7	human Bact spliceosome core structure	1	1304	u	None	1304
+O75533	1	1304	6ff4	human Bact spliceosome core structure	1	1304	u	None	1304
+O75533	1	1304	6ah0	The Cryo-EM Structure of the Precusor of Human Pre-catalytic Spliceosome (pre-B complex)	1	1304	1	None	1304
+O75533	1	1304	6y5q	human 17S U2 snRNP	1	1304	u	None	1304
+O75533	1	1304	5zya	SF3b spliceosomal complex bound to E7107	1	1304	C	None	1304
+O75533	1	1304	5z58	Cryo-EM structure of a human activated spliceosome (early Bact) at 4.9 angstrom.	1	1304	1	None	1304
+O75533	1	1304	5z56	cryo-EM structure of a human activated spliceosome (mature Bact) at 5.1 angstrom.	1	1304	1	None	1304
+O75533	1	1304	5z57	Cryo-EM structure of the human activated spliceosome (late Bact) at 6.5 angstrom	1	1304	1	None	1304
+O75533	291	297	6n3e	Structure of HIV Tat-specific factor 1 U2AF Homology Motif bound to U2AF ligand motif 4	1	7	B	291	297
+O75533	333	342	2peh	Crystal structure of the UHM domain of human SPF45 in complex with SF3b155-ULM5	1	10	C	333	342
+O75533	333	342	2peh	Crystal structure of the UHM domain of human SPF45 in complex with SF3b155-ULM5	1	10	D	None	342
+O75533	333	342	4oz1	Crystal structure of human CAPERalpha UHM bound to SF3b155 ULM5	1	10	C	None	342
+O75533	336	339	6n3f	Structure of HIV Tat-specific factor 1 U2AF Homology Motif bound to SF3b1 ULM5	1	4	D	336	339
+O75533	373	415	2f9d	2.5 angstrom resolution structure of the spliceosomal protein p14 bound to region of SF3b155	1	43	P	None	415
+O75533	373	415	2f9d	2.5 angstrom resolution structure of the spliceosomal protein p14 bound to region of SF3b155	1	43	Q	None	415
+O75533	377	415	3lqv	Branch Recognition by SF3b14	1	39	P	377	415
+O75533	377	415	3lqv	Branch Recognition by SF3b14	1	39	Q	None	415
+O75533	379	424	2fho	NMR solution structure of the human spliceosomal protein complex p14-SF3b155	2	47	A	379	424
+O75533	381	415	2f9j	3.0 angstrom resolution structure of a Y22M mutant of the spliceosomal protein p14 bound to a region of SF3b155	2	36	P	381	415
+O75533	381	415	2f9j	3.0 angstrom resolution structure of a Y22M mutant of the spliceosomal protein p14 bound to a region of SF3b155	2	36	Q	None	415
+O75533	453	1304	6en4	SF3b core in complex with a splicing modulator	1	852	C	None	1304
+

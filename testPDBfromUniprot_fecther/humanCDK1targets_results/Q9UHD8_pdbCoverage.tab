@@ -1,0 +1,30 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9UHD8	Septin-9	SEPT9_HUMAN	Homo sapiens	PF00735	Septin	Septin	295	574
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 3 PDB entries
+Q9UHD8	293	566	5cyp	GTPase domain of Septin 9 in complex with GTP-gamma-S	1	274	A	18	None
+Q9UHD8	293	566	5cyp	GTPase domain of Septin 9 in complex with GTP-gamma-S	1	274	C	None	291
+Q9UHD8	293	566	5cyp	GTPase domain of Septin 9 in complex with GTP-gamma-S	1	274	B	None	None
+Q9UHD8	293	566	5cyp	GTPase domain of Septin 9 in complex with GTP-gamma-S	1	274	D	None	291
+Q9UHD8	295	568	5cyo	High resolution Septin 9 GTPase domain in complex with GDP	1	274	B	None	293
+Q9UHD8	295	568	5cyo	High resolution Septin 9 GTPase domain in complex with GDP	1	274	A	20	293
+Q9UHD8	296	565	4yqf	GTPase domain of Human Septin 9	21	290	B	21	290
+Q9UHD8	296	565	4yqf	GTPase domain of Human Septin 9	21	290	A	21	290
+

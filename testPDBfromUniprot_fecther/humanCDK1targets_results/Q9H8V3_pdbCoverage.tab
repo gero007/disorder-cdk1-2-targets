@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9H8V3	Protein ECT2	ECT2_HUMAN	Homo sapiens	PF00533	BRCT	BRCA1 C Terminus (BRCT) domain	266	341
+Q9H8V3	Protein ECT2	ECT2_HUMAN	Homo sapiens	PF00621	RhoGEF	RhoGEF domain	456	639
+Q9H8V3	Protein ECT2	ECT2_HUMAN	Homo sapiens	PF12738	PTCB-BRCT	twin BRCT domain	179	242
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 4 PDB chains in 3 PDB entries
+Q9H8V3	45	356	4n40	Crystal structure of human Epithelial cell-transforming sequence 2 protein	1	281	A	45	325
+Q9H8V3	173	865	6l30	Crystal structure of the epithelial cell transforming 2 (ECT2)	9	701	A	142	None
+Q9H8V3	268	361	3l46	Crystal structure of the second BRCT domain of epithelial cell transforming 2 (ECT2)	19	112	B	237	330
+Q9H8V3	268	361	3l46	Crystal structure of the second BRCT domain of epithelial cell transforming 2 (ECT2)	19	112	A	237	None
+

@@ -1,0 +1,88 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O15151	HdmX Peptide	MDM4_HUMAN	Homo sapiens	PF00641	zf-RanBP	Zn-finger in Ran binding protein and others	300	329
+O15151	HdmX Peptide	MDM4_HUMAN	Homo sapiens	PF02201	SWIB	SWIB/MDM2 domain	25	95
+O15151	HdmX Peptide	MDM4_HUMAN	Homo sapiens	PF13920	zf-C3HC4_3	Zinc finger, C3HC4 type (RING finger)	434	484
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#64 mappings in 64 PDB chains in 32 PDB entries
+O15151	14	111	3fea	Crystal Structure of HdmX bound to the p53-peptidomimetic Ac-Phe-Met-Aib-Pmp-6-Cl-Trp-Glu-Ac3c-Leu-NH2 at 1.33A	3	100	A	None	None
+O15151	14	111	3fe7	Crystal Structure of HdmX bound to the p53-peptidomimetic Ac-Phe-Met-Aib-Pmp-Trp-Glu-Ac3c-Leu-NH2 at 1.35A	3	100	A	None	None
+O15151	14	111	3u15	Structure of hDMX with Dimer Inducing Indolyl Hydantoin RO-2443	3	100	A	None	None
+O15151	14	111	3u15	Structure of hDMX with Dimer Inducing Indolyl Hydantoin RO-2443	3	100	D	None	None
+O15151	14	111	3u15	Structure of hDMX with Dimer Inducing Indolyl Hydantoin RO-2443	3	100	B	None	None
+O15151	14	111	3u15	Structure of hDMX with Dimer Inducing Indolyl Hydantoin RO-2443	3	100	C	None	None
+O15151	14	111	6q9u	HDMX (14-111; C17S) COMPLEXED WITH COMPOUND 12 AT 2.4A; Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	A	None	None
+O15151	14	111	6q9w	X-ray structure of compound 15 bound to HdmX: Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	A	None	None
+O15151	14	111	6q9w	X-ray structure of compound 15 bound to HdmX: Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	B	None	None
+O15151	14	111	6q9q	HDMX (14-111; C17S) COMPLEXED WITH COMPOUND 13 AT 2.1A; Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	A	None	None
+O15151	14	111	6q9q	HDMX (14-111; C17S) COMPLEXED WITH COMPOUND 13 AT 2.1A; Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	D	None	None
+O15151	14	111	6q9q	HDMX (14-111; C17S) COMPLEXED WITH COMPOUND 13 AT 2.1A; Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	B	None	None
+O15151	14	111	6q9q	HDMX (14-111; C17S) COMPLEXED WITH COMPOUND 13 AT 2.1A; Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	C	None	None
+O15151	14	111	6q9s	HDMX (14-111; C17S) COMPLEXED WITH COMPOUND 14 AT 2.4A: Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	C	None	None
+O15151	14	111	6q9s	HDMX (14-111; C17S) COMPLEXED WITH COMPOUND 14 AT 2.4A: Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	A	None	None
+O15151	14	111	6q9s	HDMX (14-111; C17S) COMPLEXED WITH COMPOUND 14 AT 2.4A: Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	B	None	None
+O15151	14	111	6q9y	HDMX (14-111; C17S) COMPLEXED WITH COMPOUND 16 AT 1.20A; Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	A	None	None
+O15151	14	111	6q9y	HDMX (14-111; C17S) COMPLEXED WITH COMPOUND 16 AT 1.20A; Structural states of Hdm2 and HdmX: X-ray elucidation of adaptations and binding interactions for different chemical compound classes	3	100	B	None	None
+O15151	16	116	2vyr	Structure of human MDM4 N-terminal domain bound to a single domain antibody	1	101	A	None	None
+O15151	16	116	2vyr	Structure of human MDM4 N-terminal domain bound to a single domain antibody	1	101	D	None	None
+O15151	16	116	2vyr	Structure of human MDM4 N-terminal domain bound to a single domain antibody	1	101	B	None	None
+O15151	16	116	2vyr	Structure of human MDM4 N-terminal domain bound to a single domain antibody	1	101	C	None	None
+O15151	23	111	3jzp	Human MDMX liganded with a 12mer peptide inhibitor (pDI6W)	1	89	A	23	None
+O15151	23	111	3fdo	Structure of human MDMX in complex with high affinity peptide	2	90	A	23	111
+O15151	23	111	2n0w	Mdmx-SJ212	1	89	A	23	111
+O15151	23	111	2mwy	Mdmx-p53	1	89	A	1	89
+O15151	23	111	2n06	Mdmx-298	1	89	A	23	111
+O15151	23	111	3dab	Structure of the human Mdmx protein bound to the p53 tumor suppressor transactivation domain	2	90	C	23	None
+O15151	23	111	3dab	Structure of the human Mdmx protein bound to the p53 tumor suppressor transactivation domain	2	90	E	23	None
+O15151	23	111	3dab	Structure of the human Mdmx protein bound to the p53 tumor suppressor transactivation domain	2	90	G	23	None
+O15151	23	111	3dab	Structure of the human Mdmx protein bound to the p53 tumor suppressor transactivation domain	2	90	A	23	None
+O15151	23	111	3jzo	Human MDMX liganded with a 12mer peptide (pDI)	1	89	A	23	None
+O15151	23	111	3lbj	Structure of human MDMX protein in complex with a small molecule inhibitor	2	90	E	None	None
+O15151	23	111	2n0u	Mdmx-057	1	89	A	23	111
+O15151	23	111	2n14	Mdmx-295	1	89	A	23	111
+O15151	23	111	3jzq	Human MDMX liganded with a 12mer peptide inhibitor (pDIQ)	1	89	A	None	None
+O15151	23	111	3jzq	Human MDMX liganded with a 12mer peptide inhibitor (pDIQ)	1	89	B	None	111
+O15151	23	108	7c44	Crystal structure of the p53-binding domain of human MdmX protein in complex with Nutlin3a	11	96	A	22	107
+O15151	23	108	7c3y	Crystal structure of the N-terminal domain of human MdmX protein in complex with Nutlin3a	11	96	A	22	107
+O15151	23	108	7c3q	Human MdmX protein in complex with Nutlin3a	11	96	A	22	107
+O15151	24	108	5uml	CRYSTAL STRUCTURE OF HUMAN MDMX IN COMPLEX WITH 12-MER PEPTIDE INHIBITOR M3	1	85	B	None	108
+O15151	24	108	5uml	CRYSTAL STRUCTURE OF HUMAN MDMX IN COMPLEX WITH 12-MER PEPTIDE INHIBITOR M3	1	85	E	None	108
+O15151	24	108	5uml	CRYSTAL STRUCTURE OF HUMAN MDMX IN COMPLEX WITH 12-MER PEPTIDE INHIBITOR M3	1	85	G	None	108
+O15151	24	108	5uml	CRYSTAL STRUCTURE OF HUMAN MDMX IN COMPLEX WITH 12-MER PEPTIDE INHIBITOR M3	1	85	A	None	108
+O15151	24	108	3eqy	Crystal structure of human MDMX in complex with a 12-mer peptide inhibitor	1	85	B	None	108
+O15151	24	108	3eqy	Crystal structure of human MDMX in complex with a 12-mer peptide inhibitor	1	85	A	None	108
+O15151	24	108	4rxz	Crystal Structure of MDMX phosporylated Tyr99 in complex with a 12-mer peptide	1	85	B	None	108
+O15151	24	108	4rxz	Crystal Structure of MDMX phosporylated Tyr99 in complex with a 12-mer peptide	1	85	A	None	108
+O15151	24	108	5vk1	Crystal structure of human MDM4 in complex with a 12-mer lysine-cysteine side chain dithiocarbamate stapled peptide inhibitor PMI	1	85	C	None	None
+O15151	24	108	5vk1	Crystal structure of human MDM4 in complex with a 12-mer lysine-cysteine side chain dithiocarbamate stapled peptide inhibitor PMI	1	85	I	None	None
+O15151	24	108	5vk1	Crystal structure of human MDM4 in complex with a 12-mer lysine-cysteine side chain dithiocarbamate stapled peptide inhibitor PMI	1	85	M	None	None
+O15151	24	108	5vk1	Crystal structure of human MDM4 in complex with a 12-mer lysine-cysteine side chain dithiocarbamate stapled peptide inhibitor PMI	1	85	A	None	None
+O15151	24	108	5vk1	Crystal structure of human MDM4 in complex with a 12-mer lysine-cysteine side chain dithiocarbamate stapled peptide inhibitor PMI	1	85	O	None	None
+O15151	24	108	5vk1	Crystal structure of human MDM4 in complex with a 12-mer lysine-cysteine side chain dithiocarbamate stapled peptide inhibitor PMI	1	85	E	None	None
+O15151	24	108	5vk1	Crystal structure of human MDM4 in complex with a 12-mer lysine-cysteine side chain dithiocarbamate stapled peptide inhibitor PMI	1	85	G	None	None
+O15151	24	108	5vk1	Crystal structure of human MDM4 in complex with a 12-mer lysine-cysteine side chain dithiocarbamate stapled peptide inhibitor PMI	1	85	K	None	None
+O15151	299	339	2cr8	Solution structure of the zf-RanBP domain of p53-binding protein Mdm4	7	47	A	7	47
+O15151	395	404	3mqr	Crystal Structure of the USP7:HdmX(AHSS) complex	1	10	B	None	None
+O15151	427	490	5mnj	Structure of MDM2-MDMX-UbcH5B-ubiquitin complex	1	64	H	427	490
+O15151	427	490	5mnj	Structure of MDM2-MDMX-UbcH5B-ubiquitin complex	1	64	D	None	490
+O15151	428	490	2vje	Crystal Structure of the MDM2-MDMX RING Domain Heterodimer	1	63	B	None	490
+O15151	428	490	2vje	Crystal Structure of the MDM2-MDMX RING Domain Heterodimer	1	63	D	None	490
+O15151	428	490	2vjf	Crystal Structure of the MDM2-MDMX RING Domain Heterodimer	1	63	D	428	490
+O15151	428	490	2vjf	Crystal Structure of the MDM2-MDMX RING Domain Heterodimer	1	63	B	428	490
+

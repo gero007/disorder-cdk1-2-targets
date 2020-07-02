@@ -1,0 +1,64 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P46937	WW domain with PPxY motif	YAP1_HUMAN	Homo sapiens	PF00397	WW	WW domain	232	261
+P46937	WW domain with PPxY motif	YAP1_HUMAN	Homo sapiens	PF00397	WW	WW domain	173	202
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#41 mappings in 41 PDB chains in 35 PDB entries
+P46937	50	171	4re1	Crystal structure of human TEAD1 and disulfide-engineered YAP	28	149	C	50	None
+P46937	50	171	4re1	Crystal structure of human TEAD1 and disulfide-engineered YAP	28	149	D	None	None
+P46937	50	171	3kys	Crystal structure of human YAP and TEAD complex	4	125	D	None	None
+P46937	50	171	3kys	Crystal structure of human YAP and TEAD complex	4	125	B	50	None
+P46937	60	100	6ge3	X-ray structure of TEAD4 (wildtype) complexed with YAP (wildtype): The role of residual flexibility and water molecules in the adaptation of a bound intrinsically disordered protein to mutations at a binding interface	1	41	L	60	None
+P46937	60	100	6ge6	X-ray structure of TEAD4(E263A+Y429F mutant) complexed with YAP(wildtype): The role of residual flexibility and water molecules in the adaptation of a bound intrinsically disordered protein to mutations at a binding interface	1	41	L	60	None
+P46937	60	100	6hil	X-ray structure of TEAD1(Y421H mutant) complexed with YAP(wildtype): Molecular and structural characterization of a TEAD mutation at the origin of Sveinsson's chorioretinal atrophy	1	41	M	None	None
+P46937	60	100	6hil	X-ray structure of TEAD1(Y421H mutant) complexed with YAP(wildtype): Molecular and structural characterization of a TEAD mutation at the origin of Sveinsson's chorioretinal atrophy	1	41	L	None	None
+P46937	60	100	6hil	X-ray structure of TEAD1(Y421H mutant) complexed with YAP(wildtype): Molecular and structural characterization of a TEAD mutation at the origin of Sveinsson's chorioretinal atrophy	1	41	N	None	None
+P46937	60	100	6hil	X-ray structure of TEAD1(Y421H mutant) complexed with YAP(wildtype): Molecular and structural characterization of a TEAD mutation at the origin of Sveinsson's chorioretinal atrophy	1	41	O	None	None
+P46937	60	100	6gek	TEAD4 (216-434);Y429F COMPLEXED WITH YAP PEPTIDE (60-100) AND MYRISTOATE (COVALENTLY BOUND) AT 2.28A (P212121 CRYSTAL FORM); MYRISTOYLATION WAS DONE BY ADDING MYR-COA	1	41	L	60	None
+P46937	60	100	6gek	TEAD4 (216-434);Y429F COMPLEXED WITH YAP PEPTIDE (60-100) AND MYRISTOATE (COVALENTLY BOUND) AT 2.28A (P212121 CRYSTAL FORM); MYRISTOYLATION WAS DONE BY ADDING MYR-COA	1	41	M	None	None
+P46937	60	100	6gei	TEAD4 (216-434);E263A+Y429F COMPLEXED WITH YAP PEPTIDE (60- 100);S94A AND MYRISTOATE (COVALENTLY BOUND TO LYS344, NOT CYS367!) AT 1.65A (P41212 CRYSTAL FORM); MYRISTOYLATION WAS DONE BY ADDING MYR-COA	2	42	L	60	None
+P46937	60	100	5oaq	TEAD4 COMPLEXED WITH YAP PEPTIDE AND MYRISTATE (COVALENTLY BOUND)	1	41	L	60	None
+P46937	60	100	6ge4	TEAD4 (216-434);E263A COMPLEXED WITH YAP PEPTIDE (60-100) AND MYRISTOATE (COVALENTLY BOUND) AT 1.97A (P41212 CRYSTAL FORM); MYRISTOYLATION WAS DONE BY ADDING MYR-COA	1	41	L	60	None
+P46937	60	100	6ge5	TEAD4 (216-434);Y429F COMPLEXED WITH YAP PEPTIDE (60-100) AND MYRISTOATE (COVALENTLY BOUND) AT 2.05A (P41212 CRYSTAL FORM); MYRISTOYLATION WAS DONE BY ADDING MYR-COA	1	41	L	60	None
+P46937	60	100	6q2x	TEAD4 (216-434) COMPLEXED WITH YAP PEPTIDE (60-100) AND MYRISTOATE (COVALENTLY BOUND) AT 2.1A (P41212 CRYSTAL FORM)	1	41	L	60	None
+P46937	60	99	6geg	TEAD4 (216-434);Y429F COMPLEXED WITH YAP PEPTIDE (60-100); S94A AND MYRISTOATE (COVALENTLY BOUND) AT 2.23A (P41212 CRYSTAL FORM); MYRISTOYLATION WAS DONE BY ADDING MYR-COA	2	41	L	60	99
+P46937	60	99	6gee	TEAD4 (216-434);E263A COMPLEXED WITH YAP PEPTIDE (60-100); S94A AND MYRISTOATE (COVALENTLY BOUND) AT 1.96A (P41212 CRYSTAL FORM); MYRISTOYLATION WAS DONE BY ADDING MYR-COA	2	41	L	60	99
+P46937	60	99	6hik	X-ray structure of TEAD4(Y429H) mutant) complexed with YAP (wildtype): Molecular and structural characterization of a TEAD mutation at the origin of Sveinsson's chorioretinal atrophy	2	41	L	60	99
+P46937	60	99	6gec	TEAD4 (216-434) COMPLEXED WITH YAP PEPTIDE (60-100);S94A AND MYRISTOATE (COVALENTLY BOUND) AT 1.70A (P41212 CRYSTAL FORM); MYRISTOYLATION WAS DONE BY ADDING MYR-COA	2	41	L	60	99
+P46937	124	133	6g8l	14-3-3sigma in complex with a L132beta3L mutated YAP pS127 phosphopeptide	2	11	P	None	133
+P46937	124	133	6g6x	14-3-3sigma in complex with a P129beta3P mutated YAP pS127 phosphopeptide	2	11	P	None	133
+P46937	124	133	6g8j	14-3-3sigma in complex with a A130beta3A mutated YAP pS127 phosphopeptide	2	11	P	None	None
+P46937	124	133	6g8k	14-3-3sigma in complex with a S131beta3S mutated YAP pS127 phosphopeptide	2	11	P	None	None
+P46937	124	133	3mhr	14-3-3 sigma in complex with YAP pS127-peptide	1	10	P	124	133
+P46937	124	133	6g8p	14-3-3sigma in complex with a P129beta3P and L132beta3L mutated YAP pS127 phosphopeptide	2	11	P	None	None
+P46937	124	132	6g8q	14-3-3sigma in complex with a A130beta3A and Q133beta3Q mutated YAP pS127 phosphopeptide	2	10	P	None	None
+P46937	125	133	6g8i	14-3-3sigma in complex with a R124beta3R mutated YAP pS127 phosphopeptide	3	11	P	125	133
+P46937	164	218	5ydx	NMR structure of YAP1-2 WW1 domain with LATS1 PPxY motif complex	1	55	A	7	61
+P46937	165	204	1k9r	YAP65 WW domain complexed to Acetyl-PLPPY	1	40	A	5	44
+P46937	165	210	1jmq	YAP65 (L30K mutant) WW domain in Complex with GTPPPPYTVG peptide	1	46	A	5	50
+P46937	165	209	4rex	Crystal structure of the first WW domain of human YAP2 isoform	5	49	A	165	None
+P46937	165	204	1k5r	YAP65 WW domain S24-Amino-Ethylsulfanyl-Acetic Acid mutant	1	40	A	5	44
+P46937	165	204	1k9q	YAP65 WW domain complexed to N-(n-octyl)-GPPPY-NH2	1	40	A	5	44
+P46937	170	205	2lay	Structure of the first WW domain of human YAP in complex with a phosphorylated human Smad1 derived peptide	1	36	A	170	205
+P46937	170	205	2lax	Structure of first WW domain of human YAP in complex with a human Smad1 doubly-phosphorilated derived peptide.	5	40	A	170	205
+P46937	170	205	2ltw	YAP WW1 in complex with a Smad7 derived peptide	1	36	A	170	205
+P46937	229	287	5ydy	NMR structure of YAP1-2 WW2 domain with LATS1 PPxY motif complex	1	51	A	8	58
+P46937	230	265	2ltv	YAP WW2 in complex with a Smad7 derived peptide	1	36	A	230	265
+P46937	230	263	2law	Structure of the second WW domain from human YAP in complex with a human Smad1 derived peptide	5	38	A	230	263
+

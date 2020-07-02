@@ -1,0 +1,138 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O15350	Tumor protein p73	P73_HUMAN	Homo sapiens	PF00870	P53	P53 DNA-binding domain	117	309
+O15350	Tumor protein p73	P73_HUMAN	Homo sapiens	PF07647	SAM_2	SAM domain (Sterile alpha motif)	485	549
+O15350	Tumor protein p73	P73_HUMAN	Homo sapiens	PF07710	P53_tetramer	P53 tetramerisation motif	345	384
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#114 mappings in 114 PDB chains in 22 PDB entries
+O15350	10	31	6fgs	Solution structure of p300Taz2-p73TA1	109	130	A	109	130
+O15350	10	25	6ijq	Solution structure of BCL-XL bound to P73-TAD peptide	1	16	A	310	325
+O15350	10	25	2mps	Structure of complex of MDM2(3-109) and P73 TAD(10-25)	1	16	B	301	316
+O15350	112	311	4a63	Crystal structure of the p73-ASPP2 complex at 2.6A resolution	2	201	E	None	311
+O15350	112	311	4a63	Crystal structure of the p73-ASPP2 complex at 2.6A resolution	2	201	I	None	311
+O15350	112	311	4a63	Crystal structure of the p73-ASPP2 complex at 2.6A resolution	2	201	A	None	311
+O15350	112	311	4a63	Crystal structure of the p73-ASPP2 complex at 2.6A resolution	2	201	C	None	311
+O15350	112	311	4a63	Crystal structure of the p73-ASPP2 complex at 2.6A resolution	2	201	G	None	311
+O15350	112	311	4a63	Crystal structure of the p73-ASPP2 complex at 2.6A resolution	2	201	K	None	311
+O15350	112	311	2xwc	Crystal structure of the DNA binding domain of human TP73 refined at 1.8 A resolution	2	201	A	112	311
+O15350	115	312	4guo	structure of p73 DNA binding domain complex with 12 bp DNA	13	210	B	115	None
+O15350	115	312	4guo	structure of p73 DNA binding domain complex with 12 bp DNA	13	210	C	115	312
+O15350	115	312	4guo	structure of p73 DNA binding domain complex with 12 bp DNA	13	210	D	115	None
+O15350	115	312	4guo	structure of p73 DNA binding domain complex with 12 bp DNA	13	210	I	115	312
+O15350	115	312	4guo	structure of p73 DNA binding domain complex with 12 bp DNA	13	210	A	115	312
+O15350	115	312	4guo	structure of p73 DNA binding domain complex with 12 bp DNA	13	210	K	115	None
+O15350	115	312	4guo	structure of p73 DNA binding domain complex with 12 bp DNA	13	210	L	115	None
+O15350	115	312	4guo	structure of p73 DNA binding domain complex with 12 bp DNA	13	210	J	115	312
+O15350	115	312	4guq	Structure of mutS139F p73 DNA binding domain complexed with 20BP DNA response element	13	210	A	115	312
+O15350	115	312	4guq	Structure of mutS139F p73 DNA binding domain complexed with 20BP DNA response element	13	210	B	115	None
+O15350	115	312	4g83	Crystal Structure of p73 DNA-Binding Domain Tetramer bound to a Full Response-Element	13	210	A	115	None
+O15350	115	312	4g83	Crystal Structure of p73 DNA-Binding Domain Tetramer bound to a Full Response-Element	13	210	B	115	None
+O15350	115	312	4g82	Crystal Structure of p73 DNA-Binding Domain Tetramer bound to a Full Response-Element	13	210	A	115	312
+O15350	115	312	4g82	Crystal Structure of p73 DNA-Binding Domain Tetramer bound to a Full Response-Element	13	210	B	115	312
+O15350	115	312	3vd1	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	L	115	312
+O15350	115	312	3vd1	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	C	115	312
+O15350	115	312	3vd1	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	D	115	312
+O15350	115	312	3vd1	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	B	115	312
+O15350	115	312	3vd1	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	I	115	312
+O15350	115	312	3vd1	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	A	115	312
+O15350	115	312	3vd1	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	K	115	312
+O15350	115	312	3vd1	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	J	115	312
+O15350	115	312	3vd0	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	L	115	312
+O15350	115	312	3vd0	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	C	115	312
+O15350	115	312	3vd0	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	D	115	312
+O15350	115	312	3vd0	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	B	115	312
+O15350	115	312	3vd0	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	I	115	312
+O15350	115	312	3vd0	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	A	115	312
+O15350	115	312	3vd0	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	K	115	312
+O15350	115	312	3vd0	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	J	115	312
+O15350	115	312	3vd2	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	B	115	None
+O15350	115	312	3vd2	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	C	115	312
+O15350	115	312	3vd2	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	D	115	None
+O15350	115	312	3vd2	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	I	115	312
+O15350	115	312	3vd2	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	A	115	312
+O15350	115	312	3vd2	structure of p73 DNA binding domain tetramer modulates p73 transactivation	13	210	J	115	312
+O15350	115	312	5kbd	Structural Studies of Transcription Factor p73 DNA Binding Domain Bound to PA26 20-mer Response Element	10	207	A	115	312
+O15350	115	312	5kbd	Structural Studies of Transcription Factor p73 DNA Binding Domain Bound to PA26 20-mer Response Element	10	207	B	115	312
+O15350	350	399	2wqi	Crystal structure of the human p73 tetramerization domain	2	51	A	None	None
+O15350	350	399	2wqi	Crystal structure of the human p73 tetramerization domain	2	51	D	None	None
+O15350	350	399	2wqi	Crystal structure of the human p73 tetramerization domain	2	51	B	None	None
+O15350	350	399	2wqi	Crystal structure of the human p73 tetramerization domain	2	51	C	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	C	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	P	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	I	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	M	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	H	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	A	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	F	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	O	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	E	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	B	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	D	None	399
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	N	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	G	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	L	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	J	None	None
+O15350	350	399	2wtt	Structure of the human p73 tetramerization domain (crystal form II)	2	51	K	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	V	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	D	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	2	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	A	350	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	E	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	Q	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	P	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	I	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	C	350	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	H	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	T	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	S	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	L	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	K	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	U	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	R	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	W	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	1	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	F	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	O	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	Y	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	N	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	G	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	X	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	Z	None	383
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	M	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	B	None	None
+O15350	350	383	2wqj	Crystal structure of a truncated variant of the human p73 tetramerization domain	2	35	J	None	None
+O15350	351	398	2kby	The Tetramerization Domain of Human p73	3	50	A	1	48
+O15350	351	398	2kby	The Tetramerization Domain of Human p73	3	50	D	1	48
+O15350	351	398	2kby	The Tetramerization Domain of Human p73	3	50	B	1	48
+O15350	351	398	2kby	The Tetramerization Domain of Human p73	3	50	C	1	48
+O15350	351	398	2nb1	P63/p73 hetero-tetramerisation domain	3	50	B	95	142
+O15350	351	398	2nb1	P63/p73 hetero-tetramerisation domain	3	50	D	1095	1142
+O15350	351	398	5hob	p73 homo-tetramerization domain mutant I	3	50	A	351	None
+O15350	351	398	5hob	p73 homo-tetramerization domain mutant I	3	50	D	None	None
+O15350	351	398	5hob	p73 homo-tetramerization domain mutant I	3	50	C	None	None
+O15350	351	398	5hob	p73 homo-tetramerization domain mutant I	3	50	E	351	None
+O15350	351	398	5hob	p73 homo-tetramerization domain mutant I	3	50	F	None	None
+O15350	351	398	5hob	p73 homo-tetramerization domain mutant I	3	50	G	351	None
+O15350	351	398	5hob	p73 homo-tetramerization domain mutant I	3	50	B	None	None
+O15350	351	398	5hob	p73 homo-tetramerization domain mutant I	3	50	H	351	None
+O15350	351	398	5hoc	p73 homo-tetramerization domain mutant II	3	50	A	None	None
+O15350	351	398	5hoc	p73 homo-tetramerization domain mutant II	3	50	B	351	None
+O15350	487	564	1dxs	Crystal structure of the C-terminal sterile alpha motif (SAM) domain of human p73 alpha splice variant	3	80	A	None	None
+O15350	487	554	1cok	STRUCTURE OF THE C-TERMINAL DOMAIN OF P73	1	68	A	1	68
+

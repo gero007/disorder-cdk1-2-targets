@@ -1,0 +1,31 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#10 mappings in 10 PDB chains in 1 PDB entries
+Q8IX90	1	101	4aj5	Crystal structure of the Ska core complex	1	101	U	1	None
+Q8IX90	1	101	4aj5	Crystal structure of the Ska core complex	1	101	Z	None	None
+Q8IX90	1	101	4aj5	Crystal structure of the Ska core complex	1	101	4	None	None
+Q8IX90	1	101	4aj5	Crystal structure of the Ska core complex	1	101	3	None	None
+Q8IX90	1	101	4aj5	Crystal structure of the Ska core complex	1	101	Y	None	101
+Q8IX90	1	101	4aj5	Crystal structure of the Ska core complex	1	101	W	None	None
+Q8IX90	1	101	4aj5	Crystal structure of the Ska core complex	1	101	1	None	None
+Q8IX90	1	101	4aj5	Crystal structure of the Ska core complex	1	101	V	None	None
+Q8IX90	1	101	4aj5	Crystal structure of the Ska core complex	1	101	X	None	None
+Q8IX90	1	101	4aj5	Crystal structure of the Ska core complex	1	101	2	None	101
+

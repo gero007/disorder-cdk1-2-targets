@@ -1,0 +1,41 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P49736	DNA replication licensing factor MCM2,MCM2	MCM2_HUMAN	Homo sapiens	PF00493	MCM	MCM P-loop domain	460	683
+P49736	DNA replication licensing factor MCM2,MCM2	MCM2_HUMAN	Homo sapiens	PF12619	MCM2_N	Mini-chromosome maintenance protein 2	51	182
+P49736	DNA replication licensing factor MCM2,MCM2	MCM2_HUMAN	Homo sapiens	PF14551	MCM_N	MCM N-terminal domain	196	291
+P49736	DNA replication licensing factor MCM2,MCM2	MCM2_HUMAN	Homo sapiens	PF17207	MCM_OB	MCM OB domain	293	422
+P49736	DNA replication licensing factor MCM2,MCM2	MCM2_HUMAN	Homo sapiens	PF17855	MCM_lid	MCM AAA-lid domain	718	802
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#15 mappings in 15 PDB chains in 9 PDB entries
+P49736	1	904	6xtx	CryoEM structure of human CMG bound to ATPgammaS and DNA	1	904	2	None	904
+P49736	1	904	6xty	CryoEM structure of human CMG bound to AND-1 (CMGA)	1	904	2	None	None
+P49736	33	47	6ya7	Cdc7-Dbf4 bound to an Mcm2-S40 derived bivalent substrate	1	15	C	None	None
+P49736	61	130	5bnx	Crystal structure of Human MCM2 HBD and ASF1b chaperoning a histone H3.3-H4 dimer	1	70	C	None	None
+P49736	61	130	5bnv	Crystal structure of Human MCM2 HBD chaperoning a histone H3-H4 tetramer	1	70	C	None	None
+P49736	61	130	5bnv	Crystal structure of Human MCM2 HBD chaperoning a histone H3-H4 tetramer	1	70	F	None	None
+P49736	61	130	5bo0	Crystal structure of Human MCM2 HBD and ASF1b chaperoning a histone H3.2-H4 dimer	1	70	C	None	None
+P49736	61	130	5ja4	Crystal structure of human TONSL and MCM2 HBDs binding to a histone H3-H4 tetramer	1	70	C	None	None
+P49736	63	124	5c3i	Crystal structure of the quaternary complex of histone H3-H4 heterodimer with chaperone ASF1 and the replicative helicase subunit MCM2	2	63	X	None	None
+P49736	63	124	5c3i	Crystal structure of the quaternary complex of histone H3-H4 heterodimer with chaperone ASF1 and the replicative helicase subunit MCM2	2	63	D	None	None
+P49736	63	124	5c3i	Crystal structure of the quaternary complex of histone H3-H4 heterodimer with chaperone ASF1 and the replicative helicase subunit MCM2	2	63	P	None	None
+P49736	63	124	5c3i	Crystal structure of the quaternary complex of histone H3-H4 heterodimer with chaperone ASF1 and the replicative helicase subunit MCM2	2	63	H	None	None
+P49736	63	124	5c3i	Crystal structure of the quaternary complex of histone H3-H4 heterodimer with chaperone ASF1 and the replicative helicase subunit MCM2	2	63	L	None	None
+P49736	63	124	5c3i	Crystal structure of the quaternary complex of histone H3-H4 heterodimer with chaperone ASF1 and the replicative helicase subunit MCM2	2	63	T	None	124
+P49736	69	138	4uuz	MCM2-histone complex	1	70	C	69	None
+

@@ -1,0 +1,73 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9UIF9	Bromodomain adjacent to zinc finger domain protein 2A	BAZ2A_HUMAN	Homo sapiens	PF00628	PHD	PHD-finger	1678	1726
+Q9UIF9	Bromodomain adjacent to zinc finger domain protein 2A	BAZ2A_HUMAN	Homo sapiens	PF01429	MBD	Methyl-CpG binding domain	546	620
+Q9UIF9	Bromodomain adjacent to zinc finger domain protein 2A	BAZ2A_HUMAN	Homo sapiens	PF00439	Bromodomain	Bromodomain	1802	1885
+Q9UIF9	Bromodomain adjacent to zinc finger domain protein 2A	BAZ2A_HUMAN	Homo sapiens	PF02791	DDT	DDT domain	849	910
+Q9UIF9	Bromodomain adjacent to zinc finger domain protein 2A	BAZ2A_HUMAN	Homo sapiens	PF15612	WHIM1	WSTF, HB1, Itc1p, MBD9 motif 1	950	993
+Q9UIF9	Bromodomain adjacent to zinc finger domain protein 2A	BAZ2A_HUMAN	Homo sapiens	PF15613	WSD	Williams-Beuren syndrome DDT (WSD), D-TOX E motif	1386	1473
+Q9UIF9	Bromodomain adjacent to zinc finger domain protein 2A	BAZ2A_HUMAN	Homo sapiens	PF15613	WSD	Williams-Beuren syndrome DDT (WSD), D-TOX E motif	1111	1232
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#45 mappings in 45 PDB chains in 23 PDB entries
+Q9UIF9	543	650	5agq	Solution structure of the TAM domain of human TIP5 BAZ2A involved in epigenetic regulation of rRNA genes	5	112	A	516	623
+Q9UIF9	1673	1728	4qf2	Crystal structure of human BAZ2A PHD zinc finger in the free form	3	58	D	None	1728
+Q9UIF9	1673	1728	4qf2	Crystal structure of human BAZ2A PHD zinc finger in the free form	3	58	A	None	1728
+Q9UIF9	1673	1728	4qf2	Crystal structure of human BAZ2A PHD zinc finger in the free form	3	58	B	None	None
+Q9UIF9	1673	1728	4qf2	Crystal structure of human BAZ2A PHD zinc finger in the free form	3	58	C	None	None
+Q9UIF9	1673	1728	5t8r	Crystal structure of human BAZ2A PHD zinc finger in complex with unmodified H3 10-mer	3	58	D	None	1728
+Q9UIF9	1673	1728	5t8r	Crystal structure of human BAZ2A PHD zinc finger in complex with unmodified H3 10-mer	3	58	A	None	1728
+Q9UIF9	1673	1728	5t8r	Crystal structure of human BAZ2A PHD zinc finger in complex with unmodified H3 10-mer	3	58	B	None	None
+Q9UIF9	1673	1728	5t8r	Crystal structure of human BAZ2A PHD zinc finger in complex with unmodified H3 10-mer	3	58	C	None	None
+Q9UIF9	1673	1728	6fhu	Crystal structure of BAZ2A PHD zinc finger in complex with H3 3-mer peptide	3	58	D	None	1728
+Q9UIF9	1673	1728	6fhu	Crystal structure of BAZ2A PHD zinc finger in complex with H3 3-mer peptide	3	58	A	None	1728
+Q9UIF9	1673	1728	6fhu	Crystal structure of BAZ2A PHD zinc finger in complex with H3 3-mer peptide	3	58	B	None	None
+Q9UIF9	1673	1728	6fhu	Crystal structure of BAZ2A PHD zinc finger in complex with H3 3-mer peptide	3	58	C	None	None
+Q9UIF9	1673	1728	6fap	Crystal structure of human BAZ2A PHD zinc finger in complex with Fr23	3	58	D	None	1728
+Q9UIF9	1673	1728	6fap	Crystal structure of human BAZ2A PHD zinc finger in complex with Fr23	3	58	A	None	1728
+Q9UIF9	1673	1728	6fap	Crystal structure of human BAZ2A PHD zinc finger in complex with Fr23	3	58	B	None	None
+Q9UIF9	1673	1728	6fap	Crystal structure of human BAZ2A PHD zinc finger in complex with Fr23	3	58	C	None	None
+Q9UIF9	1673	1728	6fkp	Crystal structure of BAZ2A PHD zinc finger in complex with H3 10-mer AA mutant peptide	3	58	D	None	1728
+Q9UIF9	1673	1728	6fkp	Crystal structure of BAZ2A PHD zinc finger in complex with H3 10-mer AA mutant peptide	3	58	A	None	1728
+Q9UIF9	1673	1728	6fkp	Crystal structure of BAZ2A PHD zinc finger in complex with H3 10-mer AA mutant peptide	3	58	B	None	None
+Q9UIF9	1673	1728	6fkp	Crystal structure of BAZ2A PHD zinc finger in complex with H3 10-mer AA mutant peptide	3	58	C	None	None
+Q9UIF9	1673	1728	6fi0	Crystal structure of BAZ2A PHD zinc finger in complex with Fr 19	3	58	D	None	1728
+Q9UIF9	1673	1728	6fi0	Crystal structure of BAZ2A PHD zinc finger in complex with Fr 19	3	58	A	None	1728
+Q9UIF9	1673	1728	6fi0	Crystal structure of BAZ2A PHD zinc finger in complex with Fr 19	3	58	B	None	None
+Q9UIF9	1673	1728	6fi0	Crystal structure of BAZ2A PHD zinc finger in complex with Fr 19	3	58	C	None	None
+Q9UIF9	1673	1728	4q6f	Crystal structure of human BAZ2A PHD zinc finger in complex with unmodified H3K4 histone peptide	3	58	B	None	1728
+Q9UIF9	1673	1728	4q6f	Crystal structure of human BAZ2A PHD zinc finger in complex with unmodified H3K4 histone peptide	3	58	D	None	1728
+Q9UIF9	1673	1728	4q6f	Crystal structure of human BAZ2A PHD zinc finger in complex with unmodified H3K4 histone peptide	3	58	A	1673	1728
+Q9UIF9	1673	1728	4q6f	Crystal structure of human BAZ2A PHD zinc finger in complex with unmodified H3K4 histone peptide	3	58	C	None	None
+Q9UIF9	1796	1898	6fgf	Crystal Structure of BAZ2A bromodomain in complex with 1-methylpyridinone compound 2	3	105	A	1796	1898
+Q9UIF9	1796	1898	6fgl	Crystal Structure of BAZ2A bromodomain in complex with acetylindole compound UZH47	3	105	A	1796	1898
+Q9UIF9	1796	1898	6fgi	Crystal Structure of BAZ2A bromodomain in complex with 3-amino-2-methylpyridine derivative 2	3	105	A	1796	1898
+Q9UIF9	1796	1898	6fg6	Crystal Structure of BAZ2A bromodomain in complex with 1-methylpyridinone compound 1	3	105	A	1796	1898
+Q9UIF9	1796	1898	5mgm	Crystal Structure of BAZ2A bromodomain in complex with acetophenone derivative 4	3	105	A	None	1898
+Q9UIF9	1796	1898	5mgl	Crystal Structure of BAZ2A bromodomain in complex with 4-chloropyridine derivative 3	3	105	A	None	1898
+Q9UIF9	1796	1898	5mgk	Crystal Structure of BAZ2A bromodomain in complex with 4-propionyl-pyrrole derivative 2	3	105	A	1796	1898
+Q9UIF9	1796	1898	5mgj	Crystal Structure of BAZ2A bromodomain in complex with 1-methylpyridine derivative 1	3	105	A	1796	1898
+Q9UIF9	1796	1899	6fgv	Crystal Structure of BAZ2A bromodomain in complex with 1-methylpyridinone compound 3	3	106	A	1796	None
+Q9UIF9	1796	1899	5or8	Crystal Structure of BAZ2A bromodomain in complex with 1,3-dimethyl-benzimidazolone compound 1	3	106	A	1796	None
+Q9UIF9	1796	1899	6fgg	Crystal Structure of BAZ2A bromodomain in complex with 1-methylpyridinone compound 5	3	106	A	None	1899
+Q9UIF9	1796	1899	6fgw	Crystal Structure of BAZ2A bromodomain in complex with 1-methylpyridinone compound 4	3	106	A	1796	None
+Q9UIF9	1796	1899	4lz2	Crystal structure of the bromodomain of human BAZ2A	3	106	A	None	None
+Q9UIF9	1796	1899	4qbm	Crystal structure of human BAZ2A bromodomain in complex with a diacetylated histone 4 peptide (H4K16acK20ac)	3	106	B	1796	None
+Q9UIF9	1796	1899	4qbm	Crystal structure of human BAZ2A bromodomain in complex with a diacetylated histone 4 peptide (H4K16acK20ac)	3	106	A	1796	1899
+Q9UIF9	1796	1898	6fgh	Crystal Structure of BAZ2A bromodomain in complex with 3-amino-2-methylpyridine derivative 1	3	105	A	1796	1898
+

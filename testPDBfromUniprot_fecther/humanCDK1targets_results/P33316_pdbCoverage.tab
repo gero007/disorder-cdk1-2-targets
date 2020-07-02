@@ -1,0 +1,48 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P33316	dUTP pyrophosphatase	DUT_HUMAN	Homo sapiens	PF00692	dUTPase	dUTPase	121	250
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#26 mappings in 26 PDB chains in 9 PDB entries
+P33316	94	252	3arn	Human dUTPase in complex with novel uracil derivative	6	164	A	None	None
+P33316	94	252	3arn	Human dUTPase in complex with novel uracil derivative	6	164	B	None	None
+P33316	94	252	3arn	Human dUTPase in complex with novel uracil derivative	6	164	C	None	None
+P33316	94	252	3ehw	Human dUTPase in complex with alpha,beta-imido-dUTP and Mg2+: visualization of the full-length C-termini in all monomers and suggestion for an additional metal ion binding site	6	164	A	None	164
+P33316	94	252	3ehw	Human dUTPase in complex with alpha,beta-imido-dUTP and Mg2+: visualization of the full-length C-termini in all monomers and suggestion for an additional metal ion binding site	6	164	X	None	164
+P33316	94	252	3ehw	Human dUTPase in complex with alpha,beta-imido-dUTP and Mg2+: visualization of the full-length C-termini in all monomers and suggestion for an additional metal ion binding site	6	164	B	None	164
+P33316	94	252	3ehw	Human dUTPase in complex with alpha,beta-imido-dUTP and Mg2+: visualization of the full-length C-termini in all monomers and suggestion for an additional metal ion binding site	6	164	Y	None	164
+P33316	94	252	3ehw	Human dUTPase in complex with alpha,beta-imido-dUTP and Mg2+: visualization of the full-length C-termini in all monomers and suggestion for an additional metal ion binding site	6	164	Z	None	164
+P33316	94	252	3ehw	Human dUTPase in complex with alpha,beta-imido-dUTP and Mg2+: visualization of the full-length C-termini in all monomers and suggestion for an additional metal ion binding site	6	164	C	None	164
+P33316	94	252	3ara	Discovery of Novel Uracil Derivatives as Potent Human dUTPase Inhibitors	6	164	A	None	None
+P33316	94	252	3ara	Discovery of Novel Uracil Derivatives as Potent Human dUTPase Inhibitors	6	164	B	None	None
+P33316	94	252	3ara	Discovery of Novel Uracil Derivatives as Potent Human dUTPase Inhibitors	6	164	C	None	None
+P33316	94	252	2hqu	Human dUTPase in complex with alpha,beta-iminodUTP and magnesium ion	6	164	A	None	164
+P33316	94	252	2hqu	Human dUTPase in complex with alpha,beta-iminodUTP and magnesium ion	6	164	B	None	164
+P33316	94	252	2hqu	Human dUTPase in complex with alpha,beta-iminodUTP and magnesium ion	6	164	C	None	None
+P33316	94	252	5h4j	Crystal structure of Human dUTPase in complex with N-[(1R)-1-[3-(Cyclopentyloxy)-phenyl]-ethyl]-3-[(3,4-dihydro-2,4-dioxo-1(2H)-pyrimidinyl)methoxy]-1-propanesulfonamide	6	164	A	None	None
+P33316	97	109	4mz6	Structure of importin-alpha: dUTPase S11E NLS mutant complex	1	13	C	None	None
+P33316	97	109	4mz6	Structure of importin-alpha: dUTPase S11E NLS mutant complex	1	13	A	None	None
+P33316	97	109	4mz5	Structure of importin-alpha: dUTPase NLS complex	1	13	C	9	None
+P33316	97	109	4mz5	Structure of importin-alpha: dUTPase NLS complex	1	13	A	None	None
+P33316	112	252	1q5h	Human dUTP Pyrophosphatase complex with dUDP	7	147	A	1	None
+P33316	112	252	1q5h	Human dUTP Pyrophosphatase complex with dUDP	7	147	B	1	None
+P33316	112	252	1q5h	Human dUTP Pyrophosphatase complex with dUDP	7	147	C	1	None
+P33316	112	252	1q5u	HUMAN DUTP PYROPHOSPHATASE	7	147	Y	1	None
+P33316	112	252	1q5u	HUMAN DUTP PYROPHOSPHATASE	7	147	Z	1	None
+P33316	112	252	1q5u	HUMAN DUTP PYROPHOSPHATASE	7	147	X	1	None
+

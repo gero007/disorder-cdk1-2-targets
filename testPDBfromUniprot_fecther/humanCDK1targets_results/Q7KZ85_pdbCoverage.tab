@@ -1,0 +1,31 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q7KZ85	Transcription elongation factor SPT6,Transcription elongation factor SPT6,Transcription elongation factor SPT6	SPT6H_HUMAN	Homo sapiens	PF00575	S1	S1 RNA binding domain	1224	1282
+Q7KZ85	Transcription elongation factor SPT6,Transcription elongation factor SPT6,Transcription elongation factor SPT6	SPT6H_HUMAN	Homo sapiens	PF14632	SPT6_acidic	Acidic N-terminal SPT6	37	127
+Q7KZ85	Transcription elongation factor SPT6,Transcription elongation factor SPT6,Transcription elongation factor SPT6	SPT6H_HUMAN	Homo sapiens	PF14633	SH2_2	SH2 domain	1300	1514
+Q7KZ85	Transcription elongation factor SPT6,Transcription elongation factor SPT6,Transcription elongation factor SPT6	SPT6H_HUMAN	Homo sapiens	PF14635	HHH_7	Helix-hairpin-helix motif	935	1038
+Q7KZ85	Transcription elongation factor SPT6,Transcription elongation factor SPT6,Transcription elongation factor SPT6	SPT6H_HUMAN	Homo sapiens	PF14639	YqgF	Holliday-junction resolvase-like of SPT6	775	931
+Q7KZ85	Transcription elongation factor SPT6,Transcription elongation factor SPT6,Transcription elongation factor SPT6	SPT6H_HUMAN	Homo sapiens	PF14641	HTH_44	Helix-turn-helix DNA-binding domain of SPT6	305	433
+Q7KZ85	Transcription elongation factor SPT6,Transcription elongation factor SPT6,Transcription elongation factor SPT6	SPT6H_HUMAN	Homo sapiens	PF17674	HHH_9	HHH domain	1051	1138
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#3 mappings in 3 PDB chains in 2 PDB entries
+Q7KZ85	1	1726	6gmh	Structure of activated transcription complex Pol II-DSIF-PAF-SPT6	4	1726	M	None	None
+Q7KZ85	1338	1520	6gme	Structure of H. sapiens SPT6 tandem SH2 domain	19	201	B	1338	None
+Q7KZ85	1338	1520	6gme	Structure of H. sapiens SPT6 tandem SH2 domain	19	201	A	1338	None
+

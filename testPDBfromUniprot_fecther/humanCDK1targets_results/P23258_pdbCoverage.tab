@@ -1,0 +1,42 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P23258	Tubulin gamma-1 chain	TBG1_HUMAN	Homo sapiens	PF00091	Tubulin	Tubulin/FtsZ family, GTPase domain	4	215
+P23258	Tubulin gamma-1 chain	TBG1_HUMAN	Homo sapiens	PF03953	Tubulin_C	Tubulin C-terminal domain	264	393
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#19 mappings in 19 PDB chains in 5 PDB entries
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	k	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	d	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	m	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	a	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	f	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	l	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	j	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	b	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	g	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	t	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	h	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	c	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	i	None	None
+P23258	1	451	6v6s	Structure of the native human gamma-tubulin ring complex	1	451	e	None	None
+P23258	1	451	3cb2	Crystal structure of human gamma-tubulin bound to GDP	1	451	A	None	None
+P23258	1	451	3cb2	Crystal structure of human gamma-tubulin bound to GDP	1	451	B	None	None
+P23258	1	451	6v5v	Structure of gamma-tubulin in the native human gamma-tubulin ring complex	1	451	g	None	None
+P23258	1	449	1z5w	Crystal Structure of gamma-tubulin bound to GTP	1	449	A	None	None
+P23258	1	449	1z5v	Crystal structure of human gamma-tubulin bound to GTPgammaS	1	449	A	None	None
+

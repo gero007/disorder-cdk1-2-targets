@@ -1,0 +1,30 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O43663	Protein regulator of cytokinesis 1	PRC1_HUMAN	Homo sapiens	PF03999	MAP65_ASE1	Microtubule associated protein (MAP65/ASE1 family)	35	615
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 5 PDB entries
+O43663	1	486	4l3i	Structure of the microtubule associated protein PRC1 (Protein Regulator of Cytokinesis 1)	5	490	A	None	None
+O43663	1	486	4l3i	Structure of the microtubule associated protein PRC1 (Protein Regulator of Cytokinesis 1)	5	490	B	None	None
+O43663	1	486	4l6y	Structure of the microtubule associated protein PRC1 (Protein Regulator of Cytokinesis 1)	5	490	A	None	None
+O43663	1	486	4l6y	Structure of the microtubule associated protein PRC1 (Protein Regulator of Cytokinesis 1)	5	490	B	None	None
+O43663	341	466	3nry	Insights into anti-parallel microtubule crosslinking by PRC1, a conserved microtubule binding protein	5	130	A	5	130
+O43663	341	466	3nrx	Insights into anti-parallel microtubule crosslinking by PRC1, a conserved non-motor microtubule binding protein	5	130	B	5	None
+O43663	341	466	3nrx	Insights into anti-parallel microtubule crosslinking by PRC1, a conserved non-motor microtubule binding protein	5	130	A	5	130
+O43663	341	464	5kmg	Near-atomic cryo-EM structure of PRC1 bound to the microtubule	5	128	P	341	464
+

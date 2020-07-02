@@ -1,0 +1,43 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q12778	FOXO1 pS256 site	FOXO1_HUMAN	Homo sapiens	PF00250	Forkhead	Forkhead domain	160	247
+Q12778	FOXO1 pS256 site	FOXO1_HUMAN	Homo sapiens	PF16675	FOXO_KIX_bdg	KIX-binding domain of forkhead box O, CR2	423	504
+Q12778	FOXO1 pS256 site	FOXO1_HUMAN	Homo sapiens	PF16676	FOXO-TAD	Transactivation domain of FOXO protein family	595	635
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#19 mappings in 19 PDB chains in 8 PDB entries
+Q12778	19	29	6qzr	14-3-3 sigma in complex with FOXO1 pT24 peptide	1	11	T	None	None
+Q12778	19	29	6qzr	14-3-3 sigma in complex with FOXO1 pT24 peptide	1	11	N	None	29
+Q12778	19	29	6qzr	14-3-3 sigma in complex with FOXO1 pT24 peptide	1	11	P	None	None
+Q12778	19	29	6qzr	14-3-3 sigma in complex with FOXO1 pT24 peptide	1	11	R	None	None
+Q12778	19	29	6qzr	14-3-3 sigma in complex with FOXO1 pT24 peptide	1	11	U	None	29
+Q12778	19	29	6qzr	14-3-3 sigma in complex with FOXO1 pT24 peptide	1	11	M	None	None
+Q12778	19	29	6qzr	14-3-3 sigma in complex with FOXO1 pT24 peptide	1	11	J	None	None
+Q12778	19	29	6qzr	14-3-3 sigma in complex with FOXO1 pT24 peptide	1	11	O	None	None
+Q12778	143	270	4lg0	Structure of a ternary FOXO1-ETS1 DNA complex	6	133	A	None	None
+Q12778	151	266	3co7	Crystal Structure of FoxO1 DBD Bound to DBE2 DNA	2	117	F	None	None
+Q12778	151	266	3co7	Crystal Structure of FoxO1 DBD Bound to DBE2 DNA	2	117	C	None	None
+Q12778	151	259	5dui	Identification of a new FoxO1 binding site that precludes CREB binding at the glucose-6-phosphatase catalytic subunit gene promoter	3	111	A	None	None
+Q12778	151	259	5dui	Identification of a new FoxO1 binding site that precludes CREB binding at the glucose-6-phosphatase catalytic subunit gene promoter	3	111	B	None	None
+Q12778	151	249	3co6	Crystal Structure of FoxO1 DBD Bound to DBE1 DNA	2	100	C	None	None
+Q12778	151	266	3coa	Crystal Structure of FoxO1 DBD Bound to IRE DNA	2	117	F	None	None
+Q12778	151	266	3coa	Crystal Structure of FoxO1 DBD Bound to IRE DNA	2	117	C	None	None
+Q12778	159	272	6qvw	Solution structure of the free FOXO1 DNA binding domain	6	119	A	156	269
+Q12778	251	262	6qzs	14-3-3 sigma in complex with FOXO1 pS256 peptide	1	12	P	None	None
+Q12778	251	262	6qzs	14-3-3 sigma in complex with FOXO1 pS256 peptide	1	12	C	None	None
+

@@ -1,0 +1,56 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P06400	RETINOBLASTOMA-ASSOCIATED PROTEIN	RB_HUMAN	Homo sapiens	PF01857	RB_B	Retinoblastoma-associated protein B domain	646	765
+P06400	RETINOBLASTOMA-ASSOCIATED PROTEIN	RB_HUMAN	Homo sapiens	PF01858	RB_A	Retinoblastoma-associated protein A domain	373	573
+P06400	RETINOBLASTOMA-ASSOCIATED PROTEIN	RB_HUMAN	Homo sapiens	PF08934	Rb_C	Rb C-terminal domain	768	925
+P06400	RETINOBLASTOMA-ASSOCIATED PROTEIN	RB_HUMAN	Homo sapiens	PF11934	DUF3452	Domain of unknown function (DUF3452)	109	228
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#31 mappings in 28 PDB chains in 15 PDB entries
+P06400	52	355	2qdj	Crystal structure of the Retinoblastoma protein N-domain provides insight into tumor suppression, ligand interaction and holoprotein architecture	1	304	A	52	355
+P06400	53	787	4elj	Crystal structure of the inactive retinoblastoma protein phosphorylated at T373	4	656	A	53	None
+P06400	372	589	1gux	RB POCKET BOUND TO E7 LXCXE MOTIF	1	218	A	None	None
+P06400	636	787	1gux	RB POCKET BOUND TO E7 LXCXE MOTIF	1	152	B	None	None
+P06400	372	589	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	218	A	None	None
+P06400	372	589	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	218	G	None	None
+P06400	372	589	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	218	E	None	None
+P06400	372	589	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	218	C	None	None
+P06400	636	787	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	152	D	None	787
+P06400	636	787	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	152	B	None	787
+P06400	636	787	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	152	H	None	787
+P06400	636	787	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	152	F	None	787
+P06400	378	562	1ad6	DOMAIN A OF HUMAN RETINOBLASTOMA TUMOR SUPPRESSOR	1	185	A	378	562
+P06400	645	772	1gh6	RETINOBLASTOMA POCKET COMPLEXED WITH SV40 LARGE T ANTIGEN	206	333	B	645	772
+P06400	379	577	1gh6	RETINOBLASTOMA POCKET COMPLEXED WITH SV40 LARGE T ANTIGEN	1	199	B	379	577
+P06400	380	577	3pom	Crystal Structure of the Unliganded Retinoblastoma Protein Pocket Domain	4	201	B	None	577
+P06400	380	577	3pom	Crystal Structure of the Unliganded Retinoblastoma Protein Pocket Domain	4	201	A	None	577
+P06400	643	787	3pom	Crystal Structure of the Unliganded Retinoblastoma Protein Pocket Domain	208	352	B	None	None
+P06400	643	787	3pom	Crystal Structure of the Unliganded Retinoblastoma Protein Pocket Domain	208	352	A	643	None
+P06400	380	785	1n4m	Structure of Rb tumor suppressor bound to the transactivation domain of E2F-2	1	345	A	380	785
+P06400	380	785	1n4m	Structure of Rb tumor suppressor bound to the transactivation domain of E2F-2	1	345	B	380	785
+P06400	380	787	2r7g	Structure of the retinoblastoma protein pocket domain in complex with adenovirus E1A CR1 domain	1	347	C	380	None
+P06400	380	787	2r7g	Structure of the retinoblastoma protein pocket domain in complex with adenovirus E1A CR1 domain	1	347	A	380	None
+P06400	380	787	4ell	Structure of the inactive retinoblastoma protein pocket domain	4	411	A	None	None
+P06400	380	787	4ell	Structure of the inactive retinoblastoma protein pocket domain	4	411	B	None	None
+P06400	802	817	4cri	Crystal Structure of 53BP1 tandem tudor domains in complex with methylated K810 Rb peptide	1	16	D	None	None
+P06400	802	817	4cri	Crystal Structure of 53BP1 tandem tudor domains in complex with methylated K810 Rb peptide	1	16	C	None	None
+P06400	829	874	2aze	Structure of the Rb C-terminal domain bound to an E2F1-DP1 heterodimer	1	46	C	829	None
+P06400	858	877	1pjm	Mouse Importin alpha-bipartite NLS from human retinoblastoma protein Complex	1	20	A	859	878
+P06400	868	878	1h25	CDK2/Cyclin A in complex with an 11-residue recruitment peptide from retinoblastoma-associated protein	1	11	E	None	878
+P06400	870	882	3n5u	Crystal structure of an Rb C-terminal peptide bound to the catalytic subunit of PP1	1	13	C	None	None
+

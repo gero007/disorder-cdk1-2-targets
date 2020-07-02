@@ -1,0 +1,96 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q14790	Caspase-8	CASP8_HUMAN	Homo sapiens	PF00656	Peptidase_C14	Caspase domain	234	476
+Q14790	Caspase-8	CASP8_HUMAN	Homo sapiens	PF01335	DED	Death effector domain	101	180
+Q14790	Caspase-8	CASP8_HUMAN	Homo sapiens	PF01335	DED	Death effector domain	3	84
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#72 mappings in 72 PDB chains in 21 PDB entries
+Q14790	1	188	5h31	Structural basis for dimerization of the death effector domains of Caspase-8	1	188	A	None	None
+Q14790	1	188	5h31	Structural basis for dimerization of the death effector domains of Caspase-8	1	188	D	None	None
+Q14790	1	188	5h31	Structural basis for dimerization of the death effector domains of Caspase-8	1	188	B	None	None
+Q14790	1	188	5h31	Structural basis for dimerization of the death effector domains of Caspase-8	1	188	C	None	None
+Q14790	1	188	5h33	Structural basis for dimerization of the death effector domains of Caspase-8	1	188	A	None	None
+Q14790	1	188	5h33	Structural basis for dimerization of the death effector domains of Caspase-8	1	188	B	None	None
+Q14790	1	186	5jqe	Crystal structure of caspase8 tDED	380	565	A	1001	None
+Q14790	1	184	5l08	Cryo-EM structure of Casp-8 tDED filament	1	184	D	None	None
+Q14790	1	184	5l08	Cryo-EM structure of Casp-8 tDED filament	1	184	C	None	None
+Q14790	1	184	5l08	Cryo-EM structure of Casp-8 tDED filament	1	184	I	None	None
+Q14790	1	184	5l08	Cryo-EM structure of Casp-8 tDED filament	1	184	H	None	None
+Q14790	1	184	5l08	Cryo-EM structure of Casp-8 tDED filament	1	184	A	None	None
+Q14790	1	184	5l08	Cryo-EM structure of Casp-8 tDED filament	1	184	F	None	None
+Q14790	1	184	5l08	Cryo-EM structure of Casp-8 tDED filament	1	184	E	None	None
+Q14790	1	184	5l08	Cryo-EM structure of Casp-8 tDED filament	1	184	B	None	None
+Q14790	1	184	5l08	Cryo-EM structure of Casp-8 tDED filament	1	184	G	None	None
+Q14790	1	180	6agw	Pro-domain of Caspase-8	1	180	A	None	180
+Q14790	2	188	4zbw	Crystal structure of death effector domain of Caspase8 in Homo Sapiens	4	190	B	2	None
+Q14790	2	188	4zbw	Crystal structure of death effector domain of Caspase8 in Homo Sapiens	4	190	A	2	None
+Q14790	211	374	3kjq	Caspase 8 with covalent inhibitor	1	164	A	None	374
+Q14790	385	479	3kjq	Caspase 8 with covalent inhibitor	1	95	B	None	479
+Q14790	211	374	1qtn	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TETRAPEPTIDE INHIBITOR ACE-IETD-ALDEHYDE	1	164	A	None	374
+Q14790	385	479	1qtn	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TETRAPEPTIDE INHIBITOR ACE-IETD-ALDEHYDE	1	95	B	None	479
+Q14790	211	374	3kjn	Caspase 8 bound to a covalent inhibitor	1	164	A	None	374
+Q14790	385	479	3kjn	Caspase 8 bound to a covalent inhibitor	1	95	B	None	479
+Q14790	217	479	3h11	Zymogen caspase-8:c-FLIPL protease domain complex	1	263	B	None	464
+Q14790	217	479	4ps1	Caspase-8 specific unnatural amino acid peptides	2	264	A	None	None
+Q14790	217	479	4ps1	Caspase-8 specific unnatural amino acid peptides	2	264	D	None	None
+Q14790	217	479	4ps1	Caspase-8 specific unnatural amino acid peptides	2	264	B	None	None
+Q14790	217	479	4ps1	Caspase-8 specific unnatural amino acid peptides	2	264	C	None	None
+Q14790	217	479	4prz	Caspase-8 specific unnatural amino acid peptides	2	264	A	None	None
+Q14790	217	479	4jj7	Caspase-3 specific unnatural amino acid-based peptides	2	264	A	None	None
+Q14790	217	374	2c2z	Crystal structure of caspase-8 in complex with aza-peptide Michael acceptor inhibitor	2	159	A	None	None
+Q14790	375	479	2c2z	Crystal structure of caspase-8 in complex with aza-peptide Michael acceptor inhibitor	2	106	B	None	479
+Q14790	217	479	2k7z	Solution Structure of the Catalytic Domain of Procaspase-8	4	266	A	None	479
+Q14790	217	479	6px9	Crystal structure of procaspase-8 in complex with covalent small molecule inhibitor 63-R	1	263	C	None	479
+Q14790	217	479	6px9	Crystal structure of procaspase-8 in complex with covalent small molecule inhibitor 63-R	1	263	D	None	479
+Q14790	217	479	6px9	Crystal structure of procaspase-8 in complex with covalent small molecule inhibitor 63-R	1	263	B	None	479
+Q14790	217	479	6px9	Crystal structure of procaspase-8 in complex with covalent small molecule inhibitor 63-R	1	263	A	None	479
+Q14790	217	479	6px9	Crystal structure of procaspase-8 in complex with covalent small molecule inhibitor 63-R	1	263	F	None	479
+Q14790	217	479	6px9	Crystal structure of procaspase-8 in complex with covalent small molecule inhibitor 63-R	1	263	E	None	479
+Q14790	218	374	2y1l	Caspase-8 in Complex with DARPin-8.4	3	159	A	None	None
+Q14790	218	374	2y1l	Caspase-8 in Complex with DARPin-8.4	3	159	C	None	None
+Q14790	376	479	2y1l	Caspase-8 in Complex with DARPin-8.4	1	104	D	None	479
+Q14790	376	479	2y1l	Caspase-8 in Complex with DARPin-8.4	1	104	B	None	None
+Q14790	222	374	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	153	K	149	299
+Q14790	222	374	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	153	A	149	299
+Q14790	222	374	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	153	I	149	299
+Q14790	222	374	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	153	E	149	299
+Q14790	222	374	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	153	G	149	299
+Q14790	222	374	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	153	C	149	299
+Q14790	390	478	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	89	L	318	402
+Q14790	390	478	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	89	B	318	402
+Q14790	390	478	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	89	J	318	402
+Q14790	390	478	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	89	D	318	402
+Q14790	390	478	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	89	F	318	402
+Q14790	390	478	1f9e	CASPASE-8 SPECIFICITY PROBED AT SUBSITE S4: CRYSTAL STRUCTURE OF THE CASPASE-8-Z-DEVD-CHO	1	89	H	318	402
+Q14790	222	374	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	153	K	149	299
+Q14790	222	374	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	153	A	149	299
+Q14790	222	374	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	153	I	149	299
+Q14790	222	374	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	153	E	149	299
+Q14790	222	374	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	153	G	149	299
+Q14790	222	374	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	153	C	149	299
+Q14790	390	477	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	88	H	318	401
+Q14790	390	477	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	88	D	318	401
+Q14790	390	477	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	88	B	318	401
+Q14790	390	477	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	88	L	318	401
+Q14790	390	477	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	88	J	318	401
+Q14790	390	477	1qdu	CRYSTAL STRUCTURE OF THE COMPLEX OF CASPASE-8 WITH THE TRIPEPTIDE KETONE INHIBITOR ZEVD-DCBMK	1	88	F	318	401
+Q14790	222	479	2fun	alternative p35-caspase-8 complex	1	258	D	3222	None
+Q14790	222	479	2fun	alternative p35-caspase-8 complex	1	258	B	2222	2479
+Q14790	222	479	1i4e	CRYSTAL STRUCTURE OF THE CASPASE-8/P35 COMPLEX	1	258	B	2222	2479
+

@@ -1,0 +1,35 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q8N122	Regulatory-associated protein of mTOR	RPTOR_HUMAN	Homo sapiens	PF00400	WD40	WD domain, G-beta repeat	1156	1194
+Q8N122	Regulatory-associated protein of mTOR	RPTOR_HUMAN	Homo sapiens	PF02985	HEAT	HEAT repeat	602	630
+Q8N122	Regulatory-associated protein of mTOR	RPTOR_HUMAN	Homo sapiens	PF14538	Raptor_N	Raptor N-terminal CASPase like domain	55	206
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#11 mappings in 11 PDB chains in 6 PDB entries
+Q8N122	1	1335	6sb2	cryo-EM structure of mTORC1 bound to active RagA/C GTPases	1	1335	Y	None	None
+Q8N122	1	1335	6sb2	cryo-EM structure of mTORC1 bound to active RagA/C GTPases	1	1335	N	None	None
+Q8N122	1	1335	6sb0	cryo-EM structure of mTORC1 bound to PRAS40-fused active RagA/C GTPases	1	1335	Y	None	None
+Q8N122	1	1335	6sb0	cryo-EM structure of mTORC1 bound to PRAS40-fused active RagA/C GTPases	1	1335	N	None	None
+Q8N122	1	1335	5h64	Cryo-EM structure of mTORC1	1	1335	B	None	None
+Q8N122	1	1335	5h64	Cryo-EM structure of mTORC1	1	1335	b	None	None
+Q8N122	1	1335	6u62	Raptor-Rag-Ragulator complex	1	1335	A	None	None
+Q8N122	2	1335	6bcx	mTORC1 structure refined to 3.0 angstroms	10	1343	Y	None	None
+Q8N122	2	1335	6bcx	mTORC1 structure refined to 3.0 angstroms	10	1343	W	None	None
+Q8N122	2	1335	6bcu	Cryo-EM structure of the activated RHEB-mTORC1 refined to 3.4 angstrom	10	1343	Y	None	None
+Q8N122	2	1335	6bcu	Cryo-EM structure of the activated RHEB-mTORC1 refined to 3.4 angstrom	10	1343	W	None	None
+

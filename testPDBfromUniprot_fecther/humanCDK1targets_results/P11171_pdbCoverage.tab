@@ -1,0 +1,33 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P11171	ERYTHROID MEMBRANE PROTEIN 4.1R	41_HUMAN	Homo sapiens	PF00373	FERM_M	FERM central domain	292	401
+P11171	ERYTHROID MEMBRANE PROTEIN 4.1R	41_HUMAN	Homo sapiens	PF04382	SAB	SAB domain	667	715
+P11171	ERYTHROID MEMBRANE PROTEIN 4.1R	41_HUMAN	Homo sapiens	PF05902	4_1_CTD	4.1 protein C-terminal domain (CTD)	753	860
+P11171	ERYTHROID MEMBRANE PROTEIN 4.1R	41_HUMAN	Homo sapiens	PF08736	FA	FERM adjacent (FA)	499	542
+P11171	ERYTHROID MEMBRANE PROTEIN 4.1R	41_HUMAN	Homo sapiens	PF09379	FERM_N	FERM N-terminal domain	214	277
+P11171	ERYTHROID MEMBRANE PROTEIN 4.1R	41_HUMAN	Homo sapiens	PF09380	FERM_C	FERM C-terminal PH-like domain	405	494
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#6 mappings in 6 PDB chains in 3 PDB entries
+P11171	210	488	1gg3	CRYSTAL STRUCTURE OF THE PROTEIN 4.1R MEMBRANE BINDING DOMAIN	1	279	A	1	279
+P11171	210	488	1gg3	CRYSTAL STRUCTURE OF THE PROTEIN 4.1R MEMBRANE BINDING DOMAIN	1	279	C	1	279
+P11171	210	488	1gg3	CRYSTAL STRUCTURE OF THE PROTEIN 4.1R MEMBRANE BINDING DOMAIN	1	279	B	1	279
+P11171	211	488	3qij	Primitive-monoclinic crystal structure of the FERM domain of protein 4.1R	19	296	B	211	488
+P11171	211	488	3qij	Primitive-monoclinic crystal structure of the FERM domain of protein 4.1R	19	296	A	211	488
+P11171	292	396	2rq1	Solution structure of the 4.1R FERM alpha lobe domain	5	109	A	83	187
+

@@ -1,0 +1,67 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P26368	Splicing factor U2AF 65 kDa subunit	U2AF2_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	399	460
+P26368	Splicing factor U2AF 65 kDa subunit	U2AF2_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	261	331
+P26368	Splicing factor U2AF 65 kDa subunit	U2AF2_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	151	225
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#43 mappings in 43 PDB chains in 29 PDB entries
+P26368	85	112	1jmt	X-ray Structure of a Core U2AF65/U2AF35 Heterodimer	1	28	B	None	112
+P26368	140	342	6tr0	Solution structure of U2AF2 RRM1,2	3	205	A	140	342
+P26368	141	341	5ev2	Structure II of Intact U2AF65 Recognizing the 3' Splice Site Signal	1	201	A	None	None
+P26368	141	341	5ev3	Structure III of Intact U2AF65 Recognizing the 3' Splice Site Signal	1	201	A	None	None
+P26368	141	341	5ev4	Structure IV of Intact U2AF65 Recognizing the 3' Splice Site Signal	1	201	A	None	None
+P26368	141	341	5ev1	Structure I of Intact U2AF65 Recognizing a 3' Splice Site Signal	1	201	A	None	None
+P26368	147	336	2g4b	Structure of U2AF65 variant with polyuridine tract	3	172	A	147	336
+P26368	148	342	2yh0	Solution structure of the closed conformation of human U2AF65 tandem RRM1 and RRM2 domains	4	198	A	148	342
+P26368	148	336	3vag	Structure of U2AF65 variant with BrU3C2 DNA	6	174	A	148	336
+P26368	148	336	3vag	Structure of U2AF65 variant with BrU3C2 DNA	6	174	B	148	336
+P26368	148	336	4tu7	Structure of U2AF65 D231V variant with BrU5 DNA	6	174	A	148	336
+P26368	148	336	4tu7	Structure of U2AF65 D231V variant with BrU5 DNA	6	174	B	148	336
+P26368	148	336	4tu9	STRUCTURE OF U2AF65 VARIANT WITH BRU5G6 DNA	6	174	A	148	336
+P26368	148	336	4tu9	STRUCTURE OF U2AF65 VARIANT WITH BRU5G6 DNA	6	174	B	148	336
+P26368	148	336	4tu8	STRUCTURE OF U2AF65 VARIANT WITH BRU5A6 DNA	6	174	A	148	336
+P26368	148	336	4tu8	STRUCTURE OF U2AF65 VARIANT WITH BRU5A6 DNA	6	174	B	148	336
+P26368	148	336	3vaf	Structure of U2AF65 variant with BrU3 DNA	6	174	A	148	336
+P26368	148	336	3vaf	Structure of U2AF65 variant with BrU3 DNA	6	174	B	148	336
+P26368	148	336	3vah	Structure of U2AF65 variant with BrU3C4 DNA	6	174	A	148	336
+P26368	148	336	3vah	Structure of U2AF65 variant with BrU3C4 DNA	6	174	B	148	336
+P26368	148	336	3vai	Structure of U2AF65 variant with BrU3C5 DNA	6	174	A	148	336
+P26368	148	336	3vai	Structure of U2AF65 variant with BrU3C5 DNA	6	174	B	148	336
+P26368	148	336	3vaj	Structure of U2AF65 variant with BrU5C6 DNA	6	174	A	148	336
+P26368	148	336	3vaj	Structure of U2AF65 variant with BrU5C6 DNA	6	174	B	148	336
+P26368	148	336	3vak	Structure of U2AF65 variant with BrU5 DNA	6	174	A	148	336
+P26368	148	336	3vak	Structure of U2AF65 variant with BrU5 DNA	6	174	B	148	336
+P26368	148	336	3val	Structure of U2AF65 variant with BrU5C1 DNA	6	174	A	148	336
+P26368	148	336	3val	Structure of U2AF65 variant with BrU5C1 DNA	6	174	B	148	336
+P26368	148	336	3val	Structure of U2AF65 variant with BrU5C1 DNA	6	174	D	148	336
+P26368	148	336	3val	Structure of U2AF65 variant with BrU5C1 DNA	6	174	I	148	336
+P26368	148	336	3vam	Structure of U2AF65 variant with BrU5C2 DNA	6	174	A	148	336
+P26368	148	336	3vam	Structure of U2AF65 variant with BrU5C2 DNA	6	174	B	148	336
+P26368	148	237	1u2f	SOLUTION STRUCTURE OF THE FIRST RNA-BINDING DOMAIN OF HU2AF65	1	90	A	1	90
+P26368	148	229	2hzc	Crystal structure of the N-terminal RRM of the U2AF large subunit	6	87	A	148	229
+P26368	148	229	5w0g	Structure of U2AF65 (U2AF2) RRM1 at 1.07 resolution	6	87	A	148	229
+P26368	148	342	2yh1	Model of human U2AF65 tandem RRM1 and RRM2 domains with eight-site uridine binding	4	198	A	148	342
+P26368	258	336	5w0h	Structure of U2AF65 (U2AF2) RRM2 at 1.11 Angstrom Resolution	6	84	A	258	336
+P26368	258	342	2u2f	SOLUTION STRUCTURE OF THE SECOND RNA-BINDING DOMAIN OF HU2AF65	1	85	A	1	85
+P26368	372	475	1opi	SOLUTION STRUCTURE OF THE THIRD RNA RECOGNITION MOTIF (RRM) OF U2AF65 IN COMPLEX WITH AN N-TERMINAL SF1 PEPTIDE	1	104	A	372	475
+P26368	372	475	2m0g	Structure, phosphorylation and U2AF65 binding of the Nterminal Domain of splicing factor 1 during 3 splice site Recognition	1	104	B	372	475
+P26368	372	475	1o0p	Solution Structure of the third RNA Recognition Motif (RRM) of U2AF65 in complex with an N-terminal SF1 peptide	1	104	A	372	475
+P26368	375	475	4fxw	Structure of phosphorylated SF1 complex with U2AF65-UHM domain	6	106	C	375	475
+P26368	375	475	4fxw	Structure of phosphorylated SF1 complex with U2AF65-UHM domain	6	106	A	375	475
+

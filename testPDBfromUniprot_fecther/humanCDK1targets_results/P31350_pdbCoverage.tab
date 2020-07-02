@@ -1,0 +1,33 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P31350	Ribonucleoside-diphosphate reductase subunit M2	RIR2_HUMAN	Homo sapiens	PF00268	Ribonuc_red_sm	Ribonucleotide reductase, small chain	79	346
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#11 mappings in 11 PDB chains in 5 PDB entries
+P31350	60	389	2uw2	Crystal structure of human ribonucleotide reductase subunit R2	3	332	A	None	None
+P31350	66	350	3olj	Crystal structure of human ribonucleotide reductase subunit M2 (hRRM2)	2	286	C	66	350
+P31350	66	350	3olj	Crystal structure of human ribonucleotide reductase subunit M2 (hRRM2)	2	286	D	66	350
+P31350	66	350	3olj	Crystal structure of human ribonucleotide reductase subunit M2 (hRRM2)	2	286	A	66	350
+P31350	66	350	3olj	Crystal structure of human ribonucleotide reductase subunit M2 (hRRM2)	2	286	B	66	350
+P31350	66	350	3vpn	Crystal structure of human ribonucleotide reductase subunit M2 (hRRM2) mutant	2	286	A	66	350
+P31350	66	350	3vpn	Crystal structure of human ribonucleotide reductase subunit M2 (hRRM2) mutant	2	286	B	66	350
+P31350	66	350	3vpm	Crystal structure of human ribonucleotide reductase subunit M2 (hRRM2) mutant	2	286	A	66	350
+P31350	66	350	3vpm	Crystal structure of human ribonucleotide reductase subunit M2 (hRRM2) mutant	2	286	B	66	350
+P31350	66	350	3vpo	Crystal structure of human ribonucleotide reductase subunit M2 (hRRM2) mutant	2	286	A	66	350
+P31350	66	350	3vpo	Crystal structure of human ribonucleotide reductase subunit M2 (hRRM2) mutant	2	286	B	66	350
+

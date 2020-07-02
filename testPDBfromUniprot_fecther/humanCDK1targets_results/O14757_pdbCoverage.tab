@@ -1,0 +1,161 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O14757	cDNA FLJ56409, highly similar to Serine/threonine-protein kinase Chk1 (EC 2.7.11.1)	CHK1_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	9	265
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#139 mappings in 139 PDB chains in 133 PDB entries
+O14757	1	307	3tkh	Crystal structure of Chk1 in complex with inhibitor S01	1	307	A	None	None
+O14757	1	307	3tki	Crystal structure of Chk1 in complex with inhibitor S25	1	307	A	None	None
+O14757	1	307	2r0u	Crystal Structure of Chek1 in Complex with Inhibitor 54	1	307	A	None	None
+O14757	1	307	2qhn	Crystal Structure of Chek1 in Complex with Inhibitor 1a	1	307	A	None	None
+O14757	1	307	2qhm	crystal structure of Chek1 in complex with inhibitor 2a	1	307	A	None	None
+O14757	1	293	2bro	Structure-based Design of Novel Chk1 Inhibitors: Insights into Hydrogen Bonding and Protein-Ligand Affinity	1	293	A	None	None
+O14757	1	293	2cgx	Identification of chemically diverse Chk1 inhibitors by receptor- based virtual screening	1	293	A	None	None
+O14757	1	293	2cgu	Identification of chemically diverse Chk1 inhibitors by receptor- based virtual screening	1	293	A	None	None
+O14757	1	293	2cgw	Identification of chemically diverse Chk1 inhibitors by receptor- based virtual screening	1	293	A	None	None
+O14757	1	293	2brm	Structure-based Design of Novel Chk1 Inhibitors: Insights into Hydrogen Bonding and Protein-Ligand Affinity	1	293	A	None	None
+O14757	1	293	2brh	Structure-based Design of Novel Chk1 Inhibitors: Insights into Hydrogen Bonding and Protein-Ligand Affinity	1	293	A	None	None
+O14757	1	293	2brg	Structure-based Design of Novel Chk1 Inhibitors: Insights into Hydrogen Bonding and Protein-Ligand Affinity	1	293	A	None	None
+O14757	1	293	2brb	Structure-based Design of Novel Chk1 Inhibitors: Insights into Hydrogen Bonding and Protein-Ligand Affinity	1	293	A	None	None
+O14757	1	293	2c3j	Identification of a buried pocket for potent and selective inhibition of Chk1: prediction and verification	1	293	A	None	None
+O14757	1	293	2c3k	Identification of a buried pocket for potent and selective inhibition of Chk1: prediction and verification	1	293	A	None	None
+O14757	1	293	2c3l	Identification of a buried pocket for potent and selective inhibition of Chk1: prediction and verification	1	293	A	None	None
+O14757	1	293	2br1	Structure-based Design of Novel Chk1 Inhibitors: Insights into Hydrogen Bonding and Protein-Ligand Affinity	1	293	A	None	None
+O14757	1	293	2brn	Structure-based Design of Novel Chk1 Inhibitors: Insights into Hydrogen Bonding and Protein-Ligand Affinity	1	293	A	None	None
+O14757	1	293	2cgv	Identification of chemically diverse Chk1 inhibitors by receptor- based virtual screening	1	293	A	None	None
+O14757	1	289	2ym5	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2ym6	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	3nlb	Novel kinase profile highlights the temporal basis of context dependent checkpoint pathways to cell death	1	289	A	None	None
+O14757	1	289	5opb	Structure of CHK1 10-pt. mutant complex with indazole LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	5oop	Structure of CHK1 10-pt. mutant complex with AMP-PNP	1	289	A	None	None
+O14757	1	289	5oor	Structure of CHK1 10-pt. mutant complex with staurosporine	1	289	A	None	None
+O14757	1	289	5oot	Structure of CHK1 10-pt. mutant complex with aminopyrimido-benzodiazepinone LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	5oq7	Structure of CHK1 8-pt. mutant complex with arylbenzamide LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	5oq7	Structure of CHK1 8-pt. mutant complex with arylbenzamide LRRK2 inhibitor	1	289	B	None	None
+O14757	1	289	5opu	Structure of CHK1 10-pt. mutant complex with pyrrolopyridine LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	5opv	Structure of CHK1 10-pt. mutant complex with pyrrolopyridine LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	5opr	Structure of CHK1 10-pt. mutant complex with aminopyridine LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	5ops	Structure of CHK1 10-pt. mutant complex with pyrrolopyridine LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	2wmv	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2wmw	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2wmt	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2wmu	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2wmr	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	4rvm	CHK1 kinase domain with diazacarbazole compound 19	1	289	A	None	None
+O14757	1	289	5oq8	Structure of CHK1 12-pt. mutant complex with arylbenzamide LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	5dls	Identification of Novel, in vivo Active Chk1 Inhibitors Utilizing Structure Guided Drug Design	1	289	A	None	None
+O14757	1	289	5oq6	Structure of CHK1 12-pt. mutant complex with aminopyrimido-benzodiazepinone LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	2ym7	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2ydi	Discovery of Checkpoint Kinase Inhibitor AZD7762 by Structure Based Design and Optimization of Thiophene Carboxamide Ureas	1	289	A	None	None
+O14757	1	289	2wmx	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2wmq	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	4rvk	CHK1 kinase domain with diazacarbazole compound 8: N-[3-(6-cyano-9H-pyrrolo[2,3-b:5,4-c']dipyridin-3-yl)phenyl]acetamide	1	289	A	None	None
+O14757	1	289	2ym3	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	4rvl	CHK1 kinase domain with diazacarbazole compound 7: 3-(2-hydroxyphenyl)-9H-pyrrolo[2,3-b:5,4-c']dipyridine-6-carbonitrile	1	289	A	None	None
+O14757	1	289	2wms	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2xf0	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2x8d	Discovery of a Novel Class of triazolones as Checkpoint Kinase Inhibitors - Hit to Lead Exploration	1	289	A	None	None
+O14757	1	289	2x8i	Discovery of a Novel Class of triazolones as Checkpoint Kinase Inhibitors - Hit to Lead Exploration	1	289	A	None	None
+O14757	1	289	1zlt	Crystal Structure of Chk1 Complexed with a Hymenaldisine Analog	1	289	A	None	None
+O14757	1	289	4hyi	X-RAY Crystal structure of compound 40 bound to human chk1 kinase domain	1	289	A	None	None
+O14757	1	289	4hyh	X-RAY Crystal structure of compound 39 bound to human chk1 kinase domain	1	289	A	None	None
+O14757	1	289	5oq5	Structure of CHK1 8-pt. mutant complex with aminopyrimido-benzodiazepinone LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	5op5	Structure of CHK1 10-pt. mutant complex with pyrrolopyrimidine LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	5op4	Structure of CHK1 10-pt. mutant complex with aminopyrimidine LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	1ia8	THE 1.7 A CRYSTAL STRUCTURE OF HUMAN CELL CYCLE CHECKPOINT KINASE CHK1	1	289	A	None	None
+O14757	1	289	5op7	Structure of CHK1 10-pt. mutant complex with pyrrolopyrimidine LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	2ym8	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	5op2	Structure of CHK1 10-pt. mutant complex with arylbenzamide LRRK2 inhibitor	1	289	A	None	None
+O14757	1	289	4qyh	CHK1 kinase domain in complex with diazacarbazole GNE-783	1	289	A	None	None
+O14757	1	289	4qyh	CHK1 kinase domain in complex with diazacarbazole GNE-783	1	289	B	None	None
+O14757	1	289	4qyf	CHK1 kinase domain in complex with aminopyrazine compound 13	1	289	A	None	None
+O14757	1	289	4qyg	CHK1 kinase domain in complex with diazacarbazole compound 14	1	289	A	None	None
+O14757	1	289	4qyg	CHK1 kinase domain in complex with diazacarbazole compound 14	1	289	B	None	None
+O14757	1	289	4qye	CHK1 kinase domain in complex with diarylpyrazine compound 1	1	289	A	None	None
+O14757	1	289	2ym4	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2xey	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	2xez	Crystal structure of checkpoint kinase 1 (Chk1) in complex with inhibitors	1	289	A	None	None
+O14757	1	289	1nvs	The Complex Structure Of Checkpoint Kinase Chk1/SB218078	1	289	A	None	None
+O14757	1	289	1nvr	The Complex Structure Of Checkpoint Kinase Chk1/Staurosporine	1	289	A	None	None
+O14757	1	289	1nvq	The Complex Structure Of Checkpoint Kinase Chk1/UCN-01	1	289	A	None	None
+O14757	1	289	2gdo	4-(Aminoalkylamino)-3-Benzimidazole-Quinolinones As Potent CHK1 Inhibitors	1	289	A	1	None
+O14757	1	276	2yer	Synthesis and evaluation of triazolones as checkpoint kinase 1 inhibitors	1	276	A	None	None
+O14757	1	276	2ydj	Discovery of Checkpoint Kinase Inhibitor AZD7762 by Structure Based Design and Optimization of Thiophene Carboxamide Ureas	1	276	A	None	None
+O14757	1	276	2ydj	Discovery of Checkpoint Kinase Inhibitor AZD7762 by Structure Based Design and Optimization of Thiophene Carboxamide Ureas	1	276	B	None	None
+O14757	1	276	2x8e	Discovery of a Novel Class of triazolones as Checkpoint Kinase Inhibitors - Hit to Lead Exploration	1	276	A	None	None
+O14757	1	276	2ydk	Discovery of Checkpoint Kinase Inhibitor AZD7762 by Structure Based Design and Optimization of Thiophene Carboxamide Ureas	1	276	A	None	None
+O14757	1	276	6fck	CHK1 KINASE IN COMPLEX WITH COMPOUND 13	1	276	A	None	None
+O14757	1	276	6fc8	CHK1 KINASE IN COMPLEX WITH COMPOUND 13	1	276	A	None	None
+O14757	1	276	6fcf	CHK1 KINASE IN COMPLEX WITH COMPOUND 44	1	276	A	None	None
+O14757	1	276	2yex	Synthesis and evaluation of triazolones as checkpoint kinase 1 inhibitors	1	276	A	None	None
+O14757	1	273	5f4n	Multi-parameter lead optimization to give an oral CHK1 inhibitor clinical candidate: (R)-5-((4-((morpholin-2-ylmethyl)amino)-5-(trifluoromethyl)pyridin-2-yl)amino)pyrazine-2-carbonitrile (CCT245737)	1	273	A	None	None
+O14757	1	273	1zys	Co-crystal structure of Checkpoint Kinase Chk1 with a pyrrolo-pyridine inhibitor	1	273	A	None	273
+O14757	1	269	2ayp	Crystal Structure of CHK1 with an Indol Inhibitor	1	269	A	None	269
+O14757	2	280	4fta	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4ftr	Crystal Structure of the CHK1	1	279	A	None	None
+O14757	2	280	4ftq	Crystal Structure of the CHK1	1	279	A	None	None
+O14757	2	280	4ftj	Crystal Structure of the CHK1	1	279	A	None	None
+O14757	2	280	4ftt	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4ftu	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4ftk	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4fti	Crystal Structure of the CHK1	1	279	A	None	None
+O14757	2	280	4ftn	Crystal Structure of the CHK1	1	279	A	None	None
+O14757	2	280	4fto	Crystal Structure of the CHK1	1	279	A	None	None
+O14757	2	280	4ftl	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4ftm	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4fsr	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4fsq	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4fsw	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4fsu	Crystal Structure of the CHK1	1	279	A	None	None
+O14757	2	280	4fsz	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4fsy	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4gh2	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4fsm	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	307	2hxq	crystal structure of Chek1 in complex with inhibitor 2	1	306	A	2	None
+O14757	2	307	2hy0	crystal structure of chek1 in complex with inhibitor 22	1	306	A	2	None
+O14757	2	307	2hog	crystal structure of Chek1 in complex with inhibitor 20	1	306	A	2	None
+O14757	2	307	3f9n	Crystal structure of chk1 kinase in complex with inhibitor 38	1	306	A	None	None
+O14757	2	307	2hxl	crystal structure of Chek1 in complex with inhibitor 1	1	306	A	2	None
+O14757	2	280	4ftc	Crystal Structure of the CHK1	1	279	A	2	280
+O14757	2	280	4ft9	Crystal Structure of the CHK1	1	279	A	2	280
+O14757	2	280	4ft3	Crystal Structure of the CHK1	1	279	A	2	280
+O14757	2	274	3u9n	X-ray crystal structure of compound 1 bound to human CHK1 kinase domain	1	273	A	None	None
+O14757	2	274	4jik	X-RAY Crystal structure of compound 22a (R)-2-(4-chlorophenyl)-8-(piperidin-3-ylamino)imidazo[1,2-c]pyrimidine-5-carboxamide bound to human chk1 kinase domain	1	273	A	None	None
+O14757	2	274	3ot3	X-ray crystal structure of compound 22k bound to human Chk1 kinase domain	1	273	A	None	None
+O14757	2	274	3ot8	X-ray crystal structure of compound 17r bound to human Chk1 kinase domain	1	273	A	None	None
+O14757	2	274	3pa3	X-ray crystal structure of compound 70 bound to human CHK1 kinase domain	1	273	A	None	None
+O14757	2	274	3pa4	X-ray crystal structure of compound 2a bound to human CHK1 kinase domain	1	273	A	None	None
+O14757	2	274	3pa5	X-ray crystal structure of compound 1 bound to human CHK1 kinase domain	1	273	A	None	None
+O14757	2	280	4ft0	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	280	4ft7	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	272	3jvr	Characterization of the Chk1 allosteric inhibitor binding site	1	271	A	2	272
+O14757	2	272	3jvs	Characterization of the Chk1 allosteric inhibitor binding site	1	271	A	2	272
+O14757	2	270	2e9u	Structure of h-CHK1 complexed with A780125	1	269	A	2	270
+O14757	2	270	4fst	Crystal Structure of the CHK1	1	269	A	None	270
+O14757	2	270	2ghg	h-CHK1 complexed with A431994	1	269	A	2	270
+O14757	2	270	2e9o	Structure of h-CHK1 complexed with AA582939	1	269	A	2	270
+O14757	2	270	2e9n	Structure of h-CHK1 complexed with A767085	1	269	A	2	270
+O14757	2	270	2ywp	Crystal Structure of CHK1 with a Urea Inhibitor	1	269	A	2	270
+O14757	2	280	4ft5	Crystal Structure of the CHK1	1	279	A	None	280
+O14757	2	270	2e9p	Structure of h-CHK1 complexed with A771129	1	269	A	2	270
+O14757	2	269	2e9v	Structure of h-CHK1 complexed with A859017	1	268	B	2	269
+O14757	2	269	2e9v	Structure of h-CHK1 complexed with A859017	1	268	A	2	269
+O14757	3	280	4fsn	Crystal Structure of the CHK1	1	278	A	3	280
+O14757	377	476	5wi2	Crystal structure of the KA1 domain from human Chk1	3	102	B	377	None
+O14757	377	476	5wi2	Crystal structure of the KA1 domain from human Chk1	3	102	A	377	None
+

@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P35251	Replication factor C subunit 1	RFC1_HUMAN	Homo sapiens	PF00533	BRCT	BRCA1 C Terminus (BRCT) domain	402	479
+P35251	Replication factor C subunit 1	RFC1_HUMAN	Homo sapiens	PF00004	AAA	ATPase family associated with various cellular activities (AAA)	647	776
+P35251	Replication factor C subunit 1	RFC1_HUMAN	Homo sapiens	PF08519	RFC1	Replication factor RFC1 C terminal domain	915	1068
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 4 PDB chains in 4 PDB entries
+P35251	375	480	2k7f	HADDOCK calculated model of the complex between the BRCT region of RFC p140 and dsDNA	1	106	A	375	480
+P35251	375	480	2k6g	Solution structure of the DNA binding BRCT domain from the large subunit of human Replication Factor C	1	106	A	375	480
+P35251	392	496	2ebu	Solution structure of the BRCT domain from human replication factor C large subunit 1	8	112	A	392	496
+P35251	556	1148	6vvo	Structure of the human clamp loader (Replication Factor C, RFC) bound to the sliding clamp (Proliferating Cell Nuclear Antigen, PCNA)	3	595	A	None	None
+

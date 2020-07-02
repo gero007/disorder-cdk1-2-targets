@@ -1,0 +1,42 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O00267	Transcription elongation factor SPT5	SPT5H_HUMAN	Homo sapiens	PF00467	KOW	KOW motif	474	505
+O00267	Transcription elongation factor SPT5	SPT5H_HUMAN	Homo sapiens	PF03439	Spt5-NGN	Early transcription elongation factor of RNA pol II, NGN section	178	264
+O00267	Transcription elongation factor SPT5	SPT5H_HUMAN	Homo sapiens	PF11942	Spt5_N	Spt5 transcription elongation factor, acidic N-terminal	75	172
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#18 mappings in 18 PDB chains in 13 PDB entries
+O00267	1	1087	5oik	Structure of an RNA polymerase II-DSIF transcription elongation complex	1	1087	Z	None	None
+O00267	1	1087	6gmh	Structure of activated transcription complex Pol II-DSIF-PAF-SPT6	1	1087	Z	None	None
+O00267	1	1087	6gml	Structure of paused transcription complex Pol II-DSIF-NELF	1	1087	Z	None	None
+O00267	176	273	3h7h	Crystal structure of the human transcription elongation factor DSIF, hSpt4/hSpt5 (176-273)	5	102	B	176	None
+O00267	420	471	2e6z	Solution structure of the second KOW motif of human transcription elongation factor SPT5	8	59	A	420	471
+O00267	462	523	2do3	Solution structure of the third KOW motif of transcription elongation factor SPT5	8	69	A	462	523
+O00267	522	647	6eqy	4th KOW domain of human hSpt5	4	129	A	None	130
+O00267	536	646	5oho	Crystal structure of the KOWx-KOW4 domain of human DSIF	3	113	A	536	646
+O00267	536	646	5oho	Crystal structure of the KOWx-KOW4 domain of human DSIF	3	113	B	536	646
+O00267	694	757	2e70	Solution structure of the fifth KOW motif of human transcription elongation factor SPT5	8	71	A	694	757
+O00267	778	790	4l1u	Crystal Structure of Human Rtf1 Plus3 Domain in Complex with Spt5 CTR Phosphopeptide	1	13	I	None	None
+O00267	778	790	4l1u	Crystal Structure of Human Rtf1 Plus3 Domain in Complex with Spt5 CTR Phosphopeptide	1	13	G	None	None
+O00267	778	790	4l1u	Crystal Structure of Human Rtf1 Plus3 Domain in Complex with Spt5 CTR Phosphopeptide	1	13	H	None	790
+O00267	778	790	4l1u	Crystal Structure of Human Rtf1 Plus3 Domain in Complex with Spt5 CTR Phosphopeptide	1	13	J	None	None
+O00267	961	1087	6er0	6th KOW domain of human hSpt5	1	127	A	None	127
+O00267	979	1087	5ohq	Crystal structure of the KOW6-KOW7 domain of human DSIF	3	111	A	979	None
+O00267	980	988	5u98	The crystal structure of a self-peptide complexed to Abacavir and HLA-B*57:01	1	9	F	1	9
+O00267	980	988	5u98	The crystal structure of a self-peptide complexed to Abacavir and HLA-B*57:01	1	9	C	1	9
+

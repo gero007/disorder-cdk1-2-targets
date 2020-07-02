@@ -1,0 +1,84 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P38398	BREAST CANCER TYPE 1 SUSCEPTIBILITY PROTEIN	BRCA1_HUMAN	Homo sapiens	PF00533	BRCT	BRCA1 C Terminus (BRCT) domain	1756	1842
+P38398	BREAST CANCER TYPE 1 SUSCEPTIBILITY PROTEIN	BRCA1_HUMAN	Homo sapiens	PF00533	BRCT	BRCA1 C Terminus (BRCT) domain	1644	1723
+P38398	BREAST CANCER TYPE 1 SUSCEPTIBILITY PROTEIN	BRCA1_HUMAN	Homo sapiens	PF00097	zf-C3HC4	Zinc finger, C3HC4 type (RING finger)	24	64
+P38398	BREAST CANCER TYPE 1 SUSCEPTIBILITY PROTEIN	BRCA1_HUMAN	Homo sapiens	PF12820	BRCT_assoc	Serine-rich domain associated with BRCT	345	508
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#59 mappings in 59 PDB chains in 28 PDB entries
+P38398	1	110	1jm7	Solution structure of the BRCA1/BARD1 RING-domain heterodimer	1	110	A	1	None
+P38398	1646	1859	4igk	Structure of human BRCA1 BRCT in complex with ATRIP peptide	1	214	A	1646	1859
+P38398	1646	1859	4igk	Structure of human BRCA1 BRCT in complex with ATRIP peptide	1	214	B	1646	1859
+P38398	1646	1859	6g2i	Filament of acetyl-CoA carboxylase and BRCT domains of BRCA1 (ACC-BRCT) at 5.9 A resolution	27	240	U	1646	1859
+P38398	1646	1859	6g2i	Filament of acetyl-CoA carboxylase and BRCT domains of BRCA1 (ACC-BRCT) at 5.9 A resolution	27	240	K	1646	1859
+P38398	1646	1859	6g2i	Filament of acetyl-CoA carboxylase and BRCT domains of BRCA1 (ACC-BRCT) at 5.9 A resolution	27	240	W	1646	1859
+P38398	1646	1859	6g2i	Filament of acetyl-CoA carboxylase and BRCT domains of BRCA1 (ACC-BRCT) at 5.9 A resolution	27	240	H	1646	1859
+P38398	1646	1859	6g2i	Filament of acetyl-CoA carboxylase and BRCT domains of BRCA1 (ACC-BRCT) at 5.9 A resolution	27	240	O	1646	1859
+P38398	1646	1859	6g2i	Filament of acetyl-CoA carboxylase and BRCT domains of BRCA1 (ACC-BRCT) at 5.9 A resolution	27	240	M	1646	1859
+P38398	1646	1859	6g2i	Filament of acetyl-CoA carboxylase and BRCT domains of BRCA1 (ACC-BRCT) at 5.9 A resolution	27	240	Y	1646	1859
+P38398	1646	1859	6g2i	Filament of acetyl-CoA carboxylase and BRCT domains of BRCA1 (ACC-BRCT) at 5.9 A resolution	27	240	S	1646	1859
+P38398	1646	1859	3k0k	Crystal Structure of BRCA1 BRCT in complex with a minimal recognition tetrapeptide with a free carboxy C-terminus.	2	215	A	None	1859
+P38398	1646	1859	3k0h	The crystal structure of BRCA1 BRCT in complex with a minimal recognition tetrapeptide with an amidated C-terminus	2	215	A	None	1859
+P38398	1646	1859	4ofb	Crystal structure of human BRCA1 BRCT in complex with nonphosphopeptide inhibitor	1	214	A	None	1859
+P38398	1646	1859	1t2u	Structural basis of phosphopeptide recognition by the BRCT domain of BRCA1: structure of BRCA1 missense variant V1809F	1	214	A	None	1859
+P38398	1646	1859	4y18	Structure of BRCA1 BRCT domains in complex with Abraxas double phosphorylated peptide	11	224	E	1646	1859
+P38398	1646	1859	4y18	Structure of BRCA1 BRCT domains in complex with Abraxas double phosphorylated peptide	11	224	C	1646	1859
+P38398	1646	1859	4y18	Structure of BRCA1 BRCT domains in complex with Abraxas double phosphorylated peptide	11	224	G	None	1859
+P38398	1646	1859	4y18	Structure of BRCA1 BRCT domains in complex with Abraxas double phosphorylated peptide	11	224	F	1646	1859
+P38398	1646	1859	4y18	Structure of BRCA1 BRCT domains in complex with Abraxas double phosphorylated peptide	11	224	B	1646	1859
+P38398	1646	1859	4y18	Structure of BRCA1 BRCT domains in complex with Abraxas double phosphorylated peptide	11	224	D	1646	None
+P38398	1646	1859	4y18	Structure of BRCA1 BRCT domains in complex with Abraxas double phosphorylated peptide	11	224	H	None	1859
+P38398	1646	1859	4y18	Structure of BRCA1 BRCT domains in complex with Abraxas double phosphorylated peptide	11	224	A	1646	1859
+P38398	1646	1859	1t2v	Structural basis of phospho-peptide recognition by the BRCT domain of BRCA1, structure with phosphopeptide	1	214	C	None	1859
+P38398	1646	1859	1t2v	Structural basis of phospho-peptide recognition by the BRCT domain of BRCA1, structure with phosphopeptide	1	214	A	None	1859
+P38398	1646	1859	1t2v	Structural basis of phospho-peptide recognition by the BRCT domain of BRCA1, structure with phosphopeptide	1	214	D	None	None
+P38398	1646	1859	1t2v	Structural basis of phospho-peptide recognition by the BRCT domain of BRCA1, structure with phosphopeptide	1	214	E	None	1859
+P38398	1646	1859	1t2v	Structural basis of phospho-peptide recognition by the BRCT domain of BRCA1, structure with phosphopeptide	1	214	B	1646	1859
+P38398	1646	1859	1y98	Structure of the BRCT repeats of BRCA1 bound to a CtIP phosphopeptide.	1	214	A	None	1859
+P38398	1646	1859	3k16	Crystal Structure of BRCA1 BRCT D1840T in complex with a minimal recognition tetrapeptide with a free carboxy C-terminus	2	215	A	None	1859
+P38398	1646	1859	1n5o	Structural consequences of a cancer-causing BRCA1-BRCT missense mutation	1	214	X	None	1859
+P38398	1646	1859	1jnx	Crystal structure of the BRCT repeat region from the breast cancer associated protein, BRCA1	1	214	X	None	1859
+P38398	1646	1859	4y2g	Structure of BRCA1 BRCT domains in complex with Abraxas single phosphorylated peptide	11	224	A	1646	1859
+P38398	1646	1859	1t15	Crystal Structure of the Brca1 BRCT Domains in Complex with the Phosphorylated Interacting Region from Bach1 Helicase	1	214	A	None	1859
+P38398	1646	1859	4ifi	Structure of human BRCA1 BRCT in complex with BAAT peptide	1	214	A	None	1859
+P38398	1646	1859	4u4a	Complex Structure of BRCA1 BRCT with singly phospho Abraxas	1	214	C	None	1859
+P38398	1646	1859	4u4a	Complex Structure of BRCA1 BRCT with singly phospho Abraxas	1	214	A	1646	1859
+P38398	1646	1859	4u4a	Complex Structure of BRCA1 BRCT with singly phospho Abraxas	1	214	B	1646	1859
+P38398	1646	1859	1t29	Crystal structure of the BRCA1 BRCT repeats bound to a phosphorylated BACH1 peptide	1	214	A	None	1859
+P38398	1646	1859	3pxd	Impact of BRCA1 BRCT domain missense substitutions on phospho-peptide recognition: R1835P	1	214	A	None	1859
+P38398	1646	1859	3pxa	Impact of BRCA1 BRCT domain missense substitutions on phospho-peptide recognition: G1656D	1	214	A	None	1859
+P38398	1646	1859	3coj	Crystal Structure of the BRCT Domains of Human BRCA1 in Complex with a Phosphorylated Peptide from Human Acetyl-CoA Carboxylase 1	22	235	G	None	1859
+P38398	1646	1859	3coj	Crystal Structure of the BRCT Domains of Human BRCA1 in Complex with a Phosphorylated Peptide from Human Acetyl-CoA Carboxylase 1	22	235	C	None	1859
+P38398	1646	1859	3coj	Crystal Structure of the BRCT Domains of Human BRCA1 in Complex with a Phosphorylated Peptide from Human Acetyl-CoA Carboxylase 1	22	235	B	None	1859
+P38398	1646	1859	3coj	Crystal Structure of the BRCT Domains of Human BRCA1 in Complex with a Phosphorylated Peptide from Human Acetyl-CoA Carboxylase 1	22	235	E	None	1859
+P38398	1646	1859	3coj	Crystal Structure of the BRCT Domains of Human BRCA1 in Complex with a Phosphorylated Peptide from Human Acetyl-CoA Carboxylase 1	22	235	A	None	1859
+P38398	1646	1859	3coj	Crystal Structure of the BRCT Domains of Human BRCA1 in Complex with a Phosphorylated Peptide from Human Acetyl-CoA Carboxylase 1	22	235	F	None	1859
+P38398	1646	1859	3coj	Crystal Structure of the BRCT Domains of Human BRCA1 in Complex with a Phosphorylated Peptide from Human Acetyl-CoA Carboxylase 1	22	235	D	None	1859
+P38398	1646	1859	3coj	Crystal Structure of the BRCT Domains of Human BRCA1 in Complex with a Phosphorylated Peptide from Human Acetyl-CoA Carboxylase 1	22	235	X	None	1859
+P38398	1646	1859	3pxc	Impact of BRCA1 BRCT domain missense substitutions on phospho-peptide recognition: R1699Q	1	214	X	None	1859
+P38398	1646	1859	3pxb	Impact of BRCA1 BRCT domain missense substitutions on phospho-peptide recognition: T1700A	1	214	A	None	1859
+P38398	1646	1859	3pxe	Impact of BRCA1 BRCT domain missense substitutions on phospho-peptide recognition: E1836K	1	214	C	None	1859
+P38398	1646	1859	3pxe	Impact of BRCA1 BRCT domain missense substitutions on phospho-peptide recognition: E1836K	1	214	B	None	1859
+P38398	1646	1859	3pxe	Impact of BRCA1 BRCT domain missense substitutions on phospho-peptide recognition: E1836K	1	214	A	None	1859
+P38398	1646	1859	3pxe	Impact of BRCA1 BRCT domain missense substitutions on phospho-peptide recognition: E1836K	1	214	D	None	1859
+P38398	1646	1859	3k15	Crystal Structure of BRCA1 BRCT D1840T in complex with a minimal recognition tetrapeptide with an amidated C-terminus	2	215	A	None	1859
+P38398	1649	1859	2ing	X-ray Structure of the BRCA1 BRCT mutant M1775K	3	213	X	1649	1859
+P38398	1649	1859	4jlu	Crystal structure of BRCA1 BRCT with doubly phosphorylated Abraxas	1	211	A	1649	1859
+P38398	1755	1863	1oqa	Solution structure of the BRCT-c domain from human BRCA1	2	110	A	2	110
+

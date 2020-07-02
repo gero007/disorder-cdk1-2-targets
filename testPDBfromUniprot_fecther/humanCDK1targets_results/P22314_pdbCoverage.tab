@@ -1,0 +1,31 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P22314	Ubiquitin-like modifier-activating enzyme 1	UBA1_HUMAN	Homo sapiens	PF00899	ThiF	ThiF family	451	952
+P22314	Ubiquitin-like modifier-activating enzyme 1	UBA1_HUMAN	Homo sapiens	PF00899	ThiF	ThiF family	55	450
+P22314	Ubiquitin-like modifier-activating enzyme 1	UBA1_HUMAN	Homo sapiens	PF09358	E1_UFD	Ubiquitin fold domain	955	1053
+P22314	Ubiquitin-like modifier-activating enzyme 1	UBA1_HUMAN	Homo sapiens	PF10585	UBA_e1_thiolCys	Ubiquitin-activating enzyme active site	638	884
+P22314	Ubiquitin-like modifier-activating enzyme 1	UBA1_HUMAN	Homo sapiens	PF16190	E1_FCCH	Ubiquitin-activating enzyme E1 FCCH domain	227	297
+P22314	Ubiquitin-like modifier-activating enzyme 1	UBA1_HUMAN	Homo sapiens	PF16191	E1_4HB	Ubiquitin-activating enzyme E1 four-helix bundle	298	366
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 4 PDB chains in 2 PDB entries
+P22314	1	439	4p22	Crystal Structure of N-terminal Fragments of E1	8	446	A	None	None
+P22314	1	439	4p22	Crystal Structure of N-terminal Fragments of E1	8	446	B	None	None
+P22314	49	1058	6dc6	Crystal structure of human ubiquitin activating enzyme E1 (Uba1) in complex with ubiquitin	6	1015	A	49	None
+P22314	49	1058	6dc6	Crystal structure of human ubiquitin activating enzyme E1 (Uba1) in complex with ubiquitin	6	1015	C	49	None
+

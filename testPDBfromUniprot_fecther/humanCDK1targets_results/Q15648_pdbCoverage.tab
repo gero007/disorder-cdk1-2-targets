@@ -1,0 +1,74 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q15648	13-meric peptide from Mediator of RNA polymerase II transcription subunit 1	MED1_HUMAN	Homo sapiens	PF10744	Med1	Mediator of RNA polymerase II transcription subunit 1	59	426
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#52 mappings in 52 PDB chains in 50 PDB entries
+Q15648	632	655	6d94	Crystal structure of PPAR gamma in complex with Mediator of RNA polymerase II transcription subunit 1	1	24	B	None	None
+Q15648	638	656	6onj	Crystal structure of PPARgamma ligand binding domain in complex with TRAP220 peptide and agonist rosiglitazone	1	19	C	638	None
+Q15648	640	652	6jez	Covalent labeling of rVDR-LBD by turn-on fluorescent probe mediated by conjugate addition and cyclization	1	13	C	625	None
+Q15648	640	652	3w5r	Crystal structure of complexes of vitamin D receptor ligand binding domain with lithocholic acid derivatives	1	13	C	625	None
+Q15648	640	652	3vru	VDR ligand binding domain in complex with 2-Methylidene-19,24-dinor-1alpha,25-dihydroxy vitaminD3	1	13	C	None	None
+Q15648	640	652	3vrt	VDR ligand binding domain in complex with 2-Mehylidene-19,25,26,27-tetranor-1alpha,24-dihydroxyvitaminD3	1	13	C	None	None
+Q15648	640	652	3vrw	VDR ligand binding domain in complex with 22S-Butyl-2-methylidene-26,27-dimethyl-19,24-dinor-1alpha,25-dihydroxyvitamin D3	1	13	C	None	None
+Q15648	640	652	3wtq	Crystal structure of VDR-LBD complexed with 22S-butyl-2-methylidene-19-nor-1a,25-dihydroxyvitamin D3	1	13	C	625	None
+Q15648	640	652	2zfx	Crystal structure of the rat vitamin D receptor ligand binding domain complexed with YR301 and a synthetic peptide containing the NR2 box of DRIP 205	1	13	C	None	None
+Q15648	640	652	5b5b	Crystal structure of VDR-LBD complexed with 2-methylidene-26,27-diphenyl-19-nor-1,25-dihydroxyvitamin D3	1	13	F	625	None
+Q15648	640	652	5b5b	Crystal structure of VDR-LBD complexed with 2-methylidene-26,27-diphenyl-19-nor-1,25-dihydroxyvitamin D3	1	13	C	625	None
+Q15648	640	652	3a2h	Crystal structure of the rat vitamin D receptor ligand binding domain complexed with TEI-9647 and a synthetic peptide containing the NR2 box of DRIP 205	1	13	B	None	None
+Q15648	640	652	3w5p	Crystal structure of complexes of vitamin D receptor ligand binding domain with lithocholic acid derivatives	1	13	C	625	None
+Q15648	640	652	4ynk	Crystal structure of vitamin D receptor ligand binding domain complexed with a 19-norvitamin D compound	1	13	C	None	None
+Q15648	640	652	3w0h	Crystal Structure of Rat VDR Ligand Binding Domain in Complex with Novel Nonsecosteroidal Ligands	1	13	C	None	None
+Q15648	640	652	1rkh	crystal structure of the rat vitamin D receptor ligand binding domain complexed with 2AM20R and a synthetic peptide containing the NR2 box of DRIP 205	1	13	C	625	None
+Q15648	640	652	5xuq	Crystal structure of VDR-LBD complexed with an antagonist, 2-methylidene-19,26,27-trinor-22-(S)-butyl-1-hydroxy-25-oxo-25-(1H-pyrrol-2-yl)- vitamin D3	1	13	C	None	None
+Q15648	640	652	5awj	Crystal structure of VDR-LBD/partial agonist complex: 22S-hexyl analogue	1	13	C	625	None
+Q15648	640	652	5awk	Crystal structure of VDR-LBD/partial agonist complex: 22S-ethyl analogue	1	13	C	625	None
+Q15648	640	652	1rkg	crystal structure of the rat vitamin D receptor ligand binding domain complexed with 2MbisP and a synthetic peptide containing the NR2 box of DRIP 205	1	13	C	None	None
+Q15648	640	652	5b41	Crystal structure of VDR-LBD complexed with 2-methylidene-19-nor-1a,25-dihydroxyvitamin D3	1	13	C	625	None
+Q15648	640	652	3aun	Crystal structure of the rat vitamin D receptor ligand binding domain complexed with YR335 and a synthetic peptide containing the NR2 box of DRIP 205	1	13	B	None	None
+Q15648	640	652	3w0j	Crystal Structure of Rat VDR Ligand Binding Domain in Complex with Novel Nonsecosteroidal Ligands	1	13	C	None	None
+Q15648	640	652	5xzh	Vitamin D receptor with a synthetic ligand ADRO2	1	13	C	None	None
+Q15648	640	652	3vjs	Vitamin D receptor complex with a carborane compound	1	13	C	None	None
+Q15648	640	652	3w0i	Crystal Structure of Rat VDR Ligand Binding Domain in Complex with Novel Nonsecosteroidal Ligands	1	13	C	625	None
+Q15648	640	652	3vjt	Vitamin D receptor complex with a carborane compound	1	13	C	None	None
+Q15648	640	652	3vrv	VDR ligand binding domain in complex with 2-Methylidene-26,27-dimethyl-19,24-dinor-1alpha,25-dihydroxyvitamin D3	1	13	C	None	None
+Q15648	640	652	3wt6	A mixed population of antagonist and agonist binding conformers in a single crystal explains partial agonism against vitamin D receptor: Active vitamin D analogues with 22R-alkyl group	1	13	C	625	None
+Q15648	640	652	3wt7	Crystal structure of VDR-LBD complexed with 22R-Butyl-2-methylidene-26,27-dimethyl-19,24-dinor-1 ,25-dihydroxyvitamin D3	1	13	C	625	None
+Q15648	640	652	3wt5	A mixed population of antagonist and agonist binding conformers in a single crystal explains partial agonism against vitamin D receptor: Active vitamin D analogues with 22R-alkyl group	1	13	C	625	None
+Q15648	640	652	3w0g	Crystal Structure of Rat VDR Ligand Binding Domain in Complex with Novel Nonsecosteroidal Ligands	1	13	C	625	None
+Q15648	640	652	5xzf	Vitamin D receptor with a synthetic ligand ADRO1	1	13	C	None	None
+Q15648	640	652	3w5t	Crystal structure of complexes of vitamin D receptor ligand binding domain with lithocholic acid derivatives	1	13	C	625	None
+Q15648	640	652	5zwh	Covalent bond formation between histidine of Vitamin D receptor (VDR) and a full agonist having an ene-ynone group via conjugate addition reaction	1	13	C	625	None
+Q15648	640	652	5xpn	Crystal structure of VDR-LBD complexed with 25RS-(hydroxyphenyl)-25-methoxy-2-methylidene-19,26,27-trinor-1-hydroxyvitamin D3	1	13	C	625	None
+Q15648	640	652	6k5o	Development of Novel Lithocholic Acid Derivatives as Vitamin D Receptor Agonists	1	13	C	None	None
+Q15648	640	652	5xpo	Crystal structure of VDR-LBD complexed with 25-(hydroxyphenyl)-2-methylidene-19,26,27-trinor-25-oxo-1-hydroxyvitamin D3	1	13	C	None	None
+Q15648	640	652	5zwi	Interaction between Vitamin D receptor (VDR) and a ligand having a dienone group	1	13	C	625	None
+Q15648	640	652	5xpm	Crystal structure of VDR-LBD complexed with 22S-Butyl-25RS-(hydroxyphenyl)-25-methoxy-2-methylidene-19,26,27-trinor-1-hydroxyvitamin D3	1	13	C	625	None
+Q15648	640	652	5zwe	Covalent bond formation between histidine of Vitamin D receptor (VDR) and a full agonist having a vinyl ketone group via conjugate addition reaction	1	13	C	625	None
+Q15648	640	652	5zwf	Covalent bond formation between histidine of Vitamin D receptor (VDR) and a full agonist having a enone with a beta methyl group via conjugate addition reaction	1	13	C	625	None
+Q15648	640	652	2o4r	Crystal Structure of Rat Vitamin D Receptor Ligand Binding Domain Complexed with VitIII 17-20E and the NR2 Box of DRIP 205	1	13	C	625	None
+Q15648	640	652	1rk3	crystal structure of the rat vitamin D receptor ligand binding domain complexed with 1,25-dihydroxyvitamin D3 and a synthetic peptide containing the NR2 box of DRIP 205	1	13	C	625	None
+Q15648	640	652	2o4j	Crystal Structure of Rat Vitamin D Receptor Ligand Binding Domain Complexed with VitIII 17-20Z and the NR2 Box of DRIP 205	1	13	C	625	None
+Q15648	640	652	1rjk	crystal structure of the rat vitamin D receptor ligand binding domain complexed with 2MD and a synthetic peptide containing the NR2 box of DRIP 205	1	13	C	625	None
+Q15648	640	652	3w5q	Crystal structure of complexes of vitamin D receptor ligand binding domain with lithocholic acid derivatives	1	13	C	625	None
+Q15648	640	652	5xpp	Crystal structure of VDR-LBD complexed with 25RS-(Hydroxyphenyl)-2-methylidene-19,26,27-trinor-1,25-dihydroxyvitamin D3	1	13	C	None	None
+Q15648	641	650	5gie	Crystal structure of VDR in complex with DLAM-4P (P21 form)	1	10	E	626	635
+Q15648	641	650	5gie	Crystal structure of VDR in complex with DLAM-4P (P21 form)	1	10	C	626	635
+Q15648	641	650	5gic	Crystal structure of VDR in complex with DLAM-2P	1	10	C	626	635
+Q15648	641	649	5gid	Crystal structure of VDR in complex with DLAM-4 (C2 form)	1	9	C	626	634
+

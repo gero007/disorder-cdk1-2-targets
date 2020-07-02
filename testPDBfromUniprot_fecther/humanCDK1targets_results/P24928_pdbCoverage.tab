@@ -1,0 +1,102 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF00623	RNA_pol_Rpb1_2	RNA polymerase Rpb1, domain 2	356	521
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF04983	RNA_pol_Rpb1_3	RNA polymerase Rpb1, domain 3	524	692
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF04990	RNA_pol_Rpb1_7	RNA polymerase Rpb1, domain 7	1164	1299
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF04992	RNA_pol_Rpb1_6	RNA polymerase Rpb1, domain 6	896	1079
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF04997	RNA_pol_Rpb1_1	RNA polymerase Rpb1, domain 1	15	354
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF04998	RNA_pol_Rpb1_5	RNA polymerase Rpb1, domain 5	830	1427
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05000	RNA_pol_Rpb1_4	RNA polymerase Rpb1, domain 4	716	823
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1948	1960
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1941	1954
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1931	1947
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1924	1936
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1917	1930
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1910	1923
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1904	1916
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1896	1909
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1889	1902
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1868	1881
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1861	1874
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1855	1867
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1847	1860
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1840	1853
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1833	1846
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1826	1839
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1805	1818
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1798	1811
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1791	1804
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1784	1797
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1778	1790
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1770	1783
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1763	1776
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1756	1769
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1749	1762
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1742	1755
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1735	1748
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1728	1741
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1721	1734
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1714	1727
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1707	1720
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1700	1713
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1693	1706
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1686	1699
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1679	1692
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1672	1685
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1665	1678
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1658	1671
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1651	1664
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1644	1657
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1630	1643
+P24928	DNA-directed RNA polymerase subunit	RPB1_HUMAN	Homo sapiens	PF05001	RNA_pol_Rpb1_R	RNA polymerase Rpb1 C-terminal repeat	1616	1629
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#32 mappings in 32 PDB chains in 24 PDB entries
+P24928	1	1970	6drd	RNA Pol II(G)	1	1970	A	None	None
+P24928	1	1970	5iyd	Human core-PIC in the initial transcribing state (no IIS)	1	1970	A	None	None
+P24928	1	1970	6o9l	Human holo-PIC in the closed state	1	1970	A	None	None
+P24928	1	1970	5iya	Human core-PIC in the closed state	1	1970	A	None	None
+P24928	1	1970	5iyc	Human core-PIC in the initial transcribing state	1	1970	A	None	None
+P24928	1	1970	5iyb	Human core-PIC in the open state	1	1970	A	None	None
+P24928	1	1970	5iy7	Human holo-PIC in the open state	1	1970	A	None	None
+P24928	1	1970	5iy6	Human holo-PIC in the closed state	1	1970	A	None	None
+P24928	1	1970	5iy9	Human holo-PIC in the initial transcribing state (no IIS)	1	1970	A	None	None
+P24928	1	1970	5iy8	Human holo-PIC in the initial transcribing state	1	1970	A	None	None
+P24928	772	782	6g0r	Crystal Structure of the first bromodomain of human BRD4 in complex with an acetylated POLR2A peptide (K775ac/K778ac)	1	11	C	None	None
+P24928	1713	1740	6f5p	A mechanism for the activation of the influenza virus transcriptase	1	28	G	None	None
+P24928	1713	1740	5m3j	Influenza B polymerase bound to four heptad repeats of serine 5 phosphorylated Pol II CTD	1	28	X	None	None
+P24928	1713	1740	5m3h	Bat influenza A/H17N10 polymerase bound to four heptad repeats of serine 5 phosphorylated Pol II CTD	1	28	X	1	None
+P24928	1713	1740	5m3h	Bat influenza A/H17N10 polymerase bound to four heptad repeats of serine 5 phosphorylated Pol II CTD	1	28	Y	None	None
+P24928	1786	1805	4jxt	CID of human RPRD1A in complex with a phosphorylated peptide from RPB1-CTD	1	20	B	None	None
+P24928	1790	1803	3d9k	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	1	14	Z	1	None
+P24928	1790	1803	3d9k	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	1	14	Y	None	None
+P24928	1790	1803	3d9n	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	1	14	Z	None	None
+P24928	1790	1803	3d9n	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	1	14	Y	None	None
+P24928	1790	1803	3d9p	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	1	14	Z	None	None
+P24928	1790	1803	3d9p	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	1	14	Y	None	None
+P24928	1790	1803	3d9l	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	2	15	Z	None	None
+P24928	1790	1803	3d9l	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	2	15	Y	1	None
+P24928	1790	1803	3d9m	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	1	14	Z	None	7
+P24928	1790	1803	3d9m	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	1	14	Y	None	None
+P24928	1790	1803	3d9o	Snapshots of the RNA processing factor SCAF8 bound to different phosphorylated forms of the Carboxy-Terminal Domain of RNA-Polymerase II	1	14	Z	None	7
+P24928	1795	1803	2ghq	CTD-specific phosphatase Scp1 in complex with peptide C-terminal domain of RNA polymerase II	1	9	D	168	176
+P24928	1795	1803	2ghq	CTD-specific phosphatase Scp1 in complex with peptide C-terminal domain of RNA polymerase II	1	9	C	None	None
+P24928	1796	1803	2ght	CTD-specific phosphatase Scp1 in complex with peptide from C-terminal domain of RNA polymerase II	1	8	D	169	176
+P24928	1796	1803	2ght	CTD-specific phosphatase Scp1 in complex with peptide from C-terminal domain of RNA polymerase II	1	8	C	None	None
+P24928	1804	1816	2lto	TDRD3 complex	1	13	B	611	623
+

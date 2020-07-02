@@ -1,0 +1,29 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9ULX3	RNA-binding protein NOB1	NOB1_HUMAN	Homo sapiens	PF08772	NOB1_Zn_bind	Nin one binding (NOB1) Zn-ribbon like	260	332
+Q9ULX3	RNA-binding protein NOB1	NOB1_HUMAN	Homo sapiens	PF15017	WRNPLPNID	Putative WW-binding domain and destruction box	152	212
+Q9ULX3	RNA-binding protein NOB1	NOB1_HUMAN	Homo sapiens	PF17146	PIN_6	PIN domain of ribonuclease	7	93
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 5 PDB entries
+Q9ULX3	1	412	6g51	Cryo-EM structure of a late human pre-40S ribosomal subunit - State D	1	412	y	None	412
+Q9ULX3	1	412	6g53	Cryo-EM structure of a late human pre-40S ribosomal subunit - State E	1	412	y	None	412
+Q9ULX3	1	412	6g5i	Cryo-EM structure of a late human pre-40S ribosomal subunit - State R	1	412	y	None	412
+Q9ULX3	1	412	6g4s	Cryo-EM structure of a late human pre-40S ribosomal subunit - State B	1	412	y	None	412
+Q9ULX3	1	412	6g18	Cryo-EM structure of a late human pre-40S ribosomal subunit - State C	1	412	y	None	412
+

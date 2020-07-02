@@ -1,0 +1,30 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q13415	Origin recognition complex subunit 1	ORC1_HUMAN	Homo sapiens	PF01426	BAH	BAH domain	45	169
+Q13415	Origin recognition complex subunit 1	ORC1_HUMAN	Homo sapiens	PF00004	AAA	ATPase family associated with various cellular activities (AAA)	530	675
+Q13415	Origin recognition complex subunit 1	ORC1_HUMAN	Homo sapiens	PF09079	Cdc6_C	CDC6, C terminal winged helix domain	778	857
+Q13415	Origin recognition complex subunit 1	ORC1_HUMAN	Homo sapiens	PF17872	AAA_lid_10	AAA lid domain	669	738
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 3 PDB entries
+Q13415	233	239	6p3w	Crystal structure of the Cyclin A-CDK2-ORC1 complex	1	7	E	233	239
+Q13415	233	239	6p3w	Crystal structure of the Cyclin A-CDK2-ORC1 complex	1	7	F	None	239
+Q13415	471	861	5uj7	Structure of the active form of human Origin Recognition Complex ATPase motor module, complex subunitS 1, 4, 5	1	391	A	None	861
+Q13415	471	861	5uj7	Structure of the active form of human Origin Recognition Complex ATPase motor module, complex subunitS 1, 4, 5	1	391	B	None	861
+Q13415	471	861	5ujm	Structure of the active form of human Origin Recognition Complex and its ATPase motor module	132	522	A	None	861
+

@@ -1,0 +1,29 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9NS91	E3 ubiquitin-protein ligase RAD18	RAD18_HUMAN	Homo sapiens	PF02037	SAP	SAP domain	248	282
+Q9NS91	E3 ubiquitin-protein ligase RAD18	RAD18_HUMAN	Homo sapiens	PF13923	zf-C3HC4_2	Zinc finger, C3HC4 type (RING finger)	24	63
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#6 mappings in 6 PDB chains in 5 PDB entries
+Q9NS91	1	99	2y43	Rad18 ubiquitin ligase RING domain structure	1	99	A	None	None
+Q9NS91	1	99	2y43	Rad18 ubiquitin ligase RING domain structure	1	99	B	None	None
+Q9NS91	198	240	5vf0	Solution NMR structure of human RAD18 (198-240) in complex with ubiquitin	4	46	B	198	240
+Q9NS91	198	227	2mre	NMR structure of the Rad18-UBZ/ubiquitin complex	4	33	B	198	227
+Q9NS91	198	227	2mrf	NMR structure of the ubiquitin-binding zinc finger (UBZ) domain from human Rad18	4	33	A	198	227
+Q9NS91	340	366	2ybf	Complex of Rad18 (Rad6 binding domain) with Rad6b	1	27	B	None	None
+

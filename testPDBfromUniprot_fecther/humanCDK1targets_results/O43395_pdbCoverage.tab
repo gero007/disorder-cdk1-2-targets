@@ -1,0 +1,31 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O43395	U4/U6 small nuclear ribonucleoprotein Prp3	PRPF3_HUMAN	Homo sapiens	PF01480	PWI	PWI domain	9	78
+O43395	U4/U6 small nuclear ribonucleoprotein Prp3	PRPF3_HUMAN	Homo sapiens	PF06544	DUF1115	Protein of unknown function (DUF1115)	544	673
+O43395	U4/U6 small nuclear ribonucleoprotein Prp3	PRPF3_HUMAN	Homo sapiens	PF08572	PRP3	pre-mRNA processing factor 3 (PRP3)	308	521
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#7 mappings in 7 PDB chains in 7 PDB entries
+O43395	1	683	6ahd	The Cryo-EM Structure of Human Pre-catalytic Spliceosome (B complex) at 3.8 angstrom resolution	1	683	J	None	None
+O43395	1	683	5o9z	Cryo-EM structure of a pre-catalytic human spliceosome primed for activation (B complex)	1	683	E	None	None
+O43395	1	683	6qw6	Structure of the human U5.U4/U6 tri-snRNP at 2.9A resolution.	1	683	4A	None	683
+O43395	1	683	6ah0	The Cryo-EM Structure of the Precusor of Human Pre-catalytic Spliceosome (pre-B complex)	1	683	J	None	None
+O43395	1	683	3jcr	3D structure determination of the human*U4/U6.U5* tri-snRNP complex	1	683	K	None	None
+O43395	1	683	6qx9	Structure of a human fully-assembled precatalytic spliceosome (pre-B complex).	1	683	4A	None	683
+O43395	1	79	1x4q	Solution structure of PWI domain in U4/U6 small nuclear ribonucleoprotein Prp3(hPrp3)	8	86	A	8	86
+

@@ -1,0 +1,59 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P42677	RIBOSOMAL PROTEIN ES27	RS27_HUMAN	Homo sapiens	PF01667	Ribosomal_S27e	Ribosomal protein S27	28	82
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#37 mappings in 37 PDB chains in 32 PDB entries
+P42677	1	84	6y0g	Structure of human ribosome in classical-PRE state	1	84	Sb	None	84
+P42677	1	84	6ip6	Cryo-EM structure of the CMV-stalled human 80S ribosome with HCV IRES (Structure iii)	1	84	3P	None	84
+P42677	1	84	6g4w	Cryo-EM structure of a late human pre-40S ribosomal subunit - State A	1	84	b	None	None
+P42677	1	84	6g18	Cryo-EM structure of a late human pre-40S ribosomal subunit - State C	1	84	b	None	None
+P42677	1	84	6y2l	Structure of human ribosome in POST state	1	84	Sb	None	84
+P42677	1	84	6ip5	Cryo-EM structure of the CMV-stalled human 80S ribosome (Structure ii)	1	84	3P	None	84
+P42677	1	84	6ip8	Cryo-EM structure of the HCV IRES dependently initiated CMV-stalled 80S ribosome (Structure iv)	1	84	3P	None	84
+P42677	1	84	6g5i	Cryo-EM structure of a late human pre-40S ribosomal subunit - State R	1	84	b	None	None
+P42677	1	84	6g53	Cryo-EM structure of a late human pre-40S ribosomal subunit - State E	1	84	b	None	None
+P42677	1	84	6g51	Cryo-EM structure of a late human pre-40S ribosomal subunit - State D	1	84	b	None	None
+P42677	1	84	6y57	Structure of human ribosome in hybrid-PRE state	1	84	Sb	None	84
+P42677	1	84	5vyc	Crystal structure of the human 40S ribosomal subunit in complex with DENR-MCT-1.	1	84	b3	None	84
+P42677	1	84	5vyc	Crystal structure of the human 40S ribosomal subunit in complex with DENR-MCT-1.	1	84	b5	None	84
+P42677	1	84	5vyc	Crystal structure of the human 40S ribosomal subunit in complex with DENR-MCT-1.	1	84	b1	None	84
+P42677	1	84	5vyc	Crystal structure of the human 40S ribosomal subunit in complex with DENR-MCT-1.	1	84	b6	None	84
+P42677	1	84	5vyc	Crystal structure of the human 40S ribosomal subunit in complex with DENR-MCT-1.	1	84	b2	None	84
+P42677	1	84	5vyc	Crystal structure of the human 40S ribosomal subunit in complex with DENR-MCT-1.	1	84	b4	None	84
+P42677	1	84	6g4s	Cryo-EM structure of a late human pre-40S ribosomal subunit - State B	1	84	b	None	None
+P42677	1	84	5flx	Mammalian 40S HCV-IRES complex	1	84	b	None	None
+P42677	1	84	6g5h	Cryo-EM structure of a late human pre-40S ribosomal subunit - Mature	1	84	b	None	None
+P42677	1	84	5aj0	Cryo electron microscopy of actively translating human polysomes (POST state).	1	84	Bb	None	None
+P42677	1	84	6ek0	High-resolution cryo-EM structure of the human 80S ribosome	1	84	Sb	None	84
+P42677	1	84	6fec	Human cap-dependent 48S pre-initiation complex	1	84	Y	1	84
+P42677	1	84	4ug0	STRUCTURE OF THE HUMAN 80S RIBOSOME	1	84	Sb	None	84
+P42677	1	84	5lks	Structure-function insights reveal the human ribosome as a cancer target for antibiotics	1	84	Sb	None	84
+P42677	1	84	4v6x	Structure of the human 80S ribosome	1	84	Ab	1	84
+P42677	1	84	5t2c	CryoEM structure of the human ribosome at 3.6 Angstrom resolution	1	84	AV	None	84
+P42677	2	84	6qzp	High-resolution cryo-EM structure of the human 80S ribosome	1	83	Sb	2	84
+P42677	2	83	6olf	Human ribosome nascent chain complex (CDH1-RNC) stalled by a drug-like molecule with AA and PE tRNAs	1	82	Sb	2	83
+P42677	2	83	5a2q	Structure of the HCV IRES bound to the human ribosome	1	82	b	2	83
+P42677	2	83	6oli	Structure of human ribosome nascent chain complex selectively stalled by a drug-like small molecule (USO1-RNC)	1	82	Sb	2	83
+P42677	2	83	6om0	Human ribosome nascent chain complex (PCSK9-RNC) stalled by a drug-like molecule with AP and PE tRNAs	1	82	Sb	2	83
+P42677	2	83	6om7	Human ribosome nascent chain complex (PCSK9-RNC) stalled by a drug-like small molecule with AA and PE tRNAs	1	82	Sb	2	83
+P42677	2	83	6ole	Human ribosome nascent chain complex (CDH1-RNC) stalled by a drug-like molecule with AP and PE tRNAs	1	82	Sb	2	83
+P42677	2	83	5oa3	Human 40S-eIF2D-re-initiation complex	1	82	b	2	83
+P42677	4	83	6olz	Human ribosome nascent chain complex (PCSK9-RNC) stalled by a drug-like molecule with PP tRNA	1	80	Bb	4	83
+P42677	4	83	6olg	Human ribosome nascent chain complex stalled by a drug-like small molecule (CDH1_RNC with PP tRNA)	1	80	Bb	4	83
+
