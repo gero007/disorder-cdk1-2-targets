@@ -1,0 +1,34 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9Y2K7	Lysine-specific demethylase 2A	KDM2A_HUMAN	Homo sapiens	PF00646	F-box	F-box domain	889	935
+Q9Y2K7	Lysine-specific demethylase 2A	KDM2A_HUMAN	Homo sapiens	PF02008	zf-CXXC	CXXC zinc finger domain	563	609
+Q9Y2K7	Lysine-specific demethylase 2A	KDM2A_HUMAN	Homo sapiens	PF16866	PHD_4	PHD-finger	614	676
+Q9Y2K7	Lysine-specific demethylase 2A	KDM2A_HUMAN	Homo sapiens	PF17811	JHD	Jumonji helical domain	303	360
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#9 mappings in 9 PDB chains in 5 PDB entries
+Q9Y2K7	1	517	2yu1	Crystal structure of hJHDM1A complexed with a-ketoglutarate	1	451	A	None	517
+Q9Y2K7	1	517	2yu2	Crystal structure of hJHDM1A without a-ketoglutarate	1	451	A	None	517
+Q9Y2K7	567	681	4bbq	Crystal structure of the CXXC and PHD domain of Human Lysine-specific Demethylase 2A (KDM2A)(FBXL11)	3	117	A	567	None
+Q9Y2K7	567	681	4bbq	Crystal structure of the CXXC and PHD domain of Human Lysine-specific Demethylase 2A (KDM2A)(FBXL11)	3	117	B	567	None
+Q9Y2K7	888	932	6c16	Ubiquitin variant (UbV.Fbl10.1) bound to a human Skp1-Fbl11 fragment complex.	3	47	F	None	None
+Q9Y2K7	888	932	6c16	Ubiquitin variant (UbV.Fbl10.1) bound to a human Skp1-Fbl11 fragment complex.	3	47	C	None	None
+Q9Y2K7	888	932	6byh	Ubiquitin Variant (UbV.Fl11.1) bound to a human Skp1-Fbl11 fragment complex.	3	47	E	888	None
+Q9Y2K7	888	932	6byh	Ubiquitin Variant (UbV.Fl11.1) bound to a human Skp1-Fbl11 fragment complex.	3	47	I	None	None
+Q9Y2K7	888	932	6byh	Ubiquitin Variant (UbV.Fl11.1) bound to a human Skp1-Fbl11 fragment complex.	3	47	F	888	None
+

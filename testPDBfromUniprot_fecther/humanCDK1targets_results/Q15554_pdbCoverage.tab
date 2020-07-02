@@ -1,0 +1,57 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q15554	Telomeric repeat-binding factor 2	TERF2_HUMAN	Homo sapiens	PF00249	Myb_DNA-binding	Myb-like DNA-binding domain	489	537
+Q15554	Telomeric repeat-binding factor 2	TERF2_HUMAN	Homo sapiens	PF08558	TRF	Telomere repeat binding factor (TRF)	94	293
+Q15554	Telomeric repeat-binding factor 2	TERF2_HUMAN	Homo sapiens	PF16772	TERF2_RBM	Telomeric repeat-binding factor 2 Rap1-binding motif	318	358
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#33 mappings in 33 PDB chains in 14 PDB entries
+Q15554	84	318	3bu8	Crystal Structure of TRF2 TRFH domain and TIN2 peptide complex	1	235	A	None	None
+Q15554	84	318	3bu8	Crystal Structure of TRF2 TRFH domain and TIN2 peptide complex	1	235	B	None	None
+Q15554	84	287	3bua	Crystal Structure of TRF2 TRFH domain and APOLLO peptide complex	1	204	D	None	245
+Q15554	84	287	3bua	Crystal Structure of TRF2 TRFH domain and APOLLO peptide complex	1	204	C	None	245
+Q15554	84	287	3bua	Crystal Structure of TRF2 TRFH domain and APOLLO peptide complex	1	204	B	None	245
+Q15554	84	287	3bua	Crystal Structure of TRF2 TRFH domain and APOLLO peptide complex	1	204	A	None	245
+Q15554	84	287	6j67	Crystal structure of the compound 34 in a complex with TRF2	1	204	A	None	245
+Q15554	84	287	5wqd	Crystal structure of TRF2 TRFH in complex with an NBS1 peptide	1	204	D	None	245
+Q15554	84	287	5wqd	Crystal structure of TRF2 TRFH in complex with an NBS1 peptide	1	204	A	None	245
+Q15554	84	287	5wqd	Crystal structure of TRF2 TRFH in complex with an NBS1 peptide	1	204	F	None	None
+Q15554	84	287	5wqd	Crystal structure of TRF2 TRFH in complex with an NBS1 peptide	1	204	E	None	None
+Q15554	84	287	5wqd	Crystal structure of TRF2 TRFH in complex with an NBS1 peptide	1	204	B	None	None
+Q15554	84	287	5wqd	Crystal structure of TRF2 TRFH in complex with an NBS1 peptide	1	204	C	42	245
+Q15554	84	287	5wqd	Crystal structure of TRF2 TRFH in complex with an NBS1 peptide	1	204	G	None	None
+Q15554	85	287	1h6p	Dimeristion domain from human TRF2	1	203	A	43	245
+Q15554	85	287	1h6p	Dimeristion domain from human TRF2	1	203	B	None	None
+Q15554	85	287	4rqi	Structure of TRF2/RAP1 secondary interaction binding site	1	203	A	43	245
+Q15554	85	287	4rqi	Structure of TRF2/RAP1 secondary interaction binding site	1	203	D	43	245
+Q15554	85	287	4rqi	Structure of TRF2/RAP1 secondary interaction binding site	1	203	B	None	245
+Q15554	85	287	4rqi	Structure of TRF2/RAP1 secondary interaction binding site	1	203	C	None	245
+Q15554	87	286	4m7c	Crystal structure of the TRF2-binding motif of SLX4 in complex with the TRFH domain of TRF2	1	200	A	None	244
+Q15554	87	286	4m7c	Crystal structure of the TRF2-binding motif of SLX4 in complex with the TRFH domain of TRF2	1	200	B	45	244
+Q15554	317	358	3k6g	Crystal structure of Rap1 and TRF2 complex	1	42	E	None	316
+Q15554	317	358	3k6g	Crystal structure of Rap1 and TRF2 complex	1	42	F	None	None
+Q15554	317	358	3k6g	Crystal structure of Rap1 and TRF2 complex	1	42	D	None	None
+Q15554	392	408	5xyf	Crystal structure of the human TIN2-TPP1-TRF2 telomeric complex	2	18	C	None	366
+Q15554	480	542	1xg1	Solution structure of Myb-domain of human TRF2	5	67	A	5	67
+Q15554	480	542	1vfc	Solution Structure Of The DNA Complex Of Human Trf2	1	63	A	438	500
+Q15554	480	542	1vf9	Solution Structure Of Human Trf2	2	64	A	438	500
+Q15554	483	542	3sjm	Crystal Structure Analysis of TRF2-Dbd-DNA complex	5	64	B	None	500
+Q15554	483	542	3sjm	Crystal Structure Analysis of TRF2-Dbd-DNA complex	5	64	A	None	500
+Q15554	488	542	1w0u	hTRF2 DNA-binding domain in complex with telomeric DNA.	1	55	A	446	500
+Q15554	488	542	1w0u	hTRF2 DNA-binding domain in complex with telomeric DNA.	1	55	B	446	500
+

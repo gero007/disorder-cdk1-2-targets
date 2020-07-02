@@ -1,0 +1,466 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P04637	Cellular tumor antigen p53,CREB-binding protein fusion protein	P53_HUMAN	Homo sapiens	PF00870	P53	P53 DNA-binding domain	99	289
+P04637	Cellular tumor antigen p53,CREB-binding protein fusion protein	P53_HUMAN	Homo sapiens	PF07710	P53_tetramer	P53 tetramerisation motif	319	358
+P04637	Cellular tumor antigen p53,CREB-binding protein fusion protein	P53_HUMAN	Homo sapiens	PF08563	P53_TAD	P53 transactivation motif	6	30
+P04637	Cellular tumor antigen p53,CREB-binding protein fusion protein	P53_HUMAN	Homo sapiens	PF18521	TAD2	Transactivation domain 2	35	59
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#441 mappings in 440 PDB chains in 214 PDB entries
+P04637	1	93	2ly4	HMGB1-facilitated p53 DNA binding occurs via HMG-box/p53 transactivation domain interaction and is regulated by the acidic tail	1	93	B	None	None
+P04637	1	61	5hou	Solution Structure of p53TAD-TAZ1	4	64	A	1001	1061
+P04637	69	69	5hou	Solution Structure of p53TAD-TAZ1	72	72	A	3340	3340
+P04637	1	39	2k8f	Structural Basis for the Regulation of p53 Function by p300	1	39	B	1	39
+P04637	2	61	5hpd	Solution Structure of TAZ2-p53TAD	99	158	A	3002	3061
+P04637	13	61	2l14	Structure of CBP nuclear coactivator binding domain in complex with p53 TAD	1	49	B	13	61
+P04637	13	29	1ycq	XENOPUS LAEVIS MDM2 BOUND TO THE TRANSACTIVATION DOMAIN OF HUMAN P53	1	17	B	None	None
+P04637	15	29	2z5s	Molecular basis for the inhibition of p53 by Mdmx	1	15	P	None	None
+P04637	15	29	2z5s	Molecular basis for the inhibition of p53 by Mdmx	1	15	R	None	None
+P04637	15	29	2z5s	Molecular basis for the inhibition of p53 by Mdmx	1	15	Q	None	None
+P04637	15	29	1ycr	MDM2 BOUND TO THE TRANSACTIVATION DOMAIN OF P53	1	15	B	None	29
+P04637	15	29	4hfz	Crystal Structure of an MDM2/P53 Peptide Complex	1	15	D	None	None
+P04637	15	29	4hfz	Crystal Structure of an MDM2/P53 Peptide Complex	1	15	B	None	None
+P04637	15	29	2mwy	Mdmx-p53	1	15	B	115	129
+P04637	15	29	3dab	Structure of the human Mdmx protein bound to the p53 tumor suppressor transactivation domain	1	15	H	None	None
+P04637	15	29	3dab	Structure of the human Mdmx protein bound to the p53 tumor suppressor transactivation domain	1	15	F	None	None
+P04637	15	29	3dab	Structure of the human Mdmx protein bound to the p53 tumor suppressor transactivation domain	1	15	D	None	None
+P04637	15	29	3dab	Structure of the human Mdmx protein bound to the p53 tumor suppressor transactivation domain	1	15	B	None	None
+P04637	15	29	2z5t	Molecular basis for the inhibition of p53 by Mdmx	1	15	R	None	None
+P04637	15	29	2z5t	Molecular basis for the inhibition of p53 by Mdmx	1	15	P	None	None
+P04637	15	29	2z5t	Molecular basis for the inhibition of p53 by Mdmx	1	15	Q	None	None
+P04637	17	37	3dac	Structure of the human Mdmx protein bound to the p53 tumor suppressor transactivation domain	1	21	B	17	None
+P04637	17	37	3dac	Structure of the human Mdmx protein bound to the p53 tumor suppressor transactivation domain	1	21	P	17	None
+P04637	17	56	6t58	Structure determination of the transactivation domain of p53 in complex with S100A4 using annexin A2 as a crystallization chaperone	5	44	A	17	None
+P04637	17	56	6t58	Structure determination of the transactivation domain of p53 in complex with S100A4 using annexin A2 as a crystallization chaperone	5	44	B	None	None
+P04637	20	73	2gs0	NMR structure of the complex between the PH domain of the Tfb1 subunit from TFIIH and the activation domain of p53	1	54	B	None	None
+P04637	33	60	2b3g	p53N (fragment 33-60) bound to RPA70N	1	28	B	33	None
+P04637	35	59	2mzd	Characterization of the p300 Taz2-p53 TAD2 Complex and Comparison with the p300 Taz2-p53 TAD1 Complex	1	25	B	1	25
+P04637	37	61	5hp0	Solution Structure of TAZ2-p53AD2	98	122	A	3037	3061
+P04637	41	62	2ruk	Solution structure of the complex between p53 transactivation domain 2 and TFIIH p62 PH domain	1	22	A	41	62
+P04637	62	292	6rz3	Crystal structure of a complex between the DNA-binding domain of p53 and the carboxyl-terminal conserved region of iASPP	2	232	A	None	None
+P04637	89	293	2xwr	Crystal structure of the DNA-binding domain of human p53 with extended N terminus	1	205	A	None	None
+P04637	89	293	2xwr	Crystal structure of the DNA-binding domain of human p53 with extended N terminus	1	205	B	None	None
+P04637	89	311	6sl6	p53 charged core	24	246	A	89	None
+P04637	92	291	3kmd	Crystal structure of the p53 core domain bound to a full consensus site as a self-assembled tetramer	1	200	A	92	291
+P04637	92	291	3kmd	Crystal structure of the p53 core domain bound to a full consensus site as a self-assembled tetramer	1	200	C	92	291
+P04637	92	291	3kmd	Crystal structure of the p53 core domain bound to a full consensus site as a self-assembled tetramer	1	200	B	92	291
+P04637	92	291	3kmd	Crystal structure of the p53 core domain bound to a full consensus site as a self-assembled tetramer	1	200	D	92	291
+P04637	92	312	4qo1	p53 DNA binding domain in complex with Nb139	1	221	B	92	None
+P04637	92	356	5xzc	Cryo-EM structure of p300-p53 protein complex	1	265	E	92	356
+P04637	92	356	5xzc	Cryo-EM structure of p300-p53 protein complex	1	265	D	92	356
+P04637	92	356	5xzc	Cryo-EM structure of p300-p53 protein complex	1	265	C	92	356
+P04637	92	356	5xzc	Cryo-EM structure of p300-p53 protein complex	1	265	B	92	356
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	V	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	O	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	S	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	N	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	Q	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	T	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	U	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	X	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	W	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	R	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	M	92	None
+P04637	92	292	2h1l	The Structure of the Oncoprotein SV40 Large T Antigen and p53 Tumor Suppressor Complex	3	203	P	92	None
+P04637	92	291	4hje	Crystal structure of p53 core domain in complex with DNA	1	200	A	92	291
+P04637	92	291	4hje	Crystal structure of p53 core domain in complex with DNA	1	200	C	92	291
+P04637	92	291	4hje	Crystal structure of p53 core domain in complex with DNA	1	200	B	92	291
+P04637	92	291	4hje	Crystal structure of p53 core domain in complex with DNA	1	200	D	92	291
+P04637	93	292	4mzi	Crystal structure of a human mutant p53	1	200	A	None	None
+P04637	93	358	4mzr	Crystal structure of a polypeptide p53 mutant bound to DNA	1	237	A	None	None
+P04637	93	358	4mzr	Crystal structure of a polypeptide p53 mutant bound to DNA	1	237	D	None	None
+P04637	93	358	4mzr	Crystal structure of a polypeptide p53 mutant bound to DNA	1	237	B	None	None
+P04637	93	358	4mzr	Crystal structure of a polypeptide p53 mutant bound to DNA	1	237	C	None	None
+P04637	94	312	4lof	Human p53 Core Domain Mutant V157F/N235K/N239Y	1	219	A	94	None
+P04637	94	312	5g4m	Crystal structure of the p53 cancer mutant Y220C in complex with a monofluorinated derivative of the small molecule stabilizer Phikan083	1	219	A	None	None
+P04637	94	312	5g4m	Crystal structure of the p53 cancer mutant Y220C in complex with a monofluorinated derivative of the small molecule stabilizer Phikan083	1	219	B	94	None
+P04637	94	312	5g4n	Crystal structure of the p53 cancer mutant Y220C in complex with a difluorinated derivative of the small molecule stabilizer Phikan083	1	219	A	None	None
+P04637	94	312	5g4n	Crystal structure of the p53 cancer mutant Y220C in complex with a difluorinated derivative of the small molecule stabilizer Phikan083	1	219	B	94	None
+P04637	94	312	5g4o	Crystal structure of the p53 cancer mutant Y220C in complex with a trifluorinated derivative of the small molecule stabilizer Phikan083	1	219	A	None	None
+P04637	94	312	5g4o	Crystal structure of the p53 cancer mutant Y220C in complex with a trifluorinated derivative of the small molecule stabilizer Phikan083	1	219	B	94	None
+P04637	94	312	4lo9	Human p53 Core Domain Mutant N235K	1	219	A	None	None
+P04637	94	312	4lo9	Human p53 Core Domain Mutant N235K	1	219	D	None	None
+P04637	94	312	4lo9	Human p53 Core Domain Mutant N235K	1	219	B	None	None
+P04637	94	312	4lo9	Human p53 Core Domain Mutant N235K	1	219	C	None	None
+P04637	94	312	5aom	Structure of the p53 cancer mutant Y220C with bound small molecule PhiKan883	1	219	A	None	None
+P04637	94	312	5aom	Structure of the p53 cancer mutant Y220C with bound small molecule PhiKan883	1	219	B	None	None
+P04637	94	312	1tsr	P53 CORE DOMAIN IN COMPLEX WITH DNA	1	219	B	None	None
+P04637	94	312	1tsr	P53 CORE DOMAIN IN COMPLEX WITH DNA	1	219	A	94	None
+P04637	94	312	1tsr	P53 CORE DOMAIN IN COMPLEX WITH DNA	1	219	C	None	None
+P04637	94	312	2bio	human p53 core domain mutant M133L-V203A-N239Y-R249S-N268D	1	219	A	None	None
+P04637	94	312	5a7b	Structure of the p53 cancer Y220C bound to the stabilizing small molecule PhiKan5211	1	219	A	None	None
+P04637	94	312	5a7b	Structure of the p53 cancer Y220C bound to the stabilizing small molecule PhiKan5211	1	219	B	94	None
+P04637	94	312	5o1g	p53 cancer mutant Y220C in complex with compound MB487	1	219	A	None	None
+P04637	94	312	5o1g	p53 cancer mutant Y220C in complex with compound MB487	1	219	B	None	None
+P04637	94	312	2x0v	STRUCTURE OF THE P53 CORE DOMAIN MUTANT Y220C BOUND TO 4-(trifluoromethyl)benzene-1,2-diamine	1	219	A	None	None
+P04637	94	312	2x0v	STRUCTURE OF THE P53 CORE DOMAIN MUTANT Y220C BOUND TO 4-(trifluoromethyl)benzene-1,2-diamine	1	219	B	None	None
+P04637	94	312	2x0w	STRUCTURE OF THE P53 CORE DOMAIN MUTANT Y220C BOUND TO 5,6-dimethoxy- 2-methylbenzothiazole	1	219	A	None	None
+P04637	94	312	2x0w	STRUCTURE OF THE P53 CORE DOMAIN MUTANT Y220C BOUND TO 5,6-dimethoxy- 2-methylbenzothiazole	1	219	B	None	None
+P04637	94	312	2x0u	STRUCTURE OF THE P53 CORE DOMAIN MUTANT Y220C BOUND TO A 2-amino substituted benzothiazole scaffold	1	219	A	None	None
+P04637	94	312	2x0u	STRUCTURE OF THE P53 CORE DOMAIN MUTANT Y220C BOUND TO A 2-amino substituted benzothiazole scaffold	1	219	B	None	None
+P04637	94	312	5lap	p53 cancer mutant Y220C with Cys182 alkylation	1	219	A	None	None
+P04637	94	312	5lap	p53 cancer mutant Y220C with Cys182 alkylation	1	219	B	None	None
+P04637	94	312	3zme	Structure of the p53 core domain mutant Y220C bound to the small molecule PhiKan7242	1	219	A	None	None
+P04637	94	312	3zme	Structure of the p53 core domain mutant Y220C bound to the small molecule PhiKan7242	1	219	B	None	None
+P04637	94	312	5ab9	Structure of the p53 cancer mutant Y220C with bound small molecule 7- ethyl-3-(piperidin-4-yl)-1H-indole	1	219	A	None	None
+P04637	94	312	5ab9	Structure of the p53 cancer mutant Y220C with bound small molecule 7- ethyl-3-(piperidin-4-yl)-1H-indole	1	219	B	None	None
+P04637	94	312	2ocj	Human p53 core domain in the absence of DNA	1	219	A	None	None
+P04637	94	312	2ocj	Human p53 core domain in the absence of DNA	1	219	D	None	None
+P04637	94	312	2ocj	Human p53 core domain in the absence of DNA	1	219	B	None	None
+P04637	94	312	2ocj	Human p53 core domain in the absence of DNA	1	219	C	None	None
+P04637	94	312	2vuk	Structure of the p53 core domain mutant Y220C bound to the stabilizing small-molecule drug PhiKan083	1	219	A	None	None
+P04637	94	312	2vuk	Structure of the p53 core domain mutant Y220C bound to the stabilizing small-molecule drug PhiKan083	1	219	B	None	None
+P04637	94	312	5o1f	p53 cancer mutant Y220C in complex with compound MB582	1	219	A	None	None
+P04637	94	312	5o1f	p53 cancer mutant Y220C in complex with compound MB582	1	219	B	None	None
+P04637	94	312	5o1e	p53 cancer mutant Y220C im complex with compound MB577	1	219	A	None	None
+P04637	94	312	5o1e	p53 cancer mutant Y220C im complex with compound MB577	1	219	B	94	None
+P04637	94	312	5aba	Structure of the p53 cancer mutant Y220C with bound small-molecule stabilizer PhiKan5149	1	219	A	None	None
+P04637	94	312	5aba	Structure of the p53 cancer mutant Y220C with bound small-molecule stabilizer PhiKan5149	1	219	B	94	None
+P04637	94	312	5o1d	p53 cancer mutant Y220C in complex with compound MB481	1	219	A	None	None
+P04637	94	312	5o1d	p53 cancer mutant Y220C in complex with compound MB481	1	219	B	None	None
+P04637	94	312	1uol	Crystal structure of the human p53 core domain mutant M133L/V203A/N239Y/N268D at 1.9 A resolution.	1	219	A	None	None
+P04637	94	312	1uol	Crystal structure of the human p53 core domain mutant M133L/V203A/N239Y/N268D at 1.9 A resolution.	1	219	B	None	None
+P04637	94	312	4agp	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan5176	1	219	A	None	None
+P04637	94	312	4agp	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan5176	1	219	B	94	None
+P04637	94	312	4agq	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan5196	1	219	A	None	None
+P04637	94	312	4agq	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan5196	1	219	B	94	None
+P04637	94	312	4agl	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan784	1	219	A	None	None
+P04637	94	312	4agl	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan784	1	219	B	94	None
+P04637	94	312	4agm	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan5086	1	219	A	None	None
+P04637	94	312	4agm	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan5086	1	219	B	94	None
+P04637	94	312	4agn	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan5116	1	219	A	None	None
+P04637	94	312	4agn	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan5116	1	219	B	94	None
+P04637	94	312	4ago	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan5174	1	219	A	None	None
+P04637	94	312	4ago	Structure of the p53 core domain mutant Y220C bound to the stabilizing small molecule PhiKan5174	1	219	B	94	None
+P04637	94	312	2biq	human p53 core domain mutant T123A-M133L-H168R-V203A-N239Y-R249S- N268D	1	219	A	None	None
+P04637	94	312	2bip	human p53 core domain mutant M133L-H168R-V203A-N239Y-R249S-N268D	1	219	A	None	None
+P04637	94	312	1tup	TUMOR SUPPRESSOR P53 COMPLEXED WITH DNA	1	219	B	None	None
+P04637	94	312	1tup	TUMOR SUPPRESSOR P53 COMPLEXED WITH DNA	1	219	A	94	None
+P04637	94	312	1tup	TUMOR SUPPRESSOR P53 COMPLEXED WITH DNA	1	219	C	None	None
+P04637	94	312	2bin	human p53 core domain mutant M133L-H168R-V203A-N239Y-N268D	1	219	A	None	None
+P04637	94	312	2bim	human p53 core domain mutant M133L-V203A-N239Y-N268D-R273H	1	219	A	None	None
+P04637	94	312	2bim	human p53 core domain mutant M133L-V203A-N239Y-N268D-R273H	1	219	B	None	None
+P04637	94	312	6si2	p53 cancer mutant Y220S	1	219	A	None	None
+P04637	94	312	6si2	p53 cancer mutant Y220S	1	219	B	94	None
+P04637	94	312	6si3	p53 cancer mutant Y220S in complex with small-molecule stabilizer PK9301	1	219	A	None	None
+P04637	94	312	6si3	p53 cancer mutant Y220S in complex with small-molecule stabilizer PK9301	1	219	B	94	None
+P04637	94	312	6si0	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9323	1	219	A	None	None
+P04637	94	312	6si0	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9323	1	219	B	94	None
+P04637	94	312	6si1	p53 cancer mutant Y220H	1	219	A	None	None
+P04637	94	312	6si1	p53 cancer mutant Y220H	1	219	B	94	None
+P04637	94	312	6si4	p53 cancer mutant Y220S in complex with small-molecule stabilizer PK9323	1	219	A	None	None
+P04637	94	312	6si4	p53 cancer mutant Y220S in complex with small-molecule stabilizer PK9323	1	219	B	94	None
+P04637	94	312	5o1b	p53 cancer mutant Y220C in complex with compound MB84	1	219	A	None	None
+P04637	94	312	5o1b	p53 cancer mutant Y220C in complex with compound MB84	1	219	B	94	None
+P04637	94	312	5o1a	p53 cancer mutant Y220C in complex with compound MB240	1	219	A	None	None
+P04637	94	312	5o1a	p53 cancer mutant Y220C in complex with compound MB240	1	219	B	None	None
+P04637	94	311	6shz	p53 cancer mutant Y220C	1	218	A	None	None
+P04637	94	311	6shz	p53 cancer mutant Y220C	1	218	B	94	None
+P04637	94	356	3q01	An induced fit mechanism regulates p53 DNA binding kinetics to confer sequence specificity	1	233	B	94	356
+P04637	94	356	3q01	An induced fit mechanism regulates p53 DNA binding kinetics to confer sequence specificity	1	233	A	94	356
+P04637	94	297	2fej	Solution structure of human p53 DNA binding domain.	1	204	A	94	297
+P04637	94	356	3q05	An induced fit mechanism regulates p53 DNA binding kinetics to confer sequence specificity	1	234	C	94	356
+P04637	94	356	3q05	An induced fit mechanism regulates p53 DNA binding kinetics to confer sequence specificity	1	234	B	94	356
+P04637	94	356	3q05	An induced fit mechanism regulates p53 DNA binding kinetics to confer sequence specificity	1	234	A	94	356
+P04637	94	356	3q05	An induced fit mechanism regulates p53 DNA binding kinetics to confer sequence specificity	1	234	D	94	356
+P04637	94	293	4ibs	Human p53 core domain with hot spot mutation R273H (form I)	1	200	A	None	None
+P04637	94	293	4ibs	Human p53 core domain with hot spot mutation R273H (form I)	1	200	D	None	None
+P04637	94	293	4ibs	Human p53 core domain with hot spot mutation R273H (form I)	1	200	B	None	None
+P04637	94	293	4ibs	Human p53 core domain with hot spot mutation R273H (form I)	1	200	C	None	None
+P04637	94	293	3d05	Human p53 core domain with hot spot mutation R249S (II)	1	200	A	None	None
+P04637	94	293	3d07	Human p53 core domain with hot spot mutation R249S (III)	1	200	A	94	None
+P04637	94	293	3d07	Human p53 core domain with hot spot mutation R249S (III)	1	200	B	None	None
+P04637	94	293	3d06	Human p53 core domain with hot spot mutation R249S (I)	1	200	A	None	None
+P04637	94	293	3d09	Human p53 core domain with hot spot mutation R249S and second-site suppressor mutations H168R and T123A	1	200	A	None	None
+P04637	94	293	3d08	Human p53 core domain with hot spot mutation R249S and second-site suppressor mutation H168R	1	200	A	None	None
+P04637	94	293	5bua	Lysine 120-acetylated P53 DNA binding domain in a complex with DNA.	1	200	A	94	293
+P04637	94	293	2ac0	Structural Basis of DNA Recognition by p53 Tetramers (complex I)	1	200	C	None	None
+P04637	94	293	2ac0	Structural Basis of DNA Recognition by p53 Tetramers (complex I)	1	200	A	94	None
+P04637	94	293	2ac0	Structural Basis of DNA Recognition by p53 Tetramers (complex I)	1	200	D	None	293
+P04637	94	293	2ac0	Structural Basis of DNA Recognition by p53 Tetramers (complex I)	1	200	B	94	None
+P04637	94	293	5mf7	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-GADD45)	1	200	B	94	293
+P04637	94	293	5mf7	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-GADD45)	1	200	A	94	293
+P04637	94	293	2j1y	Human p53 core domain mutant M133L-V203A-N239Y-G245S-N268D	1	200	A	None	None
+P04637	94	293	2j1y	Human p53 core domain mutant M133L-V203A-N239Y-G245S-N268D	1	200	D	None	None
+P04637	94	293	2j1y	Human p53 core domain mutant M133L-V203A-N239Y-G245S-N268D	1	200	B	None	None
+P04637	94	293	2j1y	Human p53 core domain mutant M133L-V203A-N239Y-G245S-N268D	1	200	C	None	None
+P04637	94	293	2ybg	Structure of Lys120-acetylated p53 core domain	1	200	A	None	None
+P04637	94	293	2ybg	Structure of Lys120-acetylated p53 core domain	1	200	D	None	None
+P04637	94	293	2ybg	Structure of Lys120-acetylated p53 core domain	1	200	B	None	None
+P04637	94	293	2ybg	Structure of Lys120-acetylated p53 core domain	1	200	C	None	None
+P04637	94	293	5mg7	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-p53R2)	1	200	B	94	293
+P04637	94	293	5mg7	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-p53R2)	1	200	A	94	293
+P04637	94	293	4ijt	Human p53 core domain with hot spot mutation R273H (form II)	1	200	A	94	None
+P04637	94	293	2ata	Structural Basis of DNA Recognition by p53 Tetramers (complex II)	1	200	B	94	None
+P04637	94	293	2ata	Structural Basis of DNA Recognition by p53 Tetramers (complex II)	1	200	A	None	None
+P04637	94	293	2ata	Structural Basis of DNA Recognition by p53 Tetramers (complex II)	1	200	C	None	None
+P04637	94	293	2ata	Structural Basis of DNA Recognition by p53 Tetramers (complex II)	1	200	D	94	None
+P04637	94	293	6fj5	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-AGG-HG)	1	200	A	94	None
+P04637	94	293	6fj5	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-AGG-HG)	1	200	D	94	None
+P04637	94	293	6fj5	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-AGG-HG)	1	200	C	94	None
+P04637	94	293	6fj5	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-AGG-HG)	1	200	B	94	None
+P04637	94	293	2ady	Structural Basis of DNA Recognition by p53 Tetramers (complex IV)	1	200	B	94	None
+P04637	94	293	2ady	Structural Basis of DNA Recognition by p53 Tetramers (complex IV)	1	200	A	None	None
+P04637	94	293	3igk	Diversity in DNA recognition by p53 revealed by crystal structures with Hoogsteen base pairs (p53-DNA complex 2)	1	200	A	94	293
+P04637	94	356	3ts8	Crystal structure of a multidomain human p53 tetramer bound to the natural CDKN1A(p21) p53-response element	1	234	B	94	356
+P04637	94	356	3ts8	Crystal structure of a multidomain human p53 tetramer bound to the natural CDKN1A(p21) p53-response element	1	234	A	94	356
+P04637	94	356	3ts8	Crystal structure of a multidomain human p53 tetramer bound to the natural CDKN1A(p21) p53-response element	1	234	D	94	356
+P04637	94	356	3ts8	Crystal structure of a multidomain human p53 tetramer bound to the natural CDKN1A(p21) p53-response element	1	234	C	94	356
+P04637	94	293	4ibq	Human p53 core domain with hot spot mutation R273C	1	200	A	None	None
+P04637	94	293	4ibq	Human p53 core domain with hot spot mutation R273C	1	200	D	None	None
+P04637	94	293	4ibq	Human p53 core domain with hot spot mutation R273C	1	200	B	None	None
+P04637	94	293	4ibq	Human p53 core domain with hot spot mutation R273C	1	200	C	None	None
+P04637	94	312	4kvp	Human p53 Core Domain Mutant V157F	2	220	A	None	None
+P04637	94	312	4kvp	Human p53 Core Domain Mutant V157F	2	220	D	None	None
+P04637	94	312	4kvp	Human p53 Core Domain Mutant V157F	2	220	B	None	None
+P04637	94	312	4kvp	Human p53 Core Domain Mutant V157F	2	220	C	None	None
+P04637	94	293	4ibw	Human p53 core domain with hot spot mutation R273H and second-site suppressor mutation T284R in sequence-specific complex with DNA	1	200	A	94	293
+P04637	94	293	4ibv	Human p53 core domain with hot spot mutation R273C and second-site suppressor mutation S240R in sequence-specific complex with DNA	1	200	A	94	293
+P04637	94	293	4ibu	Human p53 core domain with hot spot mutation R273C and second-site suppressor mutation T284R in sequence-specific complex with DNA	1	200	A	None	None
+P04637	94	293	4ibu	Human p53 core domain with hot spot mutation R273C and second-site suppressor mutation T284R in sequence-specific complex with DNA	1	200	C	None	None
+P04637	94	293	4ibu	Human p53 core domain with hot spot mutation R273C and second-site suppressor mutation T284R in sequence-specific complex with DNA	1	200	D	None	None
+P04637	94	293	4ibu	Human p53 core domain with hot spot mutation R273C and second-site suppressor mutation T284R in sequence-specific complex with DNA	1	200	B	94	None
+P04637	94	293	4ibt	Human p53 core domain with hot spot mutation R273H and second-site suppressor mutation T284R	1	200	A	None	None
+P04637	94	293	4ibt	Human p53 core domain with hot spot mutation R273H and second-site suppressor mutation T284R	1	200	C	94	None
+P04637	94	293	4ibt	Human p53 core domain with hot spot mutation R273H and second-site suppressor mutation T284R	1	200	D	None	None
+P04637	94	293	4ibt	Human p53 core domain with hot spot mutation R273H and second-site suppressor mutation T284R	1	200	B	None	None
+P04637	94	293	4ibz	Human p53 core domain with hot spot mutation R273C and second-site suppressor mutation T284R	1	200	A	None	None
+P04637	94	293	4ibz	Human p53 core domain with hot spot mutation R273C and second-site suppressor mutation T284R	1	200	D	None	None
+P04637	94	293	4ibz	Human p53 core domain with hot spot mutation R273C and second-site suppressor mutation T284R	1	200	B	None	None
+P04637	94	293	4ibz	Human p53 core domain with hot spot mutation R273C and second-site suppressor mutation T284R	1	200	C	None	None
+P04637	94	293	4iby	Human p53 core domain with hot spot mutation R273H and second-site suppressor mutation S240R	1	200	A	94	None
+P04637	94	293	4iby	Human p53 core domain with hot spot mutation R273H and second-site suppressor mutation S240R	1	200	B	94	None
+P04637	94	312	5o1i	p53 cancer mutant Y220C in complex with compound MB710	1	219	A	None	None
+P04637	94	312	5o1i	p53 cancer mutant Y220C in complex with compound MB710	1	219	B	None	None
+P04637	94	293	2ahi	Structural Basis of DNA Recognition by p53 Tetramers (complex III)	1	200	D	None	None
+P04637	94	293	2ahi	Structural Basis of DNA Recognition by p53 Tetramers (complex III)	1	200	C	None	None
+P04637	94	293	2ahi	Structural Basis of DNA Recognition by p53 Tetramers (complex III)	1	200	A	None	293
+P04637	94	293	2ahi	Structural Basis of DNA Recognition by p53 Tetramers (complex III)	1	200	B	94	None
+P04637	94	293	3igl	Diversity in DNA recognition by p53 revealed by crystal structures with Hoogsteen base pairs (p53-DNA complex 1)	1	200	A	94	293
+P04637	94	293	5mcw	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-LWC2)	1	200	A	94	None
+P04637	94	293	5mcw	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-LWC2)	1	200	B	94	None
+P04637	94	293	5mcv	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-LWC1)	1	200	B	94	293
+P04637	94	293	5mcv	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-LWC1)	1	200	A	94	293
+P04637	94	293	5mcu	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-LHG2)	1	200	A	None	None
+P04637	94	293	5mcu	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-LHG2)	1	200	B	None	None
+P04637	94	293	5mct	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-LHG1)	1	200	B	94	293
+P04637	94	293	5mct	New Insights into the Role of DNA Shape on Its Recognition by p53 Proteins (complex p53DBD-LHG1)	1	200	A	94	293
+P04637	94	293	3d0a	Human p53 core domain with hot spot mutation R249S and second site suppressor mutation H168R in sequence-specific complex with DNA	1	200	D	None	None
+P04637	94	293	3d0a	Human p53 core domain with hot spot mutation R249S and second site suppressor mutation H168R in sequence-specific complex with DNA	1	200	B	None	None
+P04637	94	293	3d0a	Human p53 core domain with hot spot mutation R249S and second site suppressor mutation H168R in sequence-specific complex with DNA	1	200	C	None	None
+P04637	94	293	3d0a	Human p53 core domain with hot spot mutation R249S and second site suppressor mutation H168R in sequence-specific complex with DNA	1	200	A	None	None
+P04637	94	293	3kz8	Diversity in DNA recognition by p53 revealed by crystal structures with Hoogsteen base pairs (p53-DNA complex 3)	1	200	A	None	None
+P04637	94	293	3kz8	Diversity in DNA recognition by p53 revealed by crystal structures with Hoogsteen base pairs (p53-DNA complex 3)	1	200	B	None	None
+P04637	94	292	1ycs	P53-53BP2 COMPLEX	1	199	A	None	None
+P04637	94	292	2pcx	Crystal structure of p53DBD(R282Q) at 1.54-angstrom Resolution	7	205	A	94	292
+P04637	94	292	4xr8	Crystal structure of the HPV16 E6/E6AP/p53 ternary complex at 2.25 A resolution	1	199	C	94	292
+P04637	94	292	4xr8	Crystal structure of the HPV16 E6/E6AP/p53 ternary complex at 2.25 A resolution	1	199	D	94	292
+P04637	94	291	5lgy	Lysine 120-acetylated P53 DNA binding domain in a complex with the BAX response element.	1	198	D	None	291
+P04637	94	291	5lgy	Lysine 120-acetylated P53 DNA binding domain in a complex with the BAX response element.	1	198	A	None	291
+P04637	94	291	5lgy	Lysine 120-acetylated P53 DNA binding domain in a complex with the BAX response element.	1	198	C	None	291
+P04637	94	291	5lgy	Lysine 120-acetylated P53 DNA binding domain in a complex with the BAX response element.	1	198	B	94	291
+P04637	94	312	5o1h	p53 cancer mutant Y220C in complex with compound MB539	1	219	A	None	None
+P04637	94	312	5o1h	p53 cancer mutant Y220C in complex with compound MB539	1	219	B	None	None
+P04637	94	312	5aok	Structure of the p53 cancer mutant Y220C with bound small molecule PhiKan7099	1	219	A	None	None
+P04637	94	312	5aok	Structure of the p53 cancer mutant Y220C with bound small molecule PhiKan7099	1	219	B	94	None
+P04637	94	312	5aoj	Structure of the p53 cancer mutant Y220C in complex with 2-hydroxy-3, 5-diiodo-4-(1H-pyrrol-1-yl)benzoic acid	1	219	A	None	None
+P04637	94	312	5aoj	Structure of the p53 cancer mutant Y220C in complex with 2-hydroxy-3, 5-diiodo-4-(1H-pyrrol-1-yl)benzoic acid	1	219	B	94	None
+P04637	94	312	5aoi	Structure of the p53 cancer mutant Y220C in complex with an indole- based small molecule	1	219	A	None	None
+P04637	94	312	5aoi	Structure of the p53 cancer mutant Y220C in complex with an indole- based small molecule	1	219	B	None	None
+P04637	94	312	5aol	Structure of the p53 cancer mutant Y220C with bound 3-bromo-5-(trifluoromethyl)benzene-1,2-diamine	1	219	A	None	None
+P04637	94	312	5aol	Structure of the p53 cancer mutant Y220C with bound 3-bromo-5-(trifluoromethyl)benzene-1,2-diamine	1	219	B	94	None
+P04637	94	312	6ggd	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9324	1	219	A	None	None
+P04637	94	312	6ggd	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9324	1	219	B	94	None
+P04637	94	312	6gge	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9327	1	219	A	None	None
+P04637	94	312	6gge	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9327	1	219	B	94	None
+P04637	94	312	6ggf	Structure of the p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9328	1	219	A	None	None
+P04637	94	312	6ggf	Structure of the p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9328	1	219	B	94	None
+P04637	94	312	6gga	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9284	1	219	A	None	None
+P04637	94	312	6gga	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9284	1	219	B	94	None
+P04637	94	312	6ggb	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9318	1	219	A	None	None
+P04637	94	312	6ggb	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9318	1	219	B	94	None
+P04637	94	312	6ggc	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9320	1	219	A	None	None
+P04637	94	312	6ggc	p53 cancer mutant Y220C in complex with small-molecule stabilizer PK9320	1	219	B	94	None
+P04637	94	312	2j20	Human p53 core domain mutant M133L-V203A-N239Y-N268D-R273C	1	219	A	None	None
+P04637	94	312	2j20	Human p53 core domain mutant M133L-V203A-N239Y-N268D-R273C	1	219	B	None	None
+P04637	94	312	2j21	Human p53 core domain mutant M133L-V203A-N239Y-N268D-R282W	1	219	A	None	None
+P04637	94	312	2j21	Human p53 core domain mutant M133L-V203A-N239Y-N268D-R282W	1	219	B	None	None
+P04637	94	312	2wgx	HUMAN P53 CORE DOMAIN MUTANT M133L-V203A-Y236F-N239Y-T253I-N268D	1	219	A	None	None
+P04637	94	312	2wgx	HUMAN P53 CORE DOMAIN MUTANT M133L-V203A-Y236F-N239Y-T253I-N268D	1	219	B	None	None
+P04637	94	312	2j1z	Human p53 core domain mutant M133L-V203A-N239Y-N268D-F270L	1	219	A	None	None
+P04637	94	312	2j1z	Human p53 core domain mutant M133L-V203A-N239Y-N268D-F270L	1	219	B	None	None
+P04637	94	312	2j1x	Human p53 core domain mutant M133L-V203A-Y220C-N239Y-N268D	1	219	A	None	None
+P04637	94	312	2j1x	Human p53 core domain mutant M133L-V203A-Y220C-N239Y-N268D	1	219	B	None	None
+P04637	94	312	2j1w	Human p53 core domain mutant M133L-V143A-V203A-N239Y-N268D	1	219	A	None	None
+P04637	94	312	2j1w	Human p53 core domain mutant M133L-V143A-V203A-N239Y-N268D	1	219	B	None	None
+P04637	94	312	5o1c	p53 cancer mutant Y220C in complex with compound MB184	1	219	A	None	None
+P04637	94	312	5o1c	p53 cancer mutant Y220C in complex with compound MB184	1	219	B	None	None
+P04637	94	312	4loe	Human p53 Core Domain Mutant N239Y	1	219	A	None	None
+P04637	94	312	4loe	Human p53 Core Domain Mutant N239Y	1	219	D	None	None
+P04637	94	312	4loe	Human p53 Core Domain Mutant N239Y	1	219	B	None	None
+P04637	94	312	4loe	Human p53 Core Domain Mutant N239Y	1	219	C	None	None
+P04637	95	292	1gzh	Crystal structure of the BRCT domains of human 53BP1 bound to the p53 tumor supressor	1	198	A	95	292
+P04637	95	292	1gzh	Crystal structure of the BRCT domains of human 53BP1 bound to the p53 tumor supressor	1	198	C	95	None
+P04637	95	289	1kzy	Crystal Structure of the 53bp1 BRCT Region Complexed to Tumor Suppressor P53	1	195	A	95	289
+P04637	95	289	1kzy	Crystal Structure of the 53bp1 BRCT Region Complexed to Tumor Suppressor P53	1	195	B	95	289
+P04637	95	312	5ecg	Crystal structure of the BRCT domains of 53BP1 in complex with p53 and H2AX-pSer139 (gammaH2AX)	8	225	A	None	None
+P04637	95	312	5ecg	Crystal structure of the BRCT domains of 53BP1 in complex with p53 and H2AX-pSer139 (gammaH2AX)	8	225	B	None	None
+P04637	96	354	3q06	An induced fit mechanism regulates p53 DNA binding kinetics to confer sequence specificity	1	231	A	96	354
+P04637	96	354	3q06	An induced fit mechanism regulates p53 DNA binding kinetics to confer sequence specificity	1	231	B	96	354
+P04637	96	354	3q06	An induced fit mechanism regulates p53 DNA binding kinetics to confer sequence specificity	1	231	C	96	354
+P04637	96	354	3q06	An induced fit mechanism regulates p53 DNA binding kinetics to confer sequence specificity	1	231	D	96	354
+P04637	96	312	2mej	Solution Structure of the Complex Between BCL-xL and the p53 Core Domain determined with PRE restraints	1	217	B	96	None
+P04637	97	289	6ff9	Mutant R280K of human P53	1	193	A	97	289
+P04637	97	289	6ff9	Mutant R280K of human P53	1	193	C	97	289
+P04637	97	289	6ff9	Mutant R280K of human P53	1	193	B	97	289
+P04637	97	289	6ff9	Mutant R280K of human P53	1	193	D	97	289
+P04637	144	154	5un8	Crystal Structure of human O-GlcNAcase in complex with glycopeptide p53	1	11	H	None	None
+P04637	144	154	5un8	Crystal Structure of human O-GlcNAcase in complex with glycopeptide p53	1	11	F	None	None
+P04637	144	154	5un8	Crystal Structure of human O-GlcNAcase in complex with glycopeptide p53	1	11	G	None	154
+P04637	144	154	5un8	Crystal Structure of human O-GlcNAcase in complex with glycopeptide p53	1	11	E	None	None
+P04637	144	154	2ydr	CpOGA D298N in complex with p53-derived O-GlcNAc peptide	1	11	P	None	None
+P04637	168	176	6vrn	T cell receptor-p53-HLA-A2 complex	1	9	P	1	9
+P04637	168	176	6vr5	Complex of HLA-A2, a class I MHC, with a p53 peptide	1	9	Q	1	9
+P04637	168	176	6vr5	Complex of HLA-A2, a class I MHC, with a p53 peptide	1	9	P	1	9
+P04637	168	176	6vrm	T cell receptor-p53-HLA-A2 complex	1	9	P	1	9
+P04637	168	176	6vr1	Complex of HLA-A2, a class I MHC, with a p53 peptide	1	9	Q	1	9
+P04637	168	176	6vr1	Complex of HLA-A2, a class I MHC, with a p53 peptide	1	9	P	1	9
+P04637	252	258	4rp6	Structure of the amyloid-forming segment LTIITLE from p53 (residues 252-258)	1	7	Z	1	7
+P04637	253	258	4rp7	Structure of the amyloid-forming segment TIITLE from p53 (residues 253-258)	1	6	Z	1	6
+P04637	319	360	1sae	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	A	319	360
+P04637	319	360	1sae	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	B	319	360
+P04637	319	360	1sae	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	C	319	360
+P04637	319	360	1sae	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	D	319	360
+P04637	319	360	1olh	HIGH-RESOLUTION SOLUTION STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR	1	42	A	319	360
+P04637	319	360	1olh	HIGH-RESOLUTION SOLUTION STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR	1	42	B	319	360
+P04637	319	360	1olh	HIGH-RESOLUTION SOLUTION STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR	1	42	C	319	360
+P04637	319	360	1olh	HIGH-RESOLUTION SOLUTION STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR	1	42	D	319	360
+P04637	319	360	1sal	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAD STRUCTURES)	1	42	A	319	360
+P04637	319	360	1sal	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAD STRUCTURES)	1	42	B	319	360
+P04637	319	360	1sal	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAD STRUCTURES)	1	42	C	319	360
+P04637	319	360	1sal	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAD STRUCTURES)	1	42	D	319	360
+P04637	319	360	1sak	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	A	319	360
+P04637	319	360	1sak	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	B	319	360
+P04637	319	360	1sak	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	C	319	360
+P04637	319	360	1sak	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	D	319	360
+P04637	319	360	3sak	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	B	1	42
+P04637	319	360	3sak	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	A	1	42
+P04637	319	360	3sak	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	D	1	42
+P04637	319	360	3sak	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAC STRUCTURES)	1	42	C	1	42
+P04637	319	360	1olg	HIGH-RESOLUTION SOLUTION STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR	1	42	A	319	360
+P04637	319	360	1olg	HIGH-RESOLUTION SOLUTION STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR	1	42	B	319	360
+P04637	319	360	1olg	HIGH-RESOLUTION SOLUTION STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR	1	42	C	319	360
+P04637	319	360	1olg	HIGH-RESOLUTION SOLUTION STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR	1	42	D	319	360
+P04637	319	360	1saf	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAD STRUCTURES)	1	42	A	319	360
+P04637	319	360	1saf	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAD STRUCTURES)	1	42	B	319	360
+P04637	319	360	1saf	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAD STRUCTURES)	1	42	C	319	360
+P04637	319	360	1saf	HIGH RESOLUTION SOLUTION NMR STRUCTURE OF THE OLIGOMERIZATION DOMAIN OF P53 BY MULTI-DIMENSIONAL NMR (SAD STRUCTURES)	1	42	D	319	360
+P04637	324	358	1a1u	SOLUTION STRUCTURE DETERMINATION OF A P53 MUTANT DIMERIZATION DOMAIN, NMR, MINIMIZED AVERAGE STRUCTURE	1	35	C	None	None
+P04637	324	358	1a1u	SOLUTION STRUCTURE DETERMINATION OF A P53 MUTANT DIMERIZATION DOMAIN, NMR, MINIMIZED AVERAGE STRUCTURE	1	35	A	None	None
+P04637	324	357	1hs5	NMR SOLUTION STRUCTURE OF DESIGNED P53 DIMER	1	34	A	1	34
+P04637	324	357	1hs5	NMR SOLUTION STRUCTURE OF DESIGNED P53 DIMER	1	34	B	1	34
+P04637	325	355	1pes	NMR SOLUTION STRUCTURE OF THE TETRAMERIC MINIMUM TRANSFORMING DOMAIN OF P53	1	31	D	325	355
+P04637	325	355	1pes	NMR SOLUTION STRUCTURE OF THE TETRAMERIC MINIMUM TRANSFORMING DOMAIN OF P53	1	31	C	325	355
+P04637	325	355	1pes	NMR SOLUTION STRUCTURE OF THE TETRAMERIC MINIMUM TRANSFORMING DOMAIN OF P53	1	31	B	325	355
+P04637	325	355	1pes	NMR SOLUTION STRUCTURE OF THE TETRAMERIC MINIMUM TRANSFORMING DOMAIN OF P53	1	31	A	325	355
+P04637	325	356	1c26	CRYSTAL STRUCTURE OF P53 TETRAMERIZATION DOMAIN	1	32	A	325	356
+P04637	325	355	1pet	NMR SOLUTION STRUCTURE OF THE TETRAMERIC MINIMUM TRANSFORMING DOMAIN OF P53	1	31	D	325	355
+P04637	325	355	1pet	NMR SOLUTION STRUCTURE OF THE TETRAMERIC MINIMUM TRANSFORMING DOMAIN OF P53	1	31	C	325	355
+P04637	325	355	1pet	NMR SOLUTION STRUCTURE OF THE TETRAMERIC MINIMUM TRANSFORMING DOMAIN OF P53	1	31	B	325	355
+P04637	325	355	1pet	NMR SOLUTION STRUCTURE OF THE TETRAMERIC MINIMUM TRANSFORMING DOMAIN OF P53	1	31	A	325	355
+P04637	326	356	2j11	p53 tetramerization domain mutant Y327S T329G Q331G	1	31	A	326	356
+P04637	326	356	2j11	p53 tetramerization domain mutant Y327S T329G Q331G	1	31	D	326	356
+P04637	326	356	2j11	p53 tetramerization domain mutant Y327S T329G Q331G	1	31	C	326	356
+P04637	326	356	2j11	p53 tetramerization domain mutant Y327S T329G Q331G	1	31	B	326	356
+P04637	326	356	1aie	P53 TETRAMERIZATION DOMAIN CRYSTAL STRUCTURE	1	31	A	326	356
+P04637	326	356	7bwn	Crystal Structure of a Designed Protein Heterocatenane	11	41	N	326	None
+P04637	326	356	7bwn	Crystal Structure of a Designed Protein Heterocatenane	11	41	P	326	356
+P04637	326	356	7bwn	Crystal Structure of a Designed Protein Heterocatenane	11	41	K	326	None
+P04637	326	356	7bwn	Crystal Structure of a Designed Protein Heterocatenane	11	41	I	326	None
+P04637	326	356	7bwn	Crystal Structure of a Designed Protein Heterocatenane	11	41	B	326	None
+P04637	326	356	7bwn	Crystal Structure of a Designed Protein Heterocatenane	11	41	L	326	356
+P04637	326	356	7bwn	Crystal Structure of a Designed Protein Heterocatenane	11	41	D	326	356
+P04637	326	356	7bwn	Crystal Structure of a Designed Protein Heterocatenane	11	41	G	326	None
+P04637	326	356	2j10	p53 tetramerization domain mutant T329F Q331K	1	31	A	326	356
+P04637	326	356	2j10	p53 tetramerization domain mutant T329F Q331K	1	31	D	326	356
+P04637	326	356	2j10	p53 tetramerization domain mutant T329F Q331K	1	31	C	326	356
+P04637	326	356	2j10	p53 tetramerization domain mutant T329F Q331K	1	31	B	326	356
+P04637	326	356	2j0z	p53 tetramerization domain wild type	1	31	A	326	356
+P04637	326	356	2j0z	p53 tetramerization domain wild type	1	31	D	326	356
+P04637	326	356	2j0z	p53 tetramerization domain wild type	1	31	C	326	356
+P04637	326	356	2j0z	p53 tetramerization domain wild type	1	31	B	326	356
+P04637	358	363	2foo	The Crystal Structure of the N-terminal domain of HAUSP/USP7 complexed with p53 peptide 359-362	1	6	B	358	363
+P04637	361	367	2foj	The Crystal Structure of the N-terminal domain of HAUSP/USP7 complexed with p53 peptide 364-367	1	7	B	361	367
+P04637	363	377	2mwo	Solution structure of 53BP1 tandem Tudor domains in complex with a p53K370me2 peptide	1	15	B	363	377
+P04637	365	375	3tg5	Structure of SMYD2 in complex with p53 and SAH	1	11	B	None	375
+P04637	367	386	1jsp	NMR Structure of CBP Bromodomain in complex with p53 peptide	1	20	A	367	386
+P04637	367	388	1dt7	SOLUTION STRUCTURE OF THE C-TERMINAL NEGATIVE REGULATORY DOMAIN OF P53 IN A COMPLEX WITH CA2+-BOUND S100B(BB)	1	22	X	92	113
+P04637	367	388	1dt7	SOLUTION STRUCTURE OF THE C-TERMINAL NEGATIVE REGULATORY DOMAIN OF P53 IN A COMPLEX WITH CA2+-BOUND S100B(BB)	1	22	Y	92	113
+P04637	369	377	1xqh	Crystal structure of a ternary complex of the methyltransferase SET9 (also known as SET7/9) with a P53 peptide and SAH	1	9	B	369	None
+P04637	369	377	1xqh	Crystal structure of a ternary complex of the methyltransferase SET9 (also known as SET7/9) with a P53 peptide and SAH	1	9	F	369	None
+P04637	372	389	2h4h	Sir2 H116Y mutant-p53 peptide-NAD	1	18	B	None	None
+P04637	372	389	5ol0	Structure of Leishmania infantum Silent Information Regulator 2 related protein 1 (LiSIR2rp1) in complex with acetylated p53 peptide	1	18	D	None	None
+P04637	372	389	5ol0	Structure of Leishmania infantum Silent Information Regulator 2 related protein 1 (LiSIR2rp1) in complex with acetylated p53 peptide	1	18	C	None	None
+P04637	372	389	2h4f	Sir2-p53 peptide-NAD+	1	18	D	None	None
+P04637	372	389	2h2f	The Structural basis for Sirtuin Substrate affinity	1	18	B	None	None
+P04637	372	389	1ma3	Structure of a Sir2 enzyme bound to an acetylated p53 peptide	1	18	B	None	None
+P04637	372	389	2h4j	Sir2-deacetylated peptide (from enzymatic turnover in crystal)	1	18	D	None	None
+P04637	372	389	3pdh	Structure of Sir2Tm bound to a propionylated peptide	1	18	D	None	None
+P04637	372	389	2h2d	The Structural Basis for Sirtuin Substrate Affinity	1	18	B	None	None
+P04637	372	389	2h59	Sir2 H116A-deacetylated p53 peptide-3'-o-acetyl ADP ribose	1	18	D	None	None
+P04637	372	389	2h59	Sir2 H116A-deacetylated p53 peptide-3'-o-acetyl ADP ribose	1	18	E	None	None
+P04637	372	389	1yc5	Sir2-p53 peptide-nicotinamide	1	18	B	None	None
+P04637	376	387	2mwp	Solution structure of 53BP1 tandem Tudor domains in complex with a p53K382me2 peptide	1	12	B	376	387
+P04637	376	386	1h26	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p53	1	11	E	None	386
+P04637	376	388	4bv2	CRYSTAL STRUCTURE OF SIR2 IN COMPLEX WITH THE INHIBITOR EX-527, 2'-O-ACETYL-ADP-RIBOSE AND DEACETYLATED P53-PEPTIDE	1	13	H	None	None
+P04637	376	388	4bv2	CRYSTAL STRUCTURE OF SIR2 IN COMPLEX WITH THE INHIBITOR EX-527, 2'-O-ACETYL-ADP-RIBOSE AND DEACETYLATED P53-PEPTIDE	1	13	E	None	None
+P04637	377	386	3oq5	Crystal structure of the 3-MBT domain from human L3MBTL1 in complex with p53K382me1	1	10	D	None	None
+P04637	377	386	3oq5	Crystal structure of the 3-MBT domain from human L3MBTL1 in complex with p53K382me1	1	10	E	None	None
+P04637	377	386	4x34	Crystal structure of the 53BP1 tandem tudor domain in complex with p53K381acK382me2	1	10	D	None	None
+P04637	377	386	4x34	Crystal structure of the 53BP1 tandem tudor domain in complex with p53K381acK382me2	1	10	C	377	386
+P04637	379	385	4zzj	SIRT1/Activator/Substrate Complex	1	7	B	1	7
+P04637	379	386	4buz	SIR2 COMPLEX STRUCTURE MIXTURE OF EX-527 INHIBITOR AND REACTION PRODUCTS OR OF REACTION SUBSTRATES P53 PEPTIDE AND NAD	1	8	P	379	None
+P04637	379	382	2v5w	Crystal structure of HDAC8-substrate complex	2	5	L	2	5
+P04637	379	382	2v5w	Crystal structure of HDAC8-substrate complex	2	5	I	2	5
+P04637	379	382	4fz3	Crystal structure of SIRT3 in complex with acetyl p53 peptide coupled with 4-amino-7-methylcoumarin	2	5	B	801	804
+P04637	382	393	6rx2	Fragment AZ-005 binding at the p53pT387/14-3-3 sigma interface	1	12	P	None	None
+P04637	382	393	6sip	Fragment AZ-011 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6siq	Fragment AZ-012 binding at the p53pT387/14-3-3 sigma interface	1	12	P	None	393
+P04637	382	393	6rki	Fragment AZ-023 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6rkk	Fragment AZ-021 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	None
+P04637	382	393	6rl3	Fragment AZ-003 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6rjz	Fragment AZ-015 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6rwh	Fragment AZ-007 binding at a primary and secondary binding site of the the p53pT387/14-3-3 sigma complex	1	12	P	382	393
+P04637	382	393	6sin	Fragment AZ-020 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6rk8	Fragment AZ-014 binding at the p53pT387/14-3-3 sigma interface	1	12	P	None	None
+P04637	382	393	6rwu	Fragment AZ-010 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6rws	Fragment AZ-009 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6s9q	Fragment AZ-004 binding at a primary and secondary site in a p53pT387/14-3-3 complex	1	12	P	382	393
+P04637	382	393	6rwi	Fragment AZ-002 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6rm5	Fragment AZ-016 binding at the p53pT387/14-3-3 sigma interface	1	12	P	None	None
+P04637	382	393	6rkm	Fragment AZ-022 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	5moc	Crystal structure of 14-3-3sigma and a p53 C-terminal 12-mer synthetic phosphopeptide	1	12	P	382	393
+P04637	382	393	6sio	Fragment AZ-017 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6rl6	Fragment AZ-024 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6slv	Fragment AZ-013 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6s39	Fragment AZ-018 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	6rl4	Fragment AZ-025 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	382	393	5mhc	Crystal structure of 14-3-3sigma and a p53 C-terminal 12-mer synthetic phosphopeptide	1	12	P	382	393
+P04637	382	393	6rm7	Fragment AZ-026 binding at the p53pT387/14-3-3 sigma interface	1	12	P	382	393
+P04637	385	393	3lw1	Binary complex of 14-3-3 sigma and p53 pT387-peptide	1	9	P	385	None
+

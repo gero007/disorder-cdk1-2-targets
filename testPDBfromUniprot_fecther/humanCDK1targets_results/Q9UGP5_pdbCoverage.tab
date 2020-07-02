@@ -1,0 +1,125 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9UGP5	DNA polymerase lambda	DPOLL_HUMAN	Homo sapiens	PF10391	DNA_pol_lambd_f	Fingers domain of DNA polymerase lambda	336	384
+Q9UGP5	DNA polymerase lambda	DPOLL_HUMAN	Homo sapiens	PF14716	HHH_8	Helix-hairpin-helix domain	253	318
+Q9UGP5	DNA polymerase lambda	DPOLL_HUMAN	Homo sapiens	PF14791	DNA_pol_B_thumb	DNA polymerase beta thumb	502	574
+Q9UGP5	DNA polymerase lambda	DPOLL_HUMAN	Homo sapiens	PF14792	DNA_pol_B_palm	DNA polymerase beta palm	386	496
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#100 mappings in 100 PDB chains in 58 PDB entries
+Q9UGP5	4	32	5w4g	Importin binding to NLS peptide of DNA polymerase lambda	1	29	A	None	32
+Q9UGP5	34	135	2jw5	Polymerase Lambda BRCT domain	5	106	A	34	135
+Q9UGP5	242	575	2bcq	DNA polymerase lambda in complex with a DNA duplex containing an unpaired Dtmp	2	335	A	None	575
+Q9UGP5	242	575	2pfq	Manganese promotes catalysis in a DNA polymerase lambda-DNA crystal	2	335	A	None	575
+Q9UGP5	242	575	2bcs	DNA polymerase lambda in complex with a DNA duplex containing an unpaired Dcmp	2	335	A	None	575
+Q9UGP5	242	575	2bcr	DNA polymerase lambda in complex with a DNA duplex containing an unpaired Damp	2	335	A	None	575
+Q9UGP5	242	575	5ca7	Human DNA polymerase lambda- MgdGTP binary and complex with 6 paired DNA	1	334	A	None	575
+Q9UGP5	242	575	5ca7	Human DNA polymerase lambda- MgdGTP binary and complex with 6 paired DNA	1	334	B	None	575
+Q9UGP5	242	575	2bcv	DNA polymerase lambda in complex with Dttp and a DNA duplex containing an unpaired Dtmp	2	335	A	None	575
+Q9UGP5	242	575	2pfo	DNA Polymerase lambda in complex with DNA and dUPNPP	2	335	A	None	575
+Q9UGP5	242	575	3hwt	Ternary complex of DNA polymerase lambda bound to a two nucleotide gapped DNA substrate with a scrunched dA	2	335	A	None	575
+Q9UGP5	242	575	3upq	Crystal structure of the pre-catalytic ternary complex of polymerase lambda with an rATP analog opposite a templating T.	1	329	A	None	575
+Q9UGP5	242	575	5cj7	Human DNA polymerase lambda L431A mutant- MgdTTP binary and complex with 6 paired DNA	1	334	B	None	575
+Q9UGP5	242	575	5cj7	Human DNA polymerase lambda L431A mutant- MgdTTP binary and complex with 6 paired DNA	1	334	A	None	575
+Q9UGP5	242	575	3uq0	Crystal structure of the post-catalytic product complex of polymerase lambda with an rAMP at the primer terminus.	1	329	A	None	575
+Q9UGP5	242	575	2pfp	DNA Polymerase lambda in complex with DNA and dCTP	2	335	A	None	575
+Q9UGP5	242	575	2pfn	Na in the active site of DNA Polymerase lambda	2	335	A	None	575
+Q9UGP5	242	575	5iim	Crystal structure of the pre-catalytic ternary extension complex of DNA polymerase lambda with an 8-oxo-dG:dA base-pair	1	334	A	None	575
+Q9UGP5	242	575	5iil	Crystal structure of the post-catalytic nick complex of DNA polymerase lambda with a templating 8-oxo-dG and incorporated dA	1	334	A	None	575
+Q9UGP5	242	575	5iio	Crystal structure of the DNA polymerase lambda binary complex	1	334	M	None	575
+Q9UGP5	242	575	5iio	Crystal structure of the DNA polymerase lambda binary complex	1	334	A	None	575
+Q9UGP5	242	575	5iio	Crystal structure of the DNA polymerase lambda binary complex	1	334	I	None	575
+Q9UGP5	242	575	5iio	Crystal structure of the DNA polymerase lambda binary complex	1	334	E	None	575
+Q9UGP5	242	575	5iin	Crystal structure of the pre-catalytic ternary extension complex of DNA polymerase lambda with an 8-oxo-dG:dC base-pair	1	334	A	None	575
+Q9UGP5	242	575	5iii	Crystal structure of the pre-catalytic ternary complex of DNA polymerase lambda with a templating 8-oxo-dG and an incoming dATP	1	334	A	None	575
+Q9UGP5	242	575	5iik	Crystal structure of the post-catalytic nick complex of DNA polymerase lambda with a templating 8-oxo-dG and incorporated dC	1	334	A	None	575
+Q9UGP5	242	575	5iij	Crystal structure of the pre-catalytic ternary complex of DNA polymerase lambda with a templating 8-oxo-dG and an incoming dCTP	1	334	A	None	575
+Q9UGP5	242	575	3hw8	ternary complex of DNA polymerase lambda of a two nucleotide gapped DNA substrate with a C in the scrunch site	2	335	A	None	575
+Q9UGP5	242	575	3uq2	Crystal structure of the post-catalytic product complex of polymerase lambda with an rCMP inserted opposite a templating G and dAMP inserted opposite a templating T at the primer terminus.	1	329	A	None	575
+Q9UGP5	242	575	3pnc	Ternary crystal structure of a polymerase lambda variant with a GT mispair at the primer terminus and sodium at catalytic metal site	1	329	A	None	575
+Q9UGP5	242	575	2gws	Crystal Structure of human DNA Polymerase lambda with a G/G mismatch in the primer terminus	2	335	M	None	575
+Q9UGP5	242	575	2gws	Crystal Structure of human DNA Polymerase lambda with a G/G mismatch in the primer terminus	2	335	A	None	575
+Q9UGP5	242	575	2gws	Crystal Structure of human DNA Polymerase lambda with a G/G mismatch in the primer terminus	2	335	I	None	575
+Q9UGP5	242	575	2gws	Crystal Structure of human DNA Polymerase lambda with a G/G mismatch in the primer terminus	2	335	E	None	575
+Q9UGP5	242	575	3mgi	Ternary complex of a DNA polymerase lambda loop mutant	1	329	A	None	575
+Q9UGP5	242	575	3mgh	Binary complex of a DNA polymerase lambda loop mutant	1	329	A	None	575
+Q9UGP5	242	575	3mgh	Binary complex of a DNA polymerase lambda loop mutant	1	329	C	None	575
+Q9UGP5	242	575	1xsp	Crystal Structure of human DNA polymerase lambda in complex with nicked DNA and pyrophosphate	2	335	A	None	575
+Q9UGP5	242	575	5cr0	Human DNA polymerase lambda L431A mutant- MgdCTP binary and complex with 6 paired DNA	1	334	B	None	575
+Q9UGP5	242	575	5cr0	Human DNA polymerase lambda L431A mutant- MgdCTP binary and complex with 6 paired DNA	1	334	A	None	575
+Q9UGP5	242	575	2bcu	DNA polymerase lambda in complex with a DNA duplex containing an unpaired Damp and a T:T mismatch	2	335	A	None	575
+Q9UGP5	242	575	3pmn	ternary crystal structure of polymerase lambda variant with a GT mispair at the primer terminus with Mn2+ in the active site	1	329	A	None	575
+Q9UGP5	242	575	3pml	crystal structure of a polymerase lambda variant with a dGTP analog opposite a templating T	1	329	B	None	575
+Q9UGP5	242	575	3pml	crystal structure of a polymerase lambda variant with a dGTP analog opposite a templating T	1	329	A	None	575
+Q9UGP5	242	575	4xq8	Human DNA polymerase lambda- MgdATP binary complex and complex with 6 paired DNA	1	334	A	None	575
+Q9UGP5	242	575	4xq8	Human DNA polymerase lambda- MgdATP binary complex and complex with 6 paired DNA	1	334	B	None	575
+Q9UGP5	242	575	4fo6	Crystal structure of the pre-catalytic ternary complex of polymerase lambda with a dATP analog opposite a templating T and an rCMP at the primer terminus.	1	329	A	None	575
+Q9UGP5	242	575	3c5g	Structure of a ternary complex of the R517K Pol lambda mutant	2	335	A	None	575
+Q9UGP5	242	575	3c5g	Structure of a ternary complex of the R517K Pol lambda mutant	2	335	B	None	575
+Q9UGP5	242	575	3c5f	Structure of a binary complex of the R517A Pol lambda mutant	2	335	B	None	575
+Q9UGP5	242	575	3c5f	Structure of a binary complex of the R517A Pol lambda mutant	2	335	A	None	575
+Q9UGP5	242	575	3hx0	ternary complex of L277A, H511A, R514 mutant pol lambda bound to a 2 nucleotide gapped DNA substrate with a scrunched dA	2	335	K	None	575
+Q9UGP5	242	575	3hx0	ternary complex of L277A, H511A, R514 mutant pol lambda bound to a 2 nucleotide gapped DNA substrate with a scrunched dA	2	335	P	None	575
+Q9UGP5	242	575	3hx0	ternary complex of L277A, H511A, R514 mutant pol lambda bound to a 2 nucleotide gapped DNA substrate with a scrunched dA	2	335	A	None	575
+Q9UGP5	242	575	3hx0	ternary complex of L277A, H511A, R514 mutant pol lambda bound to a 2 nucleotide gapped DNA substrate with a scrunched dA	2	335	F	None	575
+Q9UGP5	242	575	4xrh	Human DNA polymerase lambda- MgdTTP binary and complex with 6 paired DNA	2	335	A	None	575
+Q9UGP5	242	575	4xrh	Human DNA polymerase lambda- MgdTTP binary and complex with 6 paired DNA	2	335	B	None	575
+Q9UGP5	242	575	5chg	Human DNA polymerase lambda L431A mutant- MgdGTP binary and complex with 6 paired DNA	1	334	B	None	575
+Q9UGP5	242	575	5chg	Human DNA polymerase lambda L431A mutant- MgdGTP binary and complex with 6 paired DNA	1	334	A	None	575
+Q9UGP5	242	575	5cp2	Human DNA polymerase lambda L431A mutant- Apoenzyme and complex with 6 paired DNA	1	334	B	None	575
+Q9UGP5	242	575	5cp2	Human DNA polymerase lambda L431A mutant- Apoenzyme and complex with 6 paired DNA	1	334	A	None	575
+Q9UGP5	242	575	1xsn	Crystal Structure of human DNA polymerase lambda in complex with a one nucleotide DNA gap and ddTTP	2	335	A	None	575
+Q9UGP5	242	575	1xsl	Crystal Structure of human DNA polymerase lambda in complex with a one nucleotide DNA gap	2	335	M	None	575
+Q9UGP5	242	575	1xsl	Crystal Structure of human DNA polymerase lambda in complex with a one nucleotide DNA gap	2	335	A	None	575
+Q9UGP5	242	575	1xsl	Crystal Structure of human DNA polymerase lambda in complex with a one nucleotide DNA gap	2	335	I	None	575
+Q9UGP5	242	575	1xsl	Crystal Structure of human DNA polymerase lambda in complex with a one nucleotide DNA gap	2	335	E	None	575
+Q9UGP5	242	575	5ddy	Binary complex of human Polymerase lambda with dCTP	2	335	G	None	575
+Q9UGP5	242	575	5ddy	Binary complex of human Polymerase lambda with dCTP	2	335	E	None	575
+Q9UGP5	242	575	5ddy	Binary complex of human Polymerase lambda with dCTP	2	335	C	None	575
+Q9UGP5	242	575	5ddy	Binary complex of human Polymerase lambda with dCTP	2	335	A	None	575
+Q9UGP5	242	327	1nzp	Solution Structure of the Lyase Domain of Human DNA Polymerase Lambda	2	87	A	242	327
+Q9UGP5	242	575	5ddm	Human DNA polymerase lambda- Apoenzyme and complex with 6 paired DNA	2	335	A	None	575
+Q9UGP5	242	575	5ddm	Human DNA polymerase lambda- Apoenzyme and complex with 6 paired DNA	2	335	B	None	575
+Q9UGP5	245	575	1rzt	Crystal structure of DNA polymerase lambda complexed with a two nucleotide gap DNA molecule	1	331	M	None	575
+Q9UGP5	245	575	1rzt	Crystal structure of DNA polymerase lambda complexed with a two nucleotide gap DNA molecule	1	331	A	None	575
+Q9UGP5	245	575	1rzt	Crystal structure of DNA polymerase lambda complexed with a two nucleotide gap DNA molecule	1	331	I	None	575
+Q9UGP5	245	575	1rzt	Crystal structure of DNA polymerase lambda complexed with a two nucleotide gap DNA molecule	1	331	E	None	575
+Q9UGP5	245	575	4k4h	Ternary crystal structures of a human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND (-)3TC-TP.	2	332	M	None	575
+Q9UGP5	245	575	4k4h	Ternary crystal structures of a human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND (-)3TC-TP.	2	332	E	None	575
+Q9UGP5	245	575	4k4h	Ternary crystal structures of a human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND (-)3TC-TP.	2	332	I	None	575
+Q9UGP5	245	575	4k4h	Ternary crystal structures of a human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND (-)3TC-TP.	2	332	A	None	575
+Q9UGP5	245	575	4k4g	Ternary crystal structures of human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND L-DCTP.	2	332	E	None	575
+Q9UGP5	245	575	4k4g	Ternary crystal structures of human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND L-DCTP.	2	332	M	None	575
+Q9UGP5	245	575	4k4g	Ternary crystal structures of human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND L-DCTP.	2	332	I	None	575
+Q9UGP5	245	575	4k4g	Ternary crystal structures of human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND L-DCTP.	2	332	A	None	575
+Q9UGP5	245	575	4k4i	Ternary crystal structures of a human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND (-)FTC-TP.	2	332	M	None	575
+Q9UGP5	245	575	4k4i	Ternary crystal structures of a human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND (-)FTC-TP.	2	332	E	None	575
+Q9UGP5	245	575	4k4i	Ternary crystal structures of a human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND (-)FTC-TP.	2	332	A	None	575
+Q9UGP5	245	575	4k4i	Ternary crystal structures of a human DNA POLYMERASE LAMBDA IN COMPLEX WITH DNA AND (-)FTC-TP.	2	332	I	None	575
+Q9UGP5	249	575	5dkw	Ternary crystal structure of polymerase lambda with a GA mispair at the primer terminus with Ca2+ in the active	1	327	B	249	575
+Q9UGP5	249	575	5dkw	Ternary crystal structure of polymerase lambda with a GA mispair at the primer terminus with Ca2+ in the active	1	327	A	249	575
+Q9UGP5	250	575	5cwr	Crystal Structure of human DNA polymerase lambda L431A mutant in complex with a one nucleotide DNA gap and dCTP	1	326	A	250	575
+Q9UGP5	250	575	5cwr	Crystal Structure of human DNA polymerase lambda L431A mutant in complex with a one nucleotide DNA gap and dCTP	1	326	B	250	575
+Q9UGP5	250	575	5cb1	Apo enzyme of human Polymerase lambda	1	326	A	250	575
+Q9UGP5	250	575	5cb1	Apo enzyme of human Polymerase lambda	1	326	B	None	575
+Q9UGP5	251	575	4xus	Crystal structure of the pre-catalytic ternary complex of DNA polymerase lambda with a templating A and an incoming dTTP	1	325	A	None	575
+Q9UGP5	251	575	4x5v	Crystal structure of the post-catalytic nick complex of DNA polymerase lambda with a templating A and incorporated 8-oxo-dGMP	1	325	A	251	575
+Q9UGP5	251	575	4xa5	Crystal structure of the pre-catalytic ternary complex of DNA polymerase lambda with a templating A and an incoming 8-oxo-dGTP	1	325	A	None	575
+Q9UGP5	252	575	3mda	DNA polymerase lambda in complex with araC	2	325	A	252	575
+Q9UGP5	252	575	3mdc	DNA polymerase lambda in complex with dFdCTP	2	325	A	None	575
+

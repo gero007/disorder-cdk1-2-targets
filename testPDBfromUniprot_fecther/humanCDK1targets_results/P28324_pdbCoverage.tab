@@ -1,0 +1,27 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P28324	ETS-DOMAIN PROTEIN ELK-4	ELK4_HUMAN	Homo sapiens	PF00178	Ets	Ets-domain	6	85
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 4 PDB entries
+P28324	1	93	1bc7	SERUM RESPONSE FACTOR ACCESSORY PROTEIN 1A (SAP-1)/DNA COMPLEX	1	93	C	1	93
+P28324	1	93	1bc8	STRUCTURES OF SAP-1 BOUND TO DNA SEQUENCES FROM THE E74 AND C-FOS PROMOTERS PROVIDE INSIGHTS INTO HOW ETS PROTEINS DISCRIMINATE BETWEEN RELATED DNA TARGETS	1	93	C	1	93
+P28324	1	93	1k6o	Crystal Structure of a Ternary SAP-1/SRF/c-fos SRE DNA Complex	1	93	A	None	None
+P28324	2	156	1hbx	Ternary Complex of SAP-1 and SRF with specific SRE DNA	3	157	H	None	None
+P28324	2	156	1hbx	Ternary Complex of SAP-1 and SRF with specific SRE DNA	3	157	G	2	156
+

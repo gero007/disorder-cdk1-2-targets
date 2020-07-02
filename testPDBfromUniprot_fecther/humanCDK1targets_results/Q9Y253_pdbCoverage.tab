@@ -1,0 +1,155 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9Y253	DNA polymerase eta	POLH_HUMAN	Homo sapiens	PF00817	IMS	impB/mucB/samB family	12	228
+Q9Y253	DNA polymerase eta	POLH_HUMAN	Homo sapiens	PF11799	IMS_C	impB/mucB/samB family C-terminal domain	309	439
+Q9Y253	DNA polymerase eta	POLH_HUMAN	Homo sapiens	PF18439	zf_UBZ	Ubiquitin-Binding Zinc Finger	631	662
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#131 mappings in 131 PDB chains in 131 PDB entries
+Q9Y253	1	432	5kfk	Human DNA polymerase eta-DNA ternary complex: reaction with 10 mM Mn2+ for 300s	4	435	A	1	432
+Q9Y253	1	432	5kfh	Human DNA polymerase eta-DNA ternary complex: reaction with 10 mM Mn2+ for 90s	4	435	A	1	432
+Q9Y253	1	432	5kfi	Human DNA polymerase eta-DNA ternary complex: reaction with 10 mM Mn2+ for 120s	4	435	A	1	432
+Q9Y253	1	432	5kfn	Human DNA polymerase eta-DNA ternary complex with Sp-dATP-alpha-S: reaction with 1 mM Mg2+ for 1800s	4	435	A	1	432
+Q9Y253	1	432	4rnm	Crystal structure of human polymerase eta inserting dAMPnPP opposite DNA template containing an abasic site	4	435	A	1	432
+Q9Y253	1	432	5kfl	Human DNA polymerase eta-DNA ternary complex: reaction with 10 mM Mn2+ for 600s	4	435	A	1	432
+Q9Y253	1	432	4rno	Crystal structure of human polymerase eta extending an abasic site-dA pair by inserting dCTP opposite template G	4	435	A	1	432
+Q9Y253	1	432	4o3r	Crystal structure of human polymerase eta extending an 8-oxog dna lesion: post insertion of 8-oxog-da pair	4	435	A	1	432
+Q9Y253	1	432	5kfc	Human DNA polymerase eta-DNA ternary complex: reaction with 1 mM Mn2+ for 180s	4	435	A	1	432
+Q9Y253	1	432	4o3p	Crystal structure of human polymerase eta inserting dctp opposite an 8-oxog containing dna template	4	435	A	1	432
+Q9Y253	1	432	4o3q	Crystal structure of human polymerase eta inserting dgtp opposite an 8-oxog containing dna template	4	435	A	1	432
+Q9Y253	1	432	5kff	Human DNA polymerase eta-DNA ternary complex: reaction with 1 mM Mn2+ for 1800s	4	435	A	1	432
+Q9Y253	1	432	5kfg	Human DNA polymerase eta-DNA ternary complex: reaction with 10 mM Mn2+ for 30s	4	435	A	1	432
+Q9Y253	1	432	5kfd	Human DNA polymerase eta-DNA ternary complex: reaction with 1 mM Mn2+ for 300s	4	435	A	1	432
+Q9Y253	1	432	5kfe	Human DNA polymerase eta-DNA ternary complex: reaction with 1 mM Mn2+ for 600s	4	435	A	1	432
+Q9Y253	1	432	5kfz	Human DNA polymerase eta-DNA ternary complex: reaction first with 1 mM Mn2+ for 1800s then with 5 mM Mn2+ for 60s at 14 degree	4	435	A	1	432
+Q9Y253	1	432	5kfx	Human DNA polymerase eta R61A-DNA ternary complex: reaction with 1 mM Mg2+ for 300s	4	435	A	1	432
+Q9Y253	1	432	5kfy	Human DNA polymerase eta-DNA ternary complex: reaction first with 1 mM Mn2+ for 1800s then with 5 mM Mn2+ for 60s at 4 degree	4	435	A	1	432
+Q9Y253	1	432	4o3n	Crystal structure of human dna polymerase eta in ternary complex with native dna and incoming nucleotide (dcp)	4	435	A	1	432
+Q9Y253	1	432	4o3o	Crystal structure of human polymerase eta inserting datp opposite an 8-oxog containing dna template	4	435	A	1	432
+Q9Y253	1	432	4eey	Crystal structure of human DNA polymerase eta in ternary complex with a cisplatin DNA adduct	4	435	A	None	432
+Q9Y253	1	432	5kfr	Human DNA polymerase eta-DNA ternary complex with Sp-dATP-alpha-S: reaction with 20 mM Mn2+ for 600s	4	435	A	1	432
+Q9Y253	1	432	5kfs	Human DNA polymerase eta R61A-DNA ternary complex: ground state at pH7.0 (K+ MES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	5kfp	Human DNA polymerase eta-DNA ternary complex with Sp-dATP-alpha-S: reaction with 20 mM Mg2+ for 600s	4	435	A	1	432
+Q9Y253	1	432	5kfq	Human DNA polymerase eta-DNA ternary complex with Sp-dATP-alpha-S: reaction with 10 mM Mn2+ for 600s	4	435	A	1	432
+Q9Y253	1	432	5kfv	Human DNA polymerase eta R61A-DNA ternary complex: reaction with 1 mM Mg2+ for 140s	4	435	A	1	432
+Q9Y253	1	432	5kfw	Human DNA polymerase eta R61A-DNA ternary complex: reaction with 1 mM Mg2+ for 200s	4	435	A	1	432
+Q9Y253	1	432	5kft	Human DNA polymerase eta R61A-DNA ternary complex: reaction with 1 mM Mg2+ for 40s	4	435	A	1	432
+Q9Y253	1	432	5kfu	Human DNA polymerase eta R61A-DNA ternary complex: reaction with 1 mM Mg2+ for 80s	4	435	A	1	432
+Q9Y253	1	432	4rnn	Crystal structure of human polymerase eta inserting dGMPnPP opposite DNA template containing an abasic site	4	435	A	1	432
+Q9Y253	1	432	5ewg	Ternary complex of human DNA polymerase eta inserting rATP opposite an 8-Oxodeoxyguanosine Lesion	4	435	A	1	432
+Q9Y253	1	432	5ewf	Ternary complex of human DNA polymerase eta inserting rCTP opposite an 8-Oxodeoxyguanosine Lesion	4	435	A	1	432
+Q9Y253	1	432	5ewe	Ternary complex of human DNA polymerase eta inserting rCTP opposite template G	4	435	A	1	432
+Q9Y253	1	432	5kfm	Human DNA polymerase eta-DNA ternary complex with Sp-dATP-alpha-S: ground state at pH7.0 (K+ MES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	5kfb	Human DNA polymerase eta-DNA ternary complex: reaction with 1 mM Mn2+ for 90s	4	435	A	1	432
+Q9Y253	1	432	6ui2	Structure of human DNA polymerase eta complexed with N7MG in the template base paired with incoming non-hydrolyzable CTP	4	435	A	1	432
+Q9Y253	1	432	4o3s	Crystal structure of human polymerase eta extending an 8-oxog dna lesion: post insertion of 8-oxog-dc pair	1	432	A	1	432
+Q9Y253	1	432	3si8	Human DNA polymerase eta - DNA ternary complex with the 5'T of a CPD in the active site (TT2)	4	435	A	1	None
+Q9Y253	1	432	5kfa	Human DNA polymerase eta-DNA ternary complex: ground state at pH7.0 (K+ MES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	3jaa	HUMAN DNA POLYMERASE ETA in COMPLEX WITH NORMAL DNA AND INCO NUCLEOTIDE (NRM)	4	435	A	1	432
+Q9Y253	1	432	5l1l	PostInsertion complex of Human DNA Polymerase Eta bypassing an O6-Methyl-2'-deoxyguanosine : dT site	4	435	A	1	432
+Q9Y253	1	432	5l1i	Crystal Structure of Human DNA Polymerase Eta Inserting dCTP Opposite O6-Methyl-2'-deoxyguanosine	4	435	A	1	432
+Q9Y253	1	432	5l1j	Crystal Structure of Human DNA Polymerase Eta Inserting dTMPNPP Opposite O6-Methyl-2'-deoxyguanosine	4	435	A	1	432
+Q9Y253	1	432	5l1k	PostInsertion complex of Human DNA Polymerase Eta bypassing an O6-Methyl-2'-deoxyguanosine : dC site	4	435	A	1	432
+Q9Y253	1	432	5l9x	Human DNA polymerase eta-DNA ternary complex: reaction with 10 mM Mn2+ for 60s	4	435	A	1	432
+Q9Y253	1	432	5kg5	Human DNA polymerase eta-DNA ternary complex: reaction first with 1 mM Mn2+ for 1800s then with 10 mM Cd2+ for 60s	4	435	A	1	432
+Q9Y253	1	432	5kg4	Human DNA polymerase eta-DNA ternary complex: reaction first with 1 mM Mn2+ for 1800s then with 10 mM Mg2+ for 60s	4	435	A	1	432
+Q9Y253	1	432	5kg7	Human DNA polymerase eta-DNA ternary complex: reaction first with 1 mM Mn2+ for 1800s then with 10 mM Zn2+ for 60s	4	435	A	1	432
+Q9Y253	1	432	5kg6	Human DNA polymerase eta-DNA ternary complex: reaction first with 1 mM Mn2+ for 1800s then with 10 mM Ca2+ for 60s	4	435	A	1	432
+Q9Y253	1	432	5kg1	Human DNA polymerase eta-DNA ternary complex: reaction first with 1 mM Mn2+ for 1800s then with 5 mM Mn2+ for 60s at 30 degree	4	435	A	1	432
+Q9Y253	1	432	5kg0	Human DNA polymerase eta-DNA ternary complex: reaction first with 1 mM Mn2+ for 1800s then with 5 mM Mn2+ for 60s at 22 degree	4	435	A	1	432
+Q9Y253	1	432	5kg3	Human DNA polymerase eta-DNA ternary complex: reaction first with 1 mM Mn2+ for 1800s then with 10 mM Mn2+ for 60s	4	435	A	1	432
+Q9Y253	1	432	5kg2	Human DNA polymerase eta-DNA ternary complex: reaction first with 1 mM Mn2+ for 1800s then with 5 mM Mn2+ for 60s at 37 degree	4	435	A	1	432
+Q9Y253	1	432	3tq1	Human DNA Polymerase eta in binary complex with DNA	4	435	A	1	432
+Q9Y253	1	432	4ed8	Human DNA polymerase eta - DNA ternary complex: Reaction in the TG crystal at pH 7.0, Normal translocation	4	435	A	1	432
+Q9Y253	1	432	4ed1	Human DNA polymerase eta - DNA ternary complex: AT crystal at pH 7.0 (Na+ MES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	4ed0	Human DNA polymerase eta - DNA ternary complex: AT crystal at pH 6.8 (Na+ MES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	4ed3	Human DNA polymerase eta - DNA ternary complex: AT crystal at pH 7.5 (Na+ HEPES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	4ed2	Human DNA polymerase eta - DNA ternary complex: AT crystal at pH 7.2 (Na+ HEPES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	5f9n	CRYSTAL STRUCTURE OF HUMAN DNA POLYMERASE ETA INSERTING dCMPNPP ACROSS A DNA TEMPLATE CONTAINING 1,N2-ETHENODEOXYGUANOSINE LESION	4	435	A	1	432
+Q9Y253	1	432	4ed7	Human DNA polymerase eta - DNA ternary complex: TG crystal at pH 7.0 (K+ MES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	4ed6	Human DNA polymerase eta - DNA ternary complex: Reaction in the AT crystal at pH 6.7 for 15 hr, Sideway translocation	4	435	A	1	432
+Q9Y253	1	432	5dgb	CRYSTAL STRUCTURE OF HUMAN DNA POLYMERASE ETA EXTENDING AN 1,N6-ETHENODEOXYADENOSINE : dA PAIR BY INSERTING dTMPNPP OPPOSITE TEMPLATE dA	4	435	A	1	432
+Q9Y253	1	432	4j9p	Human DNA polymerase eta-DNA postinsertion binary complex with TA base pair	4	435	A	None	432
+Q9Y253	1	432	4ecz	Human DNA polymerase eta - DNA ternary complex: AT crystal at pH 6.5 (Na+ MES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	5dga	CRYSTAL STRUCTURE OF HUMAN DNA POLYMERASE ETA EXTENDING AN 1,N6-ETHENODEOXYADENOSINE : dT PAIR BY INSERTING dTMPNPP OPPOSITE TEMPLATE dA	4	435	A	1	432
+Q9Y253	1	432	6plc	Structure of human DNA polymerase eta complexed with 8OA in the template base paired with incoming non-hydrolyzable GTP	4	435	A	1	432
+Q9Y253	1	432	4ecv	Human DNA polymerase eta - DNA ternary complex: Reaction in the AT crystal at pH 7.0 for 230 sec	4	435	A	1	432
+Q9Y253	1	432	4ecw	Human DNA polymerase eta - DNA ternary complex: Reaction in the AT crystal at pH 7.0 for 250 sec	4	435	A	1	432
+Q9Y253	1	432	4ecq	Human DNA polymerase eta- DNA ternary complex: AT crystal at pH6.8(K+ MES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	4ecr	Human DNA polymerase eta - DNA ternary complex: Reaction in the AT crystal at pH 7.0 for 40 sec	4	435	A	1	432
+Q9Y253	1	432	4ecs	Human DNA polymerase eta - DNA ternary complex: Reaction in the AT crystal at pH 7.0 for 80 sec	4	435	A	1	432
+Q9Y253	1	432	4j9m	Human DNA polymerase eta-DNA ternary complex: misincorporation G opposite T after an A at the primer 3' end (AA/G)	4	435	A	1	432
+Q9Y253	1	432	4j9l	Human DNA polymerase eta-DNA ternary complex: misincorporation G opposite T after a C at the primer 3' end (CA/G)	4	435	A	1	432
+Q9Y253	1	432	4j9o	Human DNA polymerase eta-DNA ternary complex: primer extension after a T:G mispair	4	435	A	None	432
+Q9Y253	1	432	4j9n	Human DNA polymerase eta-DNA ternary complex: misincorporation G opposite T after a G at the primer 3' end (GA/G)	4	435	A	1	432
+Q9Y253	1	432	4j9k	Human DNA polymerase eta-DNA ternary complex: misincorporation G opposite T after a T at the primer 3' end (TA/G)	4	435	A	1	432
+Q9Y253	1	432	6d0m	Polymerase Eta post-insertion binary complex with cytarabine (AraC)	4	435	A	1	432
+Q9Y253	1	432	5kfj	Human DNA polymerase eta-DNA ternary complex: reaction with 10 mM Mn2+ for 180s	4	435	A	1	432
+Q9Y253	1	432	6d0z	Polymerase Eta cytarabine (AraC) extension ternary complex	4	435	A	1	432
+Q9Y253	1	432	6mp3	Binary structure of DNA polymerase eta in complex with templating hypoxanthine	4	435	A	1	432
+Q9Y253	1	432	5dg7	CRYSTAL STRUCTURE OF HUMAN DNA POLYMERASE ETA INSERTING dTTP ACROSS A DNA TEMPLATE CONTAINING 1,N6-ETHENODEOXYADENOSINE LESION	4	435	A	1	432
+Q9Y253	1	432	6pl8	Structure of human DNA polymerase eta complexed with 8OA in the template base paired with incoming non-hydrolyzable TTP	4	435	A	1	432
+Q9Y253	1	432	5dlg	Crystal Structure of Human DNA Polymerase Eta Inserting dGMPNPP Opposite O4-Methylhymidine	4	435	A	1	432
+Q9Y253	1	432	5dlf	Crystal Structure of Human DNA Polymerase Eta Inserting dATP Opposite O4-Methylhymidine	4	435	A	1	432
+Q9Y253	1	432	6pl7	Structure of human DNA polymerase eta complexed with A in the template base paired with incoming non-hydrolyzable TTP	4	435	A	1	432
+Q9Y253	1	432	5dg8	CRYSTAL STRUCTURE OF HUMAN DNA POLYMERASE ETA INSERTING dAMPNPP ACROSS A DNA TEMPLATE CONTAINING 1,N6-ETHENODEOXYADENOSINE LESION	4	435	A	1	432
+Q9Y253	1	432	5dg9	CRYSTAL STRUCTURE OF HUMAN DNA POLYMERASE ETA INSERTING dGMPNPP ACROSS A DNA TEMPLATE CONTAINING 1,N6-ETHENODEOXYADENOSINE LESION	4	435	A	1	432
+Q9Y253	1	432	6pz3	Polymerase Eta-catalyzed insertion of correct G opposite template cytarabine (AraC) residue	4	435	A	1	432
+Q9Y253	1	432	5jum	Crystal Structure of Human DNA Polymerase Eta Inserting dCTP Opposite N-(2'-deoxyguanosin-8- yl)-3-aminobenzanthrone (C8-dG-ABA)	4	435	A	1	432
+Q9Y253	1	432	4q8e	Human DNA polymerase eta inserting dCMPNPP opposite a phenanthriplatin adducted G	4	435	A	1	432
+Q9Y253	1	432	4q8f	Human DNA polymerase eta extending primer immediately after a phenanthriplatin adducted G	4	435	A	1	432
+Q9Y253	1	432	4yr3	Mutant Human DNA Polymerase Eta R61M Inserting dCTP Opposite Template G	4	435	A	1	432
+Q9Y253	1	432	4yr2	Mutant Human DNA Polymerase Eta R61M Inserting dATP Opposite an 8-Oxoguanine Lesion	4	435	A	1	432
+Q9Y253	1	432	4yr0	Mutant Human DNA Polymerase Eta R61M Inserting dCTP Opposite an 8-Oxoguanine Lesion	4	435	A	1	432
+Q9Y253	1	432	6m7o	Human DNA polymerase eta ternary complex with Mn2+ and dTMPNPP oppositing cdA	4	435	A	None	None
+Q9Y253	1	432	4yqw	Mutant Human DNA Polymerase Eta Q38A/R61A Inserting dCTP Opposite Template G	4	435	A	1	432
+Q9Y253	1	432	6m7p	Human DNA polymerase eta extension complex with cdA at the -2 position	4	435	A	1	432
+Q9Y253	1	432	6m7v	Human DNA polymerase eta extension complex with cdA at the -1 position	4	435	A	1	None
+Q9Y253	1	432	6m7t	Human DNA polymerase eta in a non-productive ternary complex with Ca2+ and dTTP oppositing cdA	4	435	A	1	None
+Q9Y253	1	432	6m7u	Human DNA polymerase eta in a non-productive ternary complex with Mg2+ and dTMPNPP oppositing cdA	4	435	A	1	None
+Q9Y253	1	432	4ru9	Crystal structure of human DNA polymerase eta inserting dCMPNPP opposite a MeFapy-dG adducted DNA template	1	432	A	1	432
+Q9Y253	1	432	5dqg	Crystal Structure of Human DNA Polymerase Eta Inserting dAMPNPP Opposite O4-Ethylthymidine	4	435	A	1	432
+Q9Y253	1	432	4j9q	Human DNA polymerase eta-DNA postinsertion binary complex with TG mispair	4	435	A	None	432
+Q9Y253	1	432	5dqh	Crystal Structure of Human DNA Polymerase Eta Inserting dGMPNPP Opposite O4-Ethylthymidine	4	435	A	1	432
+Q9Y253	1	432	5dqi	Crystal Structure of Human DNA Polymerase Eta Extending an O4-Ethylthymidine : dA Pair By Inserting dCTP Opposite dG	4	435	A	None	432
+Q9Y253	1	432	4yp3	Mutant Human DNA Polymerase Eta Q38A/R61A Inserting dCTP Opposite an 8-Oxoguanine Lesion	4	435	A	1	432
+Q9Y253	1	432	5f9l	CRYSTAL STRUCTURE OF HUMAN DNA POLYMERASE ETA INSERTING dAMPNPP ACROSS A DNA TEMPLATE CONTAINING 1,N2-ETHENODEOXYGUANOSINE LESION	4	435	A	1	432
+Q9Y253	1	432	4dl2	Human DNA polymerase eta inserting dCMPNPP opposite CG template (GG0a)	4	435	A	None	432
+Q9Y253	1	432	4dl3	Human DNA polymerase eta inserting dCMPNPP opposite GG template (GG0b).	4	435	A	1	432
+Q9Y253	1	432	4dl4	Human DNA polymerase eta inserting dCMPNPP opposite the 3'G of cisplatin crosslinked Gs (Pt-GG1).	4	435	A	1	432
+Q9Y253	1	432	4dl5	Human DNA polymerase eta inserting dCMPNPP opposite the 5'G of cisplatin crosslinked Gs (Pt-GG2).	4	435	A	None	432
+Q9Y253	1	432	4dl6	Human DNA polymerase eta extending primer immediately after cisplatin crosslink (Pt-GG3).	4	435	A	None	432
+Q9Y253	1	432	4dl7	Human DNA polymerase eta fails to extend primer 2 nucleotide after cisplatin crosslink (Pt-GG4).	4	435	A	1	432
+Q9Y253	1	432	4ecx	Human DNA polymerase eta - DNA ternary complex: Reaction in the AT crystal at pH 7.0 for 300 sec	4	435	A	1	432
+Q9Y253	1	432	4ecy	Human DNA polymerase eta - DNA ternary complex: AT crystal at pH 6.0 (Na+ MES) with 1 Ca2+ ion	4	435	A	1	432
+Q9Y253	1	432	4j9s	Human DNA polymerase eta-DNA translocated binary complex: with TA base pair	4	435	A	1	432
+Q9Y253	1	432	4j9r	Human DNA polymerase eta-DNA translocated binary complex with TG mispair	4	435	A	None	432
+Q9Y253	1	432	5kfo	Human DNA polymerase eta-DNA ternary complex with Sp-dATP-alpha-S: reaction with 1 mM Mn2+ for 1800s	4	435	A	1	432
+Q9Y253	1	432	6q02	Polymerase Eta-catalyzed insertion of the mismatched A opposite template cytarabine (AraC) residue	4	435	A	1	432
+Q9Y253	1	432	4ect	Human DNA polymerase eta - DNA ternary complex: Reaction in the AT crystal at pH 7.0 for 140 sec	4	435	A	1	432
+Q9Y253	1	432	4ecu	Human DNA polymerase eta - DNA ternary complex: Reaction in the AT crystal at pH 7.0 for 200 sec	4	435	A	1	432
+Q9Y253	1	432	3mr6	Human DNA polymerase eta - DNA ternary complex with a CPD 2bp upstream of the active site (TT4)	4	435	A	1	432
+Q9Y253	1	432	3mr5	Human DNA polymerase eta - DNA ternary complex with a CPD 1bp upstream of the active site (TT3)	4	435	A	1	432
+Q9Y253	1	432	3mr2	Human DNA polymerase eta in complex with normal DNA and incoming nucleotide (Nrm)	4	435	A	1	432
+Q9Y253	1	432	3mr3	Human DNA polymerase eta - DNA ternary complex with the 3'T of a CPD in the active site (TT1)	4	435	A	1	432
+Q9Y253	3	435	6mxo	Structure of HPoleta incorporating dCTP opposite the 3-prime Pt(DACH)-GG	10	442	A	3	None
+Q9Y253	3	432	6mq8	Binary structure of DNA polymerase eta in complex with templating hypoxanthine	10	439	A	3	432
+Q9Y253	524	539	2lsk	C-terminal domain of human REV1 in complex with DNA-polymerase H (eta)	1	16	B	524	539
+Q9Y253	628	662	2i5o	Solution Structure of the Ubiquitin-Binding Zinc Finger (UBZ) Domain of the Human DNA Y-Polymerase Eta	5	39	A	None	39
+Q9Y253	630	665	3wup	Crystal Structure of the Ubiquitin-Binding Zinc Finger (UBZ) Domain of the Human DNA Polymerase Eta	3	38	A	630	None
+

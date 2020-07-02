@@ -1,0 +1,30 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q16513	RAC-alpha serine/threonine-protein kinase,PIFtide	PKN2_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	657	916
+Q16513	RAC-alpha serine/threonine-protein kinase,PIFtide	PKN2_HUMAN	Homo sapiens	PF00433	Pkinase_C	Protein kinase C terminal domain	937	979
+Q16513	RAC-alpha serine/threonine-protein kinase,PIFtide	PKN2_HUMAN	Homo sapiens	PF02185	HR1	Hr1 repeat	218	285
+Q16513	RAC-alpha serine/threonine-protein kinase,PIFtide	PKN2_HUMAN	Homo sapiens	PF02185	HR1	Hr1 repeat	137	204
+Q16513	RAC-alpha serine/threonine-protein kinase,PIFtide	PKN2_HUMAN	Homo sapiens	PF02185	HR1	Hr1 repeat	49	111
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 4 PDB chains in 4 PDB entries
+Q16513	646	984	4crs	Human Protein Kinase N2 (PKN2, PRKCL2) in complex with ATPgammaS	3	341	A	646	984
+Q16513	969	983	4rrv	Crystal structure of PDK1 in complex with ATP and PIFtide	1	15	B	None	None
+Q16513	969	983	6ccy	Crystal structure of Akt1 in complex with a selective inhibitor	327	341	A	None	481
+Q16513	973	984	6gbe	Murine Protein Tyrosine Phosphatase PTPN13 PDZ3 Domain-PRK2 Peptide Complex	1	12	B	120	131
+

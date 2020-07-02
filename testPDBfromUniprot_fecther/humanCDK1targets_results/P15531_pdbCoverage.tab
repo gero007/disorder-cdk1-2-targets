@@ -1,0 +1,48 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P15531	Nucleoside diphosphate kinase A	NDKA_HUMAN	Homo sapiens	PF00334	NDK	Nucleoside diphosphate kinase	5	139
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#26 mappings in 26 PDB chains in 7 PDB entries
+P15531	1	152	4eno	Crystal structure of oxidized human nm23-H1	1	152	A	1	None
+P15531	1	152	4eno	Crystal structure of oxidized human nm23-H1	1	152	B	1	None
+P15531	1	152	2hve	S120G mutant of human nucleoside diphosphate kinase A complexed with ADP	1	152	C	None	152
+P15531	1	152	2hve	S120G mutant of human nucleoside diphosphate kinase A complexed with ADP	1	152	B	None	152
+P15531	1	152	2hve	S120G mutant of human nucleoside diphosphate kinase A complexed with ADP	1	152	A	None	152
+P15531	1	152	3l7u	Crystal structure of human NM23-H1	21	172	C	1	152
+P15531	1	152	3l7u	Crystal structure of human NM23-H1	21	172	B	1	152
+P15531	1	152	3l7u	Crystal structure of human NM23-H1	21	172	A	1	152
+P15531	1	152	1jxv	Crystal Structure of Human Nucleoside Diphosphate Kinase A	1	152	C	None	152
+P15531	1	152	1jxv	Crystal Structure of Human Nucleoside Diphosphate Kinase A	1	152	B	None	152
+P15531	1	152	1jxv	Crystal Structure of Human Nucleoside Diphosphate Kinase A	1	152	A	None	152
+P15531	1	152	1jxv	Crystal Structure of Human Nucleoside Diphosphate Kinase A	1	152	E	None	152
+P15531	1	152	1jxv	Crystal Structure of Human Nucleoside Diphosphate Kinase A	1	152	D	None	152
+P15531	1	152	1jxv	Crystal Structure of Human Nucleoside Diphosphate Kinase A	1	152	F	None	152
+P15531	1	152	2hvd	Human nucleoside diphosphate kinase A complexed with ADP	1	152	C	None	152
+P15531	1	152	2hvd	Human nucleoside diphosphate kinase A complexed with ADP	1	152	B	None	152
+P15531	1	152	2hvd	Human nucleoside diphosphate kinase A complexed with ADP	1	152	A	None	152
+P15531	1	152	5ui4	Structure of NME1 covalently conjugated to imidazole fluorosulfate	8	159	C	None	None
+P15531	1	152	5ui4	Structure of NME1 covalently conjugated to imidazole fluorosulfate	8	159	B	None	152
+P15531	1	152	5ui4	Structure of NME1 covalently conjugated to imidazole fluorosulfate	8	159	A	None	None
+P15531	1	152	5ui4	Structure of NME1 covalently conjugated to imidazole fluorosulfate	8	159	F	None	None
+P15531	1	152	5ui4	Structure of NME1 covalently conjugated to imidazole fluorosulfate	8	159	D	None	152
+P15531	1	152	5ui4	Structure of NME1 covalently conjugated to imidazole fluorosulfate	8	159	E	None	None
+P15531	1	152	1ucn	X-ray structure of human nucleoside diphosphate kinase A complexed with ADP at 2 A resolution	1	152	C	None	152
+P15531	1	152	1ucn	X-ray structure of human nucleoside diphosphate kinase A complexed with ADP at 2 A resolution	1	152	B	None	152
+P15531	1	152	1ucn	X-ray structure of human nucleoside diphosphate kinase A complexed with ADP at 2 A resolution	1	152	A	None	152
+

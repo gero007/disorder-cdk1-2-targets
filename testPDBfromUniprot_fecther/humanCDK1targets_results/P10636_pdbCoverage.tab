@@ -1,0 +1,214 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P10636	PRO-SEP-LEU-PRO-DVA	TAU_HUMAN	Homo sapiens	PF00418	Tubulin-binding	Tau and MAP protein, tubulin-binding repeat	654	685
+P10636	PRO-SEP-LEU-PRO-DVA	TAU_HUMAN	Homo sapiens	PF00418	Tubulin-binding	Tau and MAP protein, tubulin-binding repeat	623	653
+P10636	PRO-SEP-LEU-PRO-DVA	TAU_HUMAN	Homo sapiens	PF00418	Tubulin-binding	Tau and MAP protein, tubulin-binding repeat	592	622
+P10636	PRO-SEP-LEU-PRO-DVA	TAU_HUMAN	Homo sapiens	PF00418	Tubulin-binding	Tau and MAP protein, tubulin-binding repeat	561	591
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#186 mappings in 186 PDB chains in 67 PDB entries
+P10636	1	758	6nwq	Chronic traumatic encephalopathy Type II Tau filament	1	441	D	None	None
+P10636	1	758	6nwq	Chronic traumatic encephalopathy Type II Tau filament	1	441	C	None	None
+P10636	1	758	6nwq	Chronic traumatic encephalopathy Type II Tau filament	1	441	A	None	None
+P10636	1	758	6nwq	Chronic traumatic encephalopathy Type II Tau filament	1	441	F	None	None
+P10636	1	758	6nwq	Chronic traumatic encephalopathy Type II Tau filament	1	441	E	None	None
+P10636	1	758	6nwq	Chronic traumatic encephalopathy Type II Tau filament	1	441	B	None	None
+P10636	1	758	6nwp	Chronic traumatic encephalopathy Type I Tau filament	1	441	D	None	None
+P10636	1	758	6nwp	Chronic traumatic encephalopathy Type I Tau filament	1	441	C	None	None
+P10636	1	758	6nwp	Chronic traumatic encephalopathy Type I Tau filament	1	441	A	None	None
+P10636	1	758	6nwp	Chronic traumatic encephalopathy Type I Tau filament	1	441	F	None	None
+P10636	1	758	6nwp	Chronic traumatic encephalopathy Type I Tau filament	1	441	E	None	None
+P10636	1	758	6nwp	Chronic traumatic encephalopathy Type I Tau filament	1	441	B	None	None
+P10636	1	758	6tjx	Cryo-EM structure of TypeII tau filaments extracted from the brains of individuals with Corticobasal degeneration	1	441	D	None	None
+P10636	1	758	6tjx	Cryo-EM structure of TypeII tau filaments extracted from the brains of individuals with Corticobasal degeneration	1	441	C	None	None
+P10636	1	758	6tjx	Cryo-EM structure of TypeII tau filaments extracted from the brains of individuals with Corticobasal degeneration	1	441	A	None	None
+P10636	1	758	6tjx	Cryo-EM structure of TypeII tau filaments extracted from the brains of individuals with Corticobasal degeneration	1	441	F	None	None
+P10636	1	758	6tjx	Cryo-EM structure of TypeII tau filaments extracted from the brains of individuals with Corticobasal degeneration	1	441	E	None	None
+P10636	1	758	6tjx	Cryo-EM structure of TypeII tau filaments extracted from the brains of individuals with Corticobasal degeneration	1	441	B	None	None
+P10636	1	758	6tjo	Cryo-EM structure of TypeI tau filaments extracted from the brains of individuals with Corticobasal degeneration	1	441	A	None	None
+P10636	1	758	6tjo	Cryo-EM structure of TypeI tau filaments extracted from the brains of individuals with Corticobasal degeneration	1	441	B	None	None
+P10636	1	758	6tjo	Cryo-EM structure of TypeI tau filaments extracted from the brains of individuals with Corticobasal degeneration	1	441	C	None	None
+P10636	1	758	6hre	Paired helical filament from sporadic Alzheimer's disease brain	1	441	D	None	None
+P10636	1	758	6hre	Paired helical filament from sporadic Alzheimer's disease brain	1	441	C	None	None
+P10636	1	758	6hre	Paired helical filament from sporadic Alzheimer's disease brain	1	441	A	None	None
+P10636	1	758	6hre	Paired helical filament from sporadic Alzheimer's disease brain	1	441	F	None	None
+P10636	1	758	6hre	Paired helical filament from sporadic Alzheimer's disease brain	1	441	E	None	None
+P10636	1	758	6hre	Paired helical filament from sporadic Alzheimer's disease brain	1	441	B	None	None
+P10636	1	758	6hrf	Straight filament from sporadic Alzheimer's disease brain	1	441	D	None	None
+P10636	1	758	6hrf	Straight filament from sporadic Alzheimer's disease brain	1	441	C	None	None
+P10636	1	758	6hrf	Straight filament from sporadic Alzheimer's disease brain	1	441	A	None	None
+P10636	1	758	6hrf	Straight filament from sporadic Alzheimer's disease brain	1	441	F	None	None
+P10636	1	758	6hrf	Straight filament from sporadic Alzheimer's disease brain	1	441	E	None	None
+P10636	1	758	6hrf	Straight filament from sporadic Alzheimer's disease brain	1	441	B	None	None
+P10636	52	71	6gk8	Crystal structure of anti-tau antibody dmCBTAU-28.1, double mutant (S32R, E35K) of CBTAU-28.1, in complex with Tau peptide A7731 (residues 52-71)	1	20	I	None	None
+P10636	52	71	5zv3	Crystal structure of human anti-tau antibody CBTAU-28.1 in complex with its tau peptide	1	20	A	None	None
+P10636	511	528	5e2v	Anti-TAU AT8 FAB with doubly phosphorylated TAU peptide	1	18	P	None	None
+P10636	511	528	5e2w	Anti-TAU AT8 FAB with triply phosphorylated TAU peptide	1	18	P	None	None
+P10636	514	717	6cvn	Model of synthetic tau (R2x4) bound to the microtubule	1	202	D	None	None
+P10636	631	661	6cvj	Model of synthetic tau (four tandem repeats of first repeat sequence) bound to the microtubule	120	150	D	None	None
+P10636	662	717	6cvj	Model of synthetic tau (four tandem repeats of first repeat sequence) bound to the microtubule	152	206	D	None	None
+P10636	514	599	6cvj	Model of synthetic tau (four tandem repeats of first repeat sequence) bound to the microtubule	1	86	D	None	None
+P10636	600	630	6cvj	Model of synthetic tau (four tandem repeats of first repeat sequence) bound to the microtubule	88	118	D	None	None
+P10636	527	536	4fl5	Crystal structure of human 14-3-3 sigma in complex with a Tau-protein peptide surrounding pS214	1	10	P	None	None
+P10636	527	536	4fl5	Crystal structure of human 14-3-3 sigma in complex with a Tau-protein peptide surrounding pS214	1	10	Q	None	None
+P10636	528	533	6faw	Crystal structure of C-terminal modified Tau peptide-hybrid 4.2c-I with 14-3-3sigma	2	7	B	2	7
+P10636	529	533	6faw	Crystal structure of C-terminal modified Tau peptide-hybrid 4.2c-I with 14-3-3sigma	1	5	D	3	7
+P10636	528	533	6fav	Crystal structure of C-terminal modified Tau peptide-hybrid 4.2f-I with 14-3-3sigma	2	7	B	2	7
+P10636	529	533	6fav	Crystal structure of C-terminal modified Tau peptide-hybrid 4.2f-I with 14-3-3sigma	1	5	D	3	7
+P10636	528	533	6fby	Crystal structure of C-terminal modified Tau peptide-hybrid 4.2b with 14-3-3sigma	2	7	B	2	7
+P10636	529	533	6fby	Crystal structure of C-terminal modified Tau peptide-hybrid 4.2b with 14-3-3sigma	1	5	D	3	7
+P10636	528	533	6fau	Crystal structure of C-terminal modified Tau peptide-hybrid 4.2e-I with 14-3-3sigma	2	7	B	2	7
+P10636	529	533	6fau	Crystal structure of C-terminal modified Tau peptide-hybrid 4.2e-I with 14-3-3sigma	1	5	D	3	7
+P10636	528	534	4y5i	Crystal structure of C-terminal modified Tau peptide-hybrid 126B with 14-3-3sigma	2	8	G	None	8
+P10636	528	534	4y5i	Crystal structure of C-terminal modified Tau peptide-hybrid 126B with 14-3-3sigma	2	8	F	2	8
+P10636	528	534	4y32	Crystal structure of C-terminal modified Tau peptide-hybrid 109B with 14-3-3sigma	1	7	D	None	217
+P10636	528	534	4y32	Crystal structure of C-terminal modified Tau peptide-hybrid 109B with 14-3-3sigma	1	7	C	211	217
+P10636	528	534	4y3b	Crystal structure of C-terminal modified Tau peptide-hybrid 201D with 14-3-3sigma	1	7	C	211	217
+P10636	528	534	4y3b	Crystal structure of C-terminal modified Tau peptide-hybrid 201D with 14-3-3sigma	1	7	D	None	217
+P10636	528	534	5hf3	Crystal structure of C-terminal modified Tau peptide-hybrid 201D with 14-3-3sigma	2	8	B	2	8
+P10636	528	533	6fbw	Crystal structure of C-terminal modified Tau peptide-hybrid 4.2f-II with 14-3-3sigma	1	6	D	None	7
+P10636	528	533	6fbw	Crystal structure of C-terminal modified Tau peptide-hybrid 4.2f-II with 14-3-3sigma	1	6	B	2	7
+P10636	529	533	6fi5	Crystal structure of C-terminal modified Tau peptide-hybrid 3.2d with 14-3-3sigma	1	5	B	3	7
+P10636	530	533	6fi4	Crystal structure of C-terminal modified Tau peptide-hybrid 3.2e with 14-3-3sigma	1	4	B	4	7
+P10636	532	547	4tqe	Structure of tau peptide in complex with Tau5 antibody Fab fragment	1	16	A	215	230
+P10636	541	557	4glr	Structure of the anti-ptau Fab (pT231/pS235_1) in complex with phosphoepitope pT231/pS235	1	17	A	None	None
+P10636	541	557	4glr	Structure of the anti-ptau Fab (pT231/pS235_1) in complex with phosphoepitope pT231/pS235	1	17	B	None	None
+P10636	542	554	1i8h	SOLUTION STRUCTURE OF PIN1 WW DOMAIN COMPLEXED WITH HUMAN TAU PHOSPHOTHREONINE PEPTIDE	1	13	A	1	13
+P10636	552	560	5zia	Crystal structure of human anti-tau antibody CBTAU-24.1 in complex with its phosphorylated tau peptide	1	9	J	235	243
+P10636	552	560	5zia	Crystal structure of human anti-tau antibody CBTAU-24.1 in complex with its phosphorylated tau peptide	1	9	N	235	243
+P10636	552	560	5zia	Crystal structure of human anti-tau antibody CBTAU-24.1 in complex with its phosphorylated tau peptide	1	9	R	235	243
+P10636	552	560	5zia	Crystal structure of human anti-tau antibody CBTAU-24.1 in complex with its phosphorylated tau peptide	1	9	Q	235	243
+P10636	552	560	5zia	Crystal structure of human anti-tau antibody CBTAU-24.1 in complex with its phosphorylated tau peptide	1	9	C	235	243
+P10636	552	560	5zia	Crystal structure of human anti-tau antibody CBTAU-24.1 in complex with its phosphorylated tau peptide	1	9	F	235	243
+P10636	571	607	5n5a	Structure of Tau(254-290) bound to F-actin	1	37	A	254	290
+P10636	571	585	5nvb	Structure of Tau(254-268) bound to F-actin	1	15	A	254	268
+P10636	584	629	2mz7	Structure of Tau(267-312) bound to Microtubules	1	46	A	267	312
+P10636	589	647	6qjh	Cryo-EM structure of heparin-induced 2N4R tau snake filaments	1	59	C	272	330
+P10636	589	647	6qjh	Cryo-EM structure of heparin-induced 2N4R tau snake filaments	1	59	A	272	330
+P10636	589	647	6qjh	Cryo-EM structure of heparin-induced 2N4R tau snake filaments	1	59	B	272	330
+P10636	591	697	6vha	Singlet Tau Fibril from Corticobasal Degeneration Human Brain Tissue	1	107	E	274	380
+P10636	591	697	6vha	Singlet Tau Fibril from Corticobasal Degeneration Human Brain Tissue	1	107	G	274	380
+P10636	591	697	6vha	Singlet Tau Fibril from Corticobasal Degeneration Human Brain Tissue	1	107	F	274	380
+P10636	591	697	6vh7	Doublet Tau Fibril from Corticobasal Degeneration Human Brain Tissue	1	107	G	274	380
+P10636	591	697	6vh7	Doublet Tau Fibril from Corticobasal Degeneration Human Brain Tissue	1	107	B	274	380
+P10636	591	697	6vh7	Doublet Tau Fibril from Corticobasal Degeneration Human Brain Tissue	1	107	C	274	380
+P10636	591	697	6vh7	Doublet Tau Fibril from Corticobasal Degeneration Human Brain Tissue	1	107	E	274	380
+P10636	591	697	6vh7	Doublet Tau Fibril from Corticobasal Degeneration Human Brain Tissue	1	107	F	274	380
+P10636	591	697	6vh7	Doublet Tau Fibril from Corticobasal Degeneration Human Brain Tissue	1	107	A	274	380
+P10636	591	600	5v5b	KVQIINKKLD, Structure of the amyloid spine from microtubule associated protein tau Repeat 2	1	10	A	274	283
+P10636	591	599	6nk4	KVQIINKKL, crystal structure of a tau protein fragment	1	9	A	1	9
+P10636	591	638	6qjm	Cryo-EM structure of heparin-induced 2N4R tau twister filaments	1	48	C	274	321
+P10636	591	638	6qjm	Cryo-EM structure of heparin-induced 2N4R tau twister filaments	1	48	B	274	321
+P10636	591	638	6qjm	Cryo-EM structure of heparin-induced 2N4R tau twister filaments	1	48	A	274	321
+P10636	591	638	6qjp	Cryo-EM structure of heparin-induced 2N4R tau jagged filaments	1	48	B	274	321
+P10636	591	638	6qjp	Cryo-EM structure of heparin-induced 2N4R tau jagged filaments	1	48	A	274	321
+P10636	591	638	6qjp	Cryo-EM structure of heparin-induced 2N4R tau jagged filaments	1	48	C	274	321
+P10636	592	597	5v5c	VQIINK, Structure of the amyloid-spine from microtubule associated protein tau Repeat 2	1	6	A	275	280
+P10636	602	695	6gx5	Narrow Pick Filament from Pick's disease brain	1	94	C	254	378
+P10636	602	695	6gx5	Narrow Pick Filament from Pick's disease brain	1	94	A	254	378
+P10636	602	695	6gx5	Narrow Pick Filament from Pick's disease brain	1	94	B	254	378
+P10636	609	638	5mp3	Crystal structure of DC8E8 Fab in the complex with a 30-mer tau peptide at pH 6.5	1	30	C	None	None
+P10636	609	638	5mp3	Crystal structure of DC8E8 Fab in the complex with a 30-mer tau peptide at pH 6.5	1	30	D	None	None
+P10636	609	636	5n5b	Structure of Tau(292-319) bound to F-actin	1	28	A	292	319
+P10636	615	628	5mo3	Crystal structure of DC8E8 Fab in the complex with a 14-mer tau peptide at pH 8.5	1	14	A	298	None
+P10636	615	628	5mp1	Crystal structure of DC8E8 Fab in the complex with a 14-mer tau peptide at pH 7.5	1	14	E	None	None
+P10636	615	628	5mp1	Crystal structure of DC8E8 Fab in the complex with a 14-mer tau peptide at pH 7.5	1	14	B	None	None
+P10636	615	628	5mp1	Crystal structure of DC8E8 Fab in the complex with a 14-mer tau peptide at pH 7.5	1	14	I	None	None
+P10636	615	628	5mp1	Crystal structure of DC8E8 Fab in the complex with a 14-mer tau peptide at pH 7.5	1	14	A	None	None
+P10636	615	628	5mp5	Crystal structure of DC8E8 Fab in the complex with a 14-mer tau peptide at pH 6.5	1	14	K	None	None
+P10636	615	628	5mp5	Crystal structure of DC8E8 Fab in the complex with a 14-mer tau peptide at pH 6.5	1	14	I	None	None
+P10636	615	628	5mp5	Crystal structure of DC8E8 Fab in the complex with a 14-mer tau peptide at pH 6.5	1	14	J	None	None
+P10636	620	647	6qjq	Cryo-EM structure of heparin-induced 2N3R tau filaments	1	28	F	None	330
+P10636	620	647	6qjq	Cryo-EM structure of heparin-induced 2N3R tau filaments	1	28	D	None	330
+P10636	620	647	6qjq	Cryo-EM structure of heparin-induced 2N3R tau filaments	1	28	E	None	330
+P10636	620	647	6qjq	Cryo-EM structure of heparin-induced 2N3R tau filaments	1	28	A	272	330
+P10636	620	647	6qjq	Cryo-EM structure of heparin-induced 2N3R tau filaments	1	28	C	272	330
+P10636	620	647	6qjq	Cryo-EM structure of heparin-induced 2N3R tau filaments	1	28	B	272	330
+P10636	621	628	4e0n	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form II)	1	8	D	0	7
+P10636	621	628	4e0n	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form II)	1	8	C	0	7
+P10636	621	628	4e0n	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form II)	1	8	B	0	7
+P10636	621	628	4e0n	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form II)	1	8	A	0	7
+P10636	621	628	4e0m	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form I)	1	8	D	0	7
+P10636	621	628	4e0m	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form I)	1	8	C	0	7
+P10636	621	628	4e0m	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form I)	1	8	B	0	7
+P10636	621	628	4e0m	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form I)	1	8	A	0	7
+P10636	621	697	6vhl	Paired Helical Filament from Alzheimer's Disease Human Brain Tissue	1	77	E	304	380
+P10636	621	697	6vhl	Paired Helical Filament from Alzheimer's Disease Human Brain Tissue	1	77	F	304	380
+P10636	621	697	6vi3	Straight Filament from Alzheimer's Disease Human Brain Tissue	1	77	E	304	380
+P10636	621	697	6vi3	Straight Filament from Alzheimer's Disease Human Brain Tissue	1	77	F	304	380
+P10636	621	628	4e0o	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form III)	1	8	D	0	7
+P10636	621	628	4e0o	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form III)	1	8	C	0	7
+P10636	621	628	4e0o	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form III)	1	8	B	0	7
+P10636	621	628	4e0o	SVQIVYK segment from human Tau (305-311) displayed on 54-membered macrocycle scaffold (form III)	1	8	A	0	7
+P10636	622	627	6odg	SVQIVY, Crystal Structure of a tau protein fragment	1	6	B	1	6
+P10636	622	627	6odg	SVQIVY, Crystal Structure of a tau protein fragment	1	6	A	1	6
+P10636	623	695	5o3o	Pronase-treated paired helical filament in Alzheimer's disease brain	1	73	I	306	378
+P10636	623	695	5o3o	Pronase-treated paired helical filament in Alzheimer's disease brain	1	73	D	306	378
+P10636	623	695	5o3o	Pronase-treated paired helical filament in Alzheimer's disease brain	1	73	C	306	378
+P10636	623	695	5o3o	Pronase-treated paired helical filament in Alzheimer's disease brain	1	73	G	306	378
+P10636	623	695	5o3o	Pronase-treated paired helical filament in Alzheimer's disease brain	1	73	B	306	378
+P10636	623	695	5o3o	Pronase-treated paired helical filament in Alzheimer's disease brain	1	73	F	306	378
+P10636	623	695	5o3o	Pronase-treated paired helical filament in Alzheimer's disease brain	1	73	A	306	378
+P10636	623	695	5o3o	Pronase-treated paired helical filament in Alzheimer's disease brain	1	73	H	306	378
+P10636	623	695	5o3o	Pronase-treated paired helical filament in Alzheimer's disease brain	1	73	J	306	378
+P10636	623	695	5o3o	Pronase-treated paired helical filament in Alzheimer's disease brain	1	73	E	306	378
+P10636	623	695	5o3l	Paired helical filament in Alzheimer's disease brain	1	73	I	306	378
+P10636	623	695	5o3l	Paired helical filament in Alzheimer's disease brain	1	73	D	306	378
+P10636	623	695	5o3l	Paired helical filament in Alzheimer's disease brain	1	73	C	306	378
+P10636	623	695	5o3l	Paired helical filament in Alzheimer's disease brain	1	73	G	306	378
+P10636	623	695	5o3l	Paired helical filament in Alzheimer's disease brain	1	73	B	306	378
+P10636	623	695	5o3l	Paired helical filament in Alzheimer's disease brain	1	73	F	306	378
+P10636	623	695	5o3l	Paired helical filament in Alzheimer's disease brain	1	73	A	306	378
+P10636	623	695	5o3l	Paired helical filament in Alzheimer's disease brain	1	73	H	306	378
+P10636	623	695	5o3l	Paired helical filament in Alzheimer's disease brain	1	73	J	306	378
+P10636	623	695	5o3l	Paired helical filament in Alzheimer's disease brain	1	73	E	306	378
+P10636	623	628	2on9	Structure of an amyloid forming peptide VQIVYK from the repeat region of Tau	1	6	B	1	6
+P10636	623	628	2on9	Structure of an amyloid forming peptide VQIVYK from the repeat region of Tau	1	6	A	1	6
+P10636	623	628	5k7n	MicroED structure of tau VQIVYK peptide at 1.1 A resolution	1	6	Z	1	6
+P10636	623	628	3ovl	Structure of an amyloid forming peptide VQIVYK from the TAU protein in complex with orange G	1	6	A	1	6
+P10636	623	695	5o3t	Straight filament in Alzheimer's disease brain	1	73	I	306	378
+P10636	623	695	5o3t	Straight filament in Alzheimer's disease brain	1	73	D	306	378
+P10636	623	695	5o3t	Straight filament in Alzheimer's disease brain	1	73	C	306	378
+P10636	623	695	5o3t	Straight filament in Alzheimer's disease brain	1	73	G	306	378
+P10636	623	695	5o3t	Straight filament in Alzheimer's disease brain	1	73	B	306	378
+P10636	623	695	5o3t	Straight filament in Alzheimer's disease brain	1	73	F	306	378
+P10636	623	695	5o3t	Straight filament in Alzheimer's disease brain	1	73	A	306	378
+P10636	623	695	5o3t	Straight filament in Alzheimer's disease brain	1	73	H	306	378
+P10636	623	695	5o3t	Straight filament in Alzheimer's disease brain	1	73	J	306	378
+P10636	623	695	5o3t	Straight filament in Alzheimer's disease brain	1	73	E	306	378
+P10636	623	628	4np8	Structure of an amyloid forming peptide VQIVYK from the second repeat region of tau (alternate polymorph)	1	6	A	1	6
+P10636	625	635	6gk7	Crystal structure of anti-tau antibody dmCBTAU-27.1, double mutant (S31Y, T100I) of CBTAU-27.1, in complex with Tau peptide A8119B (residues 299-318)	1	11	A	308	318
+P10636	640	643	5btv	Crystal structure of human 14-3-3 sigma in complex with a Tau-protein peptide surrounding pS324	1	4	P	323	326
+P10636	696	725	6dc8	Fab/epitope complex of mouse monoclonal antibody 8B2 targeting a non-phosphorylated tau epitope.	1	30	P	None	408
+P10636	696	725	6dca	Fab/epitope complex of mouse monoclonal antibody 6B2 targeting a non-phosphorylated tau epitope.	1	30	P	None	408
+P10636	696	725	6dca	Fab/epitope complex of mouse monoclonal antibody 6B2 targeting a non-phosphorylated tau epitope.	1	30	R	None	408
+P10636	696	725	6dca	Fab/epitope complex of mouse monoclonal antibody 6B2 targeting a non-phosphorylated tau epitope.	1	30	Q	None	408
+P10636	696	725	6dca	Fab/epitope complex of mouse monoclonal antibody 6B2 targeting a non-phosphorylated tau epitope.	1	30	S	None	408
+P10636	696	725	6dc9	Fab/epitope complex of human chimeric monoclonal antibody h4E6 targeting a phosphorylated tau epitope.	1	30	P	None	408
+P10636	696	725	6dc9	Fab/epitope complex of human chimeric monoclonal antibody h4E6 targeting a phosphorylated tau epitope.	1	30	Q	None	408
+P10636	703	725	6bb4	Fab/epitope complex of mouse monoclonal antibody C5.2 targeting a phospho-tau epitope.	1	23	P	None	None
+P10636	703	725	6bb4	Fab/epitope complex of mouse monoclonal antibody C5.2 targeting a phospho-tau epitope.	1	23	R	None	None
+P10636	703	725	6bb4	Fab/epitope complex of mouse monoclonal antibody C5.2 targeting a phospho-tau epitope.	1	23	Q	None	None
+P10636	721	746	6h06	FAB CBTAU-22.1 IN COMPLEX WITH TAU PEPTIDE V1088-5	1	26	G	None	None
+P10636	721	746	6h06	FAB CBTAU-22.1 IN COMPLEX WITH TAU PEPTIDE V1088-5	1	26	I	None	None
+P10636	721	746	6h06	FAB CBTAU-22.1 IN COMPLEX WITH TAU PEPTIDE V1088-5	1	26	J	None	None
+P10636	721	746	6h06	FAB CBTAU-22.1 IN COMPLEX WITH TAU PEPTIDE V1088-5	1	26	K	None	None
+P10636	733	747	5dmg	X-RAY STRUCTURE OF THE FAB FRAGMENT OF THE ANTI TAU ANTIBODY RB86 IN COMPLEX WITH THE PHOSPHORYLATED TAU PEPTIDE (416-430)	1	15	P	None	430
+P10636	733	747	5dmg	X-RAY STRUCTURE OF THE FAB FRAGMENT OF THE ANTI TAU ANTIBODY RB86 IN COMPLEX WITH THE PHOSPHORYLATED TAU PEPTIDE (416-430)	1	15	Z	None	None
+P10636	733	747	5dmg	X-RAY STRUCTURE OF THE FAB FRAGMENT OF THE ANTI TAU ANTIBODY RB86 IN COMPLEX WITH THE PHOSPHORYLATED TAU PEPTIDE (416-430)	1	15	X	None	None
+

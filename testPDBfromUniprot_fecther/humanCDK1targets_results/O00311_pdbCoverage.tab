@@ -1,0 +1,37 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O00311	Cell division cycle 7-related protein kinase,Cell division cycle 7-related protein kinase,Cell division cycle 7-related protein kinase	CDC7_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	357	482
+O00311	Cell division cycle 7-related protein kinase,Cell division cycle 7-related protein kinase,Cell division cycle 7-related protein kinase	CDC7_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	58	221
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#14 mappings in 11 PDB chains in 9 PDB entries
+O00311	37	574	4f9a	Human CDC7 kinase in complex with DBF4 and nucleotide	2	361	A	None	None
+O00311	37	574	4f9a	Human CDC7 kinase in complex with DBF4 and nucleotide	2	361	C	37	None
+O00311	37	574	4f9c	Human CDC7 kinase in complex with DBF4 and XL413	2	361	A	None	None
+O00311	37	574	4f9b	Human CDC7 kinase in complex with DBF4 and PHA767491	2	361	C	37	None
+O00311	37	574	4f9b	Human CDC7 kinase in complex with DBF4 and PHA767491	2	361	A	None	None
+O00311	37	574	4f99	Human CDC7 kinase in complex with DBF4 and nucleotide	2	361	A	None	None
+O00311	534	574	6ya8	Cdc7-Dbf4 bound to ADP-BeF3	319	359	A	534	None
+O00311	37	467	6ya8	Cdc7-Dbf4 bound to ADP-BeF3	2	314	A	None	467
+O00311	534	574	6ya6	Minimal construct of Cdc7-Dbf4 bound to XL413	319	359	A	534	None
+O00311	37	467	6ya6	Minimal construct of Cdc7-Dbf4 bound to XL413	2	314	A	None	467
+O00311	37	466	6ya7	Cdc7-Dbf4 bound to an Mcm2-S40 derived bivalent substrate	1	312	A	None	466
+O00311	534	574	6ya7	Cdc7-Dbf4 bound to an Mcm2-S40 derived bivalent substrate	318	358	A	534	None
+O00311	456	478	5uwr	Crystal Structure of CDC7 NES Peptide (extended) in complex with CRM1-Ran-RanBP1	5	27	D	None	None
+O00311	456	473	5uwq	Crystal Structure of CDC7 NES Peptide in complex with CRM1-Ran-RanBP1	5	22	D	None	None
+

@@ -1,0 +1,67 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O75469	NUCLEAR RECEPTOR SUBFAMILY 1 GROUP I MEMBER 2	NR1I2_HUMAN	Homo sapiens	PF00104	Hormone_recep	Ligand-binding domain of nuclear hormone receptor	238	415
+O75469	NUCLEAR RECEPTOR SUBFAMILY 1 GROUP I MEMBER 2	NR1I2_HUMAN	Homo sapiens	PF00105	zf-C4	Zinc finger, C4 type (two domains)	39	109
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#44 mappings in 44 PDB chains in 28 PDB entries
+O75469	129	434	6hty	PXR in complex with P2X4 inhibitor compound 25	11	316	A	None	434
+O75469	129	434	6hty	PXR in complex with P2X4 inhibitor compound 25	11	316	B	None	None
+O75469	130	434	4s0s	STRUCTURE OF HUMAN PREGNANE X RECEPTOR LIGAND BINDING DOMAIN with ADNECTIN-1	11	315	A	None	None
+O75469	130	434	4s0s	STRUCTURE OF HUMAN PREGNANE X RECEPTOR LIGAND BINDING DOMAIN with ADNECTIN-1	11	315	B	None	None
+O75469	130	434	4s0t	STRUCTURE OF HUMAN PREGNANE X RECEPTOR LIGAND BINDING DOMAIN BOUND WITH ADNECTIN-1 AND COMPOUND-1	11	315	A	None	None
+O75469	130	434	4s0t	STRUCTURE OF HUMAN PREGNANE X RECEPTOR LIGAND BINDING DOMAIN BOUND WITH ADNECTIN-1 AND COMPOUND-1	11	315	B	None	None
+O75469	130	434	1ilg	Crystal Structure of Apo Human Pregnane X Receptor Ligand Binding Domain	12	316	A	None	None
+O75469	130	434	1nrl	Crystal Structure of the human PXR-LBD in complex with an SRC-1 coactivator peptide and SR12813	12	316	A	None	None
+O75469	130	434	1nrl	Crystal Structure of the human PXR-LBD in complex with an SRC-1 coactivator peptide and SR12813	12	316	B	None	None
+O75469	130	434	6hj2	Crystal structure of hPXR in complex with dabrafenib	12	315	A	None	434
+O75469	130	434	4xhd	STRUCTURE OF HUMAN PREGNANE X RECEPTOR LIGAND BINDING DOMAIN WITH COMPOUND-1	11	315	A	None	None
+O75469	130	434	4j5w	Crystal Structure of the apo-PXR/RXRalpha LBD Heterotetramer Complex	4	308	A	None	None
+O75469	130	434	4j5w	Crystal Structure of the apo-PXR/RXRalpha LBD Heterotetramer Complex	4	308	B	None	None
+O75469	130	434	4j5x	Crystal Structure of the SR12813-bound PXR/RXRalpha LBD Heterotetramer Complex	4	308	B	None	None
+O75469	130	434	4j5x	Crystal Structure of the SR12813-bound PXR/RXRalpha LBD Heterotetramer Complex	4	308	A	None	None
+O75469	130	434	6p2b	Tethered PXR-LBD/SRC-1p bound to Garcinoic Acid	12	316	A	None	None
+O75469	130	434	6p2b	Tethered PXR-LBD/SRC-1p bound to Garcinoic Acid	12	316	B	None	None
+O75469	130	434	3hvl	Tethered PXR-LBD/SRC-1p complexed with SR-12813	12	316	A	None	None
+O75469	130	434	3hvl	Tethered PXR-LBD/SRC-1p complexed with SR-12813	12	316	B	None	None
+O75469	130	434	3r8d	Activation of the Human Nuclear Xenobiotic Receptor PXR by the Reverse Transcriptase-Targeted Anti-HIV Drug PNU-142721	12	316	A	None	None
+O75469	130	434	4xao	Crystal structure of the hPXR-LBD obtained in presence of the pesticide trans-nonachlor	12	316	A	None	434
+O75469	130	434	1m13	Crystal Structure of the Human Pregane X Receptor Ligand Binding Domain in Complex with Hyperforin, a Constituent of St. John's Wort	12	316	A	None	434
+O75469	130	434	5x0r	Crystal Structure of PXR LBD Complexed with SJB7	12	316	A	None	None
+O75469	130	434	5x0r	Crystal Structure of PXR LBD Complexed with SJB7	12	316	B	None	None
+O75469	130	434	6nx1	STRUCTURE OF HUMAN PREGNANE X RECEPTOR LIGAND BINDING DOMAIN BOUND TETHERED WITH SRC CO-ACTIVATOR PEPTIDE AND COMPOUND-3 AKA 1,1,1,3,3,3-HEXAFLUORO-2-{4-[1-(4- LUOROBENZENESULFONYL)CYCLOPENTYL]PHENYL}PROPAN-2-OL	8	312	A	None	None
+O75469	130	434	6nx1	STRUCTURE OF HUMAN PREGNANE X RECEPTOR LIGAND BINDING DOMAIN BOUND TETHERED WITH SRC CO-ACTIVATOR PEPTIDE AND COMPOUND-3 AKA 1,1,1,3,3,3-HEXAFLUORO-2-{4-[1-(4- LUOROBENZENESULFONYL)CYCLOPENTYL]PHENYL}PROPAN-2-OL	8	312	B	None	None
+O75469	130	434	2qnv	Crystal Structure of the Pregnane X Receptor bound to Colupulone	12	316	A	None	434
+O75469	130	434	3ctb	Tethered PXR-LBD/SRC-1p apoprotein	12	316	A	None	None
+O75469	130	434	3ctb	Tethered PXR-LBD/SRC-1p apoprotein	12	316	B	None	None
+O75469	130	434	4x1g	Crystal structure of the hPXR-LBD in complex with the synthetic estrogen 17alpha-ethinylestradiol and the pesticide trans-nonachlor	12	316	A	None	434
+O75469	130	434	4x1f	Crystal structure of the hPXR-LBD in complex with the synthetic estrogen 17alpha-ethinylestradiol	12	316	A	None	434
+O75469	130	434	1ilh	Crystal Structure of Human Pregnane X Receptor Ligand Binding Domain Bound to SR12813	12	316	A	None	None
+O75469	130	434	6bns	STRUCTURE OF HUMAN PREGNANE X RECEPTOR LIGAND BINDING DOMAIN BOUND TETHERED WITH SRC co-activator peptide and Compound 25a AKA BICYCLIC HEXAFLUOROISOPROPYL 2 ALCOHOL SULFONAMIDES	8	312	A	None	None
+O75469	130	434	6bns	STRUCTURE OF HUMAN PREGNANE X RECEPTOR LIGAND BINDING DOMAIN BOUND TETHERED WITH SRC co-activator peptide and Compound 25a AKA BICYCLIC HEXAFLUOROISOPROPYL 2 ALCOHOL SULFONAMIDES	8	312	B	None	None
+O75469	130	432	5a86	Structure of pregnane X receptor in complex with a Sphingosine 1- Phosphate Receptor 1 Antagonist	12	314	A	None	432
+O75469	130	432	5a86	Structure of pregnane X receptor in complex with a Sphingosine 1- Phosphate Receptor 1 Antagonist	12	314	B	None	None
+O75469	130	431	1skx	Structural Disorder in the Complex of Human PXR and the Macrolide Antibiotic Rifampicin	12	313	A	None	431
+O75469	130	426	6dup	CRYSTAL STRUCTURE OF PXR IN COMPLEX WITH COMPOUND 7	12	308	A	None	426
+O75469	130	426	6dup	CRYSTAL STRUCTURE OF PXR IN COMPLEX WITH COMPOUND 7	12	308	B	None	426
+O75469	138	434	6s41	CRYSTAL STRUCTURE OF PXR IN COMPLEX WITH XPC-7455	1	297	A	None	None
+O75469	138	434	6s41	CRYSTAL STRUCTURE OF PXR IN COMPLEX WITH XPC-7455	1	297	B	138	None
+O75469	142	434	2o9i	Crystal Structure of the Human Pregnane X Receptor LBD in complex with an SRC-1 coactivator peptide and T0901317	1	293	A	142	None
+O75469	142	434	2o9i	Crystal Structure of the Human Pregnane X Receptor LBD in complex with an SRC-1 coactivator peptide and T0901317	1	293	B	1142	None
+O75469	142	431	4ny9	Crystal Structure Of the Human PXR-LBD In Complex With N-{(2R)-1-[(4S)-4-(4-chlorophenyl)-4-hydroxy-3,3-dimethylpiperidin-1-yl]-3-methyl-1-oxobutan-2-yl}-3-hydroxy-3-methylbutanamide	1	290	A	142	431
+

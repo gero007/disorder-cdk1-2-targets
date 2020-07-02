@@ -1,0 +1,138 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O60701	UDP-glucose 6-dehydrogenase	UGDH_HUMAN	Homo sapiens	PF00984	UDPG_MGDP_dh	UDP-glucose/GDP-mannose dehydrogenase family, central domain	214	309
+O60701	UDP-glucose 6-dehydrogenase	UGDH_HUMAN	Homo sapiens	PF03720	UDPG_MGDP_dh_C	UDP-glucose/GDP-mannose dehydrogenase family, UDP binding domain	332	447
+O60701	UDP-glucose 6-dehydrogenase	UGDH_HUMAN	Homo sapiens	PF03721	UDPG_MGDP_dh_N	UDP-glucose/GDP-mannose dehydrogenase family, NAD binding domain	5	195
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#114 mappings in 114 PDB chains in 18 PDB entries
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	K	1	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	F	1	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	L	1	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	C	1	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	H	None	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	A	None	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	D	1	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	G	1	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	B	1	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	E	1	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	I	1	None
+O60701	1	494	6c4j	Ligand bound full length hUGDH with A104L substitution	1	494	J	None	None
+O60701	1	494	5vr8	Human UDP-Glucose Dehydrogenase with UDP-Xylose Bound to the Co-enzyme Site	2	495	A	1	None
+O60701	1	494	5vr8	Human UDP-Glucose Dehydrogenase with UDP-Xylose Bound to the Co-enzyme Site	2	495	D	None	None
+O60701	1	494	5vr8	Human UDP-Glucose Dehydrogenase with UDP-Xylose Bound to the Co-enzyme Site	2	495	F	1	None
+O60701	1	494	5vr8	Human UDP-Glucose Dehydrogenase with UDP-Xylose Bound to the Co-enzyme Site	2	495	C	1	None
+O60701	1	494	5vr8	Human UDP-Glucose Dehydrogenase with UDP-Xylose Bound to the Co-enzyme Site	2	495	B	1	None
+O60701	1	494	5vr8	Human UDP-Glucose Dehydrogenase with UDP-Xylose Bound to the Co-enzyme Site	2	495	E	None	None
+O60701	1	494	6c4k	Full length hUGDH with A104L substitution in the absence of ligand	1	494	A	1	None
+O60701	1	494	6c4k	Full length hUGDH with A104L substitution in the absence of ligand	1	494	B	1	None
+O60701	1	494	6c4k	Full length hUGDH with A104L substitution in the absence of ligand	1	494	C	1	None
+O60701	1	494	5tjh	hUGDH A136M Substitution	1	494	D	None	None
+O60701	1	494	5tjh	hUGDH A136M Substitution	1	494	F	1	None
+O60701	1	494	5tjh	hUGDH A136M Substitution	1	494	C	1	None
+O60701	1	494	5tjh	hUGDH A136M Substitution	1	494	A	None	None
+O60701	1	494	5tjh	hUGDH A136M Substitution	1	494	B	1	None
+O60701	1	494	5tjh	hUGDH A136M Substitution	1	494	E	1	None
+O60701	1	494	4edf	Dimeric hUGDH, K94E	1	494	A	1	None
+O60701	1	494	4edf	Dimeric hUGDH, K94E	1	494	B	1	None
+O60701	1	494	4edf	Dimeric hUGDH, K94E	1	494	D	None	None
+O60701	1	494	4edf	Dimeric hUGDH, K94E	1	494	C	None	None
+O60701	1	494	4rjt	Crystal Structure of Unliganded, Full Length hUGDH at pH 7.0	1	494	A	None	None
+O60701	1	494	4rjt	Crystal Structure of Unliganded, Full Length hUGDH at pH 7.0	1	494	B	1	None
+O60701	1	494	4rjt	Crystal Structure of Unliganded, Full Length hUGDH at pH 7.0	1	494	C	1	None
+O60701	1	494	3tf5	Structure of UDP-glucose dehydrogenase V132 deletion	1	493	A	None	None
+O60701	1	494	3tf5	Structure of UDP-glucose dehydrogenase V132 deletion	1	493	B	None	None
+O60701	1	494	3tf5	Structure of UDP-glucose dehydrogenase V132 deletion	1	493	C	None	None
+O60701	1	494	3prj	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	A	1	None
+O60701	1	494	3prj	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	F	1	None
+O60701	1	494	3prj	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	C	1	None
+O60701	1	494	3prj	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	D	1	None
+O60701	1	494	3prj	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	B	1	None
+O60701	1	494	3prj	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	E	1	None
+O60701	1	494	3ptz	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	A	1	None
+O60701	1	494	3ptz	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	D	None	None
+O60701	1	494	3ptz	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	C	None	None
+O60701	1	494	3ptz	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	F	None	None
+O60701	1	494	3ptz	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	E	1	None
+O60701	1	494	3ptz	Role of Packing Defects in the Evolution of Allostery and Induced Fit in Human UDP-Glucose Dehydrogenase.	1	494	B	None	None
+O60701	1	494	6c5a	Human UDP-Glucose Dehydrogenase with UDP- Glc and NADH bound	1	494	A	1	None
+O60701	1	494	6c5a	Human UDP-Glucose Dehydrogenase with UDP- Glc and NADH bound	1	494	D	1	None
+O60701	1	494	6c5a	Human UDP-Glucose Dehydrogenase with UDP- Glc and NADH bound	1	494	C	1	None
+O60701	1	494	6c5a	Human UDP-Glucose Dehydrogenase with UDP- Glc and NADH bound	1	494	F	None	None
+O60701	1	494	6c5a	Human UDP-Glucose Dehydrogenase with UDP- Glc and NADH bound	1	494	B	1	None
+O60701	1	494	6c5a	Human UDP-Glucose Dehydrogenase with UDP- Glc and NADH bound	1	494	E	None	None
+O60701	1	494	6c5z	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-glucose and NADH bound	1	494	D	1	None
+O60701	1	494	6c5z	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-glucose and NADH bound	1	494	C	1	None
+O60701	1	494	6c5z	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-glucose and NADH bound	1	494	A	None	None
+O60701	1	494	6c5z	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-glucose and NADH bound	1	494	F	None	None
+O60701	1	494	6c5z	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-glucose and NADH bound	1	494	E	1	None
+O60701	1	494	6c5z	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-glucose and NADH bound	1	494	B	None	None
+O60701	1	494	6c58	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-xylose bound	1	494	A	1	None
+O60701	1	494	6c58	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-xylose bound	1	494	D	None	None
+O60701	1	494	6c58	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-xylose bound	1	494	C	None	None
+O60701	1	494	6c58	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-xylose bound	1	494	F	None	None
+O60701	1	494	6c58	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-xylose bound	1	494	E	1	None
+O60701	1	494	6c58	Human UDP-Glucose Dehydrogenase A225L substitutuion with UDP-xylose bound	1	494	B	None	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	A	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	H	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	B	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	E	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	D	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	I	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	F	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	C	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	J	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	K	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	G	1	None
+O60701	1	487	3tdk	Crystal Structure of Human UDP-Glucose Dehydrogenase	1	487	L	1	None
+O60701	1	466	3khu	Crystal structure of human UDP-glucose dehydrogenase Glu161Gln, in complex with thiohemiacetal intermediate	2	467	B	1	466
+O60701	1	466	3khu	Crystal structure of human UDP-glucose dehydrogenase Glu161Gln, in complex with thiohemiacetal intermediate	2	467	D	1	466
+O60701	1	466	3khu	Crystal structure of human UDP-glucose dehydrogenase Glu161Gln, in complex with thiohemiacetal intermediate	2	467	A	1	466
+O60701	1	466	3khu	Crystal structure of human UDP-glucose dehydrogenase Glu161Gln, in complex with thiohemiacetal intermediate	2	467	F	1	466
+O60701	1	466	3khu	Crystal structure of human UDP-glucose dehydrogenase Glu161Gln, in complex with thiohemiacetal intermediate	2	467	E	1	466
+O60701	1	466	3khu	Crystal structure of human UDP-glucose dehydrogenase Glu161Gln, in complex with thiohemiacetal intermediate	2	467	C	1	466
+O60701	1	466	5w4x	Truncated hUGDH	1	466	C	1	466
+O60701	1	466	5w4x	Truncated hUGDH	1	466	B	1	466
+O60701	1	466	5w4x	Truncated hUGDH	1	466	A	None	466
+O60701	1	466	2qg4	Crystal structure of human UDP-glucose dehydrogenase product complex with UDP-glucuronate	2	467	B	1	466
+O60701	1	466	2qg4	Crystal structure of human UDP-glucose dehydrogenase product complex with UDP-glucuronate	2	467	D	1	466
+O60701	1	466	2qg4	Crystal structure of human UDP-glucose dehydrogenase product complex with UDP-glucuronate	2	467	A	1	466
+O60701	1	466	2qg4	Crystal structure of human UDP-glucose dehydrogenase product complex with UDP-glucuronate	2	467	F	1	466
+O60701	1	466	2qg4	Crystal structure of human UDP-glucose dehydrogenase product complex with UDP-glucuronate	2	467	E	1	466
+O60701	1	466	2qg4	Crystal structure of human UDP-glucose dehydrogenase product complex with UDP-glucuronate	2	467	C	1	466
+O60701	1	466	2qg4	Crystal structure of human UDP-glucose dehydrogenase product complex with UDP-glucuronate	2	467	H	1	466
+O60701	1	466	2qg4	Crystal structure of human UDP-glucose dehydrogenase product complex with UDP-glucuronate	2	467	G	1	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	D	None	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	B	1	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	I	1	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	K	1	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	A	1	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	H	None	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	E	None	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	C	1	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	J	1	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	G	1	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	F	1	466
+O60701	1	466	2q3e	Structure of human UDP-glucose dehydrogenase complexed with NADH and UDP-glucose	2	467	L	1	466
+O60701	1	466	3itk	Crystal structure of human UDP-glucose dehydrogenase Thr131Ala, apo form.	2	467	B	1	466
+O60701	1	466	3itk	Crystal structure of human UDP-glucose dehydrogenase Thr131Ala, apo form.	2	467	D	1	466
+O60701	1	466	3itk	Crystal structure of human UDP-glucose dehydrogenase Thr131Ala, apo form.	2	467	A	1	466
+O60701	1	466	3itk	Crystal structure of human UDP-glucose dehydrogenase Thr131Ala, apo form.	2	467	F	1	466
+O60701	1	466	3itk	Crystal structure of human UDP-glucose dehydrogenase Thr131Ala, apo form.	2	467	E	1	466
+O60701	1	466	3itk	Crystal structure of human UDP-glucose dehydrogenase Thr131Ala, apo form.	2	467	C	1	466
+

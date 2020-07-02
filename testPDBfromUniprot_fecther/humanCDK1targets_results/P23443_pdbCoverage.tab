@@ -1,0 +1,45 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P23443	Ribosomal protein S6 kinase beta-1	KS6B1_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	91	352
+P23443	Ribosomal protein S6 kinase beta-1	KS6B1_HUMAN	Homo sapiens	PF00433	Pkinase_C	Protein kinase C terminal domain	373	413
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#22 mappings in 22 PDB chains in 20 PDB entries
+P23443	24	37	5wbk	Crystal structure of the arabidopsis thaliana Raptor in complex with the TOS peptide of human S6K1	1	14	T	None	None
+P23443	75	417	4l42	Crystal structures of human p70S6K1-PIF	4	346	A	None	394
+P23443	75	417	4l43	Crystal structures of human p70S6K1-T389A (form I)	4	346	A	None	394
+P23443	75	417	4l44	Crystal structures of human p70S6K1-T389A (form II)	4	346	A	None	394
+P23443	75	417	4l46	Crystal structures of human p70S6K1-WT	4	346	A	None	394
+P23443	75	399	3a61	Crystal structure of unphosphorylated p70S6K1 (Form II)	3	327	A	None	None
+P23443	75	399	3a62	Crystal structure of phosphorylated p70S6K1	3	327	A	None	None
+P23443	75	399	3a60	Crystal structure of unphosphorylated p70S6K1 (Form I)	3	327	A	None	None
+P23443	75	399	3a60	Crystal structure of unphosphorylated p70S6K1 (Form I)	3	327	B	None	None
+P23443	75	375	4l3l	Crystal structures of human p70S6K1 kinase domain (Zinc anomalous)	4	304	A	None	352
+P23443	75	375	4l3j	Crystal structures of human p70S6K1 kinase domain	4	304	A	None	352
+P23443	75	417	4l45	Crystal structures of human p70S6K1-T389E	4	346	A	None	394
+P23443	78	399	3wf7	Crystal structure of S6K1 kinase domain in complex with a purine derivative 1-(9H-purin-6-yl)-N-[3-(trifluoromethyl)phenyl]piperidine-4-carboxamide	8	329	A	None	None
+P23443	78	399	3we4	Crystal structure of S6K1 kinase domain in complex with a pyrimidine derivative PF-4708671 2-{[4-(5-ethylpyrimidin-4-yl)piperazin-1-yl]methyl}-5-(trifluoromethyl)-1H-benzimidazole	8	329	A	None	None
+P23443	78	399	3wf8	Crystal structure of S6K1 kinase domain in complex with a quinoline derivative 2-oxo-2-[(4-sulfamoylphenyl)amino]ethyl 7,8,9,10-tetrahydro-6H-cyclohepta[b]quinoline-11-carboxylate	8	329	A	None	None
+P23443	78	399	3wf9	Crystal structure of S6K1 kinase domain in complex with a quinoline derivative 1-oxo-1-[(4-sulfamoylphenyl)amino]propan-2-yl-2-methyl-1,2,3,4-tetrahydroacridine-9-carboxylate	8	329	A	None	None
+P23443	78	399	3wf5	Crystal structure of S6K1 kinase domain in complex with a pyrazolopyrimidine derivative 4-[4-(1H-benzimidazol-2-yl)piperidin-1-yl]-1H-pyrazolo[3,4-d]pyrimidine	8	329	A	None	None
+P23443	78	399	3wf6	Crystal structure of S6K1 kinase domain in complex with a pyrazolopyrimidine derivative 4-[4-(1H-indol-3-yl)-3,6-dihydropyridin-1(2H)-yl]-1H-pyrazolo[3,4-d]pyrimidine	8	329	A	None	None
+P23443	85	372	4rlp	Human p70s6k1 with ruthenium-based inhibitor FL772	1	288	A	85	372
+P23443	85	372	4rlo	Human p70s6k1 with ruthenium-based inhibitor EM5	1	288	A	85	None
+P23443	85	372	4rlo	Human p70s6k1 with ruthenium-based inhibitor EM5	1	288	B	85	372
+P23443	412	437	5wbh	Structure of the FRB domain of mTOR bound to a substrate recruitment peptide of S6K1	1	26	W	None	None
+

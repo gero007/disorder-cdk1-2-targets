@@ -1,0 +1,367 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P00533	11-meric peptide from Epidermal growth factor receptor	EGFR_HUMAN	Homo sapiens	PF00757	Furin-like	Furin-like cysteine rich region	177	338
+P00533	11-meric peptide from Epidermal growth factor receptor	EGFR_HUMAN	Homo sapiens	PF01030	Recep_L_domain	Receptor L domain	361	481
+P00533	11-meric peptide from Epidermal growth factor receptor	EGFR_HUMAN	Homo sapiens	PF01030	Recep_L_domain	Receptor L domain	57	168
+P00533	11-meric peptide from Epidermal growth factor receptor	EGFR_HUMAN	Homo sapiens	PF07714	PK_Tyr_Ser-Thr	Protein tyrosine and serine/threonine kinase	712	968
+P00533	11-meric peptide from Epidermal growth factor receptor	EGFR_HUMAN	Homo sapiens	PF14843	GF_recep_IV	Growth factor receptor domain IV	505	637
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#340 mappings in 335 PDB chains in 209 PDB entries
+P00533	1	643	5xwd	Crystal structure of the complex of 059-152-Fv and EGFR-ECD	1	643	A	None	None
+P00533	1	642	3qwq	Crystal structure of the extracellular domain of the epidermal growth factor receptor in complex with an adnectin	1	642	A	None	None
+P00533	25	646	1ivo	Crystal Structure of the Complex of Human Epidermal Growth Factor and Receptor Extracellular Domains.	1	622	A	None	None
+P00533	25	646	1ivo	Crystal Structure of the Complex of Human Epidermal Growth Factor and Receptor Extracellular Domains.	1	622	B	None	None
+P00533	25	645	4uv7	The complex structure of extracellular domain of EGFR and GC1118A	1	621	A	1	None
+P00533	25	642	4kro	Nanobody/VHH domain EgA1 in complex with the extracellular region of EGFR	1	618	A	None	None
+P00533	25	642	1nql	Structure of the extracellular domain of human epidermal growth factor (EGF) receptor in an inactive (low pH) complex with EGF.	1	618	A	None	None
+P00533	25	642	3b2v	Crystal structure of the extracellular region of the epidermal growth factor receptor in complex with the Fab fragment of IMC-11F8	1	618	A	None	None
+P00533	25	642	1yy9	Structure of the extracellular domain of the epidermal growth factor receptor in complex with the Fab fragment of cetuximab/Erbitux/IMC-C225	1	618	A	None	None
+P00533	638	642	4krp	Nanobody/VHH domain 9G8 in complex with the extracellular region of EGFR	615	619	A	None	None
+P00533	25	637	4krp	Nanobody/VHH domain 9G8 in complex with the extracellular region of EGFR	1	613	A	None	None
+P00533	25	640	6aru	Structure of Cetuximab Fab mutant in complex with EGFR extracellular domain	1	616	A	None	None
+P00533	25	638	3njp	The Extracellular and Transmembrane Domain Interfaces in Epidermal Growth Factor Receptor Signaling	1	614	A	1	614
+P00533	25	638	3njp	The Extracellular and Transmembrane Domain Interfaces in Epidermal Growth Factor Receptor Signaling	1	614	B	1	614
+P00533	25	525	5wb7	Crystal structure of the epidermal growth factor receptor extracellular region in complex with epiregulin	1	501	C	None	501
+P00533	25	525	5wb7	Crystal structure of the epidermal growth factor receptor extracellular region in complex with epiregulin	1	501	A	None	501
+P00533	25	525	5wb7	Crystal structure of the epidermal growth factor receptor extracellular region in complex with epiregulin	1	501	D	None	None
+P00533	25	525	5wb7	Crystal structure of the epidermal growth factor receptor extracellular region in complex with epiregulin	1	501	B	None	501
+P00533	25	525	1mox	Crystal Structure of Human Epidermal Growth Factor Receptor (residues 1-501) in complex with TGF-alpha	1	501	A	1	None
+P00533	25	525	1mox	Crystal Structure of Human Epidermal Growth Factor Receptor (residues 1-501) in complex with TGF-alpha	1	501	B	1	501
+P00533	25	525	5wb8	Crystal structure of the epidermal growth factor receptor extracellular region in complex with epigen	1	501	A	None	501
+P00533	25	525	5wb8	Crystal structure of the epidermal growth factor receptor extracellular region in complex with epigen	1	501	D	1	501
+P00533	26	637	4uip	The complex structure of extracellular domain of EGFR with Repebody (rAC1).	1	612	A	2	613
+P00533	311	326	3g5v	Antibodies Specifically Targeting a Locally Misfolded Region of Tumor Associated EGFR	1	16	C	287	302
+P00533	311	326	3g5y	Antibodies Specifically Targeting a Locally Misfolded Region of Tumor Associated EGFR	1	16	E	287	302
+P00533	334	538	3p0y	anti-EGFR/HER3 Fab DL11 in complex with domain III of EGFR extracellular region	1	205	A	310	None
+P00533	335	538	4krm	Nanobody/VHH domain 7D12 in complex with domain III of the extracellular region of EGFR, pH 3.5	5	208	G	311	None
+P00533	335	538	4krm	Nanobody/VHH domain 7D12 in complex with domain III of the extracellular region of EGFR, pH 3.5	5	208	E	311	None
+P00533	335	538	4krm	Nanobody/VHH domain 7D12 in complex with domain III of the extracellular region of EGFR, pH 3.5	5	208	K	311	None
+P00533	335	538	4krm	Nanobody/VHH domain 7D12 in complex with domain III of the extracellular region of EGFR, pH 3.5	5	208	I	311	None
+P00533	335	538	4krm	Nanobody/VHH domain 7D12 in complex with domain III of the extracellular region of EGFR, pH 3.5	5	208	C	311	None
+P00533	335	538	4krm	Nanobody/VHH domain 7D12 in complex with domain III of the extracellular region of EGFR, pH 3.5	5	208	A	311	None
+P00533	335	538	4krl	Nanobody/VHH domain 7D12 in complex with domain III of the extracellular region of EGFR, pH 6.0	5	208	A	311	None
+P00533	335	525	5sx5	Crystal Structure of panitumumab in complex with epidermal growth factor receptor domain 3 mutant S468R.	5	195	M	311	501
+P00533	335	525	5sx5	Crystal Structure of panitumumab in complex with epidermal growth factor receptor domain 3 mutant S468R.	5	195	N	311	501
+P00533	335	525	5sx4	Crystal Structure of panitumumab in complex with epidermal growth factor receptor domain 3.	5	195	M	None	501
+P00533	335	525	5sx4	Crystal Structure of panitumumab in complex with epidermal growth factor receptor domain 3.	5	195	N	311	501
+P00533	335	538	6b3s	Crystal structure of the Fab fragment of necitumumab (Fab11F8) in complex with domain III from a cetuximab resistant variant of EGFR (sEGFRd3-S468R)	5	208	I	311	None
+P00533	335	538	6b3s	Crystal structure of the Fab fragment of necitumumab (Fab11F8) in complex with domain III from a cetuximab resistant variant of EGFR (sEGFRd3-S468R)	5	208	B	311	None
+P00533	335	538	6b3s	Crystal structure of the Fab fragment of necitumumab (Fab11F8) in complex with domain III from a cetuximab resistant variant of EGFR (sEGFRd3-S468R)	5	208	E	311	None
+P00533	335	538	6b3s	Crystal structure of the Fab fragment of necitumumab (Fab11F8) in complex with domain III from a cetuximab resistant variant of EGFR (sEGFRd3-S468R)	5	208	A	311	None
+P00533	335	538	3b2u	Crystal structure of isolated domain III of the extracellular region of the epidermal growth factor receptor in complex with the Fab fragment of IMC-11F8	5	208	V	311	None
+P00533	335	538	3b2u	Crystal structure of isolated domain III of the extracellular region of the epidermal growth factor receptor in complex with the Fab fragment of IMC-11F8	5	208	P	311	None
+P00533	335	538	3b2u	Crystal structure of isolated domain III of the extracellular region of the epidermal growth factor receptor in complex with the Fab fragment of IMC-11F8	5	208	I	311	None
+P00533	335	538	3b2u	Crystal structure of isolated domain III of the extracellular region of the epidermal growth factor receptor in complex with the Fab fragment of IMC-11F8	5	208	M	311	None
+P00533	335	538	3b2u	Crystal structure of isolated domain III of the extracellular region of the epidermal growth factor receptor in complex with the Fab fragment of IMC-11F8	5	208	A	311	None
+P00533	335	538	3b2u	Crystal structure of isolated domain III of the extracellular region of the epidermal growth factor receptor in complex with the Fab fragment of IMC-11F8	5	208	S	311	None
+P00533	335	538	3b2u	Crystal structure of isolated domain III of the extracellular region of the epidermal growth factor receptor in complex with the Fab fragment of IMC-11F8	5	208	B	311	None
+P00533	335	538	3b2u	Crystal structure of isolated domain III of the extracellular region of the epidermal growth factor receptor in complex with the Fab fragment of IMC-11F8	5	208	E	311	None
+P00533	336	538	3c09	Crystal structure the Fab fragment of matuzumab (Fab72000) in complex with domain III of the extracellular region of EGFR	6	208	A	312	None
+P00533	336	538	3c09	Crystal structure the Fab fragment of matuzumab (Fab72000) in complex with domain III of the extracellular region of EGFR	6	208	D	312	None
+P00533	634	677	5lv6	N-terminal motif dimerization of EGFR transmembrane domain in bicellar environment	1	44	B	634	677
+P00533	634	677	5lv6	N-terminal motif dimerization of EGFR transmembrane domain in bicellar environment	1	44	A	634	677
+P00533	634	677	2m0b	Homodimeric transmembrane domain of the human receptor tyrosine kinase ErbB1 (EGFR, HER1) in micelles	1	44	B	634	677
+P00533	634	677	2m0b	Homodimeric transmembrane domain of the human receptor tyrosine kinase ErbB1 (EGFR, HER1) in micelles	1	44	A	634	677
+P00533	634	677	2ks1	Heterodimeric association of Transmembrane domains of ErbB1 and ErbB2 receptors Enabling Kinase Activation	1	44	B	134	177
+P00533	642	690	2n5s	Spatial structure of EGFR transmembrane and juxtamembrane domains in DPC micelles	4	52	A	42	90
+P00533	642	697	2m20	EGFR transmembrane - juxtamembrane (TM-JM) segment in bicelles: MD guided NMR refined structure.	1	56	A	1	56
+P00533	642	697	2m20	EGFR transmembrane - juxtamembrane (TM-JM) segment in bicelles: MD guided NMR refined structure.	1	56	B	61	116
+P00533	669	1022	3gop	Crystal structure of the EGF receptor juxtamembrane and kinase domains	8	361	A	None	None
+P00533	669	721	1z9i	A Structural Model for the Membrane-Bound Form of the Juxtamembrane Domain of the Epidermal Growth Factor Receptor	1	53	A	1	53
+P00533	675	1022	5zwj	Crystal structure of EGFR 675-1022 T790M/C797S/V948R in complex with EAI045	2	349	A	None	None
+P00533	682	1022	4riw	Crystal structure of an EGFR/HER3 kinase domain heterodimer	5	345	D	None	None
+P00533	682	1022	4riw	Crystal structure of an EGFR/HER3 kinase domain heterodimer	5	345	B	None	None
+P00533	682	1022	4riy	Crystal structure of an EGFR/HER3 kinase domain heterodimer containing the cancer-associated HER3-E909G mutation	5	345	D	None	None
+P00533	682	1022	4riy	Crystal structure of an EGFR/HER3 kinase domain heterodimer containing the cancer-associated HER3-E909G mutation	5	345	B	None	None
+P00533	682	1022	4rix	Crystal structure of an EGFR/HER3 kinase domain heterodimer containing the cancer-associated HER3-Q790R mutation	5	345	D	None	None
+P00533	682	1022	4rix	Crystal structure of an EGFR/HER3 kinase domain heterodimer containing the cancer-associated HER3-Q790R mutation	5	345	B	None	None
+P00533	694	1022	3ika	Crystal Structure of EGFR 696-1022 T790M Mutant Covalently Binding to WZ4002	3	331	A	None	None
+P00533	694	1022	3ika	Crystal Structure of EGFR 696-1022 T790M Mutant Covalently Binding to WZ4002	3	331	B	None	None
+P00533	694	1022	4wd5	Crystal structure of EGFR 696-1022 T790M in complex with QL-X138	3	331	A	694	None
+P00533	694	1022	4wd5	Crystal structure of EGFR 696-1022 T790M in complex with QL-X138	3	331	B	None	None
+P00533	694	1022	5czh	EGFR L858R MUTANT IN COMPLEX WITH AN OPTIMAL PEPTIDE SUBSTRATE	3	331	A	None	None
+P00533	694	1022	5czi	EGFR L858R MUTANT IN COMPLEX WITH A SHC PEPTIDE SUBSTRATE	3	331	A	None	None
+P00533	771	1022	4lrm	EGFR D770_N771insNPG in complex with PD168393	83	334	C	774	None
+P00533	771	1022	4lrm	EGFR D770_N771insNPG in complex with PD168393	83	334	D	774	None
+P00533	771	1022	4lrm	EGFR D770_N771insNPG in complex with PD168393	83	334	A	774	None
+P00533	771	1022	4lrm	EGFR D770_N771insNPG in complex with PD168393	83	334	B	774	None
+P00533	771	1022	4lrm	EGFR D770_N771insNPG in complex with PD168393	83	334	E	774	None
+P00533	694	770	4lrm	EGFR D770_N771insNPG in complex with PD168393	3	79	E	None	770
+P00533	694	770	4lrm	EGFR D770_N771insNPG in complex with PD168393	3	79	B	None	770
+P00533	694	770	4lrm	EGFR D770_N771insNPG in complex with PD168393	3	79	A	None	770
+P00533	694	770	4lrm	EGFR D770_N771insNPG in complex with PD168393	3	79	C	694	770
+P00533	694	770	4lrm	EGFR D770_N771insNPG in complex with PD168393	3	79	D	None	770
+P00533	694	1022	4ll0	EGFR L858R/T790M in complex with PD168393	3	331	A	None	None
+P00533	694	1022	4ll0	EGFR L858R/T790M in complex with PD168393	3	331	B	None	None
+P00533	694	1022	4lqm	EGFR L858R in complex with PD168393	3	331	A	None	None
+P00533	695	1022	6s89	Crystal Structure of EGFR-T790M/C797S in Complex with Covalent Pyrrolopyrimidine 19g	6	333	A	None	None
+P00533	695	1022	3vjo	Crystal structure of the wild-type EGFR kinase domain in complex with AMPPNP.	7	334	A	None	None
+P00533	695	1022	3ug2	Crystal structure of the mutated EGFR kinase domain (G719S/T790M) in complex with gefitinib	7	334	A	None	None
+P00533	695	1022	6v5p	EGFR(T790M/V948R) in complex with LN2725	1	328	A	None	None
+P00533	695	1022	6v5p	EGFR(T790M/V948R) in complex with LN2725	1	328	D	None	None
+P00533	695	1022	6v5p	EGFR(T790M/V948R) in complex with LN2725	1	328	B	None	None
+P00533	695	1022	6v5p	EGFR(T790M/V948R) in complex with LN2725	1	328	C	None	None
+P00533	695	1022	4i23	Crystal structure of the wild-type EGFR kinase domain in complex with dacomitinib (soaked)	2	329	A	695	None
+P00533	695	1022	6v5n	EGFR(T790M/V948R) in complex with LN2084	1	328	A	None	None
+P00533	695	1022	6v5n	EGFR(T790M/V948R) in complex with LN2084	1	328	B	None	None
+P00533	695	1022	6v5n	EGFR(T790M/V948R) in complex with LN2084	1	328	C	None	None
+P00533	695	1022	6v5n	EGFR(T790M/V948R) in complex with LN2084	1	328	D	None	None
+P00533	695	1022	4tks	Native-SAD phasing for human EGFR kinase domain.	5	332	A	None	None
+P00533	695	1022	4i20	Crystal structure of monomeric (V948R) primary oncogenic mutant L858R EGFR kinase domain	2	329	A	None	None
+P00533	695	1022	4i24	Structure of T790M EGFR kinase domain co-crystallized with dacomitinib	2	329	A	None	None
+P00533	695	1022	4i24	Structure of T790M EGFR kinase domain co-crystallized with dacomitinib	2	329	B	None	None
+P00533	695	1022	5y9t	Crystal Structure of EGFR T790M mutant in complex with naquotinib	6	333	A	None	None
+P00533	695	1022	5hic	EGFR kinase domain mutant "TMLR" with a imidazopyridinyl-aminopyrimidine inhibitor	2	329	A	None	None
+P00533	695	1022	6s8a	Crystal Structure of EGFR-T790M/C797S in Complex with Covalent Pyrrolopyrimidine 19h	6	333	A	None	None
+P00533	695	1022	5edp	EGFR kinase (T790M/L858R) apo	2	329	A	None	None
+P00533	695	1022	2eb2	Crystal structure of mutated EGFR kinase domain (G719S)	7	334	A	None	None
+P00533	695	1022	3ug1	Crystal structure of the mutated EGFR kinase domain (G719S/T790M) in the apo form	7	334	A	None	None
+P00533	695	1022	2eb3	Crystal structure of mutated EGFR kinase domain (L858R) in complex with AMPPNP	7	334	A	None	None
+P00533	695	1022	5edr	EGFR kinase (T790M/L858R) with inhibitor compound 27: ~{N}-(1~{H}-indazol-3-yl)-7,7-dimethyl-2-(2-methylpyrazol-3-yl)-5~{H}-furo[3,4-d]pyrimidin-4-amine	2	329	A	None	None
+P00533	695	1022	4rj8	EGFR kinase (T790M/L858R) with inhibitor compound 8	2	329	A	None	None
+P00533	695	1022	5d41	EGFR kinase domain in complex with mutant selective allosteric inhibitor	4	331	A	None	None
+P00533	695	1022	5d41	EGFR kinase domain in complex with mutant selective allosteric inhibitor	4	331	B	None	None
+P00533	695	1022	4zse	Crystal structure of EGFR 696-1022 T790M/V948R, crystal form II	4	331	A	None	None
+P00533	695	1022	4zse	Crystal structure of EGFR 696-1022 T790M/V948R, crystal form II	4	331	B	None	1022
+P00533	695	1022	4zse	Crystal structure of EGFR 696-1022 T790M/V948R, crystal form II	4	331	D	None	None
+P00533	695	1022	4zse	Crystal structure of EGFR 696-1022 T790M/V948R, crystal form II	4	331	C	None	None
+P00533	695	1022	4rj4	EGFR kinase (T790M/L858R) with inhibitor compound 6	2	329	A	None	None
+P00533	695	1022	4rj5	EGFR kinase (T790M/L858R) with inhibitor compound 5	2	329	A	None	None
+P00533	695	1022	4rj7	EGFR kinase (T790M/L858R) with inhibitor compound 1	2	329	A	None	None
+P00533	695	1022	6duk	EGFR with an allosteric inhibitor	4	331	D	None	None
+P00533	695	1022	6duk	EGFR with an allosteric inhibitor	4	331	C	None	None
+P00533	695	1022	6duk	EGFR with an allosteric inhibitor	4	331	A	None	None
+P00533	695	1022	6duk	EGFR with an allosteric inhibitor	4	331	F	None	None
+P00533	695	1022	6duk	EGFR with an allosteric inhibitor	4	331	E	None	None
+P00533	695	1022	6duk	EGFR with an allosteric inhibitor	4	331	B	None	None
+P00533	695	1022	2jiu	Crystal structure of EGFR kinase domain T790M mutation in complex with AEE788	1	328	A	None	None
+P00533	695	1022	2jiu	Crystal structure of EGFR kinase domain T790M mutation in complex with AEE788	1	328	B	695	None
+P00533	695	1022	4i1z	Crystal structure of the monomeric (V948R) form of the gefitinib/erlotinib resistant EGFR kinase domain L858R+T790M	2	329	A	None	None
+P00533	695	1022	5em6	EGFR kinase domain mutant "TMLR" with pyridone compound 19: 4-[(2-azanylpyrimidin-4-yl)amino]-~{N}-[4-(4-methylpiperazin-1-yl)phenyl]-2-oxidanylidene-1~{H}-pyridine-3-carboxamide	2	329	A	None	None
+P00533	695	1022	5edq	EGFR kinase (T790M/L858R) with inhibitor compound 15: ~{N}-(7-chloranyl-1~{H}-indazol-3-yl)-7,7-dimethyl-2-(1~{H}-pyrazol-4-yl)-5~{H}-furo[3,4-d]pyrimidin-4-amine	2	329	A	None	None
+P00533	695	1022	1m14	Tyrosine Kinase Domain from Epidermal Growth Factor Receptor	6	333	A	None	None
+P00533	695	1022	4i22	Structure of the monomeric (V948R)gefitinib/erlotinib resistant double mutant (L858R+T790M) EGFR kinase domain co-crystallized with gefitinib	2	329	A	None	None
+P00533	695	1022	4i21	Crystal structure of L858R + T790M EGFR kinase domain in complex with MIG6 peptide	2	329	A	None	None
+P00533	695	1022	4i21	Crystal structure of L858R + T790M EGFR kinase domain in complex with MIG6 peptide	2	329	B	None	None
+P00533	695	1022	5hg7	EGFR (L858R, T790M, V948R) in complex with 1-{(3R,4R)-3-[5-Chloro-2-(1-methyl-1H-pyrazol-4-ylamino)-7H-pyrrolo[2,3-d]pyrimidin-4-yloxymethyl]-4-methoxy-pyrrolidin-1-yl}propenone (PF-06459988)	2	329	A	None	None
+P00533	695	1022	5u8l	Crystal structure of EGFR kinase domain in complex with a sulfonyl fluoride probe XO44	2	329	A	None	None
+P00533	695	1022	5uwd	Crystal structure of EGFR kinase domain (L858R, T790M, V948R) in complex with the covalent inhibitor CO-1686	2	329	A	None	None
+P00533	695	1022	5ug9	Crystal structure of the EGFR kinase domain (L858R, T790M, V948R) in complex with a covalent inhibitor N-[(3R,4R)-4-fluoro-1-{6-[(3-methoxy-1-methyl-1H-pyrazol-4-yl)amino]-9-(propan-2-yl)-9H-purin-2-yl}pyrrolidin-3-yl]propanamide	2	329	A	None	None
+P00533	695	1022	3vjn	Crystal structure of the mutated EGFR kinase domain (G719S/T790M) in complex with AMPPNP.	7	334	A	None	None
+P00533	695	1022	5ugc	Crystal structure of the EGFR kinase domain (L858R, T790M, V948R) in complex with a covalent inhibitor N-[(3R,4R)-4-fluoro-1-{6-[(3-methoxy-1-methyl-1H-pyrazol-4-yl)amino]-9-methyl-9H-purin-2-yl}pyrrolidin-3-yl]propanamide	2	329	A	None	None
+P00533	695	1022	5c8k	EGFR kinase domain mutant "TMLR" with compound 1	2	329	A	None	None
+P00533	695	1022	5c8m	EGFR kinase domain mutant "TMLR" with compound 17	2	329	A	None	None
+P00533	695	1022	5c8n	EGFR kinase domain mutant "TMLR" with compound 23	2	329	A	None	None
+P00533	695	1022	1m17	Epidermal Growth Factor Receptor tyrosine kinase domain with 4-anilinoquinazoline inhibitor erlotinib	6	333	A	None	None
+P00533	695	1022	5ugb	Crystal structure of the EGFR kinase domain in complex with 4-(4-{[2-{[(3S)-1-acetylpyrrolidin-3-yl]amino}-9-(propan-2-yl)-9H-purin-6-yl]amino}phenyl)-1-methylpiperazin-1-ium	2	329	A	695	None
+P00533	695	1022	5cas	EGFR kinase domain mutant "TMLR" with compound 41a	2	329	A	None	None
+P00533	695	1022	2jiv	Crystal structure of EGFR kinase domain T790M mutation in compex with HKI-272	1	328	A	None	None
+P00533	695	1022	2jiv	Crystal structure of EGFR kinase domain T790M mutation in compex with HKI-272	1	328	B	None	None
+P00533	695	1022	5hib	EGFR kinase domain mutant "TMLR" with a pyrazolopyrimidine inhibitor	2	329	A	None	None
+P00533	695	1022	4rj6	EGFR kinase (T790M/L858R) with inhibitor compound 4	2	329	A	None	None
+P00533	695	1022	4zjv	crystal structure of EGFR kinase domain in complex with Mitogen-inducible gene 6 protein	4	331	A	None	None
+P00533	695	1022	4zjv	crystal structure of EGFR kinase domain in complex with Mitogen-inducible gene 6 protein	4	331	B	None	None
+P00533	695	1022	5ug8	Crystal structure of the EGFR kinase domain (L858R, T790M, V948R) in complex with a covalent inhibitor N-[(3R,4R)-4-fluoro-1-{6-[(1-methyl-1H-pyrazol-4-yl)amino]-9-(propan-2-yl)-9H-purin-2-yl}pyrrolidin-3-yl]propanamide	2	329	A	None	None
+P00533	695	1022	5em8	EGFR kinase domain with pyridone compound 13: 4-[(2-methoxyphenyl)amino]-~{N}-[4-(4-methylpiperazin-1-yl)phenyl]-2-oxidanylidene-1~{H}-pyridine-3-carboxamide	2	329	A	None	None
+P00533	695	1022	1xkk	EGFR kinase domain complexed with a quinazoline inhibitor- GW572016	25	352	A	None	None
+P00533	695	1022	5uga	Crystal structure of the EGFR kinase domain (L858R, T790M, V948R) in complex with 4-(4-{[2-{[(3S)-1-acetylpyrrolidin-3-yl]amino}-9-(propan-2-yl)-9H-purin-6-yl]amino}phenyl)-1-methylpiperazin-1-ium	2	329	A	None	None
+P00533	695	1022	5hg5	EGFR (L858R, T790M, V948R) in complex with N-{3-[(2-{[4-(4-methylpiperazin-1-yl)phenyl]amino}-7H-pyrrolo[2,3-d]pyrimidin-4-yl)oxy]phenyl}prop-2-enamide	2	329	A	None	None
+P00533	695	1022	5em5	EGFR kinase domain mutant "TMLR" with pyridone compound 2: 4-[2-(4-chlorophenyl)ethylamino]-~{N}-[4-(4-methylpiperazin-1-yl)phenyl]-2-oxidanylidene-1~{H}-pyridine-3-carboxamide	2	329	A	None	None
+P00533	695	1022	5em7	EGFR kinase domain mutant "TMLR" with pyridone compound 13: 4-[(2-methoxyphenyl)amino]-~{N}-[4-(4-methylpiperazin-1-yl)phenyl]-2-oxidanylidene-1~{H}-pyridine-3-carboxamide	2	329	A	None	None
+P00533	695	1022	5hg9	EGFR (L858R, T790M, V948R) in complex with 1-[(3R,4R)-3-[({2-[(1-methyl-1H-pyrazol-4-yl)amino]-7H-pyrrolo[2,3-d]pyrimidin-4-yl}oxy)methyl]-4-(trifluoromethyl)pyrrolidin-1-yl]prop-2-en-1-one	2	329	A	None	None
+P00533	695	1022	5hg8	EGFR (L858R, T790M, V948R) in complex with N-[3-({2-[(1-methyl-1H-pyrazol-4-yl)amino]-7H-pyrrolo[2,3-d]pyrimidin-4-yl}oxy)phenyl]prop-2-enamide	2	329	A	None	None
+P00533	695	1022	5caq	EGFR kinase domain mutant "TMLR" with compound 33	2	329	A	None	None
+P00533	695	1022	5cap	EGFR kinase domain mutant "TMLR" with compound 30	2	329	A	None	None
+P00533	695	1022	5cav	EGFR kinase domain with compound 41a	2	329	A	None	None
+P00533	695	1022	5cau	EGFR kinase domain mutant "TMLR" with compound 41b	2	329	A	None	None
+P00533	695	1022	5cao	EGFR kinase domain mutant "TMLR" with compound 29	2	329	A	None	None
+P00533	695	1022	5can	EGFR kinase domain mutant "TMLR" with compound 27	2	329	A	None	None
+P00533	695	1022	5cal	EGFR kinase domain mutant "TMLR" with compound 24	2	329	A	None	None
+P00533	696	1022	6d8e	Discovery of a Highly Potent and Broadly Effective EGFR and HER2 Exon 20 Insertion Mutant Inhibitor	1	327	A	696	None
+P00533	696	1022	6vhp	Wild type EGFR in complex with LN2899	1	327	A	696	None
+P00533	696	1022	5fed	EGFR kinase domain in complex with a covalent aminobenzimidazole inhibitor.	2	328	A	None	None
+P00533	696	1022	4wkq	1.85 angstrom structure of EGFR kinase domain with gefitinib	4	330	A	696	None
+P00533	696	1022	2itt	Crystal structure of EGFR kinase domain L858R mutation in complex with AEE788	1	327	A	None	None
+P00533	696	1022	5feq	EGFR KINASE DOMAIN IN COMPLEX WITH A COVALENT AMINOBENZIMIDAZOLE	2	328	A	None	None
+P00533	696	1022	4zau	AZD9291 complex with wild type EGFR	4	330	A	None	None
+P00533	696	1022	2itw	Crystal structure of EGFR kinase domain in complex with AFN941	1	327	A	696	None
+P00533	696	1022	6jx0	Crystal structure of EGFR 696-1022 T790M in complex with AZD9291 prepared by co-crystallization	5	331	A	None	None
+P00533	696	1022	5xdl	Crystal structure of EGFR 696-1022 L858R in complex with CO-1686	5	331	A	696	None
+P00533	696	1022	5xdk	Crystal structure of EGFR 696-1022 T790M in complex with CO-1686	5	331	A	696	None
+P00533	696	1022	3w2s	EGFR kinase domain with compound4	4	330	A	None	None
+P00533	696	1022	2j5f	Crystal structure of EGFR kinase domain in complex with an irreversible inhibitor 34-jab	1	327	A	696	None
+P00533	696	1022	2j5e	Crystal structure of EGFR kinase domain in complex with an irreversible inhibitor 13-jab	1	327	A	696	None
+P00533	696	1022	2rf9	Crystal structure of the complex between the EGFR kinase domain and a Mig6 peptide	4	330	A	None	None
+P00533	696	1022	2rf9	Crystal structure of the complex between the EGFR kinase domain and a Mig6 peptide	4	330	B	None	None
+P00533	696	1022	2itq	Crystal structure of EGFR kinase domain G719S mutation in complex with AFN941	1	327	A	None	None
+P00533	696	1022	2jit	Crystal structure of EGFR kinase domain T790M mutation	1	327	A	696	None
+P00533	696	1022	2jit	Crystal structure of EGFR kinase domain T790M mutation	1	327	B	None	None
+P00533	696	1022	6jx4	Crystal structure of EGFR 696-1022 T790M in complex with AZD9291 prepared by soaking	5	331	A	696	None
+P00533	696	1022	5gty	Crystal structure of EGFR 696-1022 T790M in complex with LXX-6-26	5	331	D	None	None
+P00533	696	1022	5gty	Crystal structure of EGFR 696-1022 T790M in complex with LXX-6-26	5	331	F	None	None
+P00533	696	1022	5gty	Crystal structure of EGFR 696-1022 T790M in complex with LXX-6-26	5	331	C	None	None
+P00533	696	1022	5gty	Crystal structure of EGFR 696-1022 T790M in complex with LXX-6-26	5	331	E	None	None
+P00533	696	1022	5gty	Crystal structure of EGFR 696-1022 T790M in complex with LXX-6-26	5	331	A	None	None
+P00533	696	1022	5gty	Crystal structure of EGFR 696-1022 T790M in complex with LXX-6-26	5	331	G	None	None
+P00533	696	1022	5gty	Crystal structure of EGFR 696-1022 T790M in complex with LXX-6-26	5	331	B	None	None
+P00533	696	1022	5gty	Crystal structure of EGFR 696-1022 T790M in complex with LXX-6-26	5	331	H	None	None
+P00533	696	1022	2itp	Crystal structure of EGFR kinase domain G719S mutation in complex with AEE788	1	327	A	None	None
+P00533	696	1022	2ito	Crystal structure of EGFR kinase domain G719S mutation in complex with Iressa	1	327	A	696	None
+P00533	696	1022	3gt8	Crystal structure of the inactive EGFR kinase domain in complex with AMP-PNP	4	330	A	None	None
+P00533	696	1022	3gt8	Crystal structure of the inactive EGFR kinase domain in complex with AMP-PNP	4	330	B	None	None
+P00533	696	1022	3gt8	Crystal structure of the inactive EGFR kinase domain in complex with AMP-PNP	4	330	D	None	None
+P00533	696	1022	3gt8	Crystal structure of the inactive EGFR kinase domain in complex with AMP-PNP	4	330	C	None	None
+P00533	696	1022	2gs6	Crystal Structure of the active EGFR kinase domain in complex with an ATP analog-peptide conjugate	4	330	A	672	None
+P00533	696	1022	2gs7	Crystal Structure of the inactive EGFR kinase domain in complex with AMP-PNP	4	330	A	None	None
+P00533	696	1022	2gs7	Crystal Structure of the inactive EGFR kinase domain in complex with AMP-PNP	4	330	B	None	None
+P00533	696	1022	2gs2	Crystal Structure of the active EGFR kinase domain	4	330	A	672	None
+P00533	696	1022	5hcy	EGFR kinase domain mutant "TMLR" with 3-carboxamide azaindole compound 13	3	329	A	696	None
+P00533	696	1022	5yu9	Crystal structure of EGFR 696-1022 T790M in complex with Ibrutinib	5	331	A	None	None
+P00533	696	1022	5yu9	Crystal structure of EGFR 696-1022 T790M in complex with Ibrutinib	5	331	D	None	None
+P00533	696	1022	5yu9	Crystal structure of EGFR 696-1022 T790M in complex with Ibrutinib	5	331	B	None	None
+P00533	696	1022	5yu9	Crystal structure of EGFR 696-1022 T790M in complex with Ibrutinib	5	331	C	None	None
+P00533	696	1022	3w32	EGFR kinase domain complexed with compound 20a	4	330	A	None	None
+P00533	696	1022	5x2a	Crystal structure of EGFR 696-1022 T790M/V948R in complex with SKLB(3)	5	331	A	None	None
+P00533	696	1022	5x2a	Crystal structure of EGFR 696-1022 T790M/V948R in complex with SKLB(3)	5	331	B	None	1022
+P00533	696	1022	5x2a	Crystal structure of EGFR 696-1022 T790M/V948R in complex with SKLB(3)	5	331	D	None	None
+P00533	696	1022	5x2a	Crystal structure of EGFR 696-1022 T790M/V948R in complex with SKLB(3)	5	331	C	None	None
+P00533	696	1022	5x2k	Crystal structure of EGFR 696-1022 T790M in complex with WZ4003	1	327	A	696	None
+P00533	696	1022	5x2c	Crystal structure of EGFR 696-1022 T790M/V948R in complex with SKLB(5)	5	331	A	None	None
+P00533	696	1022	5x2c	Crystal structure of EGFR 696-1022 T790M/V948R in complex with SKLB(5)	5	331	B	None	None
+P00533	696	1022	5x2f	Crystal structure of EGFR 696-1022 T790M/V948R in complex with SKLB(6)	5	331	A	None	None
+P00533	696	1022	5x2f	Crystal structure of EGFR 696-1022 T790M/V948R in complex with SKLB(6)	5	331	D	None	None
+P00533	696	1022	5x2f	Crystal structure of EGFR 696-1022 T790M/V948R in complex with SKLB(6)	5	331	B	None	None
+P00533	696	1022	5x2f	Crystal structure of EGFR 696-1022 T790M/V948R in complex with SKLB(6)	5	331	C	None	None
+P00533	696	1022	2itz	Crystal structure of EGFR kinase domain L858R mutation in complex with Iressa	1	327	A	None	None
+P00533	696	1022	4g5j	Crystal structure of EGFR kinase in complex with BIBW2992	4	330	A	696	None
+P00533	696	1022	6v66	EGFR(T790M/V948R) in complex with LN2899	1	327	A	None	None
+P00533	696	1022	6v66	EGFR(T790M/V948R) in complex with LN2899	1	327	B	None	None
+P00533	696	1022	6v66	EGFR(T790M/V948R) in complex with LN2899	1	327	C	None	None
+P00533	696	1022	6v66	EGFR(T790M/V948R) in complex with LN2899	1	327	D	None	None
+P00533	696	1022	4r5s	Crystal structure of EGFR 696-1022 L858R in complex with FIIN-3	5	331	A	None	None
+P00533	696	1022	6p8q	EGFR in complex with a dihydrodibenzodiazepinone allosteric inhibitor.	1	327	A	None	None
+P00533	696	1022	6p8q	EGFR in complex with a dihydrodibenzodiazepinone allosteric inhibitor.	1	327	D	None	None
+P00533	696	1022	6p8q	EGFR in complex with a dihydrodibenzodiazepinone allosteric inhibitor.	1	327	B	None	None
+P00533	696	1022	6p8q	EGFR in complex with a dihydrodibenzodiazepinone allosteric inhibitor.	1	327	C	None	None
+P00533	696	1022	5fee	EGFR kinase domain T790M mutant in complex with a covalent aminobenzimidazole inhibitor.	2	328	A	None	None
+P00533	696	1022	5jeb	Crystal structure of EGFR tyrosine kinase domain with novel inhibitor of active state of HER2	11	337	A	None	None
+P00533	696	1022	4hjo	Crystal structure of the inactive EGFR tyrosine kinase domain with erlotinib	11	337	A	None	None
+P00533	696	1022	6vh4	Wild type EGFR in complex with LN2380	1	327	A	696	None
+P00533	696	1022	6jxt	Crystal structure of EGFR 696-1022 WT in complex with AZD9291 prepared by cocrystallization	5	331	A	None	None
+P00533	696	1022	5x27	Crystal structure of EGFR 696-1022 L858R in complex with SKLB(5)	1	327	A	None	None
+P00533	696	1022	4g5p	Crystal structure of EGFR kinase T790M in complex with BIBW2992	4	330	A	696	None
+P00533	696	1022	4g5p	Crystal structure of EGFR kinase T790M in complex with BIBW2992	4	330	B	None	None
+P00533	696	1022	6p1d	Crystal structure of EGFR with mutant-selective dihydrodibenzodiazepinone allosteric inhibitor	1	327	A	None	None
+P00533	696	1022	6p1d	Crystal structure of EGFR with mutant-selective dihydrodibenzodiazepinone allosteric inhibitor	1	327	B	None	None
+P00533	696	1022	6p1d	Crystal structure of EGFR with mutant-selective dihydrodibenzodiazepinone allosteric inhibitor	1	327	C	None	None
+P00533	696	1022	6p1d	Crystal structure of EGFR with mutant-selective dihydrodibenzodiazepinone allosteric inhibitor	1	327	D	None	None
+P00533	696	1022	5cno	Crystal structure of the EGFR kinase domain mutant V924R	4	330	A	None	None
+P00533	696	1022	5cno	Crystal structure of the EGFR kinase domain mutant V924R	4	330	X	None	998
+P00533	696	1022	5cno	Crystal structure of the EGFR kinase domain mutant V924R	4	330	B	None	None
+P00533	696	1022	6s9c	EGFR-KINASE IN COMPLEX WITH COMPOUND 5	3	329	A	696	None
+P00533	696	1022	6jwl	Crystal structure of EGFR 696-1022 L858R in complex with AZD9291	5	331	A	696	None
+P00533	696	1022	6s9d	EGFR-KINASE IN COMPLEX WITH COMPOUND 6	3	329	A	696	None
+P00533	696	1022	5x26	Crystal structure of EGFR 696-1022 L858R in complex with SKLB(3)	1	327	A	None	None
+P00533	696	1022	5x28	Crystal structure of EGFR 696-1022 L858R in complex with SKLB(6)	1	327	A	None	None
+P00533	696	1022	5gtz	Crystal structure of EGFR 696-1022 T790M in complex with JTS-1-39	5	331	A	None	None
+P00533	696	1022	5hcz	EGFR kinase domain mutant "TMLR" with 3-azetidinyl azaindazole compound 21	3	329	A	696	None
+P00533	696	1022	6jrx	EGFR T790M/C797S in complex with compound 6i	5	331	A	696	None
+P00533	696	1022	5hcx	EGFR kinase domain mutant "TMLR" with azabenzimidazole compound 7	3	329	A	696	None
+P00533	696	1022	6vhn	Wild type EGFR in complex with LN2057	1	327	A	696	None
+P00533	696	1022	4wrg	1.9 angstrom structure of EGFR kinase domain	4	330	A	696	None
+P00533	696	1022	5gmp	Crystal structure of EGFR 696-1022 T790M in complex with XTF-262	5	331	A	696	None
+P00533	696	1022	3w33	EGFR kinase domain complexed with compound 19b	4	330	A	None	None
+P00533	696	1021	4jrv	Crystal structure of EGFR kinase domain in complex with compound 4c	3	328	A	672	None
+P00533	696	1021	4jq8	Crystal structure of EGFR kinase domain in complex with compound 4b	3	328	A	672	None
+P00533	696	1021	6jz0	Crystal structure of EGFR kinase domain in complex with compound 78	1	326	A	696	None
+P00533	696	1021	4jq7	Crystal structure of EGFR kinase domain in complex with compound 2a	3	328	A	672	None
+P00533	696	1021	4jr3	Crystal structure of EGFR kinase domain in complex with compound 3g	3	328	A	672	None
+P00533	696	1020	5j9z	EGFR-T790M in complex with pyrazolopyrimidine inhibitor 1a	1	325	A	696	1020
+P00533	696	1020	4li5	EGFR-K IN COMPLEX WITH N-[3-[[5-chloro-4-(1H-indol-3-yl)pyrimidin-2-yl]amino]-4-methoxy-phenyl] Prop-2-enamide	4	328	A	696	1020
+P00533	696	1018	4r3r	Crystal structures of EGFR in complex with Mig6	1	323	A	696	1018
+P00533	696	1018	4r3p	Crystal structures of EGFR in complex with Mig6	1	323	A	696	1018
+P00533	696	988	5gnk	Crystal structure of EGFR 696-988 T790M in complex with LXX-6-34	5	297	A	None	None
+P00533	696	983	3lzb	EGFR kinase domain complexed with an imidazo[2,1-b]thiazole inhibitor	1	288	A	None	959
+P00533	696	983	3lzb	EGFR kinase domain complexed with an imidazo[2,1-b]thiazole inhibitor	1	288	D	None	959
+P00533	696	983	3lzb	EGFR kinase domain complexed with an imidazo[2,1-b]thiazole inhibitor	1	288	H	None	None
+P00533	696	983	3lzb	EGFR kinase domain complexed with an imidazo[2,1-b]thiazole inhibitor	1	288	F	None	None
+P00533	696	983	3lzb	EGFR kinase domain complexed with an imidazo[2,1-b]thiazole inhibitor	1	288	B	None	959
+P00533	696	983	3lzb	EGFR kinase domain complexed with an imidazo[2,1-b]thiazole inhibitor	1	288	E	None	None
+P00533	696	983	3lzb	EGFR kinase domain complexed with an imidazo[2,1-b]thiazole inhibitor	1	288	C	None	959
+P00533	696	983	3lzb	EGFR kinase domain complexed with an imidazo[2,1-b]thiazole inhibitor	1	288	G	None	None
+P00533	696	1042	5cnn	Crystal structure of the EGFR kinase domain mutant I682Q	4	350	A	None	None
+P00533	696	1042	5cnn	Crystal structure of the EGFR kinase domain mutant I682Q	4	350	B	None	None
+P00533	696	1022	2itn	Crystal structure of EGFR kinase domain G719S mutation in complex with AMP-PNP	1	327	A	696	None
+P00533	696	1022	3poz	EGFR Kinase domain complexed with tak-285	1	327	A	None	None
+P00533	696	1022	6v6k	EGFR(T790M/V948R) in complex with LN2057	1	327	C	None	None
+P00533	696	1022	6v6k	EGFR(T790M/V948R) in complex with LN2057	1	327	D	None	None
+P00533	696	1022	6v6k	EGFR(T790M/V948R) in complex with LN2057	1	327	H	None	None
+P00533	696	1022	6v6k	EGFR(T790M/V948R) in complex with LN2057	1	327	F	None	None
+P00533	696	1022	6v6k	EGFR(T790M/V948R) in complex with LN2057	1	327	E	None	None
+P00533	696	1022	6v6k	EGFR(T790M/V948R) in complex with LN2057	1	327	A	None	None
+P00533	696	1022	6v6k	EGFR(T790M/V948R) in complex with LN2057	1	327	G	None	None
+P00533	696	1022	6v6k	EGFR(T790M/V948R) in complex with LN2057	1	327	B	None	None
+P00533	696	1022	6jrj	The structure of co-crystals of 8r-B-EGFR T790M/C797S complex	5	331	A	696	None
+P00533	696	1022	6jrk	The structure of co-crystals of 8r-B-EGFR WT complex	5	331	A	696	None
+P00533	696	1022	5xgn	Crystal structure of EGFR 696-1022 T790M/C797S in complex with Go6976	5	331	A	None	None
+P00533	696	1022	5xgn	Crystal structure of EGFR 696-1022 T790M/C797S in complex with Go6976	5	331	B	None	None
+P00533	696	1022	5xgm	Crystal structure of EGFR 696-1022 T790M in complex with Go6976	5	331	A	696	None
+P00533	696	1022	6p1l	Crystal structure of EGFR in complex with EAI045	1	327	A	None	None
+P00533	696	1022	6p1l	Crystal structure of EGFR in complex with EAI045	1	327	D	None	None
+P00533	696	1022	6p1l	Crystal structure of EGFR in complex with EAI045	1	327	B	None	None
+P00533	696	1022	6p1l	Crystal structure of EGFR in complex with EAI045	1	327	C	None	None
+P00533	696	1022	6v6o	EGFR(T790M/V948R) in complex with LN2380	1	327	C	None	None
+P00533	696	1022	6v6o	EGFR(T790M/V948R) in complex with LN2380	1	327	D	None	None
+P00533	696	1022	6v6o	EGFR(T790M/V948R) in complex with LN2380	1	327	H	None	None
+P00533	696	1022	6v6o	EGFR(T790M/V948R) in complex with LN2380	1	327	F	None	None
+P00533	696	1022	6v6o	EGFR(T790M/V948R) in complex with LN2380	1	327	E	None	None
+P00533	696	1022	6v6o	EGFR(T790M/V948R) in complex with LN2380	1	327	A	None	None
+P00533	696	1022	6v6o	EGFR(T790M/V948R) in complex with LN2380	1	327	G	None	None
+P00533	696	1022	6v6o	EGFR(T790M/V948R) in complex with LN2380	1	327	B	None	None
+P00533	696	1022	2ity	Crystal structure of EGFR kinase domain in complex with Iressa	1	327	A	None	None
+P00533	696	1022	2itx	Crystal structure of EGFR kinase domain in complex with AMP-PNP	1	327	A	None	None
+P00533	696	1022	2j6m	Crystal structure of EGFR kinase domain in complex with AEE788	1	327	A	None	None
+P00533	696	1022	5zto	Crystal structure of EGFR 696-1022 T790M/C797S in complex with D3003	5	331	A	None	None
+P00533	696	1022	2itv	Crystal structure of EGFR kinase domain L858R mutation in complex with AMP-PNP	1	327	A	696	None
+P00533	696	1022	2itu	Crystal structure of EGFR kinase domain L858R mutation in complex with AFN941	1	327	A	696	None
+P00533	697	1022	6s9b	EGFR-KINASE IN COMPLEX WITH COMPOUND 1	1	326	A	697	None
+P00533	697	1019	5j9y	EGFR-T790M in complex with pyrazolopyrimidine inhibitor 1b	1	323	A	697	1019
+P00533	698	1022	5y25	EGFR kinase domain mutant (T790M/L858R) with covalent ligand NS-062	8	332	A	698	None
+P00533	698	1022	3w2p	EGFR Kinase domain T790M/L858R mutant with compound 2	7	331	A	698	None
+P00533	698	1022	3w2o	EGFR Kinase domain T790M/L858R Mutant with TAK-285	7	331	A	698	None
+P00533	698	1022	3w2q	EGFR kinase domain T790M/L858R mutant with HKI-272	7	331	A	698	None
+P00533	698	1022	3w2r	EGFR Kinase domain T790M/L858R mutant with compound 4	7	331	A	698	None
+P00533	702	1016	3bel	X-ray structure of EGFR in complex with oxime inhibitor	1	315	A	702	None
+P00533	702	1016	2rgp	Structure of EGFR in complex with hydrazone, a potent dual inhibitor	1	315	A	702	1016
+P00533	702	1022	2rfd	Crystal structure of the complex between the EGFR kinase domain and a Mig6 peptide	4	324	A	None	None
+P00533	702	1022	2rfd	Crystal structure of the complex between the EGFR kinase domain and a Mig6 peptide	4	324	B	None	None
+P00533	702	1022	2rfe	Crystal structure of the complex between the EGFR kinase domain and a Mig6 peptide	4	324	D	None	None
+P00533	702	1022	2rfe	Crystal structure of the complex between the EGFR kinase domain and a Mig6 peptide	4	324	A	678	None
+P00533	702	1022	2rfe	Crystal structure of the complex between the EGFR kinase domain and a Mig6 peptide	4	324	B	None	None
+P00533	702	1022	2rfe	Crystal structure of the complex between the EGFR kinase domain and a Mig6 peptide	4	324	C	678	None
+P00533	1062	1074	3vrp	Crystal structure of the tyrosine kinase binding domain of Cbl-c in complex with phospho-EGFR peptide	1	13	B	None	1074
+P00533	1062	1074	3vrr	Crystal structure of the tyrosine kinase binding domain of Cbl-c (PL mutant) in complex with phospho-EGFR peptide	1	13	C	None	1074
+P00533	1063	1075	3buo	Crystal structure of c-Cbl-TKB domain complexed with its binding motif in EGF receptor'	1	13	A	None	None
+P00533	1063	1075	3buo	Crystal structure of c-Cbl-TKB domain complexed with its binding motif in EGF receptor'	1	13	C	None	None
+P00533	1063	1074	3ob2	Crystal structure of c-Cbl TKB domain in complex with double phosphorylated EGFR peptide	1	12	A	None	1074
+P00533	1066	1076	3op0	Crystal structure of Cbl-c (Cbl-3) TKB domain in complex with EGFR pY1069 peptide	1	11	D	1066	None
+P00533	1066	1076	3op0	Crystal structure of Cbl-c (Cbl-3) TKB domain in complex with EGFR pY1069 peptide	1	11	C	1066	None
+P00533	1066	1076	3pfv	Crystal structure of Cbl-b TKB domain in complex with EGFR pY1069 peptide	1	11	C	1066	None
+P00533	1066	1076	3pfv	Crystal structure of Cbl-b TKB domain in complex with EGFR pY1069 peptide	1	11	D	1066	1076
+

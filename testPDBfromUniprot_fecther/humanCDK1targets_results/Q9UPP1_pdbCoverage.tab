@@ -1,0 +1,29 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9UPP1	PHD finger protein 8	PHF8_HUMAN	Homo sapiens	PF00628	PHD	PHD-finger	43	92
+Q9UPP1	PHD finger protein 8	PHF8_HUMAN	Homo sapiens	PF02373	JmjC	JmjC domain, hydroxylase	270	370
+Q9UPP1	PHD finger protein 8	PHF8_HUMAN	Homo sapiens	PF17811	JHD	Jumonji helical domain	374	477
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 5 PDB entries
+Q9UPP1	37	483	3kv4	Structure of PHF8 in complex with histone H3	1	447	A	None	447
+Q9UPP1	115	483	4do0	Crystal Structure of human PHF8 in complex with Daminozide	6	374	A	None	None
+Q9UPP1	115	483	2wwu	Crystal structure of the catalytic domain of PHD finger protein 8	3	371	A	None	None
+Q9UPP1	122	483	3k3n	Crystal structure of the catalytic core domain of human PHF8	2	363	A	None	None
+Q9UPP1	122	483	3k3o	Crystal structure of the catalytic core domain of human PHF8 complexed with alpha-ketoglutarate	2	363	A	None	None
+

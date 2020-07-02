@@ -1,0 +1,50 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P17676	CCAAT/ENHANCER BINDING PROTEIN BETA	CEBPB_HUMAN	Homo sapiens	PF07716	bZIP_2	Basic region leucine zipper	270	323
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#28 mappings in 28 PDB chains in 13 PDB entries
+P17676	259	345	1hjb	CRYSTAL STRUCTURE OF RUNX-1/AML1/CBFALPHA RUNT DOMAIN AND C/EBPBETA BZIP HOMODIMER BOUND TO A DNA FRAGMENT FROM THE CSF-1R PROMOTER	1	87	A	None	None
+P17676	259	345	1hjb	CRYSTAL STRUCTURE OF RUNX-1/AML1/CBFALPHA RUNT DOMAIN AND C/EBPBETA BZIP HOMODIMER BOUND TO A DNA FRAGMENT FROM THE CSF-1R PROMOTER	1	87	D	None	None
+P17676	259	345	1hjb	CRYSTAL STRUCTURE OF RUNX-1/AML1/CBFALPHA RUNT DOMAIN AND C/EBPBETA BZIP HOMODIMER BOUND TO A DNA FRAGMENT FROM THE CSF-1R PROMOTER	1	87	E	None	None
+P17676	259	345	1hjb	CRYSTAL STRUCTURE OF RUNX-1/AML1/CBFALPHA RUNT DOMAIN AND C/EBPBETA BZIP HOMODIMER BOUND TO A DNA FRAGMENT FROM THE CSF-1R PROMOTER	1	87	B	None	None
+P17676	259	336	1gu5	Crystal structure of C/EBPBETA BZIP homodimer bound to a DNA fragment from the MIM-1 promoter	1	78	A	None	None
+P17676	259	336	1gu5	Crystal structure of C/EBPBETA BZIP homodimer bound to a DNA fragment from the MIM-1 promoter	1	78	B	None	None
+P17676	259	336	1gtw	crystal structure of C/EBPbeta bZip homodimer bound to a DNA fragment from the tom-1A promoter	1	78	A	None	None
+P17676	259	336	1gtw	crystal structure of C/EBPbeta bZip homodimer bound to a DNA fragment from the tom-1A promoter	1	78	B	None	None
+P17676	259	336	2e43	Crystal structure of C/EBPbeta Bzip homodimer K269A mutant bound to A High Affinity DNA fragment	1	78	B	None	None
+P17676	259	336	2e43	Crystal structure of C/EBPbeta Bzip homodimer K269A mutant bound to A High Affinity DNA fragment	1	78	A	None	None
+P17676	259	336	2e42	Crystal structure of C/EBPbeta Bzip homodimer V285A mutant bound to A High Affinity DNA fragment	1	78	B	None	None
+P17676	259	336	2e42	Crystal structure of C/EBPbeta Bzip homodimer V285A mutant bound to A High Affinity DNA fragment	1	78	A	None	None
+P17676	259	336	1io4	CRYSTAL STRUCTURE OF RUNX-1/AML1/CBFALPHA RUNT DOMAIN-CBFBETA CORE DOMAIN HETERODIMER AND C/EBPBETA BZIP HOMODIMER BOUND TO A DNA FRAGMENT FROM THE CSF-1R PROMOTER	1	78	B	None	None
+P17676	259	336	1io4	CRYSTAL STRUCTURE OF RUNX-1/AML1/CBFALPHA RUNT DOMAIN-CBFBETA CORE DOMAIN HETERODIMER AND C/EBPBETA BZIP HOMODIMER BOUND TO A DNA FRAGMENT FROM THE CSF-1R PROMOTER	1	78	A	None	None
+P17676	259	336	1gu4	Crystal structure of C/EBPBETA BZIP homodimer bound to a high affinity DNA fragment	1	78	A	None	None
+P17676	259	336	1gu4	Crystal structure of C/EBPBETA BZIP homodimer bound to a high affinity DNA fragment	1	78	B	None	None
+P17676	259	336	1h88	CRYSTAL STRUCTURE OF TERNARY PROTEIN-DNA COMPLEX1	1	78	A	None	336
+P17676	259	336	1h88	CRYSTAL STRUCTURE OF TERNARY PROTEIN-DNA COMPLEX1	1	78	B	None	336
+P17676	259	336	1h8a	CRYSTAL STRUCTURE OF TERNARY PROTEIN-DNA COMPLEX3	1	78	A	None	None
+P17676	259	336	1h8a	CRYSTAL STRUCTURE OF TERNARY PROTEIN-DNA COMPLEX3	1	78	B	None	None
+P17676	269	344	6mg3	V285A Mutant of the C-terminal bZIP domain of human C/EBPbeta with 16bp Methylated Oligonucleotide Containing Consensus Recognition Sequence	3	78	B	269	None
+P17676	269	344	6mg3	V285A Mutant of the C-terminal bZIP domain of human C/EBPbeta with 16bp Methylated Oligonucleotide Containing Consensus Recognition Sequence	3	78	A	269	None
+P17676	269	344	6mg1	C-terminal bZIP domain of human C/EBPbeta with 16bp Methylated Oligonucleotide Containing Consensus Recognition Sequence-C2 Crystal Form	3	78	B	269	None
+P17676	269	344	6mg1	C-terminal bZIP domain of human C/EBPbeta with 16bp Methylated Oligonucleotide Containing Consensus Recognition Sequence-C2 Crystal Form	3	78	A	269	None
+P17676	269	344	6mg2	C-terminal bZIP domain of human C/EBPbeta with 16bp Methylated Oligonucleotide Containing Consensus Recognition Sequence-C2221 Crystal Form	3	78	B	269	None
+P17676	269	344	6mg2	C-terminal bZIP domain of human C/EBPbeta with 16bp Methylated Oligonucleotide Containing Consensus Recognition Sequence-C2221 Crystal Form	3	78	A	269	None
+P17676	273	336	1h89	CRYSTAL STRUCTURE OF TERNARY PROTEIN-DNA COMPLEX2	1	64	B	273	336
+P17676	273	336	1h89	CRYSTAL STRUCTURE OF TERNARY PROTEIN-DNA COMPLEX2	1	64	A	273	336
+

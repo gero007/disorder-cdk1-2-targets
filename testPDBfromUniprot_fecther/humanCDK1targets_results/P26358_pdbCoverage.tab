@@ -1,0 +1,41 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P26358	Peptide from DNA (cytosine-5)-methyltransferase 1	DNMT1_HUMAN	Homo sapiens	PF01426	BAH	BAH domain	931	1100
+P26358	Peptide from DNA (cytosine-5)-methyltransferase 1	DNMT1_HUMAN	Homo sapiens	PF01426	BAH	BAH domain	755	880
+P26358	Peptide from DNA (cytosine-5)-methyltransferase 1	DNMT1_HUMAN	Homo sapiens	PF00145	DNA_methylase	C-5 cytosine-specific DNA methylase	1139	1594
+P26358	Peptide from DNA (cytosine-5)-methyltransferase 1	DNMT1_HUMAN	Homo sapiens	PF02008	zf-CXXC	CXXC zinc finger domain	645	691
+P26358	Peptide from DNA (cytosine-5)-methyltransferase 1	DNMT1_HUMAN	Homo sapiens	PF06464	DMAP_binding	DMAP1-binding Domain	16	105
+P26358	Peptide from DNA (cytosine-5)-methyltransferase 1	DNMT1_HUMAN	Homo sapiens	PF12047	DNMT1-RFD	Cytosine specific DNA methyltransferase replication foci domain	399	534
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#14 mappings in 14 PDB chains in 10 PDB entries
+P26358	161	180	6k3a	Crystal structure of human PCNA in complex with DNMT1 PIP box motif.	1	20	F	None	None
+P26358	161	180	6k3a	Crystal structure of human PCNA in complex with DNMT1 PIP box motif.	1	20	D	None	None
+P26358	161	180	6k3a	Crystal structure of human PCNA in complex with DNMT1 PIP box motif.	1	20	B	None	None
+P26358	351	600	5wvo	Crystal structure of DNMT1 RFTS domain in complex with K18/K23 mono-ubiquitylated histone H3	1	250	C	None	None
+P26358	351	600	3epz	Structure of the replication foci-targeting sequence of human DNA cytosine methyltransferase DNMT1	19	268	A	351	None
+P26358	351	600	3epz	Structure of the replication foci-targeting sequence of human DNA cytosine methyltransferase DNMT1	19	268	B	351	None
+P26358	351	599	5ydr	Structure of DNMT1 RFTS domain in complex with ubiquitin	2	250	B	351	599
+P26358	351	1600	4wxx	The crystal structure of human DNMT1(351-1600)	2	1251	B	351	1600
+P26358	351	1600	4wxx	The crystal structure of human DNMT1(351-1600)	2	1251	A	351	1600
+P26358	600	1600	4yoc	Crystal Structure of human DNMT1 and USP7/HAUSP complex	4	1004	A	None	1600
+P26358	601	1600	3swr	Structure of human DNMT1 (601-1600) in complex with Sinefungin	3	1002	A	601	1600
+P26358	646	1600	3pta	Crystal structure of human DNMT1(646-1600) in complex with DNA	2	956	A	None	1600
+P26358	1097	1129	4z96	Crystal structure of DNMT1 in complex with USP7	1	33	C	None	None
+P26358	1098	1129	4z97	Crystal structure of USP7 in complex with DNMT1(K1115Q)	2	33	C	None	None
+

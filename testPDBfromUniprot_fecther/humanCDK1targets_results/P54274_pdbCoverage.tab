@@ -1,0 +1,37 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P54274	HTRF1	TERF1_HUMAN	Homo sapiens	PF00249	Myb_DNA-binding	Myb-like DNA-binding domain	380	428
+P54274	HTRF1	TERF1_HUMAN	Homo sapiens	PF08558	TRF	Telomere repeat binding factor (TRF)	74	270
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#14 mappings in 14 PDB chains in 10 PDB entries
+P54274	1	55	5hkp	Crystal structure of mouse Tankyrase/human TRF1 complex	3	57	D	None	None
+P54274	1	55	5hkp	Crystal structure of mouse Tankyrase/human TRF1 complex	3	57	C	None	None
+P54274	58	268	3bqo	Crystal Structure of TRF1 TRFH domain and TIN2 peptide complex	1	211	A	None	268
+P54274	58	268	3l82	X-ray Crystal structure of TRF1 and Fbx4 complex	5	215	A	None	None
+P54274	62	265	1h6o	Dimerisation domain from human TRF1	1	204	A	62	265
+P54274	62	265	5wir	Structure of the TRF1-TERB1 interface	2	205	B	62	265
+P54274	62	265	5wir	Structure of the TRF1-TERB1 interface	2	205	A	62	265
+P54274	65	266	5xup	Crystal structure of TRF1 and TERB1	1	202	A	65	266
+P54274	65	266	5xup	Crystal structure of TRF1 and TERB1	1	202	B	65	None
+P54274	370	439	1iv6	Solution Structure of the DNA Complex of Human TRF1	1	70	A	None	None
+P54274	371	439	1ity	Solution structure of the DNA binding domain of human TRF1	1	69	A	None	439
+P54274	378	430	1ba5	DNA-BINDING DOMAIN OF HUMAN TELOMERIC PROTEIN, HTRF1, NMR, 18 STRUCTURES	1	53	A	1	53
+P54274	379	431	1w0t	hTRF1 DNA-binding domain in complex with telomeric DNA.	1	53	B	379	None
+P54274	379	431	1w0t	hTRF1 DNA-binding domain in complex with telomeric DNA.	1	53	A	379	None
+

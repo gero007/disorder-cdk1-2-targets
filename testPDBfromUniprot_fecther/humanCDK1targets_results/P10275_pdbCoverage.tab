@@ -1,0 +1,115 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P10275	Androgen Receptor	ANDR_HUMAN	Homo sapiens	PF00104	Hormone_recep	Ligand-binding domain of nuclear hormone receptor	690	881
+P10275	Androgen Receptor	ANDR_HUMAN	Homo sapiens	PF00105	zf-C4	Zinc finger, C4 type (two domains)	558	627
+P10275	Androgen Receptor	ANDR_HUMAN	Homo sapiens	PF02166	Androgen_recep	Androgen receptor	6	449
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#91 mappings in 91 PDB chains in 82 PDB entries
+P10275	664	920	2q7i	The Wild Type Androgen Receptor Ligand Binding Domain Bound with Testosterone and an AR 20-30 Peptide	1	257	A	None	919
+P10275	20	30	2q7i	The Wild Type Androgen Receptor Ligand Binding Domain Bound with Testosterone and an AR 20-30 Peptide	1	11	B	None	30
+P10275	664	920	2q7k	The Androgen Receptor Prostate Cancer Mutant H874Y Ligand Binding Domain Bound with Testosterone and an AR 20-30 Peptide	1	257	A	None	919
+P10275	20	30	2q7k	The Androgen Receptor Prostate Cancer Mutant H874Y Ligand Binding Domain Bound with Testosterone and an AR 20-30 Peptide	1	11	B	None	30
+P10275	672	920	1xow	Crystal structure of the human androgen receptor ligand binding domain bound with an androgen receptor NH2-terminal peptide, AR20-30, and R1881	1	249	A	671	919
+P10275	20	30	1xow	Crystal structure of the human androgen receptor ligand binding domain bound with an androgen receptor NH2-terminal peptide, AR20-30, and R1881	1	11	B	None	30
+P10275	655	920	3v49	Structure of ar lbd with activator peptide and sarm inhibitor 1	1	266	A	None	919
+P10275	21	31	3v49	Structure of ar lbd with activator peptide and sarm inhibitor 1	1	11	B	1	11
+P10275	672	920	3v4a	Structure of ar lbd with activator peptide and sarm inhibitor 2	1	249	A	671	919
+P10275	21	31	3v4a	Structure of ar lbd with activator peptide and sarm inhibitor 2	1	11	B	1	11
+P10275	642	920	5cj6	Crystal Structure of a Selective Androgen Receptor Modulator Bound to the Ligand Binding Domain of the Human Androgen Receptor	3	281	A	None	None
+P10275	21	30	5cj6	Crystal Structure of a Selective Androgen Receptor Modulator Bound to the Ligand Binding Domain of the Human Androgen Receptor	1	10	B	21	30
+P10275	622	636	3btr	AR-NLS:Importin-alpha complex	1	15	B	611	625
+P10275	655	920	2am9	Crystal structure of human androgen receptor ligand binding domain in complex with testosterone	1	266	A	None	919
+P10275	655	920	2amb	Crystal structure of human androgen receptor ligand binding domain in complex with tetrahydrogestrinone	1	266	A	None	919
+P10275	655	920	2ama	Crystal structure of human androgen receptor ligand binding domain in complex with dihydrotestosterone	1	266	A	None	919
+P10275	655	920	2pnu	Crystal structure of human androgen receptor ligand-binding domain in complex with EM-5744	1	266	A	None	919
+P10275	658	920	1e3g	Human Androgen Receptor Ligand Binding in complex with the ligand metribolone (R1881)	1	263	A	None	None
+P10275	663	920	4ql8	Crystal structure of Androgen Receptor in complex with the ligand	2	259	A	None	None
+P10275	664	920	2q7l	The Androgen Receptor Prostate Cancer Mutant H874Y Ligand Binding Domain Bound with Testosterone and a TIF2 box3 Coactivator Peptide 740-753	1	257	A	None	919
+P10275	664	920	2q7j	The Wild Type Androgen Receptor Ligand Binding Domain Bound with Testosterone and a TIF2 box 3 Coactivator Peptide 740-753	1	257	A	None	919
+P10275	664	920	1xj7	Complex Androgen Receptor LBD and RAC3 peptide	1	257	A	663	None
+P10275	665	920	2ax7	Crystal Structure Of The Androgen Receptor Ligand Binding Domain T877A Mutant In Complex With S-1	1	256	A	None	None
+P10275	665	920	2ylo	TARGETING THE BINDING FUNCTION 3 SITE OF THE ANDROGEN RECEPTOR THROUGH IN SILICO MOLECULAR MODELING	1	256	A	None	919
+P10275	665	920	2ax9	Crystal Structure Of The Androgen Receptor Ligand Binding Domain In Complex With R-3	1	256	A	None	None
+P10275	665	920	2ax8	Crystal Structure Of The Androgen Receptor Ligand Binding Domain W741L Mutant In Complex With S-1	1	256	A	None	None
+P10275	665	920	2axa	Crystal Structure Of The Androgen Receptor Ligand Binding Domain In Complex With S-1	1	256	A	None	None
+P10275	665	920	2ylp	TARGETING THE BINDING FUNCTION 3 SITE OF THE ANDROGEN RECEPTOR THROUGH IN SILICO MOLECULAR MODELING	1	256	A	None	919
+P10275	665	920	2ylq	TARGETING THE BINDING FUNCTION 3 SITE OF THE ANDROGEN RECEPTOR THROUGH IN SILICO MOLECULAR MODELING	1	256	A	None	919
+P10275	665	920	3zqt	TARGETING THE BINDING FUNCTION 3 SITE OF THE ANDROGEN RECEPTOR THROUGH IN SILICO MOLECULAR MODELING	1	256	A	None	919
+P10275	665	920	2ax6	Crystal Structure Of The Androgen Receptor Ligand Binding Domain T877A Mutant In Complex With Hydroxyflutamide	1	256	A	None	None
+P10275	665	920	4hlw	Targeting the Binding Function 3 (BF3) Site of the Human Androgen Receptor Through Virtual Screening. 2. Development of 2-((2-phenoxyethyl) thio)-1H-benzoimidazole derivatives.	1	256	A	None	919
+P10275	669	920	5jjm	Crystal Structure of Homodimeric Androgen Receptor Ligand-Binding Domain bound to DHT and LxxLL peptide	1	252	C	668	None
+P10275	669	920	5jjm	Crystal Structure of Homodimeric Androgen Receptor Ligand-Binding Domain bound to DHT and LxxLL peptide	1	252	A	668	919
+P10275	669	920	5jjm	Crystal Structure of Homodimeric Androgen Receptor Ligand-Binding Domain bound to DHT and LxxLL peptide	1	252	D	None	None
+P10275	669	920	5jjm	Crystal Structure of Homodimeric Androgen Receptor Ligand-Binding Domain bound to DHT and LxxLL peptide	1	252	B	None	919
+P10275	670	920	2pit	Androgen receptor LBD with small molecule	1	251	A	669	None
+P10275	670	920	2pio	Androgen receptor LBD with small molecule	1	251	A	None	None
+P10275	670	920	2piw	Androgen receptor with small molecule	1	251	A	None	None
+P10275	670	920	2piv	Androgen receptor with small molecule	1	251	A	None	None
+P10275	670	920	2piq	androgen receptor LBD with small molecule	1	251	A	None	None
+P10275	670	920	2pix	AR LBD with small molecule	1	251	A	None	None
+P10275	670	920	2pkl	Androgen receptor LBD with small molecule	1	251	A	None	None
+P10275	670	920	1t5z	Crystal Structure of the Androgen Receptor Ligand Binding Domain (LBD) with DHT and a peptide derived from its physiological coactivator ARA70	1	251	A	669	None
+P10275	670	920	2pip	Androgen receptor LBD with small molecule	1	251	L	None	None
+P10275	670	920	1t65	Crystal structure of the androgen receptor ligand binding domain with DHT and a peptide derived form its physiological coactivator GRIP1 NR box 2 bound in a non-helical conformation	1	251	A	669	919
+P10275	670	920	2piu	Androgen receptor LBD with small molecule	1	251	A	None	None
+P10275	670	920	1t63	Crystal Structure of the Androgen Receptor Ligand Binding Domain with DHT and a peptide derived from its physiological coactivator GRIP1 NR box3	1	251	A	669	None
+P10275	670	919	2hvc	The Crystal Structure of Ligand-binding Domain (LBD) of human Androgen Receptor in Complex with a selective modulator LGD2226	1	250	A	669	918
+P10275	670	920	2pir	Androgen receptor LBD with small molecule	1	251	A	669	None
+P10275	671	920	4okx	Crystal structure of W741L-AR-LBD bound with co-regulator peptide	1	250	A	None	None
+P10275	671	920	4oj9	Crystal structure of T877A-AR-LBD bound with co-regulator peptide	1	250	A	670	None
+P10275	671	920	4oey	Crystal structure of AR-LBD bound with co-regulator peptide	1	250	A	None	None
+P10275	671	920	4oea	Crystal structure of AR-LBD	1	250	A	670	None
+P10275	671	920	4oed	Crystal structure of AR-LBD bound with co-regulator peptide	1	250	A	670	None
+P10275	671	920	4okb	Crystal structure of W741L-AR-LBD bound with co-regulator peptide	1	250	A	None	None
+P10275	671	920	4oha	Crystal structure of T877A-AR-LBD bound with co-regulator peptide	1	250	A	None	919
+P10275	671	920	4ok1	Crystal structure of W741L-AR-LBD bound with co-regulator peptide	1	250	A	670	None
+P10275	671	920	4oez	Crystal structure of AR-LBD bound with co-regulator peptide	1	250	A	670	None
+P10275	671	920	4oil	Crystal structure of T877A-AR-LBD bound with co-regulator peptide	1	250	A	670	None
+P10275	671	920	4oh5	Crystal structure of T877A-AR-LBD bound with co-regulator peptide	1	250	A	None	919
+P10275	671	920	4okw	Crystal structure of W741L-AR-LBD bound with co-regulator peptide	1	250	A	None	None
+P10275	671	920	4okt	Crystal structure of W741L-AR-LBD bound with co-regulator peptide	1	250	A	670	None
+P10275	671	920	4olm	Crystal structure of W741L-AR-LBD bound with co-regulator peptide	1	250	A	None	None
+P10275	671	920	4oh6	Crystal structure of T877A-AR-LBD bound with co-regulator peptide	1	250	A	None	919
+P10275	671	920	4ofu	Crystal structure of AR-LBD bound with co-regulator peptide	1	250	A	None	None
+P10275	671	920	4ofr	Crystal structure of AR-LBD bound with co-regulator peptide	1	250	A	None	None
+P10275	671	920	4oiu	Crystal structure of T877A-AR-LBD bound with co-regulator peptide	1	250	A	670	None
+P10275	671	920	5vo4	Crystal Structure Of The Androgen Receptor Ligand Binding Domain In Complex With 5-(2-fluoro-4-hydroxyphenyl)-1-methyl-1H-pyrrole-2-carbonitrile	1	250	A	670	919
+P10275	671	920	4ojb	Crystal structure of W741L-AR-LBD	1	250	A	None	None
+P10275	671	919	3l3x	Crystal structure of DHT-bound androgen receptor in complex with the first motif of steroid receptor coactivator 3	2	250	A	670	918
+P10275	671	919	4k7a	Crystal structure of the androgen receptor ligand binding domain in complex with minoxidil	1	249	A	670	918
+P10275	671	919	3l3z	Crystal structure of DHT-bound androgen receptor in complex with the third motif of steroid receptor coactivator 3	2	250	A	670	918
+P10275	671	918	1gs4	Structural basis for the glucocorticoid response in a mutant human androgen receptor (ARccr) derived from an androgen-independent prostate cancer	1	248	A	670	917
+P10275	671	920	4ogh	Crystal structure of T877A-AR-LBD	1	250	A	None	919
+P10275	672	920	5t8j	Synthesis and biological evaluation of novel selective androgen receptor modulators (SARMs). Part II: Optimization of 4-(pyrrolidin-1-yl)benzonitrile derivatives	10	258	A	671	919
+P10275	672	920	3b65	Crystal structure of the androgen receptor ligand binding domain in complex with SARM S-24	1	249	A	671	None
+P10275	672	920	2yhd	Human androgen receptor in complex with AF2 small molecule inhibitor	1	249	A	671	919
+P10275	672	920	3b67	Crystal structure of the androgen receptor ligand binding domain in complex with SARM C-23	1	249	A	671	None
+P10275	672	920	3b68	Crystal structure of the androgen receptor ligand binding domain in complex with SARM S-4	1	249	A	671	None
+P10275	672	920	2oz7	Crystal structure of the human androgen receptor T877A mutant ligand-binding domain with cyproterone acetate	1	249	A	671	919
+P10275	672	920	1xq3	Crystal structure of the human androgen receptor ligand binding domain bound with R1881	1	249	A	671	919
+P10275	672	920	3b5r	Crystal structure of the androgen receptor ligand binding domain in complex with SARM C-31	1	249	A	671	None
+P10275	672	920	5t8e	Synthesis and biological evaluation of novel selective androgen receptor modulators (SARMs). Part II: Optimization of 4-(pyrrolidin-1-yl)benzonitrile derivatives	10	258	A	671	919
+P10275	672	920	3b66	Crystal structure of the androgen receptor ligand binding domain in complex with SARM S-21	1	249	A	671	None
+P10275	672	920	2ao6	Crystal structure of the human androgen receptor ligand binding domain bound with TIF2(iii) 740-753 peptide and R1881	1	249	A	671	None
+P10275	672	919	2z4j	Crystal structure of AR LBD with SHP peptide NR Box 2	1	248	A	671	918
+P10275	672	918	3rll	Crystal structure of the T877A androgen receptor ligand binding domain in complex with (S)-N-(4-Cyano-3-(trifluoromethyl)phenyl)-3-(4-cyanonaphthalen-1-yloxy)-2-hydroxy-2-methylpropanamide	1	247	A	None	917
+P10275	672	918	3rlj	Crystal structure of the androgen receptor ligand binding domain in complex with SARM S-22	1	247	A	671	917
+P10275	672	920	5v8q	Synthesis and biological evaluation of novel selective androgen receptor modulators (SARMs): Part III	1	249	A	671	919
+P10275	673	918	1z95	Crystal Structure of the Androgen Receptor Ligand-binding Domain W741L Mutant Complex with R-bicalutamide	1	246	A	672	917
+

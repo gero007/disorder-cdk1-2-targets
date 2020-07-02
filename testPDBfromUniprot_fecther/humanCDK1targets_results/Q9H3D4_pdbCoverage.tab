@@ -1,0 +1,73 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9H3D4	second splice variant p63	P63_HUMAN	Homo sapiens	PF00870	P53	P53 DNA-binding domain	167	359
+Q9H3D4	second splice variant p63	P63_HUMAN	Homo sapiens	PF07647	SAM_2	SAM domain (Sterile alpha motif)	541	605
+Q9H3D4	second splice variant p63	P63_HUMAN	Homo sapiens	PF07710	P53_tetramer	P53 tetramerisation motif	391	431
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#49 mappings in 49 PDB chains in 17 PDB entries
+Q9H3D4	47	73	6fgn	Solution Structure of p300Taz2-p63TA	98	124	A	98	124
+Q9H3D4	153	388	2rmn	The solution structure of the p63 DNA-binding domain	2	233	A	114	345
+Q9H3D4	166	362	3us1	Structure of p63 DNA Binding Domain in Complex with a 22 Base Pair Response Element Containing a Two Base Pair "GC" Spacer Between Half Sites	7	203	A	127	None
+Q9H3D4	166	362	3us1	Structure of p63 DNA Binding Domain in Complex with a 22 Base Pair Response Element Containing a Two Base Pair "GC" Spacer Between Half Sites	7	203	D	None	None
+Q9H3D4	166	362	3us0	Structure of p63 DNA Binding Domain in Complex with a 22 Base Pair A/T Rich Response Element Containing a Two Base Pair "AT" Spacer Between Half Sites	7	203	A	127	None
+Q9H3D4	166	362	3us0	Structure of p63 DNA Binding Domain in Complex with a 22 Base Pair A/T Rich Response Element Containing a Two Base Pair "AT" Spacer Between Half Sites	7	203	B	127	None
+Q9H3D4	166	362	3us0	Structure of p63 DNA Binding Domain in Complex with a 22 Base Pair A/T Rich Response Element Containing a Two Base Pair "AT" Spacer Between Half Sites	7	203	C	127	None
+Q9H3D4	166	362	3us0	Structure of p63 DNA Binding Domain in Complex with a 22 Base Pair A/T Rich Response Element Containing a Two Base Pair "AT" Spacer Between Half Sites	7	203	D	127	None
+Q9H3D4	166	362	3us2	Structure of p63 DNA Binding Domain in Complex with a 19 Base Pair A/T Rich Response Element Containing Two Half Sites with a Single Base Pair Overlap	7	203	A	127	None
+Q9H3D4	166	362	3us2	Structure of p63 DNA Binding Domain in Complex with a 19 Base Pair A/T Rich Response Element Containing Two Half Sites with a Single Base Pair Overlap	7	203	D	None	None
+Q9H3D4	166	362	3us2	Structure of p63 DNA Binding Domain in Complex with a 19 Base Pair A/T Rich Response Element Containing Two Half Sites with a Single Base Pair Overlap	7	203	B	None	None
+Q9H3D4	166	362	3us2	Structure of p63 DNA Binding Domain in Complex with a 19 Base Pair A/T Rich Response Element Containing Two Half Sites with a Single Base Pair Overlap	7	203	G	127	None
+Q9H3D4	166	362	3us2	Structure of p63 DNA Binding Domain in Complex with a 19 Base Pair A/T Rich Response Element Containing Two Half Sites with a Single Base Pair Overlap	7	203	H	None	None
+Q9H3D4	166	362	3us2	Structure of p63 DNA Binding Domain in Complex with a 19 Base Pair A/T Rich Response Element Containing Two Half Sites with a Single Base Pair Overlap	7	203	C	127	None
+Q9H3D4	166	362	3us2	Structure of p63 DNA Binding Domain in Complex with a 19 Base Pair A/T Rich Response Element Containing Two Half Sites with a Single Base Pair Overlap	7	203	I	127	None
+Q9H3D4	166	362	3us2	Structure of p63 DNA Binding Domain in Complex with a 19 Base Pair A/T Rich Response Element Containing Two Half Sites with a Single Base Pair Overlap	7	203	J	None	None
+Q9H3D4	166	362	3qyn	Structure of p63 DNA Binding Domain in Complex with a 22 Base Pair A/T Rich Response Element Containing 2 Base Pair Spacer Between Half Sites	7	203	A	127	None
+Q9H3D4	166	362	3qyn	Structure of p63 DNA Binding Domain in Complex with a 22 Base Pair A/T Rich Response Element Containing 2 Base Pair Spacer Between Half Sites	7	203	B	127	None
+Q9H3D4	166	362	3qyn	Structure of p63 DNA Binding Domain in Complex with a 22 Base Pair A/T Rich Response Element Containing 2 Base Pair Spacer Between Half Sites	7	203	C	127	None
+Q9H3D4	166	362	3qyn	Structure of p63 DNA Binding Domain in Complex with a 22 Base Pair A/T Rich Response Element Containing 2 Base Pair Spacer Between Half Sites	7	203	D	127	None
+Q9H3D4	166	362	3qym	Structure of p63 DNA Binding Domain in Complex with a 10 Base Pair A/T Rich Response Element Half Site	7	203	A	127	None
+Q9H3D4	166	362	3qym	Structure of p63 DNA Binding Domain in Complex with a 10 Base Pair A/T Rich Response Element Half Site	7	203	E	127	None
+Q9H3D4	166	362	3qym	Structure of p63 DNA Binding Domain in Complex with a 10 Base Pair A/T Rich Response Element Half Site	7	203	D	127	None
+Q9H3D4	166	362	3qym	Structure of p63 DNA Binding Domain in Complex with a 10 Base Pair A/T Rich Response Element Half Site	7	203	H	127	None
+Q9H3D4	166	362	3qym	Structure of p63 DNA Binding Domain in Complex with a 10 Base Pair A/T Rich Response Element Half Site	7	203	C	127	None
+Q9H3D4	166	362	3qym	Structure of p63 DNA Binding Domain in Complex with a 10 Base Pair A/T Rich Response Element Half Site	7	203	B	127	None
+Q9H3D4	166	362	3qym	Structure of p63 DNA Binding Domain in Complex with a 10 Base Pair A/T Rich Response Element Half Site	7	203	G	None	None
+Q9H3D4	166	362	3qym	Structure of p63 DNA Binding Domain in Complex with a 10 Base Pair A/T Rich Response Element Half Site	7	203	F	127	None
+Q9H3D4	397	455	4a9z	CRYSTAL STRUCTURE OF HUMAN P63 TETRAMERIZATION DOMAIN	3	61	B	358	None
+Q9H3D4	397	455	4a9z	CRYSTAL STRUCTURE OF HUMAN P63 TETRAMERIZATION DOMAIN	3	61	D	358	None
+Q9H3D4	397	455	4a9z	CRYSTAL STRUCTURE OF HUMAN P63 TETRAMERIZATION DOMAIN	3	61	A	358	None
+Q9H3D4	397	455	4a9z	CRYSTAL STRUCTURE OF HUMAN P63 TETRAMERIZATION DOMAIN	3	61	C	358	None
+Q9H3D4	397	455	2nb1	P63/p73 hetero-tetramerisation domain	2	60	C	1002	1060
+Q9H3D4	397	455	2nb1	P63/p73 hetero-tetramerisation domain	2	60	A	2	60
+Q9H3D4	398	427	3zy0	Crystal structure of a truncated variant of the human p63 tetramerization domain lacking the C-terminal helix	3	32	D	None	None
+Q9H3D4	398	427	3zy0	Crystal structure of a truncated variant of the human p63 tetramerization domain lacking the C-terminal helix	3	32	C	None	388
+Q9H3D4	398	427	3zy0	Crystal structure of a truncated variant of the human p63 tetramerization domain lacking the C-terminal helix	3	32	B	None	388
+Q9H3D4	398	427	3zy0	Crystal structure of a truncated variant of the human p63 tetramerization domain lacking the C-terminal helix	3	32	A	359	388
+Q9H3D4	398	441	3zy1	Crystal structure of the human p63 tetramerization domain	3	46	A	359	None
+Q9H3D4	540	614	1rg6	Solution structure of the C-terminal domain of p63	1	75	A	None	None
+Q9H3D4	543	622	2y9t	Structural basis of p63a SAM domain mutants involved in AEC syndrome	3	82	A	543	622
+Q9H3D4	545	611	2y9u	Structural basis of p63a SAM domain mutants involved in AEC syndrome	3	69	A	545	611
+Q9H3D4	618	633	6ru7	Crystal structure of Casein Kinase I delta (CK1d) in complex with double phosphorylated p63 PAD2P peptide	1	16	C	579	None
+Q9H3D4	618	633	6ru7	Crystal structure of Casein Kinase I delta (CK1d) in complex with double phosphorylated p63 PAD2P peptide	1	16	D	None	None
+Q9H3D4	618	630	6ru6	Crystal structure of Casein Kinase I delta (CK1d) in complex with monophosphorylated p63 PAD1P peptide	1	13	C	579	None
+Q9H3D4	621	632	6ru8	Crystal structure of Casein Kinase I delta (CK1d) in complex with triple phosphorylated p63 PAD3P peptide	1	12	G	582	None
+Q9H3D4	621	632	6ru8	Crystal structure of Casein Kinase I delta (CK1d) in complex with triple phosphorylated p63 PAD3P peptide	1	12	F	582	593
+Q9H3D4	621	632	6ru8	Crystal structure of Casein Kinase I delta (CK1d) in complex with triple phosphorylated p63 PAD3P peptide	1	12	E	582	None
+Q9H3D4	621	632	6ru8	Crystal structure of Casein Kinase I delta (CK1d) in complex with triple phosphorylated p63 PAD3P peptide	1	12	H	582	None
+

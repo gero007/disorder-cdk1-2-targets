@@ -1,0 +1,30 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q92785	Zinc finger protein ubi-d4	REQU_HUMAN	Homo sapiens	PF00628	PHD	PHD-finger	329	376
+Q92785	Zinc finger protein ubi-d4	REQU_HUMAN	Homo sapiens	PF00628	PHD	PHD-finger	272	330
+Q92785	Zinc finger protein ubi-d4	REQU_HUMAN	Homo sapiens	PF14051	Requiem_N	N-terminal domain of DPF2/REQ.	13	84
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 5 PDB entries
+Q92785	1	391	6lth	Structure of human BAF Base module	1	391	R	None	None
+Q92785	1	100	6ltj	Structure of nucleosome-bound human BAF complex	1	100	R	None	None
+Q92785	209	391	6ltj	Structure of nucleosome-bound human BAF complex	110	292	R	None	None
+Q92785	203	249	3iuf	Crystal structure of the C2H2-type zinc finger domain of human ubi-d4	2	48	A	203	None
+Q92785	270	391	5b79	Crystal structure of DPF2 double PHD finger	2	123	A	11	None
+Q92785	270	391	5vdc	Crystal structure of the human DPF2 tandem PHD finger domain	5	126	A	1	None
+

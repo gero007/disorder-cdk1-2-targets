@@ -1,0 +1,36 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O14686	Histone-lysine N-methyltransferase 2D	KMT2D_HUMAN	Homo sapiens	PF00628	PHD	PHD-finger	1429	1477
+O14686	Histone-lysine N-methyltransferase 2D	KMT2D_HUMAN	Homo sapiens	PF00628	PHD	PHD-finger	1379	1429
+O14686	Histone-lysine N-methyltransferase 2D	KMT2D_HUMAN	Homo sapiens	PF00628	PHD	PHD-finger	275	323
+O14686	Histone-lysine N-methyltransferase 2D	KMT2D_HUMAN	Homo sapiens	PF00856	SET	SET domain	5408	5513
+O14686	Histone-lysine N-methyltransferase 2D	KMT2D_HUMAN	Homo sapiens	PF05964	FYRN	F/Y-rich N-terminus	5181	5232
+O14686	Histone-lysine N-methyltransferase 2D	KMT2D_HUMAN	Homo sapiens	PF05965	FYRC	F/Y rich C-terminus	5238	5322
+O14686	Histone-lysine N-methyltransferase 2D	KMT2D_HUMAN	Homo sapiens	PF13771	zf-HC5HC2H	PHD-like zinc-binding domain	139	218
+O14686	Histone-lysine N-methyltransferase 2D	KMT2D_HUMAN	Homo sapiens	PF13832	zf-HC5HC2H_2	PHD-zinc-finger like domain	5030	5144
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#7 mappings in 6 PDB chains in 4 PDB entries
+O14686	1503	1562	6o7g	Solution structure of MLL4 PHD6 domain in complex with histone H4K16ac peptide	5	64	B	1503	1562
+O14686	5333	5346	4erq	X-ray structure of WDR5-MLL2 Win motif peptide binary complex	1	14	E	5333	None
+O14686	5333	5346	4erq	X-ray structure of WDR5-MLL2 Win motif peptide binary complex	1	14	F	5333	None
+O14686	5333	5346	4erq	X-ray structure of WDR5-MLL2 Win motif peptide binary complex	1	14	D	5333	None
+O14686	5337	5347	3uvk	Crystal structure of WDR5 in complex with the WDR5-interacting motif of MLL2	1	11	B	5062	5072
+O14686	5382	5536	4z4p	Structure of the MLL4 SET Domain	4	158	A	5382	5536
+O14686	5379	5379	4z4p	Structure of the MLL4 SET Domain	1	1	A	None	None
+

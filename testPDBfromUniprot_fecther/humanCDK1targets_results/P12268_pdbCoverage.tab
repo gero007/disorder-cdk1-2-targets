@@ -1,0 +1,190 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P12268	PROTEIN (INOSINE MONOPHOSPHATE DEHYDROGENASE 2)	IMDH2_HUMAN	Homo sapiens	PF00478	IMPDH	IMP dehydrogenase / GMP reductase domain	29	504
+P12268	PROTEIN (INOSINE MONOPHOSPHATE DEHYDROGENASE 2)	IMDH2_HUMAN	Homo sapiens	PF00571	CBS	CBS domain	175	232
+P12268	PROTEIN (INOSINE MONOPHOSPHATE DEHYDROGENASE 2)	IMDH2_HUMAN	Homo sapiens	PF00571	CBS	CBS domain	107	166
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#166 mappings in 166 PDB chains in 18 PDB entries
+P12268	1	514	1nf7	Ternary complex of the human type II Inosine Monophosphate Dedhydrogenase with Ribavirin Monophosphate and C2-Mycophenolic Adenine Dinucleotide	1	514	A	None	514
+P12268	1	514	1nf7	Ternary complex of the human type II Inosine Monophosphate Dedhydrogenase with Ribavirin Monophosphate and C2-Mycophenolic Adenine Dinucleotide	1	514	B	None	514
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	A	None	514
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	K	1	None
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	H	None	514
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	E	None	514
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	D	None	514
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	J	1	None
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	M	1	None
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	G	None	514
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	I	1	None
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	C	None	514
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	B	None	514
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	P	1	None
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	O	1	None
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	N	1	None
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	L	1	None
+P12268	1	514	6u8r	Human IMPDH2 treated with ATP, IMP, and NAD+. Bent (1/4 compressed, 3/4 extended) segment reconstruction.	6	519	F	None	514
+P12268	1	514	6uaj	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free canonical octamer reconstruction.	6	519	H	None	514
+P12268	1	514	6uaj	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free canonical octamer reconstruction.	6	519	E	None	514
+P12268	1	514	6uaj	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free canonical octamer reconstruction.	6	519	D	None	514
+P12268	1	514	6uaj	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free canonical octamer reconstruction.	6	519	A	None	514
+P12268	1	514	6uaj	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free canonical octamer reconstruction.	6	519	G	None	514
+P12268	1	514	6uaj	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free canonical octamer reconstruction.	6	519	F	None	514
+P12268	1	514	6uaj	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free canonical octamer reconstruction.	6	519	C	None	514
+P12268	1	514	6uaj	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free canonical octamer reconstruction.	6	519	B	None	514
+P12268	1	514	6uc2	Human IMPDH2 treated with ATP and 2 mM GTP. Free canonical octamer reconstruction.	6	519	D	None	None
+P12268	1	514	6uc2	Human IMPDH2 treated with ATP and 2 mM GTP. Free canonical octamer reconstruction.	6	519	C	None	None
+P12268	1	514	6uc2	Human IMPDH2 treated with ATP and 2 mM GTP. Free canonical octamer reconstruction.	6	519	H	None	None
+P12268	1	514	6uc2	Human IMPDH2 treated with ATP and 2 mM GTP. Free canonical octamer reconstruction.	6	519	A	None	None
+P12268	1	514	6uc2	Human IMPDH2 treated with ATP and 2 mM GTP. Free canonical octamer reconstruction.	6	519	F	None	None
+P12268	1	514	6uc2	Human IMPDH2 treated with ATP and 2 mM GTP. Free canonical octamer reconstruction.	6	519	E	None	None
+P12268	1	514	6uc2	Human IMPDH2 treated with ATP and 2 mM GTP. Free canonical octamer reconstruction.	6	519	B	None	None
+P12268	1	514	6uc2	Human IMPDH2 treated with ATP and 2 mM GTP. Free canonical octamer reconstruction.	6	519	G	None	None
+P12268	1	514	6u8e	Human IMPDH2 treated with ATP, IMP, and NAD+. Filament assembly interface reconstruction.	6	519	A	1	514
+P12268	1	514	6u8e	Human IMPDH2 treated with ATP, IMP, and NAD+. Filament assembly interface reconstruction.	6	519	H	1	514
+P12268	1	514	6u8e	Human IMPDH2 treated with ATP, IMP, and NAD+. Filament assembly interface reconstruction.	6	519	E	1	514
+P12268	1	514	6u8e	Human IMPDH2 treated with ATP, IMP, and NAD+. Filament assembly interface reconstruction.	6	519	C	1	514
+P12268	1	514	6u8e	Human IMPDH2 treated with ATP, IMP, and NAD+. Filament assembly interface reconstruction.	6	519	F	1	514
+P12268	1	514	6u8e	Human IMPDH2 treated with ATP, IMP, and NAD+. Filament assembly interface reconstruction.	6	519	D	1	514
+P12268	1	514	6u8e	Human IMPDH2 treated with ATP, IMP, and NAD+. Filament assembly interface reconstruction.	6	519	G	1	514
+P12268	1	514	6u8e	Human IMPDH2 treated with ATP, IMP, and NAD+. Filament assembly interface reconstruction.	6	519	B	1	514
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	N	1	None
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	O	1	None
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	K	1	None
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	E	None	514
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	L	1	None
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	H	None	514
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	J	1	None
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	M	1	None
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	P	1	None
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	D	None	514
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	A	None	514
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	G	None	514
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	F	None	514
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	C	None	514
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	I	1	None
+P12268	1	514	6udo	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament segment reconstruction.	6	519	B	None	514
+P12268	1	514	1b3o	TERNARY COMPLEX OF HUMAN TYPE-II INOSINE MONOPHOSPHATE DEHYDROGENASE WITH 6-CL-IMP AND SELENAZOLE ADENINE DINUCLEOTIDE	1	514	A	None	None
+P12268	1	514	1b3o	TERNARY COMPLEX OF HUMAN TYPE-II INOSINE MONOPHOSPHATE DEHYDROGENASE WITH 6-CL-IMP AND SELENAZOLE ADENINE DINUCLEOTIDE	1	514	B	None	None
+P12268	1	514	6ua5	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free interfacial octamer reconstruction.	6	519	A	1	514
+P12268	1	514	6ua5	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free interfacial octamer reconstruction.	6	519	H	1	514
+P12268	1	514	6ua5	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free interfacial octamer reconstruction.	6	519	E	1	514
+P12268	1	514	6ua5	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free interfacial octamer reconstruction.	6	519	C	1	514
+P12268	1	514	6ua5	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free interfacial octamer reconstruction.	6	519	F	1	514
+P12268	1	514	6ua5	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free interfacial octamer reconstruction.	6	519	D	1	514
+P12268	1	514	6ua5	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free interfacial octamer reconstruction.	6	519	G	1	514
+P12268	1	514	6ua5	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Free interfacial octamer reconstruction.	6	519	B	1	514
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	J	1	None
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	K	1	None
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	C	None	514
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	G	None	514
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	E	None	514
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	D	None	514
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	A	None	514
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	F	None	514
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	O	1	None
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	M	1	None
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	P	1	None
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	N	1	None
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	B	None	514
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	H	None	514
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	L	1	None
+P12268	1	514	6ua2	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (2/4 compressed, 2/4 extended) segment reconstruction.	6	519	I	1	None
+P12268	1	514	6u8s	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Filament assembly interface reconstruction.	1	514	A	1	514
+P12268	1	514	6u8s	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Filament assembly interface reconstruction.	1	514	H	1	514
+P12268	1	514	6u8s	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Filament assembly interface reconstruction.	1	514	E	1	514
+P12268	1	514	6u8s	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Filament assembly interface reconstruction.	1	514	C	1	514
+P12268	1	514	6u8s	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Filament assembly interface reconstruction.	1	514	F	1	514
+P12268	1	514	6u8s	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Filament assembly interface reconstruction.	1	514	D	1	514
+P12268	1	514	6u8s	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Filament assembly interface reconstruction.	1	514	G	1	514
+P12268	1	514	6u8s	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Filament assembly interface reconstruction.	1	514	B	1	514
+P12268	1	514	1nfb	Ternary complex of the human type II Inosine Monophosphate Dedhydrogenase with 6Cl-IMP and NAD	1	514	A	None	None
+P12268	1	514	1nfb	Ternary complex of the human type II Inosine Monophosphate Dedhydrogenase with 6Cl-IMP and NAD	1	514	B	None	None
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	E	None	514
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	A	None	514
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	H	None	514
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	I	1	None
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	C	None	514
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	L	1	None
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	F	None	514
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	G	None	514
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	J	1	None
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	K	1	None
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	B	None	514
+P12268	1	514	6udq	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Fully compressed filament end reconstruction.	6	519	D	None	514
+P12268	1	514	6udp	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Filament assembly interface reconstruction.	6	519	A	1	514
+P12268	1	514	6udp	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Filament assembly interface reconstruction.	6	519	H	1	514
+P12268	1	514	6udp	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Filament assembly interface reconstruction.	6	519	E	1	514
+P12268	1	514	6udp	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Filament assembly interface reconstruction.	6	519	C	1	514
+P12268	1	514	6udp	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Filament assembly interface reconstruction.	6	519	F	1	514
+P12268	1	514	6udp	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Filament assembly interface reconstruction.	6	519	D	1	514
+P12268	1	514	6udp	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Filament assembly interface reconstruction.	6	519	G	1	514
+P12268	1	514	6udp	Human IMPDH2 treated with ATP, IMP, and 20 mM GTP. Filament assembly interface reconstruction.	6	519	B	1	514
+P12268	1	514	6i0o	Structure of human IMP dehydrogenase, isoform 2, bound to GTP	4	517	A	None	None
+P12268	1	514	6i0o	Structure of human IMP dehydrogenase, isoform 2, bound to GTP	4	517	B	None	None
+P12268	1	514	6i0m	Structure of human IMP dehydrogenase, isoform 2, bound to GDP	4	517	B	None	514
+P12268	1	514	6i0m	Structure of human IMP dehydrogenase, isoform 2, bound to GDP	4	517	A	None	None
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	J	1	None
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	K	1	None
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	H	None	514
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	E	None	514
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	O	1	None
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	A	None	514
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	M	1	None
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	G	None	514
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	F	None	514
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	C	None	514
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	B	None	514
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	P	1	None
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	D	None	514
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	N	1	None
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	L	1	None
+P12268	1	514	6ua4	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Bent (3/4 compressed, 1/4 extended) segment reconstruction.	6	519	I	1	None
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	D	None	514
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	B	None	514
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	L	1	None
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	A	None	514
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	N	1	None
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	J	1	None
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	K	1	None
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	P	1	None
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	G	None	514
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	M	1	None
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	H	None	514
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	E	None	514
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	I	1	None
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	F	None	514
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	O	1	None
+P12268	1	514	6u8n	Human IMPDH2 treated with ATP, IMP, and NAD+. Fully extended filament segment reconstruction.	6	519	C	None	514
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	O	1	None
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	L	1	None
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	D	None	514
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	E	None	514
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	F	None	514
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	N	1	None
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	P	1	None
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	I	1	None
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	A	None	514
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	C	None	514
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	B	None	514
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	K	1	None
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	G	None	514
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	M	1	None
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	J	1	None
+P12268	1	514	6u9o	Human IMPDH2 treated with ATP, IMP, NAD+, and 2 mM GTP. Fully compressed filament segment reconstruction.	6	519	H	None	514
+

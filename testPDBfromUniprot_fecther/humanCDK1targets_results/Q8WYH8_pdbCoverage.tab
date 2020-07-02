@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q8WYH8	Inhibitor of growth protein 5	ING5_HUMAN	Homo sapiens	PF12998	ING	Inhibitor of growth proteins N-terminal histone-binding	6	107
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#6 mappings in 6 PDB chains in 3 PDB entries
+Q8WYH8	1	105	5me8	N-terminal domain of the human tumor suppressor ING5	3	107	A	1	105
+Q8WYH8	1	105	5me8	N-terminal domain of the human tumor suppressor ING5	3	107	B	1	105
+Q8WYH8	1	105	5mto	N-terminal domain of the human tumor suppressor ING5 C19S mutant	3	107	A	1	105
+Q8WYH8	1	105	5mto	N-terminal domain of the human tumor suppressor ING5 C19S mutant	3	107	B	1	105
+Q8WYH8	184	236	3c6w	Crystal structure of the ING5 PHD finger in complex with H3K4me3 peptide	7	59	A	None	None
+Q8WYH8	184	236	3c6w	Crystal structure of the ING5 PHD finger in complex with H3K4me3 peptide	7	59	C	184	None
+

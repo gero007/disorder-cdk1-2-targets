@@ -1,0 +1,34 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q99728	BRCA1-ASSOCIATED RING DOMAIN PROTEIN 1	BARD1_HUMAN	Homo sapiens	PF00023	Ank	Ankyrin repeat	494	525
+Q99728	BRCA1-ASSOCIATED RING DOMAIN PROTEIN 1	BARD1_HUMAN	Homo sapiens	PF00023	Ank	Ankyrin repeat	460	491
+Q99728	BRCA1-ASSOCIATED RING DOMAIN PROTEIN 1	BARD1_HUMAN	Homo sapiens	PF00023	Ank	Ankyrin repeat	427	459
+Q99728	BRCA1-ASSOCIATED RING DOMAIN PROTEIN 1	BARD1_HUMAN	Homo sapiens	PF14835	zf-RING_6	zf-RING of BARD1-type protein	41	105
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#9 mappings in 9 PDB chains in 5 PDB entries
+Q99728	26	140	1jm7	Solution structure of the BRCA1/BARD1 RING-domain heterodimer	1	115	B	26	None
+Q99728	425	555	3c5r	Crystal Structure of the BARD1 Ankyrin Repeat Domain and Its Functional Consequences	7	137	B	425	None
+Q99728	425	555	3c5r	Crystal Structure of the BARD1 Ankyrin Repeat Domain and Its Functional Consequences	7	137	A	425	None
+Q99728	566	777	3fa2	Crystal Structure of the BRCA1 Associated Ring Domain (BARD1) Tandem BRCT Domains	7	218	B	None	None
+Q99728	566	777	3fa2	Crystal Structure of the BRCA1 Associated Ring Domain (BARD1) Tandem BRCT Domains	7	218	A	566	None
+Q99728	568	777	2nte	Crystal Structure of the BARD1 BRCT Domains	1	210	B	None	777
+Q99728	568	777	2nte	Crystal Structure of the BARD1 BRCT Domains	1	210	A	568	777
+Q99728	569	777	2r1z	Crystal Structure of the BARD1 BRCT Repeat	1	209	A	569	777
+Q99728	569	777	2r1z	Crystal Structure of the BARD1 BRCT Repeat	1	209	B	569	None
+

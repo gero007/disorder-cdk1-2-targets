@@ -1,0 +1,32 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q01094	Transcription factor E2F1	E2F1_HUMAN	Homo sapiens	PF02319	E2F_TDP	E2F/DP family winged-helix DNA-binding domain	128	192
+Q01094	Transcription factor E2F1	E2F1_HUMAN	Homo sapiens	PF16421	E2F_CC-MB	E2F transcription factor CC-MB domain	206	299
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#9 mappings in 9 PDB chains in 6 PDB entries
+Q01094	87	95	1h24	CDK2/CyclinA in complex with a 9 residue recruitment peptide from E2F	1	9	E	87	95
+Q01094	104	120	5m9n	Crystal structure of human TDRD1 extended Tudor domain in complex with a symmetrically dimethylated E2F peptide	1	17	C	None	None
+Q01094	108	116	5m9o	Crystal structure of human SND1 extended Tudor domain in complex with a symmetrically dimethylated E2F peptide	1	9	B	None	None
+Q01094	114	129	6g0p	Crystal Structure of the first bromodomain of human BRD4 in complex with an acetylated E2F1 peptide (K117ac/K120ac)	1	16	B	None	None
+Q01094	200	301	2aze	Structure of the Rb C-terminal domain bound to an E2F1-DP1 heterodimer	5	106	B	None	301
+Q01094	409	426	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	18	R	409	426
+Q01094	409	426	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	18	Q	409	426
+Q01094	409	426	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	18	P	409	426
+Q01094	409	426	1o9k	Crystal structure of the retinoblastoma tumour suppressor protein bound to E2F peptide	1	18	S	409	426
+

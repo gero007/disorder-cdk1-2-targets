@@ -1,0 +1,55 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9NQR1	Histone-lysine N-methyltransferase SETD8	KMT5A_HUMAN	Homo sapiens	PF00856	SET	SET domain	268	378
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#33 mappings in 33 PDB chains in 14 PDB entries
+Q9NQR1	194	393	5hq2	Structural model of Set8 histone H4 Lys20 methyltransferase bound to nucleosome core particle	3	202	M	None	352
+Q9NQR1	231	393	5v2n	Crystal Structure of APO Human SETD8	3	165	A	190	None
+Q9NQR1	231	393	1zkk	Crystal structure of hSET8 in ternary complex with H4 peptide (16-24) and AdoHcy	5	167	A	None	352
+Q9NQR1	231	393	1zkk	Crystal structure of hSET8 in ternary complex with H4 peptide (16-24) and AdoHcy	5	167	B	None	352
+Q9NQR1	231	393	1zkk	Crystal structure of hSET8 in ternary complex with H4 peptide (16-24) and AdoHcy	5	167	C	None	352
+Q9NQR1	231	393	1zkk	Crystal structure of hSET8 in ternary complex with H4 peptide (16-24) and AdoHcy	5	167	D	None	352
+Q9NQR1	232	393	5w1y	SETD8 in complex with a covalent inhibitor	5	166	A	232	393
+Q9NQR1	232	393	5w1y	SETD8 in complex with a covalent inhibitor	5	166	B	None	None
+Q9NQR1	232	393	3f9x	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y334F / H4-Lys20me2 / AdoHcy	5	166	A	None	352
+Q9NQR1	232	393	3f9x	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y334F / H4-Lys20me2 / AdoHcy	5	166	B	None	352
+Q9NQR1	232	393	3f9x	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y334F / H4-Lys20me2 / AdoHcy	5	166	C	None	352
+Q9NQR1	232	393	3f9x	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y334F / H4-Lys20me2 / AdoHcy	5	166	D	None	352
+Q9NQR1	232	393	3f9y	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y334F / H4-Lys20me1 / AdoHcy	5	166	A	None	352
+Q9NQR1	232	393	3f9y	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y334F / H4-Lys20me1 / AdoHcy	5	166	B	None	352
+Q9NQR1	232	393	3f9z	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y245F / H4-Lys20 / AdoHcy	5	166	A	None	352
+Q9NQR1	232	393	3f9z	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y245F / H4-Lys20 / AdoHcy	5	166	B	None	352
+Q9NQR1	232	393	3f9z	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y245F / H4-Lys20 / AdoHcy	5	166	C	None	352
+Q9NQR1	232	393	3f9z	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y245F / H4-Lys20 / AdoHcy	5	166	D	None	352
+Q9NQR1	232	393	6boz	Structure of human SETD8 in complex with covalent inhibitor MS4138	28	189	A	None	None
+Q9NQR1	232	393	6boz	Structure of human SETD8 in complex with covalent inhibitor MS4138	28	189	B	None	None
+Q9NQR1	232	393	3f9w	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y334F / H4-Lys20 / AdoHcy	5	166	A	None	352
+Q9NQR1	232	393	3f9w	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y334F / H4-Lys20 / AdoHcy	5	166	B	None	352
+Q9NQR1	232	393	3f9w	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y334F / H4-Lys20 / AdoHcy	5	166	C	None	352
+Q9NQR1	232	393	3f9w	Structural Insights into Lysine Multiple Methylation by SET Domain Methyltransferases, SET8-Y334F / H4-Lys20 / AdoHcy	5	166	D	None	352
+Q9NQR1	232	393	4ij8	Crystal structure of the complex of SETD8 with SAM	4	165	B	None	393
+Q9NQR1	232	393	4ij8	Crystal structure of the complex of SETD8 with SAM	4	165	A	None	393
+Q9NQR1	233	393	2bqz	Crystal structure of a ternary complex of the human histone methyltransferase Pr-SET7 (also known as SET8)	1	161	E	192	352
+Q9NQR1	233	393	2bqz	Crystal structure of a ternary complex of the human histone methyltransferase Pr-SET7 (also known as SET8)	1	161	A	192	352
+Q9NQR1	234	393	5teg	Crystal structure of hSETD8 in complex with histone H4K20 norleucine mutant peptide and S-Adenosylmethionine	1	160	B	None	352
+Q9NQR1	234	393	5teg	Crystal structure of hSETD8 in complex with histone H4K20 norleucine mutant peptide and S-Adenosylmethionine	1	160	A	193	352
+Q9NQR1	234	380	5th7	Complex of SETD8 with MS453	2	148	A	None	None
+Q9NQR1	234	380	5th7	Complex of SETD8 with MS453	2	148	B	None	380
+Q9NQR1	234	380	5t5g	human SETD8 in complex with MS2177	2	148	A	None	None
+

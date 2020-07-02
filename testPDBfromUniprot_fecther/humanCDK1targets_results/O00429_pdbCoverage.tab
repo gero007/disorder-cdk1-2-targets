@@ -1,0 +1,52 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O00429	Dynamin-1-like protein	DNM1L_HUMAN	Homo sapiens	PF01031	Dynamin_M	Dynamin central region	226	510
+O00429	Dynamin-1-like protein	DNM1L_HUMAN	Homo sapiens	PF00350	Dynamin_N	Dynamin family	28	217
+O00429	Dynamin-1-like protein	DNM1L_HUMAN	Homo sapiens	PF02212	GED	Dynamin GTPase effector domain	639	730
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#28 mappings in 20 PDB chains in 7 PDB entries
+O00429	1	736	5wp9	Structural Basis of Mitochondrial Receptor Binding and Constriction by Dynamin-Related Protein 1	1	710	I	1	710
+O00429	1	736	5wp9	Structural Basis of Mitochondrial Receptor Binding and Constriction by Dynamin-Related Protein 1	1	710	M	1	710
+O00429	1	736	5wp9	Structural Basis of Mitochondrial Receptor Binding and Constriction by Dynamin-Related Protein 1	1	710	A	1	710
+O00429	1	736	5wp9	Structural Basis of Mitochondrial Receptor Binding and Constriction by Dynamin-Related Protein 1	1	710	K	1	710
+O00429	1	736	5wp9	Structural Basis of Mitochondrial Receptor Binding and Constriction by Dynamin-Related Protein 1	1	710	E	1	710
+O00429	1	736	5wp9	Structural Basis of Mitochondrial Receptor Binding and Constriction by Dynamin-Related Protein 1	1	710	O	1	710
+O00429	1	736	5wp9	Structural Basis of Mitochondrial Receptor Binding and Constriction by Dynamin-Related Protein 1	1	710	C	1	710
+O00429	1	736	5wp9	Structural Basis of Mitochondrial Receptor Binding and Constriction by Dynamin-Related Protein 1	1	710	G	1	710
+O00429	1	736	4bej	Nucleotide-free Dynamin 1-like protein (DNM1L, DRP1, DLP1)	8	617	A	1	None
+O00429	1	736	4bej	Nucleotide-free Dynamin 1-like protein (DNM1L, DRP1, DLP1)	8	617	D	1	None
+O00429	1	736	4bej	Nucleotide-free Dynamin 1-like protein (DNM1L, DRP1, DLP1)	8	617	B	1	None
+O00429	1	736	4bej	Nucleotide-free Dynamin 1-like protein (DNM1L, DRP1, DLP1)	8	617	C	1	None
+O00429	337	736	3w6p	Crystal structure of human Dlp1 in complex with GDP.AlF4	337	364	A	709	736
+O00429	337	736	3w6p	Crystal structure of human Dlp1 in complex with GDP.AlF4	337	364	B	709	736
+O00429	1	329	3w6p	Crystal structure of human Dlp1 in complex with GDP.AlF4	3	331	A	1	None
+O00429	1	329	3w6p	Crystal structure of human Dlp1 in complex with GDP.AlF4	3	331	B	1	None
+O00429	337	736	3w6n	Crystal structure of human Dlp1 in complex with GMP-PN.Pi	337	364	A	709	736
+O00429	337	736	3w6n	Crystal structure of human Dlp1 in complex with GMP-PN.Pi	337	364	B	709	736
+O00429	1	329	3w6n	Crystal structure of human Dlp1 in complex with GMP-PN.Pi	3	331	A	1	None
+O00429	1	329	3w6n	Crystal structure of human Dlp1 in complex with GMP-PN.Pi	3	331	B	1	None
+O00429	337	736	3w6o	Crystal structure of human Dlp1 in complex with GMP-PCP	337	364	A	709	736
+O00429	337	736	3w6o	Crystal structure of human Dlp1 in complex with GMP-PCP	337	364	B	709	736
+O00429	1	329	3w6o	Crystal structure of human Dlp1 in complex with GMP-PCP	3	331	A	1	None
+O00429	1	329	3w6o	Crystal structure of human Dlp1 in complex with GMP-PCP	3	331	B	1	None
+O00429	1	327	4h1v	GMP-PNP bound dynamin-1-like protein GTPase-GED fusion	1	327	A	1	327
+O00429	339	736	4h1v	GMP-PNP bound dynamin-1-like protein GTPase-GED fusion	336	361	A	711	None
+O00429	1	327	4h1u	Nucleotide-free human dynamin-1-like protein GTPase-GED fusion	1	327	A	1	327
+O00429	339	736	4h1u	Nucleotide-free human dynamin-1-like protein GTPase-GED fusion	336	361	A	711	None
+

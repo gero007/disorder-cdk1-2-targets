@@ -1,0 +1,27 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O75122	CLIP-associating protein 2	CLAP2_HUMAN	Homo sapiens	PF12348	CLASP_N	CLASP N terminal	88	305
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 3 PDB chains in 2 PDB entries
+O75122	60	310	3woy	Crystal structure of CLASP2 TOG domain (TOG2)	1	251	A	None	None
+O75122	1181	1275	5nr4	Crystal structure of Clasp2 TOG1 domain	132	224	B	131	223
+O75122	1181	1275	5nr4	Crystal structure of Clasp2 TOG1 domain	132	224	A	131	223
+O75122	1111	1180	5nr4	Crystal structure of Clasp2 TOG1 domain	61	130	A	60	129
+O75122	1111	1180	5nr4	Crystal structure of Clasp2 TOG1 domain	61	130	B	60	129
+

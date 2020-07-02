@@ -1,0 +1,38 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P46060	Ran GTPase-activating protein 1	RAGP1_HUMAN	Homo sapiens	PF07834	RanGAP1_C	RanGAP1 C-terminal domain	371	585
+P46060	Ran GTPase-activating protein 1	RAGP1_HUMAN	Homo sapiens	PF13516	LRR_6	Leucine Rich repeat	321	341
+P46060	Ran GTPase-activating protein 1	RAGP1_HUMAN	Homo sapiens	PF13516	LRR_6	Leucine Rich repeat	112	132
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#14 mappings in 14 PDB chains in 13 PDB entries
+P46060	418	587	5d2m	Complex between human SUMO2-RANGAP1, UBC9 and ZNF451	2	171	F	None	587
+P46060	418	587	5d2m	Complex between human SUMO2-RANGAP1, UBC9 and ZNF451	2	171	C	None	587
+P46060	418	587	2io3	Crystal structure of human Senp2 in complex with RanGAP1-SUMO-2	3	172	C	None	587
+P46060	418	587	2io2	Crystal structure of human Senp2 in complex with RanGAP1-SUMO-1	3	172	C	None	587
+P46060	418	587	1z5s	Crystal structure of a complex between UBC9, SUMO-1, RANGAP1 and NUP358/RANBP2	3	172	C	None	587
+P46060	419	587	2grn	Crystal Structure of human RanGAP1-Ubc9	2	170	B	None	587
+P46060	419	587	3uio	Complex between human RanGAP1-SUMO2, UBC9 and the IR1 domain from RanBP2 containing IR2 Motif II	3	171	C	None	587
+P46060	419	587	3uin	Complex between human RanGAP1-SUMO2, UBC9 and the IR1 domain from RanBP2	3	171	C	None	587
+P46060	419	587	3uip	Complex between human RanGAP1-SUMO1, UBC9 and the IR1 domain from RanBP2 containing IR2 Motif II	3	171	C	None	587
+P46060	419	587	2grr	Crystal Structure of human RanGAP1-Ubc9-D127S	2	170	B	None	587
+P46060	419	587	2grq	Crystal Structure of human RanGAP1-Ubc9-D127A	2	170	B	None	587
+P46060	419	587	2grp	Crystal Structure of human RanGAP1-Ubc9-Y87A	2	170	B	None	587
+P46060	419	587	2gro	Crystal Structure of human RanGAP1-Ubc9-N85Q	2	170	B	None	587
+P46060	432	587	2iy0	SENP1 (mutant) SUMO1 RanGAP	1	156	C	432	587
+

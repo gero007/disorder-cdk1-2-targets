@@ -1,0 +1,30 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P46527	Cyclin-dependent kinase inhibitor 1B	CDN1B_HUMAN	Homo sapiens	PF02234	CDI	Cyclin-dependent kinase inhibitor	31	79
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 8 PDB entries
+P46527	1	198	5uq3	Crystal structure of human Cdk2-Spy1-P27 ternary complex	4	201	C	None	None
+P46527	22	85	6ath	Cdk2/cyclin A/p27-KID-deltaC	5	68	C	None	None
+P46527	23	106	1jsu	P27(KIP1)/CYCLIN A/CDK2 COMPLEX	1	84	C	None	None
+P46527	25	93	6p8g	Crystal structure of CDK4 in complex with CyclinD1 and P27	4	72	C	25	None
+P46527	25	93	6p8e	Crystal structure of CDK4 in complex with CyclinD1 and P27	4	72	C	25	None
+P46527	25	106	6p8f	Crystal structure of CDK4 in complex with CyclinD1 and P27	4	82	C	25	None
+P46527	25	35	1h27	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p27	1	11	E	None	35
+P46527	181	190	2ast	Crystal structure of Skp1-Skp2-Cks1 in complex with a p27 peptide	1	10	D	4181	4190
+

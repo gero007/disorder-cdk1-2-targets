@@ -1,0 +1,27 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q14005	Interleukin-16	IL16_HUMAN	Homo sapiens	PF00595	PDZ	PDZ domain	1234	1317
+Q14005	Interleukin-16	IL16_HUMAN	Homo sapiens	PF00595	PDZ	PDZ domain	1113	1195
+Q14005	Interleukin-16	IL16_HUMAN	Homo sapiens	PF00595	PDZ	PDZ domain	216	300
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#3 mappings in 3 PDB chains in 3 PDB entries
+Q14005	1103	1208	1x6d	Solution structures of the PDZ domain of human Interleukin-16	8	113	A	8	113
+Q14005	1203	1332	1i16	STRUCTURE OF INTERLEUKIN 16: IMPLICATIONS FOR FUNCTION, NMR, 20 STRUCTURES	1	130	A	1	130
+Q14005	1224	1323	5fb8	Structure of Interleukin-16 bound to the 14.1 antibody	3	102	C	None	None
+

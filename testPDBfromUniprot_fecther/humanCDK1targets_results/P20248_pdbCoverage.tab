@@ -1,0 +1,207 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P20248	Cyclin-A2	CCNA2_HUMAN	Homo sapiens	PF00134	Cyclin_N	Cyclin, N-terminal domain	181	307
+P20248	Cyclin-A2	CCNA2_HUMAN	Homo sapiens	PF02984	Cyclin_C	Cyclin, C-terminal domain	309	427
+P20248	Cyclin-A2	CCNA2_HUMAN	Homo sapiens	PF16500	Cyclin_N2	N-terminal region of cyclin_N	28	166
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#183 mappings in 183 PDB chains in 94 PDB entries
+P20248	1	432	6q6h	Cryo-EM structure of the APC/C-Cdc20-Cdk2-cyclinA2-Cks2 complex, the D2 box class	1	394	S	None	None
+P20248	1	432	6q6g	Cryo-EM structure of the APC/C-Cdc20-Cdk2-cyclinA2-Cks2 complex, the D1 box class	1	400	S	None	None
+P20248	169	432	2bkz	STRUCTURE OF CDK2-CYCLIN A WITH PHA-404611	2	265	B	None	432
+P20248	169	432	2bkz	STRUCTURE OF CDK2-CYCLIN A WITH PHA-404611	2	265	D	None	432
+P20248	169	432	2wxv	Structure of CDK2-CYCLIN A with a Pyrazolo(4,3-h) quinazoline-3- carboxamide inhibitor	2	265	B	None	432
+P20248	169	432	2wxv	Structure of CDK2-CYCLIN A with a Pyrazolo(4,3-h) quinazoline-3- carboxamide inhibitor	2	265	D	None	432
+P20248	169	432	2wpa	Optimisation of 6,6-Dimethyl Pyrrolo 3,4-c pyrazoles: Identification of PHA-793887, a Potent CDK Inhibitor Suitable for Intravenous Dosing	2	265	B	None	432
+P20248	169	432	2wpa	Optimisation of 6,6-Dimethyl Pyrrolo 3,4-c pyrazoles: Identification of PHA-793887, a Potent CDK Inhibitor Suitable for Intravenous Dosing	2	265	D	None	432
+P20248	169	432	1vyw	Structure of CDK2/Cyclin A with PNU-292137	2	265	B	None	432
+P20248	169	432	1vyw	Structure of CDK2/Cyclin A with PNU-292137	2	265	D	None	432
+P20248	169	432	2c4g	STRUCTURE OF CDK2-CYCLIN A WITH PHA-533514	2	265	B	None	432
+P20248	169	432	2c4g	STRUCTURE OF CDK2-CYCLIN A WITH PHA-533514	2	265	D	None	432
+P20248	169	432	2wip	STRUCTURE OF CDK2-CYCLIN A COMPLEXED WITH 8-ANILINO-1-METHYL-4,5-DIHYDRO- 1H-PYRAZOLO[4,3-H] QUINAZOLINE-3-CARBOXYLIC ACID	2	265	B	None	432
+P20248	169	432	2wip	STRUCTURE OF CDK2-CYCLIN A COMPLEXED WITH 8-ANILINO-1-METHYL-4,5-DIHYDRO- 1H-PYRAZOLO[4,3-H] QUINAZOLINE-3-CARBOXYLIC ACID	2	265	D	None	432
+P20248	169	432	2bpm	STRUCTURE OF CDK2-CYCLIN A WITH PHA-630529	2	265	B	None	432
+P20248	169	432	2bpm	STRUCTURE OF CDK2-CYCLIN A WITH PHA-630529	2	265	D	None	432
+P20248	171	432	4bcn	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	1	262	B	None	432
+P20248	171	431	4bcn	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	1	261	D	None	431
+P20248	171	432	4bcm	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	1	262	B	None	432
+P20248	171	432	4bcm	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	1	262	D	None	None
+P20248	171	432	4bck	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	1	262	B	None	432
+P20248	171	432	4bck	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	1	262	D	None	None
+P20248	171	432	4bcp	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	1	262	B	None	432
+P20248	171	432	4bcp	Structure of CDK2 in complex with cyclin A and a 2-amino-4-heteroaryl- pyrimidine inhibitor	1	262	D	None	432
+P20248	172	432	4cfu	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	2	262	B	172	432
+P20248	173	432	4cfu	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	3	262	D	173	432
+P20248	172	432	4cfv	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	2	262	B	172	432
+P20248	172	432	4cfv	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	2	262	D	172	432
+P20248	172	432	2x1n	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	261	B	None	432
+P20248	172	432	2x1n	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	261	D	None	432
+P20248	173	432	1ol2	Cyclin A binding groove inhibitor H-Arg-Arg-Leu-Asn-(p-F-Phe)-NH2	1	260	B	None	432
+P20248	173	432	1ol2	Cyclin A binding groove inhibitor H-Arg-Arg-Leu-Asn-(p-F-Phe)-NH2	1	260	D	None	432
+P20248	173	432	2wev	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	260	B	None	432
+P20248	173	432	2wev	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	260	D	None	432
+P20248	173	432	1okv	Cyclin A binding groove inhibitor H-Arg-Arg-Leu-Ile-Phe-NH2	1	260	D	173	432
+P20248	173	432	1okv	Cyclin A binding groove inhibitor H-Arg-Arg-Leu-Ile-Phe-NH2	1	260	B	None	432
+P20248	173	432	2wfy	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	260	D	173	432
+P20248	173	432	2wfy	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	260	B	None	432
+P20248	173	432	3eid	CDK2/CyclinA complexed with a pyrazolopyridazine inhibitor	1	260	B	None	432
+P20248	173	432	3eid	CDK2/CyclinA complexed with a pyrazolopyridazine inhibitor	1	260	D	None	432
+P20248	173	432	2i40	Cdk2/Cyclin A complexed with a thiophene carboxamide inhibitor	1	260	D	None	432
+P20248	173	432	2i40	Cdk2/Cyclin A complexed with a thiophene carboxamide inhibitor	1	260	B	None	None
+P20248	173	432	2whb	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	260	B	None	432
+P20248	173	432	2whb	Truncation and Optimisation of Peptide Inhibitors of CDK2, Cyclin A Through Structure Guided Design	1	260	D	None	432
+P20248	173	432	2cch	The crystal structure of CDK2 cyclin A in complex with a substrate peptide derived from CDC modified with a gamma-linked ATP analogue	1	260	B	173	432
+P20248	173	432	2cch	The crystal structure of CDK2 cyclin A in complex with a substrate peptide derived from CDC modified with a gamma-linked ATP analogue	1	260	D	None	None
+P20248	173	432	3eoc	Cdk2/CyclinA complexed with a imidazo triazin-2-amine	1	260	B	None	432
+P20248	173	432	3eoc	Cdk2/CyclinA complexed with a imidazo triazin-2-amine	1	260	D	None	432
+P20248	173	432	3ej1	CDK2/CyclinA complexed with a pyrazolopyridazine inhibitor	1	260	B	None	432
+P20248	173	432	3ej1	CDK2/CyclinA complexed with a pyrazolopyridazine inhibitor	1	260	D	None	432
+P20248	173	432	1fin	CYCLIN A-CYCLIN-DEPENDENT KINASE 2 COMPLEX	1	260	D	173	432
+P20248	173	432	1fin	CYCLIN A-CYCLIN-DEPENDENT KINASE 2 COMPLEX	1	260	B	173	432
+P20248	173	432	1fvv	THE STRUCTURE OF CDK2/CYCLIN A IN COMPLEX WITH AN OXINDOLE INHIBITOR	1	260	D	173	432
+P20248	173	432	1fvv	THE STRUCTURE OF CDK2/CYCLIN A IN COMPLEX WITH AN OXINDOLE INHIBITOR	1	260	B	173	432
+P20248	173	432	6ath	Cdk2/cyclin A/p27-KID-deltaC	4	263	B	173	432
+P20248	173	432	2c5o	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	260	B	None	432
+P20248	173	432	2c5o	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	260	D	None	432
+P20248	173	432	4cfx	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	1	260	D	173	432
+P20248	173	432	4cfx	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	1	260	B	173	432
+P20248	173	432	1urc	Cyclin A binding groove inhibitor Ace-Arg-Lys-Leu-Phe-Gly	1	260	B	None	432
+P20248	173	432	1urc	Cyclin A binding groove inhibitor Ace-Arg-Lys-Leu-Phe-Gly	1	260	D	None	432
+P20248	173	432	1okw	Cyclin A binding groove inhibitor Ac-Arg-Arg-Leu-Asn-(m-Cl-Phe)-NH2	1	260	B	None	432
+P20248	173	432	1okw	Cyclin A binding groove inhibitor Ac-Arg-Arg-Leu-Asn-(m-Cl-Phe)-NH2	1	260	D	None	432
+P20248	173	432	1jsu	P27(KIP1)/CYCLIN A/CDK2 COMPLEX	1	260	B	None	432
+P20248	173	432	2wih	STRUCTURE OF CDK2-CYCLIN A WITH PHA-848125	6	265	B	None	432
+P20248	173	432	2wih	STRUCTURE OF CDK2-CYCLIN A WITH PHA-848125	6	265	D	None	432
+P20248	173	432	1ol1	Cyclin A binding groove inhibitor H-Cit-Cit-Leu-Ile-(p-F-Phe)-NH2	1	260	B	None	432
+P20248	173	432	1ol1	Cyclin A binding groove inhibitor H-Cit-Cit-Leu-Ile-(p-F-Phe)-NH2	1	260	D	None	432
+P20248	174	432	1oi9	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	2	260	B	None	432
+P20248	174	432	1oi9	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	2	260	D	None	None
+P20248	174	432	2v22	REPLACE: A strategy for Iterative Design of Cyclin Binding Groove Inhibitors	1	259	B	None	432
+P20248	174	432	2v22	REPLACE: A strategy for Iterative Design of Cyclin Binding Groove Inhibitors	1	259	D	None	432
+P20248	174	432	2c5n	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	259	B	None	432
+P20248	174	432	2c5n	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	259	D	None	432
+P20248	174	432	2c5x	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	259	B	None	432
+P20248	174	432	2c5x	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	259	D	None	432
+P20248	174	432	1qmz	PHOSPHORYLATED CDK2-CYCLYIN A-SUBSTRATE PEPTIDE COMPLEX	1	259	B	None	432
+P20248	174	432	1qmz	PHOSPHORYLATED CDK2-CYCLYIN A-SUBSTRATE PEPTIDE COMPLEX	1	259	D	None	432
+P20248	174	432	1oiu	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	2	260	B	None	432
+P20248	174	432	1oiu	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	2	260	D	None	432
+P20248	174	432	1oiy	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	2	260	B	None	432
+P20248	174	432	1oiy	Structure of human Thr160-phospho CDK2/cyclin A complexed with a 6-cyclohexylmethyloxy-2-anilino-purine inhibitor	2	260	D	None	432
+P20248	174	432	2iw9	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A COMPLEXED WITH A BISANILINOPYRIMIDINE INHIBITOR	2	260	B	None	432
+P20248	174	432	2iw9	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A COMPLEXED WITH A BISANILINOPYRIMIDINE INHIBITOR	2	260	D	None	432
+P20248	174	432	2uue	REPLACE: A strategy for Iterative Design of Cyclin Binding Groove Inhibitors	1	259	B	None	432
+P20248	174	432	2uue	REPLACE: A strategy for Iterative Design of Cyclin Binding Groove Inhibitors	1	259	D	None	432
+P20248	174	432	1h25	CDK2/Cyclin A in complex with an 11-residue recruitment peptide from retinoblastoma-associated protein	1	259	B	None	432
+P20248	174	432	1h25	CDK2/Cyclin A in complex with an 11-residue recruitment peptide from retinoblastoma-associated protein	1	259	D	None	432
+P20248	174	432	1h27	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p27	1	259	B	None	432
+P20248	174	432	1h27	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p27	1	259	D	None	432
+P20248	174	432	1h24	CDK2/CyclinA in complex with a 9 residue recruitment peptide from E2F	1	259	B	None	432
+P20248	174	432	1h24	CDK2/CyclinA in complex with a 9 residue recruitment peptide from E2F	1	259	D	None	432
+P20248	174	432	5nev	CDK2/Cyclin A in complex with compound 73	2	260	D	None	None
+P20248	174	432	5nev	CDK2/Cyclin A in complex with compound 73	2	260	B	None	None
+P20248	174	432	5cyi	CDK2/Cyclin A covalent complex with 6-(cyclohexylmethoxy)-N-(4-(vinylsulfonyl)phenyl)-9H-purin-2-amine (NU6300)	2	260	B	None	432
+P20248	174	432	5cyi	CDK2/Cyclin A covalent complex with 6-(cyclohexylmethoxy)-N-(4-(vinylsulfonyl)phenyl)-9H-purin-2-amine (NU6300)	2	260	D	None	432
+P20248	174	432	2wmb	Structural and thermodynamic consequences of cyclization of peptide ligands for the recruitment site of cyclin A	1	259	B	None	432
+P20248	174	432	2wmb	Structural and thermodynamic consequences of cyclization of peptide ligands for the recruitment site of cyclin A	1	259	D	None	432
+P20248	174	432	2wma	Structural and thermodynamic consequences of cyclization of peptide ligands for the recruitment site of cyclin A	1	259	B	None	432
+P20248	174	432	2wma	Structural and thermodynamic consequences of cyclization of peptide ligands for the recruitment site of cyclin A	1	259	D	None	432
+P20248	174	432	2c5v	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	259	B	None	432
+P20248	174	432	2c5v	Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design	1	259	D	None	432
+P20248	174	432	2iw8	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A F82H-L83V-H84D MUTANT WITH AN O6-CYCLOHEXYLMETHYLGUANINE INHIBITOR	2	260	B	None	432
+P20248	174	432	2iw8	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A F82H-L83V-H84D MUTANT WITH AN O6-CYCLOHEXYLMETHYLGUANINE INHIBITOR	2	260	D	None	432
+P20248	174	432	1h26	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p53	1	259	B	None	432
+P20248	174	432	1h26	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p53	1	259	D	None	432
+P20248	174	432	2iw6	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A COMPLEXED WITH A BISANILINOPYRIMIDINE INHIBITOR	2	260	B	None	432
+P20248	174	432	2iw6	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2-CYCLIN A COMPLEXED WITH A BISANILINOPYRIMIDINE INHIBITOR	2	260	D	None	432
+P20248	174	432	1ogu	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2/CYCLIN A COMPLEXED WITH A 2-ARYLAMINO-4-CYCLOHEXYLMETHYL-5-NITROSO-6-AMINOPYRIMIDINE INHIBITOR	2	260	B	None	432
+P20248	174	432	1ogu	STRUCTURE OF HUMAN THR160-PHOSPHO CDK2/CYCLIN A COMPLEXED WITH A 2-ARYLAMINO-4-CYCLOHEXYLMETHYL-5-NITROSO-6-AMINOPYRIMIDINE INHIBITOR	2	260	D	None	432
+P20248	174	432	5if1	Crystal structure apo CDK2/cyclin A	7	265	B	None	432
+P20248	174	432	5if1	Crystal structure apo CDK2/cyclin A	7	265	D	None	432
+P20248	174	432	1h28	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p107	1	259	B	None	432
+P20248	174	432	1h28	CDK2/CyclinA in complex with an 11-residue recruitment peptide from p107	1	259	D	None	432
+P20248	175	432	4eop	Thr 160 phosphorylated CDK2 Q131E - human cyclin A3 complex with the inhibitor RO3306	1	258	D	175	None
+P20248	175	432	4eop	Thr 160 phosphorylated CDK2 Q131E - human cyclin A3 complex with the inhibitor RO3306	1	258	B	None	432
+P20248	175	432	4cfm	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	1	258	B	175	432
+P20248	175	432	4cfm	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	1	258	D	175	432
+P20248	175	432	2cci	Crystal structure of phospho-CDK2 Cyclin A in complex with a peptide containing both the substrate and recruitment sites of CDC6	1	258	B	175	432
+P20248	175	432	2cci	Crystal structure of phospho-CDK2 Cyclin A in complex with a peptide containing both the substrate and recruitment sites of CDC6	1	258	D	175	432
+P20248	175	432	4cfn	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	1	258	B	None	432
+P20248	175	432	4cfn	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	1	258	D	None	432
+P20248	175	432	4eoi	Thr 160 phosphorylated CDK2 K89D, Q131E - human cyclin A3 complex with the inhibitor RO3306	1	258	D	None	432
+P20248	175	432	4eoi	Thr 160 phosphorylated CDK2 K89D, Q131E - human cyclin A3 complex with the inhibitor RO3306	1	258	B	175	432
+P20248	175	432	4eoj	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with ATP	1	258	B	None	432
+P20248	175	432	4eoj	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with ATP	1	258	D	None	None
+P20248	175	432	4eok	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with the inhibitor NU6102	1	258	B	175	432
+P20248	175	432	4eok	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with the inhibitor NU6102	1	258	D	None	None
+P20248	175	432	4eol	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with the inhibitor RO3306	1	258	B	None	432
+P20248	175	432	4eol	Thr 160 phosphorylated CDK2 H84S, Q85M, K89D - human cyclin A3 complex with the inhibitor RO3306	1	258	D	None	None
+P20248	175	432	4eom	Thr 160 phosphorylated CDK2 H84S, Q85M, Q131E - human cyclin A3 complex with ATP	1	258	B	None	432
+P20248	175	432	4eom	Thr 160 phosphorylated CDK2 H84S, Q85M, Q131E - human cyclin A3 complex with ATP	1	258	D	None	None
+P20248	175	432	2cjm	Mechanism of CDK inhibition by active site phosphorylation: CDK2 Y15p T160p in complex with cyclin A structure	1	258	B	None	432
+P20248	175	432	2cjm	Mechanism of CDK inhibition by active site phosphorylation: CDK2 Y15p T160p in complex with cyclin A structure	1	258	D	None	432
+P20248	175	432	4eoo	Thr 160 phosphorylated CDK2 Q131E - human cyclin A3 complex with ATP	1	258	B	175	432
+P20248	175	432	4eoo	Thr 160 phosphorylated CDK2 Q131E - human cyclin A3 complex with ATP	1	258	D	None	None
+P20248	175	432	6gva	CDK2/cyclin A2 in complex with pyrazolo[4,3-d]pyrimidine inhibitor LGR4455	1	258	B	175	432
+P20248	175	432	1e9h	Thr 160 phosphorylated CDK2 - Human cyclin A3 complex with the inhibitor indirubin-5-sulphonate bound	1	258	B	175	432
+P20248	175	432	1e9h	Thr 160 phosphorylated CDK2 - Human cyclin A3 complex with the inhibitor indirubin-5-sulphonate bound	1	258	D	175	432
+P20248	175	432	4cfw	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	1	258	D	None	432
+P20248	175	432	4cfw	Structure-based design of C8-substituted O6-cyclohexylmethoxyguanine CDK1 and 2 inhibitors.	1	258	B	175	432
+P20248	175	432	5lmk	Structure of phopsho-CDK2-cyclin A in complex with an ATP-competitive inhibitor	1	258	D	None	432
+P20248	175	432	5lmk	Structure of phopsho-CDK2-cyclin A in complex with an ATP-competitive inhibitor	1	258	B	175	432
+P20248	175	432	4eoq	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with ATP	1	258	B	None	432
+P20248	175	432	4eoq	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with ATP	1	258	D	None	None
+P20248	175	432	1h1p	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU2058	1	258	B	175	432
+P20248	175	432	1h1p	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU2058	1	258	D	175	432
+P20248	175	432	4eos	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with the inhibitor RO3306	1	258	D	175	None
+P20248	175	432	4eos	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with the inhibitor RO3306	1	258	B	None	432
+P20248	175	432	1h1q	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6094	1	258	B	175	432
+P20248	175	432	1h1q	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6094	1	258	D	175	432
+P20248	175	432	2uzl	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	258	B	None	432
+P20248	175	432	2uzl	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	258	D	None	432
+P20248	175	432	1gy3	pCDK2/cyclin A in complex with MgADP, nitrate and peptide substrate	1	258	B	175	432
+P20248	175	432	1gy3	pCDK2/cyclin A in complex with MgADP, nitrate and peptide substrate	1	258	D	175	432
+P20248	175	432	2uze	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	258	B	175	432
+P20248	175	432	2uze	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	258	D	175	432
+P20248	175	432	2uzd	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	258	B	175	432
+P20248	175	432	2uzd	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	258	D	175	432
+P20248	175	432	2uzb	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	258	B	175	432
+P20248	175	432	2uzb	Crystal structure of human CDK2 complexed with a thiazolidinone inhibitor	1	258	D	175	432
+P20248	175	432	1pkd	THE CRYSTAL STRUCTURE OF UCN-01 IN COMPLEX WITH PHOSPHO-CDK2/CYCLIN A	1	258	B	175	432
+P20248	175	432	1pkd	THE CRYSTAL STRUCTURE OF UCN-01 IN COMPLEX WITH PHOSPHO-CDK2/CYCLIN A	1	258	D	175	432
+P20248	175	432	4eon	Thr 160 phosphorylated CDK2 H84S, Q85M, Q131E - human cyclin A3 complex with the inhibitor RO3306	1	258	B	None	432
+P20248	175	432	4eon	Thr 160 phosphorylated CDK2 H84S, Q85M, Q131E - human cyclin A3 complex with the inhibitor RO3306	1	258	D	175	None
+P20248	175	432	1p5e	The structure of phospho-CDK2/cyclin A in complex with the inhibitor 4,5,6,7-tetrabromobenzotriazole (TBS)	1	258	B	175	432
+P20248	175	432	1p5e	The structure of phospho-CDK2/cyclin A in complex with the inhibitor 4,5,6,7-tetrabromobenzotriazole (TBS)	1	258	D	175	432
+P20248	175	432	1h1r	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6086	1	258	B	175	432
+P20248	175	432	1h1r	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6086	1	258	D	175	432
+P20248	175	432	1h1s	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6102	1	258	B	175	432
+P20248	175	432	1h1s	Structure of human Thr160-phospho CDK2/cyclin A complexed with the inhibitor NU6102	1	258	D	175	432
+P20248	175	432	1jst	PHOSPHORYLATED CYCLIN-DEPENDENT KINASE-2 BOUND TO CYCLIN A	1	258	B	175	432
+P20248	175	432	1jst	PHOSPHORYLATED CYCLIN-DEPENDENT KINASE-2 BOUND TO CYCLIN A	1	258	D	175	432
+P20248	175	432	4fx3	Crystal Structure of the CDK2/Cyclin A complex with oxindole inhibitor	1	258	B	None	432
+P20248	175	432	4fx3	Crystal Structure of the CDK2/Cyclin A complex with oxindole inhibitor	1	258	D	175	432
+P20248	175	432	4eor	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with the inhibitor NU6102	1	258	D	175	None
+P20248	175	432	4eor	Thr 160 phosphorylated CDK2 WT - human cyclin A3 complex with the inhibitor NU6102	1	258	B	None	432
+P20248	175	432	2c6t	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	258	B	175	432
+P20248	175	432	2c6t	Crystal structure of the human CDK2 complexed with the triazolopyrimidine inhibitor	1	258	D	175	432
+P20248	176	432	6p3w	Crystal structure of the Cyclin A-CDK2-ORC1 complex	1	257	D	None	432
+P20248	176	432	6p3w	Crystal structure of the Cyclin A-CDK2-ORC1 complex	1	257	B	176	432
+P20248	177	432	3f5x	CDK-2-Cyclin complex with indazole inhibitor 9 bound at its active site	1	256	D	None	432
+P20248	177	432	3f5x	CDK-2-Cyclin complex with indazole inhibitor 9 bound at its active site	1	256	B	177	432
+

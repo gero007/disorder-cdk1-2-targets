@@ -1,0 +1,30 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P49915	GMP SYNTHASE	GUAA_HUMAN	Homo sapiens	PF00958	GMP_synt_C	GMP synthase C terminal domain	597	692
+P49915	GMP SYNTHASE	GUAA_HUMAN	Homo sapiens	PF00117	GATase	Glutamine amidotransferase class-I	29	210
+P49915	GMP SYNTHASE	GUAA_HUMAN	Homo sapiens	PF02540	NAD_synthase	NAD synthase	219	339
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#6 mappings in 4 PDB chains in 2 PDB entries
+P49915	11	24	2vpi	Human GMP synthetase - glutaminase domain	7	20	A	None	None
+P49915	11	24	2vpi	Human GMP synthetase - glutaminase domain	7	20	B	None	None
+P49915	25	219	2vpi	Human GMP synthetase - glutaminase domain	24	218	B	25	219
+P49915	25	219	2vpi	Human GMP synthetase - glutaminase domain	24	218	A	25	219
+P49915	20	693	2vxo	Human GMP synthetase in complex with XMP	24	697	A	None	693
+P49915	20	693	2vxo	Human GMP synthetase in complex with XMP	24	697	B	None	693
+

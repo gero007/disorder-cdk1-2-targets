@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q86T82	USP37 protein	UBP37_HUMAN	Homo sapiens	PF00443	UCH	Ubiquitin carboxyl-terminal hydrolase	341	948
+Q86T82	USP37 protein	UBP37_HUMAN	Homo sapiens	PF02809	UIM	Ubiquitin interaction motif	828	844
+Q86T82	USP37 protein	UBP37_HUMAN	Homo sapiens	PF02809	UIM	Ubiquitin interaction motif	806	822
+Q86T82	USP37 protein	UBP37_HUMAN	Homo sapiens	PF02809	UIM	Ubiquitin interaction motif	704	720
+Q86T82	USP37 protein	UBP37_HUMAN	Homo sapiens	PF16674	UCH_N	N-terminal of ubiquitin carboxyl-terminal hydrolase 37	1	105
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#2 mappings in 2 PDB chains in 1 PDB entries
+Q86T82	4	125	3u12	The pleckstrin homology (PH) domain of USP37	20	141	B	4	None
+Q86T82	4	125	3u12	The pleckstrin homology (PH) domain of USP37	20	141	A	4	None
+

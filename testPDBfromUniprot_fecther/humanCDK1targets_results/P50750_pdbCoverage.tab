@@ -1,0 +1,50 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P50750	CYCLIN-DEPENDENT KINASE 9	CDK9_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	19	315
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#28 mappings in 28 PDB chains in 23 PDB entries
+P50750	1	345	3mi9	Crystal structure of HIV-1 Tat complexed with human P-TEFb	1	345	A	None	None
+P50750	1	345	3mia	Crystal structure of HIV-1 Tat complexed with ATP-bound human P-TEFb	1	345	A	None	None
+P50750	1	330	5l1z	TAR complex with HIV-1 Tat-AFF4-P-TEFb	1	330	A	None	330
+P50750	1	330	6cyt	HIV-1 TAR loop in complex with Tat:AFF4:P-TEFb	3	332	A	None	330
+P50750	1	330	4ogr	crystal structure of P-TEFb complex with AFF4 and Tat	3	332	I	None	330
+P50750	1	330	4ogr	crystal structure of P-TEFb complex with AFF4 and Tat	3	332	A	None	330
+P50750	1	330	4ogr	crystal structure of P-TEFb complex with AFF4 and Tat	3	332	E	None	330
+P50750	1	330	4imy	The AFF4 scaffold binds human P-TEFb adjacent to HIV Tat	3	332	E	None	330
+P50750	1	330	4imy	The AFF4 scaffold binds human P-TEFb adjacent to HIV Tat	3	332	C	None	330
+P50750	1	330	4imy	The AFF4 scaffold binds human P-TEFb adjacent to HIV Tat	3	332	A	None	330
+P50750	1	326	6gzh	Crystal Structure of Human CDK9/cyclinT1 with A86	1	326	A	None	326
+P50750	2	372	4ec8	Structure of full length CDK9 in complex with cyclinT and DRB	3	373	A	None	None
+P50750	2	330	3tnh	CDK9/cyclin T in complex with CAN508	3	331	A	None	None
+P50750	2	330	3my1	Structure of CDK9/cyclinT1 in complex with DRB	3	331	A	None	None
+P50750	2	330	3lq5	Structure of CDK9/CyclinT in complex with S-CR8	3	331	A	None	None
+P50750	2	330	3blr	Crystal Structure of Human CDK9/cyclinT1 in complex with Flavopiridol	3	331	A	None	None
+P50750	2	330	3blq	Crystal Structure of Human CDK9/cyclinT1 in Complex with ATP	3	331	A	None	None
+P50750	2	330	3tn8	CDK9/cyclin T in complex with CAN508	3	331	A	None	None
+P50750	2	330	4bcj	Structure of CDK9 in complex with cyclin T and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	331	A	None	None
+P50750	2	330	4bci	Structure of CDK9 in complex with cyclin T and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	331	A	None	None
+P50750	2	330	4bch	Structure of CDK9 in complex with cyclin T and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	331	A	None	None
+P50750	2	330	4bcg	Structure of CDK9 in complex with cyclin T and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	331	A	None	None
+P50750	2	330	4bcf	Structure of CDK9 in complex with cyclin T and a 2-amino-4-heteroaryl- pyrimidine inhibitor	3	331	A	None	None
+P50750	2	330	3tni	structure of CDK9/cyclin T F241L	3	331	A	None	None
+P50750	2	330	3blh	Crystal Structure of Human CDK9/cyclinT1	3	331	A	None	None
+P50750	2	372	4ec9	Crystal structure of full-length cdk9 in complex with cyclin t	3	373	A	None	None
+P50750	7	332	4or5	Crystal structure of HIV-1 Tat complexed with human P-TEFb and AFF4	1	326	A	None	None
+P50750	7	332	4or5	Crystal structure of HIV-1 Tat complexed with human P-TEFb and AFF4	1	326	F	None	332
+

@@ -1,0 +1,52 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q53EZ4	Centrosomal protein of 55 kDa	CEP55_HUMAN	Homo sapiens	PF12180	EABR	TSG101 and ALIX binding domain of CEP55	171	204
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#30 mappings in 30 PDB chains in 4 PDB entries
+Q53EZ4	160	217	3e1r	Midbody targeting of the ESCRT machinery by a non-canonical coiled-coil in CEP55	1	58	A	None	None
+Q53EZ4	160	217	3e1r	Midbody targeting of the ESCRT machinery by a non-canonical coiled-coil in CEP55	1	58	B	None	None
+Q53EZ4	160	217	3wuu	Structure basis of inactivating cell abscission with chimera peptide 1	6	63	D	None	None
+Q53EZ4	160	217	3wuu	Structure basis of inactivating cell abscission with chimera peptide 1	6	63	A	160	None
+Q53EZ4	160	217	3wuu	Structure basis of inactivating cell abscission with chimera peptide 1	6	63	K	160	None
+Q53EZ4	160	217	3wuu	Structure basis of inactivating cell abscission with chimera peptide 1	6	63	H	None	None
+Q53EZ4	160	217	3wuu	Structure basis of inactivating cell abscission with chimera peptide 1	6	63	J	160	None
+Q53EZ4	160	217	3wuu	Structure basis of inactivating cell abscission with chimera peptide 1	6	63	E	None	None
+Q53EZ4	160	217	3wuu	Structure basis of inactivating cell abscission with chimera peptide 1	6	63	G	None	None
+Q53EZ4	160	217	3wuu	Structure basis of inactivating cell abscission with chimera peptide 1	6	63	B	160	None
+Q53EZ4	160	217	3wut	Structure basis of inactivating cell abscission	6	63	A	160	None
+Q53EZ4	160	217	3wut	Structure basis of inactivating cell abscission	6	63	G	160	None
+Q53EZ4	160	217	3wut	Structure basis of inactivating cell abscission	6	63	E	160	None
+Q53EZ4	160	217	3wut	Structure basis of inactivating cell abscission	6	63	H	160	None
+Q53EZ4	160	217	3wut	Structure basis of inactivating cell abscission	6	63	B	None	None
+Q53EZ4	160	217	3wut	Structure basis of inactivating cell abscission	6	63	D	160	None
+Q53EZ4	160	217	3wut	Structure basis of inactivating cell abscission	6	63	J	None	None
+Q53EZ4	160	217	3wut	Structure basis of inactivating cell abscission	6	63	K	None	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	M	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	A	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	P	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	G	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	N	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	E	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	K	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	H	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	J	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	Q	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	D	160	None
+Q53EZ4	160	217	3wuv	Structure basis of inactivating cell abscission with chimera peptide 2	6	63	B	160	None
+

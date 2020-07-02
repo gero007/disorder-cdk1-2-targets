@@ -1,0 +1,34 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O43683	MITOTIC CHECKPOINT SERINE/THREONINE-PROTEIN KINASE BUB1	BUB1_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	787	1032
+O43683	MITOTIC CHECKPOINT SERINE/THREONINE-PROTEIN KINASE BUB1	BUB1_HUMAN	Homo sapiens	PF08311	Mad3_BUB1_I	Mad3/BUB1 homology region 1	6	126
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#11 mappings in 11 PDB chains in 6 PDB entries
+O43683	1	150	4a1g	The crystal structure of the human Bub1 TPR domain in complex with the KI motif of Knl1	3	152	A	None	None
+O43683	1	150	4a1g	The crystal structure of the human Bub1 TPR domain in complex with the KI motif of Knl1	3	152	C	None	150
+O43683	1	150	4a1g	The crystal structure of the human Bub1 TPR domain in complex with the KI motif of Knl1	3	152	B	None	150
+O43683	1	150	4a1g	The crystal structure of the human Bub1 TPR domain in complex with the KI motif of Knl1	3	152	D	1	None
+O43683	1	150	2lah	Solution NMR Structure of Mitotic checkpoint serine/threonine-protein kinase BUB1 N-terminal domain from Homo sapiens, Northeast Structural Genomics Consortium Target HR5460A (Methods Development)	11	160	A	11	160
+O43683	724	1085	4r8q	Structure and substrate recruitment of the human spindle checkpoint kinase bub1	4	365	A	None	None
+O43683	726	1085	5dmz	Structure of human Bub1 kinase domain phosphorylated at Ser969	6	365	A	None	None
+O43683	726	1085	5dmz	Structure of human Bub1 kinase domain phosphorylated at Ser969	6	365	B	None	None
+O43683	726	1085	6f7b	Crystal structure of the human Bub1 kinase domain in complex with BAY 1816032	2	361	A	None	None
+O43683	740	1085	4qpm	Structure of Bub1 kinase domain	11	356	B	740	None
+O43683	740	1085	4qpm	Structure of Bub1 kinase domain	11	356	A	740	None
+

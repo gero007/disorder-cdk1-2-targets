@@ -1,0 +1,54 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P18754	RCC1	RCC1_HUMAN	Homo sapiens	PF00415	RCC1	Regulator of chromosome condensation (RCC1) repeat	363	414
+P18754	RCC1	RCC1_HUMAN	Homo sapiens	PF00415	RCC1	Regulator of chromosome condensation (RCC1) repeat	312	360
+P18754	RCC1	RCC1_HUMAN	Homo sapiens	PF00415	RCC1	Regulator of chromosome condensation (RCC1) repeat	258	309
+P18754	RCC1	RCC1_HUMAN	Homo sapiens	PF00415	RCC1	Regulator of chromosome condensation (RCC1) repeat	190	255
+P18754	RCC1	RCC1_HUMAN	Homo sapiens	PF00415	RCC1	Regulator of chromosome condensation (RCC1) repeat	85	134
+P18754	RCC1	RCC1_HUMAN	Homo sapiens	PF00415	RCC1	Regulator of chromosome condensation (RCC1) repeat	34	82
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#27 mappings in 27 PDB chains in 10 PDB entries
+P18754	1	421	5tbk	Crystal structure of human importin a3 bound to RCC1	1	421	K	None	421
+P18754	1	421	5tbk	Crystal structure of human importin a3 bound to RCC1	1	421	M	None	421
+P18754	1	421	5tbk	Crystal structure of human importin a3 bound to RCC1	1	421	L	None	421
+P18754	1	421	5tbk	Crystal structure of human importin a3 bound to RCC1	1	421	N	None	421
+P18754	1	421	5tbk	Crystal structure of human importin a3 bound to RCC1	1	421	O	None	421
+P18754	1	421	5tbk	Crystal structure of human importin a3 bound to RCC1	1	421	I	None	421
+P18754	1	421	5tbk	Crystal structure of human importin a3 bound to RCC1	1	421	J	None	421
+P18754	1	421	5tbk	Crystal structure of human importin a3 bound to RCC1	1	421	P	None	421
+P18754	2	7	5e2a	Crystal structure of NTMT1 in complex with N-terminally methylated SPKRIA peptide	1	6	E	1	6
+P18754	2	7	5e2a	Crystal structure of NTMT1 in complex with N-terminally methylated SPKRIA peptide	1	6	D	1	6
+P18754	2	7	6dub	Crystal structure of a methyltransferase	1	6	F	1	None
+P18754	2	7	6dub	Crystal structure of a methyltransferase	1	6	E	1	None
+P18754	2	7	5e1b	Crystal structure of NRMT1 in complex with SPKRIA peptide	1	6	E	1	6
+P18754	2	7	5e1b	Crystal structure of NRMT1 in complex with SPKRIA peptide	1	6	D	1	6
+P18754	3	7	5e1m	Crystal structure of NTMT1 in complex with PPKRIA peptide	2	6	E	2	6
+P18754	3	7	5e1m	Crystal structure of NTMT1 in complex with PPKRIA peptide	2	6	D	2	6
+P18754	3	7	5e1o	Crystal structure of NTMT1 in complex with RPKRIA peptide	2	6	E	2	6
+P18754	3	7	5e1o	Crystal structure of NTMT1 in complex with RPKRIA peptide	2	6	D	2	6
+P18754	3	7	5e2b	Crystal structure of NTMT1 in complex with N-terminally methylated PPKRIA peptide	2	6	E	2	6
+P18754	3	7	5e2b	Crystal structure of NTMT1 in complex with N-terminally methylated PPKRIA peptide	2	6	D	2	6
+P18754	3	7	5e1d	NTMT1 in complex with YPKRIA peptide	2	6	E	2	6
+P18754	3	7	5e1d	NTMT1 in complex with YPKRIA peptide	2	6	D	2	6
+P18754	9	421	1a12	REGULATOR OF CHROMOSOME CONDENSATION (RCC1) OF HUMAN	1	413	A	None	421
+P18754	9	421	1a12	REGULATOR OF CHROMOSOME CONDENSATION (RCC1) OF HUMAN	1	413	B	None	421
+P18754	9	421	1a12	REGULATOR OF CHROMOSOME CONDENSATION (RCC1) OF HUMAN	1	413	C	None	421
+P18754	20	421	1i2m	RAN-RCC1-SO4 COMPLEX	1	402	D	None	None
+P18754	20	421	1i2m	RAN-RCC1-SO4 COMPLEX	1	402	B	None	None
+

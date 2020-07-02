@@ -1,0 +1,80 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O43521	BCL-2-LIKE PROTEIN 11	B2L11_HUMAN	Homo sapiens	PF06773	Bim_N	Bim protein N-terminus	4	40
+O43521	BCL-2-LIKE PROTEIN 11	B2L11_HUMAN	Homo sapiens	PF08945	Bclx_interact	Bcl-x interacting, BH3 domain	132	166
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#57 mappings in 57 PDB chains in 40 PDB entries
+O43521	108	116	1f95	SOLUTION STRUCTURE OF DYNEIN LIGHT CHAIN 8 (DLC8) AND BIM PEPTIDE COMPLEX	1	9	D	1	9
+O43521	108	116	1f95	SOLUTION STRUCTURE OF DYNEIN LIGHT CHAIN 8 (DLC8) AND BIM PEPTIDE COMPLEX	1	9	C	1	9
+O43521	141	166	3io8	BimL12F in complex with Bcl-xL	1	26	D	None	None
+O43521	141	166	3io8	BimL12F in complex with Bcl-xL	1	26	B	None	76
+O43521	141	166	5vww	Bak core latch dimer in complex with Bim-RT - Tetragonal	1	26	D	None	None
+O43521	141	166	5vww	Bak core latch dimer in complex with Bim-RT - Tetragonal	1	26	C	None	166
+O43521	141	166	5vwy	Bak core latch dimer in complex with Bim-h3Pc-RT	1	26	B	141	None
+O43521	141	166	5vwz	Bak in complex with Bim-h3Pc	1	26	B	141	166
+O43521	141	166	5vwz	Bak in complex with Bim-h3Pc	1	26	D	141	166
+O43521	141	166	3fdl	Bim BH3 peptide in complex with Bcl-xL	1	26	B	None	108
+O43521	141	166	4b4s	Crystal Structure of a pro-survival Bcl-2:Bim BH3 complex	3	28	B	None	76
+O43521	141	166	4uf3	Deerpox virus DPV022 in complex with Bim BH3	1	26	B	None	None
+O43521	141	166	6qfi	Structure of human Mcl-1 in complex with BIM BH3 peptide	1	26	B	None	None
+O43521	141	166	4zie	Crystal Structure of core/latch dimer of Bax in complex with BimBH3	1	26	C	None	None
+O43521	141	166	2nl9	Crystal structure of the Mcl-1:Bim BH3 complex	1	26	B	None	None
+O43521	141	166	3d7v	Crystal structure of Mcl-1 in complex with an Mcl-1 selective BH3 ligand	1	26	B	None	None
+O43521	141	166	2v6q	Crystal Structure of a BHRF-1 : Bim BH3 complex	1	26	B	51	None
+O43521	141	166	5vx0	Bak in complex with Bim-h3Glg	1	26	B	141	None
+O43521	141	166	5vx0	Bak in complex with Bim-h3Glg	1	26	D	None	None
+O43521	141	166	5vx3	Bcl-xL in complex with Bim-h3Pc-RT	1	26	H	None	None
+O43521	141	166	5vx3	Bcl-xL in complex with Bim-h3Pc-RT	1	26	F	None	None
+O43521	141	166	5vx3	Bcl-xL in complex with Bim-h3Pc-RT	1	26	D	None	None
+O43521	141	166	5vx3	Bcl-xL in complex with Bim-h3Pc-RT	1	26	B	None	None
+O43521	141	166	5vx2	Mcl-1 in complex with Bim-h3Pc-RT	1	26	D	51	None
+O43521	141	166	5vx2	Mcl-1 in complex with Bim-h3Pc-RT	1	26	B	None	None
+O43521	141	166	2wh6	Crystal structure of anti-apoptotic BHRF1 in complex with the Bim BH3 domain	1	26	B	51	None
+O43521	141	166	4d2m	Vaccinia Virus F1L bound to Bim BH3	1	26	D	None	None
+O43521	141	166	4d2m	Vaccinia Virus F1L bound to Bim BH3	1	26	B	None	None
+O43521	141	166	6tqq	Structural insight into tanapoxvirus mediated inhibition of apoptosis	1	26	B	150	None
+O43521	141	166	4qvf	Crystal structure of Bcl-xL in complex with BIM BH3 domain	1	26	B	None	None
+O43521	141	166	5wos	Structural and functional insights into Canarypox Virus CNP058 regulation of apoptosis	1	26	B	None	None
+O43521	141	165	5vwv	Bak core latch dimer in complex with Bim-BH3 - Cubic	1	25	B	141	165
+O43521	141	165	2vm6	Human Bcl2-A1 in complex with Bim-BH3 peptide	1	25	B	141	165
+O43521	141	160	4zif	Crystal Structure of core/latch dimer of Bax in complex with BimBH3mini	1	20	B	None	None
+O43521	141	160	4zih	Crystal Structure of core/latch dimer of Bax in complex with BimBH3mini	1	20	B	None	None
+O43521	141	166	3io9	BimL12Y in complex with Mcl-1	1	26	B	None	None
+O43521	142	164	5vwx	Bak core latch dimer in complex with Bim-h0-h3Glt	1	23	D	142	164
+O43521	142	164	5vwx	Bak core latch dimer in complex with Bim-h0-h3Glt	1	23	B	142	164
+O43521	143	165	3kj0	Mcl-1 in complex with Bim BH3 mutant I2dY	5	27	B	1	23
+O43521	143	163	3kj1	Mcl-1 in complex with Bim BH3 mutant I2dA	1	21	B	1	21
+O43521	143	163	3kj2	Mcl-1 in complex with Bim BH3 mutant F4aE	1	21	B	1	21
+O43521	145	164	2k7w	BAX Activation is Initiated at a Novel Interaction Site	1	20	B	145	164
+O43521	146	166	5c3g	Crystal structure of Bcl-xl bound to BIM-MM	2	22	B	None	None
+O43521	146	166	5agx	Bcl-2 alpha beta-1 LINEAR complex	2	22	D	1	21
+O43521	146	166	5agx	Bcl-2 alpha beta-1 LINEAR complex	2	22	C	1	21
+O43521	146	165	4yj4	Crystal structure of Bcl-xL in complex with the BIM BH3 domain containing Ile155-to-Arg and Glu158-to-phosphoserine mutations	2	21	B	146	None
+O43521	146	163	4a1u	Crystal structure of alpha-beta-foldamer 2c in complex with Bcl-xL	2	19	B	88	105
+O43521	146	163	4a1w	Crystal structure of alpha-beta foldamer 4c in complex with Bcl-xL	1	18	R	None	223
+O43521	146	163	4a1w	Crystal structure of alpha-beta foldamer 4c in complex with Bcl-xL	1	18	S	206	223
+O43521	146	163	4a1w	Crystal structure of alpha-beta foldamer 4c in complex with Bcl-xL	1	18	P	None	223
+O43521	146	163	4a1w	Crystal structure of alpha-beta foldamer 4c in complex with Bcl-xL	1	18	Q	206	223
+O43521	146	166	5agw	Bcl-2 alpha beta-1 complex	2	22	D	1	21
+O43521	146	166	5agw	Bcl-2 alpha beta-1 complex	2	22	C	1	None
+O43521	147	164	2yq7	Structure of Bcl-xL bound to BimLOCK	2	19	B	147	164
+O43521	147	163	6rjp	Bfl-1 in complex with alpha helical peptide	1	17	D	1	17
+O43521	147	163	6rjp	Bfl-1 in complex with alpha helical peptide	1	17	C	1	17
+O43521	147	164	2yq6	Structure of Bcl-xL bound to BimSAHB	1	18	B	147	164
+

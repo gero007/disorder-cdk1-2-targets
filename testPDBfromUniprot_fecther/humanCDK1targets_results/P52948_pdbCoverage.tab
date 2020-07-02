@@ -1,0 +1,41 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P52948	NUCLEAR PORE COMPLEX PROTEIN NUP96	NUP98_HUMAN	Homo sapiens	PF04096	Nucleoporin2	Nucleoporin autopeptidase	738	885
+P52948	NUCLEAR PORE COMPLEX PROTEIN NUP96	NUP98_HUMAN	Homo sapiens	PF12110	Nup96	Nuclear protein 96	1332	1623
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#18 mappings in 18 PDB chains in 7 PDB entries
+P52948	116	123	6bzm	GFGNFGTS from low-complexity/FG repeat domain of Nup98, residues 116-123	1	8	A	1	8
+P52948	116	123	6bzm	GFGNFGTS from low-complexity/FG repeat domain of Nup98, residues 116-123	1	8	B	1	8
+P52948	157	213	4owr	Vesiculoviral matrix (M) protein occupies nucleic acid binding site at nucleoporin pair Rae1-Nup98	3	59	B	None	213
+P52948	158	213	3mmy	Structural and functional analysis of the interaction between the nucleoporin Nup98 and the mRNA export factor Rae1	1	56	F	158	213
+P52948	158	213	3mmy	Structural and functional analysis of the interaction between the nucleoporin Nup98 and the mRNA export factor Rae1	1	56	D	158	213
+P52948	158	213	3mmy	Structural and functional analysis of the interaction between the nucleoporin Nup98 and the mRNA export factor Rae1	1	56	H	None	213
+P52948	158	213	3mmy	Structural and functional analysis of the interaction between the nucleoporin Nup98 and the mRNA export factor Rae1	1	56	B	158	213
+P52948	695	880	1ko6	Crystal Structure of C-terminal Autoproteolytic Domain of Nucleoporin Nup98	2	187	A	None	863
+P52948	695	880	1ko6	Crystal Structure of C-terminal Autoproteolytic Domain of Nucleoporin Nup98	2	187	C	None	863
+P52948	881	942	1ko6	Crystal Structure of C-terminal Autoproteolytic Domain of Nucleoporin Nup98	1	57	D	None	None
+P52948	881	942	1ko6	Crystal Structure of C-terminal Autoproteolytic Domain of Nucleoporin Nup98	1	57	B	None	None
+P52948	729	880	2q5y	Crystal Structure of the C-terminal domain of hNup98	1	152	A	712	863
+P52948	729	880	2q5y	Crystal Structure of the C-terminal domain of hNup98	1	152	C	712	863
+P52948	733	887	2q5x	Crystal Structure of the C-terminal domain of hNup98	1	155	A	716	870
+P52948	881	1817	5a9q	Human nuclear pore complex	1	937	5	None	None
+P52948	881	1817	5a9q	Human nuclear pore complex	1	937	E	None	None
+P52948	881	1817	5a9q	Human nuclear pore complex	1	937	N	None	None
+P52948	881	1817	5a9q	Human nuclear pore complex	1	937	W	None	None
+

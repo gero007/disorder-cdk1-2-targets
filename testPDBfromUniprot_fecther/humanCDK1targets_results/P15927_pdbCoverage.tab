@@ -1,0 +1,41 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P15927	PROTEIN (REPLICATION PROTEIN A 32 KD SUBUNIT)	RFA2_HUMAN	Homo sapiens	PF08784	RPA_C	Replication protein A C terminal	166	262
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#19 mappings in 19 PDB chains in 10 PDB entries
+P15927	1	270	2pi2	Full-length Replication protein A subunits RPA14 and RPA32	1	270	A	None	None
+P15927	1	270	2pi2	Full-length Replication protein A subunits RPA14 and RPA32	1	270	D	None	None
+P15927	1	270	2pi2	Full-length Replication protein A subunits RPA14 and RPA32	1	270	B	None	None
+P15927	1	270	2pi2	Full-length Replication protein A subunits RPA14 and RPA32	1	270	C	None	None
+P15927	1	270	2z6k	Crystal structure of full-length human RPA14/32 heterodimer	1	270	A	None	None
+P15927	1	270	2z6k	Crystal structure of full-length human RPA14/32 heterodimer	1	270	B	None	None
+P15927	41	172	3kdf	X-ray Crystal Structure of the Human Replication Protein A Complex from Wheat Germ Cell Free Expression	1	132	B	None	None
+P15927	41	172	3kdf	X-ray Crystal Structure of the Human Replication Protein A Complex from Wheat Germ Cell Free Expression	1	132	D	None	172
+P15927	42	172	2pqa	Crystal Structure of Full-length Human RPA 14/32 Heterodimer	1	131	A	42	172
+P15927	42	172	2pqa	Crystal Structure of Full-length Human RPA 14/32 Heterodimer	1	131	C	None	None
+P15927	43	171	1quq	COMPLEX OF REPLICATION PROTEIN A SUBUNITS RPA14 AND RPA32	1	129	C	None	171
+P15927	43	171	1quq	COMPLEX OF REPLICATION PROTEIN A SUBUNITS RPA14 AND RPA32	1	129	A	None	171
+P15927	44	171	1l1o	Structure of the human Replication Protein A (RPA) trimerization core	1	128	B	44	171
+P15927	44	171	1l1o	Structure of the human Replication Protein A (RPA) trimerization core	1	128	E	44	171
+P15927	172	270	1dpu	SOLUTION STRUCTURE OF THE C-TERMINAL DOMAIN OF HUMAN RPA32 COMPLEXED WITH UNG2(73-88)	1	99	A	None	270
+P15927	172	270	1z1d	Structural Model for the interaction between RPA32 C-terminal domain and SV40 T antigen origin binding domain.	5	103	A	None	270
+P15927	202	270	4mqv	Crystal complex of Rpa32c and Smarcal1 N-terminus	1	69	A	None	None
+P15927	202	270	4mqv	Crystal complex of Rpa32c and Smarcal1 N-terminus	1	69	C	None	None
+P15927	202	270	4ou0	Crystal Structure of RPA32C	5	73	A	None	None
+

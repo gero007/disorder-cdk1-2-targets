@@ -1,0 +1,26 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O14773	Tripeptidyl-peptidase 1	TPP1_HUMAN	Homo sapiens	PF00082	Peptidase_S8	Subtilase family	255	495
+O14773	Tripeptidyl-peptidase 1	TPP1_HUMAN	Homo sapiens	PF09286	Pro-kuma_activ	Pro-kumamolisin, activation domain	33	176
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#3 mappings in 3 PDB chains in 2 PDB entries
+O14773	1	563	3ee6	Crystal Structure Analysis of Tripeptidyl peptidase -I	1	563	A	None	563
+O14773	1	563	3ee6	Crystal Structure Analysis of Tripeptidyl peptidase -I	1	563	B	None	563
+O14773	20	563	3edy	Crystal Structure of the Precursor Form of Human Tripeptidyl-Peptidase 1	1	544	A	20	563
+

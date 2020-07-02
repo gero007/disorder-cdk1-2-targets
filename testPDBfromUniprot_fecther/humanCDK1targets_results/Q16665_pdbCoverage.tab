@@ -1,0 +1,48 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q16665	FLUORINATED HYPOXIA-INDUCIBLE FACTOR 1 ALPHA PEPTIDE	HIF1A_HUMAN	Homo sapiens	PF00989	PAS	PAS fold	90	188
+Q16665	FLUORINATED HYPOXIA-INDUCIBLE FACTOR 1 ALPHA PEPTIDE	HIF1A_HUMAN	Homo sapiens	PF08447	PAS_3	PAS fold	252	339
+Q16665	FLUORINATED HYPOXIA-INDUCIBLE FACTOR 1 ALPHA PEPTIDE	HIF1A_HUMAN	Homo sapiens	PF08778	HIF-1a_CTAD	HIF-1 alpha C terminal transactivation domain	789	825
+Q16665	FLUORINATED HYPOXIA-INDUCIBLE FACTOR 1 ALPHA PEPTIDE	HIF1A_HUMAN	Homo sapiens	PF11413	HIF-1	Hypoxia-inducible factor-1	551	581
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#23 mappings in 23 PDB chains in 19 PDB entries
+Q16665	238	348	4h6j	Identification of Cys 255 in HIF-1 as a novel site for development of covalent inhibitors of HIF-1 /ARNT PasB domain protein-protein interaction.	3	113	A	238	None
+Q16665	395	413	5l9v	HIF prolyl hydroxylase 2 (PHD2-R281C/P317C) cross-linked to HIF-1alpha NODD-L397C/D412C and N-oxalylglycine (NOG) (complex-1)	1	19	D	395	413
+Q16665	395	413	5l9v	HIF prolyl hydroxylase 2 (PHD2-R281C/P317C) cross-linked to HIF-1alpha NODD-L397C/D412C and N-oxalylglycine (NOG) (complex-1)	1	19	C	395	413
+Q16665	395	413	5la9	HIF prolyl hydroxylase 2 (PHD2-R281C/V314C) cross-linked to HIF-1alpha NODD-L397C/D412C and N-oxalylglycine (NOG) (complex-2)	1	19	D	395	413
+Q16665	395	413	5la9	HIF prolyl hydroxylase 2 (PHD2-R281C/V314C) cross-linked to HIF-1alpha NODD-L397C/D412C and N-oxalylglycine (NOG) (complex-2)	1	19	C	395	413
+Q16665	395	413	5las	HIF prolyl hydroxylase 2 (PHD2-R281C/P317C/R396T) cross-linked to HIF-1alpha NODD-L397C/D412C and N-oxalylglycine (NOG) (complex-3)	1	19	D	395	413
+Q16665	395	413	5las	HIF prolyl hydroxylase 2 (PHD2-R281C/P317C/R396T) cross-linked to HIF-1alpha NODD-L397C/D412C and N-oxalylglycine (NOG) (complex-3)	1	19	C	395	413
+Q16665	549	582	1lqb	Crystal structure of a hydroxylated HIF-1 alpha peptide bound to the pVHL/elongin-C/elongin-B complex	1	34	D	None	None
+Q16665	556	574	5l9b	HIF PROLYL HYDROXYLASE 2 (PHD2/ EGLN1) IN COMPLEX WITH 2-OXOGLUTARATE (2OG) AND HIF-1ALPHA CODD (556-574)	1	19	C	None	574
+Q16665	556	574	5l9b	HIF PROLYL HYDROXYLASE 2 (PHD2/ EGLN1) IN COMPLEX WITH 2-OXOGLUTARATE (2OG) AND HIF-1ALPHA CODD (556-574)	1	19	D	None	574
+Q16665	556	575	1lm8	Structure of a HIF-1a-pVHL-ElonginB-ElonginC Complex	1	20	H	None	575
+Q16665	558	574	3hqu	PHD2:Fe:UN9:partial HIF1-alpha substrate complex	1	17	S	None	574
+Q16665	558	574	3hqr	PHD2:Mn:NOG:HIF1-alpha substrate complex	1	17	S	558	574
+Q16665	559	577	4ajy	von Hippel-Lindau protein-ElonginB-ElonginC complex, bound to Hif1- alpha peptide	1	19	H	None	None
+Q16665	560	577	6gmr	pVHL:EloB:EloC in complex with (4-(1H-pyrrol-1-yl)phenyl)methanol	2	19	H	560	None
+Q16665	560	577	6gfx	pVHL:EloB:EloC in complex with modified HIF-1a CODD peptide containing (3R,4S)-3-fluoro-4-hydroxyproline (ligand 13a)	2	19	D	560	None
+Q16665	775	826	1h2m	Factor Inhibiting HIF-1 alpha in complex with HIF-1 alpha fragment peptide	1	52	S	None	None
+Q16665	776	826	1l8c	STRUCTURAL BASIS FOR HIF-1ALPHA/CBP RECOGNITION IN THE CELLULAR HYPOXIC RESPONSE	1	51	B	99	149
+Q16665	786	826	2ilm	Factor Inhibiting HIF-1 Alpha D201A Mutant in Complex with FE(II), Alpha-Ketoglutarate and HIF-1 Alpha 35mer	1	41	S	None	None
+Q16665	786	826	1h2k	Factor Inhibiting HIF-1 alpha in complex with HIF-1 alpha fragment peptide	1	41	S	None	None
+Q16665	786	826	1l3e	NMR Structures of the HIF-1alpha CTAD/p300 CH1 Complex	2	42	A	2	42
+Q16665	786	826	1h2l	Factor Inhibiting HIF-1 alpha in complex with HIF-1 alpha fragment peptide	1	41	S	None	None
+Q16665	788	806	5jwp	Crystal structure of human FIH D201E variant in complex with Zn, alpha-ketoglutarate, and HIF1 alpha peptide.	1	19	B	None	806
+

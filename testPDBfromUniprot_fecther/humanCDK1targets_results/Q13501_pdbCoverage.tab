@@ -1,0 +1,92 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q13501	Sequestosome-1, Arg-Glu peptide chimera	SQSTM_HUMAN	Homo sapiens	PF00564	PB1	PB1 domain	21	102
+Q13501	Sequestosome-1, Arg-Glu peptide chimera	SQSTM_HUMAN	Homo sapiens	PF00569	ZZ	Zinc finger, ZZ type	122	165
+Q13501	Sequestosome-1, Arg-Glu peptide chimera	SQSTM_HUMAN	Homo sapiens	PF16577	UBA_5	UBA domain	379	440
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#68 mappings in 66 PDB chains in 23 PDB entries
+Q13501	1	102	6jm4	The crystal structure of PB1 homo-dimer of human P62/SQSTM1	1	102	C	None	102
+Q13501	1	102	6jm4	The crystal structure of PB1 homo-dimer of human P62/SQSTM1	1	102	A	None	102
+Q13501	1	102	6jm4	The crystal structure of PB1 homo-dimer of human P62/SQSTM1	1	102	D	None	102
+Q13501	1	102	6jm4	The crystal structure of PB1 homo-dimer of human P62/SQSTM1	1	102	B	None	None
+Q13501	1	122	6tgy	Cryo-EM structure of p62-PB1 filament (L-type)	1	122	A	None	None
+Q13501	1	122	4uf9	Electron cryo-microscopy structure of PB1-p62 type T filaments	1	122	A	None	None
+Q13501	1	122	4uf9	Electron cryo-microscopy structure of PB1-p62 type T filaments	1	122	B	None	None
+Q13501	1	122	4uf9	Electron cryo-microscopy structure of PB1-p62 type T filaments	1	122	D	None	None
+Q13501	1	122	6th3	Cryo-EM structure of p62-PB1 filament (S-type)	1	122	A	None	None
+Q13501	1	122	6th3	Cryo-EM structure of p62-PB1 filament (S-type)	1	122	B	None	None
+Q13501	1	122	6th3	Cryo-EM structure of p62-PB1 filament (S-type)	1	122	C	None	None
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	V	None	None
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	R	3	102
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	L	3	102
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	N	3	102
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	X	3	102
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	J	3	102
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	D	3	102
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	F	3	102
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	B	None	102
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	P	None	102
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	H	3	102
+Q13501	3	102	4mjs	crystal structure of a PB1 complex	5	104	T	3	102
+Q13501	3	102	4uf8	Electron cryo-microscopy structure of PB1-p62 filaments	1	100	I	3	102
+Q13501	3	102	4uf8	Electron cryo-microscopy structure of PB1-p62 filaments	1	100	C	3	102
+Q13501	3	102	4uf8	Electron cryo-microscopy structure of PB1-p62 filaments	1	100	B	3	102
+Q13501	3	102	4uf8	Electron cryo-microscopy structure of PB1-p62 filaments	1	100	A	3	102
+Q13501	120	171	6miu	Crystal structure of p62 ZZ domain in complex with Arg-Glu peptide	6	57	B	120	171
+Q13501	120	171	6miu	Crystal structure of p62 ZZ domain in complex with Arg-Glu peptide	6	57	A	120	171
+Q13501	115	116	6miu	Crystal structure of p62 ZZ domain in complex with Arg-Glu peptide	1	2	A	115	116
+Q13501	115	116	6miu	Crystal structure of p62 ZZ domain in complex with Arg-Glu peptide	1	2	B	115	116
+Q13501	120	171	6mj7	Crystal structure of p62 ZZ domain in complex with free arginine	4	55	A	120	171
+Q13501	125	169	6khz	p62/SQSTM1 ZZ domain with Gly-peptide	5	49	B	125	169
+Q13501	125	169	6khz	p62/SQSTM1 ZZ domain with Gly-peptide	5	49	C	125	169
+Q13501	125	169	6khz	p62/SQSTM1 ZZ domain with Gly-peptide	5	49	A	125	169
+Q13501	125	169	6khz	p62/SQSTM1 ZZ domain with Gly-peptide	5	49	D	125	169
+Q13501	126	180	5ypa	p62/SQSTM1 ZZ domain with Lys-peptide	6	60	B	2	None
+Q13501	126	180	5ypa	p62/SQSTM1 ZZ domain with Lys-peptide	6	60	A	2	None
+Q13501	126	180	5ypf	p62/SQSTM1 ZZ domain with Trp-peptide	6	60	B	2	None
+Q13501	126	180	5ypf	p62/SQSTM1 ZZ domain with Trp-peptide	6	60	C	2	None
+Q13501	126	180	5ypf	p62/SQSTM1 ZZ domain with Trp-peptide	6	60	A	2	None
+Q13501	126	180	5ypf	p62/SQSTM1 ZZ domain with Trp-peptide	6	60	D	2	None
+Q13501	126	180	5ypg	p62/SQSTM1 ZZ domain with Leu-peptide	6	60	B	2	None
+Q13501	126	180	5ypg	p62/SQSTM1 ZZ domain with Leu-peptide	6	60	A	2	None
+Q13501	126	180	5yph	p62/SQSTM1 ZZ domain with Ile-peptide	6	60	B	2	None
+Q13501	126	180	5yph	p62/SQSTM1 ZZ domain with Ile-peptide	6	60	A	2	None
+Q13501	126	180	5ype	p62/SQSTM1 ZZ domain with Tyr-peptide	6	60	B	2	None
+Q13501	126	180	5ype	p62/SQSTM1 ZZ domain with Tyr-peptide	6	60	C	2	None
+Q13501	126	180	5ype	p62/SQSTM1 ZZ domain with Tyr-peptide	6	60	A	2	None
+Q13501	126	180	5ype	p62/SQSTM1 ZZ domain with Tyr-peptide	6	60	D	2	None
+Q13501	126	180	5yp8	p62/SQSTM1 ZZ domain with Arg-peptide	6	60	B	2	None
+Q13501	126	180	5yp8	p62/SQSTM1 ZZ domain with Arg-peptide	6	60	A	2	None
+Q13501	126	180	5yp7	p62/SQSTM1 ZZ domain	1	55	D	126	None
+Q13501	126	180	5yp7	p62/SQSTM1 ZZ domain	1	55	A	126	None
+Q13501	126	180	5ypb	p62/SQSTM1 ZZ domain with His-peptide	6	60	B	2	None
+Q13501	126	180	5ypb	p62/SQSTM1 ZZ domain with His-peptide	6	60	C	2	None
+Q13501	126	180	5ypb	p62/SQSTM1 ZZ domain with His-peptide	6	60	A	2	None
+Q13501	126	180	5ypb	p62/SQSTM1 ZZ domain with His-peptide	6	60	D	2	None
+Q13501	126	180	5ypc	p62/SQSTM1 ZZ domain with Phe-peptide	6	60	B	2	None
+Q13501	126	180	5ypc	p62/SQSTM1 ZZ domain with Phe-peptide	6	60	C	2	None
+Q13501	126	180	5ypc	p62/SQSTM1 ZZ domain with Phe-peptide	6	60	A	2	None
+Q13501	126	180	5ypc	p62/SQSTM1 ZZ domain with Phe-peptide	6	60	D	2	None
+Q13501	387	436	2knv	NMR dimer structure of the UBA domain of p62 (SQSTM1)	3	52	A	3	52
+Q13501	387	436	2knv	NMR dimer structure of the UBA domain of p62 (SQSTM1)	3	52	B	3	52
+Q13501	387	436	1q02	NMR structure of the UBA domain of p62 (SQSTM1)	3	52	A	3	52
+Q13501	387	436	2k0b	NMR structure of the UBA domain of p62 (SQSTM1)	3	52	X	3	52
+Q13501	387	436	2jy7	NMR structure of the ubiquitin associated (UBA) domain of p62 (SQSTM1). RDC refined	3	52	A	3	52
+Q13501	387	436	2jy8	NMR structure of the ubiquitin associated (UBA) domain of p62 (SQSTM1) in complex with ubiquitin. RDC refined	3	52	A	3	52
+

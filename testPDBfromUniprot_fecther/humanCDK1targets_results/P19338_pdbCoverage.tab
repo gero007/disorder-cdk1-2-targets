@@ -1,0 +1,29 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P19338	Nucleolin	NUCL_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	574	641
+P19338	Nucleolin	NUCL_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	488	554
+P19338	Nucleolin	NUCL_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	395	460
+P19338	Nucleolin	NUCL_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	309	377
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 3 PDB chains in 3 PDB entries
+P19338	300	466	2krr	Solution structure of the RBD1,2 domains from human nucleolin	1	167	A	1	167
+P19338	467	468	2krr	Solution structure of the RBD1,2 domains from human nucleolin	169	170	A	169	170
+P19338	478	565	2fc9	Solution structure of the RRM_1 domain of NCL protein	8	95	A	8	95
+P19338	564	652	2fc8	Solution structure of the RRM_1 domain of NCL protein	8	96	A	8	96
+

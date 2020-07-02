@@ -1,0 +1,51 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q15717	ELAV-like protein 1	ELAV1_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	246	316
+Q15717	ELAV-like protein 1	ELAV1_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	108	176
+Q15717	ELAV-like protein 1	ELAV1_HUMAN	Homo sapiens	PF00076	RRM_1	RNA recognition motif. (a.k.a. RRM, RBD, or RNP domain)	22	92
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#27 mappings in 27 PDB chains in 10 PDB entries
+Q15717	1	99	5szw	NMR solution structure of the RRM1 domain of the post-transcriptional regulator HuR	3	101	A	3	101
+Q15717	18	186	4ed5	Crystal structure of the two N-terminal RRM domains of HuR complexed with RNA	1	169	A	18	None
+Q15717	18	186	4ed5	Crystal structure of the two N-terminal RRM domains of HuR complexed with RNA	1	169	B	18	186
+Q15717	18	186	4egl	Crystal structure of two tandem RNA recognition motifs of Human antigen R	1	169	A	18	None
+Q15717	18	99	3hi9	The x-ray crystal structure of the first RNA recognition motif (RRM1) of the AU-rich element (ARE) binding protein HuR at 2.0 angstrom resolution	3	84	D	18	99
+Q15717	18	99	3hi9	The x-ray crystal structure of the first RNA recognition motif (RRM1) of the AU-rich element (ARE) binding protein HuR at 2.0 angstrom resolution	3	84	A	18	None
+Q15717	18	99	3hi9	The x-ray crystal structure of the first RNA recognition motif (RRM1) of the AU-rich element (ARE) binding protein HuR at 2.0 angstrom resolution	3	84	C	18	None
+Q15717	18	99	3hi9	The x-ray crystal structure of the first RNA recognition motif (RRM1) of the AU-rich element (ARE) binding protein HuR at 2.0 angstrom resolution	3	84	B	18	None
+Q15717	20	99	4fxv	Crystal structure of an ELAV-like protein 1 (ELAVL1) from Homo sapiens at 1.90 A resolution	20	99	B	20	None
+Q15717	20	99	4fxv	Crystal structure of an ELAV-like protein 1 (ELAVL1) from Homo sapiens at 1.90 A resolution	20	99	A	20	99
+Q15717	20	99	4fxv	Crystal structure of an ELAV-like protein 1 (ELAVL1) from Homo sapiens at 1.90 A resolution	20	99	D	20	None
+Q15717	20	99	4fxv	Crystal structure of an ELAV-like protein 1 (ELAVL1) from Homo sapiens at 1.90 A resolution	20	99	C	20	99
+Q15717	241	326	6gc5	Molecular basis for AU-rich element recognition and dimerization by the HuR C-terminal RRM	5	90	A	None	None
+Q15717	241	326	6gc5	Molecular basis for AU-rich element recognition and dimerization by the HuR C-terminal RRM	5	90	D	None	None
+Q15717	241	326	6gc5	Molecular basis for AU-rich element recognition and dimerization by the HuR C-terminal RRM	5	90	B	None	None
+Q15717	241	326	6gc5	Molecular basis for AU-rich element recognition and dimerization by the HuR C-terminal RRM	5	90	C	None	None
+Q15717	243	326	6g2k	Structure of HuR RRM3 in complex with RNA (UUUUUU)	2	85	C	243	None
+Q15717	243	326	6g2k	Structure of HuR RRM3 in complex with RNA (UUUUUU)	2	85	B	243	None
+Q15717	243	326	6g2k	Structure of HuR RRM3 in complex with RNA (UUUUUU)	2	85	A	243	None
+Q15717	243	326	6gd1	Structure of HuR RRM3	123	206	A	113	None
+Q15717	243	326	6gd1	Structure of HuR RRM3	123	206	B	113	None
+Q15717	243	326	6gd3	Structure of HuR RRM3 in complex with RNA (UAUUUA)	4	87	A	243	None
+Q15717	243	326	6gd3	Structure of HuR RRM3 in complex with RNA (UAUUUA)	4	87	C	243	None
+Q15717	243	326	6gd3	Structure of HuR RRM3 in complex with RNA (UAUUUA)	4	87	B	243	None
+Q15717	243	326	6gd2	Structure of HuR RRM3 in complex with RNA	4	87	A	243	None
+Q15717	243	326	6gd2	Structure of HuR RRM3 in complex with RNA	4	87	C	243	None
+Q15717	243	326	6gd2	Structure of HuR RRM3 in complex with RNA	4	87	B	243	None
+

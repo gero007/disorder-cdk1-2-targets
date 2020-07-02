@@ -1,0 +1,52 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q12959	Disks large homolog 1, MAGUK p55 subfamily member 7, Protein lin-7 homolog C	DLG1_HUMAN	Homo sapiens	PF00595	PDZ	PDZ domain	466	544
+Q12959	Disks large homolog 1, MAGUK p55 subfamily member 7, Protein lin-7 homolog C	DLG1_HUMAN	Homo sapiens	PF00595	PDZ	PDZ domain	319	403
+Q12959	Disks large homolog 1, MAGUK p55 subfamily member 7, Protein lin-7 homolog C	DLG1_HUMAN	Homo sapiens	PF00595	PDZ	PDZ domain	224	308
+Q12959	Disks large homolog 1, MAGUK p55 subfamily member 7, Protein lin-7 homolog C	DLG1_HUMAN	Homo sapiens	PF00625	Guanylate_kin	Guanylate kinase	713	891
+Q12959	Disks large homolog 1, MAGUK p55 subfamily member 7, Protein lin-7 homolog C	DLG1_HUMAN	Homo sapiens	PF00018	SH3_1	SH3 domain	587	643
+Q12959	Disks large homolog 1, MAGUK p55 subfamily member 7, Protein lin-7 homolog C	DLG1_HUMAN	Homo sapiens	PF09058	L27_1	L27_1	2	62
+Q12959	Disks large homolog 1, MAGUK p55 subfamily member 7, Protein lin-7 homolog C	DLG1_HUMAN	Homo sapiens	PF10600	PDZ_assoc	PDZ-associated domain of NMDA receptors	404	465
+Q12959	Disks large homolog 1, MAGUK p55 subfamily member 7, Protein lin-7 homolog C	DLG1_HUMAN	Homo sapiens	PF10608	MAGUK_N_PEST	Polyubiquitination (PEST) N-terminal domain of MAGUK	106	223
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#23 mappings in 20 PDB chains in 10 PDB entries
+Q12959	2	70	3lra	Structural Basis for Assembling a Human Tripartite Complex Dlg1-MPP7-Mals3	1	67	A	2	68
+Q12959	75	75	3lra	Structural Basis for Assembling a Human Tripartite Complex Dlg1-MPP7-Mals3	72	72	A	73	73
+Q12959	220	317	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	10	107	F	220	None
+Q12959	220	317	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	10	107	D	220	None
+Q12959	220	317	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	10	107	B	220	None
+Q12959	220	317	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	10	107	A	220	None
+Q12959	220	317	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	10	107	E	220	None
+Q12959	220	317	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	10	107	C	220	None
+Q12959	310	407	4g69	Structure of the Human Discs Large 1 PDZ2 - Adenomatous Polyposis Coli Cytoskeletal Polarity Complex	3	100	A	310	None
+Q12959	311	407	2x7z	Crystal Structure of the SAP97 PDZ2 I342W C378A mutant protein domain	3	99	A	311	407
+Q12959	315	326	4amh	Influence of circular permutation on the folding pathway of a PDZ domain	95	106	B	95	None
+Q12959	315	326	4amh	Influence of circular permutation on the folding pathway of a PDZ domain	95	106	A	95	None
+Q12959	327	405	4amh	Influence of circular permutation on the folding pathway of a PDZ domain	13	91	B	13	91
+Q12959	327	405	4amh	Influence of circular permutation on the folding pathway of a PDZ domain	13	91	A	13	91
+Q12959	315	410	3rl8	Crystal structure of hDLG1-PDZ2 complexed with APC	10	105	A	None	None
+Q12959	315	410	3rl8	Crystal structure of hDLG1-PDZ2 complexed with APC	10	105	C	None	410
+Q12959	315	410	3rl8	Crystal structure of hDLG1-PDZ2 complexed with APC	10	105	D	None	None
+Q12959	315	410	3rl8	Crystal structure of hDLG1-PDZ2 complexed with APC	10	105	E	None	None
+Q12959	315	410	3rl8	Crystal structure of hDLG1-PDZ2 complexed with APC	10	105	B	None	None
+Q12959	318	406	2m3m	Solution structure of a complex consisting of hDlg/SAP-97 residues 318-406 and HPV51 oncoprotein E6 residues 141-151	1	89	A	318	406
+Q12959	318	406	2oqs	Structure of the hDLG/SAP97 PDZ2 in complex with HPV-18 papillomavirus E6 peptide	1	89	A	1	89
+Q12959	457	555	1pdr	CRYSTAL STRUCTURE OF THE THIRD PDZ DOMAIN FROM THE HUMAN HOMOLOG OF DISCS LARGE PROTEIN	1	99	A	None	555
+Q12959	712	904	3w9y	Crystal structure of the human DLG1 guanylate kinase domain	8	200	A	734	926
+

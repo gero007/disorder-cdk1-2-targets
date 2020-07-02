@@ -1,0 +1,50 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q92547	DNA TOPOISOMERASE 2-BINDING PROTEIN 1	TOPB1_HUMAN	Homo sapiens	PF00533	BRCT	BRCA1 C Terminus (BRCT) domain	1260	1338
+Q92547	DNA TOPOISOMERASE 2-BINDING PROTEIN 1	TOPB1_HUMAN	Homo sapiens	PF00533	BRCT	BRCA1 C Terminus (BRCT) domain	900	978
+Q92547	DNA TOPOISOMERASE 2-BINDING PROTEIN 1	TOPB1_HUMAN	Homo sapiens	PF00533	BRCT	BRCA1 C Terminus (BRCT) domain	641	724
+Q92547	DNA TOPOISOMERASE 2-BINDING PROTEIN 1	TOPB1_HUMAN	Homo sapiens	PF00533	BRCT	BRCA1 C Terminus (BRCT) domain	354	431
+Q92547	DNA TOPOISOMERASE 2-BINDING PROTEIN 1	TOPB1_HUMAN	Homo sapiens	PF00533	BRCT	BRCA1 C Terminus (BRCT) domain	195	271
+Q92547	DNA TOPOISOMERASE 2-BINDING PROTEIN 1	TOPB1_HUMAN	Homo sapiens	PF00533	BRCT	BRCA1 C Terminus (BRCT) domain	102	176
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#23 mappings in 23 PDB chains in 12 PDB entries
+Q92547	1	290	2xnk	Structure and function of the Rad9-binding region of the DNA damage checkpoint adaptor TopBP1	3	292	A	1	None
+Q92547	1	290	2xnk	Structure and function of the Rad9-binding region of the DNA damage checkpoint adaptor TopBP1	3	292	D	1	None
+Q92547	1	290	2xnk	Structure and function of the Rad9-binding region of the DNA damage checkpoint adaptor TopBP1	3	292	B	1	None
+Q92547	1	290	2xnk	Structure and function of the Rad9-binding region of the DNA damage checkpoint adaptor TopBP1	3	292	C	1	None
+Q92547	1	290	3olc	Crystal structure of the N-terminal region of TopBP1	1	290	X	None	None
+Q92547	1	290	6rml	Crystal structure of TOPBP1 BRCT0,1,2 in complex with a 53BP1 phosphopeptide	3	292	A	None	None
+Q92547	1	290	6rml	Crystal structure of TOPBP1 BRCT0,1,2 in complex with a 53BP1 phosphopeptide	3	292	B	None	None
+Q92547	1	287	2xnh	Structure and function of the Rad9-binding region of the DNA damage checkpoint adaptor TopBP1	1	287	A	None	287
+Q92547	326	444	1wf6	The third BRCA1 C-terminus (BRCT) domain of Similar to S.pombe rad4+/cut5+ product	8	126	A	8	126
+Q92547	548	741	6rmm	Crystal structure of TOPBP1 BRCT4,5 in complex with a 53BP1 phosphopeptide	3	196	B	548	741
+Q92547	548	741	6rmm	Crystal structure of TOPBP1 BRCT4,5 in complex with a 53BP1 phosphopeptide	3	196	A	548	741
+Q92547	548	741	6rmm	Crystal structure of TOPBP1 BRCT4,5 in complex with a 53BP1 phosphopeptide	3	196	C	None	741
+Q92547	548	741	6rmm	Crystal structure of TOPBP1 BRCT4,5 in complex with a 53BP1 phosphopeptide	3	196	D	None	741
+Q92547	549	746	3ueo	Crystal structure of TopBP1 BRCT4/5 domains in complex with a phospho-peptide	6	203	A	None	None
+Q92547	549	746	3ueo	Crystal structure of TopBP1 BRCT4/5 domains in complex with a phospho-peptide	6	203	D	None	None
+Q92547	549	746	3ueo	Crystal structure of TopBP1 BRCT4/5 domains in complex with a phospho-peptide	6	203	B	None	None
+Q92547	549	746	3ueo	Crystal structure of TopBP1 BRCT4/5 domains in complex with a phospho-peptide	6	203	C	None	None
+Q92547	549	746	3uen	Crystal structure of TopBP1 BRCT4/5 domains	6	203	A	None	None
+Q92547	893	996	3jve	Crystal Structure of the Sixth BRCT Domain of TopBP1	6	109	A	None	None
+Q92547	893	994	3pd7	Crystal Structure of the Sixth BRCT Domain of Human TopBP1	4	105	A	None	994
+Q92547	893	994	3pd7	Crystal Structure of the Sixth BRCT Domain of Human TopBP1	4	105	B	None	994
+Q92547	1264	1493	3al3	Crystal Structure of TopBP1 BRCT7/8-BACH1 peptide complex	6	235	A	None	None
+Q92547	1264	1493	3al2	Crystal Structure of TopBP1 BRCT7/8	6	235	A	None	1493
+

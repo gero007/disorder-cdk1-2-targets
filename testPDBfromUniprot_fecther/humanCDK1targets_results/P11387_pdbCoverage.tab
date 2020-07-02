@@ -1,0 +1,39 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P11387	PROTEIN (DNA TOPOISOMERASE I)	TOP1_HUMAN	Homo sapiens	PF01028	Topoisom_I	Eukaryotic DNA topoisomerase I, catalytic core	432	665
+P11387	PROTEIN (DNA TOPOISOMERASE I)	TOP1_HUMAN	Homo sapiens	PF02919	Topoisom_I_N	Eukaryotic DNA topoisomerase I, DNA binding fragment	215	429
+P11387	PROTEIN (DNA TOPOISOMERASE I)	TOP1_HUMAN	Homo sapiens	PF14370	Topo_C_assoc	C-terminal topoisomerase domain	695	765
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#15 mappings in 15 PDB chains in 15 PDB entries
+P11387	174	765	1k4s	HUMAN DNA TOPOISOMERASE I IN COVALENT COMPLEX WITH A 22 BASE PAIR DNA DUPLEX	1	592	A	None	765
+P11387	174	765	1k4t	HUMAN DNA TOPOISOMERASE I (70 KDA) IN COMPLEX WITH THE POISON TOPOTECAN AND COVALENT COMPLEX WITH A 22 BASE PAIR DNA DUPLEX	1	592	A	None	765
+P11387	174	765	1t8i	Human DNA Topoisomerase I (70 Kda) In Complex With The Poison Camptothecin and Covalent Complex With A 22 Base Pair DNA Duplex	1	592	A	None	765
+P11387	174	765	1tl8	Human DNA topoisomerase I (70 kDa) in complex with the indenoisoquinoline AI-III-52 and covalent complex with a 22 base pair DNA duplex	1	592	A	None	765
+P11387	174	765	1r49	Human topoisomerase I (Topo70) double mutant K532R/Y723F	1	592	A	None	765
+P11387	174	765	1sc7	Human DNA Topoisomerase I (70 Kda) In Complex With The Indenoisoquinoline MJ-II-38 and Covalent Complex With A 22 Base Pair DNA Duplex	1	592	A	None	765
+P11387	174	765	1seu	Human DNA Topoisomerase I (70 Kda) In Complex With The Indolocarbazole SA315F and Covalent Complex With A 22 Base Pair DNA Duplex	1	592	A	None	765
+P11387	175	765	1a36	TOPOISOMERASE I/DNA COMPLEX	1	591	A	None	765
+P11387	175	765	1a35	HUMAN TOPOISOMERASE I/DNA COMPLEX	1	591	A	None	765
+P11387	175	765	1a31	HUMAN RECONSTITUTED DNA TOPOISOMERASE I IN COVALENT COMPLEX WITH A 22 BASE PAIR DNA DUPLEX	1	591	A	None	765
+P11387	201	765	1rrj	Structural Mechanisms of Camptothecin Resistance by Mutations in Human Topoisomerase I	1	565	A	201	765
+P11387	202	765	1lpq	Human DNA Topoisomerase I (70 Kda) In Non-Covalent Complex With A 22 Base Pair DNA Duplex Containing an 8-oxoG Lesion	1	564	A	202	765
+P11387	203	765	1ej9	CRYSTAL STRUCTURE OF HUMAN TOPOISOMERASE I DNA COMPLEX	1	563	A	203	765
+P11387	203	765	1rr8	Structural Mechanisms of Camptothecin Resistance by Mutations in Human Topoisomerase I	3	565	C	203	765
+P11387	203	765	1nh3	Human Topoisomerase I Ara-C Complex	1	563	A	203	765
+

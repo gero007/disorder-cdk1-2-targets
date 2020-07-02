@@ -1,0 +1,27 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9NSV4	Protein diaphanous homolog 3	DIAP3_HUMAN	Homo sapiens	PF02181	FH2	Formin Homology 2 Domain	636	1009
+Q9NSV4	Protein diaphanous homolog 3	DIAP3_HUMAN	Homo sapiens	PF06345	Drf_DAD	DRF Autoregulatory Domain	1060	1074
+Q9NSV4	Protein diaphanous homolog 3	DIAP3_HUMAN	Homo sapiens	PF06367	Drf_FH3	Diaphanous FH3 Domain	302	492
+Q9NSV4	Protein diaphanous homolog 3	DIAP3_HUMAN	Homo sapiens	PF06371	Drf_GBD	Diaphanous GTPase-binding Domain	113	297
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#2 mappings in 2 PDB chains in 2 PDB entries
+Q9NSV4	1179	1193	5uwp	Crystal Structure of mDia2 NES Peptide in complex with CRM1-Ran-RanBP1	5	19	D	None	1193
+Q9NSV4	1183	1193	6x2y	Crystal Structure of mDia2NES peptide bound to CRM1(E571K)	1	11	D	6	16
+

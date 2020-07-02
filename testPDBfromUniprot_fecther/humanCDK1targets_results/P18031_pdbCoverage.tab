@@ -1,0 +1,313 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P18031	protein-tyrosine phosphatase, non-receptor type 1	PTN1_HUMAN	Homo sapiens	PF00102	Y_phosphatase	Protein-tyrosine phosphatase	40	276
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#291 mappings in 291 PDB chains in 275 PDB entries
+P18031	1	330	1a5y	PROTEIN TYROSINE PHOSPHATASE 1B CYSTEINYL-PHOSPHATE INTERMEDIATE	1	330	A	None	None
+P18031	1	321	2veu	Crystal structure of protein tyrosine phosphatase 1B in complex with an isothiazolidinone-containing inhibitor	1	321	A	None	None
+P18031	1	321	5qe8	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000127a	1	321	A	1	None
+P18031	1	321	6b95	Multiconformer model of K197C PTP1B tethered to compound 2 at 100 K	1	321	A	1	None
+P18031	1	321	1sug	1.95 A structure of apo protein tyrosine phosphatase 1B	1	321	A	None	None
+P18031	1	321	6b90	Multiconformer model of apo WT PTP1B with glycerol at 100 K (ALTERNATIVE REFINEMENT OF PDB 1SUG showing conformational heterogeneity)	1	321	A	None	None
+P18031	1	321	5qfa	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000752b	1	321	A	1	None
+P18031	1	321	5qfb	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_PKOOA000283c	1	321	A	1	None
+P18031	1	321	5qfd	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000505a	1	321	A	1	None
+P18031	1	321	5qfe	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000509a	1	321	A	1	None
+P18031	1	321	5qff	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000515a	1	321	A	1	None
+P18031	1	321	5qfg	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000523a	1	321	A	1	None
+P18031	1	321	5qfh	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000525a	1	321	A	1	None
+P18031	1	321	1ony	Oxalyl-Aryl-Amino Benzoic Acid inhibitors of PTP1B, compound 17	1	321	A	None	None
+P18031	1	321	1pty	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH TWO PHOSPHOTYROSINE MOLECULES	1	321	A	None	None
+P18031	1	321	5qfl	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000206a	1	321	A	1	None
+P18031	1	321	5qfm	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000269a	1	321	A	1	None
+P18031	1	321	6cwv	Protein Tyrosine Phosphatase 1B A122S mutant	1	321	A	None	None
+P18031	1	321	5qfp	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000293a	1	321	A	1	None
+P18031	1	321	5qfr	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000497a	1	321	A	1	None
+P18031	1	321	5qfs	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000293a	1	321	A	1	None
+P18031	1	321	5qft	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000683b	1	321	A	1	None
+P18031	1	321	5qfu	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000487a	1	321	A	1	None
+P18031	1	321	5qfv	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000491a	1	321	A	1	None
+P18031	1	321	5qfx	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000953b	1	321	A	1	None
+P18031	1	321	5qfy	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000396a	1	321	A	1	None
+P18031	1	321	5qfz	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000711a	1	321	A	1	None
+P18031	1	321	5qei	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_PKTTA024495b	1	321	A	1	None
+P18031	1	321	5qg5	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000811b	1	321	A	1	None
+P18031	1	321	5qg4	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000666a	1	321	A	1	None
+P18031	1	321	3i80	Protein Tyrosine Phosphatase 1B - Transition state analog for the second catalytic step	1	321	A	None	None
+P18031	1	321	3qkp	Protein Tyrosine Phosphatase 1B - Apo W179F mutant with open WPD-loop	1	321	A	1	None
+P18031	1	321	1onz	Oxalyl-aryl-Amino Benzoic acid Inhibitors of PTP1B, compound 8b	1	321	A	None	None
+P18031	1	321	5qg9	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000595a	1	321	A	1	None
+P18031	1	321	5qel	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000675b	1	321	A	1	None
+P18031	1	321	5qg8	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000555a	1	321	A	1	None
+P18031	1	321	5t19	Structure of PTP1B complexed with N-(3'-(1,1-dioxido-4-oxo-1,2,5-thiadiazolidin-2-yl)-4'-methyl-[1,1'-biphenyl]-4-yl)acetamide	3	323	A	1	None
+P18031	1	321	5qf0	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000216b	1	321	A	1	None
+P18031	1	321	5qf1	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000272b	1	321	A	1	None
+P18031	1	321	5qf2	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000187a	1	321	A	1	None
+P18031	1	321	5qf3	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000194a	1	321	A	1	None
+P18031	1	321	5qf4	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000144a	1	321	A	1	None
+P18031	1	321	5qf5	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA001440b	1	321	A	1	None
+P18031	1	321	1nny	Potent, Selective Protein Tyrosine Phosphatase 1B Inhibitor Compound 23 Using a Linked-Fragment Strategy	1	321	A	None	None
+P18031	1	321	5qf8	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000114a	1	321	A	1	None
+P18031	1	321	5qf9	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000242a	1	321	A	1	None
+P18031	1	321	5qec	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000270a	1	321	A	1	None
+P18031	1	321	1l8g	Crystal structure of PTP1B complexed with 7-(1,1-Dioxo-1H-benzo[d]isothiazol-3-yloxymethyl)-2-(oxalyl-amino)-4,7-dihydro-5H-thieno[2,3-c]pyran-3-carboxylic acid	1	321	A	None	None
+P18031	1	321	1wax	Protein tyrosine phosphatase 1B with active site inhibitor	1	321	A	None	None
+P18031	1	321	1pyn	DUAL-SITE POTENT, SELECTIVE PROTEIN TYROSINE PHOSPHATASE 1B INHIBITOR USING A LINKED FRAGMENT STRATEGY AND A MALONATE HEAD ON THE FIRST SITE	1	321	A	None	None
+P18031	1	321	5qdn	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000163a	1	321	A	1	None
+P18031	1	321	5qey	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000708a	1	321	A	1	None
+P18031	1	321	5qdm	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000074a	1	321	A	1	None
+P18031	1	321	5qdj	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000211a	1	321	A	1	None
+P18031	1	321	5qdk	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000069a	1	321	A	1	None
+P18031	1	321	5qdh	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000004a	1	321	A	1	None
+P18031	1	321	5qex	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000123a	1	321	A	1	None
+P18031	1	321	5qdf	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000295a	1	321	A	1	None
+P18031	1	321	5qdg	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000294a	1	321	A	1	None
+P18031	1	321	5qde	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000740a	1	321	A	1	None
+P18031	1	321	1nl9	Potent, Selective Protein Tyrosine Phosphatase 1B Inhibitor Compound 12 Using a Linked-Fragment Strategy	1	321	A	None	None
+P18031	1	321	5qg3	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000662a	1	321	A	1	None
+P18031	1	321	5qg1	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000619a	1	321	A	1	None
+P18031	1	321	5qg0	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000280c	1	321	A	1	None
+P18031	1	321	5qdz	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000435a	1	321	A	1	None
+P18031	1	321	5qg6	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA001176b	1	321	A	1	None
+P18031	1	321	5qdx	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000484a	1	321	A	1	None
+P18031	1	321	5qdy	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000599c	1	321	A	1	None
+P18031	1	321	5qdv	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000574a	1	321	A	1	None
+P18031	1	321	5qdw	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000465a	1	321	A	1	None
+P18031	1	321	5qdt	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000475a	1	321	A	1	None
+P18031	1	321	5qdu	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000466a	1	321	A	1	None
+P18031	1	321	5qdr	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000089a	1	321	A	1	None
+P18031	1	321	5qds	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000108a	1	321	A	1	None
+P18031	1	321	5qdp	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000207a	1	321	A	1	None
+P18031	1	321	5qdq	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000847b	1	321	A	1	None
+P18031	1	321	1oev	Oxidation state of protein tyrosine phosphatase 1B	1	321	A	None	None
+P18031	1	321	1oeu	Oxidation state of protein tyrosine phosphatase 1B	1	321	A	None	None
+P18031	1	321	1oet	Oxidation state of protein tyrosine phosphatase 1B	1	321	A	None	None
+P18031	1	321	1oes	Oxidation state of protein tyrosine phosphatase 1B	1	321	A	None	None
+P18031	1	321	5qf6	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000281b	1	321	A	1	None
+P18031	1	321	5qfc	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000140a	1	321	A	1	None
+P18031	1	321	2hnp	CRYSTAL STRUCTURE OF HUMAN PROTEIN TYROSINE PHOSPHATASE 1B	1	321	A	None	None
+P18031	1	321	5qg7	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000611a	1	321	A	1	None
+P18031	1	321	1nz7	POTENT, SELECTIVE INHIBITORS OF PROTEIN TYROSINE PHOSPHATASE 1B USING A SECOND PHOSPHOTYROSINE BINDING SITE, complexed with compound 19.	1	321	A	None	None
+P18031	1	321	1oeo	PTP1B with the catalytic cysteine oxidized to sulfonic acid	1	321	X	None	None
+P18031	1	321	1oem	PTP1B with the catalytic cysteine oxidized to a sulfenyl-amide bond	1	321	X	None	None
+P18031	1	321	1ptv	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH PHOSPHOTYROSINE	1	321	A	None	None
+P18031	1	321	5qgc	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000650a	1	321	A	1	None
+P18031	1	321	5qgb	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000628a	1	321	A	1	None
+P18031	1	321	5qga	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000540a	1	321	A	1	None
+P18031	1	321	1ptu	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH PHOSPHOTYROSINE-CONTAINING HEXA-PEPTIDE (DADEPYL-NH2)	1	321	A	None	None
+P18031	1	321	5qge	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000619a	1	321	A	1	None
+P18031	1	321	5qgd	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000611a	1	321	A	1	None
+P18031	1	321	5qeu	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000149a	1	321	A	1	None
+P18031	1	321	1ptt	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH PHOSPHOTYROSINE-CONTAINING TETRA-PEPTIDE (AC-DEPYL-NH2)	1	321	A	None	None
+P18031	1	321	5qet	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000017a	1	321	A	1	None
+P18031	1	321	2cni	Structural Insights into the Design of Nonpeptidic Isothiazolidinone- Containing Inhibitors of Protein Tyrosine Phosphatase 1B	1	321	A	1	None
+P18031	1	321	5qfi	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000531a	1	321	A	1	None
+P18031	1	321	5qgf	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000539a	1	321	A	1	None
+P18031	1	321	3qkq	Protein Tyrosine Phosphatase 1B - W179F mutant bound with vanadate	1	321	A	None	None
+P18031	1	321	3d9c	Crystal Structure PTP1B complex with aryl Seleninic acid	1	321	A	None	None
+P18031	1	321	2bge	Structure-based design of Protein Tyrosine Phosphatase-1B Inhibitors	1	321	A	1	None
+P18031	1	321	2bgd	Structure-based design of Protein Tyrosine Phosphatase-1B Inhibitors	1	321	A	1	None
+P18031	1	321	5qfn	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000324a	1	321	A	1	None
+P18031	1	321	5qfo	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000644b	1	321	A	1	None
+P18031	1	321	5qfq	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000491a	1	321	A	1	None
+P18031	1	321	1q1m	A Highly Efficient Approach to a Selective and Cell Active PTP1B inhibitors	1	321	A	None	None
+P18031	1	321	5qfj	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000814b	1	321	A	1	None
+P18031	1	321	5qe9	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000232a	1	321	A	1	None
+P18031	1	321	1ph0	Non-carboxylic Acid-Containing Inhibitor of PTP1B Targeting the Second Phosphotyrosine Site	1	321	A	None	None
+P18031	1	321	3zmp	Src-derived peptide inhibitor complex of PTP1B	9	329	A	None	None
+P18031	1	321	3zmp	Src-derived peptide inhibitor complex of PTP1B	9	329	B	None	None
+P18031	1	321	5qe0	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000648a	1	321	A	1	None
+P18031	1	321	5qe3	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000449a	1	321	A	1	None
+P18031	1	321	5qe2	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000398a	1	321	A	1	None
+P18031	1	321	5qe5	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000632a	1	321	A	1	None
+P18031	1	321	5qe4	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000514a	1	321	A	1	None
+P18031	1	321	5qe7	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000601a	1	321	A	1	None
+P18031	1	321	5qe6	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000608a	1	321	A	1	None
+P18031	1	321	1xbo	PTP1B complexed with Isoxazole Carboxylic Acid	1	321	A	None	None
+P18031	1	321	3eax	Crystal structure PTP1B complex with small molecule compound LZP-6	1	321	A	None	None
+P18031	1	321	5qfw	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000497a	1	321	A	1	None
+P18031	1	321	6bai	Multiconformer model of apo K197C PTP1B at 100 K	1	321	A	None	None
+P18031	1	321	5qe1	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000645a	1	321	A	1	None
+P18031	1	321	5qf7	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000951b	1	321	A	1	None
+P18031	1	321	1aax	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH TWO BIS(PARA-PHOSPHOPHENYL)METHANE (BPPM) MOLECULES	1	321	A	None	None
+P18031	1	321	1bzc	HUMAN PTP1B CATALYTIC DOMAIN COMPLEXED WITH TPI	1	321	A	None	None
+P18031	1	321	1pxh	Crystal structure of protein tyrosine phosphatase 1B with potent and selective bidentate inhibitor compound 2	1	321	A	None	None
+P18031	1	321	5qek	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOZE000092b	1	321	A	1	None
+P18031	1	321	5qej	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA001247b	1	321	A	1	None
+P18031	1	321	5qem	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000217b	1	321	A	1	None
+P18031	1	321	2cm7	Structural Basis for Inhibition of Protein Tyrosine Phosphatase 1B by Isothiazolidinone Heterocyclic Phosphonate Mimetics	1	321	A	None	None
+P18031	1	321	5qeo	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000657b	1	321	A	1	None
+P18031	1	321	5qen	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000955b	1	321	A	1	None
+P18031	1	321	5qea	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000733a	1	321	A	1	None
+P18031	1	321	2cm8	Structural Basis for Inhibition of Protein Tyrosine Phosphatase 1B by Isothiazolidinone Heterocyclic Phosphonate Mimetics	1	321	A	None	None
+P18031	1	321	5qeb	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000639a	1	321	A	1	None
+P18031	1	321	5qee	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000240a	1	321	A	1	None
+P18031	1	321	5qed	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000538a	1	321	A	1	None
+P18031	1	321	5qeg	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000278a	1	321	A	1	None
+P18031	1	321	5qef	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000134a	1	321	A	1	None
+P18031	1	321	2cng	Structural Insights into the Design of Nonpeptidic Isothiazolidinone- Containing Inhibitors of Protein Tyrosine Phosphatase 1B	1	321	A	None	None
+P18031	1	321	2cnf	Structural Insights into the Design of Nonpeptidic Isothiazolidinone- Containing Inhibitors of Protein Tyrosine Phosphatase 1B	1	321	A	None	None
+P18031	1	321	2vey	CRYSTAL STRUCUTRE OF PROTEIN TYROSINE PHOSPHATASE 1B IN COMPLEX WITH AN ISOTHIAZOLIDINONE-CONTAINING INHIBITOR	1	321	A	None	None
+P18031	1	321	5qez	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000713b	1	321	A	1	None
+P18031	1	321	5qev	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000603b	1	321	A	1	None
+P18031	1	321	5qfk	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOOA000509a	1	321	A	1	None
+P18031	1	321	5qeq	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000245b	1	321	A	1	None
+P18031	1	321	5qep	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_XST00000692b	1	321	A	1	None
+P18031	1	321	5qes	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOMB000141a	1	321	A	1	None
+P18031	1	321	5qer	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000847b	1	321	A	1	None
+P18031	1	321	2vew	CRYSTAL STRUCUTRE OF PROTEIN TYROSINE PHOSPHATASE 1B IN COMPLEX WITH AN ISOTHIAZOLIDINONE-CONTAINING INHIBITOR	1	321	A	None	None
+P18031	1	321	2vev	CRYSTAL STRUCUTRE OF PROTEIN TYROSINE PHOSPHATASE 1B IN COMPLEX WITH AN ISOTHIAZOLIDINONE-CONTAINING INHIBITOR	1	321	A	None	None
+P18031	1	321	5qew	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMSOA000470b	1	321	A	1	None
+P18031	1	321	2cnh	Structural Insights into the Design of Nonpeptidic Isothiazolidinone- Containing Inhibitors of Protein Tyrosine Phosphatase 1B	1	321	A	None	None
+P18031	1	321	6b8x	Multiconformer model of apo WT PTP1B with glycerol at 278 K	1	321	A	1	None
+P18031	1	321	6b8z	Multiconformer model of WT PTP1B with BB3 at 273 K	1	321	A	1	None
+P18031	1	321	6b8t	Multiconformer model of apo WT PTP1B with glycerol at 240 K	1	321	A	1	None
+P18031	1	321	3zmq	Src-derived mutant peptide inhibitor complex of PTP1B	9	329	A	None	None
+P18031	1	321	1qxk	Monoacid-Based, Cell Permeable, Selective Inhibitors of Protein Tyrosine Phosphatase 1B	1	321	A	None	None
+P18031	1	321	5qeh	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000323a	1	321	A	1	None
+P18031	1	321	3eb1	Crystal structure PTP1B complex with small molecule inhibitor LZP-25	1	321	A	None	None
+P18031	1	321	2hnq	CRYSTAL STRUCTURE OF HUMAN PROTEIN TYROSINE PHOSPHATASE 1B	1	321	A	None	None
+P18031	1	321	6b8e	Multiconformer model of apo WT PTP1B with glycerol at 180 K	1	321	A	None	None
+P18031	1	321	3i7z	Protein Tyrosine Phosphatase 1B - Transition state analog for the first catalytic step	1	321	A	None	None
+P18031	1	321	5qdo	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOCR000171b	1	321	A	1	None
+P18031	1	321	2vex	CRYSTAL STRUCUTRE OF PROTEIN TYROSINE PHOSPHATASE 1B IN COMPLEX WITH AN ISOTHIAZOLIDINONE-CONTAINING INHIBITOR	1	321	A	None	None
+P18031	1	321	5qdl	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000072a	1	321	A	1	None
+P18031	1	321	5qg2	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000275a	1	321	A	1	None
+P18031	1	321	5qdi	PanDDA analysis group deposition -- Crystal structure of PTP1B in complex with compound_FMOPL000157a	1	321	A	1	None
+P18031	1	321	6cwu	Protein Tyrosine Phosphatase 1B F135Y mutant	1	321	A	None	None
+P18031	1	321	1no6	Potent, Selective Protein Tyrosine Phosphatase 1B Inhibitor Compound 5 Using a Linked-Fragment Strategy	1	321	A	None	None
+P18031	1	321	1eeo	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH ACETYL-E-L-E-F-PTYR-M-D-Y-E-NH2	1	321	A	None	None
+P18031	1	321	1een	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH ACETYL-D-A-D-BPA-PTYR-L-I-P-Q-Q-G	1	321	A	1	None
+P18031	1	320	3zv2	Human protein-tyrosine phosphatase 1b C215A, S216A mutant	1	320	A	None	None
+P18031	1	320	4i8n	CRYSTAL STRUCTURE of PROTEIN TYROSINE PHOSPHATASE 1B IN COMPLEX WITH AN INHIBITOR [(4-{(2S)-2-(1,3-BENZOXAZOL-2-YL)-2-[(4-FLUOROPHENYL)SULFAMOYL]ETHYL}PHENYL)AMINO](OXO)ACETIC ACID	35	354	A	None	None
+P18031	1	301	5ka7	Protein Tyrosine Phosphatase 1B T178A mutant in complex with TCS401, closed state	6	306	A	1	None
+P18031	1	301	5k9v	Protein Tyrosine Phosphatase 1B (1-301), open state	6	306	A	None	None
+P18031	1	301	5ka4	Protein Tyrosine Phosphatase 1B T178A mutant, open state	6	306	A	None	None
+P18031	1	301	5k9w	Protein Tyrosine Phosphatase 1B (1-301) in complex with TCS401, closed state	6	306	A	1	None
+P18031	1	301	5ka3	Protein Tyrosine Phosphatase 1B YAYA (Y152A, Y153A) mutant in complex with TCS401, closed state	6	306	A	None	None
+P18031	1	301	5ka2	Protein Tyrosine Phosphatase 1B YAYA (Y152A, Y153A) mutant, open state	6	306	A	None	None
+P18031	1	301	5kac	Protein Tyrosine Phosphatase 1B P185G mutant, open state	6	306	A	None	None
+P18031	1	301	5kad	Protein Tyrosine Phosphatase 1B N193A mutant in complex with TCS401, closed state	6	306	A	1	None
+P18031	1	301	5kad	Protein Tyrosine Phosphatase 1B N193A mutant in complex with TCS401, closed state	6	306	B	1	None
+P18031	1	301	5ka9	Protein Tyrosine Phosphatase 1B L192A mutant in complex with TCS401, open state	6	306	A	1	None
+P18031	1	301	5ka8	Protein Tyrosine Phosphatase 1B L192A mutant, open state	6	306	A	1	None
+P18031	1	299	2b07	Crystal structure of PTP1B with Tricyclic Thiophene inhibitor.	1	299	A	None	None
+P18031	1	299	2nt7	Crystal structure of PTP1B-inhibitor complex	1	299	A	None	None
+P18031	1	299	2zn7	CRYSTAL STRUCTURES OF PTP1B-Inhibitor Complexes	1	299	A	None	None
+P18031	1	299	2azr	Crystal structure of PTP1B with Bicyclic Thiophene inhibitor	1	299	A	None	None
+P18031	1	299	4qah	The second sphere residue T263 is important for function and activity of PTP1B through modulating WPD loop	1	299	A	1	299
+P18031	1	299	2zmm	Crystal structure of PTP1B-inhibitor complex	1	299	A	None	None
+P18031	1	299	2h4k	Crystal structure of PTP1B with a monocyclic thiophene inhibitor	1	299	A	None	None
+P18031	1	299	2qbq	Crystal structure of ptp1b-inhibitor complex	1	299	A	None	None
+P18031	1	299	2qbp	Crystal structure of ptp1b-inhibitor complex	1	299	A	None	None
+P18031	1	299	2qbs	Crystal structure of ptp1b-inhibitor complex	1	299	A	None	None
+P18031	1	299	2qbr	Crystal structure of ptp1b-inhibitor complex	1	299	A	None	299
+P18031	1	299	2h4g	Crystal structure of PTP1B with monocyclic thiophene inhibitor	1	299	A	None	None
+P18031	1	299	2nta	Crystal Structure of PTP1B-inhibitor Complex	1	299	A	None	None
+P18031	1	299	2hb1	Crystal Structure of PTP1B with Monocyclic Thiophene Inhibitor	1	299	A	None	None
+P18031	1	299	4qbw	The second sphere residue T263 is important for function and activity of PTP1B through modulating WPD loop	1	299	A	1	299
+P18031	1	299	4qap	The second sphere residue T263 is important for function and activity of PTP1B through modulating WPD loop	1	299	A	1	299
+P18031	1	298	2b4s	Crystal structure of a complex between PTP1B and the insulin receptor tyrosine kinase	1	298	A	None	None
+P18031	1	298	2b4s	Crystal structure of a complex between PTP1B and the insulin receptor tyrosine kinase	1	298	C	None	None
+P18031	1	298	3sme	Structure of PTP1B inactivated by H2O2/bicarbonate	3	300	A	1	None
+P18031	1	298	1c88	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH 2-(OXALYL-AMINO)-4,5,6,7-TETRAHYDRO-THIENO[2,3-C]PYRIDINE-3-CARBOXYLIC ACID	1	298	A	None	298
+P18031	1	298	1gfy	RESIDUE 259 IS A KEY DETERMINANT OF SUBSTRATE SPECIFICITY OF PROTEIN-TYROSINE PHOSPHATASE 1B AND ALPHA	1	298	A	None	298
+P18031	1	298	1bzh	Cyclic peptide inhibitor of human PTP1B	1	298	A	None	298
+P18031	1	298	2fjm	The structure of phosphotyrosine phosphatase 1B in complex with compound 2	13	310	B	501	None
+P18031	1	298	2fjm	The structure of phosphotyrosine phosphatase 1B in complex with compound 2	13	310	A	501	None
+P18031	1	298	1q6m	THE STRUCTURE OF PHOSPHOTYROSINE PHOSPHATASE 1B IN COMPLEX WITH COMPOUND 3	13	310	A	1	None
+P18031	1	298	1q6n	THE STRUCTURE OF PHOSPHOTYROSINE PHOSPHATASE 1B IN COMPLEX WITH COMPOUND 4	13	310	B	1001	None
+P18031	1	298	1q6n	THE STRUCTURE OF PHOSPHOTYROSINE PHOSPHATASE 1B IN COMPLEX WITH COMPOUND 4	13	310	A	501	None
+P18031	1	298	1c85	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH 2-(OXALYL-AMINO)-BENZOIC ACID	1	298	A	None	298
+P18031	1	298	1c86	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B (R47V,D48N) COMPLEXED WITH 2-(OXALYL-AMINO-4,7-DIHYDRO-5H-THIENO[2,3-C]PYRAN-3-CARBOXYLIC ACID	1	298	A	None	298
+P18031	1	298	1q6j	THE STRUCTURE OF PHOSPHOTYROSINE PHOSPHATASE 1B IN COMPLEX WITH COMPOUND 2	13	310	A	1	None
+P18031	1	298	1i57	CRYSTAL STRUCTURE OF APO HUMAN PTP1B (C215S) MUTANT	13	310	A	None	None
+P18031	1	298	4zrt	PTP1BC215S bound to Nephrin peptide substrate	1	298	A	None	298
+P18031	1	298	1g1g	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH A MONO-PHOSPHORYLATED PEPTIDE (ETDY(PTR)RKGGKGLL) FROM THE INSULIN RECEPTOR KINASE	1	298	A	1	298
+P18031	1	298	1g1f	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH A TRI-PHOSPHORYLATED PEPTIDE (RDI(PTR)ETD(PTR)(PTR)RK) FROM THE INSULIN RECEPTOR KINASE	1	298	A	None	298
+P18031	1	298	1c87	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH 2-(OXALYL-AMINO-4,7-DIHYDRO-5H-THIENO[2,3-C]PYRAN-3-CARBOXYLIC ACID	1	298	A	None	298
+P18031	1	298	2f70	Protein tyrosine phosphatase 1B with sulfamic acid inhibitors	1	298	A	None	298
+P18031	1	298	2f6t	Protein tyrosine phosphatase 1B with sulfamic acid inhibitors	1	298	A	None	298
+P18031	1	298	1g1h	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH A BIS-PHOSPHORYLATED PEPTIDE (ETD(PTR)(PTR)RKGGKGLL) FROM THE INSULIN RECEPTOR KINASE	1	298	A	1	298
+P18031	1	298	6ntp	PTP1B Domain of PTP1B-LOV2 Chimera	1	298	A	None	None
+P18031	1	298	1pa1	Crystal structure of the C215D mutant of protein tyrosine phosphatase 1B	13	310	A	501	798
+P18031	1	298	1t49	Allosteric Inhibition of Protein Tyrosine Phosphatase 1B	1	298	A	1	None
+P18031	1	298	2f6z	Protein tyrosine phosphatase 1B with sulfamic acid inhibitors	1	298	A	None	298
+P18031	1	298	1c83	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH 6-(OXALYL-AMINO)-1H-INDOLE-5-CARBOXYLIC ACID	1	298	A	None	298
+P18031	1	298	2f6y	Protein tyrosine phosphatase 1B with sulfamic acid inhibitors	1	298	A	None	298
+P18031	1	298	2f6f	The structure of the S295F mutant of human PTP1B	5	302	A	1	298
+P18031	1	298	1g7f	HUMAN PTP1B CATALYTIC DOMAIN COMPLEXED WITH PNU177496	1	298	A	None	298
+P18031	1	298	1jf7	HUMAN PTP1B CATALYTIC DOMAIN COMPLEXED WITH PNU177836	1	298	A	None	None
+P18031	1	298	1jf7	HUMAN PTP1B CATALYTIC DOMAIN COMPLEXED WITH PNU177836	1	298	B	None	None
+P18031	1	298	1t48	Allosteric Inhibition of Protein Tyrosine Phosphatase 1B	1	298	A	1	298
+P18031	1	298	1c84	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH 3-(OXALYL-AMINO)-NAPHTHALENE-2-CARBOXLIC ACID	1	298	A	None	298
+P18031	1	298	1nwe	Ptp1B R47C Modified at C47 with N-[4-(2-{2-[3-(2-Bromo-acetylamino)-propionylamino]-3-hydroxy-propionylamino}-ethyl)-phenyl]-oxalamic acid	1	298	A	None	None
+P18031	1	298	1nwl	Crystal structure of the PTP1B complexed with SP7343-SP7964, a pTyr mimetic	1	298	A	1	None
+P18031	1	298	1kav	Human Tyrosine Phosphatase 1B Complexed with an Inhibitor	1	298	A	None	298
+P18031	1	298	1q6t	THE STRUCTURE OF PHOSPHOTYROSINE PHOSPHATASE 1B IN COMPLEX WITH COMPOUND 11	13	310	B	1001	None
+P18031	1	298	1q6t	THE STRUCTURE OF PHOSPHOTYROSINE PHOSPHATASE 1B IN COMPLEX WITH COMPOUND 11	13	310	A	501	None
+P18031	1	298	1g7g	HUMAN PTP1B CATALYTIC DOMAIN COMPLEXES WITH PNU179326	1	298	A	None	298
+P18031	1	298	2f6v	Protein tyrosine phosphatase 1B with sulfamic acid inhibitors	1	298	A	None	298
+P18031	1	298	1q6p	THE STRUCTURE OF PHOSPHOTYROSINE PHOSPHATASE 1B IN COMPLEX WITH COMPOUND 6	13	310	B	1001	None
+P18031	1	298	1q6p	THE STRUCTURE OF PHOSPHOTYROSINE PHOSPHATASE 1B IN COMPLEX WITH COMPOUND 6	13	310	A	501	None
+P18031	1	298	1q6s	THE STRUCTURE OF PHOSPHOTYROSINE PHOSPHATASE 1B IN COMPLEX WITH COMPOUND 9	13	310	B	1001	None
+P18031	1	298	1q6s	THE STRUCTURE OF PHOSPHOTYROSINE PHOSPHATASE 1B IN COMPLEX WITH COMPOUND 9	13	310	A	501	None
+P18031	1	298	2f6w	Protein tyrosine phosphatase 1B with sulfamic acid inhibitors	1	298	A	None	298
+P18031	1	298	1kak	Human Tyrosine Phosphatase 1B Complexed with an Inhibitor	1	298	A	None	298
+P18031	1	298	2fjn	The structure of phosphotyrosine phosphatase 1B in complex with compound 2	13	310	B	501	None
+P18031	1	298	2fjn	The structure of phosphotyrosine phosphatase 1B in complex with compound 2	13	310	A	501	None
+P18031	1	298	2f71	Protein tyrosine phosphatase 1B with sulfamic acid inhibitors	1	298	A	None	298
+P18031	1	298	1ecv	CRYSTAL STRUCTURE OF PROTEIN TYROSINE PHOSPHATASE 1B COMPLEXED WITH 5-IODO-2-(OXALYL-AMINO)-BENZOIC ACID	1	298	A	None	298
+P18031	1	298	4qbe	The second sphere residue T263 is important for function and activity of PTP1B through modulating WPD loop	1	298	A	1	298
+P18031	1	298	1t4j	Allosteric Inhibition of Protein Tyrosine Phosphatase 1B	1	298	A	1	None
+P18031	1	284	5kab	Protein Tyrosine Phosphatase 1B Delta helix 7, P185G mutant in complex with TCS401, open state	6	289	A	1	None
+P18031	1	284	5ka0	Protein Tyrosine Phosphatase 1B Delta helix 7, open state	6	289	A	1	None
+P18031	1	284	5ka1	Protein Tyrosine Phosphatase 1B Delta helix 7 mutant in complex with TCS401, closed state	6	289	A	1	None
+P18031	1	284	5kaa	Protein Tyrosine Phosphatase 1B Delta helix 7, P185G mutant, open state	6	289	A	1	None
+P18031	1	283	1lqf	Structure of PTP1b in Complex with a Peptidic Bisphosphonate Inhibitor	13	295	B	501	783
+P18031	1	283	1lqf	Structure of PTP1b in Complex with a Peptidic Bisphosphonate Inhibitor	13	295	C	501	783
+P18031	1	283	1lqf	Structure of PTP1b in Complex with a Peptidic Bisphosphonate Inhibitor	13	295	D	501	783
+P18031	1	283	1lqf	Structure of PTP1b in Complex with a Peptidic Bisphosphonate Inhibitor	13	295	A	501	783
+P18031	1	283	3cwe	PTP1B in complex with a phosphonic acid inhibitor	8	290	A	501	783
+P18031	1	282	3eu0	Crystal structure of the S-nitrosylated Cys215 of PTP1B	7	288	A	None	282
+P18031	2	298	6phs	Protein Tyrosine Phosphatase 1B (1-301), P185A mutant, vanadate bound state	1	297	A	2	298
+P18031	2	298	2cm3	Structure of Protein Tyrosine Phosphatase 1B (C2)	8	304	A	None	None
+P18031	2	298	2cm3	Structure of Protein Tyrosine Phosphatase 1B (C2)	8	304	B	None	None
+P18031	2	298	2cmc	Structural Basis for Inhibition of Protein Tyrosine Phosphatase 1B by Isothiazolidinone Heterocyclic Phosphonate Mimetics	8	304	A	2	None
+P18031	2	298	1bzj	Human ptp1b complexed with tpicooh	1	297	A	2	298
+P18031	2	298	6pfw	Protein Tyrosine Phosphatase 1B (1-301), T177A mutant, apo state	1	297	A	2	298
+P18031	2	298	6pha	Protein Tyrosine Phosphatase 1B (1-301), F182A mutant, vanadate bound state	1	297	A	2	298
+P18031	2	298	3a5k	Crystal structure of protein-tyrosine phosphatase 1B	8	304	A	None	None
+P18031	2	298	2cne	Structural Insights into the Design of Nonpeptidic Isothiazolidinone- Containing Inhibitors of Protein Tyrosine Phosphatase 1B	8	304	A	2	None
+P18031	2	298	6olq	Protein Tyrosine Phosphatase 1B (1-301), P188A mutant, apo state	1	297	A	2	298
+P18031	2	298	6pm8	Protein Tyrosine Phosphatase 1B (1-301), P180A mutant, vanadate bound state	1	297	A	2	298
+P18031	2	298	6omy	Protein Tyrosine Phosphatase 1B (1-301), P180A mutant, apo state	1	297	A	2	298
+P18031	2	298	2cmb	Structural Basis for Inhibition of Protein Tyrosine Phosphatase 1B by Isothiazolidinone Heterocyclic Phosphonate Mimetics	8	304	A	2	None
+P18031	2	297	6olv	Protein Tyrosine Phosphatase 1B (1-301), P185A mutant, apo state	1	296	A	2	None
+P18031	2	297	6ol4	Protein Tyrosine Phosphatase 1B (1-301), F182A mutant, apo state	1	296	A	2	297
+P18031	2	299	6pgt	Protein Tyrosine Phosphatase 1B (1-301), T177A mutant, vanadate bound state	1	298	A	2	299
+P18031	2	321	4bjo	Nitrate in the active site of PTP1b is a putative mimetic of the transition state	19	338	B	2	None
+P18031	2	321	4bjo	Nitrate in the active site of PTP1b is a putative mimetic of the transition state	19	338	A	2	None
+P18031	2	321	2cma	Structural Basis for Inhibition of Protein Tyrosine Phosphatase 1B by Isothiazolidinone Heterocyclic Phosphonate Mimetics	8	327	A	None	None
+P18031	2	301	4y14	Structure of protein tyrosine phosphatase 1B complexed with inhibitor (PTP1B:CPT157633)	7	306	B	2	301
+P18031	2	301	4y14	Structure of protein tyrosine phosphatase 1B complexed with inhibitor (PTP1B:CPT157633)	7	306	A	2	None
+P18031	2	321	3a5j	Crystal structure of protein-tyrosine phosphatase 1B	8	327	A	2	None
+P18031	2	298	2cm2	Structure of Protein Tyrosine Phosphatase 1B (P212121)	8	304	A	2	None
+P18031	2	298	6pg0	Protein Tyrosine Phosphatase 1B (1-301), P188A mutant, vanadate bound state	1	297	A	2	298
+

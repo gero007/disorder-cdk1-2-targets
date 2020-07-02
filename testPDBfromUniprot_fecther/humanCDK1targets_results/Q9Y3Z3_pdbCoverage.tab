@@ -1,0 +1,255 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9Y3Z3	Deoxynucleoside triphosphate triphosphohydrolase SAMHD1	SAMH1_HUMAN	Homo sapiens	PF01966	HD	HD domain	164	319
+Q9Y3Z3	Deoxynucleoside triphosphate triphosphohydrolase SAMHD1	SAMH1_HUMAN	Homo sapiens	PF07647	SAM_2	SAM domain (Sterile alpha motif)	42	108
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#232 mappings in 232 PDB chains in 54 PDB entries
+Q9Y3Z3	23	118	2e8o	Solution structure of the N-terminal SAM-domain of the SAM domain and HD domain containing protein 1 (Dendritic cell-derived IFNG-induced protein) (DCIP) (Monocyte protein 5) (MOP-5)	8	103	A	8	103
+Q9Y3Z3	41	583	5ao0	Crystal structure of human SAMHD1 (amino acid residues 41-583) bound to ddGTP	23	565	A	None	None
+Q9Y3Z3	41	583	5ao0	Crystal structure of human SAMHD1 (amino acid residues 41-583) bound to ddGTP	23	565	B	None	583
+Q9Y3Z3	109	626	6xu1	Crystal structure of tetrameric human H215A-SAMHD1 (residues 109-626) with GTP, dAMPNPP and Mg	3	520	D	None	None
+Q9Y3Z3	109	626	6xu1	Crystal structure of tetrameric human H215A-SAMHD1 (residues 109-626) with GTP, dAMPNPP and Mg	3	520	C	None	None
+Q9Y3Z3	109	626	6xu1	Crystal structure of tetrameric human H215A-SAMHD1 (residues 109-626) with GTP, dAMPNPP and Mg	3	520	H	None	None
+Q9Y3Z3	109	626	6xu1	Crystal structure of tetrameric human H215A-SAMHD1 (residues 109-626) with GTP, dAMPNPP and Mg	3	520	A	None	None
+Q9Y3Z3	109	626	6xu1	Crystal structure of tetrameric human H215A-SAMHD1 (residues 109-626) with GTP, dAMPNPP and Mg	3	520	F	None	None
+Q9Y3Z3	109	626	6xu1	Crystal structure of tetrameric human H215A-SAMHD1 (residues 109-626) with GTP, dAMPNPP and Mg	3	520	E	None	None
+Q9Y3Z3	109	626	6xu1	Crystal structure of tetrameric human H215A-SAMHD1 (residues 109-626) with GTP, dAMPNPP and Mg	3	520	B	None	None
+Q9Y3Z3	109	626	6xu1	Crystal structure of tetrameric human H215A-SAMHD1 (residues 109-626) with GTP, dAMPNPP and Mg	3	520	G	None	None
+Q9Y3Z3	109	626	6txf	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dAMPNPP and Mn	3	520	A	None	None
+Q9Y3Z3	109	626	6txf	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dAMPNPP and Mn	3	520	B	None	None
+Q9Y3Z3	109	626	4mz7	Structural insight into dGTP-dependent activation of tetrameric SAMHD1 deoxynucleoside triphosphate triphosphohydrolase	22	539	A	None	None
+Q9Y3Z3	109	626	4mz7	Structural insight into dGTP-dependent activation of tetrameric SAMHD1 deoxynucleoside triphosphate triphosphohydrolase	22	539	B	109	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	D	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	C	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	P	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	I	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	M	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	H	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	A	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	F	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	O	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	E	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	B	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	N	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	G	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	L	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	J	None	None
+Q9Y3Z3	109	626	6txa	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dGMPNPP and Mg	3	520	K	None	None
+Q9Y3Z3	109	626	6yom	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dATP, dCMPNPP, Mn and Mg	3	520	A	None	None
+Q9Y3Z3	109	626	6yom	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dATP, dCMPNPP, Mn and Mg	3	520	B	None	None
+Q9Y3Z3	109	626	6tx0	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dAMPNPP and Mg	3	520	A	None	None
+Q9Y3Z3	109	626	6tx0	Crystal structure of tetrameric human D137N-SAMHD1 (residues 109-626) with XTP, dAMPNPP and Mg	3	520	B	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	D	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	C	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	P	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	I	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	M	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	H	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	A	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	F	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	O	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	E	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	B	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	N	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	G	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	L	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	J	None	None
+Q9Y3Z3	109	626	6txe	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dTMPNPP and Mg	3	520	K	None	None
+Q9Y3Z3	109	626	4rxr	The structure of GTP-dCTP-bound SAMHD1	22	539	A	None	None
+Q9Y3Z3	109	626	4rxr	The structure of GTP-dCTP-bound SAMHD1	22	539	B	109	None
+Q9Y3Z3	109	626	4rxs	The structure of GTP-dTTP-bound SAMHD1	22	539	A	None	None
+Q9Y3Z3	109	626	4rxs	The structure of GTP-dTTP-bound SAMHD1	22	539	B	109	None
+Q9Y3Z3	109	626	4rxp	The structure of GTP-dATP-bound SAMHD1	22	539	A	None	None
+Q9Y3Z3	109	626	4rxp	The structure of GTP-dATP-bound SAMHD1	22	539	B	109	None
+Q9Y3Z3	109	626	4rxq	The structure of GTP-dUTP-bound SAMHD1	22	539	A	None	None
+Q9Y3Z3	109	626	4rxq	The structure of GTP-dUTP-bound SAMHD1	22	539	B	109	None
+Q9Y3Z3	109	626	4q7h	Crystal structure of SAMHD1 catalytic core with GTP	9	526	A	None	None
+Q9Y3Z3	109	626	4q7h	Crystal structure of SAMHD1 catalytic core with GTP	9	526	D	None	None
+Q9Y3Z3	109	626	4q7h	Crystal structure of SAMHD1 catalytic core with GTP	9	526	B	None	None
+Q9Y3Z3	109	626	4q7h	Crystal structure of SAMHD1 catalytic core with GTP	9	526	C	None	None
+Q9Y3Z3	109	626	4rxo	The structure of GTP-bound SAMHD1	22	539	A	None	None
+Q9Y3Z3	109	626	4rxo	The structure of GTP-bound SAMHD1	22	539	D	None	None
+Q9Y3Z3	109	626	4rxo	The structure of GTP-bound SAMHD1	22	539	B	None	None
+Q9Y3Z3	109	626	4rxo	The structure of GTP-bound SAMHD1	22	539	C	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	D	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	C	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	P	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	I	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	M	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	H	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	A	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	F	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	O	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	E	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	B	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	N	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	G	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	L	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	J	None	None
+Q9Y3Z3	109	626	6txc	Crystal structure of tetrameric human wt-SAMHD1 (residues 109-626) with GTP, dATP, dCMPNPP and Mg	3	520	K	None	None
+Q9Y3Z3	113	626	4qfx	Crystal structure of the tetrameric dGTP/dATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	C	113	None
+Q9Y3Z3	113	626	4qfx	Crystal structure of the tetrameric dGTP/dATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	A	113	None
+Q9Y3Z3	113	626	4qfx	Crystal structure of the tetrameric dGTP/dATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	D	113	None
+Q9Y3Z3	113	626	4qfx	Crystal structure of the tetrameric dGTP/dATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	B	113	None
+Q9Y3Z3	113	626	6dwk	SAMHD1 Bound to Fludarabine-TP in the Catalytic Pocket	37	550	C	113	None
+Q9Y3Z3	113	626	6dwk	SAMHD1 Bound to Fludarabine-TP in the Catalytic Pocket	37	550	A	113	None
+Q9Y3Z3	113	626	6dwk	SAMHD1 Bound to Fludarabine-TP in the Catalytic Pocket	37	550	D	113	None
+Q9Y3Z3	113	626	6dwk	SAMHD1 Bound to Fludarabine-TP in the Catalytic Pocket	37	550	B	113	None
+Q9Y3Z3	113	626	6dwj	SAMHD1 Bound to Vidarabine-TP in the Catalytic Pocket	37	550	A	113	None
+Q9Y3Z3	113	626	6dwj	SAMHD1 Bound to Vidarabine-TP in the Catalytic Pocket	37	550	C	113	None
+Q9Y3Z3	113	626	6dwj	SAMHD1 Bound to Vidarabine-TP in the Catalytic Pocket	37	550	B	113	None
+Q9Y3Z3	113	626	6dwj	SAMHD1 Bound to Vidarabine-TP in the Catalytic Pocket	37	550	D	113	None
+Q9Y3Z3	113	626	4qg0	Crystal structure of the tetrameric dGTP/dUTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	C	113	None
+Q9Y3Z3	113	626	4qg0	Crystal structure of the tetrameric dGTP/dUTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	A	113	None
+Q9Y3Z3	113	626	4qg0	Crystal structure of the tetrameric dGTP/dUTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	D	113	None
+Q9Y3Z3	113	626	4qg0	Crystal structure of the tetrameric dGTP/dUTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	B	None	None
+Q9Y3Z3	113	626	6cm2	SAMHD1 HD domain bound to decitabine triphosphate	1	514	C	113	None
+Q9Y3Z3	113	626	6cm2	SAMHD1 HD domain bound to decitabine triphosphate	1	514	B	113	None
+Q9Y3Z3	113	626	6cm2	SAMHD1 HD domain bound to decitabine triphosphate	1	514	A	None	None
+Q9Y3Z3	113	626	6cm2	SAMHD1 HD domain bound to decitabine triphosphate	1	514	D	113	None
+Q9Y3Z3	113	626	4to6	Structure basis of cellular dNTP regulation, SAMHD1-dGTP-dATP-dTTP/dGTP complex	1	514	A	None	None
+Q9Y3Z3	113	626	4to6	Structure basis of cellular dNTP regulation, SAMHD1-dGTP-dATP-dTTP/dGTP complex	1	514	D	None	None
+Q9Y3Z3	113	626	4to6	Structure basis of cellular dNTP regulation, SAMHD1-dGTP-dATP-dTTP/dGTP complex	1	514	B	None	None
+Q9Y3Z3	113	626	4to6	Structure basis of cellular dNTP regulation, SAMHD1-dGTP-dATP-dTTP/dGTP complex	1	514	C	None	None
+Q9Y3Z3	113	626	6dwd	SAMHD1 Bound to Clofarabine-TP in the Catalytic Pocket and Allosteric Pocket	37	550	A	113	None
+Q9Y3Z3	113	626	6dwd	SAMHD1 Bound to Clofarabine-TP in the Catalytic Pocket and Allosteric Pocket	37	550	C	113	None
+Q9Y3Z3	113	626	6dwd	SAMHD1 Bound to Clofarabine-TP in the Catalytic Pocket and Allosteric Pocket	37	550	B	113	None
+Q9Y3Z3	113	626	6dwd	SAMHD1 Bound to Clofarabine-TP in the Catalytic Pocket and Allosteric Pocket	37	550	D	113	None
+Q9Y3Z3	113	626	4qg1	Crystal structure of the tetrameric GTP/dATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	C	113	None
+Q9Y3Z3	113	626	4qg1	Crystal structure of the tetrameric GTP/dATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	A	113	None
+Q9Y3Z3	113	626	4qg1	Crystal structure of the tetrameric GTP/dATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	D	113	None
+Q9Y3Z3	113	626	4qg1	Crystal structure of the tetrameric GTP/dATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	B	113	None
+Q9Y3Z3	113	626	4qg2	Crystal structure of the tetrameric GTP/dATP/ATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	C	113	None
+Q9Y3Z3	113	626	4qg2	Crystal structure of the tetrameric GTP/dATP/ATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	A	113	None
+Q9Y3Z3	113	626	4qg2	Crystal structure of the tetrameric GTP/dATP/ATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	D	113	None
+Q9Y3Z3	113	626	4qg2	Crystal structure of the tetrameric GTP/dATP/ATP-bound SAMHD1 (RN206) mutant catalytic core	37	550	B	113	None
+Q9Y3Z3	113	626	6dw3	SAMHD1 Bound to Cytarabine-TP in the Catalytic Pocket	37	550	C	None	None
+Q9Y3Z3	113	626	6dw3	SAMHD1 Bound to Cytarabine-TP in the Catalytic Pocket	37	550	B	None	None
+Q9Y3Z3	113	626	6dw3	SAMHD1 Bound to Cytarabine-TP in the Catalytic Pocket	37	550	A	None	None
+Q9Y3Z3	113	626	6dw3	SAMHD1 Bound to Cytarabine-TP in the Catalytic Pocket	37	550	D	113	None
+Q9Y3Z3	113	626	6dw7	SAMHD1 without Catalytic Nucleotides	37	550	C	113	None
+Q9Y3Z3	113	626	6dw7	SAMHD1 without Catalytic Nucleotides	37	550	A	113	None
+Q9Y3Z3	113	626	6dw7	SAMHD1 without Catalytic Nucleotides	37	550	D	113	None
+Q9Y3Z3	113	626	6dw7	SAMHD1 without Catalytic Nucleotides	37	550	B	113	None
+Q9Y3Z3	113	626	4qfz	Crystal structure of the tetrameric dGTP/dTTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	C	113	None
+Q9Y3Z3	113	626	4qfz	Crystal structure of the tetrameric dGTP/dTTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	A	113	None
+Q9Y3Z3	113	626	4qfz	Crystal structure of the tetrameric dGTP/dTTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	D	113	None
+Q9Y3Z3	113	626	4qfz	Crystal structure of the tetrameric dGTP/dTTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	B	113	None
+Q9Y3Z3	113	626	6dw5	SAMHD1 Bound to Gemcitabine-TP in the Catalytic Pocket	37	550	C	113	None
+Q9Y3Z3	113	626	6dw5	SAMHD1 Bound to Gemcitabine-TP in the Catalytic Pocket	37	550	A	113	None
+Q9Y3Z3	113	626	6dw5	SAMHD1 Bound to Gemcitabine-TP in the Catalytic Pocket	37	550	D	113	None
+Q9Y3Z3	113	626	6dw5	SAMHD1 Bound to Gemcitabine-TP in the Catalytic Pocket	37	550	B	None	None
+Q9Y3Z3	113	626	6dw4	SAMHD1 Bound to Cladribine-TP in the Catalytic Pocket and Allosteric Pocket	37	550	A	113	None
+Q9Y3Z3	113	626	6dw4	SAMHD1 Bound to Cladribine-TP in the Catalytic Pocket and Allosteric Pocket	37	550	C	113	None
+Q9Y3Z3	113	626	6dw4	SAMHD1 Bound to Cladribine-TP in the Catalytic Pocket and Allosteric Pocket	37	550	B	113	None
+Q9Y3Z3	113	626	6dw4	SAMHD1 Bound to Cladribine-TP in the Catalytic Pocket and Allosteric Pocket	37	550	D	113	None
+Q9Y3Z3	113	626	4bzb	Crystal structure of the tetrameric dGTP-bound SAMHD1 mutant catalytic core	37	550	C	113	None
+Q9Y3Z3	113	626	4bzb	Crystal structure of the tetrameric dGTP-bound SAMHD1 mutant catalytic core	37	550	A	113	None
+Q9Y3Z3	113	626	4bzb	Crystal structure of the tetrameric dGTP-bound SAMHD1 mutant catalytic core	37	550	D	113	None
+Q9Y3Z3	113	626	4bzb	Crystal structure of the tetrameric dGTP-bound SAMHD1 mutant catalytic core	37	550	B	113	None
+Q9Y3Z3	113	626	4bzc	Crystal structure of the tetrameric dGTP-bound wild type SAMHD1 catalytic core	37	550	C	113	None
+Q9Y3Z3	113	626	4bzc	Crystal structure of the tetrameric dGTP-bound wild type SAMHD1 catalytic core	37	550	D	113	None
+Q9Y3Z3	113	626	4bzc	Crystal structure of the tetrameric dGTP-bound wild type SAMHD1 catalytic core	37	550	B	113	None
+Q9Y3Z3	113	626	4bzc	Crystal structure of the tetrameric dGTP-bound wild type SAMHD1 catalytic core	37	550	A	None	None
+Q9Y3Z3	113	626	4tnz	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dTTP complex	1	514	B	113	None
+Q9Y3Z3	113	626	4tnz	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dTTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4tnz	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dTTP complex	1	514	A	None	None
+Q9Y3Z3	113	626	4tnz	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dTTP complex	1	514	C	113	None
+Q9Y3Z3	113	626	4zwg	Crystal structure of the GTP-dATP-bound catalytic core of SAMHD1 phosphomimetic T592E mutant	1	514	C	113	None
+Q9Y3Z3	113	626	4zwg	Crystal structure of the GTP-dATP-bound catalytic core of SAMHD1 phosphomimetic T592E mutant	1	514	D	113	None
+Q9Y3Z3	113	626	4zwg	Crystal structure of the GTP-dATP-bound catalytic core of SAMHD1 phosphomimetic T592E mutant	1	514	B	113	None
+Q9Y3Z3	113	626	4zwg	Crystal structure of the GTP-dATP-bound catalytic core of SAMHD1 phosphomimetic T592E mutant	1	514	A	None	None
+Q9Y3Z3	113	626	4zwe	Crystal structure of the dGTP-bound catalytic core of SAMHD1 T592V mutant	1	514	A	None	None
+Q9Y3Z3	113	626	4zwe	Crystal structure of the dGTP-bound catalytic core of SAMHD1 T592V mutant	1	514	D	None	None
+Q9Y3Z3	113	626	4zwe	Crystal structure of the dGTP-bound catalytic core of SAMHD1 T592V mutant	1	514	B	None	None
+Q9Y3Z3	113	626	4zwe	Crystal structure of the dGTP-bound catalytic core of SAMHD1 T592V mutant	1	514	C	None	None
+Q9Y3Z3	113	626	4to1	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP/dCTP-dCTP complex	1	514	C	113	None
+Q9Y3Z3	113	626	4to1	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP/dCTP-dCTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4to1	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP/dCTP-dCTP complex	1	514	B	113	None
+Q9Y3Z3	113	626	4to1	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP/dCTP-dCTP complex	1	514	A	None	None
+Q9Y3Z3	113	626	4to0	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dCTP complex	1	514	C	113	None
+Q9Y3Z3	113	626	4to0	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dCTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4to0	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dCTP complex	1	514	B	113	None
+Q9Y3Z3	113	626	4to0	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dCTP complex	1	514	A	None	None
+Q9Y3Z3	113	626	4to3	Structural basis of cellular dNTP regulation, SAMHD1-dGTP-dGTP-dCTP complex	1	514	C	113	None
+Q9Y3Z3	113	626	4to3	Structural basis of cellular dNTP regulation, SAMHD1-dGTP-dGTP-dCTP complex	1	514	A	113	None
+Q9Y3Z3	113	626	4to3	Structural basis of cellular dNTP regulation, SAMHD1-dGTP-dGTP-dCTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4to3	Structural basis of cellular dNTP regulation, SAMHD1-dGTP-dGTP-dCTP complex	1	514	B	113	None
+Q9Y3Z3	113	626	4to2	Structure basis of cellular dNTP regulation, SAMHD1-dGTP-dGTP-dGTP/dTTP complex	1	514	C	113	None
+Q9Y3Z3	113	626	4to2	Structure basis of cellular dNTP regulation, SAMHD1-dGTP-dGTP-dGTP/dTTP complex	1	514	A	113	None
+Q9Y3Z3	113	626	4to2	Structure basis of cellular dNTP regulation, SAMHD1-dGTP-dGTP-dGTP/dTTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4to2	Structure basis of cellular dNTP regulation, SAMHD1-dGTP-dGTP-dGTP/dTTP complex	1	514	B	113	None
+Q9Y3Z3	113	626	4to5	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dTTP-dCTP complex	1	514	C	None	None
+Q9Y3Z3	113	626	4to5	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dTTP-dCTP complex	1	514	A	None	None
+Q9Y3Z3	113	626	4to5	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dTTP-dCTP complex	1	514	B	None	None
+Q9Y3Z3	113	626	4to5	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dTTP-dCTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4to4	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dGTP-dCTP complex	1	514	C	113	None
+Q9Y3Z3	113	626	4to4	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dGTP-dCTP complex	1	514	A	113	None
+Q9Y3Z3	113	626	4to4	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dGTP-dCTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4to4	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dGTP-dCTP complex	1	514	B	113	None
+Q9Y3Z3	113	626	4tnp	Structural basis of cellular dNTP regulation, SAMHD1-GTP-dCTP-cCTP complex	1	514	A	None	None
+Q9Y3Z3	113	626	4tnp	Structural basis of cellular dNTP regulation, SAMHD1-GTP-dCTP-cCTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4tnp	Structural basis of cellular dNTP regulation, SAMHD1-GTP-dCTP-cCTP complex	1	514	B	113	None
+Q9Y3Z3	113	626	4tnp	Structural basis of cellular dNTP regulation, SAMHD1-GTP-dCTP-cCTP complex	1	514	C	113	None
+Q9Y3Z3	113	626	4tnq	Structural basis of cellular dNTP regulation, SAMHD1-GTP-dTTP-dTTP complex	1	514	C	None	None
+Q9Y3Z3	113	626	4tnq	Structural basis of cellular dNTP regulation, SAMHD1-GTP-dTTP-dTTP complex	1	514	A	None	None
+Q9Y3Z3	113	626	4tnq	Structural basis of cellular dNTP regulation, SAMHD1-GTP-dTTP-dTTP complex	1	514	B	None	None
+Q9Y3Z3	113	626	4tnq	Structural basis of cellular dNTP regulation, SAMHD1-GTP-dTTP-dTTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4qg4	Crystal structure of the tetrameric GTP/dATP/ATP-bound SAMHD1 (H210A) mutant catalytic core	37	550	C	113	None
+Q9Y3Z3	113	626	4qg4	Crystal structure of the tetrameric GTP/dATP/ATP-bound SAMHD1 (H210A) mutant catalytic core	37	550	A	113	None
+Q9Y3Z3	113	626	4qg4	Crystal structure of the tetrameric GTP/dATP/ATP-bound SAMHD1 (H210A) mutant catalytic core	37	550	D	113	None
+Q9Y3Z3	113	626	4qg4	Crystal structure of the tetrameric GTP/dATP/ATP-bound SAMHD1 (H210A) mutant catalytic core	37	550	B	113	None
+Q9Y3Z3	113	626	4qfy	Crystal structure of the tetrameric dGTP/dCTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	C	113	None
+Q9Y3Z3	113	626	4qfy	Crystal structure of the tetrameric dGTP/dCTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	D	113	None
+Q9Y3Z3	113	626	4qfy	Crystal structure of the tetrameric dGTP/dCTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	B	113	None
+Q9Y3Z3	113	626	4qfy	Crystal structure of the tetrameric dGTP/dCTP-bound SAMHD1 (RN206) mutant catalytic core	37	550	A	None	None
+Q9Y3Z3	113	626	4tnx	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dGTP complex	1	514	C	113	None
+Q9Y3Z3	113	626	4tnx	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dGTP complex	1	514	A	113	None
+Q9Y3Z3	113	626	4tnx	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dGTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4tnx	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dGTP complex	1	514	B	None	None
+Q9Y3Z3	113	626	4tny	Structural basis of cellular dNTP regulation, SAMHD1-dGTP-dATP-dGTP complex	1	514	C	113	None
+Q9Y3Z3	113	626	4tny	Structural basis of cellular dNTP regulation, SAMHD1-dGTP-dATP-dGTP complex	1	514	A	113	None
+Q9Y3Z3	113	626	4tny	Structural basis of cellular dNTP regulation, SAMHD1-dGTP-dATP-dGTP complex	1	514	D	113	None
+Q9Y3Z3	113	626	4tny	Structural basis of cellular dNTP regulation, SAMHD1-dGTP-dATP-dGTP complex	1	514	B	113	None
+Q9Y3Z3	113	626	4tnr	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dATP complex	1	514	A	113	None
+Q9Y3Z3	113	626	4tnr	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dATP complex	1	514	C	113	None
+Q9Y3Z3	113	626	4tnr	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dATP complex	1	514	B	113	None
+Q9Y3Z3	113	626	4tnr	Structure basis of cellular dNTP regulation, SAMHD1-GTP-dATP-dATP complex	1	514	D	113	None
+Q9Y3Z3	115	626	5ao3	Crystal structure of human SAMHD1 (amino acid residues 115-626) bound to GTP	27	538	B	115	None
+Q9Y3Z3	115	626	5ao3	Crystal structure of human SAMHD1 (amino acid residues 115-626) bound to GTP	27	538	D	115	None
+Q9Y3Z3	115	626	5ao3	Crystal structure of human SAMHD1 (amino acid residues 115-626) bound to GTP	27	538	A	115	None
+Q9Y3Z3	115	626	5ao3	Crystal structure of human SAMHD1 (amino acid residues 115-626) bound to GTP	27	538	C	115	None
+Q9Y3Z3	115	583	5ao2	Crystal structure of human SAMHD1 (amino acid residues 115-583) R164A variant bound to dGTP	23	491	B	115	None
+Q9Y3Z3	115	583	5ao2	Crystal structure of human SAMHD1 (amino acid residues 115-583) R164A variant bound to dGTP	23	491	D	115	None
+Q9Y3Z3	115	583	5ao2	Crystal structure of human SAMHD1 (amino acid residues 115-583) R164A variant bound to dGTP	23	491	A	115	None
+Q9Y3Z3	115	583	5ao2	Crystal structure of human SAMHD1 (amino acid residues 115-583) R164A variant bound to dGTP	23	491	C	115	None
+Q9Y3Z3	115	583	5ao1	Crystal structure of human SAMHD1 (amino acid residues 115-583) bound to ddGTP	23	491	D	115	None
+Q9Y3Z3	115	583	5ao1	Crystal structure of human SAMHD1 (amino acid residues 115-583) bound to ddGTP	23	491	A	115	583
+Q9Y3Z3	115	583	5ao1	Crystal structure of human SAMHD1 (amino acid residues 115-583) bound to ddGTP	23	491	C	115	583
+Q9Y3Z3	115	583	5ao1	Crystal structure of human SAMHD1 (amino acid residues 115-583) bound to ddGTP	23	491	B	115	583
+Q9Y3Z3	115	626	5ao4	Crystal structure of in vitro phosphorylated human SAMHD1 (amino acid residues 115-626) bound to GTP	27	538	B	115	None
+Q9Y3Z3	115	626	5ao4	Crystal structure of in vitro phosphorylated human SAMHD1 (amino acid residues 115-626) bound to GTP	27	538	D	None	None
+Q9Y3Z3	115	626	5ao4	Crystal structure of in vitro phosphorylated human SAMHD1 (amino acid residues 115-626) bound to GTP	27	538	A	115	None
+Q9Y3Z3	115	626	5ao4	Crystal structure of in vitro phosphorylated human SAMHD1 (amino acid residues 115-626) bound to GTP	27	538	C	115	None
+Q9Y3Z3	120	626	3u1n	Structure of the catalytic core of human SAMHD1	22	528	B	120	None
+Q9Y3Z3	120	626	3u1n	Structure of the catalytic core of human SAMHD1	22	528	A	120	None
+Q9Y3Z3	120	626	3u1n	Structure of the catalytic core of human SAMHD1	22	528	D	120	None
+Q9Y3Z3	120	626	3u1n	Structure of the catalytic core of human SAMHD1	22	528	C	120	None
+Q9Y3Z3	582	626	4cc9	Crystal structure of human SAMHD1 (amino acid residues 582-626) bound to Vpx isolated from sooty mangabey and human DCAF1 (amino acid residues 1058-1396)	27	71	C	None	None
+

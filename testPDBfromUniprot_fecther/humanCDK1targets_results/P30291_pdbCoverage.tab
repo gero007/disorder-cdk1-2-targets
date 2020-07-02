@@ -1,0 +1,42 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P30291	Wee1-like protein kinase	WEE1_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	299	569
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#20 mappings in 20 PDB chains in 20 PDB entries
+P30291	291	575	3cr0	Wee1 kinase complex with inhibitor PD259_809	3	287	A	None	None
+P30291	291	575	5vd9	Crystal structure of human WEE1 kinase domain in complex with RAC-IV-097, a MK1775 analogue	5	289	A	None	None
+P30291	291	575	2in6	Wee1 kinase complex with inhibitor PD311839	3	287	A	291	None
+P30291	291	575	2io6	Wee1 kinase complexed with inhibitor PD330961	3	287	A	291	None
+P30291	291	575	5vd8	Crystal structure of human WEE1 kinase domain in complex with RAC-IV-099, a MK1775 analogue	5	289	A	None	None
+P30291	291	575	2z2w	Human Wee1 kinase complexed with inhibitor PF0335770	1	285	A	291	None
+P30291	291	575	5vd2	crystal structure of human WEE1 kinase domain in complex with PF-03814735	5	289	A	None	None
+P30291	291	575	5vd5	CRYSTAL STRUCTURE OF HUMAN WEE1 KINASE DOMAIN IN COMPLEX WITH RAC-IV-050, a MK1775 analougue	5	289	A	None	None
+P30291	291	575	1x8b	Structure of human Wee1A kinase: kinase domain complexed with inhibitor PD0407824	5	289	A	291	None
+P30291	291	575	5vd7	CRYSTAL STRUCTURE OF HUMAN WEE1 KINASE DOMAIN IN COMPLEX WITH RAC-IV-098, a MK1775 analogue	5	289	A	None	None
+P30291	291	575	5vd4	CRYSTAL STRUCTURE OF HUMAN WEE1 KINASE DOMAIN IN COMPLEX WITH RAC-IV-016, a MK1775 analougue	5	289	A	None	None
+P30291	291	575	5vda	Crystal structure of human WEE1 kinase domain in complex with RAC-IV-101, a MK1775 analogue	5	289	A	None	None
+P30291	291	575	3biz	Wee1 kinase complex with inhibitor PD331618	3	287	A	None	None
+P30291	291	575	5v5y	CRYSTAL STRUCTURE OF HUMAN WEE1 KINASE DOMAIN IN COMPLEX WITH MK1775	5	289	A	None	None
+P30291	291	575	5vc4	Crystal structure of HUMAN WEE1 KINASE domain in complex with Bosutinib-isomer	5	289	A	None	None
+P30291	291	575	5vc5	Crystal structure of human WEE1 kinase domain in complex with PD-166285	5	289	A	None	None
+P30291	291	575	5vc6	crystal structure of human WEE1 kinase domain in complex with PHA-848125	5	289	A	None	None
+P30291	291	575	3cqe	Wee1 kinase complex with inhibitor PD074291	3	287	A	None	None
+P30291	291	575	3bi6	Wee1 kinase complex with inhibitor PD352396	3	287	A	None	None
+P30291	291	575	5vc3	CRYSTAL STRUCTURE OF HUMAN WEE1 KINASE DOMAIN IN COMPLEX WITH BOSUTINIB	5	289	A	None	None
+

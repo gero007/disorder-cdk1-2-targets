@@ -1,0 +1,26 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9BXR0	Queuine tRNA-ribosyltransferase catalytic subunit 1	TGT_HUMAN	Homo sapiens	PF01702	TGT	Queuine tRNA-ribosyltransferase	23	382
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 4 PDB chains in 2 PDB entries
+Q9BXR0	11	403	6h42	crystal structure of the human TGT catalytic subunit QTRT1	1	393	B	None	403
+Q9BXR0	11	403	6h42	crystal structure of the human TGT catalytic subunit QTRT1	1	393	A	11	403
+Q9BXR0	12	403	6h45	crystal structure of the human TGT catalytic subunit QTRT1 in complex with queuine	1	392	A	12	403
+Q9BXR0	12	403	6h45	crystal structure of the human TGT catalytic subunit QTRT1 in complex with queuine	1	392	B	12	403
+

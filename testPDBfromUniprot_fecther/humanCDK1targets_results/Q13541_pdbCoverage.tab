@@ -1,0 +1,54 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q13541	Eukaryotic translation initiation factor 4E-binding protein 1	4EBP1_HUMAN	Homo sapiens	PF05456	eIF_4EBP	Eukaryotic translation initiation factor 4E binding protein (EIF4EBP)	1	118
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#32 mappings in 32 PDB chains in 20 PDB entries
+Q13541	1	118	6bcx	mTORC1 structure refined to 3.0 angstroms	5	122	X	None	118
+Q13541	1	118	6bcx	mTORC1 structure refined to 3.0 angstroms	5	122	Z	None	118
+Q13541	1	118	6bcu	Cryo-EM structure of the activated RHEB-mTORC1 refined to 3.4 angstrom	5	122	Z	None	118
+Q13541	1	118	6bcu	Cryo-EM structure of the activated RHEB-mTORC1 refined to 3.4 angstrom	5	122	X	None	118
+Q13541	43	84	5bxv	eIF4E complex	3	44	D	None	None
+Q13541	43	84	5bxv	eIF4E complex	3	44	B	None	84
+Q13541	47	66	1wkw	Crystal structure of the ternary complex of eIF4E-m7GpppA-4EBP1 peptide	1	20	B	47	66
+Q13541	47	66	3u7x	Crystal structure of the human eIF4E-4EBP1 peptide complex without cap	1	20	D	None	None
+Q13541	47	66	3u7x	Crystal structure of the human eIF4E-4EBP1 peptide complex without cap	1	20	C	None	None
+Q13541	50	83	5nvn	Crystal structure of the human 4EHP-4E-BP1 complex	5	38	B	50	83
+Q13541	50	83	5nvn	Crystal structure of the human 4EHP-4E-BP1 complex	5	38	D	50	83
+Q13541	50	83	4ued	Complex of human eIF4E with the 4E binding protein 4E-BP1	5	38	B	50	83
+Q13541	51	67	3hxi	Crystal structure of Schistosome eIF4E complexed with m7GpppG and 4E-BP	5	21	C	5	None
+Q13541	51	67	3hxg	Crystal structure of Schistsome eIF4E complexed with m7GpppA and 4E-BP	5	21	C	5	None
+Q13541	51	67	3m93	Complex crystal structure of Ascaris suum eIF4E-3 with m7G cap	1	17	C	1	None
+Q13541	51	67	3m94	Complex crystal structure of Ascaris suum eIF4E-3 with m2,2,7G cap	1	17	C	1	None
+Q13541	51	67	2jgc	Structure of the human eIF4E homologous protein, 4EHP without ligand bound	1	17	B	51	67
+Q13541	51	67	2jgb	Structure of human eIF4E homologous protein 4EHP with m7GTP	1	17	B	51	None
+Q13541	51	64	2v8y	Crystallographic and mass spectrometric characterisation of eIF4E with N7-cap derivatives	1	14	B	51	64
+Q13541	51	64	2v8y	Crystallographic and mass spectrometric characterisation of eIF4E with N7-cap derivatives	1	14	F	51	64
+Q13541	51	64	2v8w	Crystallographic and mass spectrometric characterisation of eIF4E with N7-cap derivatives	1	14	B	51	64
+Q13541	51	64	2v8w	Crystallographic and mass spectrometric characterisation of eIF4E with N7-cap derivatives	1	14	F	51	64
+Q13541	51	64	5ekv	Co-crystal structure of eIF4E with nucleotide mimetic inhibitor.	1	14	B	51	64
+Q13541	51	64	5ekv	Co-crystal structure of eIF4E with nucleotide mimetic inhibitor.	1	14	D	51	64
+Q13541	51	64	1ej4	COCRYSTAL STRUCTURE OF EIF4E/4E-BP1 PEPTIDE	1	14	B	51	64
+Q13541	51	64	2v8x	Crystallographic and mass spectrometric characterisation of eIF4E with N7-cap derivatives	1	14	B	51	64
+Q13541	51	64	2v8x	Crystallographic and mass spectrometric characterisation of eIF4E with N7-cap derivatives	1	14	F	51	64
+Q13541	54	66	1ejh	EIF4E/EIF4G PEPTIDE/7-METHYL-GDP	3	15	G	624	None
+Q13541	54	66	1ejh	EIF4E/EIF4G PEPTIDE/7-METHYL-GDP	3	15	H	624	None
+Q13541	54	66	1ejh	EIF4E/EIF4G PEPTIDE/7-METHYL-GDP	3	15	E	624	None
+Q13541	54	66	1ejh	EIF4E/EIF4G PEPTIDE/7-METHYL-GDP	3	15	F	624	636
+Q13541	99	118	5wbj	Crystal structure of the arabidopsis thaliana Raptor in complex with the TOS peptide of human 4EBP1	1	20	T	None	118
+

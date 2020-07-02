@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P29374	AT-rich interactive domain-containing protein 4A	ARI4A_HUMAN	Homo sapiens	PF01388	ARID	ARID/BRIGHT DNA binding domain	311	397
+P29374	AT-rich interactive domain-containing protein 4A	ARI4A_HUMAN	Homo sapiens	PF08169	RBB1NT	RBB1NT (NUC162) domain	170	262
+P29374	AT-rich interactive domain-containing protein 4A	ARI4A_HUMAN	Homo sapiens	PF11717	Tudor-knot	RNA binding activity-knot of a chromodomain	574	630
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 4 PDB chains in 4 PDB entries
+P29374	4	121	2mam	Solution structure of the interdigitated double Tudor domain of RBBP1	1	118	A	1	118
+P29374	170	273	2yrv	Solution structure of the RBB1NT domain of human RB(retinoblastoma)-binding protein 1	8	111	A	8	111
+P29374	568	635	6bph	Crystal structure of the chromodomain of RBBP1	2	69	A	None	635
+P29374	568	635	2lcc	Solution structure of RBBP1 chromobarrel domain	1	68	A	1	68
+

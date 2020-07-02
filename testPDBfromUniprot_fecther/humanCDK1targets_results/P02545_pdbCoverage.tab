@@ -1,0 +1,50 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P02545	Lamin A/C	LMNA_HUMAN	Homo sapiens	PF00932	LTD	Lamin Tail Domain	433	545
+P02545	Lamin A/C	LMNA_HUMAN	Homo sapiens	PF00038	Filament	Intermediate filament protein	30	386
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#27 mappings in 27 PDB chains in 13 PDB entries
+P02545	1	300	6jlb	Crystal structure of lamin A/C fragment and assembly mechanisms of intermediate filaments	5	304	A	None	None
+P02545	1	300	6jlb	Crystal structure of lamin A/C fragment and assembly mechanisms of intermediate filaments	5	304	D	None	None
+P02545	1	300	6jlb	Crystal structure of lamin A/C fragment and assembly mechanisms of intermediate filaments	5	304	B	None	None
+P02545	1	300	6jlb	Crystal structure of lamin A/C fragment and assembly mechanisms of intermediate filaments	5	304	C	None	None
+P02545	65	222	6snz	Crystal structure of lamin A coil1b tetramer	3	160	C	None	None
+P02545	65	222	6snz	Crystal structure of lamin A coil1b tetramer	3	160	D	None	None
+P02545	65	222	6snz	Crystal structure of lamin A coil1b tetramer	3	160	A	65	222
+P02545	65	222	6snz	Crystal structure of lamin A coil1b tetramer	3	160	B	65	None
+P02545	305	387	1x8y	Human lamin coil 2B	4	86	A	None	None
+P02545	313	386	3v5b	Structure of Coil 2b of human lamin	1	74	A	313	386
+P02545	313	386	3v4q	Structure of R335W mutant of human Lamin	1	74	A	313	386
+P02545	313	386	3v4w	Structure of E347K mutant of Lamin	1	74	A	313	386
+P02545	328	398	2xv5	Human lamin A coil 2B fragment	4	74	B	328	None
+P02545	328	398	2xv5	Human lamin A coil 2B fragment	4	74	A	328	None
+P02545	428	546	6ghd	Structural analysis of the ternary complex between lamin A/C, BAF and emerin identifies an interface disrupted in autosomal recessive progeroid diseases	1	119	F	None	546
+P02545	428	546	6ghd	Structural analysis of the ternary complex between lamin A/C, BAF and emerin identifies an interface disrupted in autosomal recessive progeroid diseases	1	119	B	428	546
+P02545	428	549	1ivt	NMR structures of the C-terminal globular domain of human lamin A/C	1	122	A	428	549
+P02545	430	545	6rpr	LEM domain of Emerin mutant T43I in complex with BAF dimer and the Igfold of the lamin A/C	1	116	B	430	545
+P02545	436	552	1ifr	Structure of Lamin A/C Globular Domain	5	121	A	436	None
+P02545	436	552	3gef	Crystal structure of the R482W mutant of lamin A/C	2	118	C	436	552
+P02545	436	552	3gef	Crystal structure of the R482W mutant of lamin A/C	2	118	B	436	552
+P02545	436	552	3gef	Crystal structure of the R482W mutant of lamin A/C	2	118	A	436	552
+P02545	436	552	3gef	Crystal structure of the R482W mutant of lamin A/C	2	118	D	436	552
+P02545	661	664	2ypt	Crystal structure of the human nuclear membrane zinc metalloprotease ZMPSTE24 mutant (E336A) in complex with a synthetic CSIM tetrapeptide from the C-terminus of prelamin A	1	4	I	661	None
+P02545	661	664	2ypt	Crystal structure of the human nuclear membrane zinc metalloprotease ZMPSTE24 mutant (E336A) in complex with a synthetic CSIM tetrapeptide from the C-terminus of prelamin A	1	4	G	661	664
+P02545	661	664	2ypt	Crystal structure of the human nuclear membrane zinc metalloprotease ZMPSTE24 mutant (E336A) in complex with a synthetic CSIM tetrapeptide from the C-terminus of prelamin A	1	4	H	661	664
+P02545	661	664	2ypt	Crystal structure of the human nuclear membrane zinc metalloprotease ZMPSTE24 mutant (E336A) in complex with a synthetic CSIM tetrapeptide from the C-terminus of prelamin A	1	4	F	661	None
+

@@ -1,0 +1,53 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P67870	Casein kinase II beta chain	CSK2B_HUMAN	Homo sapiens	PF01214	CK_II_beta	Casein kinase II regulatory subunit	8	191
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#31 mappings in 31 PDB chains in 10 PDB entries
+P67870	1	215	4dgl	Crystal Structure of the CK2 Tetrameric Holoenzyme	1	215	B	None	None
+P67870	1	215	4dgl	Crystal Structure of the CK2 Tetrameric Holoenzyme	1	215	A	None	215
+P67870	1	215	4nh1	Crystal structure of a heterotetrameric CK2 holoenzyme complex carrying the Andante-mutation in CK2beta and consistent with proposed models of autoinhibition and trans-autophosphorylation	1	215	D	None	None
+P67870	1	215	4nh1	Crystal structure of a heterotetrameric CK2 holoenzyme complex carrying the Andante-mutation in CK2beta and consistent with proposed models of autoinhibition and trans-autophosphorylation	1	215	C	None	None
+P67870	1	215	1jwh	Crystal Structure of Human Protein Kinase CK2 Holoenzyme	1	215	D	None	None
+P67870	1	215	1jwh	Crystal Structure of Human Protein Kinase CK2 Holoenzyme	1	215	C	None	None
+P67870	1	215	4md7	Crystal Structure of full-length symmetric CK2 holoenzyme	1	215	A	None	None
+P67870	1	215	4md7	Crystal Structure of full-length symmetric CK2 holoenzyme	1	215	D	None	None
+P67870	1	215	4md7	Crystal Structure of full-length symmetric CK2 holoenzyme	1	215	B	None	None
+P67870	1	215	4md7	Crystal Structure of full-length symmetric CK2 holoenzyme	1	215	C	None	None
+P67870	1	215	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	215	D	None	None
+P67870	1	215	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	215	C	None	None
+P67870	1	215	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	215	I	None	None
+P67870	1	215	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	215	A	None	None
+P67870	1	215	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	215	O	None	None
+P67870	1	215	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	215	B	None	None
+P67870	1	215	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	215	N	None	None
+P67870	1	215	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	215	J	None	None
+P67870	1	215	4md8	Crystal Structure of full-length symmetric CK2 holoenzyme with mutated alpha subunit (F121E)	1	215	A	None	None
+P67870	1	215	4md8	Crystal Structure of full-length symmetric CK2 holoenzyme with mutated alpha subunit (F121E)	1	215	D	None	None
+P67870	1	215	4md8	Crystal Structure of full-length symmetric CK2 holoenzyme with mutated alpha subunit (F121E)	1	215	B	None	None
+P67870	1	215	4md8	Crystal Structure of full-length symmetric CK2 holoenzyme with mutated alpha subunit (F121E)	1	215	C	None	None
+P67870	1	193	3eed	Crystal structure of human protein kinase CK2 regulatory subunit (CK2beta; mutant 1-193)	1	193	A	None	193
+P67870	1	193	3eed	Crystal structure of human protein kinase CK2 regulatory subunit (CK2beta; mutant 1-193)	1	193	B	None	193
+P67870	1	182	1qf8	TRUNCATED FORM OF CASEIN KINASE II BETA SUBUNIT (2-182) FROM HOMO SAPIENS	1	182	A	None	None
+P67870	1	182	1qf8	TRUNCATED FORM OF CASEIN KINASE II BETA SUBUNIT (2-182) FROM HOMO SAPIENS	1	182	B	None	None
+P67870	181	203	1ds5	DIMERIC CRYSTAL STRUCTURE OF THE ALPHA SUBUNIT IN COMPLEX WITH TWO BETA PEPTIDES MIMICKING THE ARCHITECTURE OF THE TETRAMERIC PROTEIN KINASE CK2 HOLOENZYME.	1	23	H	None	203
+P67870	181	203	1ds5	DIMERIC CRYSTAL STRUCTURE OF THE ALPHA SUBUNIT IN COMPLEX WITH TWO BETA PEPTIDES MIMICKING THE ARCHITECTURE OF THE TETRAMERIC PROTEIN KINASE CK2 HOLOENZYME.	1	23	E	None	203
+P67870	181	203	1ds5	DIMERIC CRYSTAL STRUCTURE OF THE ALPHA SUBUNIT IN COMPLEX WITH TWO BETA PEPTIDES MIMICKING THE ARCHITECTURE OF THE TETRAMERIC PROTEIN KINASE CK2 HOLOENZYME.	1	23	G	None	203
+P67870	181	203	1ds5	DIMERIC CRYSTAL STRUCTURE OF THE ALPHA SUBUNIT IN COMPLEX WITH TWO BETA PEPTIDES MIMICKING THE ARCHITECTURE OF THE TETRAMERIC PROTEIN KINASE CK2 HOLOENZYME.	1	23	F	None	203
+P67870	186	193	6q38	The Crystal structure of CK2a bound to P1-C4	2	9	C	81	88
+

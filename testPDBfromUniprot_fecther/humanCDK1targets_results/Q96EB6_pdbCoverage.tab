@@ -1,0 +1,45 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q96EB6	NAD-dependent protein deacetylase sirtuin-1	SIR1_HUMAN	Homo sapiens	PF02146	SIR2	Sir2 family	261	447
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#23 mappings in 20 PDB chains in 8 PDB entries
+Q96EB6	143	513	5btr	Crystal structure of SIRT1 in complex with resveratrol and an AMC-containing peptide	3	373	C	None	None
+Q96EB6	143	513	5btr	Crystal structure of SIRT1 in complex with resveratrol and an AMC-containing peptide	3	373	A	None	641
+Q96EB6	143	513	5btr	Crystal structure of SIRT1 in complex with resveratrol and an AMC-containing peptide	3	373	B	143	641
+Q96EB6	514	515	5btr	Crystal structure of SIRT1 in complex with resveratrol and an AMC-containing peptide	378	379	C	646	647
+Q96EB6	514	515	5btr	Crystal structure of SIRT1 in complex with resveratrol and an AMC-containing peptide	378	379	B	646	647
+Q96EB6	514	515	5btr	Crystal structure of SIRT1 in complex with resveratrol and an AMC-containing peptide	378	379	A	646	647
+Q96EB6	183	505	4zzi	SIRT1/Activator/Inhibitor Complex	1	323	A	183	None
+Q96EB6	183	505	4zzj	SIRT1/Activator/Substrate Complex	1	323	A	183	None
+Q96EB6	183	505	4zzh	SIRT1/Activator Complex	1	323	A	183	None
+Q96EB6	234	510	4if6	Structure of NAD-dependent protein deacetylase sirtuin-1 (closed state, 2.25 A)	5	281	A	234	510
+Q96EB6	641	665	4if6	Structure of NAD-dependent protein deacetylase sirtuin-1 (closed state, 2.25 A)	7	31	B	641	None
+Q96EB6	234	510	4ig9	Structure of NAD-dependent protein deacetylase sirtuin-1 (open state, 2.64 A)	5	281	A	234	None
+Q96EB6	234	510	4ig9	Structure of NAD-dependent protein deacetylase sirtuin-1 (open state, 2.64 A)	5	281	C	234	None
+Q96EB6	234	510	4ig9	Structure of NAD-dependent protein deacetylase sirtuin-1 (open state, 2.64 A)	5	281	E	234	None
+Q96EB6	234	510	4ig9	Structure of NAD-dependent protein deacetylase sirtuin-1 (open state, 2.64 A)	5	281	G	234	None
+Q96EB6	641	665	4ig9	Structure of NAD-dependent protein deacetylase sirtuin-1 (open state, 2.64 A)	7	31	B	641	None
+Q96EB6	641	665	4ig9	Structure of NAD-dependent protein deacetylase sirtuin-1 (open state, 2.64 A)	7	31	H	641	None
+Q96EB6	641	665	4ig9	Structure of NAD-dependent protein deacetylase sirtuin-1 (open state, 2.64 A)	7	31	F	641	None
+Q96EB6	641	665	4ig9	Structure of NAD-dependent protein deacetylase sirtuin-1 (open state, 2.64 A)	7	31	D	641	None
+Q96EB6	234	510	4kxq	Structure of NAD-dependent protein deacetylase sirtuin-1 (closed state, 1.85 A)	5	281	A	234	510
+Q96EB6	641	663	4kxq	Structure of NAD-dependent protein deacetylase sirtuin-1 (closed state, 1.85 A)	7	29	B	641	None
+Q96EB6	241	516	4i5i	Crystal structure of the SIRT1 catalytic domain bound to NAD and an EX527 analog	4	279	A	241	None
+Q96EB6	241	516	4i5i	Crystal structure of the SIRT1 catalytic domain bound to NAD and an EX527 analog	4	279	B	241	None
+

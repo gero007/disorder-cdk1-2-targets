@@ -1,0 +1,29 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q05516	PROTEIN (PROMYELOCYTIC LEUKEMIA ZINC FINGER PROTEIN PLZF)	ZBT16_HUMAN	Homo sapiens	PF00651	BTB	BTB/POZ domain	24	126
+Q05516	PROTEIN (PROMYELOCYTIC LEUKEMIA ZINC FINGER PROTEIN PLZF)	ZBT16_HUMAN	Homo sapiens	PF00096	zf-C2H2	Zinc finger, C2H2 type	574	596
+Q05516	PROTEIN (PROMYELOCYTIC LEUKEMIA ZINC FINGER PROTEIN PLZF)	ZBT16_HUMAN	Homo sapiens	PF00096	zf-C2H2	Zinc finger, C2H2 type	546	568
+Q05516	PROTEIN (PROMYELOCYTIC LEUKEMIA ZINC FINGER PROTEIN PLZF)	ZBT16_HUMAN	Homo sapiens	PF00096	zf-C2H2	Zinc finger, C2H2 type	491	512
+Q05516	PROTEIN (PROMYELOCYTIC LEUKEMIA ZINC FINGER PROTEIN PLZF)	ZBT16_HUMAN	Homo sapiens	PF13912	zf-C2H2_6	C2H2-type zinc finger	517	542
+Q05516	PROTEIN (PROMYELOCYTIC LEUKEMIA ZINC FINGER PROTEIN PLZF)	ZBT16_HUMAN	Homo sapiens	PF13912	zf-C2H2_6	C2H2-type zinc finger	460	485
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#2 mappings in 2 PDB chains in 2 PDB entries
+Q05516	6	126	1buo	BTB DOMAIN FROM PLZF	1	121	A	6	126
+Q05516	7	122	1cs3	STRUCTURE OF BTB/POZ TRANSCRIPTION REPRESSION DOMAIN FROM PROMELOCYTIC LEUKEMIA ZINC FINGER ONCOPROTEIN	1	116	A	7	122
+

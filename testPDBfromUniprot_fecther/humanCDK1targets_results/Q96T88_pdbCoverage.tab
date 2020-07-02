@@ -1,0 +1,78 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q96T88	E3 ubiquitin-protein ligase UHRF1	UHRF1_HUMAN	Homo sapiens	PF00628	PHD	PHD-finger	317	366
+Q96T88	E3 ubiquitin-protein ligase UHRF1	UHRF1_HUMAN	Homo sapiens	PF00240	ubiquitin	Ubiquitin family	3	76
+Q96T88	E3 ubiquitin-protein ligase UHRF1	UHRF1_HUMAN	Homo sapiens	PF02182	SAD_SRA	SAD/SRA domain	417	586
+Q96T88	E3 ubiquitin-protein ligase UHRF1	UHRF1_HUMAN	Homo sapiens	PF12148	TTD	Tandem tudor domain within UHRF1	132	284
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#53 mappings in 53 PDB chains in 32 PDB entries
+Q96T88	1	76	2faz	Ubiquitin-Like Domain of Human Nuclear Zinc Finger Protein NP95	3	78	B	1	None
+Q96T88	1	76	2faz	Ubiquitin-Like Domain of Human Nuclear Zinc Finger Protein NP95	3	78	A	1	76
+Q96T88	123	285	5yy9	Crystal structure of Tandem Tudor Domain of human UHRF1 in complex with LIG1-K126me3	1	154	A	None	None
+Q96T88	123	285	5yy9	Crystal structure of Tandem Tudor Domain of human UHRF1 in complex with LIG1-K126me3	1	154	B	None	None
+Q96T88	123	285	5yya	Crystal structure of Tandem Tudor Domain of human UHRF1	2	164	A	None	285
+Q96T88	126	285	2l3r	NMR structure of UHRF1 Tandem Tudor Domains in a complex with Histone H3 peptide	3	162	A	126	285
+Q96T88	126	285	3db3	Crystal structure of the tandem tudor domains of the E3 ubiquitin-protein ligase UHRF1 in complex with trimethylated histone H3-K9 peptide	2	161	A	None	None
+Q96T88	126	285	3db4	Crystal structure of the tandem tudor domains of the E3 ubiquitin-protein ligase UHRF1	2	161	A	None	None
+Q96T88	126	285	4qqd	Crystal Structure of tandem tudor domains of UHRF1 in complex with a small organic molecule	2	161	A	None	None
+Q96T88	126	285	4qqd	Crystal Structure of tandem tudor domains of UHRF1 in complex with a small organic molecule	2	161	B	126	None
+Q96T88	127	283	5xpi	Structure of UHRF1 TTD in complex with NV01	1	157	A	127	283
+Q96T88	133	300	6ved	Solution structure of the TTD and linker region of UHRF1	1	168	A	133	300
+Q96T88	134	285	5iay	NMR structure of UHRF1 Tandem Tudor Domains in a complex with Spacer peptide	1	152	A	134	285
+Q96T88	642	657	5iay	NMR structure of UHRF1 Tandem Tudor Domains in a complex with Spacer peptide	1	16	B	642	657
+Q96T88	134	366	4gy5	Crystal structure of the tandem tudor domain and plant homeodomain of UHRF1 with Histone H3K9me3	9	241	A	134	None
+Q96T88	134	366	4gy5	Crystal structure of the tandem tudor domain and plant homeodomain of UHRF1 with Histone H3K9me3	9	241	B	134	None
+Q96T88	134	366	4gy5	Crystal structure of the tandem tudor domain and plant homeodomain of UHRF1 with Histone H3K9me3	9	241	C	134	None
+Q96T88	134	366	4gy5	Crystal structure of the tandem tudor domain and plant homeodomain of UHRF1 with Histone H3K9me3	9	241	D	134	None
+Q96T88	134	367	3ask	Structure of UHRF1 in complex with histone tail	2	226	A	134	None
+Q96T88	134	367	3ask	Structure of UHRF1 in complex with histone tail	2	226	B	134	None
+Q96T88	134	367	3ask	Structure of UHRF1 in complex with histone tail	2	226	C	134	None
+Q96T88	134	367	3ask	Structure of UHRF1 in complex with histone tail	2	226	D	134	None
+Q96T88	296	367	3zvy	PHD finger of human UHRF1 in complex with unmodified histone H3 N- terminal tail	1	72	A	None	None
+Q96T88	296	367	3zvy	PHD finger of human UHRF1 in complex with unmodified histone H3 N- terminal tail	1	72	B	None	None
+Q96T88	298	367	3sox	Structure of UHRF1 PHD finger in the free form	1	70	A	None	None
+Q96T88	298	367	3sox	Structure of UHRF1 PHD finger in the free form	1	70	B	None	None
+Q96T88	298	367	3asl	Structure of UHRF1 in complex with histone tail	1	70	A	None	None
+Q96T88	298	367	3sow	Structure of UHRF1 PHD finger in complex with histone H3K4me3 1-9 peptide	1	70	A	None	None
+Q96T88	298	367	3sow	Structure of UHRF1 PHD finger in complex with histone H3K4me3 1-9 peptide	1	70	B	None	None
+Q96T88	298	367	3sou	Structure of UHRF1 PHD finger in complex with histone H3 1-9 peptide	1	70	B	None	380
+Q96T88	298	367	3sou	Structure of UHRF1 PHD finger in complex with histone H3 1-9 peptide	1	70	A	None	380
+Q96T88	298	366	2lgg	Structure of PHD domain of UHRF1 in complex with H3 peptide	1	69	A	311	379
+Q96T88	298	366	3shb	Crystal Structure of PHD Domain of UHRF1	9	77	A	311	None
+Q96T88	298	366	2lgl	NMR structure of the UHRF1 PHD domain	1	69	A	311	379
+Q96T88	298	366	2lgk	NMR Structure of UHRF1 PHD domains in a complex with histone H3 peptide	1	69	A	311	379
+Q96T88	299	366	6iiw	Crystal structure of human UHRF1 PHD finger in complex with PAF15	1	68	A	299	None
+Q96T88	299	364	3t6r	Structure of UHRF1 in complex with unmodified H3 N-terminal tail	7	72	B	299	364
+Q96T88	299	364	3t6r	Structure of UHRF1 in complex with unmodified H3 N-terminal tail	7	72	A	299	364
+Q96T88	314	367	3zvz	PHD finger of human UHRF1	4	57	B	314	None
+Q96T88	408	643	2pb7	Crystal Structure of the SRA domain of the human UHRF1 protein	4	239	A	None	None
+Q96T88	413	617	3clz	The set and ring associated (SRA) domain of UHRF1 bound to methylated DNA	1	205	A	None	617
+Q96T88	413	617	3clz	The set and ring associated (SRA) domain of UHRF1 bound to methylated DNA	1	205	B	None	617
+Q96T88	413	617	3clz	The set and ring associated (SRA) domain of UHRF1 bound to methylated DNA	1	205	C	None	617
+Q96T88	413	617	3clz	The set and ring associated (SRA) domain of UHRF1 bound to methylated DNA	1	205	D	None	617
+Q96T88	414	617	3dwh	Structural and Functional Analysis of SRA domain	5	208	A	414	None
+Q96T88	414	617	3bi7	Crystal structure of the SRA domain of E3 ubiquitin-protein ligase UHRF1	2	205	A	414	617
+Q96T88	414	617	6vcs	SRA domain of UHRF1 in complex with DNA	2	205	B	414	None
+Q96T88	414	617	6vcs	SRA domain of UHRF1 in complex with DNA	2	205	A	414	None
+Q96T88	414	617	6vcs	SRA domain of UHRF1 in complex with DNA	2	205	E	None	None
+Q96T88	634	665	5c6d	Crystal structure of USP7 in complex with UHRF1	2	33	D	None	None
+Q96T88	634	665	5c6d	Crystal structure of USP7 in complex with UHRF1	2	33	C	None	None
+Q96T88	638	678	6b9m	Crystal structure of UHRF1 TTD domain in complex with the polybasic region	1	41	D	None	None
+Q96T88	672	793	3fl2	Crystal structure of the ring domain of the E3 ubiquitin-protein ligase UHRF1	3	124	A	None	793
+

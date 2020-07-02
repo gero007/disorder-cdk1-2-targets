@@ -1,0 +1,31 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9H211	DNA REPLICATION FACTOR CDT1	CDT1_HUMAN	Homo sapiens	PF08839	CDT1	DNA replication factor CDT1 like	186	349
+Q9H211	DNA REPLICATION FACTOR CDT1	CDT1_HUMAN	Homo sapiens	PF16679	CDT1_C	DNA replication factor Cdt1 C-terminal domain	421	516
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#8 mappings in 8 PDB chains in 3 PDB entries
+Q9H211	1	546	2wvr	Human Cdt1:Geminin complex	1	546	C	None	None
+Q9H211	1	14	6qcg	PCNA complex with Cdt1 N-terminal PIP-box peptide	1	14	I	None	None
+Q9H211	1	14	6qcg	PCNA complex with Cdt1 N-terminal PIP-box peptide	1	14	G	None	None
+Q9H211	1	14	6qcg	PCNA complex with Cdt1 N-terminal PIP-box peptide	1	14	H	None	None
+Q9H211	1	14	6qcg	PCNA complex with Cdt1 N-terminal PIP-box peptide	1	14	L	None	None
+Q9H211	1	14	6qcg	PCNA complex with Cdt1 N-terminal PIP-box peptide	1	14	J	None	None
+Q9H211	1	14	6qcg	PCNA complex with Cdt1 N-terminal PIP-box peptide	1	14	K	None	None
+Q9H211	413	440	2le8	The protein complex for DNA replication	1	28	B	380	407
+

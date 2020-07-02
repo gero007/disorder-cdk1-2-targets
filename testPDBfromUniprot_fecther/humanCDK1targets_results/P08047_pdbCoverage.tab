@@ -1,0 +1,35 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P08047	SP1F3	SP1_HUMAN	Homo sapiens	PF00096	zf-C2H2	Zinc finger, C2H2 type	686	708
+P08047	SP1F3	SP1_HUMAN	Homo sapiens	PF00096	zf-C2H2	Zinc finger, C2H2 type	656	680
+P08047	SP1F3	SP1_HUMAN	Homo sapiens	PF00096	zf-C2H2	Zinc finger, C2H2 type	626	650
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#11 mappings in 11 PDB chains in 11 PDB entries
+P08047	619	654	1va1	Solution Structure of Transcription Factor Sp1 DNA Binding Domain (Zinc Finger 1)	2	37	A	530	565
+P08047	654	684	6pv0	Backbone-modified variant of zinc finger 2 from the transcription factor Sp1 DNA binding domain: D-Pro in the metal-binding turn	1	31	A	1	31
+P08047	654	684	6pv1	Backbone-modified variant of zinc finger 2 from the transcription factor Sp1 DNA binding domain: Aib in the metal-binding turn	1	31	A	1	31
+P08047	654	684	6pv2	Backbone-modified variant of zinc finger 2 from the transcription factor Sp1 DNA binding domain: Orn in the metal-binding turn	1	30	A	1	30
+P08047	654	684	6uco	Backbone-modified variant of zinc finger 2 from the transcription factor Sp1 DNA binding domain: BTD in the metal-binding turn	1	31	A	1	31
+P08047	654	684	6ucp	Zinc finger 2 from the transcription factor Sp1 DNA binding domain	1	31	A	1	31
+P08047	654	684	1va2	Solution Structure of Transcription Factor Sp1 DNA Binding Domain (Zinc Finger 2)	1	31	A	565	595
+P08047	654	684	1sp2	NMR STRUCTURE OF A ZINC FINGER DOMAIN FROM TRANSCRIPTION FACTOR SP1F2, MINIMIZED AVERAGE STRUCTURE	1	31	A	1	31
+P08047	655	684	6pv3	Backbone-modified variant of zinc finger 2 from the transcription factor Sp1 DNA binding domain: altered helix, loop, turn, and sheet	1	30	A	1	30
+P08047	684	712	1va3	Solution Structure of Transcription Factor Sp1 DNA Binding Domain (Zinc Finger 3)	1	29	A	595	623
+P08047	684	712	1sp1	NMR STRUCTURE OF A ZINC FINGER DOMAIN FROM TRANSCRIPTION FACTOR SP1F3, MINIMIZED AVERAGE STRUCTURE	1	29	A	1	29
+

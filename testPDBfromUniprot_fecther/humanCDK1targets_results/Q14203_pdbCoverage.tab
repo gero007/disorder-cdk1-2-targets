@@ -1,0 +1,42 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q14203	Dynactin-1	DCTN1_HUMAN	Homo sapiens	PF01302	CAP_GLY	CAP-Gly domain	29	94
+Q14203	Dynactin-1	DCTN1_HUMAN	Homo sapiens	PF12455	Dynactin	Dynein associated protein	523	805
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#19 mappings in 19 PDB chains in 9 PDB entries
+Q14203	1	99	2coy	Solution structure of the CAP-Gly domain in human Dynactin 1	8	106	A	8	106
+Q14203	15	107	1txq	Crystal structure of the EB1 C-terminal domain complexed with the CAP-Gly domain of p150Glued	1	93	A	None	None
+Q14203	15	107	2hqh	Crystal structure of p150Glued and CLIP-170	1	93	A	None	None
+Q14203	15	107	2hqh	Crystal structure of p150Glued and CLIP-170	1	93	D	None	None
+Q14203	15	107	2hqh	Crystal structure of p150Glued and CLIP-170	1	93	B	None	None
+Q14203	15	107	2hqh	Crystal structure of p150Glued and CLIP-170	1	93	C	None	None
+Q14203	18	111	2hl5	Crystal structure of the C-terminal domain of human EB1 in complex with the A49M mutant CAP-Gly domain of human Dynactin-1 (p150-Glued)	4	97	C	None	None
+Q14203	18	111	2hl5	Crystal structure of the C-terminal domain of human EB1 in complex with the A49M mutant CAP-Gly domain of human Dynactin-1 (p150-Glued)	4	97	D	None	None
+Q14203	18	111	2hl3	Crystal structure of the A49M mutant CAP-Gly domain of human Dynactin-1 (p150-Glued) in complex with human EB1 C-terminal hexapeptide	4	97	A	18	None
+Q14203	18	111	2hl3	Crystal structure of the A49M mutant CAP-Gly domain of human Dynactin-1 (p150-Glued) in complex with human EB1 C-terminal hexapeptide	4	97	B	None	None
+Q14203	18	111	2hkn	Crystal structure of the CAP-Gly domain of human Dynactin-1 (p150-Glued)	4	97	A	18	None
+Q14203	18	111	2hkn	Crystal structure of the CAP-Gly domain of human Dynactin-1 (p150-Glued)	4	97	B	None	None
+Q14203	18	111	2hkq	Crystal structure of the C-terminal domain of human EB1 in complex with the CAP-Gly domain of human Dynactin-1 (p150-Glued)	4	97	B	None	None
+Q14203	18	111	3e2u	Crystal structure of the zink-knuckle 2 domain of human CLIP-170 in complex with CAP-Gly domain of human dynactin-1 (p150-GLUED)	4	97	A	None	None
+Q14203	18	111	3e2u	Crystal structure of the zink-knuckle 2 domain of human CLIP-170 in complex with CAP-Gly domain of human dynactin-1 (p150-GLUED)	4	97	D	None	None
+Q14203	18	111	3e2u	Crystal structure of the zink-knuckle 2 domain of human CLIP-170 in complex with CAP-Gly domain of human dynactin-1 (p150-GLUED)	4	97	B	None	None
+Q14203	18	111	3e2u	Crystal structure of the zink-knuckle 2 domain of human CLIP-170 in complex with CAP-Gly domain of human dynactin-1 (p150-GLUED)	4	97	C	None	None
+Q14203	27	97	3tq7	EB1c/EB3c heterodimer in complex with the CAP-Gly domain of P150glued	1	71	Q	27	97
+Q14203	27	97	3tq7	EB1c/EB3c heterodimer in complex with the CAP-Gly domain of P150glued	1	71	P	27	97
+

@@ -1,0 +1,296 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P68400	CSNK2A1 protein	CSK21_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	39	324
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#274 mappings in 274 PDB chains in 183 PDB entries
+P68400	1	391	5oni	LOW-SALT STRUCTURE OF PROTEIN KINASE CK2 CATALYTIC SUBUNIT (ISOFORM CK2ALPHA) IN COMPLEX WITH THE INDENOINDOLE-TYPE INHIBITOR 4P	1	391	A	None	None
+P68400	1	391	5oni	LOW-SALT STRUCTURE OF PROTEIN KINASE CK2 CATALYTIC SUBUNIT (ISOFORM CK2ALPHA) IN COMPLEX WITH THE INDENOINDOLE-TYPE INHIBITOR 4P	1	391	B	None	None
+P68400	1	391	5omy	HIGH-SALT STRUCTURE OF PROTEIN KINASE CK2 CATALYTIC SUBUNIT (ISOFORM CK2ALPHA) IN COMPLEX WITH THE INDENOINDOLE-TYPE INHIBITOR 4P	1	391	A	None	None
+P68400	1	391	6yul	CK2 alpha bound to Macrocycle	1	391	GGG	None	None
+P68400	1	391	6yul	CK2 alpha bound to Macrocycle	1	391	AAA	None	None
+P68400	1	391	6yum	CK2 alpha bound to unclosed Macrocycle	1	391	GGG	None	None
+P68400	1	391	6yum	CK2 alpha bound to unclosed Macrocycle	1	391	AAA	None	None
+P68400	1	391	4md7	Crystal Structure of full-length symmetric CK2 holoenzyme	1	391	H	None	None
+P68400	1	391	4md7	Crystal Structure of full-length symmetric CK2 holoenzyme	1	391	F	None	None
+P68400	1	391	4md7	Crystal Structure of full-length symmetric CK2 holoenzyme	1	391	G	None	None
+P68400	1	391	4md7	Crystal Structure of full-length symmetric CK2 holoenzyme	1	391	E	None	None
+P68400	1	391	4md8	Crystal Structure of full-length symmetric CK2 holoenzyme with mutated alpha subunit (F121E)	1	391	H	None	None
+P68400	1	391	4md8	Crystal Structure of full-length symmetric CK2 holoenzyme with mutated alpha subunit (F121E)	1	391	F	None	None
+P68400	1	391	4md8	Crystal Structure of full-length symmetric CK2 holoenzyme with mutated alpha subunit (F121E)	1	391	G	None	None
+P68400	1	391	4md8	Crystal Structure of full-length symmetric CK2 holoenzyme with mutated alpha subunit (F121E)	1	391	E	None	None
+P68400	1	391	6spw	Structure of protein kinase CK2 catalytic subunit with the CK2beta-competitive bisubstrate inhibitor ARC3140	1	391	A	None	None
+P68400	1	337	3pe2	Crystal structure of human protein kinase CK2 in complex with the inhibitor CX-5011	1	337	A	None	None
+P68400	1	337	6qy7	Human CSNK2A1 bound to ERB-041	2	338	A	None	None
+P68400	1	337	6qy7	Human CSNK2A1 bound to ERB-041	2	338	B	None	None
+P68400	1	337	3pe1	Crystal structure of human protein kinase CK2 alpha subunit in complex with the inhibitor CX-4945	1	337	A	None	None
+P68400	1	337	1jwh	Crystal Structure of Human Protein Kinase CK2 Holoenzyme	1	337	A	None	337
+P68400	1	337	1jwh	Crystal Structure of Human Protein Kinase CK2 Holoenzyme	1	337	B	None	None
+P68400	1	337	3r0t	Crystal structure of human protein kinase CK2 alpha subunit in complex with the inhibitor CX-5279	1	337	A	None	None
+P68400	1	336	6hor	Human protein kinase CK2 alpha in complex with feruloylmethane	1	336	A	None	None
+P68400	1	336	6hoq	Human protein kinase CK2 alpha in complex with ferulic acid	1	336	A	None	None
+P68400	1	336	6hop	Human protein kinase CK2 alpha in complex with curcumin degradation products	1	336	A	None	None
+P68400	1	336	6rfe	Human protein kinase CK2 alpha in complex with 2-cyano-2-propenamide compound 4	1	336	A	None	None
+P68400	1	336	6rcb	Human protein kinase CK2 alpha in complex with 2-cyano-2-propenamide compound 14	1	336	A	None	None
+P68400	1	336	6rff	Human protein kinase CK2 alpha in complex with 2-cyano-2-propenamide compound 7	1	336	A	None	None
+P68400	1	336	6hnw	Human protein kinase CK2 alpha in complex with coumestrol	1	336	A	None	None
+P68400	1	336	6rb1	Human protein kinase CK2 alpha in complex with 2-cyano-2-propenamide compound 1	1	336	A	None	None
+P68400	1	336	6rcm	Human protein kinase CK2 alpha in complex with 2-cyano-2-propenamide compound 3	1	336	A	None	None
+P68400	1	336	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	336	P	None	None
+P68400	1	336	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	336	M	None	None
+P68400	1	336	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	336	H	None	None
+P68400	1	336	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	336	F	None	None
+P68400	1	336	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	336	E	None	None
+P68400	1	336	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	336	G	None	None
+P68400	1	336	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	336	L	None	None
+P68400	1	336	4md9	Crystal Structure of symmetric CK2 holoenzyme with mutated alpha subunit (F121E truncated at aa 336)	1	336	K	None	None
+P68400	1	336	3qa0	Crystal structure of the apo-form of human CK2 alpha at pH 6.5	1	336	A	None	None
+P68400	1	336	3qa0	Crystal structure of the apo-form of human CK2 alpha at pH 6.5	1	336	B	None	None
+P68400	1	336	4kwp	Crystal Structure of Human CK2-alpha in complex with a benzimidazole inhibitor (K164) at 1.25 A resolution	1	336	A	None	None
+P68400	1	336	6hny	Human protein kinase CK2 alpha in complex with boldine	1	336	A	None	None
+P68400	1	336	6hou	Human protein kinase CK2 alpha in complex with vanillin	1	336	A	None	None
+P68400	1	336	3q9y	Crystal structure of human CK2 alpha in complex with Quinalizarin at pH 8.5	1	336	A	None	None
+P68400	1	336	3q9w	Crystal structure of human CK2 alpha in complex with emodin at pH 8.5	1	336	A	None	None
+P68400	1	336	5n1v	Crystal structure of the protein kinase CK2 catalytic subunit in complex with pyrazolo-pyrimidine macrocyclic ligand	1	336	A	None	None
+P68400	1	336	5n1v	Crystal structure of the protein kinase CK2 catalytic subunit in complex with pyrazolo-pyrimidine macrocyclic ligand	1	336	B	None	None
+P68400	1	336	6hot	Human protein kinase CK2 alpha in complex with ferulic aldehyde	1	336	A	None	None
+P68400	1	336	3q9z	Crystal structure of human CK2 alpha in complex with Quinalizarin at pH 6.5	1	336	A	None	None
+P68400	1	336	3q9z	Crystal structure of human CK2 alpha in complex with Quinalizarin at pH 6.5	1	336	B	None	None
+P68400	1	336	3q9x	Crystal structure of human CK2 alpha in complex with emodin at pH 6.5	1	336	A	None	None
+P68400	1	336	3q9x	Crystal structure of human CK2 alpha in complex with emodin at pH 6.5	1	336	B	None	None
+P68400	1	335	6jwa	Crystal structure of CK2a1 with 5-iodotubercidin	6	340	A	None	None
+P68400	1	335	6a1c	Crystal structure of the CK2a1-go289 complex	6	340	A	None	335
+P68400	1	335	6l1z	Crystal structure of CK2a1 with hematein	6	340	A	None	None
+P68400	1	335	5owh	High salt structure of human protein kinase CK2alpha in complex with 3-aminopropyl-4,5,6,7-tetrabromobenzimidazol	1	335	A	None	335
+P68400	1	335	3at2	Crystal structure of CK2alpha	6	340	A	None	335
+P68400	1	335	3amy	Crystal structure of human CK2 alpha complexed with apigenin	6	340	A	None	None
+P68400	1	335	3at3	Crystal structure of CK2alpha with pyradine derivative	6	340	A	1	None
+P68400	1	335	4ub7	High-salt structure of protein kinase CK2 catalytic subunit with 4'-carboxy-6,8-bromo-flavonol (FLC26) showing an extreme distortion of the ATP-binding loop combined with a pi-halogen bond	1	335	A	None	335
+P68400	1	335	3wik	Crystal structure of the CK2alpha/compound10 complex	6	340	A	None	335
+P68400	1	335	3war	Crystal structure of human CK2a	6	340	A	None	335
+P68400	1	335	5cqw	Tetragonal Complex Structure of Protein Kinase CK2 Catalytic Subunit with a Benzotriazole-Based Inhibitor Generated by click-chemistry	1	335	A	None	None
+P68400	1	335	5cqw	Tetragonal Complex Structure of Protein Kinase CK2 Catalytic Subunit with a Benzotriazole-Based Inhibitor Generated by click-chemistry	1	335	B	None	None
+P68400	1	335	5cqu	Monoclinic Complex Structure of Protein Kinase CK2 Catalytic Subunit with a Benzotriazole-Based Inhibitor Generated by click-chemistry	1	335	A	None	None
+P68400	1	335	2zjw	Crystal structure of human CK2 alpha complexed with Ellagic acid	6	340	A	1	None
+P68400	1	335	3at4	Crystal structure of CK2alpha with pyradine derivertive	6	340	A	None	None
+P68400	1	335	3axw	Crystal structure of human CK2alpha complexed with a potent inhibitor	6	340	A	None	None
+P68400	1	335	6hbn	HIGH-SALT STRUCTURE OF PROTEIN KINASE CK2 CATALYTIC SUBUNIT (ISOFORM CK2ALPHA/CSKN2A1 GENE PRODUCT) IN COMPLEX WITH THE INDENOINDOLE-TYPE INHIBITOR THN27	1	335	A	None	335
+P68400	1	335	6hbn	HIGH-SALT STRUCTURE OF PROTEIN KINASE CK2 CATALYTIC SUBUNIT (ISOFORM CK2ALPHA/CSKN2A1 GENE PRODUCT) IN COMPLEX WITH THE INDENOINDOLE-TYPE INHIBITOR THN27	1	335	B	None	335
+P68400	1	335	6hme	LOW-SALT STRUCTURE OF PROTEIN KINASE CK2 CATALYTIC SUBUNIT (ISOFORM CK2ALPHA; CSNK2A1 gene product) IN COMPLEX WITH THE INDENOINDOLE-TYPE INHIBITOR THN27	15	349	A	None	None
+P68400	1	335	6hme	LOW-SALT STRUCTURE OF PROTEIN KINASE CK2 CATALYTIC SUBUNIT (ISOFORM CK2ALPHA; CSNK2A1 gene product) IN COMPLEX WITH THE INDENOINDOLE-TYPE INHIBITOR THN27	15	349	B	None	None
+P68400	1	335	5owl	Low salt structure of human protein kinase CK2alpha in complex with 3-aminopropyl-4,5,6,7-tetrabromobenzimidazol	1	335	A	None	None
+P68400	1	335	5owl	Low salt structure of human protein kinase CK2alpha in complex with 3-aminopropyl-4,5,6,7-tetrabromobenzimidazol	1	335	B	None	None
+P68400	1	335	3c13	Low pH-value crystal structure of emodin in complex with the catalytic subunit of protein kinase CK2	1	335	A	None	None
+P68400	1	335	5n9k	Crystal structure of human Protein kinase CK2 catalytic subunit in complex with the ATP-competitive, tight-binding dibenzofuran inhibitor TF107 (5)	1	335	A	None	None
+P68400	1	335	5n9n	Crystal structure of human Protein kinase CK2 catalytic subunit in complex with the ATP-competitive, tight-binding dibenzofuran inhibitor TF85 (4a)	1	335	A	None	None
+P68400	1	335	5n9l	Crystal structure of human Protein kinase CK2 catalytic subunit in complex with the ATP-competitive dibenzofuran inhibitor TF (4b)	1	335	A	None	None
+P68400	1	335	4fbx	Complex structure of human protein kinase CK2 catalytic subunit crystallized in the presence of a bisubstrate inhibitor	1	335	A	None	None
+P68400	1	335	3juh	Crystal structure of a mutant of human protein kinase CK2alpha with altered cosubstrate specificity	1	335	A	None	335
+P68400	1	335	3juh	Crystal structure of a mutant of human protein kinase CK2alpha with altered cosubstrate specificity	1	335	B	None	335
+P68400	1	335	5b0x	Crystal structure of the CK2a/benzoic acid derivative complex	6	340	A	None	None
+P68400	1	335	3fwq	Inactive conformation of human protein kinase CK2 catalytic subunit	1	335	A	None	335
+P68400	1	335	3fwq	Inactive conformation of human protein kinase CK2 catalytic subunit	1	335	B	None	335
+P68400	1	335	4uba	Low-salt structure of protein kinase CK2 catalytic subunit with 4'-carboxy-6,8-bromo-flavonol (FLC26)	1	335	A	None	None
+P68400	1	335	4uba	Low-salt structure of protein kinase CK2 catalytic subunit with 4'-carboxy-6,8-bromo-flavonol (FLC26)	1	335	B	None	None
+P68400	1	335	5m4c	Complex structure of human protein kinase CK2 catalytic subunit with a thieno[2,3-d]pyrimidin inhibitor crystallized under low-salt conditions	1	335	A	None	None
+P68400	1	335	3wil	Crystal structure of the CK2alpha/compound3 complex	6	340	A	None	None
+P68400	1	335	5m4f	Complex structure of human protein kinase CK2 catalytic subunit with the inhibitor 4'-carboxy-6,8-chloro-flavonol (FLC21) crystallized under low-salt conditions	1	335	A	None	None
+P68400	1	335	4ib5	Structure of human protein kinase CK2 catalytic subunit in complex with a CK2beta-competitive cyclic peptide	1	335	A	None	None
+P68400	1	335	4ib5	Structure of human protein kinase CK2 catalytic subunit in complex with a CK2beta-competitive cyclic peptide	1	335	B	None	None
+P68400	1	335	4ib5	Structure of human protein kinase CK2 catalytic subunit in complex with a CK2beta-competitive cyclic peptide	1	335	C	None	None
+P68400	1	335	5m4i	Complex structure of human protein kinase CK2 catalytic subunit with the inhibitor 4'-carboxy-6,8-chloro-flavonol (FLC21) crystallized under high-salt conditions	1	335	A	None	None
+P68400	1	335	3u9c	Structure of a C-terminal deletion mutant of human protein kinase CK2 catalytic subunit with the ATP-competitive inhibitor resorufin	1	335	A	None	None
+P68400	1	335	3u9c	Structure of a C-terminal deletion mutant of human protein kinase CK2 catalytic subunit with the ATP-competitive inhibitor resorufin	1	335	B	None	None
+P68400	1	335	4nh1	Crystal structure of a heterotetrameric CK2 holoenzyme complex carrying the Andante-mutation in CK2beta and consistent with proposed models of autoinhibition and trans-autophosphorylation	1	335	A	None	None
+P68400	1	335	4nh1	Crystal structure of a heterotetrameric CK2 holoenzyme complex carrying the Andante-mutation in CK2beta and consistent with proposed models of autoinhibition and trans-autophosphorylation	1	335	B	None	None
+P68400	1	335	3wow	Crystal structure of human CK2a with AMPPNP	6	340	A	None	335
+P68400	1	335	5m44	Complex structure of human protein kinase CK2 catalytic subunit with a thieno[2,3-d]pyrimidin inhibitor crystallized under high-salt conditions	1	335	A	None	None
+P68400	1	335	4rll	Crystal structure of human CK2alpha in complex with the ATP-competitive inhibitor 4-[(E)-(fluoren-9-ylidenehydrazinylidene)-methyl] benzoate	1	335	A	None	None
+P68400	1	335	3bqc	High pH-value crystal structure of emodin in complex with the catalytic subunit of protein kinase CK2	1	335	A	None	None
+P68400	1	335	3rps	Structure of human CK2alpha in complex with the ATP-competitive inhibitor 3-(4,5,6,7-tetrabromo-1H-benzotriazol-1-yl)propan-1-ol	1	335	A	None	335
+P68400	1	335	3rps	Structure of human CK2alpha in complex with the ATP-competitive inhibitor 3-(4,5,6,7-tetrabromo-1H-benzotriazol-1-yl)propan-1-ol	1	335	B	None	335
+P68400	1	335	6spx	Structure of protein kinase CK2 catalytic subunit in complex with the CK2beta-competitive bisubstrate inhibitor ARC1502	1	335	A	None	None
+P68400	1	335	6l24	Crystal structure of CK2a1 H115Y/V116I with hematein	6	340	A	None	335
+P68400	1	335	6l21	Crystal structure of CK2a1 H160A with hematein	6	340	A	None	None
+P68400	1	335	6l22	Crystal structure of CK2a1 H115Y with hematein	6	340	A	None	335
+P68400	1	335	3w8l	Crystal structure of human CK2 in complex with inositol hexakisphosphate	1	335	A	None	None
+P68400	1	335	3w8l	Crystal structure of human CK2 in complex with inositol hexakisphosphate	1	335	B	None	None
+P68400	1	335	4dgl	Crystal Structure of the CK2 Tetrameric Holoenzyme	1	335	C	None	335
+P68400	1	335	4dgl	Crystal Structure of the CK2 Tetrameric Holoenzyme	1	335	D	None	None
+P68400	1	334	3h30	Crystal structure of the catalytic subunit of human protein kinase CK2 with 5,6-dichloro-1-beta-D-ribofuranosylbenzimidazole	1	334	A	None	334
+P68400	1	334	3h30	Crystal structure of the catalytic subunit of human protein kinase CK2 with 5,6-dichloro-1-beta-D-ribofuranosylbenzimidazole	1	334	B	None	334
+P68400	1	333	3nga	Human CK2 catalytic domain in complex with CX-4945	1	333	A	None	None
+P68400	1	333	3nga	Human CK2 catalytic domain in complex with CX-4945	1	333	B	None	None
+P68400	1	333	5h8e	Crystal structure of CK2 with compound 7h	1	333	A	None	None
+P68400	1	333	5h8e	Crystal structure of CK2 with compound 7h	1	333	B	None	None
+P68400	1	333	5h8b	Crystal structure of CK2 with compound 2	1	333	A	None	None
+P68400	1	333	5h8b	Crystal structure of CK2 with compound 2	1	333	B	None	None
+P68400	1	333	4gub	Casein Kinase II bound to Inhibitor	1	333	A	None	None
+P68400	1	333	5t1h	Crystal structure of CK2	1	333	A	None	None
+P68400	1	333	5t1h	Crystal structure of CK2	1	333	B	None	None
+P68400	1	333	5h8g	Crystal structure of CK2 with compound 7b	1	333	A	None	None
+P68400	1	333	4grb	Casein kinase 2 (CK2) bound to inhibitor	1	333	A	None	None
+P68400	1	333	5kwh	Crystal structure of CK2	1	333	A	None	None
+P68400	1	333	5kwh	Crystal structure of CK2	1	333	B	None	None
+P68400	1	333	3u4u	Casein kinase 2 in complex with AZ-Inhibitor	1	333	A	None	None
+P68400	1	331	3mb7	Human CK2 catalytic domain in complex with a difurane derivative inhibitor (AMR)	1	331	A	None	331
+P68400	1	331	3owk	Human CK2 catalytic domain in complex with a benzopyridoindole derivative inhibitor	1	331	A	None	331
+P68400	1	331	3owj	Human CK2 catalytic domain in complex with a pyridocarbazole derivative inhibitor	1	331	A	None	None
+P68400	1	331	3mb6	Human CK2 catalytic domain in complex with a difurane derivative inhibitor (CPA)	1	331	A	None	331
+P68400	1	331	3owl	Human CK2 catalytic domain in complex with a benzopyridoindole derivative inhibitor	1	331	A	None	331
+P68400	1	329	5zn0	Joint X-ray/neutron structure of protein kinase ck2 alpha subunit	1	329	A	None	329
+P68400	1	329	5zn3	X-ray structure of protein kinase ck2 alpha subunit H148S mutant	1	329	A	None	329
+P68400	1	329	1na7	Crystal structure of the catalytic subunit of human protein kinase CK2	1	329	A	None	329
+P68400	1	329	5zn5	X-ray structure of protein kinase ck2 alpha subunit H148A mutant	1	329	A	None	329
+P68400	1	329	5zn4	X-ray structure of protein kinase ck2 alpha subunit H148N mutant	1	329	A	None	329
+P68400	1	329	5zn2	X-ray structure of protein kinase ck2 alpha subunit H148A mutant	1	329	A	None	329
+P68400	1	329	5zn1	X-ray structure of protein kinase ck2 alpha subunit in D2O	1	329	A	None	329
+P68400	1	325	3u87	Structure of a chimeric construct of human CK2alpha and human CK2alpha' in complex with a non-hydrolysable ATP-analogue	1	325	A	None	325
+P68400	1	325	3u87	Structure of a chimeric construct of human CK2alpha and human CK2alpha' in complex with a non-hydrolysable ATP-analogue	1	325	B	None	325
+P68400	2	335	2pvr	Crystal structure of the catalytic subunit of protein kinase CK2 (C-terminal deletion mutant 1-335) in complex with two sulfate ions	1	334	A	2	None
+P68400	2	331	3nsz	Human CK2 catalytic domain in complex with AMPPN	1	330	A	2	None
+P68400	2	335	5nqc	CK2alpha in complex with NMR154	1	334	A	None	None
+P68400	2	332	5ku8	Crystal structure of CK2	1	331	B	2	332
+P68400	2	332	5ku8	Crystal structure of CK2	1	331	A	2	332
+P68400	2	329	5mo5	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	A	2	None
+P68400	2	329	5mo5	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	B	None	None
+P68400	2	329	5os7	The crystal structure of CK2alpha in complex with compound 4	25	352	A	None	None
+P68400	2	329	5os7	The crystal structure of CK2alpha in complex with compound 4	25	352	B	None	None
+P68400	2	329	5csp	Crystal Structure of CK2alpha with Compound 5 bound	1	328	A	None	329
+P68400	2	329	6ehk	The crystal structure of CK2alpha in complex with CAM4712 and compound 37	1	328	A	None	329
+P68400	2	329	6gmd	The crystal structure of CK2alpha in complex with compound 3	25	352	A	None	None
+P68400	2	329	6gmd	The crystal structure of CK2alpha in complex with compound 3	25	352	B	None	None
+P68400	2	329	5csv	Crystal Structure of CK2alpha with Compound 6 bound	1	328	A	None	329
+P68400	2	329	5moh	Crystal structure of CK2alpha with ZT0583 bound.	1	328	A	None	None
+P68400	2	329	5moe	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	A	None	None
+P68400	2	329	5moe	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	B	None	None
+P68400	2	329	5osl	The crystal structure of CK2alpha in complex with compound 7	1	328	A	2	329
+P68400	2	329	5mod	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	B	None	None
+P68400	2	329	5mod	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	A	2	None
+P68400	2	329	6fvf	The Structure of CK2alpha with CCh503 bound	1	328	A	None	329
+P68400	2	329	5cu2	Crystal structure of CK2alpha with 2-hydroxy-5-methylbenzoic acid and (methyl 4-((3-(3-chloro-4-(phenyl)benzylamino)propyl)amino)-4-oxobutanoat bound	25	352	B	None	None
+P68400	2	329	5cu2	Crystal structure of CK2alpha with 2-hydroxy-5-methylbenzoic acid and (methyl 4-((3-(3-chloro-4-(phenyl)benzylamino)propyl)amino)-4-oxobutanoat bound	25	352	A	2	329
+P68400	2	329	5ct0	Crystal structure of CK2alpha with 3-(3-chloro-4-(phenyl)benzylamino)propan-1-ol bound	25	352	A	None	None
+P68400	2	329	5ct0	Crystal structure of CK2alpha with 3-(3-chloro-4-(phenyl)benzylamino)propan-1-ol bound	25	352	B	2	None
+P68400	2	329	5ot6	The crystal structure of CK2alpha in complex with compound 19	25	352	B	2	None
+P68400	2	329	5ot6	The crystal structure of CK2alpha in complex with compound 19	25	352	A	2	None
+P68400	2	329	5csh	Crystal Structure of CK2alpha with Compound 4 bound	25	352	B	2	None
+P68400	2	329	5csh	Crystal Structure of CK2alpha with Compound 4 bound	25	352	A	None	None
+P68400	2	329	5osz	The crystal structure of CK2alpha in complex with compound 23	1	328	A	None	329
+P68400	2	329	5osu	The crystal structure of CK2alpha in complex with analogues of compound 1	1	328	A	None	329
+P68400	2	329	6fvg	The Structure of CK2alpha with CCh507 bound	1	328	A	None	329
+P68400	2	329	5osp	The crystal structure of CK2alpha in complex with an analogue of compound 1	1	328	A	None	329
+P68400	2	329	5oul	The crystal structure of CK2alpha in complex with compound 9	1	328	A	None	329
+P68400	2	329	5osr	The crystal structure of CK2alpha in complex with an analogue of compound 1	1	328	A	None	329
+P68400	2	329	5oue	The crystal structure of CK2alpha in complex with compound 20	25	352	B	2	None
+P68400	2	329	5oue	The crystal structure of CK2alpha in complex with compound 20	25	352	A	2	329
+P68400	2	329	5oum	The crystal structure of CK2alpha in complex with compound 21	25	352	A	None	None
+P68400	2	329	5oum	The crystal structure of CK2alpha in complex with compound 21	25	352	B	2	None
+P68400	2	329	5oyf	The crystal structure of CK2alpha in complex with compound 31	1	328	A	None	329
+P68400	2	329	5ot5	The crystal structure of CK2alpha in complex with compound 24	25	352	A	None	None
+P68400	2	329	5ot5	The crystal structure of CK2alpha in complex with compound 24	25	352	B	None	None
+P68400	2	329	5ouu	The crystal structure of CK2alpha in complex with compound 22	25	352	A	2	None
+P68400	2	329	5ouu	The crystal structure of CK2alpha in complex with compound 22	25	352	B	None	None
+P68400	2	329	5cvf	Crystal Structure of CK2alpha with Compound 5 bound	1	328	A	None	329
+P68400	2	329	5cvg	Crystal Structure of CK2alpha with a novel closed conformation of the aD loop	24	351	A	None	329
+P68400	2	329	5cvh	Crystal Structure of CK2alpha	25	352	A	2	None
+P68400	2	329	5cvh	Crystal Structure of CK2alpha	25	352	B	None	None
+P68400	2	329	5cu6	Crystal Structure of CK2alpha	1	328	A	None	329
+P68400	2	329	5mp8	Crystal Structure of CK2alpha with ZT0432 bound	25	352	A	None	None
+P68400	2	329	5mp8	Crystal Structure of CK2alpha with ZT0432 bound	25	352	B	None	None
+P68400	2	329	5cs6	Crystal Structure of CK2alpha with Compound 3 bound	25	352	A	2	None
+P68400	2	329	5cs6	Crystal Structure of CK2alpha with Compound 3 bound	25	352	B	None	None
+P68400	2	329	5cu3	Crystal Structure of CK2alpha with compound 10 bound	25	352	A	None	None
+P68400	2	329	5cu3	Crystal Structure of CK2alpha with compound 10 bound	25	352	B	None	None
+P68400	2	329	5cu4	Crystal Structure of CK2alpha with Compound 10 bound	1	328	A	None	329
+P68400	2	329	5ctp	Crystal structure of CK2alpha with N-(3-(3-chloro-4-(phenyl)benzylamino)propyl)acetamide bound	25	352	A	None	None
+P68400	2	329	5ctp	Crystal structure of CK2alpha with N-(3-(3-chloro-4-(phenyl)benzylamino)propyl)acetamide bound	25	352	B	None	329
+P68400	2	329	5cu0	Crystal structure of CK2alpha with 2-hydroxy-5-methylbenzoic acid and N-(3-(3-chloro-4-(phenyl)benzylamino)propyl)acetamide bound	25	352	A	2	None
+P68400	2	329	5cu0	Crystal structure of CK2alpha with 2-hydroxy-5-methylbenzoic acid and N-(3-(3-chloro-4-(phenyl)benzylamino)propyl)acetamide bound	25	352	B	None	None
+P68400	2	329	5cx9	Crystal structure of CK2alpha with (methyl 4-((3-(3-chloro-4-(phenyl)benzylamino)propyl)amino)-4-oxobutanoate bound	25	352	B	None	None
+P68400	2	329	5cx9	Crystal structure of CK2alpha with (methyl 4-((3-(3-chloro-4-(phenyl)benzylamino)propyl)amino)-4-oxobutanoate bound	25	352	A	2	329
+P68400	2	329	5oqu	The crystal structure of CK2alpha in complex with compound 5	25	352	A	None	None
+P68400	2	329	5oqu	The crystal structure of CK2alpha in complex with compound 5	25	352	B	None	None
+P68400	2	329	5oth	The crystal structure of CK2alpha in complex with compound 26	25	352	A	None	None
+P68400	2	329	5oth	The crystal structure of CK2alpha in complex with compound 26	25	352	B	None	None
+P68400	2	329	5oti	The crystal structure of CK2alpha in complex with compound 27	1	328	A	None	329
+P68400	2	329	5otl	The crystal structure of CK2alpha in complex with compound 29	25	352	A	None	None
+P68400	2	329	5otl	The crystal structure of CK2alpha in complex with compound 29	25	352	B	None	None
+P68400	2	329	5oto	The crystal structure of CK2alpha in complex with compound 30	25	352	B	None	None
+P68400	2	329	5oto	The crystal structure of CK2alpha in complex with compound 30	25	352	A	2	None
+P68400	2	329	5mo6	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	A	None	None
+P68400	2	329	5mo6	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	B	None	None
+P68400	2	329	5mo8	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	A	None	None
+P68400	2	329	5mo8	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	B	None	None
+P68400	2	329	5otd	The crystal structure of CK2alpha in complex with compound 25	25	352	B	None	None
+P68400	2	329	5otd	The crystal structure of CK2alpha in complex with compound 25	25	352	A	2	None
+P68400	2	329	5oty	The crystal structure of CK2alpha in complex with CAM4712	1	328	A	None	329
+P68400	2	329	5otz	The crystal structure of CK2alpha in complex with compound 1	1	328	A	None	329
+P68400	2	329	5mo7	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	A	2	None
+P68400	2	329	5mo7	Crystal Structure of CK2alpha with N-(3-(((2-chloro-[1,1'-biphenyl]-4-yl)methyl)amino)propyl)methanesulfonamide bound	25	352	B	None	None
+P68400	2	329	5otp	The crystal structure of CK2alpha in complex with an analogue of compound 22	25	352	A	2	None
+P68400	2	329	5otp	The crystal structure of CK2alpha in complex with an analogue of compound 22	25	352	B	None	None
+P68400	2	329	5otq	The crystal structure of CK2alpha in complex with compound 33	1	328	A	None	329
+P68400	2	329	5otr	The crystal structure of CK2alpha in complex with compound 14	1	328	A	None	329
+P68400	2	329	5ots	The crystal structure of CK2alpha in complex with an analogue of compound 22	1	328	A	None	329
+P68400	2	329	5mpj	1-(2-chloro-[1,1'-biphenyl]-4-yl)-N-methylethanamine	25	352	A	None	None
+P68400	2	329	5mpj	1-(2-chloro-[1,1'-biphenyl]-4-yl)-N-methylethanamine	25	352	B	None	None
+P68400	2	329	6gih	Crystal Structure of CK2alpha with CAM187 bound	1	328	A	None	329
+P68400	2	329	6ehu	The crystal structure of CK2alpha in complex with compound 32	1	328	A	None	329
+P68400	2	329	6ehu	The crystal structure of CK2alpha in complex with compound 32	1	328	B	None	329
+P68400	2	329	5mmr	Crystal Structure of CK2alpha with N-((2-chloro-[1,1'-biphenyl]-4-yl)methyl)butane-1,4-diamine bound	25	352	A	None	None
+P68400	2	329	5mmr	Crystal Structure of CK2alpha with N-((2-chloro-[1,1'-biphenyl]-4-yl)methyl)butane-1,4-diamine bound	25	352	B	None	None
+P68400	2	329	5orj	The crystal structure of CK2alpha in complex with compound 3	25	352	A	None	None
+P68400	2	329	5orj	The crystal structure of CK2alpha in complex with compound 3	25	352	B	None	None
+P68400	2	329	5ork	The crystal structure of CK2alpha in complex with compound 6	25	352	A	None	None
+P68400	2	329	5ork	The crystal structure of CK2alpha in complex with compound 6	25	352	B	None	None
+P68400	2	329	5orh	The crystal structure of CK2alpha in complex with compound 2	25	352	A	None	None
+P68400	2	329	5orh	The crystal structure of CK2alpha in complex with compound 2	25	352	B	None	None
+P68400	2	329	5mow	Crystal Structure of CK2alpha with ZT0432 bound	25	352	A	2	None
+P68400	2	329	5mow	Crystal Structure of CK2alpha with ZT0432 bound	25	352	B	None	None
+P68400	2	329	5mot	Crystal structure of CK2alpha with ZT0627 bound	1	328	A	2	329
+P68400	2	329	5clp	Crystal Structure of CK2alpha with 3,4-dichlorophenethylamine bound	25	352	A	None	329
+P68400	2	329	5clp	Crystal Structure of CK2alpha with 3,4-dichlorophenethylamine bound	25	352	B	None	329
+P68400	2	329	5mmf	Crystal Structure of CK2alpha with Compound 7 bound	25	352	A	None	None
+P68400	2	329	5mmf	Crystal Structure of CK2alpha with Compound 7 bound	25	352	B	None	None
+P68400	2	329	6eii	The crystal structure of CK2alpha in complex with compound 18	25	352	B	2	None
+P68400	2	329	6eii	The crystal structure of CK2alpha in complex with compound 18	25	352	A	2	None
+P68400	2	329	5os8	The crystal structure of CK2alpha in complex with compound 11	1	328	A	None	329
+P68400	2	335	1pjk	Crystal Structure of a C-terminal deletion mutant of human protein kinase CK2 catalytic subunit	1	334	A	2	None
+P68400	3	329	6q38	The Crystal structure of CK2a bound to P1-C4	1	327	A	3	329
+P68400	3	329	6q4q	The Crystal structure of CK2a bound to P2-C4	1	327	A	3	329
+P68400	3	329	6q4q	The Crystal structure of CK2a bound to P2-C4	1	327	B	3	329
+P68400	3	327	5mov	Crystal structure of Ck2alpha with ZT0633 bound	1	325	A	3	327
+P68400	3	330	3q04	Crystal structure of the apo-form of human CK2 alpha at pH 8.5	1	328	A	3	330
+P68400	339	352	5vif	Electrophilic probes for deciphering substrate recognition by O-GlcNAc transferase	1	14	B	13	None
+P68400	339	352	6e37	O-GlcNAc Transferase in complex with covalent inhibitor	1	14	B	13	None
+P68400	339	352	5vie	Electrophilic probes for deciphering substrate recognition by O-GlcNAc transferase	1	14	B	13	None
+P68400	339	352	5vie	Electrophilic probes for deciphering substrate recognition by O-GlcNAc transferase	1	14	D	13	None
+P68400	339	352	5hgv	Structure of an O-GlcNAc transferase point mutant, D554N in complex with peptide	1	14	D	13	26
+P68400	339	352	5hgv	Structure of an O-GlcNAc transferase point mutant, D554N in complex with peptide	1	14	B	13	26
+P68400	340	352	3tax	A Neutral Diphosphate Mimic Crosslinks the Active Site of Human O-GlcNAc Transferase	2	14	B	14	26
+P68400	340	352	3tax	A Neutral Diphosphate Mimic Crosslinks the Active Site of Human O-GlcNAc Transferase	2	14	D	14	26
+P68400	340	352	3pe4	Structure of human O-GlcNAc transferase and its complex with a peptide substrate	2	14	B	14	26
+P68400	340	352	3pe4	Structure of human O-GlcNAc transferase and its complex with a peptide substrate	2	14	D	14	26
+P68400	340	352	4gyw	Crystal structure of human O-GlcNAc Transferase in complex with UDP and a glycopeptide	2	14	B	14	26
+P68400	340	352	4gyw	Crystal structure of human O-GlcNAc Transferase in complex with UDP and a glycopeptide	2	14	D	14	26
+P68400	340	352	4gz3	Crystal structure of human O-GlcNAc Transferase with UDP and a thioglycopeptide	2	14	B	14	26
+P68400	340	352	4gz3	Crystal structure of human O-GlcNAc Transferase with UDP and a thioglycopeptide	2	14	D	14	26
+P68400	340	352	4gyy	Crystal structure of human O-GlcNAc Transferase with UDP-5SGlcNAc and a peptide substrate	2	14	B	14	26
+P68400	340	352	4gyy	Crystal structure of human O-GlcNAc Transferase with UDP-5SGlcNAc and a peptide substrate	2	14	D	14	26
+

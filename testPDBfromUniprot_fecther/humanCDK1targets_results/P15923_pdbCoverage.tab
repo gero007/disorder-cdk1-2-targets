@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P15923	TRANSCRIPTION FACTOR E2-ALPHA	TFE2_HUMAN	Homo sapiens	PF00010	HLH	Helix-loop-helix DNA-binding domain	550	603
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#6 mappings in 5 PDB chains in 5 PDB entries
+P15923	1	37	2mh0	Solution NMR structure of the p300 Taz2:ETAD1 complex	3	39	A	1	37
+P15923	538	616	2ypb	Structure of the SCL:E47 complex bound to DNA	4	82	B	None	None
+P15923	538	616	2ypa	Structure of the SCL:E47:LMO2:LDB1 complex bound to DNA	4	82	B	None	None
+P15923	561	612	6mgn	mouse Id1 (51-104) - human hE47 (348-399) complex	1	52	A	558	609
+P15923	586	613	3u5v	Crystal structure of Max-E47	41	68	A	39	66
+P15923	563	584	3u5v	Crystal structure of Max-E47	18	39	A	16	37
+

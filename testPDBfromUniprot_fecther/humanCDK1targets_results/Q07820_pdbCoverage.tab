@@ -1,0 +1,236 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q07820	FUSION PROTEIN CONSISTING OF Induced myeloid leukemia cell differentiation protein Mcl-1 homolog	MCL1_HUMAN	Homo sapiens	PF00452	Bcl-2	Apoptosis regulator proteins, Bcl-2 family	213	312
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#214 mappings in 214 PDB chains in 100 PDB entries
+Q07820	73	88	3twu	Crystal structure of ARC4 from human Tankyrase 2 in complex with peptide from human MCL1	1	16	B	None	16
+Q07820	163	326	2kbw	Solution Structure of human Mcl-1 complexed with human Bid_BH3 peptide	1	164	A	None	326
+Q07820	171	327	6ovc	hMcl1 inhibitor complex	2	158	A	2	158
+Q07820	171	327	6qfq	Structure of human Mcl-1 in complex with indole acid inhibitor	14	170	A	None	None
+Q07820	171	327	6ud2	co-crystal structure of compound 1 bound to human Mcl-1	1	157	A	None	None
+Q07820	171	327	6qz8	Structure of Mcl-1 in complex with compound 10d	14	170	A	171	None
+Q07820	171	327	6qz5	Structure of Mcl-1 in complex with compound 8a	14	170	A	171	None
+Q07820	171	327	6qyp	Structure of Mcl-1 in complex with compound 13	14	170	A	171	None
+Q07820	171	327	6qz6	Structure of Mcl-1 in complex with compound 8b	14	170	A	171	None
+Q07820	171	327	2mhs	NMR Structure of human Mcl-1	2	158	A	2	158
+Q07820	171	327	6udi	X-ray co-crystal structure of compound 20 with Mcl-1	1	157	A	None	None
+Q07820	171	327	6udv	X-ray co-crystal structure of compound 3 bound to human Mcl-1	1	157	A	None	None
+Q07820	171	327	6udu	X-ray co-crystal structure of compound 8 bound to human Mcl-1	1	157	A	171	None
+Q07820	171	327	6udt	X-ray co-crystal structure of compound 10 bound to human Mcl-1	1	157	A	None	None
+Q07820	171	327	6udy	X-ray co-crystal structure of compound 5 with Mcl-1	1	157	B	171	None
+Q07820	171	327	6udy	X-ray co-crystal structure of compound 5 with Mcl-1	1	157	A	171	None
+Q07820	171	327	6udx	X-ray co-crystal structure of compound 7 with Mcl-1	1	157	B	171	None
+Q07820	171	327	6udx	X-ray co-crystal structure of compound 7 with Mcl-1	1	157	A	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	O	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	K	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	W	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	U	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	S	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	Q	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	M	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	I	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	G	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	E	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	C	171	None
+Q07820	171	327	5c6h	Mcl-1 complexed with Mule	1	157	A	171	None
+Q07820	171	327	6qzb	Structure of Mcl-1 in complex with compound 8d	14	170	A	171	None
+Q07820	171	327	6qfi	Structure of human Mcl-1 in complex with BIM BH3 peptide	6	162	A	None	None
+Q07820	171	327	6oqd	Crystal structure of Mcl1 with inhibitor 8	1	157	A	171	None
+Q07820	171	327	6oqb	Co-crystal structure of Mcl1 with inhibitor 10	1	157	A	None	None
+Q07820	171	327	6oqc	Crystal structure of Mcl1 with inhibitor 9	1	157	B	None	None
+Q07820	171	327	6oqc	Crystal structure of Mcl1 with inhibitor 9	1	157	A	171	None
+Q07820	171	327	6oqn	Crystal structure of Mcl1 with inhibitor 7	1	157	B	171	None
+Q07820	171	327	6oqn	Crystal structure of Mcl1 with inhibitor 7	1	157	A	171	None
+Q07820	171	323	6u63	Mcl-1 bound to compound 17	4	156	A	None	None
+Q07820	171	323	6u63	Mcl-1 bound to compound 17	4	156	D	None	None
+Q07820	171	323	6u63	Mcl-1 bound to compound 17	4	156	C	171	None
+Q07820	171	323	6u63	Mcl-1 bound to compound 17	4	156	B	None	None
+Q07820	171	323	6u6f	The crystal structure of anti-apoptotic Mcl-1 protein in complex with 2, 5-substituted benzoic acid inhibitor 21	4	156	A	171	None
+Q07820	171	323	6u6f	The crystal structure of anti-apoptotic Mcl-1 protein in complex with 2, 5-substituted benzoic acid inhibitor 21	4	156	B	171	None
+Q07820	171	323	6u6f	The crystal structure of anti-apoptotic Mcl-1 protein in complex with 2, 5-substituted benzoic acid inhibitor 21	4	156	C	None	None
+Q07820	171	323	6u65	Mcl-1 bound to compound 19	4	156	A	None	None
+Q07820	171	323	6u65	Mcl-1 bound to compound 19	4	156	D	None	None
+Q07820	171	323	6u65	Mcl-1 bound to compound 19	4	156	C	171	None
+Q07820	171	323	6u65	Mcl-1 bound to compound 19	4	156	B	None	None
+Q07820	171	323	6u67	Mcl-1 bound to compound 24	4	156	A	None	None
+Q07820	171	323	6u67	Mcl-1 bound to compound 24	4	156	B	171	None
+Q07820	171	320	6u64	Mcl-1 bound to compound 17	1	150	A	None	320
+Q07820	171	327	6qfm	Structure of human Mcl-1 in complex with PUMA BH3 peptide	6	162	A	171	None
+Q07820	172	327	6p3p	Crystal structure of Mcl-1 in complex with compound 65	2	157	A	172	None
+Q07820	172	327	6o4u	Co-crystal structure of Mcl1 with inhibitor	1	156	A	172	None
+Q07820	172	327	6o4u	Co-crystal structure of Mcl1 with inhibitor	1	156	B	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	E	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	D	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	B	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	H	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	G	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	K	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	I	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	F	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	C	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	L	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	A	172	None
+Q07820	172	327	4zbf	Mcl-1 complexed with small molecules	2	157	J	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	E	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	D	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	B	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	H	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	G	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	K	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	I	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	F	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	C	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	L	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	A	172	None
+Q07820	172	327	4zbi	Mcl-1 complexed with small molecules	2	157	J	172	None
+Q07820	172	327	4hw4	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	157	A	172	None
+Q07820	172	327	4hw4	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	157	B	172	None
+Q07820	172	327	3kj0	Mcl-1 in complex with Bim BH3 mutant I2dY	3	158	A	172	None
+Q07820	172	327	3kj1	Mcl-1 in complex with Bim BH3 mutant I2dA	3	158	A	172	None
+Q07820	172	327	3kj2	Mcl-1 in complex with Bim BH3 mutant F4aE	3	158	A	172	None
+Q07820	172	327	6bw2	Mcl-1 complexed with small molecules	3	158	C	172	None
+Q07820	172	327	6bw2	Mcl-1 complexed with small molecules	3	158	D	None	None
+Q07820	172	327	6bw2	Mcl-1 complexed with small molecules	3	158	A	172	None
+Q07820	172	327	6bw2	Mcl-1 complexed with small molecules	3	158	B	None	None
+Q07820	172	327	6bw8	Mcl-1 complexed with small molecules	3	158	C	172	None
+Q07820	172	327	6bw8	Mcl-1 complexed with small molecules	3	158	D	172	None
+Q07820	172	327	6bw8	Mcl-1 complexed with small molecules	3	158	A	172	None
+Q07820	172	327	6bw8	Mcl-1 complexed with small molecules	3	158	B	172	None
+Q07820	172	327	5iez	Discovery of Potent Myeloid Cell Leukemia-1 (Mcl-1) inhibitors using Structure-Based Design	4	159	C	172	None
+Q07820	172	327	5iez	Discovery of Potent Myeloid Cell Leukemia-1 (Mcl-1) inhibitors using Structure-Based Design	4	159	D	172	None
+Q07820	172	327	5iez	Discovery of Potent Myeloid Cell Leukemia-1 (Mcl-1) inhibitors using Structure-Based Design	4	159	A	172	None
+Q07820	172	327	5iez	Discovery of Potent Myeloid Cell Leukemia-1 (Mcl-1) inhibitors using Structure-Based Design	4	159	B	172	None
+Q07820	172	327	6o6g	Co-crystal structure of Mcl1 with inhibitor	1	156	A	172	None
+Q07820	172	327	6o6f	Co-crystal structure of Mcl1 with inhibitor	3	158	A	172	None
+Q07820	172	327	6o6f	Co-crystal structure of Mcl1 with inhibitor	3	158	B	172	None
+Q07820	172	327	3kz0	MCL-1 complex with MCL-1-specific selected peptide	3	158	A	172	None
+Q07820	172	327	3kz0	MCL-1 complex with MCL-1-specific selected peptide	3	158	B	172	None
+Q07820	172	327	3wiy	Crystal structure of Mcl-1 in complex with compound 10	6	161	E	172	None
+Q07820	172	327	3wiy	Crystal structure of Mcl-1 in complex with compound 10	6	161	D	172	None
+Q07820	172	327	3wiy	Crystal structure of Mcl-1 in complex with compound 10	6	161	B	172	None
+Q07820	172	327	3wiy	Crystal structure of Mcl-1 in complex with compound 10	6	161	F	172	None
+Q07820	172	327	3wiy	Crystal structure of Mcl-1 in complex with compound 10	6	161	C	172	None
+Q07820	172	327	3wiy	Crystal structure of Mcl-1 in complex with compound 10	6	161	A	172	None
+Q07820	172	327	5if4	Discovery of Potent Myeloid Cell Leukemia-1 (Mcl-1) inhibitors using Structure-Based Design	4	159	A	172	None
+Q07820	172	327	5if4	Discovery of Potent Myeloid Cell Leukemia-1 (Mcl-1) inhibitors using Structure-Based Design	4	159	B	172	None
+Q07820	172	325	5uum	Human Mcl-1 in complex with a Bfl-1-specific selected peptide	3	156	A	172	325
+Q07820	172	325	5uum	Human Mcl-1 in complex with a Bfl-1-specific selected peptide	3	156	B	172	325
+Q07820	172	327	3mk8	The MCL-1 BH3 Helix is an Exclusive MCL-1 Inhibitor and Apoptosis Sensitizer	3	158	A	172	None
+Q07820	208	228	3mk8	The MCL-1 BH3 Helix is an Exclusive MCL-1 Inhibitor and Apoptosis Sensitizer	1	21	B	None	None
+Q07820	172	324	6mbd	Human Mcl-1 in complex with the designed peptide dM1	3	155	A	172	324
+Q07820	172	324	6mbd	Human Mcl-1 in complex with the designed peptide dM1	3	155	B	172	None
+Q07820	172	350	5jsb	Crystal structure of Mcl1-inhibitor complex	1	179	E	172	None
+Q07820	172	350	5jsb	Crystal structure of Mcl1-inhibitor complex	1	179	G	172	None
+Q07820	172	350	5jsb	Crystal structure of Mcl1-inhibitor complex	1	179	K	172	None
+Q07820	172	350	5jsb	Crystal structure of Mcl1-inhibitor complex	1	179	I	172	None
+Q07820	172	350	5jsb	Crystal structure of Mcl1-inhibitor complex	1	179	C	172	None
+Q07820	172	350	5jsb	Crystal structure of Mcl1-inhibitor complex	1	179	A	172	None
+Q07820	172	328	6ne5	Discovery of Potent Myeloid Cell Leukemia-1 (Mcl-1) Inhibitors that Demonstrate in vivo Activity in Mouse Xenograft Models of Human Cancer	3	159	C	172	None
+Q07820	172	328	6ne5	Discovery of Potent Myeloid Cell Leukemia-1 (Mcl-1) Inhibitors that Demonstrate in vivo Activity in Mouse Xenograft Models of Human Cancer	3	159	D	172	None
+Q07820	172	328	6ne5	Discovery of Potent Myeloid Cell Leukemia-1 (Mcl-1) Inhibitors that Demonstrate in vivo Activity in Mouse Xenograft Models of Human Cancer	3	159	A	172	None
+Q07820	172	328	6ne5	Discovery of Potent Myeloid Cell Leukemia-1 (Mcl-1) Inhibitors that Demonstrate in vivo Activity in Mouse Xenograft Models of Human Cancer	3	159	B	172	None
+Q07820	172	327	5fdr	Mcl-1 complexed with small molecule inhibitor	3	158	C	172	None
+Q07820	172	327	5fdr	Mcl-1 complexed with small molecule inhibitor	3	158	D	172	None
+Q07820	172	327	5fdr	Mcl-1 complexed with small molecule inhibitor	3	158	A	172	None
+Q07820	172	327	5fdr	Mcl-1 complexed with small molecule inhibitor	3	158	B	172	None
+Q07820	172	323	4hw2	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	E	172	None
+Q07820	172	323	4hw2	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	D	172	None
+Q07820	172	323	4hw2	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	B	172	None
+Q07820	172	323	4hw2	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	F	172	None
+Q07820	172	323	4hw2	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	C	172	None
+Q07820	172	323	4hw2	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	A	172	None
+Q07820	172	323	6mbe	Human Mcl-1 in complex with the designed peptide dM7	3	154	A	172	323
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	E	172	None
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	D	172	323
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	B	172	None
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	H	172	None
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	G	172	None
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	K	172	None
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	A	172	None
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	I	172	None
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	F	172	None
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	C	172	None
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	L	172	323
+Q07820	172	323	4hw3	Discovery of potent Mcl-1 inhibitors using fragment-based methods and structure-based design	2	153	J	172	None
+Q07820	172	321	5w89	Crystal structure of human Mcl-1 in complex with modified Bim BH3 peptide SAH-MS1-18	2	151	A	172	321
+Q07820	172	327	3wix	Crystal structure of Mcl-1 in complex with compound 4	6	161	C	172	None
+Q07820	172	327	3wix	Crystal structure of Mcl-1 in complex with compound 4	6	161	D	172	None
+Q07820	172	327	3wix	Crystal structure of Mcl-1 in complex with compound 4	6	161	A	172	None
+Q07820	172	327	3wix	Crystal structure of Mcl-1 in complex with compound 4	6	161	B	172	None
+Q07820	172	320	5w8f	Crystal structure of human Mcl-1 in complex with modified Bim BH3 peptide SAH-MS1-14	2	150	A	172	320
+Q07820	172	320	5fdo	Mcl-1 complexed with small molecule inhibitor	2	150	B	172	320
+Q07820	172	320	5fdo	Mcl-1 complexed with small molecule inhibitor	2	150	A	172	320
+Q07820	172	320	5fdo	Mcl-1 complexed with small molecule inhibitor	2	150	D	172	320
+Q07820	172	320	5fdo	Mcl-1 complexed with small molecule inhibitor	2	150	C	172	320
+Q07820	172	320	5fc4	Mcl-1 complexed with small molecule inhibitor	2	150	A	172	320
+Q07820	172	327	2pqk	X-ray crystal structure of human Mcl-1 in complex with Bim BH3	3	158	A	172	None
+Q07820	173	321	6qz7	Structure of MBP-Mcl-1 in complex with compound 8b	370	518	A	173	321
+Q07820	173	321	4wgi	A Single Diastereomer of a Macrolactam Core Binds Specifically to Myeloid Cell Leukemia 1 (MCL1)	370	518	A	173	321
+Q07820	173	327	5c3f	Crystal structure of Mcl-1 bound to BID-MM	2	156	A	173	None
+Q07820	173	321	5lof	Crystal structure of the MBP-MCL1 complex with highly selective and potent inhibitor of MCL1	370	518	A	173	321
+Q07820	173	321	6qyl	Structure of MBP-Mcl-1 in complex with compound 8a	370	518	A	173	321
+Q07820	173	321	6qyo	Structure of MBP-Mcl-1 in complex with compound 18a	370	518	A	173	321
+Q07820	173	321	4wmr	STRUCTURE OF MCL1 BOUND TO BRD inhibitor ligand 1 AT 1.7A	2	150	A	173	321
+Q07820	173	321	6qgd	Structure of human Mcl-1 in complex with thienopyrimidine inhibitor	370	518	A	173	321
+Q07820	173	321	6qxj	Structure of MBP-Mcl-1 in complex with compound 6a	370	518	A	173	None
+Q07820	173	321	6qyk	Structure of MBP-Mcl-1 in complex with compound 7a	370	518	A	173	None
+Q07820	173	321	6qyn	Structure of MBP-Mcl-1 in complex with compound 10d	370	518	A	173	321
+Q07820	174	327	6qfc	Structure of an anti-Mcl1 scFv	9	162	A	174	None
+Q07820	174	327	6qb6	Mcl1 in complex with a Fab	9	162	A	174	None
+Q07820	174	326	6b4u	Crystal structure of MCL-1 in complex with a BIM competitive inhibitor	5	157	A	174	None
+Q07820	174	326	6b4l	Crystal structure of MCL-1 in complex with a BIM competitive inhibitor	5	157	A	174	None
+Q07820	174	326	6b4l	Crystal structure of MCL-1 in complex with a BIM competitive inhibitor	5	157	B	174	None
+Q07820	174	326	3pk1	Crystal structure of Mcl-1 in complex with the BaxBH3 domain	37	189	A	174	None
+Q07820	174	326	3pk1	Crystal structure of Mcl-1 in complex with the BaxBH3 domain	37	189	C	174	None
+Q07820	174	326	5vkc	Crystal structure of MCL-1 in complex with a BIM competitive inhibitor	5	157	A	174	None
+Q07820	174	326	5vkc	Crystal structure of MCL-1 in complex with a BIM competitive inhibitor	5	157	B	174	None
+Q07820	174	325	6fs2	MCL1 in complex with indole acid ligand	3	154	A	174	325
+Q07820	174	325	6fs2	MCL1 in complex with indole acid ligand	3	154	B	174	None
+Q07820	174	324	6fs0	INDUCED MYELOID LEUKEMIA CELL DIFFERENTIATION PROTEIN FABCOMPLEX IN COMPLEX WITH AZD5991	9	159	A	174	None
+Q07820	174	326	4oq5	Crystal Structure of Human MCL-1 Bound to Inhibitor 4-(4-methylnaphthalen-1-yl)-2-{[(4-phenoxyphenyl)sulfonyl]amino}benzoic acid	11	163	E	174	None
+Q07820	174	326	4oq5	Crystal Structure of Human MCL-1 Bound to Inhibitor 4-(4-methylnaphthalen-1-yl)-2-{[(4-phenoxyphenyl)sulfonyl]amino}benzoic acid	11	163	A	174	None
+Q07820	174	326	4oq5	Crystal Structure of Human MCL-1 Bound to Inhibitor 4-(4-methylnaphthalen-1-yl)-2-{[(4-phenoxyphenyl)sulfonyl]amino}benzoic acid	11	163	B	174	None
+Q07820	174	326	4oq5	Crystal Structure of Human MCL-1 Bound to Inhibitor 4-(4-methylnaphthalen-1-yl)-2-{[(4-phenoxyphenyl)sulfonyl]amino}benzoic acid	11	163	C	174	None
+Q07820	174	326	4oq5	Crystal Structure of Human MCL-1 Bound to Inhibitor 4-(4-methylnaphthalen-1-yl)-2-{[(4-phenoxyphenyl)sulfonyl]amino}benzoic acid	11	163	F	174	None
+Q07820	174	326	4oq5	Crystal Structure of Human MCL-1 Bound to Inhibitor 4-(4-methylnaphthalen-1-yl)-2-{[(4-phenoxyphenyl)sulfonyl]amino}benzoic acid	11	163	D	174	None
+Q07820	174	326	4oq6	Crystal Structure of Human MCL-1 Bound to Inhibitor 4-hydroxy-4'-propylbiphenyl-3-carboxylic acid	5	157	A	174	None
+Q07820	174	326	4oq6	Crystal Structure of Human MCL-1 Bound to Inhibitor 4-hydroxy-4'-propylbiphenyl-3-carboxylic acid	5	157	B	174	None
+Q07820	174	327	6qb3	Apo Mcl1 in a complex with a scFv	9	162	A	174	None
+Q07820	174	321	4wms	STRUCTURE OF APO MBP-MCL1 AT 1.9A	371	518	A	174	None
+Q07820	174	321	4wmt	STRUCTURE OF MBP-MCL1 BOUND TO ligand 1 AT 2.35A	371	518	A	174	None
+Q07820	174	321	4wmu	STRUCTURE OF MBP-MCL1 BOUND TO ligand 2 AT 1.55A	371	518	A	174	None
+Q07820	174	321	6fs1	MCL1 in complex with an indole acid ligand	3	150	B	174	321
+Q07820	174	321	6fs1	MCL1 in complex with an indole acid ligand	3	150	A	174	321
+Q07820	174	321	4wmv	STRUCTURE OF MBP-MCL1 BOUND TO ligand 4 AT 2.4A	371	518	A	174	321
+Q07820	174	321	4wmw	The structure of MBP-MCL1 bound to ligand 5 at 1.9A	371	518	A	174	321
+Q07820	174	321	4wmx	The structure of MBP-MCL1 bound to ligand 6 at 2.0A	371	518	A	174	321
+Q07820	174	327	6qb4	Mcl1-scFv complex with an indole acid inhibitor	9	162	A	174	None
+Q07820	241	327	4bpj	Mcl-1 bound to alpha beta Puma BH3 peptide 3	76	162	A	241	None
+Q07820	241	327	5mev	MCL1 FAB COMPLEX IN COMPLEX WITH COMPOUND 21	76	162	A	241	None
+Q07820	241	327	5mes	MCL1 FAB COMPLEX IN COMPLEX WITH COMPOUND 29	76	162	A	241	None
+Q07820	241	327	3d7v	Crystal structure of Mcl-1 in complex with an Mcl-1 selective BH3 ligand	76	162	A	241	None
+Q07820	241	327	2nla	Crystal structure of the Mcl-1:mNoxaB BH3 complex	71	157	A	241	None
+Q07820	241	327	5ku9	Crystal structure of MCL1 with compound 1	76	162	A	241	None
+Q07820	241	327	5ku9	Crystal structure of MCL1 with compound 1	76	162	B	241	None
+Q07820	241	327	2nl9	Crystal structure of the Mcl-1:Bim BH3 complex	71	157	A	241	None
+Q07820	241	327	4bpi	Mcl-1 bound to alpha beta Puma BH3 peptide 2	76	162	A	241	None
+Q07820	241	327	5vx2	Mcl-1 in complex with Bim-h3Pc-RT	76	162	A	241	None
+Q07820	241	327	5vx2	Mcl-1 in complex with Bim-h3Pc-RT	76	162	C	241	None
+Q07820	241	327	3io9	BimL12Y in complex with Mcl-1	76	162	A	241	None
+

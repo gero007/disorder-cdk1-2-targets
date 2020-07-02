@@ -1,0 +1,637 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P03372	Estrogen receptor Peptide	ESR1_HUMAN	Homo sapiens	PF00104	Hormone_recep	Ligand-binding domain of nuclear hormone receptor	332	531
+P03372	Estrogen receptor Peptide	ESR1_HUMAN	Homo sapiens	PF00105	zf-C4	Zinc finger, C4 type (two domains)	183	252
+P03372	Estrogen receptor Peptide	ESR1_HUMAN	Homo sapiens	PF02159	Oest_recep	Oestrogen receptor	42	181
+P03372	Estrogen receptor Peptide	ESR1_HUMAN	Homo sapiens	PF12743	ESR1_C	Oestrogen-type nuclear receptor final C-terminal	552	595
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#612 mappings in 612 PDB chains in 293 PDB entries
+P03372	180	262	1hcq	THE CRYSTAL STRUCTURE OF THE ESTROGEN RECEPTOR DNA-BINDING DOMAIN BOUND TO DNA: HOW RECEPTORS DISCRIMINATE BETWEEN THEIR RESPONSE ELEMENTS	2	84	A	2	None
+P03372	180	262	1hcq	THE CRYSTAL STRUCTURE OF THE ESTROGEN RECEPTOR DNA-BINDING DOMAIN BOUND TO DNA: HOW RECEPTORS DISCRIMINATE BETWEEN THEIR RESPONSE ELEMENTS	2	84	B	None	None
+P03372	180	262	1hcq	THE CRYSTAL STRUCTURE OF THE ESTROGEN RECEPTOR DNA-BINDING DOMAIN BOUND TO DNA: HOW RECEPTORS DISCRIMINATE BETWEEN THEIR RESPONSE ELEMENTS	2	84	E	2	None
+P03372	180	262	1hcq	THE CRYSTAL STRUCTURE OF THE ESTROGEN RECEPTOR DNA-BINDING DOMAIN BOUND TO DNA: HOW RECEPTORS DISCRIMINATE BETWEEN THEIR RESPONSE ELEMENTS	2	84	F	2	None
+P03372	180	254	1hcp	DNA RECOGNITION BY THE OESTROGEN RECEPTOR: FROM SOLUTION TO THE CRYSTAL	2	76	A	2	None
+P03372	182	252	4aa6	The oestrogen receptor recognizes an imperfectly palindromic response element through an alternative side-chain conformation	1	71	E	None	252
+P03372	182	252	4aa6	The oestrogen receptor recognizes an imperfectly palindromic response element through an alternative side-chain conformation	1	71	B	182	252
+P03372	182	252	4aa6	The oestrogen receptor recognizes an imperfectly palindromic response element through an alternative side-chain conformation	1	71	F	182	252
+P03372	182	252	4aa6	The oestrogen receptor recognizes an imperfectly palindromic response element through an alternative side-chain conformation	1	71	A	182	252
+P03372	261	271	4o6f	Structural Basis of Estrogen Receptor Alpha Methylation Mediated by Histone Methyltransferase SmyD2	1	11	B	None	271
+P03372	287	305	2llq	Solution nmr-derived structure of calmodulin c-lobe bound with er alpha peptide	1	19	B	287	305
+P03372	287	305	5t0x	Solution NMR-derived structure of calmodulin bound with ER alpha peptides	1	19	C	287	305
+P03372	287	305	5t0x	Solution NMR-derived structure of calmodulin bound with ER alpha peptides	1	19	B	287	305
+P03372	287	305	2llo	Solution NMR-derived structure of calmodulin N-lobe bound with ER alpha peptide	1	19	B	287	305
+P03372	297	554	5wgq	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Estradiol and SRC2-BCP1	4	261	A	None	None
+P03372	297	554	5wgq	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Estradiol and SRC2-BCP1	4	261	B	None	None
+P03372	297	554	6sbo	Estrogen receptor mutant L536S	3	260	A	None	None
+P03372	297	554	6sbo	Estrogen receptor mutant L536S	3	260	B	None	None
+P03372	297	554	1l2i	Human Estrogen Receptor alpha Ligand-binding Domain in Complex with (R,R)-5,11-cis-diethyl-5,6,11,12-tetrahydrochrysene-2,8-diol and a Glucocorticoid Receptor Interacting Protein 1 NR box II Peptide	4	261	A	None	None
+P03372	297	554	1l2i	Human Estrogen Receptor alpha Ligand-binding Domain in Complex with (R,R)-5,11-cis-diethyl-5,6,11,12-tetrahydrochrysene-2,8-diol and a Glucocorticoid Receptor Interacting Protein 1 NR box II Peptide	4	261	B	None	None
+P03372	297	554	1a52	ESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN COMPLEXED TO ESTRADIOL	1	258	A	None	None
+P03372	297	554	1a52	ESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN COMPLEXED TO ESTRADIOL	1	258	B	None	None
+P03372	297	554	1r5k	Human Estrogen Receptor alpha Ligand-Binding Domain In Complex With GW5638	4	261	A	None	None
+P03372	297	554	1r5k	Human Estrogen Receptor alpha Ligand-Binding Domain In Complex With GW5638	4	261	B	None	None
+P03372	297	554	1r5k	Human Estrogen Receptor alpha Ligand-Binding Domain In Complex With GW5638	4	261	C	None	None
+P03372	297	554	5dxg	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Stapled Peptide SRC2-P5	4	261	A	None	None
+P03372	297	554	5dxg	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Stapled Peptide SRC2-P5	4	261	B	None	None
+P03372	297	554	6pit	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with SRC2 Stapled Peptide 41A and Estradiol	5	262	A	None	None
+P03372	297	554	6pit	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with SRC2 Stapled Peptide 41A and Estradiol	5	262	B	None	None
+P03372	297	554	5dxb	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Stapled Peptide SRC2-P1 and Estradiol	4	261	A	None	None
+P03372	297	554	5dxb	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Stapled Peptide SRC2-P1 and Estradiol	4	261	B	None	None
+P03372	297	554	5dx3	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Stapled Peptide SRC2-P3 and Estradiol	4	261	A	None	None
+P03372	297	554	5dx3	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Stapled Peptide SRC2-P3 and Estradiol	4	261	B	None	None
+P03372	297	554	3erd	HUMAN ESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH DIETHYLSTILBESTROL AND A GLUCOCORTICOID RECEPTOR INTERACTING PROTEIN 1 NR BOX II PEPTIDE	4	261	A	None	None
+P03372	297	554	3erd	HUMAN ESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH DIETHYLSTILBESTROL AND A GLUCOCORTICOID RECEPTOR INTERACTING PROTEIN 1 NR BOX II PEPTIDE	4	261	B	None	None
+P03372	297	554	5dxe	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Stapled Peptide SRC2-P4 and Estradiol	4	261	A	None	None
+P03372	297	554	5dxe	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Stapled Peptide SRC2-P4 and Estradiol	4	261	B	None	None
+P03372	297	554	5wgd	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Estradiol and SRC2-LP1	4	261	A	None	None
+P03372	297	554	5wgd	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Estradiol and SRC2-LP1	4	261	B	None	None
+P03372	297	554	3ert	HUMAN ESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH 4-HYDROXYTAMOXIFEN	4	261	A	None	None
+P03372	298	554	5tlo	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with a Squaric Acid-linked Dimeric Estrogen	1	257	A	None	None
+P03372	298	554	5tlo	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with a Squaric Acid-linked Dimeric Estrogen	1	257	B	None	None
+P03372	298	554	5tlm	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 4,4',4''-(thiophene-2,3,5-triyl)triphenol	1	257	A	None	None
+P03372	298	554	5tlm	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 4,4',4''-(thiophene-2,3,5-triyl)triphenol	1	257	B	None	None
+P03372	298	554	5tll	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with (E)-2-chloro-4'-hydroxy-4-((hydroxyiminio)methyl)-[1,1'-biphenyl]-3-olate	1	257	A	None	None
+P03372	298	554	5tll	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with (E)-2-chloro-4'-hydroxy-4-((hydroxyiminio)methyl)-[1,1'-biphenyl]-3-olate	1	257	B	None	None
+P03372	298	554	5tm1	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 2,5-bis(2-fluoro-4-hydroxyphenyl)thiophene 1-oxide	1	257	A	None	None
+P03372	298	554	5tm1	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 2,5-bis(2-fluoro-4-hydroxyphenyl)thiophene 1-oxide	1	257	B	None	None
+P03372	298	554	5tm2	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 2,5-bis(2-chloro-4-hydroxyphenyl)thiophene 1-oxide	1	257	A	None	None
+P03372	298	554	5tm2	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 2,5-bis(2-chloro-4-hydroxyphenyl)thiophene 1-oxide	1	257	B	None	None
+P03372	298	554	5tm5	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC compound, 5-(4-((1R,4S,6R)-6-((4-bromophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenoxy)pentanoic acid	1	257	A	None	None
+P03372	298	554	5tm5	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC compound, 5-(4-((1R,4S,6R)-6-((4-bromophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenoxy)pentanoic acid	1	257	B	None	None
+P03372	298	554	5tlu	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the PEG-linked Dimeric Estrogen, EE2-(eg)6-EE2-amine	1	257	A	None	None
+P03372	298	554	5tlu	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the PEG-linked Dimeric Estrogen, EE2-(eg)6-EE2-amine	1	257	B	None	None
+P03372	298	554	5tlt	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with octane-1,8-diyl bis(2,3-bis(4-hydroxyphenyl)pentanoate)	1	257	A	None	None
+P03372	298	554	5tlt	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with octane-1,8-diyl bis(2,3-bis(4-hydroxyphenyl)pentanoate)	1	257	B	None	None
+P03372	298	554	5tm8	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC compound, 7-(4-((1R,4S,6R)-6-((4-bromophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenoxy)heptanoic acid	1	257	A	None	None
+P03372	298	554	5tm8	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC compound, 7-(4-((1R,4S,6R)-6-((4-bromophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenoxy)heptanoic acid	1	257	B	None	None
+P03372	298	554	5tm9	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC Analog, (E)-3-(4-((1R,4S,6R)-6-((3-chlorophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenyl)acrylic acid	1	257	A	None	None
+P03372	298	554	5tm9	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC Analog, (E)-3-(4-((1R,4S,6R)-6-((3-chlorophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenyl)acrylic acid	1	257	B	None	None
+P03372	298	554	5tly	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 3,4-bis(2-fluoro-4-hydroxyphenyl)thiophene 1,1-dioxide	1	257	A	None	None
+P03372	298	554	5tly	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 3,4-bis(2-fluoro-4-hydroxyphenyl)thiophene 1,1-dioxide	1	257	B	None	None
+P03372	298	554	5tlx	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 3,4-bis(4-hydroxyphenyl)thiophene 1,1-dioxide	1	257	A	None	None
+P03372	298	554	5tlx	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 3,4-bis(4-hydroxyphenyl)thiophene 1,1-dioxide	1	257	B	None	None
+P03372	298	554	5kro	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Methyl(phenyl)amino-substituted Estrogen, (8R,9S,13S,14S,17S)-13-methyl-17-(methyl(phenyl)amino)-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol	1	257	A	None	None
+P03372	298	554	5kro	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Methyl(phenyl)amino-substituted Estrogen, (8R,9S,13S,14S,17S)-13-methyl-17-(methyl(phenyl)amino)-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol	1	257	B	None	None
+P03372	298	554	5kr9	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with Coumestrol	1	257	A	None	None
+P03372	298	554	5kr9	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with Coumestrol	1	257	B	None	None
+P03372	298	554	5tn1	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the estradiol derivative, (8S,9S,13S,14S,E)-17-((4-isopropylphenyl)imino)-13-methyl-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol	1	257	A	None	None
+P03372	298	554	5tn1	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the estradiol derivative, (8S,9S,13S,14S,E)-17-((4-isopropylphenyl)imino)-13-methyl-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol	1	257	B	None	None
+P03372	298	554	2g5o	Human estrogen receptor alpha ligand-binding domain in complex with 2-(but-1-enyl)-17beta-estradiol and a glucocorticoid receptor interacting protein 1 NR BOX II Peptide	1	257	A	None	None
+P03372	298	554	2g5o	Human estrogen receptor alpha ligand-binding domain in complex with 2-(but-1-enyl)-17beta-estradiol and a glucocorticoid receptor interacting protein 1 NR BOX II Peptide	1	257	B	None	None
+P03372	298	554	5kcw	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-trifluoroethyl OBHS-N derivative	1	257	A	None	None
+P03372	298	554	5kcw	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-trifluoroethyl OBHS-N derivative	1	257	B	None	None
+P03372	298	554	5die	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a trifluoro-substituted A-CD ring estrogen derivative (1S,3aR,5S,7aS)-7a-methyl-5-(2,3,5-trifluoro-4-hydroxyphenyl)octahydro-1H-inden-1-ol	1	257	A	None	None
+P03372	298	554	5die	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a trifluoro-substituted A-CD ring estrogen derivative (1S,3aR,5S,7aS)-7a-methyl-5-(2,3,5-trifluoro-4-hydroxyphenyl)octahydro-1H-inden-1-ol	1	257	B	None	None
+P03372	298	554	5did	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a difluoro-substituted A-CD ring estrogen derivative (1S,3aR,5S,7aS)-5-(2,3-difluoro-4-hydroxyphenyl)-7a-methyloctahydro-1H-inden-1-ol	1	257	A	None	None
+P03372	298	554	5did	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a difluoro-substituted A-CD ring estrogen derivative (1S,3aR,5S,7aS)-5-(2,3-difluoro-4-hydroxyphenyl)-7a-methyloctahydro-1H-inden-1-ol	1	257	B	None	None
+P03372	298	554	2qab	Crystal Structure of Estrogen Receptor Alpha Ligand Binding Domain Mutant 537S Complexed with an Ethyl Indazole Compound	2	258	A	None	None
+P03372	298	554	2qab	Crystal Structure of Estrogen Receptor Alpha Ligand Binding Domain Mutant 537S Complexed with an Ethyl Indazole Compound	2	258	B	None	None
+P03372	298	554	5tn3	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the estradiol derivative, (8S,9S,13S,14S)-17-((4-isopropylphenyl)amino)-13-methyl-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol	1	257	A	None	None
+P03372	298	554	5tn3	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the estradiol derivative, (8S,9S,13S,14S)-17-((4-isopropylphenyl)amino)-13-methyl-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol	1	257	B	None	None
+P03372	298	554	2qgw	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed with a Chloro-Indazole Compound	2	258	A	None	None
+P03372	298	554	2qgw	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed with a Chloro-Indazole Compound	2	258	B	None	None
+P03372	298	554	5kri	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 16b-benzyl 17b-estradiol	1	257	A	None	None
+P03372	298	554	5kri	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 16b-benzyl 17b-estradiol	1	257	B	None	None
+P03372	298	554	5tmm	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC analog, (E)-6-(4-((1R,4S,6R)-6-((4-bromophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenyl)hex-5-enoic acid	1	257	A	None	None
+P03372	298	554	5tmm	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC analog, (E)-6-(4-((1R,4S,6R)-6-((4-bromophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenyl)hex-5-enoic acid	1	257	B	None	None
+P03372	298	554	5tmq	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Arene Core OBHS derivative, 4-bromophenyl 4,4''-dihydroxy-[1,1':2',1''-terphenyl]-4'-sulfonate	1	257	A	None	None
+P03372	298	554	5tmq	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Arene Core OBHS derivative, 4-bromophenyl 4,4''-dihydroxy-[1,1':2',1''-terphenyl]-4'-sulfonate	1	257	B	None	None
+P03372	298	554	5tms	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Cyclofenil-ASC derivative, ethyl (E)-3-(4-(bicyclo[3.3.1]nonan-9-ylidene(4-hydroxyphenyl)methyl)phenyl)acrylate	1	257	A	None	None
+P03372	298	554	5tms	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Cyclofenil-ASC derivative, ethyl (E)-3-(4-(bicyclo[3.3.1]nonan-9-ylidene(4-hydroxyphenyl)methyl)phenyl)acrylate	1	257	B	None	None
+P03372	298	554	2b1v	Human estrogen receptor alpha ligand-binding domain in complex with OBCP-1M and a glucocorticoid receptor interacting protein 1 NR box II peptide	1	257	A	None	None
+P03372	298	554	2b1v	Human estrogen receptor alpha ligand-binding domain in complex with OBCP-1M and a glucocorticoid receptor interacting protein 1 NR box II peptide	1	257	B	None	None
+P03372	298	554	5tmw	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS derivative, 4-acetamidophenyl (1S,2R,4S)-5,6-bis(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	A	None	None
+P03372	298	554	5tmw	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS derivative, 4-acetamidophenyl (1S,2R,4S)-5,6-bis(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	B	None	None
+P03372	298	554	2b1z	Human estrogen receptor alpha ligand-binding domain in complex with 17methyl-17alpha-dihydroequilenin and a glucoc interacting protein 1 NR box II peptide	1	257	A	None	None
+P03372	298	554	2b1z	Human estrogen receptor alpha ligand-binding domain in complex with 17methyl-17alpha-dihydroequilenin and a glucoc interacting protein 1 NR box II peptide	1	257	B	None	None
+P03372	298	554	5tmz	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the estradiol derivative, (8S,9S,13S,14S,17S)-16-(3-methoxybenzyl)-13-methyl-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthrene-3,17-diol	1	257	A	None	None
+P03372	298	554	5tmz	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the estradiol derivative, (8S,9S,13S,14S,17S)-16-(3-methoxybenzyl)-13-methyl-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthrene-3,17-diol	1	257	B	None	None
+P03372	298	554	5tn6	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Spiro BC-estradiol, (1S,1'S,3a'S,7a'S)-7a'-methyl-1',2,2',3,3',3a',4',6',7',7a'-decahydro-1,5'-spirobi[indene]-1',5-diol	1	257	A	None	None
+P03372	298	554	5tn6	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Spiro BC-estradiol, (1S,1'S,3a'S,7a'S)-7a'-methyl-1',2,2',3,3',3a',4',6',7',7a'-decahydro-1,5'-spirobi[indene]-1',5-diol	1	257	B	None	None
+P03372	298	554	5dwj	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a Resorcinyl 4-Fluoro-substituted Diaryl-imine analog 4-[(E)-[(4-fluorophenyl)imino](4-hydroxyphenyl)methyl]benzene-1,3-diol	1	257	A	None	None
+P03372	298	554	5dwj	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a Resorcinyl 4-Fluoro-substituted Diaryl-imine analog 4-[(E)-[(4-fluorophenyl)imino](4-hydroxyphenyl)methyl]benzene-1,3-diol	1	257	B	None	None
+P03372	298	554	5dwi	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a Resorcinyl 2-Chloro-substituted Diaryl-imine analog 4-[(E)-[(2-chlorophenyl)imino](4-hydroxyphenyl)methyl]benzene-1,3-diol	1	257	A	None	None
+P03372	298	554	5dwi	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a Resorcinyl 2-Chloro-substituted Diaryl-imine analog 4-[(E)-[(2-chlorophenyl)imino](4-hydroxyphenyl)methyl]benzene-1,3-diol	1	257	B	None	None
+P03372	298	554	5u2b	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the phenylamino-substituted estrogen, (8R,9S,13S,14S,17S)-13-methyl-17-(phenylamino)-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol, without a coactivator peptide	1	257	D	None	None
+P03372	298	554	5u2b	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the phenylamino-substituted estrogen, (8R,9S,13S,14S,17S)-13-methyl-17-(phenylamino)-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol, without a coactivator peptide	1	257	C	None	None
+P03372	298	554	5u2b	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the phenylamino-substituted estrogen, (8R,9S,13S,14S,17S)-13-methyl-17-(phenylamino)-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol, without a coactivator peptide	1	257	A	None	None
+P03372	298	554	5u2b	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the phenylamino-substituted estrogen, (8R,9S,13S,14S,17S)-13-methyl-17-(phenylamino)-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol, without a coactivator peptide	1	257	F	None	None
+P03372	298	554	5u2b	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the phenylamino-substituted estrogen, (8R,9S,13S,14S,17S)-13-methyl-17-(phenylamino)-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol, without a coactivator peptide	1	257	E	None	None
+P03372	298	554	5u2b	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the phenylamino-substituted estrogen, (8R,9S,13S,14S,17S)-13-methyl-17-(phenylamino)-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol, without a coactivator peptide	1	257	B	None	None
+P03372	298	554	5dig	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a trifluoromethyl-substituted A-CD ring estrogen derivative (1S,3aR,5S,7aS)-5-[4-hydroxy-2-(trifluoromethyl)phenyl]-7a-methyloctahydro-1H-inden-1-ol	1	257	A	None	None
+P03372	298	554	5dig	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a trifluoromethyl-substituted A-CD ring estrogen derivative (1S,3aR,5S,7aS)-5-[4-hydroxy-2-(trifluoromethyl)phenyl]-7a-methyloctahydro-1H-inden-1-ol	1	257	B	None	None
+P03372	298	554	5u2d	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with Oxabicyclic Heptene Sulfonate (OBHS)	1	257	A	None	None
+P03372	298	554	5u2d	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with Oxabicyclic Heptene Sulfonate (OBHS)	1	257	B	None	None
+P03372	298	554	2qgt	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed to an Ether Estradiol Compound	2	258	A	None	None
+P03372	298	554	2qgt	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed to an Ether Estradiol Compound	2	258	B	None	None
+P03372	298	554	5dz3	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[4-(fluoromethyl)cyclohexylidene]methanediyl}diphenol	1	257	A	None	None
+P03372	298	554	5dz3	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[4-(fluoromethyl)cyclohexylidene]methanediyl}diphenol	1	257	B	None	None
+P03372	298	554	5krf	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Dynamic WAY derivative, 1a	1	257	A	None	None
+P03372	298	554	5krf	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Dynamic WAY derivative, 1a	1	257	B	None	None
+P03372	298	554	1zky	Human Estrogen Receptor Alpha Ligand-Binding Domain In Complex With OBCP-3M and A Glucocorticoid Receptor Interacting Protein 1 Nr Box II Peptide	1	257	A	None	None
+P03372	298	554	1zky	Human Estrogen Receptor Alpha Ligand-Binding Domain In Complex With OBCP-3M and A Glucocorticoid Receptor Interacting Protein 1 Nr Box II Peptide	1	257	B	None	None
+P03372	298	554	5e14	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3R)-3-phenylcyclohexylidene]methanediyl}diphenol	1	257	A	None	None
+P03372	298	554	5e14	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3R)-3-phenylcyclohexylidene]methanediyl}diphenol	1	257	B	None	None
+P03372	298	554	5dxp	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4-[(E)-(1s,5s)-bicyclo[3.3.1]non-9-ylidene(phenyl)methyl]phenol	1	257	A	None	None
+P03372	298	554	5dxp	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4-[(E)-(1s,5s)-bicyclo[3.3.1]non-9-ylidene(phenyl)methyl]phenol	1	257	B	None	None
+P03372	298	554	5dke	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a 3-naphthyl-substituted, methyl, cis-diaryl-ethylene compound 4,4'-[2-(naphthalen-2-yl)prop-1-ene-1,1-diyl]diphenol	1	257	A	None	None
+P03372	298	554	5dke	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a 3-naphthyl-substituted, methyl, cis-diaryl-ethylene compound 4,4'-[2-(naphthalen-2-yl)prop-1-ene-1,1-diyl]diphenol	1	257	B	None	554
+P03372	298	554	5kd9	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-trifluoroethyl 4-chlorobenzyl OBHS-N derivative	1	257	A	None	None
+P03372	298	554	5kd9	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-trifluoroethyl 4-chlorobenzyl OBHS-N derivative	1	257	B	None	None
+P03372	298	554	5e19	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative methyl {4-[bis(4-hydroxyphenyl)methylidene]cyclohexyl}acetate	1	257	A	None	None
+P03372	298	554	5e19	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative methyl {4-[bis(4-hydroxyphenyl)methylidene]cyclohexyl}acetate	1	257	B	None	None
+P03372	298	554	5krl	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the A-CD ring estrogen, (1S,7aS)-5-(2-chloro-4-hydroxyphenyl)-7a-methyl-2,3,3a,4,7,7a-hexahydro-1H-inden-1-ol	1	257	A	None	None
+P03372	298	554	5krl	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the A-CD ring estrogen, (1S,7aS)-5-(2-chloro-4-hydroxyphenyl)-7a-methyl-2,3,3a,4,7,7a-hexahydro-1H-inden-1-ol	1	257	B	None	None
+P03372	298	554	5krm	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the A-CD ring estrogen, (1S,7aS)-5-(2,5-difluoro-4-hydroxyphenyl)-7a-methyl-2,3,3a,4,7,7a-hexahydro-1H-inden-1-ol	1	257	A	None	None
+P03372	298	554	5krm	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the A-CD ring estrogen, (1S,7aS)-5-(2,5-difluoro-4-hydroxyphenyl)-7a-methyl-2,3,3a,4,7,7a-hexahydro-1H-inden-1-ol	1	257	B	None	None
+P03372	298	554	5krj	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an a-naphthyl Substituted OBHS derivative	1	257	A	None	None
+P03372	298	554	5krj	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an a-naphthyl Substituted OBHS derivative	1	257	B	None	None
+P03372	298	554	5krk	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 4,4'-((5-bromo-2,3-dihydro-1H-inden-1-ylidene)methylene)diphenol	1	257	A	None	None
+P03372	298	554	5krk	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 4,4'-((5-bromo-2,3-dihydro-1H-inden-1-ylidene)methylene)diphenol	1	257	B	None	None
+P03372	298	554	5krh	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 16-benzylidene estrone	1	257	A	None	None
+P03372	298	554	5krh	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 16-benzylidene estrone	1	257	B	None	None
+P03372	298	554	5tm7	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC compound, 7-(4-((1R,4S,6R)-6-((3-chlorophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenoxy)heptanoic acid	1	257	A	None	None
+P03372	298	554	5tm7	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC compound, 7-(4-((1R,4S,6R)-6-((3-chlorophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenoxy)heptanoic acid	1	257	B	None	None
+P03372	298	554	5duh	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a Sulfoxide-bridged Oxabicyclic Heptene Sulfonate (SOBHS)-3 analog phenyl (1S,2S,4S,7S)-5,6-bis(4-hydroxy-3-methylphenyl)-7-thiabicyclo[2.2.1]hept-5-ene-2-sulfonate 7-oxide	1	257	A	None	None
+P03372	298	554	5duh	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a Sulfoxide-bridged Oxabicyclic Heptene Sulfonate (SOBHS)-3 analog phenyl (1S,2S,4S,7S)-5,6-bis(4-hydroxy-3-methylphenyl)-7-thiabicyclo[2.2.1]hept-5-ene-2-sulfonate 7-oxide	1	257	B	None	None
+P03372	298	554	5dyb	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-(3,4-dihydronaphthalen-2(1H)-ylidenemethanediyl)diphenol	1	257	A	None	None
+P03372	298	554	5dyb	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-(3,4-dihydronaphthalen-2(1H)-ylidenemethanediyl)diphenol	1	257	B	None	None
+P03372	298	554	5tnb	Crystal Structure of the ER-alpha Ligand-binding Domain (L372S,L536S) in Complex with the OBHS-BSC, 4-bromophenyl (1R,2R,4S)-6-(4-(2-(dimethylamino)ethoxy)phenyl)-5-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	A	None	None
+P03372	298	554	5tnb	Crystal Structure of the ER-alpha Ligand-binding Domain (L372S,L536S) in Complex with the OBHS-BSC, 4-bromophenyl (1R,2R,4S)-6-(4-(2-(dimethylamino)ethoxy)phenyl)-5-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	D	None	None
+P03372	298	554	5tnb	Crystal Structure of the ER-alpha Ligand-binding Domain (L372S,L536S) in Complex with the OBHS-BSC, 4-bromophenyl (1R,2R,4S)-6-(4-(2-(dimethylamino)ethoxy)phenyl)-5-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	B	None	None
+P03372	298	554	5tnb	Crystal Structure of the ER-alpha Ligand-binding Domain (L372S,L536S) in Complex with the OBHS-BSC, 4-bromophenyl (1R,2R,4S)-6-(4-(2-(dimethylamino)ethoxy)phenyl)-5-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	C	None	None
+P03372	298	554	5e15	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[4-(2-hydroxyethyl)cyclohexylidene]methanediyl}diphenol	1	257	A	None	None
+P03372	298	554	5e15	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[4-(2-hydroxyethyl)cyclohexylidene]methanediyl}diphenol	1	257	B	None	None
+P03372	298	554	5dxr	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3R)-3-methylcyclohexylidene]methanediyl}diphenol	1	257	A	None	None
+P03372	298	554	5dxr	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3R)-3-methylcyclohexylidene]methanediyl}diphenol	1	257	B	None	None
+P03372	298	554	5dxq	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-[(1s,5s)-bicyclo[3.3.1]non-9-ylidenemethanediyl]diphenol	1	257	A	None	None
+P03372	298	554	5dxq	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-[(1s,5s)-bicyclo[3.3.1]non-9-ylidenemethanediyl]diphenol	1	257	B	None	None
+P03372	298	554	5kra	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with DDT and DDE	1	257	A	None	None
+P03372	298	554	5kra	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with DDT and DDE	1	257	F	None	None
+P03372	298	554	5kra	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with DDT and DDE	1	257	E	None	None
+P03372	298	554	5kra	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with DDT and DDE	1	257	B	None	None
+P03372	298	554	5dxm	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 3-[(E)-(1s,5s)-bicyclo[3.3.1]non-9-ylidene(4-hydroxyphenyl)methyl]phenol	1	257	A	None	None
+P03372	298	554	5dxm	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 3-[(E)-(1s,5s)-bicyclo[3.3.1]non-9-ylidene(4-hydroxyphenyl)methyl]phenol	1	257	B	None	None
+P03372	298	554	5dp0	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a 4-fluorophenylamino-substituted triaryl-ethylene derivative 4,4'-(2-{3-[(4-fluorophenyl)amino]phenyl}ethene-1,1-diyl)diphenol	1	257	A	None	None
+P03372	298	554	5dp0	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a 4-fluorophenylamino-substituted triaryl-ethylene derivative 4,4'-(2-{3-[(4-fluorophenyl)amino]phenyl}ethene-1,1-diyl)diphenol	1	257	B	None	None
+P03372	298	554	5dxk	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-[(9s)-bicyclo[3.3.1]non-9-ylmethanediyl]diphenol	1	257	A	None	None
+P03372	298	554	5dxk	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-[(9s)-bicyclo[3.3.1]non-9-ylmethanediyl]diphenol	1	257	B	None	None
+P03372	298	554	5dmc	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a nitrile-substituted triaryl-ethylene derivative 3,3-bis(4-hydroxyphenyl)-2-phenylprop-2-enenitrile	1	257	A	None	None
+P03372	298	554	5dmc	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a nitrile-substituted triaryl-ethylene derivative 3,3-bis(4-hydroxyphenyl)-2-phenylprop-2-enenitrile	1	257	B	None	None
+P03372	298	554	5egv	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex the 3,4-diaryl-furan derivative 3-chloranyl-4-[4-(2-chloranyl-4-oxidanyl-phenyl)furan-3-yl]phenol	1	257	A	None	None
+P03372	298	554	5egv	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex the 3,4-diaryl-furan derivative 3-chloranyl-4-[4-(2-chloranyl-4-oxidanyl-phenyl)furan-3-yl]phenol	1	257	B	None	None
+P03372	298	554	5kcf	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-ethyl, 4-methoxybenzyl OBHS-N derivative	1	257	A	None	None
+P03372	298	554	5kcf	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-ethyl, 4-methoxybenzyl OBHS-N derivative	1	257	B	None	None
+P03372	298	554	5ehj	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-[(4aR,8aR)-octahydronaphthalen-2(1H)-ylidenemethanediyl]diphenol	1	257	A	None	None
+P03372	298	554	5ehj	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-[(4aR,8aR)-octahydronaphthalen-2(1H)-ylidenemethanediyl]diphenol	1	257	B	None	None
+P03372	298	554	5dmf	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a 4-fluorophenylamino-substituted, methyl triaryl-ethylene derivative 4,4'-(2-{3-[(4-fluorophenyl)amino]phenyl}prop-1-ene-1,1-diyl)diphenol	1	257	A	None	None
+P03372	298	554	5dmf	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a 4-fluorophenylamino-substituted, methyl triaryl-ethylene derivative 4,4'-(2-{3-[(4-fluorophenyl)amino]phenyl}prop-1-ene-1,1-diyl)diphenol	1	257	B	None	None
+P03372	298	554	5dy8	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3S)-3-ethylcyclohexylidene]methanediyl}diphenol	1	257	A	None	None
+P03372	298	554	5dy8	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3S)-3-ethylcyclohexylidene]methanediyl}diphenol	1	257	B	None	None
+P03372	298	554	5krc	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with Zearalenone	1	257	A	None	None
+P03372	298	554	5krc	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with Zearalenone	1	257	B	None	None
+P03372	298	554	5dlr	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a triaryl-ethylene compound 4,4'-(2-phenylethene-1,1-diyl)diphenol	1	257	A	None	None
+P03372	298	554	5dlr	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a triaryl-ethylene compound 4,4'-(2-phenylethene-1,1-diyl)diphenol	1	257	B	None	None
+P03372	298	554	5tmr	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Cyclofenil-ASC derivative, ethyl (E)-3-(4-(cyclohexylidene(4-hydroxyphenyl)methyl)phenyl)acrylate	1	257	A	None	None
+P03372	298	554	5tmr	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Cyclofenil-ASC derivative, ethyl (E)-3-(4-(cyclohexylidene(4-hydroxyphenyl)methyl)phenyl)acrylate	1	257	B	None	None
+P03372	298	554	2qa6	Crystal Structure of Estrogen Receptor Alpha mutant 537S Complexed with 4-(6-hydroxy-1H-indazol-3-yl)benzene-1,3-diol	2	258	A	None	None
+P03372	298	554	2qa6	Crystal Structure of Estrogen Receptor Alpha mutant 537S Complexed with 4-(6-hydroxy-1H-indazol-3-yl)benzene-1,3-diol	2	258	B	None	None
+P03372	298	554	5due	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a para-Hydroxyl-substituted, Sulfoxide-bridged Oxabicyclic Heptene Sulfonate (SOBHS)-2 Analog 4-hydroxyphenyl (1S,2S,4S,5S,6R,7S)-5,6-bis(4-hydroxy-2-methylphenyl)-7-thiabicyclo[2.2.1]heptane-2-sulfonate 7-oxide	1	257	A	None	None
+P03372	298	554	5due	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a para-Hydroxyl-substituted, Sulfoxide-bridged Oxabicyclic Heptene Sulfonate (SOBHS)-2 Analog 4-hydroxyphenyl (1S,2S,4S,5S,6R,7S)-5,6-bis(4-hydroxy-2-methylphenyl)-7-thiabicyclo[2.2.1]heptane-2-sulfonate 7-oxide	1	257	B	None	None
+P03372	298	554	5tm4	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC Analog, 5-(4-((1R,4S,6R)-6-((3-chlorophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenoxy)pentanoic acid	1	257	A	None	None
+P03372	298	554	5tm4	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC Analog, 5-(4-((1R,4S,6R)-6-((3-chlorophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenoxy)pentanoic acid	1	257	B	None	None
+P03372	298	554	5ei1	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the imidazopyridine derivative 2-(4-hydroxyphenyl)-3-iodanyl-imidazo[1,2-a]pyridin-6-ol	1	257	A	None	None
+P03372	298	554	5ei1	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the imidazopyridine derivative 2-(4-hydroxyphenyl)-3-iodanyl-imidazo[1,2-a]pyridin-6-ol	1	257	B	None	None
+P03372	298	554	5eit	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the imidazopyridine derivative 2-(4-hydroxyphenyl)-3-(trifluoromethyl)imidazo[1,2-a]pyridin-6-ol	1	257	A	None	None
+P03372	298	554	5eit	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the imidazopyridine derivative 2-(4-hydroxyphenyl)-3-(trifluoromethyl)imidazo[1,2-a]pyridin-6-ol	1	257	B	None	None
+P03372	298	554	2p15	Crystal structure of the ER alpha ligand binding domain with the agonist ortho-trifluoromethylphenylvinyl estradiol	2	258	A	None	None
+P03372	298	554	2p15	Crystal structure of the ER alpha ligand binding domain with the agonist ortho-trifluoromethylphenylvinyl estradiol	2	258	B	None	None
+P03372	298	554	5tmv	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS analog, 4-iodophenyl (1S,2R,4S)-5,6-bis(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	A	None	None
+P03372	298	554	5tmv	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS analog, 4-iodophenyl (1S,2R,4S)-5,6-bis(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	B	None	None
+P03372	298	554	2q6j	Crystal Structure of Estrogen Receptor alpha Complexed to a B-N Substituted Ligand	2	258	A	None	None
+P03372	298	554	2q6j	Crystal Structure of Estrogen Receptor alpha Complexed to a B-N Substituted Ligand	2	258	B	None	None
+P03372	298	554	2qr9	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed with an Oxabicyclic Derivative Compound	2	258	A	None	None
+P03372	298	554	2qr9	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed with an Oxabicyclic Derivative Compound	2	258	B	None	None
+P03372	298	554	5du5	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a dichloro-substituted, 3,4-diarylthiophene dioxide core ligand	1	257	A	None	None
+P03372	298	554	5du5	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a dichloro-substituted, 3,4-diarylthiophene dioxide core ligand	1	257	B	None	None
+P03372	298	554	2g44	Human Estrogen Receptor Alpha Ligand-Binding Domain In Complex With OBCP-1M-G and A Glucocorticoid Receptor Interacting Protein 1 NR Box II Peptide	1	257	A	None	None
+P03372	298	554	2g44	Human Estrogen Receptor Alpha Ligand-Binding Domain In Complex With OBCP-1M-G and A Glucocorticoid Receptor Interacting Protein 1 NR Box II Peptide	1	257	B	None	None
+P03372	298	554	5dtv	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a dimethyl-substituted, 3,4-diarylthiophene dioxide core ligand	1	257	A	None	None
+P03372	298	554	5dtv	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a dimethyl-substituted, 3,4-diarylthiophene dioxide core ligand	1	257	B	None	None
+P03372	298	554	5tn9	Crystal Structure of the ER-alpha Ligand-binding Domain (L372S,L536S) in Complex with the OBHS-BSC, 4-bromophenyl (1R,2R,4S)-5-(4-hydroxyphenyl)-6-(4-(2-(piperidin-1-yl)ethoxy)phenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	A	None	None
+P03372	298	554	5tn9	Crystal Structure of the ER-alpha Ligand-binding Domain (L372S,L536S) in Complex with the OBHS-BSC, 4-bromophenyl (1R,2R,4S)-5-(4-hydroxyphenyl)-6-(4-(2-(piperidin-1-yl)ethoxy)phenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	D	None	None
+P03372	298	554	5tn9	Crystal Structure of the ER-alpha Ligand-binding Domain (L372S,L536S) in Complex with the OBHS-BSC, 4-bromophenyl (1R,2R,4S)-5-(4-hydroxyphenyl)-6-(4-(2-(piperidin-1-yl)ethoxy)phenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	B	None	None
+P03372	298	554	5tn9	Crystal Structure of the ER-alpha Ligand-binding Domain (L372S,L536S) in Complex with the OBHS-BSC, 4-bromophenyl (1R,2R,4S)-5-(4-hydroxyphenyl)-6-(4-(2-(piperidin-1-yl)ethoxy)phenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate	1	257	C	None	None
+P03372	298	554	5tn8	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with (E)-4'-hydroxy-3-((hydroxyiminio)methyl)-[1,1'-biphenyl]-4-olate	1	257	A	None	None
+P03372	298	554	5tn8	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with (E)-4'-hydroxy-3-((hydroxyiminio)methyl)-[1,1'-biphenyl]-4-olate	1	257	B	None	None
+P03372	298	554	2qse	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain complexed with Burned Meat Compound 4-OH-PhIP	2	258	A	None	None
+P03372	298	554	2qse	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain complexed with Burned Meat Compound 4-OH-PhIP	2	258	B	None	None
+P03372	298	554	6czn	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Z2OHTPE and a glucocorticoid receptor-interacting protein 1 NR box II peptide	1	257	A	None	None
+P03372	298	554	6czn	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Z2OHTPE and a glucocorticoid receptor-interacting protein 1 NR box II peptide	1	257	B	None	None
+P03372	298	554	5e1c	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative dimethyl {(1S)-3-[bis(4-hydroxyphenyl)methylidene]cyclohexyl}propanedioate	1	257	A	None	None
+P03372	298	554	5e1c	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative dimethyl {(1S)-3-[bis(4-hydroxyphenyl)methylidene]cyclohexyl}propanedioate	1	257	B	None	None
+P03372	298	554	5di7	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with an methyl-substituted A-CD ring estrogen derivative (1S,3aR,5S,7aS)-5-(4-hydroxy-2-methylphenyl)-7a-methyloctahydro-1H-inden-1-ol	1	257	A	None	None
+P03372	298	554	5di7	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with an methyl-substituted A-CD ring estrogen derivative (1S,3aR,5S,7aS)-5-(4-hydroxy-2-methylphenyl)-7a-methyloctahydro-1H-inden-1-ol	1	257	B	None	None
+P03372	298	554	5tn5	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the AC-ring estrogen, (1S,3aS,5S,7aS)-5-(4-hydroxyphenyl)-7a-methyloctahydro-1H-inden-1-ol	1	257	A	None	None
+P03372	298	554	5tn5	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the AC-ring estrogen, (1S,3aS,5S,7aS)-5-(4-hydroxyphenyl)-7a-methyloctahydro-1H-inden-1-ol	1	257	B	None	None
+P03372	298	554	5tn4	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the ACD-ring estrogen, (S)-5-(4-hydroxy-3,5-dimethylphenyl)-2,3-dihydro-1H-inden-1-ol	1	257	A	None	None
+P03372	298	554	5tn4	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the ACD-ring estrogen, (S)-5-(4-hydroxy-3,5-dimethylphenyl)-2,3-dihydro-1H-inden-1-ol	1	257	B	None	None
+P03372	298	554	5tn7	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with (E)-3'-fluoro-4'-hydroxy-3-((hydroxyiminio)methyl)-[1,1'-biphenyl]-4-olate	1	257	A	None	None
+P03372	298	554	5tn7	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with (E)-3'-fluoro-4'-hydroxy-3-((hydroxyiminio)methyl)-[1,1'-biphenyl]-4-olate	1	257	B	None	None
+P03372	298	554	5tmt	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 4,4'-((1,3-dihydro-2H-inden-2-ylidene)methylene)diphenol	1	257	A	None	None
+P03372	298	554	5tmt	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 4,4'-((1,3-dihydro-2H-inden-2-ylidene)methylene)diphenol	1	257	B	None	None
+P03372	298	554	5tml	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC compound, (E)-6-(4-((1R,4S,6R)-6-((3-chlorophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenyl)hex-5-enoic acid	1	257	A	None	None
+P03372	298	554	5tml	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC compound, (E)-6-(4-((1R,4S,6R)-6-((3-chlorophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenyl)hex-5-enoic acid	1	257	B	None	None
+P03372	298	554	2qxm	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed to Burned Meat Compound PhIP	2	258	A	None	None
+P03372	298	554	2qxm	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed to Burned Meat Compound PhIP	2	258	B	None	None
+P03372	298	554	5dzi	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3S)-3-(2-hydroxyethyl)cyclohexylidene]methanediyl}diphenol	1	257	A	None	None
+P03372	298	554	5dzi	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3S)-3-(2-hydroxyethyl)cyclohexylidene]methanediyl}diphenol	1	257	B	None	None
+P03372	298	554	5dzh	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[4-(2-hydroxyethyl)cyclohexylidene]methanediyl}diphenol	1	257	A	None	None
+P03372	298	554	5dzh	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[4-(2-hydroxyethyl)cyclohexylidene]methanediyl}diphenol	1	257	B	None	None
+P03372	298	554	2qxs	Crystal Structure of Antagonizing Mutant 536S of the Estrogen Receptor Alpha Ligand Binding Domain Complexed to Raloxifene	2	258	A	None	None
+P03372	298	554	2qxs	Crystal Structure of Antagonizing Mutant 536S of the Estrogen Receptor Alpha Ligand Binding Domain Complexed to Raloxifene	2	258	B	None	None
+P03372	298	554	2qh6	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed with an Oxabicyclic diarylethylene Compound	2	258	A	None	None
+P03372	298	554	2qh6	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed with an Oxabicyclic diarylethylene Compound	2	258	B	None	None
+P03372	298	554	6owc	Mutant estrogen receptor alpha (ERa) Y537S covalently bound to H3B-6545.	2	258	A	None	None
+P03372	298	554	6owc	Mutant estrogen receptor alpha (ERa) Y537S covalently bound to H3B-6545.	2	258	B	None	None
+P03372	298	554	5tmo	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Arene Core OBHS derivative, phenyl 4,4''-dihydroxy-[1,1':2',1''-terphenyl]-4'-sulfonate	1	257	A	None	None
+P03372	298	554	5tmo	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Arene Core OBHS derivative, phenyl 4,4''-dihydroxy-[1,1':2',1''-terphenyl]-4'-sulfonate	1	257	B	None	None
+P03372	298	554	5dug	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a Sulfoxide-bridged Oxabicyclic Heptene Sulfonate (SOBHS)-2 analog phenyl (1S,2S,4S,7S)-5,6-bis(4-hydroxy-2-methylphenyl)-7-thiabicyclo[2.2.1]hept-5-ene-2-sulfonate 7-oxide	1	257	A	None	None
+P03372	298	554	5dug	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a Sulfoxide-bridged Oxabicyclic Heptene Sulfonate (SOBHS)-2 analog phenyl (1S,2S,4S,7S)-5,6-bis(4-hydroxy-2-methylphenyl)-7-thiabicyclo[2.2.1]hept-5-ene-2-sulfonate 7-oxide	1	257	B	None	None
+P03372	298	554	5drj	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a dichloro-substituted, 3-methyl 2,5-diarylthiophene-core ligand 4,4'-(3-methylthiene-2,5-diyl)bis(3-chlorophenol)	1	257	A	None	None
+P03372	298	554	5drj	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a dichloro-substituted, 3-methyl 2,5-diarylthiophene-core ligand 4,4'-(3-methylthiene-2,5-diyl)bis(3-chlorophenol)	1	257	B	None	None
+P03372	298	554	5dkb	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a 3-methylphenylamino-substituted ethyl triaryl-ethylene derivative 4,4'-(2-{3-[(3-methylphenyl)amino]phenyl}but-1-ene-1,1-diyl)diphenol	1	257	A	None	None
+P03372	298	554	5dkb	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a 3-methylphenylamino-substituted ethyl triaryl-ethylene derivative 4,4'-(2-{3-[(3-methylphenyl)amino]phenyl}but-1-ene-1,1-diyl)diphenol	1	257	B	None	None
+P03372	298	554	5dkg	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a t-butyl-substituted, methyl, triaryl-ethylene derivative 4,4'-[2-(4-tert-butylphenyl)prop-1-ene-1,1-diyl]diphenol	1	257	A	None	None
+P03372	298	554	5dkg	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a t-butyl-substituted, methyl, triaryl-ethylene derivative 4,4'-[2-(4-tert-butylphenyl)prop-1-ene-1,1-diyl]diphenol	1	257	B	None	None
+P03372	298	554	5dwe	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a 2-Chloro-substituted Triaryl-imine analog 4,4'-[(2-chlorophenyl)carbonimidoyl]diphenol	1	257	A	None	None
+P03372	298	554	5dwe	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a 2-Chloro-substituted Triaryl-imine analog 4,4'-[(2-chlorophenyl)carbonimidoyl]diphenol	1	257	B	None	None
+P03372	298	554	5tlv	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 4,4'-(thiophene-2,3-diyl)bis(3-fluorophenol)	1	257	A	None	None
+P03372	298	554	5tlv	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 4,4'-(thiophene-2,3-diyl)bis(3-fluorophenol)	1	257	B	None	None
+P03372	298	554	5dks	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a 2-naphthylamino-substituted, ethyl, triaryl-ethylene derivative 4,4'-{2-[3-(naphthalen-1-ylamino)phenyl]but-1-ene-1,1-diyl}diphenol	1	257	A	None	None
+P03372	298	554	5dks	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a 2-naphthylamino-substituted, ethyl, triaryl-ethylene derivative 4,4'-{2-[3-(naphthalen-1-ylamino)phenyl]but-1-ene-1,1-diyl}diphenol	1	257	B	None	None
+P03372	298	554	2fai	Human Estrogen Receptor Alpha Ligand-Binding Domain In Complex With OBCP-2M and A Glucocorticoid Receptor Interacting Protein 1 NR Box II Peptide	1	257	A	None	None
+P03372	298	554	2fai	Human Estrogen Receptor Alpha Ligand-Binding Domain In Complex With OBCP-2M and A Glucocorticoid Receptor Interacting Protein 1 NR Box II Peptide	1	257	B	None	None
+P03372	298	554	5tmu	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 4,4'-(cycloheptylidenemethylene)diphenol	1	257	A	None	None
+P03372	298	554	5tmu	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 4,4'-(cycloheptylidenemethylene)diphenol	1	257	B	None	None
+P03372	298	554	5dvs	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a 2-Methyl-substituted Triaryl-imine 4,4'-[(2-methylphenyl)carbonimidoyl]diphenol	1	257	A	None	None
+P03372	298	554	5dvs	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a 2-Methyl-substituted Triaryl-imine 4,4'-[(2-methylphenyl)carbonimidoyl]diphenol	1	257	B	None	None
+P03372	298	554	5drm	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a dichloro-substituted, 2,5-diarylthiophene-core ligand 4,4'-thiene-2,5-diylbis(3-chlorophenol)	1	257	A	None	None
+P03372	298	554	5drm	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a dichloro-substituted, 2,5-diarylthiophene-core ligand 4,4'-thiene-2,5-diylbis(3-chlorophenol)	1	257	B	None	None
+P03372	298	554	5tm6	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC compound, 6-(4-((1R,4S,6R)-6-((4-bromophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenoxy)hexanoic acid	1	257	A	None	None
+P03372	298	554	5tm6	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-ASC compound, 6-(4-((1R,4S,6R)-6-((4-bromophenoxy)sulfonyl)-3-(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-2-en-2-yl)phenoxy)hexanoic acid	1	257	B	None	None
+P03372	298	554	5kcu	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-ethyl, alpha-naphthyl OBHS-N derivative	1	257	A	None	None
+P03372	298	554	5kcu	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-ethyl, alpha-naphthyl OBHS-N derivative	1	257	B	None	None
+P03372	298	554	5kct	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-ethyl, 4-chlorobenzyl OBHS-N derivative	1	257	A	None	None
+P03372	298	554	5kct	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-ethyl, 4-chlorobenzyl OBHS-N derivative	1	257	B	None	None
+P03372	298	554	5dvv	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a Triaryl-imine analog 4,4'-(phenylcarbonimidoyl)diphenol	1	257	A	None	None
+P03372	298	554	5dvv	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with a Triaryl-imine analog 4,4'-(phenylcarbonimidoyl)diphenol	1	257	B	None	None
+P03372	298	554	5dyd	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3S)-3-(methylsulfanyl)cyclohexylidene]methanediyl}diphenol	1	257	A	None	None
+P03372	298	554	5dyd	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3S)-3-(methylsulfanyl)cyclohexylidene]methanediyl}diphenol	1	257	B	None	None
+P03372	298	554	5dz1	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-[(4-ethylcyclohexylidene)methanediyl]diphenol	1	257	A	None	None
+P03372	298	554	5dz1	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-[(4-ethylcyclohexylidene)methanediyl]diphenol	1	257	B	None	None
+P03372	298	554	5dz0	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-[(4-methylcyclohexylidene)methanediyl]diphenol	1	257	A	None	None
+P03372	298	554	5dz0	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-[(4-methylcyclohexylidene)methanediyl]diphenol	1	257	B	None	None
+P03372	298	554	5kcc	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with Oxabicyclic Heptene Sulfonamide (OBHS-N)	1	257	A	None	None
+P03372	298	554	5kcc	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with Oxabicyclic Heptene Sulfonamide (OBHS-N)	1	257	B	None	None
+P03372	298	554	5dwg	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Triaryl-substituted Imine Analog, 4-{(E)-(4-hydroxyphenyl)[(2-methylphenyl)imino]methyl}benzene-1,3-diol	1	257	A	None	None
+P03372	298	554	5dwg	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Triaryl-substituted Imine Analog, 4-{(E)-(4-hydroxyphenyl)[(2-methylphenyl)imino]methyl}benzene-1,3-diol	1	257	B	None	None
+P03372	298	554	5kce	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-methyl, 2-chlorobenzyl OBHS-N derivative	1	257	A	None	None
+P03372	298	554	5kce	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-methyl, 2-chlorobenzyl OBHS-N derivative	1	257	B	None	None
+P03372	298	554	5kcd	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-methyl Substituted OBHS-N derivative	1	257	A	None	None
+P03372	298	554	5kcd	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with an N-methyl Substituted OBHS-N derivative	1	257	B	None	None
+P03372	298	554	5tm3	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 2,3-bis(2-chloro-4-hydroxyphenyl)thiophene 1-oxide	1	257	A	None	None
+P03372	298	554	5tm3	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with 2,3-bis(2-chloro-4-hydroxyphenyl)thiophene 1-oxide	1	257	B	None	None
+P03372	298	554	5tld	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the phenylamino-substituted estrogen, (8R,9S,13S,14S,17S)-13-methyl-17-(phenylamino)-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol	1	257	A	None	None
+P03372	298	554	5tld	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the phenylamino-substituted estrogen, (8R,9S,13S,14S,17S)-13-methyl-17-(phenylamino)-7,8,9,11,12,13,14,15,16,17-decahydro-6H-cyclopenta[a]phenanthren-3-ol	1	257	B	None	None
+P03372	298	554	5tlg	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with (E)-4,4''-dihydroxy-3'-((hydroxyiminio)methyl)-[1,1':2',1''-terphenyl]-4'-olate	1	257	A	None	None
+P03372	298	554	5tlg	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with (E)-4,4''-dihydroxy-3'-((hydroxyiminio)methyl)-[1,1':2',1''-terphenyl]-4'-olate	1	257	B	None	None
+P03372	298	554	2b23	Human estrogen receptor alpha ligand-binding domain and a glucocorticoid receptor-interacting protein 1 NR box II peptide	1	257	A	None	None
+P03372	298	554	2b23	Human estrogen receptor alpha ligand-binding domain and a glucocorticoid receptor-interacting protein 1 NR box II peptide	1	257	B	None	None
+P03372	298	554	5dk9	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a phenylamino-substituted ethyl triaryl-ethylene derivative 4,4'-{2-[3-(phenylamino)phenyl]but-1-ene-1,1-diyl}diphenol	1	257	A	None	None
+P03372	298	554	5dk9	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a phenylamino-substituted ethyl triaryl-ethylene derivative 4,4'-{2-[3-(phenylamino)phenyl]but-1-ene-1,1-diyl}diphenol	1	257	B	None	None
+P03372	298	554	5tlp	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-BSC Analog, 3-fluorophenyl (1R,2R,4S)-5-(4-hydroxyphenyl)-6-(4-(2-(piperidin-1-yl)ethoxy)phenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate and 3-methyl-6-phenyl-3H-imidazo[4,5-b]pyridin-2-amine	1	257	A	None	None
+P03372	298	554	5tlp	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the OBHS-BSC Analog, 3-fluorophenyl (1R,2R,4S)-5-(4-hydroxyphenyl)-6-(4-(2-(piperidin-1-yl)ethoxy)phenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate and 3-methyl-6-phenyl-3H-imidazo[4,5-b]pyridin-2-amine	1	257	B	None	None
+P03372	298	554	5tlf	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Constrained WAY Derivative, 4-(2-(3-methylbut-2-en-1-yl)-7-(trifluoromethyl)-2H-indazol-3-yl)benzene-1,3-diol	1	257	A	None	None
+P03372	298	554	5tlf	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in Complex with the Constrained WAY Derivative, 4-(2-(3-methylbut-2-en-1-yl)-7-(trifluoromethyl)-2H-indazol-3-yl)benzene-1,3-diol	1	257	B	None	None
+P03372	298	553	6pet	Crystal structure of 8-hydroxychromene compound 30 bound to estrogen receptor alpha	25	280	B	None	None
+P03372	298	553	6pet	Crystal structure of 8-hydroxychromene compound 30 bound to estrogen receptor alpha	25	280	A	None	None
+P03372	298	553	6pet	Crystal structure of 8-hydroxychromene compound 30 bound to estrogen receptor alpha	25	280	C	None	None
+P03372	298	553	6pet	Crystal structure of 8-hydroxychromene compound 30 bound to estrogen receptor alpha	25	280	D	None	None
+P03372	298	553	6wok	Crystal structure of estrogen receptor alpha in complex with receptor degrader 6	25	280	B	None	None
+P03372	298	553	6wok	Crystal structure of estrogen receptor alpha in complex with receptor degrader 6	25	280	A	None	None
+P03372	298	553	6wok	Crystal structure of estrogen receptor alpha in complex with receptor degrader 6	25	280	D	None	None
+P03372	298	553	6wok	Crystal structure of estrogen receptor alpha in complex with receptor degrader 6	25	280	C	None	None
+P03372	298	553	6df6	Crystal structure of estrogen receptor alpha in complex with receptor degrader 16ab	25	280	A	None	None
+P03372	298	553	6df6	Crystal structure of estrogen receptor alpha in complex with receptor degrader 16ab	25	280	D	None	None
+P03372	298	553	6df6	Crystal structure of estrogen receptor alpha in complex with receptor degrader 16ab	25	280	B	None	None
+P03372	298	553	6df6	Crystal structure of estrogen receptor alpha in complex with receptor degrader 16ab	25	280	C	None	None
+P03372	298	553	6dfn	Crystal structure of estrogen receptor alpha in complex with receptor degrader 16aa	25	280	A	None	None
+P03372	298	553	6dfn	Crystal structure of estrogen receptor alpha in complex with receptor degrader 16aa	25	280	D	None	None
+P03372	298	553	6dfn	Crystal structure of estrogen receptor alpha in complex with receptor degrader 16aa	25	280	B	None	None
+P03372	298	553	6dfn	Crystal structure of estrogen receptor alpha in complex with receptor degrader 16aa	25	280	C	None	None
+P03372	298	553	6pfm	Crystal structure of GDC-0927 bound to estrogen receptor alpha	25	280	A	None	None
+P03372	298	553	6pfm	Crystal structure of GDC-0927 bound to estrogen receptor alpha	25	280	D	None	None
+P03372	298	550	3hm1	Crystal structure of human Estrogen Receptor Alpha Ligand-Binding Domain in complex with a Glucocorticoid Receptor Interacting Protein 1 Nr Box II Peptide and estrone ((8R,9S,13S,14S)-3-hydroxy-13-methyl-7,8,9,11,12,14,15,16-octahydro-6H-cyclopenta[a]phenanthren-17-one)	1	253	B	None	550
+P03372	298	550	3hm1	Crystal structure of human Estrogen Receptor Alpha Ligand-Binding Domain in complex with a Glucocorticoid Receptor Interacting Protein 1 Nr Box II Peptide and estrone ((8R,9S,13S,14S)-3-hydroxy-13-methyl-7,8,9,11,12,14,15,16-octahydro-6H-cyclopenta[a]phenanthren-17-one)	1	253	A	None	None
+P03372	298	550	3hlv	Crystal structure of human Estrogen Receptor Alpha Ligand-Binding Domain in complex with a Glucocorticoid Receptor Interacting Protein 1 Nr Box II Peptide and 16-alpha-hydroxy-estrone ((8S,9R,13S,14R,16R)-3,16-dihydroxy-13-methyl-7,8,9,11,12,14,15, 16-octahydro-6H-cyclopenta[a]phenanthren-17-one	1	253	A	None	None
+P03372	298	550	3hlv	Crystal structure of human Estrogen Receptor Alpha Ligand-Binding Domain in complex with a Glucocorticoid Receptor Interacting Protein 1 Nr Box II Peptide and 16-alpha-hydroxy-estrone ((8S,9R,13S,14R,16R)-3,16-dihydroxy-13-methyl-7,8,9,11,12,14,15, 16-octahydro-6H-cyclopenta[a]phenanthren-17-one	1	253	B	None	None
+P03372	298	550	3l03	Crystal Structure of human Estrogen Receptor alpha Ligand-Binding Domain in complex with a Glucocorticoid Receptor Interacting Protein 1 Nr Box II peptide and Estetrol (Estra-1,3,5(10)-triene-3,15 alpha,16alpha,17beta-tetrol)	1	253	A	None	None
+P03372	298	550	3l03	Crystal Structure of human Estrogen Receptor alpha Ligand-Binding Domain in complex with a Glucocorticoid Receptor Interacting Protein 1 Nr Box II peptide and Estetrol (Estra-1,3,5(10)-triene-3,15 alpha,16alpha,17beta-tetrol)	1	253	B	None	550
+P03372	298	554	2qzo	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed with WAY-169916	2	258	A	None	None
+P03372	298	554	2qzo	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Complexed with WAY-169916	2	258	B	None	None
+P03372	298	595	2ocf	Human estrogen receptor alpha ligand-binding domain in complex with estradiol and the E2#23 FN3 monobody	1	298	A	None	None
+P03372	298	554	3q95	Crystal structure of human estrogen receptor alpha LBD in complex with GRIP peptide and estriol	4	260	A	None	None
+P03372	298	554	3q95	Crystal structure of human estrogen receptor alpha LBD in complex with GRIP peptide and estriol	4	260	B	None	None
+P03372	298	554	2qa8	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Mutant 537S Complexed with Genistein	2	258	A	None	None
+P03372	298	554	2qa8	Crystal Structure of the Estrogen Receptor Alpha Ligand Binding Domain Mutant 537S Complexed with Genistein	2	258	B	None	None
+P03372	298	554	5e0x	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3S)-3-(4-methoxyphenyl)cyclohexylidene]methanediyl}diphenol	1	257	A	None	None
+P03372	298	554	5e0x	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3S)-3-(4-methoxyphenyl)cyclohexylidene]methanediyl}diphenol	1	257	B	None	None
+P03372	298	554	5dl4	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a phenylamino-substituted, methyl, triaryl-ethylene derivative 4,4'-{2-[3-(phenylamino)phenyl]prop-1-ene-1,1-diyl}diphenol	1	257	A	None	None
+P03372	298	554	5dl4	Crystal Structure of the ER-alpha Ligand-binding Domain in complex with a phenylamino-substituted, methyl, triaryl-ethylene derivative 4,4'-{2-[3-(phenylamino)phenyl]prop-1-ene-1,1-diyl}diphenol	1	257	B	None	None
+P03372	298	554	5e0w	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3S)-3-(4-hydroxyphenyl)cyclohexylidene]methanediyl}diphenol	1	257	A	None	None
+P03372	298	554	5e0w	Crystal Structure of the ER-alpha Ligand-binding Domain in Complex with the Cyclofenil Derivative 4,4'-{[(3S)-3-(4-hydroxyphenyl)cyclohexylidene]methanediyl}diphenol	1	257	B	None	None
+P03372	298	307	3cbo	SET7/9-ER-AdoHcy complex	1	10	B	None	None
+P03372	298	307	3cbp	Set7/9-ER-Sinefungin complex	1	10	B	None	None
+P03372	299	553	3osa	Estrogen Receptor	4	258	A	None	None
+P03372	299	553	3osa	Estrogen Receptor	4	258	D	None	None
+P03372	299	553	3osa	Estrogen Receptor	4	258	B	None	None
+P03372	299	553	3osa	Estrogen Receptor	4	258	C	None	None
+P03372	299	553	3os9	Estrogen Receptor	4	258	A	None	None
+P03372	299	553	3os9	Estrogen Receptor	4	258	D	None	None
+P03372	299	553	3os9	Estrogen Receptor	4	258	B	None	None
+P03372	299	553	3os9	Estrogen Receptor	4	258	C	None	None
+P03372	299	551	2yja	Stapled Peptides binding to Estrogen Receptor alpha.	3	255	B	None	None
+P03372	299	554	4pxm	The Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant in Complex with Estradiol and a glucocorticoid receptor-interacting protein 1 NR box II peptide	16	271	A	None	None
+P03372	299	554	4pxm	The Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant in Complex with Estradiol and a glucocorticoid receptor-interacting protein 1 NR box II peptide	16	271	B	None	None
+P03372	299	554	4q13	Apo Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant with a glucocorticoid receptor-interacting protein 1 NR box II peptide	6	261	A	None	None
+P03372	299	554	4q13	Apo Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant with a glucocorticoid receptor-interacting protein 1 NR box II peptide	6	261	B	None	None
+P03372	299	553	3os8	Estrogen Receptor	4	258	A	None	None
+P03372	299	553	3os8	Estrogen Receptor	4	258	B	None	None
+P03372	299	553	3os8	Estrogen Receptor	4	258	D	None	None
+P03372	299	553	3os8	Estrogen Receptor	4	258	C	None	None
+P03372	299	551	3dt3	Human Estrogen receptor alpha LBD with GW368	3	255	A	None	551
+P03372	299	551	3dt3	Human Estrogen receptor alpha LBD with GW368	3	255	B	None	None
+P03372	299	554	4q50	The Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant in Complex with 4-hydroxytamoxifen	5	260	D	None	None
+P03372	299	554	4q50	The Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant in Complex with 4-hydroxytamoxifen	5	260	C	None	None
+P03372	299	554	4q50	The Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant in Complex with 4-hydroxytamoxifen	5	260	H	None	None
+P03372	299	554	4q50	The Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant in Complex with 4-hydroxytamoxifen	5	260	A	None	None
+P03372	299	554	4q50	The Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant in Complex with 4-hydroxytamoxifen	5	260	F	None	None
+P03372	299	554	4q50	The Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant in Complex with 4-hydroxytamoxifen	5	260	E	None	None
+P03372	299	554	4q50	The Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant in Complex with 4-hydroxytamoxifen	5	260	B	None	None
+P03372	299	554	4q50	The Estrogen Receptor Alpha Ligand Binding Domain D538G Mutant in Complex with 4-hydroxytamoxifen	5	260	G	None	None
+P03372	301	553	6b0f	ESTROGEN RECEPTOR ALPHA LIGAND BINDING DOMAIN IN COMPLEX WITH LSZ102	2	254	A	None	None
+P03372	301	553	6b0f	ESTROGEN RECEPTOR ALPHA LIGAND BINDING DOMAIN IN COMPLEX WITH LSZ102	2	254	B	None	None
+P03372	301	559	4zn7	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with Diethylstilbestrol	1	259	A	None	None
+P03372	301	559	4zn7	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with Diethylstilbestrol	1	259	B	None	None
+P03372	301	559	4znh	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 2-Fluoro-substituted OBHS derivative	1	259	A	None	None
+P03372	301	559	4znh	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 2-Fluoro-substituted OBHS derivative	1	259	B	None	None
+P03372	301	559	4znt	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 3-Bromo-substituted OBHS derivative	1	259	A	None	None
+P03372	301	559	4znt	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 3-Bromo-substituted OBHS derivative	1	259	B	None	None
+P03372	301	553	5t92	ESTROGEN RECEPTOR ALPHA LIGAND BINDING DOMAIN IN COMPLEX WITH (2E)-3-{4-[(1R)-2-(4-fluorophenyl)-6-hydroxy-1-methy l-1,2,3,4- tetrahydroisoquinolin-1-yl]phenyl}prop-2-enoic acid	2	254	A	None	None
+P03372	301	553	5t92	ESTROGEN RECEPTOR ALPHA LIGAND BINDING DOMAIN IN COMPLEX WITH (2E)-3-{4-[(1R)-2-(4-fluorophenyl)-6-hydroxy-1-methy l-1,2,3,4- tetrahydroisoquinolin-1-yl]phenyl}prop-2-enoic acid	2	254	B	None	None
+P03372	301	553	2ouz	Crystal Structure of Estrogen Receptor alpha-lasofoxifene complex	1	253	A	None	None
+P03372	301	559	4zn9	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with Oxabicyclic Heptene Sulfonate (OBHS)	1	259	A	None	None
+P03372	301	559	4zn9	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with Oxabicyclic Heptene Sulfonate (OBHS)	1	259	B	None	None
+P03372	301	553	5t97	ESTROGEN RECEPTOR ALPHA LIGAND BINDING DOMAIN IN COMPLEX WITH (2E)-3-(4-{(1R)-6-hydroxy-1-methyl-2-[4-(propan-2 -yl)phenyl]-1,2,3,4- tetrahydroisoquinolin-1-yl}phenyl)prop-2-enoic acid	2	254	A	None	None
+P03372	301	553	5t97	ESTROGEN RECEPTOR ALPHA LIGAND BINDING DOMAIN IN COMPLEX WITH (2E)-3-(4-{(1R)-6-hydroxy-1-methyl-2-[4-(propan-2 -yl)phenyl]-1,2,3,4- tetrahydroisoquinolin-1-yl}phenyl)prop-2-enoic acid	2	254	B	None	None
+P03372	301	551	2yat	Crystal structure of estradiol derived metal chelate and estrogen receptor-ligand binding domain complex	2	252	A	301	None
+P03372	301	550	1qku	WILD TYPE ESTROGEN NUCLEAR RECEPTOR LIGAND BINDING DOMAIN COMPLEXED WITH ESTRADIOL	1	250	B	None	550
+P03372	301	550	1qku	WILD TYPE ESTROGEN NUCLEAR RECEPTOR LIGAND BINDING DOMAIN COMPLEXED WITH ESTRADIOL	1	250	C	None	550
+P03372	301	550	1qku	WILD TYPE ESTROGEN NUCLEAR RECEPTOR LIGAND BINDING DOMAIN COMPLEXED WITH ESTRADIOL	1	250	A	301	550
+P03372	301	548	1gwq	HUMAN OESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH RALOXIFENE CORE AND TIF2 NRBOX2 PEPTIDE	1	248	A	301	548
+P03372	301	548	1gwq	HUMAN OESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH RALOXIFENE CORE AND TIF2 NRBOX2 PEPTIDE	1	248	B	301	548
+P03372	301	559	4zns	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 3-Fluoro-substituted OBHS derivative	1	259	A	None	None
+P03372	301	559	4zns	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 3-Fluoro-substituted OBHS derivative	1	259	B	None	None
+P03372	301	559	4znw	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 4-Bromo-substituted OBHS derivative	1	259	A	None	None
+P03372	301	559	4znw	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 4-Bromo-substituted OBHS derivative	1	259	B	None	None
+P03372	301	559	4znu	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 2-Methyl-substituted OBHS derivative	1	259	A	None	None
+P03372	301	559	4znu	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 2-Methyl-substituted OBHS derivative	1	259	B	None	None
+P03372	301	554	2iok	Human estrogen receptor alpha ligand-binding domain in complex with compound 1D	1	254	A	None	None
+P03372	301	554	2iok	Human estrogen receptor alpha ligand-binding domain in complex with compound 1D	1	254	B	None	None
+P03372	301	553	1err	HUMAN ESTROGEN RECEPTOR LIGAND-BINDING DOMAIN IN COMPLEX WITH RALOXIFENE	1	253	A	None	None
+P03372	301	553	1err	HUMAN ESTROGEN RECEPTOR LIGAND-BINDING DOMAIN IN COMPLEX WITH RALOXIFENE	1	253	B	None	None
+P03372	301	559	4znv	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 2-Methoxy-substituted OBHS derivative	1	259	A	None	None
+P03372	301	559	4znv	Crystal Structure of the ER-alpha Ligand-binding Domain (Y537S) in complex with a 2-Methoxy-substituted OBHS derivative	1	259	B	None	None
+P03372	301	553	1ere	HUMAN ESTROGEN RECEPTOR LIGAND-BINDING DOMAIN IN COMPLEX WITH 17BETA-ESTRADIOL	1	253	D	None	None
+P03372	301	553	1ere	HUMAN ESTROGEN RECEPTOR LIGAND-BINDING DOMAIN IN COMPLEX WITH 17BETA-ESTRADIOL	1	253	C	None	None
+P03372	301	553	1ere	HUMAN ESTROGEN RECEPTOR LIGAND-BINDING DOMAIN IN COMPLEX WITH 17BETA-ESTRADIOL	1	253	A	None	None
+P03372	301	553	1ere	HUMAN ESTROGEN RECEPTOR LIGAND-BINDING DOMAIN IN COMPLEX WITH 17BETA-ESTRADIOL	1	253	F	None	None
+P03372	301	553	1ere	HUMAN ESTROGEN RECEPTOR LIGAND-BINDING DOMAIN IN COMPLEX WITH 17BETA-ESTRADIOL	1	253	E	None	None
+P03372	301	553	1ere	HUMAN ESTROGEN RECEPTOR LIGAND-BINDING DOMAIN IN COMPLEX WITH 17BETA-ESTRADIOL	1	253	B	None	None
+P03372	301	553	1uom	The Structure of Estrogen Receptor in Complex with a Selective and Potent Tetrahydroisochiolin Ligand.	2	254	A	None	None
+P03372	301	553	1xqc	X-ray structure of ERalpha LBD bound to a tetrahydroisoquinoline SERM ligand at 2.05A resolution	2	254	A	None	None
+P03372	301	553	1xqc	X-ray structure of ERalpha LBD bound to a tetrahydroisoquinoline SERM ligand at 2.05A resolution	2	254	D	None	None
+P03372	301	553	1xqc	X-ray structure of ERalpha LBD bound to a tetrahydroisoquinoline SERM ligand at 2.05A resolution	2	254	B	None	None
+P03372	301	553	1xqc	X-ray structure of ERalpha LBD bound to a tetrahydroisoquinoline SERM ligand at 2.05A resolution	2	254	C	None	None
+P03372	302	552	4mga	Crystal structure of hERa-LBD (Y537S) in complex with 4-tert-octylphenol	5	255	A	None	None
+P03372	302	552	4mga	Crystal structure of hERa-LBD (Y537S) in complex with 4-tert-octylphenol	5	255	B	None	None
+P03372	302	552	4mg6	Crystal structure of hERa-LBD (Y537S) in complex with benzylbutylphtalate	5	255	A	None	None
+P03372	302	552	4mg6	Crystal structure of hERa-LBD (Y537S) in complex with benzylbutylphtalate	5	255	B	None	None
+P03372	302	552	3uuc	Crystal structure of hERa-LBD (wt) in complex with bisphenol-C	1	251	A	None	None
+P03372	302	552	3uuc	Crystal structure of hERa-LBD (wt) in complex with bisphenol-C	1	251	B	None	552
+P03372	302	552	3uuc	Crystal structure of hERa-LBD (wt) in complex with bisphenol-C	1	251	D	None	552
+P03372	302	552	3uuc	Crystal structure of hERa-LBD (wt) in complex with bisphenol-C	1	251	C	None	None
+P03372	302	552	4mgc	Crystal structure of hERa-LBD (Y537S) in complex with benzophenone-2	5	255	A	None	None
+P03372	302	552	4mgc	Crystal structure of hERa-LBD (Y537S) in complex with benzophenone-2	5	255	B	None	None
+P03372	302	552	4mg5	Crystal structure of hERa-LBD (Y537S) in complex with chlordecone	5	255	A	None	None
+P03372	302	552	4mg5	Crystal structure of hERa-LBD (Y537S) in complex with chlordecone	5	255	B	None	None
+P03372	302	552	4mg7	Crystal structure of hERa-LBD (Y537S) in complex with ferutinine	5	255	A	None	None
+P03372	302	552	4mg7	Crystal structure of hERa-LBD (Y537S) in complex with ferutinine	5	255	B	None	None
+P03372	302	552	4mgb	Crystal structure of hERa-LBD (Y537S) in complex with TCBPA	5	255	A	None	None
+P03372	302	552	4mgb	Crystal structure of hERa-LBD (Y537S) in complex with TCBPA	5	255	B	None	None
+P03372	302	552	3uud	Crystal structure of hERa-LBD (Y537S) in complex with estradiol	1	251	A	None	None
+P03372	302	552	3uud	Crystal structure of hERa-LBD (Y537S) in complex with estradiol	1	251	B	None	None
+P03372	302	552	3uua	Crystal structure of hERa-LBD (Y537S) in complex with bisphenol-AF	1	251	A	None	None
+P03372	302	552	3uua	Crystal structure of hERa-LBD (Y537S) in complex with bisphenol-AF	1	251	B	None	None
+P03372	302	552	5jmm	Crystal structure of hERa-LBD (Y537S) in complex with biochanin A	5	255	A	None	None
+P03372	302	552	5jmm	Crystal structure of hERa-LBD (Y537S) in complex with biochanin A	5	255	B	None	None
+P03372	302	552	3uu7	Crystal structure of hERa-LBD (Y537S) in complex with bisphenol-A	1	251	A	None	None
+P03372	302	552	3uu7	Crystal structure of hERa-LBD (Y537S) in complex with bisphenol-A	1	251	B	None	None
+P03372	302	559	5hyr	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Stapled Peptide SRC2-SP2 and Estradiol	1	258	A	None	None
+P03372	302	559	5hyr	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Stapled Peptide SRC2-SP2 and Estradiol	1	258	B	None	None
+P03372	302	552	4tuz	Crystal structure of hERa-LBD (Y537S) in complex with alpha-zearalenol	5	255	A	None	None
+P03372	302	552	4tuz	Crystal structure of hERa-LBD (Y537S) in complex with alpha-zearalenol	5	255	B	None	None
+P03372	302	552	4tv1	Crystal structure of hERa-LBD (Y537S) in complex with propylparaben	1	251	A	None	None
+P03372	302	552	4tv1	Crystal structure of hERa-LBD (Y537S) in complex with propylparaben	1	251	B	None	None
+P03372	302	552	4mgd	Crystal structure of hERa-LBD (Y537S) in complex with HPTE	5	255	A	None	None
+P03372	302	552	4mgd	Crystal structure of hERa-LBD (Y537S) in complex with HPTE	5	255	B	None	None
+P03372	302	552	4mg8	Crystal structure of hERa-LBD (Y537S) in complex with alpha-zearalanol	5	255	A	None	None
+P03372	302	552	4mg8	Crystal structure of hERa-LBD (Y537S) in complex with alpha-zearalanol	5	255	B	None	None
+P03372	302	552	4mg9	Crystal structure of hERa-LBD (Y537S) in complex with butylparaben	5	255	A	None	None
+P03372	302	552	4mg9	Crystal structure of hERa-LBD (Y537S) in complex with butylparaben	5	255	B	None	None
+P03372	303	549	4iw6	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Constrained WAY-derivative, 7b	1	247	A	None	None
+P03372	303	549	4iw6	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Constrained WAY-derivative, 7b	1	247	B	None	None
+P03372	303	549	4dma	Crystal structure of ERa LBD in complex with RU100132	1	247	B	1303	None
+P03372	303	549	4dma	Crystal structure of ERa LBD in complex with RU100132	1	247	A	None	549
+P03372	303	549	4iui	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Dynamic WAY derivative, 4a	1	247	A	None	None
+P03372	303	549	4iui	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Dynamic WAY derivative, 4a	1	247	B	None	549
+P03372	303	549	4iwf	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with a Dynamic Oxime-derivative	1	247	A	None	None
+P03372	303	549	4iwf	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with a Dynamic Oxime-derivative	1	247	B	None	None
+P03372	303	533	2jf9	ESTROGEN RECEPTOR ALPHA LBD IN COMPLEX WITH A TAMOXIFEN-SPECIFIC PEPTIDE ANTAGONIST	22	252	A	None	None
+P03372	303	533	2jf9	ESTROGEN RECEPTOR ALPHA LBD IN COMPLEX WITH A TAMOXIFEN-SPECIFIC PEPTIDE ANTAGONIST	22	252	B	None	None
+P03372	303	533	2jf9	ESTROGEN RECEPTOR ALPHA LBD IN COMPLEX WITH A TAMOXIFEN-SPECIFIC PEPTIDE ANTAGONIST	22	252	C	None	None
+P03372	303	533	2bj4	ESTROGEN RECEPTOR ALPHA LBD IN COMPLEX WITH A PHAGE-DISPLAY DERIVED PEPTIDE ANTAGONIST	22	252	A	None	None
+P03372	303	533	2bj4	ESTROGEN RECEPTOR ALPHA LBD IN COMPLEX WITH A PHAGE-DISPLAY DERIVED PEPTIDE ANTAGONIST	22	252	B	None	None
+P03372	303	533	2jfa	ESTROGEN RECEPTOR ALPHA LBD IN COMPLEX WITH AN AFFINITY-SELECTED COREPRESSOR PEPTIDE	22	252	A	None	None
+P03372	303	533	2jfa	ESTROGEN RECEPTOR ALPHA LBD IN COMPLEX WITH AN AFFINITY-SELECTED COREPRESSOR PEPTIDE	22	252	B	None	None
+P03372	303	549	4ivy	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Dynamic WAY-derivative, 7a	1	247	A	None	None
+P03372	303	549	4ivy	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Dynamic WAY-derivative, 7a	1	247	B	None	None
+P03372	303	549	4iu7	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Constrained WAY-derivative, 2b	1	247	A	None	None
+P03372	303	549	4iu7	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Constrained WAY-derivative, 2b	1	247	B	None	549
+P03372	303	549	4iw8	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Dynamic WAY-derivative, 9a	1	247	B	None	None
+P03372	303	549	4iw8	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Dynamic WAY-derivative, 9a	1	247	A	None	None
+P03372	303	549	4ivw	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Constrained WAY-derivative, 6b	1	247	A	303	None
+P03372	303	549	4ivw	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Constrained WAY-derivative, 6b	1	247	B	None	None
+P03372	303	549	4iwc	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with a Dynamic Thiophene-derivative	1	247	A	None	None
+P03372	303	549	4iwc	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with a Dynamic Thiophene-derivative	1	247	B	None	549
+P03372	303	549	4iv4	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Constrained WAY-derivative, 5b	1	247	A	None	None
+P03372	303	549	4iv4	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Constrained WAY-derivative, 5b	1	247	B	None	None
+P03372	303	549	4iv2	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Dynamic WAY-derivative, 5a	1	247	A	None	None
+P03372	303	549	4iv2	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Dynamic WAY-derivative, 5a	1	247	B	None	None
+P03372	304	551	2r6y	Estrogen receptor alpha ligand-binding domain in complex with a SERM	1	248	A	None	None
+P03372	304	551	2r6y	Estrogen receptor alpha ligand-binding domain in complex with a SERM	1	248	B	None	None
+P03372	304	551	2r6w	Estrogen receptor alpha ligand-binding domain complexed to a SERM	1	248	A	None	None
+P03372	304	551	2r6w	Estrogen receptor alpha ligand-binding domain complexed to a SERM	1	248	B	None	None
+P03372	304	551	2qe4	Estrogen receptor alpha ligand-binding domain in complex with a benzopyran agonist	1	248	A	None	None
+P03372	304	551	2qe4	Estrogen receptor alpha ligand-binding domain in complex with a benzopyran agonist	1	248	B	None	None
+P03372	304	551	2pog	Benzopyrans as Selective Estrogen Receptor b Agonists (SERBAs). Part 2: Structure Activity Relationship Studies on the Benzopyran Scaffold.	1	248	A	None	None
+P03372	304	551	2pog	Benzopyrans as Selective Estrogen Receptor b Agonists (SERBAs). Part 2: Structure Activity Relationship Studies on the Benzopyran Scaffold.	1	248	B	None	None
+P03372	304	550	1g50	CRYSTAL STRUCTURE OF A WILD TYPE HER ALPHA LBD AT 2.9 ANGSTROM RESOLUTION	1	247	A	304	550
+P03372	304	550	1g50	CRYSTAL STRUCTURE OF A WILD TYPE HER ALPHA LBD AT 2.9 ANGSTROM RESOLUTION	1	247	C	2304	None
+P03372	304	550	1g50	CRYSTAL STRUCTURE OF A WILD TYPE HER ALPHA LBD AT 2.9 ANGSTROM RESOLUTION	1	247	B	1304	None
+P03372	304	551	2ayr	A SERM Designed for the Treatment of Uterine Leiomyoma with Unique Tissue Specificity for Uterus and Ovaries in Rats	1	248	A	None	551
+P03372	304	551	2q70	Estrogen receptor alpha ligand-binding domain complxed to a benzopyran ligand	1	248	A	None	None
+P03372	304	551	2q70	Estrogen receptor alpha ligand-binding domain complxed to a benzopyran ligand	1	248	B	None	None
+P03372	304	551	1qkt	MUTANT ESTROGEN NUCLEAR RECEPTOR LIGAND BINDING DOMAIN COMPLEXED WITH ESTRADIOL	1	248	A	304	551
+P03372	304	547	2i0j	Benzopyrans are Selective Estrogen Receptor beta Agonists (SERBAs) with Novel Activity in Models of Benign Prostatic Hyperplasia	1	244	B	None	547
+P03372	304	547	2i0j	Benzopyrans are Selective Estrogen Receptor beta Agonists (SERBAs) with Novel Activity in Models of Benign Prostatic Hyperplasia	1	244	D	None	547
+P03372	304	547	2i0j	Benzopyrans are Selective Estrogen Receptor beta Agonists (SERBAs) with Novel Activity in Models of Benign Prostatic Hyperplasia	1	244	A	None	None
+P03372	304	547	2i0j	Benzopyrans are Selective Estrogen Receptor beta Agonists (SERBAs) with Novel Activity in Models of Benign Prostatic Hyperplasia	1	244	C	None	None
+P03372	304	547	1pcg	Helix-stabilized cyclic peptides as selective inhibitors of steroid receptor-coactivator interactions	1	244	A	304	547
+P03372	304	547	1pcg	Helix-stabilized cyclic peptides as selective inhibitors of steroid receptor-coactivator interactions	1	244	B	304	547
+P03372	305	547	5gtr	estrogen receptor alpha in complex with a stabilized peptide antagonist 6	1	243	A	305	547
+P03372	305	554	5t1z	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Ethoxytriphenylethylene and GRIP Peptide	1	250	A	305	None
+P03372	305	554	5t1z	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Ethoxytriphenylethylene and GRIP Peptide	1	250	B	305	None
+P03372	305	549	1x7e	CRYSTAL STRUCTURE OF ESTROGEN RECEPTOR ALPHA COMPLEXED WITH WAY-244	1	245	B	305	549
+P03372	305	549	1x7e	CRYSTAL STRUCTURE OF ESTROGEN RECEPTOR ALPHA COMPLEXED WITH WAY-244	1	245	A	305	549
+P03372	305	549	1x7r	CRYSTAL STRUCTURE OF ESTROGEN RECEPTOR ALPHA COMPLEXED WITH GENISTEIN	1	245	A	None	None
+P03372	305	549	1gwr	HUMAN OESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH 17BETA-OESTRADIOL AND TIF2 NRBOX3 PEPTIDE	1	245	A	None	549
+P03372	305	549	1gwr	HUMAN OESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH 17BETA-OESTRADIOL AND TIF2 NRBOX3 PEPTIDE	1	245	B	305	None
+P03372	305	548	4ppp	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Fluoro-Resveratrol	1	244	B	None	548
+P03372	305	548	4ppp	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Fluoro-Resveratrol	1	244	A	305	548
+P03372	305	548	4pps	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with an A-CD ring estrogen derivative	1	244	B	305	548
+P03372	305	548	4pps	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with an A-CD ring estrogen derivative	1	244	A	305	548
+P03372	305	554	6d0f	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with 3OHTPE and GRIP Peptide	1	250	A	None	None
+P03372	305	554	6d0f	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with 3OHTPE and GRIP Peptide	1	250	B	None	None
+P03372	305	548	4pp6	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Resveratrol	1	244	B	305	548
+P03372	305	548	4pp6	Crystal Structure of the Estrogen Receptor alpha Ligand-binding Domain in Complex with Resveratrol	1	244	A	305	548
+P03372	305	554	6cbz	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Estradiol and GRIP Peptide	1	250	A	None	None
+P03372	305	554	6cbz	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with Estradiol and GRIP Peptide	1	250	B	None	None
+P03372	305	547	5gs4	Crystal structure of estrogen receptor alpha in complex with a stabilized peptide antagonist	1	243	A	305	547
+P03372	306	554	5ufw	Estrogen Receptor Alpha Ligand Binding Domain in Complex with OP1154	1	249	A	None	None
+P03372	306	554	5ufw	Estrogen Receptor Alpha Ligand Binding Domain in Complex with OP1154	1	249	B	306	None
+P03372	306	548	4xi3	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Bazedoxifene	1	243	D	306	None
+P03372	306	548	4xi3	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Bazedoxifene	1	243	A	306	None
+P03372	306	548	4xi3	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Bazedoxifene	1	243	C	306	None
+P03372	306	548	4xi3	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Bazedoxifene	1	243	B	None	None
+P03372	306	551	6chw	Estrogen Receptor Alpha Y537S covalently bound to antagonist H3B-5942.	1	246	A	306	551
+P03372	307	554	5aav	Optimization of a novel binding motif to to (E)-3-(3,5-difluoro-4-((1R,3R)-2-(2-fluoro-2-methylpropyl)-3-methyl-2,3,4,9-tetrahydro-1H- pyrido(3,4-b)indol-1-yl)phenyl)acrylic acid (AZD9496), a potent and orally bioavailable selective estrogen receptor downregulator and antagonist	5	252	A	307	None
+P03372	306	554	5aav	Optimization of a novel binding motif to to (E)-3-(3,5-difluoro-4-((1R,3R)-2-(2-fluoro-2-methylpropyl)-3-methyl-2,3,4,9-tetrahydro-1H- pyrido(3,4-b)indol-1-yl)phenyl)acrylic acid (AZD9496), a potent and orally bioavailable selective estrogen receptor downregulator and antagonist	4	252	B	306	None
+P03372	306	554	6vig	Estrogen Receptor Alpha Ligand Binding Domain in Complex with RU39411	15	263	D	306	None
+P03372	306	554	6vig	Estrogen Receptor Alpha Ligand Binding Domain in Complex with RU39411	15	263	B	None	None
+P03372	306	554	6vig	Estrogen Receptor Alpha Ligand Binding Domain in Complex with RU39411	15	263	A	306	None
+P03372	306	554	6vig	Estrogen Receptor Alpha Ligand Binding Domain in Complex with RU39411	15	263	C	None	None
+P03372	306	554	5ufx	Estrogen Receptor Alpha Ligand Binding Domain in Complex with OP1074	1	249	A	None	None
+P03372	306	554	5ufx	Estrogen Receptor Alpha Ligand Binding Domain in Complex with OP1074	1	249	B	306	None
+P03372	306	554	6vj1	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with RU39411	15	263	D	None	None
+P03372	306	554	6vj1	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with RU39411	15	263	E	None	None
+P03372	306	554	6vj1	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with RU39411	15	263	B	None	None
+P03372	306	554	6vj1	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with RU39411	15	263	A	None	None
+P03372	306	554	6vpk	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with a Methylated Lasofoxifene Derivative that Enhances Estrogen Receptor Alpha Nuclear Resonance Time	15	263	A	None	None
+P03372	306	554	6vpk	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with a Methylated Lasofoxifene Derivative that Enhances Estrogen Receptor Alpha Nuclear Resonance Time	15	263	D	None	None
+P03372	306	554	6vpk	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with a Methylated Lasofoxifene Derivative that Enhances Estrogen Receptor Alpha Nuclear Resonance Time	15	263	B	306	None
+P03372	306	554	6vpk	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with a Methylated Lasofoxifene Derivative that Enhances Estrogen Receptor Alpha Nuclear Resonance Time	15	263	C	None	None
+P03372	306	554	6vvp	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with a Methylated Lasofoxifene Derivative that Possesses Selective Estrogen Receptor Degrader Activities	15	263	D	306	None
+P03372	306	554	6vvp	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with a Methylated Lasofoxifene Derivative that Possesses Selective Estrogen Receptor Degrader Activities	15	263	B	306	None
+P03372	306	554	6vvp	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with a Methylated Lasofoxifene Derivative that Possesses Selective Estrogen Receptor Degrader Activities	15	263	C	306	None
+P03372	306	554	6vvp	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant in Complex with a Methylated Lasofoxifene Derivative that Possesses Selective Estrogen Receptor Degrader Activities	15	263	A	306	None
+P03372	306	554	5w9d	Estrogen Receptor Alpha Ligand Binding Domain C381S, C417S, C530S Mutant in Complex with Endoxifen	1	249	A	None	None
+P03372	306	554	5w9d	Estrogen Receptor Alpha Ligand Binding Domain C381S, C417S, C530S Mutant in Complex with Endoxifen	1	249	B	None	None
+P03372	306	554	5w9c	Estrogen Receptor Alpha Ligand Binding Domain C381S, C417S, C530S in Complex with 4-hydroxytamoxifen	1	249	A	None	None
+P03372	306	554	5w9c	Estrogen Receptor Alpha Ligand Binding Domain C381S, C417S, C530S in Complex with 4-hydroxytamoxifen	1	249	D	None	None
+P03372	306	554	5w9c	Estrogen Receptor Alpha Ligand Binding Domain C381S, C417S, C530S in Complex with 4-hydroxytamoxifen	1	249	B	None	None
+P03372	306	554	5w9c	Estrogen Receptor Alpha Ligand Binding Domain C381S, C417S, C530S in Complex with 4-hydroxytamoxifen	1	249	C	None	None
+P03372	306	554	6c42	Estrogen Receptor Alpha Ligand Binding Domain in Complex with OP1156	1	249	A	None	None
+P03372	306	554	6c42	Estrogen Receptor Alpha Ligand Binding Domain in Complex with OP1156	1	249	B	306	None
+P03372	307	554	6sq0	ERa_L536S (L536S/C381S/C471S,C530S) in complex with a bridged tetracyclic indole (compound 8)	5	252	A	307	None
+P03372	307	554	6sq0	ERa_L536S (L536S/C381S/C471S,C530S) in complex with a bridged tetracyclic indole (compound 8)	5	252	B	None	None
+P03372	307	554	5ak2	Oxyphenylpropenoic acids as Oral Selective Estrogen Receptor Down- Regulators.	21	268	A	307	None
+P03372	307	554	5ak2	Oxyphenylpropenoic acids as Oral Selective Estrogen Receptor Down- Regulators.	21	268	B	None	None
+P03372	307	554	5aau	Optimization of a novel binding motif to to (E)-3-(3,5-difluoro-4-((1R,3R)-2-(2-fluoro-2-methylpropyl)-3-methyl-2,3,4,9-tetrahydro-1H- pyrido(3,4-b)indol-1-yl)phenyl)acrylic acid (AZD9496), a potent and orally bioavailable selective estrogen receptor downregulator and antagonist	5	252	A	307	None
+P03372	307	554	5aau	Optimization of a novel binding motif to to (E)-3-(3,5-difluoro-4-((1R,3R)-2-(2-fluoro-2-methylpropyl)-3-methyl-2,3,4,9-tetrahydro-1H- pyrido(3,4-b)indol-1-yl)phenyl)acrylic acid (AZD9496), a potent and orally bioavailable selective estrogen receptor downregulator and antagonist	5	252	B	None	None
+P03372	307	554	6vmu	Estrogen Receptor Alpha Ligand Binding Domain in Complex with a Methylated Lasofoxifene Derivative with Selective Estrogen Receptor Degrader Properties	16	263	B	307	None
+P03372	307	554	6vmu	Estrogen Receptor Alpha Ligand Binding Domain in Complex with a Methylated Lasofoxifene Derivative with Selective Estrogen Receptor Degrader Properties	16	263	C	307	None
+P03372	307	554	6vmu	Estrogen Receptor Alpha Ligand Binding Domain in Complex with a Methylated Lasofoxifene Derivative with Selective Estrogen Receptor Degrader Properties	16	263	A	307	None
+P03372	307	554	6vmu	Estrogen Receptor Alpha Ligand Binding Domain in Complex with a Methylated Lasofoxifene Derivative with Selective Estrogen Receptor Degrader Properties	16	263	D	307	None
+P03372	307	554	5fqs	Selective estrogen receptor downregulator antagonists: Tetrahydroisoquinoline phenols 3.	1	248	A	307	None
+P03372	307	554	6chz	Estrogen Receptor Alpha Y537S bound to antagonist H3B-9224.	16	263	A	307	None
+P03372	307	554	6v87	Estrogen Receptor Alpha Ligand Binding Domain Y537S in Complex with 4-Hydroxytamoxifen	15	262	B	307	None
+P03372	307	554	6v87	Estrogen Receptor Alpha Ligand Binding Domain Y537S in Complex with 4-Hydroxytamoxifen	15	262	A	None	None
+P03372	307	554	5fqt	Selective estrogen receptor downregulator antagonists: Tetrahydroisoquinoline phenols 4.	1	248	A	307	None
+P03372	307	554	5fqr	Selective estrogen receptor downregulator antagonists: Tetrahydroisoquinoline phenols 2.	1	248	A	307	None
+P03372	307	554	1sj0	Human Estrogen Receptor Alpha Ligand-binding Domain in Complex with the Antagonist Ligand 4-D	1	248	A	307	None
+P03372	307	554	6suo	ERa_L536S (L536S/C381S/C471S,C530S) in complex with a tricyclic indole (compound 6)	5	252	A	307	None
+P03372	307	554	6suo	ERa_L536S (L536S/C381S/C471S,C530S) in complex with a tricyclic indole (compound 6)	5	252	B	None	None
+P03372	307	554	1yin	Human estrogen receptor alpha ligand-binding domain in complex with compound 3F	1	248	A	307	None
+P03372	307	554	1xp6	HUMAN ESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH COMPOUND 16	1	248	A	307	None
+P03372	307	554	5acc	A Novel Oral Selective Estrogen Receptor Down-regulator, AZD9496, drives Tumour Growth Inhibition in Estrogen Receptor positive and ESR1 Mutant Models	1	248	A	307	None
+P03372	307	554	6psj	Bazedoxifene in Complex with Y537S Estrogen Receptor Alpha Ligand Binding Domain	15	262	B	307	None
+P03372	307	554	6psj	Bazedoxifene in Complex with Y537S Estrogen Receptor Alpha Ligand Binding Domain	15	262	A	307	None
+P03372	307	547	6iar	Tricyclic indazoles a novel class of selective estrogen receptor degrader antagonists	1	237	A	307	547
+P03372	307	554	1xpc	HUMAN ESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH COMPOUND 19	1	248	A	307	None
+P03372	307	554	5fqv	Selective estrogen receptor downregulator antagonists: Tetrahydroisoquinoline phenols 5.	1	248	A	307	None
+P03372	307	554	1xp1	HUMAN ESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH COMPOUND 15	1	248	A	307	None
+P03372	307	554	6vgh	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant In Complex with Lasofoxifene	15	262	B	307	None
+P03372	307	554	6vgh	Estrogen Receptor Alpha Ligand Binding Domain Y537S Mutant In Complex with Lasofoxifene	15	262	A	307	None
+P03372	307	554	6v8t	Estrogen Receptor Alpha Ligand Binding Domain Y537S in Complex with LSZ102	15	262	B	307	None
+P03372	307	554	6v8t	Estrogen Receptor Alpha Ligand Binding Domain Y537S in Complex with LSZ102	15	262	A	307	None
+P03372	307	554	6vjd	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Lasofoxifene	2	249	B	307	None
+P03372	307	554	6vjd	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Lasofoxifene	2	249	C	307	None
+P03372	307	554	6vjd	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Lasofoxifene	2	249	A	307	None
+P03372	307	554	6vjd	Estrogen Receptor Alpha Ligand Binding Domain in Complex with Lasofoxifene	2	249	D	307	None
+P03372	307	554	1yim	Human estrogen receptor alpha ligand-binding domain in complex with compound 4	1	248	A	307	None
+P03372	307	554	5fqp	Selective estrogen receptor downregulator antagonists: Tetrahydroisoquinoline phenols 1.	1	248	A	307	None
+P03372	307	554	1xp9	HUMAN ESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN COMPLEX WITH COMPOUND 18	1	248	A	307	None
+P03372	307	554	6vnn	Estrogen Receptor Alpha Ligand Binding Domain in Complex with a Methylated Lasofoxifene Derivative That Increases Receptor Resonance Time in the Nucleus of Breast Cancer Cells	2	249	B	307	None
+P03372	307	554	6vnn	Estrogen Receptor Alpha Ligand Binding Domain in Complex with a Methylated Lasofoxifene Derivative That Increases Receptor Resonance Time in the Nucleus of Breast Cancer Cells	2	249	C	307	None
+P03372	307	554	6vnn	Estrogen Receptor Alpha Ligand Binding Domain in Complex with a Methylated Lasofoxifene Derivative That Increases Receptor Resonance Time in the Nucleus of Breast Cancer Cells	2	249	A	307	None
+P03372	307	554	6vnn	Estrogen Receptor Alpha Ligand Binding Domain in Complex with a Methylated Lasofoxifene Derivative That Increases Receptor Resonance Time in the Nucleus of Breast Cancer Cells	2	249	D	307	None
+P03372	309	554	2iog	Human estrogen receptor alpha ligand-binding domain in complex with compound 11F	1	246	A	309	None
+P03372	584	595	5n10	Cucurbit[8]uril and 14-3-3 based binary bivalent supramolecular-protein assembly platform	4	15	C	584	595
+P03372	584	595	5n10	Cucurbit[8]uril and 14-3-3 based binary bivalent supramolecular-protein assembly platform	4	15	F	None	595
+P03372	584	595	5n10	Cucurbit[8]uril and 14-3-3 based binary bivalent supramolecular-protein assembly platform	4	15	D	None	None
+P03372	585	595	4jdd	14-3-3 protein interaction with Estrogen Receptor Alpha provides a novel drug target interface	1	11	B	None	595
+P03372	585	595	4jc3	14-3-3 protein interaction with Estrogen Receptor Alpha provides a novel drug target interface	1	11	B	None	595
+P03372	588	595	6hhp	Ternary complex of Estrogen Receptor alpha peptide and 14-3-3 sigma C42 mutant bound to disulfide fragment PPI stabilizer 1	1	8	B	None	595
+P03372	588	595	6hmu	Ternary complex of Estrogen Receptor alpha peptide and 14-3-3 sigma C45 mutant bound to disulfide fragment PPI stabilizer 6	1	8	B	None	595
+P03372	588	595	6tl3	Crystal structure of an Estrogen Receptor alpha 8-mer phosphopeptide in complex with 14-3-3sigma stabilized by a Pyrrolidone1 derivative	2	9	B	None	595
+P03372	588	595	6hkb	Ternary complex of Estrogen Receptor alpha peptide and 14-3-3 sigma C42 mutant bound to disulfide fragment PPI stabilizer 3	1	8	B	None	595
+P03372	588	595	6hkf	Ternary complex of Estrogen Receptor alpha peptide and 14-3-3 sigma C42 mutant bound to disulfide fragment PPI stabilizer 4	1	8	B	None	595
+

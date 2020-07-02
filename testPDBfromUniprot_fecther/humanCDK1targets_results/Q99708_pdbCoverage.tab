@@ -1,0 +1,32 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q99708	RBBP8	CTIP_HUMAN	Homo sapiens	PF08573	SAE2	DNA repair protein endonuclease SAE2/CtIP C-terminus	822	858
+Q99708	RBBP8	CTIP_HUMAN	Homo sapiens	PF10482	CtIP_N	Tumour-suppressor protein CtIP N-terminal domain	20	139
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#9 mappings in 9 PDB chains in 2 PDB entries
+Q99708	18	52	4d2h	Crystal structure of the tetramerisation domain of human CtIP	4	38	D	None	None
+Q99708	18	52	4d2h	Crystal structure of the tetramerisation domain of human CtIP	4	38	G	18	52
+Q99708	18	52	4d2h	Crystal structure of the tetramerisation domain of human CtIP	4	38	H	None	None
+Q99708	18	52	4d2h	Crystal structure of the tetramerisation domain of human CtIP	4	38	C	None	52
+Q99708	18	52	4d2h	Crystal structure of the tetramerisation domain of human CtIP	4	38	B	18	None
+Q99708	18	52	4d2h	Crystal structure of the tetramerisation domain of human CtIP	4	38	E	None	None
+Q99708	18	52	4d2h	Crystal structure of the tetramerisation domain of human CtIP	4	38	F	18	52
+Q99708	18	52	4d2h	Crystal structure of the tetramerisation domain of human CtIP	4	38	A	18	None
+Q99708	641	685	2l4z	NMR structure of fusion of CtIP (641-685) to LMO4-LIM1 (18-82)	3	47	A	641	685
+

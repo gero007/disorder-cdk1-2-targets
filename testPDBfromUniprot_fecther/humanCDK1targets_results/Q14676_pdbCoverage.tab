@@ -1,0 +1,45 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q14676	Mediator of DNA damage checkpoint protein 1	MDC1_HUMAN	Homo sapiens	PF00498	FHA	FHA domain	54	124
+Q14676	Mediator of DNA damage checkpoint protein 1	MDC1_HUMAN	Homo sapiens	PF16770	RTT107_BRCT_5	Regulator of Ty1 transposition protein 107 BRCT domain	1877	1970
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#22 mappings in 22 PDB chains in 10 PDB entries
+Q14676	19	138	3uot	Crystal Structure of MDC1 FHA Domain in Complex with a Phosphorylated Peptide from the MDC1 N-terminus	3	122	A	19	None
+Q14676	19	138	3uot	Crystal Structure of MDC1 FHA Domain in Complex with a Phosphorylated Peptide from the MDC1 N-terminus	3	122	B	None	None
+Q14676	1	10	3uot	Crystal Structure of MDC1 FHA Domain in Complex with a Phosphorylated Peptide from the MDC1 N-terminus	1	10	D	None	None
+Q14676	1	10	3uot	Crystal Structure of MDC1 FHA Domain in Complex with a Phosphorylated Peptide from the MDC1 N-terminus	1	10	E	None	None
+Q14676	27	138	3unn	Monomeric structure of the human MDC1 FHA domain in complex with an MDC1 phospho-T4 peptide	2	113	A	27	None
+Q14676	1	8	3unn	Monomeric structure of the human MDC1 FHA domain in complex with an MDC1 phospho-T4 peptide	1	8	B	1	8
+Q14676	26	138	3un0	Crystal Structure of MDC1 FHA Domain	3	115	A	26	None
+Q14676	26	138	3un0	Crystal Structure of MDC1 FHA Domain	3	115	B	None	None
+Q14676	27	138	3unm	Crystal Structure of The Human MDC1 FHA Domain	2	113	A	None	None
+Q14676	27	138	3unm	Crystal Structure of The Human MDC1 FHA Domain	2	113	B	None	None
+Q14676	27	138	3umz	Crystal Structure of the human MDC1 FHA Domain	2	113	A	None	None
+Q14676	27	138	3umz	Crystal Structure of the human MDC1 FHA Domain	2	113	B	None	None
+Q14676	325	336	3ueo	Crystal structure of TopBP1 BRCT4/5 domains in complex with a phospho-peptide	1	12	F	None	None
+Q14676	325	336	3ueo	Crystal structure of TopBP1 BRCT4/5 domains in complex with a phospho-peptide	1	12	E	None	None
+Q14676	1883	2089	2azm	Crystal structure of the MDC1 brct repeat in complex with the histone tail of gamma-H2AX	1	207	A	None	None
+Q14676	1883	2089	2azm	Crystal structure of the MDC1 brct repeat in complex with the histone tail of gamma-H2AX	1	207	B	None	None
+Q14676	1884	2089	2etx	Crystal Structure of MDC1 Tandem BRCT Domains	4	209	A	None	None
+Q14676	1884	2089	2etx	Crystal Structure of MDC1 Tandem BRCT Domains	4	209	B	None	None
+Q14676	1891	2089	3k05	The crystal structure of MDC1 BRCT T2067D in complex with a minimal recognition tetrapeptide with an amidated C-terminus	2	200	A	1891	None
+Q14676	1891	2089	3k05	The crystal structure of MDC1 BRCT T2067D in complex with a minimal recognition tetrapeptide with an amidated C-terminus	2	200	B	1891	2089
+Q14676	1891	2086	2ado	Crystal Structure Of The Brct Repeat Region From The Mediator of DNA damage checkpoint protein 1, MDC1	1	196	A	None	None
+Q14676	1891	2086	2ado	Crystal Structure Of The Brct Repeat Region From The Mediator of DNA damage checkpoint protein 1, MDC1	1	196	B	1891	None
+

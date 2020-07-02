@@ -1,0 +1,96 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q12888	53BP1	TP53B_HUMAN	Homo sapiens	PF09038	53-BP1_Tudor	Tumour suppressor p53-binding protein-1 Tudor	1483	1604
+Q12888	53BP1	TP53B_HUMAN	Homo sapiens	PF18428	BRCT_3	BRCA1 C Terminus (BRCT) domain	1867	1970
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#73 mappings in 73 PDB chains in 32 PDB entries
+Q12888	359	373	6rmm	Crystal structure of TOPBP1 BRCT4,5 in complex with a 53BP1 phosphopeptide	1	15	R	None	None
+Q12888	359	373	6rmm	Crystal structure of TOPBP1 BRCT4,5 in complex with a 53BP1 phosphopeptide	1	15	P	None	None
+Q12888	663	677	6rml	Crystal structure of TOPBP1 BRCT0,1,2 in complex with a 53BP1 phosphopeptide	1	15	C	None	None
+Q12888	1459	1634	5zcj	Crystal structure of complex	5	180	C	None	None
+Q12888	1459	1634	4cri	Crystal Structure of 53BP1 tandem tudor domains in complex with methylated K810 Rb peptide	1	176	A	None	None
+Q12888	1459	1634	4cri	Crystal Structure of 53BP1 tandem tudor domains in complex with methylated K810 Rb peptide	1	176	B	None	None
+Q12888	1483	1606	6upt	Tudor Domain of Tumor suppressor p53BP1 with MFP-2706	1	124	A	None	None
+Q12888	1483	1606	6upt	Tudor Domain of Tumor suppressor p53BP1 with MFP-2706	1	124	B	None	None
+Q12888	1483	1606	4rg2	Tudor Domain of Tumor suppressor p53BP1 with small molecule ligand	2	125	A	None	None
+Q12888	1483	1606	4rg2	Tudor Domain of Tumor suppressor p53BP1 with small molecule ligand	2	125	B	1483	None
+Q12888	1483	1606	6vip	TUDOR DOMAIN OF TUMOR SUPPRESSOR P53BP1 WITH MFP-6008	2	125	A	None	None
+Q12888	1483	1606	6vip	TUDOR DOMAIN OF TUMOR SUPPRESSOR P53BP1 WITH MFP-6008	2	125	B	None	None
+Q12888	1483	1606	6va5	Tudor Domain of Tumor suppressor p53BP1 with MFP-4184	2	125	A	None	1606
+Q12888	1484	1603	2ig0	Structure of 53BP1/methylated histone peptide complex	4	123	A	None	1603
+Q12888	1484	1603	2lvm	Solution structure of human 53BP1 tandem Tudor domains in complex with a histone H4K20me2 peptide	4	123	A	1484	1603
+Q12888	1484	1603	6mxz	Structure of 53BP1 Tudor domains in complex with small molecule UNC3474	4	123	I	1484	1603
+Q12888	1484	1603	6mxz	Structure of 53BP1 Tudor domains in complex with small molecule UNC3474	4	123	C	1484	None
+Q12888	1484	1603	6mxz	Structure of 53BP1 Tudor domains in complex with small molecule UNC3474	4	123	H	1484	None
+Q12888	1484	1603	6mxz	Structure of 53BP1 Tudor domains in complex with small molecule UNC3474	4	123	B	1484	1603
+Q12888	1484	1603	6mxz	Structure of 53BP1 Tudor domains in complex with small molecule UNC3474	4	123	E	1484	None
+Q12888	1484	1603	6mxz	Structure of 53BP1 Tudor domains in complex with small molecule UNC3474	4	123	D	1484	1603
+Q12888	1484	1603	6mxz	Structure of 53BP1 Tudor domains in complex with small molecule UNC3474	4	123	F	None	1603
+Q12888	1484	1603	6mxz	Structure of 53BP1 Tudor domains in complex with small molecule UNC3474	4	123	G	1484	1603
+Q12888	1484	1603	6mxz	Structure of 53BP1 Tudor domains in complex with small molecule UNC3474	4	123	A	None	1603
+Q12888	1484	1603	6mxz	Structure of 53BP1 Tudor domains in complex with small molecule UNC3474	4	123	J	None	None
+Q12888	1484	1603	6mxy	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC3351	4	123	B	1484	1603
+Q12888	1484	1603	6mxy	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC3351	4	123	A	1484	1603
+Q12888	1484	1603	6mxx	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC2991	4	123	F	1484	1603
+Q12888	1484	1603	6mxx	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC2991	4	123	C	1484	None
+Q12888	1484	1603	6mxx	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC2991	4	123	I	None	None
+Q12888	1484	1603	6mxx	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC2991	4	123	E	1484	1603
+Q12888	1484	1603	6mxx	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC2991	4	123	J	1484	None
+Q12888	1484	1603	6mxx	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC2991	4	123	H	1484	None
+Q12888	1484	1603	6mxx	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC2991	4	123	B	1484	None
+Q12888	1484	1603	6mxx	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC2991	4	123	D	1484	1603
+Q12888	1484	1603	6mxx	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC2991	4	123	G	1484	None
+Q12888	1484	1603	6mxx	Structure of 53BP1 tandem Tudor domains in complex with small molecule UNC2991	4	123	A	1484	1603
+Q12888	1484	1603	3lgl	Crystal structure of the 53BP1 tandem tudor domain in complex with p53K382me2	6	125	A	None	1603
+Q12888	1484	1603	6my0	Structure of 53BP1 Tandem Tudor domains with E1549P and D1550N mutations	4	123	A	1484	1603
+Q12888	1484	1603	6my0	Structure of 53BP1 Tandem Tudor domains with E1549P and D1550N mutations	4	123	B	None	None
+Q12888	1484	1603	3lgf	Crystal structure of the 53BP1 tandem tudor domain in complex with p53K370me2	6	125	A	None	1603
+Q12888	1484	1603	3lh0	Crystal structure of the 53BP1 tandem tudor domain in complex with p53K372me2	6	125	A	1484	1603
+Q12888	1484	1603	6co1	Structure of human TIRR in complex with 53BP1 Tudor domains	4	123	F	None	1603
+Q12888	1484	1603	6co1	Structure of human TIRR in complex with 53BP1 Tudor domains	4	123	E	1484	1603
+Q12888	1484	1603	2mwp	Solution structure of 53BP1 tandem Tudor domains in complex with a p53K382me2 peptide	4	123	A	1484	1603
+Q12888	1484	1603	4x34	Crystal structure of the 53BP1 tandem tudor domain in complex with p53K381acK382me2	1	120	B	1484	None
+Q12888	1484	1603	4x34	Crystal structure of the 53BP1 tandem tudor domain in complex with p53K381acK382me2	1	120	A	1484	1603
+Q12888	1484	1603	6co2	Structure of an engineered protein (NUDT16TI) in complex with 53BP1 Tudor domains	4	123	D	None	1603
+Q12888	1484	1603	6co2	Structure of an engineered protein (NUDT16TI) in complex with 53BP1 Tudor domains	4	123	C	None	None
+Q12888	1484	1603	5z78	Structure of TIRR/53BP1 complex	4	123	C	1484	1603
+Q12888	1484	1603	2g3r	Crystal Structure of 53BP1 tandem tudor domains at 1.2 A resolution	4	123	A	None	1603
+Q12888	1484	1603	2mwo	Solution structure of 53BP1 tandem Tudor domains in complex with a p53K370me2 peptide	4	123	A	1484	1603
+Q12888	1485	1602	1xni	Tandem Tudor Domain of 53BP1	1	118	B	1485	1602
+Q12888	1485	1602	1xni	Tandem Tudor Domain of 53BP1	1	118	D	1485	1602
+Q12888	1485	1602	1xni	Tandem Tudor Domain of 53BP1	1	118	G	1485	1602
+Q12888	1485	1602	1xni	Tandem Tudor Domain of 53BP1	1	118	J	1485	1602
+Q12888	1485	1602	1xni	Tandem Tudor Domain of 53BP1	1	118	A	1485	1602
+Q12888	1485	1602	1xni	Tandem Tudor Domain of 53BP1	1	118	F	1485	1602
+Q12888	1485	1602	1xni	Tandem Tudor Domain of 53BP1	1	118	H	1485	1602
+Q12888	1485	1602	1xni	Tandem Tudor Domain of 53BP1	1	118	I	1485	1602
+Q12888	1485	1602	1xni	Tandem Tudor Domain of 53BP1	1	118	E	1485	1602
+Q12888	1485	1602	1xni	Tandem Tudor Domain of 53BP1	1	118	C	1485	1602
+Q12888	1487	1603	5j26	Crystal structure of a 53BP1 Tudor domain in complex with a ubiquitin variant	1	117	A	1487	1603
+Q12888	1611	1631	5kgf	Structural model of 53BP1 bound to a ubiquitylated and methylated nucleosome, at 4.5 A resolution	1	21	K	1611	1631
+Q12888	1611	1631	5kgf	Structural model of 53BP1 bound to a ubiquitylated and methylated nucleosome, at 4.5 A resolution	1	21	L	1611	1631
+Q12888	1665	1686	6iu7	Crystal structure of importin-alpha1 bound to the 53BP1 nuclear localization signal (wild-type)	1	22	B	1665	1686
+Q12888	1665	1686	6iua	Crystal structure of importin-alpha1 bound to the 53BP1 nuclear localization signal (S1678D)	1	22	B	1665	1686
+Q12888	1713	1972	5ecg	Crystal structure of the BRCT domains of 53BP1 in complex with p53 and H2AX-pSer139 (gammaH2AX)	3	262	D	None	None
+Q12888	1713	1972	5ecg	Crystal structure of the BRCT domains of 53BP1 in complex with p53 and H2AX-pSer139 (gammaH2AX)	3	262	C	None	None
+Q12888	1714	1972	1kzy	Crystal Structure of the 53bp1 BRCT Region Complexed to Tumor Suppressor P53	1	259	D	1714	1972
+Q12888	1714	1972	1kzy	Crystal Structure of the 53bp1 BRCT Region Complexed to Tumor Suppressor P53	1	259	C	1714	1972
+Q12888	1724	1972	1gzh	Crystal structure of the BRCT domains of human 53BP1 bound to the p53 tumor supressor	1	249	D	None	None
+Q12888	1724	1972	1gzh	Crystal structure of the BRCT domains of human 53BP1 bound to the p53 tumor supressor	1	249	B	1724	1972
+

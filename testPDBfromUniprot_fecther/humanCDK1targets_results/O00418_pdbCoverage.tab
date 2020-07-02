@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O00418	Eukaryotic elongation factor 2 kinase	EF2K_HUMAN	Homo sapiens	PF02816	Alpha_kinase	Alpha-kinase family	139	318
+O00418	Eukaryotic elongation factor 2 kinase	EF2K_HUMAN	Homo sapiens	PF08238	Sel1	Sel1 repeat	665	700
+O00418	Eukaryotic elongation factor 2 kinase	EF2K_HUMAN	Homo sapiens	PF08238	Sel1	Sel1 repeat	565	609
+O00418	Eukaryotic elongation factor 2 kinase	EF2K_HUMAN	Homo sapiens	PF08238	Sel1	Sel1 repeat	526	563
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#3 mappings in 3 PDB chains in 3 PDB entries
+O00418	74	100	5j8h	Structure of calmodulin in a complex with a peptide derived from a calmodulin-dependent kinase	1	27	B	74	100
+O00418	562	725	6nx4	Structure of the C-terminal Helical Repeat Domain of Eukaryotic Elongation Factor 2 Kinase (eEF-2K)	4	167	A	562	725
+O00418	627	725	5ks5	Structure of the C-terminal Helical Repeat Domain of Elongation Factor 2 Kinase	5	103	A	627	725
+

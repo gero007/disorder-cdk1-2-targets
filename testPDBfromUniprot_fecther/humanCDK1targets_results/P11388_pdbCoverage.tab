@@ -1,0 +1,41 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P11388	DNA topoisomerase II, alpha isozyme	TOP2A_HUMAN	Homo sapiens	PF00521	DNA_topoisoIV	DNA gyrase/topoisomerase IV, subunit A	713	1172
+P11388	DNA topoisomerase II, alpha isozyme	TOP2A_HUMAN	Homo sapiens	PF00204	DNA_gyraseB	DNA gyrase B	266	430
+P11388	DNA topoisomerase II, alpha isozyme	TOP2A_HUMAN	Homo sapiens	PF01751	Toprim	Toprim domain	456	572
+P11388	DNA topoisomerase II, alpha isozyme	TOP2A_HUMAN	Homo sapiens	PF02518	HATPase_c	Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase	76	225
+P11388	DNA topoisomerase II, alpha isozyme	TOP2A_HUMAN	Homo sapiens	PF08070	DTHCT	DTHCT (NUC029) region	1430	1522
+P11388	DNA topoisomerase II, alpha isozyme	TOP2A_HUMAN	Homo sapiens	PF16898	TOPRIM_C	C-terminal associated domain of TOPRIM	573	711
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#14 mappings in 14 PDB chains in 6 PDB entries
+P11388	29	428	1zxm	Human Topo IIa ATPase/AMP-PNP	1	400	A	29	None
+P11388	29	428	1zxm	Human Topo IIa ATPase/AMP-PNP	1	400	B	29	None
+P11388	29	428	4r1f	Re-refined Human DNA topoisomerase IIa (ATPase and transducer domains) in complex with ADP and SO4	1	400	A	29	None
+P11388	29	428	4r1f	Re-refined Human DNA topoisomerase IIa (ATPase and transducer domains) in complex with ADP and SO4	1	400	D	29	None
+P11388	29	428	4r1f	Re-refined Human DNA topoisomerase IIa (ATPase and transducer domains) in complex with ADP and SO4	1	400	C	29	None
+P11388	29	428	4r1f	Re-refined Human DNA topoisomerase IIa (ATPase and transducer domains) in complex with ADP and SO4	1	400	B	29	None
+P11388	29	428	1zxn	Human DNA topoisomerase IIa ATPase/ADP	1	400	A	29	None
+P11388	29	428	1zxn	Human DNA topoisomerase IIa ATPase/ADP	1	400	D	29	None
+P11388	29	428	1zxn	Human DNA topoisomerase IIa ATPase/ADP	1	400	C	29	None
+P11388	29	428	1zxn	Human DNA topoisomerase IIa ATPase/ADP	1	400	B	29	None
+P11388	429	1188	5gwk	Human topoisomerase IIalpha in complex with DNA and etoposide	27	786	A	None	None
+P11388	429	1188	5gwk	Human topoisomerase IIalpha in complex with DNA and etoposide	27	786	B	None	None
+P11388	431	1193	4fm9	Human topoisomerase II alpha bound to DNA	1	763	A	None	None
+P11388	1198	1207	5nne	Crystal Structure of the first bromodomain of human BRD4 in complex with a diacetylated TOP2A peptide (K1201ac/K1204ac)	1	10	C	1198	1207
+

@@ -1,0 +1,31 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P54198	Histone Regulatory homolog A	HIRA_HUMAN	Homo sapiens	PF00400	WD40	WD domain, G-beta repeat	164	202
+P54198	Histone Regulatory homolog A	HIRA_HUMAN	Homo sapiens	PF00400	WD40	WD domain, G-beta repeat	121	159
+P54198	Histone Regulatory homolog A	HIRA_HUMAN	Homo sapiens	PF00400	WD40	WD domain, G-beta repeat	61	98
+P54198	Histone Regulatory homolog A	HIRA_HUMAN	Homo sapiens	PF00400	WD40	WD domain, G-beta repeat	4	44
+P54198	Histone Regulatory homolog A	HIRA_HUMAN	Homo sapiens	PF07569	Hira	TUP1-like enhancer of split	764	962
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 2 PDB entries
+P54198	425	472	2i32	Structure of a human ASF1a-HIRA complex and insights into specificity of histone chaperone complex assembly	10	57	F	None	None
+P54198	425	472	2i32	Structure of a human ASF1a-HIRA complex and insights into specificity of histone chaperone complex assembly	10	57	E	None	None
+P54198	644	1017	5yje	Crystal structure of HIRA(644-1017)	2	375	A	None	1017
+P54198	644	1017	5yje	Crystal structure of HIRA(644-1017)	2	375	B	None	None
+P54198	644	1017	5yje	Crystal structure of HIRA(644-1017)	2	375	C	None	None
+

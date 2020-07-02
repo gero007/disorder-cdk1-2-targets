@@ -1,0 +1,56 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q13042	ANAPHASE-PROMOTING COMPLEX SUBUNIT 6	CDC16_HUMAN	Homo sapiens	PF12895	ANAPC3	Anaphase-promoting complex, cyclosome, subunit 3	15	95
+Q13042	ANAPHASE-PROMOTING COMPLEX SUBUNIT 6	CDC16_HUMAN	Homo sapiens	PF13176	TPR_7	Tetratricopeptide repeat	481	515
+Q13042	ANAPHASE-PROMOTING COMPLEX SUBUNIT 6	CDC16_HUMAN	Homo sapiens	PF13424	TPR_12	Tetratricopeptide repeat	445	511
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#32 mappings in 32 PDB chains in 14 PDB entries
+Q13042	1	620	4ui9	Atomic structure of the human Anaphase-Promoting Complex	1	620	J	None	None
+Q13042	1	620	4ui9	Atomic structure of the human Anaphase-Promoting Complex	1	620	K	None	None
+Q13042	1	620	5a31	Structure of the human APC-Cdh1-Hsl1-UbcH10 complex.	1	620	J	None	None
+Q13042	1	620	5a31	Structure of the human APC-Cdh1-Hsl1-UbcH10 complex.	1	620	K	None	None
+Q13042	1	620	5khr	Model of human Anaphase-promoting complex/Cyclosome complex (APC15 deletion mutant) in complex with the E2 UBE2C/UBCH10 poised for ubiquitin ligation to substrate (APC/C-CDC20-substrate-UBE2C)	1	620	K	None	None
+Q13042	1	620	5khr	Model of human Anaphase-promoting complex/Cyclosome complex (APC15 deletion mutant) in complex with the E2 UBE2C/UBCH10 poised for ubiquitin ligation to substrate (APC/C-CDC20-substrate-UBE2C)	1	620	J	None	None
+Q13042	1	620	6q6h	Cryo-EM structure of the APC/C-Cdc20-Cdk2-cyclinA2-Cks2 complex, the D2 box class	1	620	K	None	None
+Q13042	1	620	6q6h	Cryo-EM structure of the APC/C-Cdc20-Cdk2-cyclinA2-Cks2 complex, the D2 box class	1	620	Q	None	None
+Q13042	1	620	5khu	Model of human Anaphase-promoting complex/Cyclosome (APC15 deletion mutant), in complex with the Mitotic checkpoint complex (APC/C-CDC20-MCC) based on cryo EM data at 4.8 Angstrom resolution	1	620	K	None	None
+Q13042	1	620	5khu	Model of human Anaphase-promoting complex/Cyclosome (APC15 deletion mutant), in complex with the Mitotic checkpoint complex (APC/C-CDC20-MCC) based on cryo EM data at 4.8 Angstrom resolution	1	620	J	None	None
+Q13042	1	620	6q6g	Cryo-EM structure of the APC/C-Cdc20-Cdk2-cyclinA2-Cks2 complex, the D1 box class	1	620	K	None	None
+Q13042	1	620	6q6g	Cryo-EM structure of the APC/C-Cdc20-Cdk2-cyclinA2-Cks2 complex, the D1 box class	1	620	Q	None	None
+Q13042	1	620	5l9t	Model of human Anaphase-promoting complex/Cyclosome (APC/C-CDH1) with E2 UBE2S poised for polyubiquitination where UBE2S, APC2, and APC11 are modeled into low resolution density	1	620	J	None	None
+Q13042	1	620	5l9t	Model of human Anaphase-promoting complex/Cyclosome (APC/C-CDH1) with E2 UBE2S poised for polyubiquitination where UBE2S, APC2, and APC11 are modeled into low resolution density	1	620	K	None	None
+Q13042	1	620	5l9u	Model of human Anaphase-promoting complex/Cyclosome (APC/C-CDH1) with a cross linked Ubiquitin variant-substrate-UBE2C (UBCH10) complex representing key features of multiubiquitination	1	620	J	None	None
+Q13042	1	620	5l9u	Model of human Anaphase-promoting complex/Cyclosome (APC/C-CDH1) with a cross linked Ubiquitin variant-substrate-UBE2C (UBCH10) complex representing key features of multiubiquitination	1	620	K	None	None
+Q13042	1	620	6tlj	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Mitotic checkpoint complex (APC/C-MCC) at 3.8 angstrom resolution	1	620	J	None	None
+Q13042	1	620	6tlj	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Mitotic checkpoint complex (APC/C-MCC) at 3.8 angstrom resolution	1	620	K	None	None
+Q13042	1	620	5g04	Structure of the human APC-Cdc20-Hsl1 complex	1	620	J	None	None
+Q13042	1	620	5g04	Structure of the human APC-Cdc20-Hsl1 complex	1	620	K	None	None
+Q13042	1	620	5g05	Cryo-EM structure of combined apo phosphorylated APC	1	620	J	None	None
+Q13042	1	620	5g05	Cryo-EM structure of combined apo phosphorylated APC	1	620	K	None	None
+Q13042	1	620	6tm5	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Nek2A substrate at 3.9 angstrom resolution	1	620	J	None	None
+Q13042	1	620	6tm5	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Nek2A substrate at 3.9 angstrom resolution	1	620	K	None	None
+Q13042	1	620	5lcw	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Mitotic checkpoint complex (APC/C-MCC) at 4.2 angstrom resolution	1	620	J	None	None
+Q13042	1	620	5lcw	Cryo-EM structure of the Anaphase-promoting complex/Cyclosome, in complex with the Mitotic checkpoint complex (APC/C-MCC) at 4.2 angstrom resolution	1	620	K	None	None
+Q13042	212	539	3hym	Insights into Anaphase Promoting Complex TPR subdomain assembly from a CDC26-APC6 structure	3	330	D	None	None
+Q13042	212	539	3hym	Insights into Anaphase Promoting Complex TPR subdomain assembly from a CDC26-APC6 structure	3	330	H	None	None
+Q13042	212	539	3hym	Insights into Anaphase Promoting Complex TPR subdomain assembly from a CDC26-APC6 structure	3	330	F	None	None
+Q13042	212	539	3hym	Insights into Anaphase Promoting Complex TPR subdomain assembly from a CDC26-APC6 structure	3	330	B	None	None
+Q13042	212	539	3hym	Insights into Anaphase Promoting Complex TPR subdomain assembly from a CDC26-APC6 structure	3	330	L	None	None
+Q13042	212	539	3hym	Insights into Anaphase Promoting Complex TPR subdomain assembly from a CDC26-APC6 structure	3	330	J	None	None
+

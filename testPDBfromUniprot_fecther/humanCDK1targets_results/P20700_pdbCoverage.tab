@@ -1,0 +1,33 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P20700	Lamin-B1	LMNB1_HUMAN	Homo sapiens	PF00932	LTD	Lamin Tail Domain	435	545
+P20700	Lamin-B1	LMNB1_HUMAN	Homo sapiens	PF00038	Filament	Intermediate filament protein	31	387
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#10 mappings in 10 PDB chains in 5 PDB entries
+P20700	311	388	3tyy	Crystal Structure of Human Lamin-B1 Coil 2 Segment	18	95	B	None	None
+P20700	311	388	3tyy	Crystal Structure of Human Lamin-B1 Coil 2 Segment	18	95	A	311	None
+P20700	389	401	5vvx	Structural Investigations of the Substrate Specificity of Human O-GlcNAcase	1	13	D	None	None
+P20700	389	401	5vvx	Structural Investigations of the Substrate Specificity of Human O-GlcNAcase	1	13	B	None	None
+P20700	426	558	3jt0	Crystal Structure of the C-terminal fragment (426-558) Lamin-B1 from Homo sapiens, Northeast Structural Genomics Consortium Target HR5546A	12	144	A	None	None
+P20700	426	558	3jt0	Crystal Structure of the C-terminal fragment (426-558) Lamin-B1 from Homo sapiens, Northeast Structural Genomics Consortium Target HR5546A	12	144	B	None	None
+P20700	428	550	3umn	Crystal Structure of Lamin-B1	1	123	A	None	None
+P20700	428	550	3umn	Crystal Structure of Lamin-B1	1	123	B	None	None
+P20700	428	550	3umn	Crystal Structure of Lamin-B1	1	123	C	None	None
+P20700	439	549	2kpw	NMR solution structure of Lamin-B1 protein from Homo sapiens: Northeast Structural Genomics Consortium MEGA target, HR5546A (439-549)	12	122	A	12	122
+

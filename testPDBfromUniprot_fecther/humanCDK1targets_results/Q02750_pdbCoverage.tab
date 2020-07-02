@@ -1,0 +1,84 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q02750	Dual specificity mitogen-activated protein kinase kinase 1	MP2K1_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	68	361
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#62 mappings in 60 PDB chains in 49 PDB entries
+Q02750	1	393	6pp9	Crystal structure of BRAF:MEK1 complex	5	397	B	None	None
+Q02750	1	393	6q0j	Structure of a MAPK pathway complex	23	415	D	None	None
+Q02750	1	393	6q0j	Structure of a MAPK pathway complex	23	415	C	None	None
+Q02750	1	393	6nyb	Structure of a MAPK pathway complex	23	415	B	None	None
+Q02750	1	392	6q0t	Structure of a MAPK pathway complex	23	414	C	None	None
+Q02750	2	393	6u2g	BRAF-MEK complex with AMP-PCP bound to BRAF	3	394	A	None	None
+Q02750	28	44	6x2p	Crystal Structure of the Mek1NES peptide bound to CRM1	1	17	D	4	20
+Q02750	29	44	6x2s	Crystal Structure of Mek1(NQ)NES peptide bound to CRM	1	16	D	4	19
+Q02750	29	44	6x2x	Crystal Structure of Mek1NES peptide bound to CRM1(E571K)	1	16	D	4	19
+Q02750	35	393	3eqg	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in a ternary complex with PD, ADP AND MG2P	2	360	A	None	None
+Q02750	35	393	3eqf	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in a binary complex with K252A and MG2P	2	360	A	None	None
+Q02750	35	393	3eqd	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in a binary complex with ATP-GS and MG2P	2	360	A	None	None
+Q02750	35	393	5eym	MEK1 IN COMPLEX WITH BI 847325	1	359	A	None	None
+Q02750	35	393	5eym	MEK1 IN COMPLEX WITH BI 847325	1	359	B	None	None
+Q02750	35	393	3eqi	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in a binary complex with ADP and MG2P	2	360	A	None	None
+Q02750	35	393	3eqh	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in a ternary complex with U0126, ADP and MG2P	2	360	A	None	None
+Q02750	35	393	3eqc	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in a ternary complex with compound 1, ATP-GS AND MG2P	2	360	A	None	None
+Q02750	37	383	3zm4	Crystal structure of MEK1 in complex with fragment 1	2	348	A	None	None
+Q02750	37	383	3zly	Crystal structure of MEK1 in complex with fragment 8	2	348	A	None	None
+Q02750	37	383	3zlx	Crystal structure of MEK1 in complex with fragment 18	2	348	A	None	None
+Q02750	37	383	3zls	Crystal structure of MEK1 in complex with fragment 6	2	348	A	None	None
+Q02750	37	383	3zlw	Crystal structure of MEK1 in complex with fragment 3	2	348	A	None	None
+Q02750	37	383	5hze	Mek1 adopts DFG-out conformation when bound to an analog of E6201.	2	348	A	None	None
+Q02750	37	383	5bx0	An Automated Microscale Thermophoresis Screening Approach for Fragment-Based Lead Discovery	2	348	A	None	None
+Q02750	39	382	3w8q	Structure of the Human Mitogen-Activated Protein Kinase Kinase 1 (MEK1)	1	344	A	39	382
+Q02750	39	382	5yt3	Structure of the Human Mitogen-Activated Protein Kinase Kinase 1 S218D and S222D mutant	1	344	C	None	382
+Q02750	39	382	5yt3	Structure of the Human Mitogen-Activated Protein Kinase Kinase 1 S218D and S222D mutant	1	344	B	None	382
+Q02750	39	382	5yt3	Structure of the Human Mitogen-Activated Protein Kinase Kinase 1 S218D and S222D mutant	1	344	A	39	382
+Q02750	39	382	5yt3	Structure of the Human Mitogen-Activated Protein Kinase Kinase 1 S218D and S222D mutant	1	344	D	39	382
+Q02750	308	383	3sls	Crystal Structure of human MEK-1 kinase in complex with UCB1353770 and AMPPNP	229	304	B	270	345
+Q02750	308	383	3sls	Crystal Structure of human MEK-1 kinase in complex with UCB1353770 and AMPPNP	229	304	A	None	345
+Q02750	45	263	3sls	Crystal Structure of human MEK-1 kinase in complex with UCB1353770 and AMPPNP	4	222	A	45	263
+Q02750	45	263	3sls	Crystal Structure of human MEK-1 kinase in complex with UCB1353770 and AMPPNP	4	222	B	45	263
+Q02750	61	392	4anb	Crystal structures of human MEK1 with carboxamide-based allosteric inhibitor XL518 (GDC-0973), or related analogs.	4	293	A	61	None
+Q02750	61	392	4an9	Crystal structures of human MEK1 with carboxamide-based allosteric inhibitor XL518 (GDC-0973), or related analogs.	4	293	A	61	None
+Q02750	61	392	4an3	Crystal structures of human MEK1 with carboxamide-based allosteric inhibitor XL518 (GDC-0973), or related analogs.	4	293	A	61	None
+Q02750	61	392	4an2	Crystal structures of human MEK1 with carboxamide-based allosteric inhibitor XL518 (GDC-0973), or related analogs.	4	293	A	61	None
+Q02750	62	393	3v01	Discovery of Novel Allosteric MEK Inhibitors Possessing Classical and Non-classical Bidentate Ser212 Interactions.	2	333	A	62	None
+Q02750	62	393	3os3	Mitogen-activated protein kinase kinase 1 (MEK1) in complex with CH4858061 and MgATP	2	301	A	62	None
+Q02750	62	393	4u7z	Mitogen-Activated Protein Kinase Kinase (MEK1) bound to G805	2	333	A	62	None
+Q02750	62	393	3dy7	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in a complex with ligand and MgATP	2	333	A	62	None
+Q02750	62	393	4u81	MEK1 Kinase bound to small molecule inhibitor G659	2	333	A	62	None
+Q02750	62	393	4u80	MEK 1 kinase bound to G799	2	333	A	62	None
+Q02750	62	393	3orn	Mitogen-activated protein kinase kinase 1 (MEK1) in complex with CH4987655 and MgAMP-PNP	2	301	A	62	None
+Q02750	62	393	4lmn	Crystal Structure of MEK1 kinase bound to GDC0973	2	333	A	62	None
+Q02750	62	393	4mne	Crystal structure of the BRAF:MEK1 complex	2	333	H	None	None
+Q02750	62	393	4mne	Crystal structure of the BRAF:MEK1 complex	2	333	A	None	None
+Q02750	62	393	4mne	Crystal structure of the BRAF:MEK1 complex	2	333	D	None	None
+Q02750	62	393	4mne	Crystal structure of the BRAF:MEK1 complex	2	333	E	62	None
+Q02750	62	393	3eqb	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in a complex with ligand and MgATP	2	333	A	62	None
+Q02750	62	393	3e8n	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) complexed with a potent inhibitor RDEA119 and MgATP	2	333	A	62	None
+Q02750	62	393	3vvh	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in complex with an inhibitor and MgATP	2	333	A	62	None
+Q02750	62	393	3vvh	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in complex with an inhibitor and MgATP	2	333	B	62	None
+Q02750	62	393	3vvh	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in complex with an inhibitor and MgATP	2	333	C	62	None
+Q02750	62	393	1s9j	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in a complex with ligand and MgATP	2	333	A	62	None
+Q02750	62	382	3dv3	MEK1 with PF-04622664 Bound	2	322	A	62	382
+Q02750	62	382	3pp1	Crystal Structure of the Human Mitogen-activated protein kinase kinase 1 (MEK 1) in complex with ligand and MgATP	2	322	A	62	382
+Q02750	62	382	3mbl	Crystal Structure of the human mitogen-activated protein kinase kinase 1 (MEK 1) in complex with ligand and MgADP	2	322	A	62	None
+Q02750	62	393	4ark	CRYSTAL STRUCTURE OF THE CATALYTIC DOMAIN OF HUMAN MAP KINASE KINASE 1 (MEK1) IN COMPLEX WITH A SMALL MOLECULE INHIBITOR AND ADP	2	333	A	62	None
+Q02750	62	393	3v04	Discovery of Novel Allosteric MEK Inhibitors Possessing Classical and Non-classical Bidentate Ser212 Interactions.	2	333	A	62	None
+Q02750	62	393	3wig	Human MEK1 kinase in complex with CH5126766 and MgAMP-PNP	2	301	A	63	None
+Q02750	62	393	2p55	X-ray structure of the human mitogen-activated protein kinase kinase 1 (MEK1) in a complex with ligand and MgATP	2	333	A	62	None
+

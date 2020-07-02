@@ -1,0 +1,43 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF00498	FHA	FHA domain	27	91
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	2819	2928
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	2700	2806
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	2580	2688
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	2458	2569
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	2336	2447
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	2215	2326
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	2097	2204
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	1975	2086
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	1852	1964
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	1731	1842
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	1609	1720
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	1488	1597
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	1367	1477
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	1245	1356
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	1123	1234
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF08065	KI67R	KI67R (NUC007) repeat	1001	1112
+P46013	Antigen Ki-67	KI67_HUMAN	Homo sapiens	PF15276	PP1_bind	Protein phosphatase 1 binding	502	561
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#4 mappings in 4 PDB chains in 3 PDB entries
+P46013	1	120	1r21	Solution Structure of human Ki67 FHA Domain	9	128	A	1	None
+P46013	1	120	2aff	The solution structure of the Ki67FHA/hNIFK(226-269)3P complex	1	120	A	None	None
+P46013	496	536	5j28	Ki67-PP1g (protein phosphatase 1, gamma isoform) holoenzyme complex	6	46	D	None	None
+P46013	496	536	5j28	Ki67-PP1g (protein phosphatase 1, gamma isoform) holoenzyme complex	6	46	C	None	None
+

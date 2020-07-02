@@ -1,0 +1,64 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P49450	Histone H3-like centromeric protein A	CENPA_HUMAN	Homo sapiens	PF00125	Histone	Core histone H2A/H2B/H3/H4	2	133
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#42 mappings in 40 PDB chains in 22 PDB entries
+P49450	1	140	3wtp	Crystal Structure of the heterotypic nucleosome containing human CENP-A and H3.3	4	143	A	None	None
+P49450	1	140	6tem	CENP-A nucleosome core particle with 145 base pairs of the Widom 601 sequence by cryo-EM	1	140	A	None	None
+P49450	1	140	6tem	CENP-A nucleosome core particle with 145 base pairs of the Widom 601 sequence by cryo-EM	1	140	E	None	None
+P49450	1	140	6buz	Cryo-EM structure of CENP-A nucleosome in complex with kinetochore protein CENP-N	21	160	A	None	None
+P49450	1	140	6buz	Cryo-EM structure of CENP-A nucleosome in complex with kinetochore protein CENP-N	21	160	E	None	None
+P49450	1	140	6o1d	Cryo-EM structure of the centromeric nucleosome with native alpha satellite DNA	19	158	A	None	140
+P49450	1	140	6o1d	Cryo-EM structure of the centromeric nucleosome with native alpha satellite DNA	19	158	E	None	140
+P49450	1	140	6e0p	Cryo-EM structure of the centromeric nucleosome (Native alpha satellite DNA) in complex with a single chain antibody fragment	19	158	A	None	140
+P49450	1	140	6e0p	Cryo-EM structure of the centromeric nucleosome (Native alpha satellite DNA) in complex with a single chain antibody fragment	19	158	E	None	140
+P49450	1	140	6l49	H3-CA-H3 tri-nucleosome with the 22 base-pair linker DNA	4	143	A	None	None
+P49450	1	140	6l49	H3-CA-H3 tri-nucleosome with the 22 base-pair linker DNA	4	143	E	None	None
+P49450	1	140	6c0w	Cryo-EM structure of human kinetochore protein CENP-N with the centromeric nucleosome containing CENP-A	1	140	A	None	None
+P49450	1	140	6c0w	Cryo-EM structure of human kinetochore protein CENP-N with the centromeric nucleosome containing CENP-A	1	140	E	None	None
+P49450	1	140	3r45	Structure of a CENP-A-Histone H4 Heterodimer in complex with chaperone HJURP	17	156	A	None	140
+P49450	1	140	6se6	Class2 : CENP-A nucleosome in complex with CENP-C central region	1	140	A	None	None
+P49450	1	140	6se6	Class2 : CENP-A nucleosome in complex with CENP-C central region	1	140	E	None	None
+P49450	1	140	6se0	Class 1 : CENP-A nucleosome	1	140	A	None	140
+P49450	1	140	6se0	Class 1 : CENP-A nucleosome	1	140	E	None	140
+P49450	1	140	6e0c	Cryo-EM structure of the CENP-A nucleosome (W601) in complex with a single chain antibody fragment	19	158	A	None	140
+P49450	1	140	6e0c	Cryo-EM structure of the CENP-A nucleosome (W601) in complex with a single chain antibody fragment	19	158	E	None	140
+P49450	1	140	3nqu	Crystal structure of partially trypsinized (CENP-A/H4)2 heterotetramer	1	140	A	None	None
+P49450	1	140	6sef	Class2C : CENP-A nucleosome in complex with CENP-C central region	1	140	A	None	None
+P49450	1	140	6sef	Class2C : CENP-A nucleosome in complex with CENP-C central region	1	140	E	None	None
+P49450	1	140	6seg	Class1: CENP-A nucleosome in complex with CENP-C central region	1	140	A	None	None
+P49450	1	140	6seg	Class1: CENP-A nucleosome in complex with CENP-C central region	1	140	E	None	None
+P49450	1	140	6see	Class2A : CENP-A nucleosome in complex with CENP-C central region	1	140	A	None	None
+P49450	1	140	6see	Class2A : CENP-A nucleosome in complex with CENP-C central region	1	140	E	None	None
+P49450	1	140	3an2	The structure of the centromeric nucleosome containing CENP-A	4	143	A	None	None
+P49450	1	140	3an2	The structure of the centromeric nucleosome containing CENP-A	4	143	E	None	None
+P49450	3	10	5cvd	Crystal structure of human NRMT1 in complex with alpha-N-dimethylated human CENP-A peptide	2	9	D	2	None
+P49450	3	10	5cvd	Crystal structure of human NRMT1 in complex with alpha-N-dimethylated human CENP-A peptide	2	9	E	2	None
+P49450	38	139	6mup	CENP-A nucleosome bound by two copies of CENP-C(CD) and two copies CENP-N(NT)	1	102	A	38	139
+P49450	38	139	6mup	CENP-A nucleosome bound by two copies of CENP-C(CD) and two copies CENP-N(NT)	1	102	E	None	139
+P49450	38	139	6muo	CENP-A nucleosome bound by two copies of CENP-C(CD) and one copy CENP-N(NT)	1	102	A	None	139
+P49450	38	139	6muo	CENP-A nucleosome bound by two copies of CENP-C(CD) and one copy CENP-N(NT)	1	102	E	None	139
+P49450	60	140	3nqj	Crystal structure of (CENP-A/H4)2 heterotetramer	2	82	A	60	None
+P49450	79	116	5zbx	The crystal structure of the nucleosome containing histone H3.1 CATD(V76Q, K77D)	83	120	E	79	116
+P49450	79	116	5zbx	The crystal structure of the nucleosome containing histone H3.1 CATD(V76Q, K77D)	83	120	A	79	116
+P49450	75	75	5zbx	The crystal structure of the nucleosome containing histone H3.1 CATD(V76Q, K77D)	79	79	A	75	75
+P49450	75	75	5zbx	The crystal structure of the nucleosome containing histone H3.1 CATD(V76Q, K77D)	79	79	E	75	75
+P49450	75	116	5z23	Crystal structure of the nucleosome containing a chimeric histone H3/CENP-A CATD	79	120	A	75	116
+P49450	75	116	5z23	Crystal structure of the nucleosome containing a chimeric histone H3/CENP-A CATD	79	120	E	75	116
+

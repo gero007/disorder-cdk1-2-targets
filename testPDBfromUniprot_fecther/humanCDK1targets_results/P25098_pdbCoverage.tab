@@ -1,0 +1,41 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P25098	G-protein coupled receptor kinase 2	ARBK1_HUMAN	Homo sapiens	PF00615	RGS	Regulator of G protein signaling domain	54	174
+P25098	G-protein coupled receptor kinase 2	ARBK1_HUMAN	Homo sapiens	PF00069	Pkinase	Protein kinase domain	191	453
+P25098	G-protein coupled receptor kinase 2	ARBK1_HUMAN	Homo sapiens	PF00169	PH	PH domain	559	652
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#17 mappings in 17 PDB chains in 17 PDB entries
+P25098	1	689	4pnk	G protein-coupled receptor kinase 2 in complex with GSK180736A	1	689	A	None	None
+P25098	1	689	5wg3	Human GRK2 in complex with Gbetagamma subunits and CCG258748	1	689	A	None	None
+P25098	1	689	5wg5	Human GRK2 in complex with Gbetagamma subunits and CCG224061	1	689	A	None	None
+P25098	1	689	5wg4	Human GRK2 in complex with Gbetagamma subunits and CCG257284	1	689	A	None	None
+P25098	1	689	6c2y	Human GRK2 in complex with Gbetagamma subunits and CCG257142	1	689	A	None	None
+P25098	1	689	6u7c	Human GRK2 in complex with Gbetagamma subunits and CCG258747	1	689	A	None	None
+P25098	1	689	3cik	Human GRK2 in Complex with Gbetagamma subunits	1	689	A	None	None
+P25098	1	689	3v5w	Human G Protein-Coupled Receptor Kinase 2 in Complex with Soluble Gbetagamma Subunits and Paroxetine	1	689	A	None	None
+P25098	2	689	3krx	Human GRK2 in complex with Gbetgamma subunits and balanol (co-crystal)	1	688	A	None	None
+P25098	2	689	3krw	Human GRK2 in complex with Gbetgamma subunits and balanol (soak)	1	688	A	None	None
+P25098	23	538	5uvc	Design, Synthesis, and Evaluation of the First Selective and Potent G-protein-Coupled Receptor Kinase 2 (GRK2) Inhibitor for the Potential Treatment of Heart Failure	32	547	A	None	None
+P25098	23	538	5uuu	Design, Synthesis, and Evaluation of the First Selective and Potent G-protein-Coupled Receptor Kinase 2 (GRK2) Inhibitor for the Potential Treatment of Heart Failure	32	547	A	None	538
+P25098	29	670	5he1	Human GRK2 in complex with Gbetagamma subunits and CCG224062	1	642	A	29	None
+P25098	30	668	4mk0	Crystal structure of G protein-coupled receptor kinase 2 in complex with a a rationally designed paroxetine derivative	1	639	A	30	668
+P25098	30	671	5ukk	Human GRK2 in complex with human G-beta-gamma subunits and CCG211998 (14ak)	1	642	A	30	None
+P25098	30	671	5ukl	Human GRK2 in complex with Gbetagamma subunits and CCG222886 (14bd)	1	642	A	None	671
+P25098	555	670	1bak	SIGNAL TRANSDUCTION PLECKSTRIN HOMOLOGY DOMAIN OF G-PROTEIN COUPLED RECEPTOR KINASE 2 (BETA-ADRENERGIC RECEPTOR KINASE 1), C-TERMINAL EXTENDED, NMR, 20 STRUCTURES	4	119	A	555	670
+

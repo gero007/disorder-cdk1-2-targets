@@ -1,0 +1,152 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P10415	APOPTOSIS REGULATOR BCL-2, BCL-2-LIKE PROTEIN 1, APOPTOSIS REGULATOR BCL-2	BCL2_HUMAN	Homo sapiens	PF00452	Bcl-2	Apoptosis regulator proteins, Bcl-2 family	97	195
+P10415	APOPTOSIS REGULATOR BCL-2, BCL-2-LIKE PROTEIN 1, APOPTOSIS REGULATOR BCL-2	BCL2_HUMAN	Homo sapiens	PF02180	BH4	Bcl-2 homology region 4	8	32
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#129 mappings in 56 PDB chains in 32 PDB entries
+P10415	66	207	5agx	Bcl-2 alpha beta-1 LINEAR complex	51	166	A	92	None
+P10415	1	34	5agx	Bcl-2 alpha beta-1 LINEAR complex	1	34	A	None	None
+P10415	66	207	5agx	Bcl-2 alpha beta-1 LINEAR complex	51	166	B	92	None
+P10415	1	34	5agx	Bcl-2 alpha beta-1 LINEAR complex	1	34	B	None	None
+P10415	1	207	1gjh	HUMAN BCL-2, ISOFORM 2	1	166	A	None	207
+P10415	1	207	1g5m	HUMAN BCL-2, ISOFORM 1	1	166	A	None	207
+P10415	1	207	5jsn	Bcl2-inhibitor complex	1	207	A	None	207
+P10415	1	207	5jsn	Bcl2-inhibitor complex	1	207	C	None	207
+P10415	1	207	5vax	Bcl-2 complex with Beclin 1 BH3 domain	3	168	C	None	None
+P10415	1	207	5vax	Bcl-2 complex with Beclin 1 BH3 domain	3	168	A	None	207
+P10415	1	207	5vax	Bcl-2 complex with Beclin 1 BH3 domain	3	168	B	None	207
+P10415	1	207	5vax	Bcl-2 complex with Beclin 1 BH3 domain	3	168	D	None	None
+P10415	1	207	2xa0	Crystal structure of BCL-2 in complex with a BAX BH3 peptide	1	207	A	None	None
+P10415	1	207	2xa0	Crystal structure of BCL-2 in complex with a BAX BH3 peptide	1	207	B	None	None
+P10415	1	207	5fcg	Crystal structure of Bcl-2 in complex with HBx-BH3 motif	3	168	A	None	None
+P10415	1	207	5vau	Bcl-2 complex with Beclin 1 BH3 domain	3	168	A	1	None
+P10415	1	207	5vau	Bcl-2 complex with Beclin 1 BH3 domain	3	168	D	None	None
+P10415	1	207	5vau	Bcl-2 complex with Beclin 1 BH3 domain	3	168	B	None	None
+P10415	1	207	5vau	Bcl-2 complex with Beclin 1 BH3 domain	3	168	C	None	None
+P10415	66	207	6o0l	crystal structure of BCL-2 G101V mutation with venetoclax	51	166	A	92	None
+P10415	66	207	6o0l	crystal structure of BCL-2 G101V mutation with venetoclax	51	166	C	92	None
+P10415	1	34	6o0l	crystal structure of BCL-2 G101V mutation with venetoclax	1	34	C	None	None
+P10415	1	34	6o0l	crystal structure of BCL-2 G101V mutation with venetoclax	1	34	A	None	None
+P10415	66	207	5agw	Bcl-2 alpha beta-1 complex	51	166	A	92	None
+P10415	66	207	5agw	Bcl-2 alpha beta-1 complex	51	166	B	92	None
+P10415	1	34	5agw	Bcl-2 alpha beta-1 complex	1	34	A	None	None
+P10415	1	34	5agw	Bcl-2 alpha beta-1 complex	1	34	B	None	None
+P10415	66	207	6o0p	crystal structure of BCL-2 G101A mutation with venetoclax	51	166	A	92	None
+P10415	1	34	6o0p	crystal structure of BCL-2 G101A mutation with venetoclax	1	34	A	None	34
+P10415	66	207	6o0o	crystal structure of BCL-2 G101V mutation with S55746	51	166	C	51	None
+P10415	66	207	6o0o	crystal structure of BCL-2 G101V mutation with S55746	51	166	A	51	None
+P10415	1	34	6o0o	crystal structure of BCL-2 G101V mutation with S55746	1	34	C	None	None
+P10415	1	34	6o0o	crystal structure of BCL-2 G101V mutation with S55746	1	34	A	None	None
+P10415	66	207	5vay	Bcl-2 complex with Beclin 1 T108D BH3 domain	53	168	C	92	None
+P10415	66	207	5vay	Bcl-2 complex with Beclin 1 T108D BH3 domain	53	168	A	92	None
+P10415	66	207	5vay	Bcl-2 complex with Beclin 1 T108D BH3 domain	53	168	D	92	None
+P10415	66	207	5vay	Bcl-2 complex with Beclin 1 T108D BH3 domain	53	168	B	92	None
+P10415	1	34	5vay	Bcl-2 complex with Beclin 1 T108D BH3 domain	3	36	A	1	None
+P10415	1	34	5vay	Bcl-2 complex with Beclin 1 T108D BH3 domain	3	36	D	None	None
+P10415	1	34	5vay	Bcl-2 complex with Beclin 1 T108D BH3 domain	3	36	B	None	None
+P10415	1	34	5vay	Bcl-2 complex with Beclin 1 T108D BH3 domain	3	36	C	None	None
+P10415	1	34	4ieh	Crystal Structure of human Bcl-2 in complex with a small molecule inhibitor targeting Bcl-2 BH3 domain interactions	4	37	A	None	None
+P10415	66	207	4ieh	Crystal Structure of human Bcl-2 in complex with a small molecule inhibitor targeting Bcl-2 BH3 domain interactions	54	169	A	51	None
+P10415	66	207	6o0k	crystal structure of BCL-2 with venetoclax	51	166	A	92	None
+P10415	1	34	6o0k	crystal structure of BCL-2 with venetoclax	1	34	A	None	34
+P10415	66	207	6o0m	crystal structure of BCL-2 F104L mutation with venetoclax	51	166	A	92	None
+P10415	1	34	6o0m	crystal structure of BCL-2 F104L mutation with venetoclax	1	34	A	None	34
+P10415	1	33	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	4	36	D	None	None
+P10415	1	33	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	4	36	C	None	None
+P10415	1	33	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	4	36	A	None	None
+P10415	1	33	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	4	36	F	None	None
+P10415	1	33	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	4	36	E	None	None
+P10415	1	33	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	4	36	B	None	None
+P10415	99	207	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	61	169	A	58	None
+P10415	99	207	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	61	169	D	58	None
+P10415	99	207	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	61	169	F	58	None
+P10415	99	207	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	61	169	B	58	None
+P10415	99	207	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	61	169	E	58	None
+P10415	99	207	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	61	169	C	58	None
+P10415	66	95	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	54	57	E	51	54
+P10415	66	95	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	54	57	D	51	54
+P10415	66	95	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	54	57	A	51	54
+P10415	66	95	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	54	57	F	51	54
+P10415	66	95	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	54	57	C	51	54
+P10415	66	95	4aq3	HUMAN BCL-2 WITH PHENYLACYLSULFONAMIDE INHIBITOR	54	57	B	51	54
+P10415	1	34	4lxd	Bcl_2-Navitoclax Analog (without Thiophenyl) Complex	1	34	A	None	None
+P10415	92	207	4lxd	Bcl_2-Navitoclax Analog (without Thiophenyl) Complex	51	166	A	89	None
+P10415	1	34	4man	Bcl_2-Navitoclax Analog (with Indole) Complex	1	34	A	None	None
+P10415	1	34	4man	Bcl_2-Navitoclax Analog (with Indole) Complex	1	34	B	None	None
+P10415	92	207	4man	Bcl_2-Navitoclax Analog (with Indole) Complex	51	166	B	89	None
+P10415	92	207	4man	Bcl_2-Navitoclax Analog (with Indole) Complex	51	166	A	89	None
+P10415	1	34	4lvt	Bcl_2-Navitoclax (ABT-263) Complex	1	34	A	None	None
+P10415	1	34	4lvt	Bcl_2-Navitoclax (ABT-263) Complex	1	34	B	None	None
+P10415	92	207	4lvt	Bcl_2-Navitoclax (ABT-263) Complex	51	166	B	89	None
+P10415	92	207	4lvt	Bcl_2-Navitoclax (ABT-263) Complex	51	166	A	89	None
+P10415	1	34	6iwb	Crystal structure of a computationally designed protein (LD3) in complex with BCL-2	1	34	D	None	None
+P10415	1	34	6iwb	Crystal structure of a computationally designed protein (LD3) in complex with BCL-2	1	34	B	None	None
+P10415	92	207	6iwb	Crystal structure of a computationally designed protein (LD3) in complex with BCL-2	51	166	D	51	None
+P10415	92	207	6iwb	Crystal structure of a computationally designed protein (LD3) in complex with BCL-2	51	166	B	51	None
+P10415	3	207	2o21	Solution structure of the anti-apoptotic protein Bcl-2 in complex with an acyl-sulfonamide-based ligand	1	164	A	1	204
+P10415	3	207	2o22	Solution structure of the anti-apoptotic protein Bcl-2 in complex with an acyl-sulfonamide-based ligand	1	164	A	1	204
+P10415	3	33	1ysw	Solution structure of the anti-apoptotic protein Bcl-2 complexed with an acyl-sulfonamide-based ligand	1	31	A	1	31
+P10415	92	207	1ysw	Solution structure of the anti-apoptotic protein Bcl-2 complexed with an acyl-sulfonamide-based ligand	49	164	A	89	204
+P10415	8	204	2o2f	Solution structure of the anti-apoptotic protein Bcl-2 in complex with an acyl-sulfonamide-based ligand	1	138	A	6	201
+P10415	66	98	6gl8	Crystal structure of Bcl-2 in complex with the novel orally active inhibitor S55746	58	64	A	92	98
+P10415	103	206	6gl8	Crystal structure of Bcl-2 in complex with the novel orally active inhibitor S55746	69	172	A	103	None
+P10415	9	33	6gl8	Crystal structure of Bcl-2 in complex with the novel orally active inhibitor S55746	16	40	A	9	33
+P10415	9	206	2w3l	Crystal Structure of Chimaeric Bcl2-xL and Phenyl Tetrahydroisoquinoline Amide Complex	1	144	A	9	165
+P10415	9	206	2w3l	Crystal Structure of Chimaeric Bcl2-xL and Phenyl Tetrahydroisoquinoline Amide Complex	1	144	B	9	None
+P10415	10	19	6qg8	Structure of human Bcl-2 in complex with PUMA BH3 peptide	4	13	A	10	19
+P10415	66	94	6qg8	Structure of human Bcl-2 in complex with PUMA BH3 peptide	44	46	A	92	94
+P10415	26	35	6qg8	Structure of human Bcl-2 in complex with PUMA BH3 peptide	20	29	A	26	None
+P10415	96	105	6qg8	Structure of human Bcl-2 in complex with PUMA BH3 peptide	48	57	A	96	105
+P10415	186	203	6qg8	Structure of human Bcl-2 in complex with PUMA BH3 peptide	138	155	A	186	203
+P10415	111	123	6qg8	Structure of human Bcl-2 in complex with PUMA BH3 peptide	63	75	A	111	123
+P10415	171	174	6qg8	Structure of human Bcl-2 in complex with PUMA BH3 peptide	123	126	A	171	174
+P10415	131	167	6qg8	Structure of human Bcl-2 in complex with PUMA BH3 peptide	83	119	A	131	167
+P10415	10	19	6qgh	Structure of human Bcl-2 in complex with ABT-263	4	13	A	10	19
+P10415	66	94	6qgh	Structure of human Bcl-2 in complex with ABT-263	44	46	A	92	94
+P10415	26	35	6qgh	Structure of human Bcl-2 in complex with ABT-263	20	29	A	26	None
+P10415	96	105	6qgh	Structure of human Bcl-2 in complex with ABT-263	48	57	A	96	105
+P10415	186	203	6qgh	Structure of human Bcl-2 in complex with ABT-263	138	155	A	186	203
+P10415	111	123	6qgh	Structure of human Bcl-2 in complex with ABT-263	63	75	A	111	123
+P10415	171	174	6qgh	Structure of human Bcl-2 in complex with ABT-263	123	126	A	171	174
+P10415	131	167	6qgh	Structure of human Bcl-2 in complex with ABT-263	83	119	A	131	167
+P10415	26	35	6qgg	Structure of human Bcl-2 in complex with analogue of ABT-737	20	29	A	26	None
+P10415	66	94	6qgg	Structure of human Bcl-2 in complex with analogue of ABT-737	44	46	A	92	94
+P10415	10	19	6qgg	Structure of human Bcl-2 in complex with analogue of ABT-737	4	13	A	10	19
+P10415	96	105	6qgg	Structure of human Bcl-2 in complex with analogue of ABT-737	48	57	A	96	105
+P10415	186	203	6qgg	Structure of human Bcl-2 in complex with analogue of ABT-737	138	155	A	186	203
+P10415	111	123	6qgg	Structure of human Bcl-2 in complex with analogue of ABT-737	63	75	A	111	123
+P10415	171	174	6qgg	Structure of human Bcl-2 in complex with analogue of ABT-737	123	126	A	171	174
+P10415	131	167	6qgg	Structure of human Bcl-2 in complex with analogue of ABT-737	83	119	A	131	167
+P10415	10	19	6qgk	Structure of human Bcl-2 in complex with THIQ-phenyl pyrazole compound	4	13	A	10	19
+P10415	66	94	6qgk	Structure of human Bcl-2 in complex with THIQ-phenyl pyrazole compound	44	46	A	92	94
+P10415	26	35	6qgk	Structure of human Bcl-2 in complex with THIQ-phenyl pyrazole compound	20	29	A	26	None
+P10415	96	105	6qgk	Structure of human Bcl-2 in complex with THIQ-phenyl pyrazole compound	48	57	A	96	105
+P10415	111	123	6qgk	Structure of human Bcl-2 in complex with THIQ-phenyl pyrazole compound	63	75	A	111	123
+P10415	186	203	6qgk	Structure of human Bcl-2 in complex with THIQ-phenyl pyrazole compound	138	155	A	186	203
+P10415	131	167	6qgk	Structure of human Bcl-2 in complex with THIQ-phenyl pyrazole compound	83	119	A	131	167
+P10415	171	174	6qgk	Structure of human Bcl-2 in complex with THIQ-phenyl pyrazole compound	123	126	A	171	174
+P10415	10	19	6qgj	Structure of human Bcl-2 in complex with fragment/ABT-263 hybrid	4	13	A	None	19
+P10415	66	94	6qgj	Structure of human Bcl-2 in complex with fragment/ABT-263 hybrid	44	46	A	92	94
+P10415	26	35	6qgj	Structure of human Bcl-2 in complex with fragment/ABT-263 hybrid	20	29	A	26	None
+P10415	96	105	6qgj	Structure of human Bcl-2 in complex with fragment/ABT-263 hybrid	48	57	A	96	105
+P10415	186	203	6qgj	Structure of human Bcl-2 in complex with fragment/ABT-263 hybrid	138	155	A	186	203
+P10415	111	123	6qgj	Structure of human Bcl-2 in complex with fragment/ABT-263 hybrid	63	75	A	111	123
+P10415	171	174	6qgj	Structure of human Bcl-2 in complex with fragment/ABT-263 hybrid	123	126	A	171	174
+P10415	131	167	6qgj	Structure of human Bcl-2 in complex with fragment/ABT-263 hybrid	83	119	A	131	167
+

@@ -1,0 +1,41 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P54578	Ubiquitin carboxyl-terminal hydrolase 14	UBP14_HUMAN	Homo sapiens	PF00443	UCH	Ubiquitin carboxyl-terminal hydrolase	105	480
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#19 mappings in 19 PDB chains in 8 PDB entries
+P54578	1	494	5gjq	Structure of the human 26S proteasome bound to USP14-UbAl	1	494	x	None	None
+P54578	91	494	2ayn	Structure of USP14, a proteasome-associated deubiquitinating enzyme	1	404	A	None	None
+P54578	91	494	2ayn	Structure of USP14, a proteasome-associated deubiquitinating enzyme	1	404	B	None	None
+P54578	91	494	2ayn	Structure of USP14, a proteasome-associated deubiquitinating enzyme	1	404	C	None	None
+P54578	91	494	2ayo	Structure of USP14 bound to ubquitin aldehyde	1	404	A	None	None
+P54578	92	494	6lvs	USP14 catalytic domain mutant C114S	17	410	D	None	None
+P54578	92	494	6lvs	USP14 catalytic domain mutant C114S	17	410	C	None	None
+P54578	92	494	6lvs	USP14 catalytic domain mutant C114S	17	410	A	None	None
+P54578	92	494	6lvs	USP14 catalytic domain mutant C114S	17	410	F	None	None
+P54578	92	494	6lvs	USP14 catalytic domain mutant C114S	17	410	E	None	None
+P54578	92	494	6lvs	USP14 catalytic domain mutant C114S	17	410	B	None	None
+P54578	96	494	6iik	USP14 catalytic domain with IU1	1	399	A	None	None
+P54578	96	494	6iik	USP14 catalytic domain with IU1	1	399	B	None	None
+P54578	96	494	6iim	USP14 catalytic domain with IU1-206	1	399	A	None	None
+P54578	96	494	6iim	USP14 catalytic domain with IU1-206	1	399	B	None	None
+P54578	96	494	6iil	USP14 catalytic domain bind to IU1-47	1	399	A	None	None
+P54578	96	494	6iil	USP14 catalytic domain bind to IU1-47	1	399	B	None	None
+P54578	101	485	6iin	USP14 catalytic domain with IU1-248	1	385	B	101	485
+P54578	101	485	6iin	USP14 catalytic domain with IU1-248	1	385	A	101	485
+

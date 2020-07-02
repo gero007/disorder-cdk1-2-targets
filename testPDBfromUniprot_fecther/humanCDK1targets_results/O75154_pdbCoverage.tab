@@ -1,0 +1,51 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O75154	Rab11 family-interacting protein 3	RFIP3_HUMAN	Homo sapiens	PF09457	RBD-FIP	FIP domain	716	756
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#29 mappings in 29 PDB chains in 5 PDB entries
+O75154	695	756	2hv8	Crystal structure of GTP-bound Rab11 in complex with FIP3	3	64	E	None	756
+O75154	695	756	2hv8	Crystal structure of GTP-bound Rab11 in complex with FIP3	3	64	F	None	756
+O75154	695	756	2hv8	Crystal structure of GTP-bound Rab11 in complex with FIP3	3	64	D	None	756
+O75154	695	756	4uj4	Crystal structure of human Rab11-Rabin8-FIP3	5	66	I	None	756
+O75154	695	756	4uj4	Crystal structure of human Rab11-Rabin8-FIP3	5	66	L	None	756
+O75154	695	756	4uj4	Crystal structure of human Rab11-Rabin8-FIP3	5	66	F	None	756
+O75154	695	756	4uj4	Crystal structure of human Rab11-Rabin8-FIP3	5	66	C	None	None
+O75154	695	756	4uj3	Crystal structure of human Rab11-Rabin8-FIP3	5	66	X	None	756
+O75154	695	756	4uj3	Crystal structure of human Rab11-Rabin8-FIP3	5	66	L	None	756
+O75154	695	756	4uj3	Crystal structure of human Rab11-Rabin8-FIP3	5	66	I	None	756
+O75154	695	756	4uj3	Crystal structure of human Rab11-Rabin8-FIP3	5	66	R	None	756
+O75154	695	756	4uj3	Crystal structure of human Rab11-Rabin8-FIP3	5	66	C	None	None
+O75154	695	756	4uj3	Crystal structure of human Rab11-Rabin8-FIP3	5	66	F	None	756
+O75154	695	756	4uj3	Crystal structure of human Rab11-Rabin8-FIP3	5	66	O	None	756
+O75154	695	756	4uj3	Crystal structure of human Rab11-Rabin8-FIP3	5	66	U	None	756
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	j	None	None
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	V	None	None
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	E	None	756
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	b	None	None
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	f	None	None
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	e	None	756
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	K	None	756
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	a	None	756
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	F	None	None
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	U	None	756
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	i	None	756
+O75154	713	756	4d0m	Phosphatidylinositol 4-kinase III beta in a complex with Rab11a-GTP- gamma-S and the Rab-binding domain of FIP3	5	48	L	None	None
+O75154	715	756	2d7c	Crystal structure of human Rab11 in complex with FIP3 Rab-binding domain	1	42	D	715	756
+O75154	715	756	2d7c	Crystal structure of human Rab11 in complex with FIP3 Rab-binding domain	1	42	C	715	756
+

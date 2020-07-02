@@ -1,0 +1,49 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P38936	GLY-ARG-LYS-ARG-ARG-GLN-DAB-SER-MET-THR-GLU-PHE-TYR-HIS	CDN1A_HUMAN	Homo sapiens	PF02234	CDI	Cyclin-dependent kinase inhibitor	20	68
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#27 mappings in 27 PDB chains in 10 PDB entries
+P38936	9	85	6p8h	Crystal structure of CDK4 in complex with CyclinD1 and P21	4	80	C	None	None
+P38936	139	160	2zvv	Crystal structure of Proliferating cellular nuclear antigen 1 and Short peptide from human P21	1	22	X	None	None
+P38936	139	160	2zvv	Crystal structure of Proliferating cellular nuclear antigen 1 and Short peptide from human P21	1	22	Y	None	None
+P38936	139	160	2zvw	Crystal structure of Proliferating cell nuclear antigen 2 and Short peptide from human P21	1	22	P	None	None
+P38936	139	160	2zvw	Crystal structure of Proliferating cell nuclear antigen 2 and Short peptide from human P21	1	22	I	None	None
+P38936	139	160	2zvw	Crystal structure of Proliferating cell nuclear antigen 2 and Short peptide from human P21	1	22	M	None	None
+P38936	139	160	2zvw	Crystal structure of Proliferating cell nuclear antigen 2 and Short peptide from human P21	1	22	O	None	None
+P38936	139	160	2zvw	Crystal structure of Proliferating cell nuclear antigen 2 and Short peptide from human P21	1	22	N	None	None
+P38936	139	160	2zvw	Crystal structure of Proliferating cell nuclear antigen 2 and Short peptide from human P21	1	22	L	None	None
+P38936	139	160	2zvw	Crystal structure of Proliferating cell nuclear antigen 2 and Short peptide from human P21	1	22	J	None	None
+P38936	139	160	2zvw	Crystal structure of Proliferating cell nuclear antigen 2 and Short peptide from human P21	1	22	K	None	None
+P38936	139	160	4rjf	Crystal structure of the human sliding clamp at 2.0 angstrom resolution	1	22	B	None	160
+P38936	139	160	4rjf	Crystal structure of the human sliding clamp at 2.0 angstrom resolution	1	22	F	None	160
+P38936	139	160	4rjf	Crystal structure of the human sliding clamp at 2.0 angstrom resolution	1	22	D	None	160
+P38936	139	160	5e0u	Human PCNA variant (S228I) complexed with p21 at 1.9 Angstroms	2	23	E	None	160
+P38936	139	160	5e0u	Human PCNA variant (S228I) complexed with p21 at 1.9 Angstroms	2	23	F	None	160
+P38936	139	160	5e0u	Human PCNA variant (S228I) complexed with p21 at 1.9 Angstroms	2	23	D	None	160
+P38936	139	160	1axc	HUMAN PCNA	1	22	B	None	160
+P38936	139	160	1axc	HUMAN PCNA	1	22	F	None	160
+P38936	139	160	1axc	HUMAN PCNA	1	22	D	None	160
+P38936	139	152	6cix	Lactam cyclised mimetic of a fragment of p21	1	14	B	139	152
+P38936	139	152	6cbi	PCNA in complex with inhibitor	1	14	I	None	None
+P38936	139	152	6cbi	PCNA in complex with inhibitor	1	14	H	None	152
+P38936	139	152	6cbi	PCNA in complex with inhibitor	1	14	J	None	152
+P38936	139	152	6cbi	PCNA in complex with inhibitor	1	14	K	None	152
+P38936	139	152	6civ	Lactam cyclised mimetic of a fragment of p21	1	14	C	139	152
+P38936	139	152	6cej	Solution structure of a 14mer fragment of the p21 protein	1	14	A	139	152
+

@@ -1,0 +1,25 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P15336	Cyclic AMP-dependent transcription factor ATF-2	ATF2_HUMAN	Homo sapiens	PF00170	bZIP_1	bZIP transcription factor	350	413
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#3 mappings in 3 PDB chains in 3 PDB entries
+P15336	19	56	1bhi	STRUCTURE OF TRANSACTIVATION DOMAIN OF CRE-BP1/ATF-2, NMR, 20 STRUCTURES	1	38	A	1	38
+P15336	48	55	4h36	Crystal Structure of JNK3 in Complex with ATF2 Peptide	1	8	B	48	55
+P15336	354	414	1t2k	Structure Of The DNA Binding Domains Of IRF3, ATF-2 and Jun Bound To DNA	1	61	D	336	396
+

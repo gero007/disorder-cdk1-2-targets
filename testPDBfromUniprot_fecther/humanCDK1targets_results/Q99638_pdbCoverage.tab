@@ -1,0 +1,27 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q99638	Cell cycle checkpoint control protein RAD9A	RAD9A_HUMAN	Homo sapiens	PF04139	Rad9	Rad9	13	265
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 5 PDB entries
+Q99638	1	270	3ggr	Crystal Structure of the Human Rad9-Hus1-Rad1 complex	1	270	A	None	None
+Q99638	1	270	6j8y	Crystal structure of the human RAD9-HUS1-RAD1-RHINO complex	1	270	A	1	None
+Q99638	1	270	3g65	Crystal Structure of the Human Rad9-Rad1-Hus1 DNA Damage Checkpoint Complex	1	270	A	1	270
+Q99638	1	266	3a1j	Crystal structure of the human Rad9-Hus1-Rad1 complex	1	266	A	1	266
+Q99638	380	390	6hm5	Crystal structure of TOPBP1 BRCT0,1,2 in complex with a RAD9 phosphopeptide	1	11	B	380	None
+

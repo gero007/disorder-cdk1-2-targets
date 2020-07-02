@@ -1,0 +1,99 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	1311	1344
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	1225	1263
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	1187	1217
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	1149	1179
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	1111	1141
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	1063	1093
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	1025	1055
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	911	941
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	833	865
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	795	825
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	757	787
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	720	749
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	682	712
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	645	673
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	607	637
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	570	599
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	532	562
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	494	524
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	456	486
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	339	369
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	261	291
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	222	253
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	144	174
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	106	137
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00008	EGF	EGF-like domain	63	97
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00023	Ank	Ankyrin repeat	1880	1926
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00066	Notch	LNR domain	1525	1562
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00066	Notch	LNR domain	1487	1522
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF00066	Notch	LNR domain	1446	1480
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF06816	NOD	NOTCH protein	1566	1621
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF07645	EGF_CA	Calcium-binding EGF domain	869	906
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF07645	EGF_CA	Calcium-binding EGF domain	412	450
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF07645	EGF_CA	Calcium-binding EGF domain	295	335
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF07645	EGF_CA	Calcium-binding EGF domain	178	219
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF07684	NODP	NOTCH protein	1671	1729
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF11936	DUF3454	Domain of unknown function (DUF3454)	2479	2540
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF12661	hEGF	Human growth factor-like EGF	1357	1375
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF12661	hEGF	Human growth factor-like EGF	992	1013
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF12796	Ank_2	Ankyrin repeats (3 copies)	1999	2092
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF12796	Ank_2	Ankyrin repeats (3 copies)	1970	2058
+P46531	Notch1	NOTC1_HUMAN	Homo sapiens	PF13637	Ank_4	Ankyrin repeats (many copies)	1928	1981
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#37 mappings in 36 PDB chains in 24 PDB entries
+P46531	140	294	5fm9	human Notch 1, EGF 4-7	3	157	A	None	294
+P46531	142	294	5fma	human Notch 1, EGF 4-7	2	154	B	142	294
+P46531	142	294	5fma	human Notch 1, EGF 4-7	2	154	A	142	294
+P46531	410	529	2vj3	Human Notch-1 EGFs 11-13	2	121	A	None	529
+P46531	410	526	4cud	Human Notch1 EGF domains 11-13 mutant fucosylated at T466	2	118	A	None	526
+P46531	411	526	4cue	Human Notch1 EGF domains 11-13 mutant T466V	3	118	A	None	526
+P46531	411	526	4d0f	Human Notch1 EGF domains 11-13 mutant T466A	3	118	A	411	526
+P46531	411	526	4cuf	Human Notch1 EGF domains 11-13 mutant T466S	3	118	A	None	526
+P46531	411	526	1toz	NMR structure of the human NOTCH-1 ligand binding region	1	116	A	411	526
+P46531	411	526	4d0e	Human Notch1 EGF domains 11-13 mutant GlcNAc-fucose disaccharide modified at T466	3	118	A	None	526
+P46531	452	491	5ub5	human POGLUT1 in complex with human Notch1 EGF12 S458T mutant and UDP	3	42	B	452	491
+P46531	452	491	5l0r	human POGLUT1 in complex with Notch1 EGF12 and UDP	3	42	B	452	491
+P46531	1446	1664	3i08	Crystal structure of the S1-cleaved Notch1 Negative Regulatory Region (NRR)	2	220	A	None	None
+P46531	1446	1664	3i08	Crystal structure of the S1-cleaved Notch1 Negative Regulatory Region (NRR)	2	220	C	None	None
+P46531	1665	1733	3i08	Crystal structure of the S1-cleaved Notch1 Negative Regulatory Region (NRR)	1	69	D	None	None
+P46531	1665	1733	3i08	Crystal structure of the S1-cleaved Notch1 Negative Regulatory Region (NRR)	1	69	B	None	None
+P46531	1446	1733	3eto	2 Angstrom Xray structure of the NOTCH1 Negative Regulatory Region (NRR)	2	242	A	None	None
+P46531	1446	1733	3eto	2 Angstrom Xray structure of the NOTCH1 Negative Regulatory Region (NRR)	2	242	B	None	None
+P46531	1446	1480	1pb5	NMR Structure of a Prototype LNR Module from Human Notch1	1	35	A	1	35
+P46531	1448	1728	3l95	Crystal structure of the human Notch1 Negative Regulatory Region (NRR) bound to the fab fragment of an antagonist antibody	3	235	X	1449	None
+P46531	1448	1728	3l95	Crystal structure of the human Notch1 Negative Regulatory Region (NRR) bound to the fab fragment of an antagonist antibody	3	235	Y	None	None
+P46531	1721	1771	5kzo	Notch1 transmembrane and associated juxtamembrane segment	9	59	A	1721	1771
+P46531	1821	1847	6idf	Cryo-EM structure of gamma secretase in complex with a Notch fragment	103	129	E	None	None
+P46531	1721	1820	6idf	Cryo-EM structure of gamma secretase in complex with a Notch fragment	2	101	E	2	None
+P46531	1759	2127	6py8	Crystal structure of the RBPJ-NOTCH1-NRARP ternary complex bound to DNA	1	369	K	1759	None
+P46531	1759	2127	6py8	Crystal structure of the RBPJ-NOTCH1-NRARP ternary complex bound to DNA	1	369	F	1759	None
+P46531	1872	2126	3v79	Structure of human Notch1 transcription complex including CSL, RAM, ANK, and MAML-1 on HES-1 promoter DNA sequence	2	256	K	None	None
+P46531	1759	1777	3v79	Structure of human Notch1 transcription complex including CSL, RAM, ANK, and MAML-1 on HES-1 promoter DNA sequence	1	19	R	936	954
+P46531	1872	2116	2he0	Crystal structure of a human Notch1 ankyrin domain mutant	1	245	A	None	None
+P46531	1872	2116	2he0	Crystal structure of a human Notch1 ankyrin domain mutant	1	245	B	None	None
+P46531	1872	2114	1yyh	Crystal structure of the human Notch 1 ankyrin domain	1	243	A	None	243
+P46531	1872	2114	1yyh	Crystal structure of the human Notch 1 ankyrin domain	1	243	B	None	243
+P46531	1872	2126	2f8x	Crystal structure of activated Notch, CSL and MAML on HES-1 promoter DNA sequence	2	256	K	None	None
+P46531	1872	2126	3nbn	Crystal structure of a dimer of Notch Transcription Complex trimers on HES1 DNA	2	256	E	None	None
+P46531	1872	2126	3nbn	Crystal structure of a dimer of Notch Transcription Complex trimers on HES1 DNA	2	256	B	None	None
+P46531	1905	2126	2f8y	Crystal structure of human Notch1 ankyrin repeats to 1.55A resolution.	2	223	A	None	None
+P46531	1905	2126	2f8y	Crystal structure of human Notch1 ankyrin repeats to 1.55A resolution.	2	223	B	None	None
+

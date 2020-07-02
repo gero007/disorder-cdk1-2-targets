@@ -1,0 +1,93 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF00514	Arm	Armadillo/beta-catenin-like repeat	649	689
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF00514	Arm	Armadillo/beta-catenin-like repeat	512	553
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05923	APC_r	APC repeat	2008	2030
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05923	APC_r	APC repeat	1949	1972
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05923	APC_r	APC repeat	1841	1865
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05923	APC_r	APC repeat	1637	1660
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05923	APC_r	APC repeat	1486	1509
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05923	APC_r	APC repeat	1371	1393
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05923	APC_r	APC repeat	1257	1280
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05924	SAMP	SAMP Motif	2031	2052
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05924	SAMP	SAMP Motif	1716	1737
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05924	SAMP	SAMP Motif	1567	1588
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05937	EB1_binding	EB-1 Binding Domain	2670	2843
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05956	APC_basic	APC basic domain	2223	2575
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05972	APC_15aa	APC 15 residue motif	1172	1186
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05972	APC_15aa	APC 15 residue motif	1155	1169
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF05972	APC_15aa	APC 15 residue motif	1020	1034
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF11414	Suppressor_APC	Adenomatous polyposis coli tumour suppressor protein	127	207
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF16629	Arm_APC_u3	Armadillo-associated region on APC	732	1019
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF16630	APC_u5	Unstructured region on APC between 1st and 2nd catenin-bdg motifs	1036	1135
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF16633	APC_u9	Unstructured region on APC between 1st two creatine-rich regions	1282	1368
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF16634	APC_u13	Unstructured region on APC between APC_crr and SAMP	1662	1715
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF16635	APC_u14	Unstructured region on APC between SAMP and APC_crr	1746	1839
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF16636	APC_u15	Unstructured region on APC between APC_crr regions 5 and 6	1867	1947
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF16689	APC_N_CC	Coiled-coil N-terminus of APC, dimerisation domain	4	55
+P25054	11-mer peptide from Adenomatous polyposis coli protein	APC_HUMAN	Homo sapiens	PF18797	APC_rep	Adenomatous polyposis coli (APC) repeat	393	466
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#46 mappings in 46 PDB chains in 26 PDB entries
+P25054	2	55	1deb	CRYSTAL STRUCTURE OF THE N-TERMINAL COILED COIL DOMAIN FROM APC	1	54	B	None	55
+P25054	2	55	1deb	CRYSTAL STRUCTURE OF THE N-TERMINAL COILED COIL DOMAIN FROM APC	1	54	A	2	55
+P25054	126	250	1m5i	Crystal Structure of the coiled coil region 129-250 of the tumor suppressor gene product APC	1	125	A	None	None
+P25054	303	739	3nmz	Crystal structure of APC complexed with Asef	22	458	A	None	None
+P25054	303	739	3nmz	Crystal structure of APC complexed with Asef	22	458	B	None	None
+P25054	396	732	3qhe	Crystal structure of the complex between the armadillo repeat domain of adenomatous polyposis coli and the tyrosine-rich domain of Sam68	1	337	A	None	None
+P25054	396	732	3qhe	Crystal structure of the complex between the armadillo repeat domain of adenomatous polyposis coli and the tyrosine-rich domain of Sam68	1	337	C	None	None
+P25054	396	732	3au3	Crystal structure of armadillo repeat domain of APC	8	344	A	None	None
+P25054	407	751	5iz6	Protein-protein interaction	10	354	A	407	None
+P25054	407	751	4yk6	Crystal structure of APC-ARM in complexed with Amer1-A4	10	354	A	407	None
+P25054	407	751	5b6g	Protein-protein interaction	10	354	A	407	None
+P25054	407	751	3nmx	Crystal structure of APC complexed with Asef	10	354	B	407	None
+P25054	407	751	3nmx	Crystal structure of APC complexed with Asef	10	354	C	407	None
+P25054	407	751	3nmx	Crystal structure of APC complexed with Asef	10	354	A	407	None
+P25054	407	751	4yjl	Crystal structure of APC-ARM in complexed with Amer1-A2	10	354	D	407	None
+P25054	407	751	4yjl	Crystal structure of APC-ARM in complexed with Amer1-A2	10	354	B	407	None
+P25054	407	751	4yjl	Crystal structure of APC-ARM in complexed with Amer1-A2	10	354	E	407	None
+P25054	407	751	4yjl	Crystal structure of APC-ARM in complexed with Amer1-A2	10	354	F	407	None
+P25054	407	751	4yjl	Crystal structure of APC-ARM in complexed with Amer1-A2	10	354	C	407	None
+P25054	407	751	4yjl	Crystal structure of APC-ARM in complexed with Amer1-A2	10	354	A	407	None
+P25054	407	751	3nmw	Crystal structure of armadillo repeats domain of APC	10	354	B	407	None
+P25054	407	751	3nmw	Crystal structure of armadillo repeats domain of APC	10	354	A	407	None
+P25054	407	751	5iza	Protein-protein interaction	10	354	A	407	None
+P25054	407	775	3t7u	A NeW Crystal structure of APC-ARM	10	378	B	407	None
+P25054	407	775	3t7u	A NeW Crystal structure of APC-ARM	10	378	A	407	None
+P25054	407	751	4yje	Crystal structure of APC-ARM in complexed with Amer1-A1	10	354	A	407	None
+P25054	407	741	5z8h	APC with an inhibitor	5	339	A	407	741
+P25054	407	751	5iz8	Protein-protein interaction	10	354	B	407	None
+P25054	407	751	5iz8	Protein-protein interaction	10	354	A	407	None
+P25054	407	751	5iz9	Protein-protein interaction	10	354	A	407	None
+P25054	1021	1035	1jpp	The Structure of a beta-Catenin Binding Repeat from Adenomatous Polyposis Coli (APC) in Complex with beta-Catenin	1	15	C	1021	None
+P25054	1021	1035	1jpp	The Structure of a beta-Catenin Binding Repeat from Adenomatous Polyposis Coli (APC) in Complex with beta-Catenin	1	15	D	1021	None
+P25054	1362	1540	1th1	Beta-catenin in complex with a phosphorylated APC 20aa repeat fragment	1	179	D	None	None
+P25054	1362	1540	1th1	Beta-catenin in complex with a phosphorylated APC 20aa repeat fragment	1	179	C	None	None
+P25054	1482	1528	1v18	The crystal structure of beta-catenin armadillo repeat complexed with a phosphorylated APC 20mer repeat.	1	47	B	None	1528
+P25054	1484	1498	1t08	Crystal structure of beta-catenin/ICAT helical domain/unphosphorylated APC R3	1	15	C	1484	1498
+P25054	1578	1596	2rqu	Solution structure of the complex between the DDEF1 SH3 domain and the APC SAMP1 motif	1	19	B	1578	1596
+P25054	2034	2049	1emu	STRUCTURE OF THE AXIN RGS-HOMOLOGOUS DOMAIN IN COMPLEX WITH A SAMP REPEAT FROM APC	1	16	B	2035	2050
+P25054	2833	2843	4g69	Structure of the Human Discs Large 1 PDZ2 - Adenomatous Polyposis Coli Cytoskeletal Polarity Complex	1	11	B	None	2843
+P25054	2833	2843	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	1	11	K	None	2843
+P25054	2833	2843	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	1	11	G	None	2843
+P25054	2833	2843	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	1	11	J	None	2843
+P25054	2833	2843	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	1	11	I	None	None
+P25054	2833	2843	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	1	11	H	None	None
+P25054	2833	2843	3rl7	Crystal structure of hDLG1-PDZ1 complexed with APC	1	11	L	None	None
+P25054	2833	2843	3rl8	Crystal structure of hDLG1-PDZ2 complexed with APC	1	11	F	None	2843
+

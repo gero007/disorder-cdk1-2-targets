@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q13049	E3 ubiquitin-protein ligase TRIM32	TRI32_HUMAN	Homo sapiens	PF01436	NHL	NHL repeat	616	643
+Q13049	E3 ubiquitin-protein ligase TRIM32	TRI32_HUMAN	Homo sapiens	PF01436	NHL	NHL repeat	469	496
+Q13049	E3 ubiquitin-protein ligase TRIM32	TRI32_HUMAN	Homo sapiens	PF01436	NHL	NHL repeat	371	398
+Q13049	E3 ubiquitin-protein ligase TRIM32	TRI32_HUMAN	Homo sapiens	PF13445	zf-RING_UBOX	RING-type zinc-finger	20	62
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#3 mappings in 3 PDB chains in 2 PDB entries
+Q13049	7	93	5fey	TRIM32 RING	2	88	B	7	None
+Q13049	7	93	5fey	TRIM32 RING	2	88	A	7	None
+Q13049	10	84	2ct2	Solution Structure of the RING domain of the Tripartite motif protein 32	8	82	A	8	82
+

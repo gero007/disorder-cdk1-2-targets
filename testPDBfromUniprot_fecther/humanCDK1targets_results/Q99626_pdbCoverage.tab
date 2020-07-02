@@ -1,0 +1,29 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q99626	Homeobox protein CDX-2	CDX2_HUMAN	Homo sapiens	PF00046	Homeodomain	Homeodomain	187	243
+Q99626	Homeobox protein CDX-2	CDX2_HUMAN	Homo sapiens	PF04731	Caudal_act	Caudal like protein activation region	13	179
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#6 mappings in 6 PDB chains in 3 PDB entries
+Q99626	184	255	6es3	Structure of CDX2-DNA(TCG)	1	72	M	184	255
+Q99626	184	255	6es3	Structure of CDX2-DNA(TCG)	1	72	K	184	255
+Q99626	185	255	5lty	Homeobox transcription factor CDX2 bound to methylated DNA	1	71	K	185	255
+Q99626	185	255	5lty	Homeobox transcription factor CDX2 bound to methylated DNA	1	71	M	None	255
+Q99626	186	256	6es2	Structure of CDX2-DNA(CAA)	1	71	L	186	None
+Q99626	186	256	6es2	Structure of CDX2-DNA(CAA)	1	71	K	None	256
+

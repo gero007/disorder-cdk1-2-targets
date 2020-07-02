@@ -1,0 +1,49 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O14745	Na(+)/H(+) exchange regulatory cofactor NHE-RF1/Chemokine Receptor CXCR2 fusion protein	NHRF1_HUMAN	Homo sapiens	PF00595	PDZ	PDZ domain	154	231
+O14745	Na(+)/H(+) exchange regulatory cofactor NHE-RF1/Chemokine Receptor CXCR2 fusion protein	NHRF1_HUMAN	Homo sapiens	PF09007	EBP50_C	EBP50, C-terminal	235	358
+O14745	Na(+)/H(+) exchange regulatory cofactor NHE-RF1/Chemokine Receptor CXCR2 fusion protein	NHRF1_HUMAN	Homo sapiens	PF17820	PDZ_6	PDZ domain	38	92
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#25 mappings in 25 PDB chains in 20 PDB entries
+O14745	11	120	2m0u	Complex structure of C-terminal CFTR peptide and extended PDZ1 domain from NHERF1	8	117	A	11	120
+O14745	11	120	2m0t	Structural characterization of the extended PDZ1 domain from NHERF1	8	117	A	11	120
+O14745	11	99	1g9o	FIRST PDZ DOMAIN OF THE HUMAN NA+/H+ EXCHANGER REGULATORY FACTOR	3	91	A	11	99
+O14745	11	99	4mpa	Crystal structure of NHERF1-CXCR2 signaling complex in P21 space group	3	91	A	11	99
+O14745	11	99	1gq4	STRUCTURAL DETERMINANTS OF THE NHERF INTERACTION WITH BETA2AR AND PDGFR	2	90	A	11	99
+O14745	11	99	4n6x	Crystal Structure of the Chemokine Receptor CXCR2 in Complex with the First PDZ Domain of NHERF1	3	91	A	11	99
+O14745	11	99	1i92	STRUCTURAL BASIS OF THE NHERF PDZ1-CFTR INTERACTION	3	91	A	11	99
+O14745	11	99	4lmm	Crystal structure of NHERF1 PDZ1 domain complexed with the CXCR2 C-terminal tail in P21 space group	3	91	A	11	99
+O14745	11	96	1gq5	Structural Determinants of the NHERF Interaction with beta2-AR and PDGFR	3	88	A	11	96
+O14745	11	95	4jl7	Crystal Structure of the Chemokine Receptor CXCR2 in Complex with the First PDZ Domain of NHERF1	3	87	A	11	95
+O14745	11	94	4pqw	Crystal Structure of Phospholipase C beta 3 in Complex with PDZ1 of NHERF1	3	86	A	11	94
+O14745	150	240	2jxo	Structure of the second PDZ domain of NHERF-1	8	98	A	150	240
+O14745	150	270	2kjd	Solution structure of extended PDZ2 domain from NHERF1 (150-270)	8	128	A	8	128
+O14745	150	235	4q3h	The crystal structure of NHERF1 PDZ2 CXCR2 complex revealed by the NHERF1 CXCR2 chimeric protein	3	88	B	150	235
+O14745	150	235	4q3h	The crystal structure of NHERF1 PDZ2 CXCR2 complex revealed by the NHERF1 CXCR2 chimeric protein	3	88	A	150	235
+O14745	150	269	6rqr	Extended NHERF1 PDZ2 domain in complex with the PDZ-binding motif of CFTR	21	140	A	150	269
+O14745	150	269	6rqr	Extended NHERF1 PDZ2 domain in complex with the PDZ-binding motif of CFTR	21	140	B	150	269
+O14745	150	235	2ozf	The crystal structure of the 2nd PDZ domain of the human NHERF-1 (SLC9A3R1)	3	88	A	150	235
+O14745	150	358	2krg	Solution Structure of human sodium/ hydrogen exchange regulatory factor 1(150-358)	8	216	A	150	358
+O14745	150	270	2m0v	Complex structure of C-terminal CFTR peptide and extended PDZ2 domain from NHERF1	8	128	A	150	270
+O14745	321	358	1sgh	Moesin FERM domain bound to EBP50 C-terminal peptide	2	39	B	1	38
+O14745	331	358	2d10	Crystal structure of the Radixin FERM domain complexed with the NHERF-1 C-terminal tail peptide	1	28	G	None	358
+O14745	331	358	2d10	Crystal structure of the Radixin FERM domain complexed with the NHERF-1 C-terminal tail peptide	1	28	F	None	358
+O14745	331	358	2d10	Crystal structure of the Radixin FERM domain complexed with the NHERF-1 C-terminal tail peptide	1	28	H	None	358
+O14745	331	358	2d10	Crystal structure of the Radixin FERM domain complexed with the NHERF-1 C-terminal tail peptide	1	28	E	None	358
+

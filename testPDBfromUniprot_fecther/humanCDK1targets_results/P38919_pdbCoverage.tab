@@ -1,0 +1,48 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+P38919	Eukaryotic initiation factor 4A-III	IF4A3_HUMAN	Homo sapiens	PF00270	DEAD	DEAD/DEAH box helicase	62	228
+P38919	Eukaryotic initiation factor 4A-III	IF4A3_HUMAN	Homo sapiens	PF00271	Helicase_C	Helicase conserved C-terminal domain	263	372
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#25 mappings in 25 PDB chains in 14 PDB entries
+P38919	1	411	2hyi	Structure of the human exon junction complex with a trapped DEAD-box helicase bound to RNA	1	411	I	None	411
+P38919	1	411	2hyi	Structure of the human exon junction complex with a trapped DEAD-box helicase bound to RNA	1	411	C	None	411
+P38919	1	411	4c9b	Crystal structure of eIF4AIII-CWC22 complex	1	411	A	None	411
+P38919	1	411	5mqf	Cryo-EM structure of a human spliceosome activated for step 2 of splicing (C* complex)	1	411	p	None	411
+P38919	1	411	2xb2	Crystal structure of the core Mago-Y14-eIF4AIII-Barentsz-UPF3b assembly shows how the EJC is bridged to the NMD machinery	1	411	A	None	411
+P38919	1	411	2xb2	Crystal structure of the core Mago-Y14-eIF4AIII-Barentsz-UPF3b assembly shows how the EJC is bridged to the NMD machinery	1	411	X	None	411
+P38919	1	411	3ex7	The crystal structure of EJC in its transition state	1	411	H	None	411
+P38919	1	411	3ex7	The crystal structure of EJC in its transition state	1	411	C	None	411
+P38919	1	411	6icz	Cryo-EM structure of a human post-catalytic spliceosome (P complex) at 3.0 angstrom	1	411	u	None	None
+P38919	1	411	5xjc	Cryo-EM structure of the human spliceosome just prior to exon ligation at 3.6 angstrom	1	411	u	None	411
+P38919	1	411	5yzg	The Cryo-EM Structure of Human Catalytic Step I Spliceosome (C complex) at 4.1 angstrom resolution	1	411	u	None	411
+P38919	2	411	2j0s	The crystal structure of the Exon Junction Complex at 2.2 A resolution	1	410	A	None	411
+P38919	2	411	2j0q	The crystal structure of the Exon Junction Complex at 3.2 A resolution	1	410	A	None	411
+P38919	2	411	2j0q	The crystal structure of the Exon Junction Complex at 3.2 A resolution	1	410	B	None	411
+P38919	22	404	6qdv	Human post-catalytic P complex spliceosome	1	383	7	22	404
+P38919	23	411	2hxy	Crystal structure of human apo-eIF4AIII	1	389	A	None	411
+P38919	23	411	2hxy	Crystal structure of human apo-eIF4AIII	1	389	B	None	411
+P38919	23	411	2hxy	Crystal structure of human apo-eIF4AIII	1	389	C	None	411
+P38919	23	411	2hxy	Crystal structure of human apo-eIF4AIII	1	389	D	None	411
+P38919	38	411	2j0u	The crystal structure of eIF4AIII-Barentsz complex at 3.0 A resolution	1	374	A	38	None
+P38919	38	411	2j0u	The crystal structure of eIF4AIII-Barentsz complex at 3.0 A resolution	1	374	B	38	None
+P38919	246	411	6yvh	CWC22-CWC27-EIF4A3 Complex	1	166	H	246	411
+P38919	246	411	6yvh	CWC22-CWC27-EIF4A3 Complex	1	166	K	246	411
+P38919	246	411	6yvh	CWC22-CWC27-EIF4A3 Complex	1	166	L	246	411
+P38919	246	411	6yvh	CWC22-CWC27-EIF4A3 Complex	1	166	J	246	411
+

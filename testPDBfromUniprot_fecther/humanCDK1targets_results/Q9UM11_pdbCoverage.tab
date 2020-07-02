@@ -1,0 +1,28 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9UM11	Fizzy-related protein homolog	FZR1_HUMAN	Homo sapiens	PF00400	WD40	WD domain, G-beta repeat	433	471
+Q9UM11	Fizzy-related protein homolog	FZR1_HUMAN	Homo sapiens	PF00400	WD40	WD domain, G-beta repeat	345	386
+Q9UM11	Fizzy-related protein homolog	FZR1_HUMAN	Homo sapiens	PF00400	WD40	WD domain, G-beta repeat	303	341
+Q9UM11	Fizzy-related protein homolog	FZR1_HUMAN	Homo sapiens	PF12894	ANAPC4_WD40	Anaphase-promoting complex subunit 4 WD40 domain	210	282
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#3 mappings in 3 PDB chains in 3 PDB entries
+Q9UM11	1	496	5l9t	Model of human Anaphase-promoting complex/Cyclosome (APC/C-CDH1) with E2 UBE2S poised for polyubiquitination where UBE2S, APC2, and APC11 are modeled into low resolution density	1	493	R	None	493
+Q9UM11	1	496	5l9u	Model of human Anaphase-promoting complex/Cyclosome (APC/C-CDH1) with a cross linked Ubiquitin variant-substrate-UBE2C (UBCH10) complex representing key features of multiubiquitination	1	493	R	None	493
+Q9UM11	1	496	4ui9	Atomic structure of the human Anaphase-Promoting Complex	1	493	R	None	493
+

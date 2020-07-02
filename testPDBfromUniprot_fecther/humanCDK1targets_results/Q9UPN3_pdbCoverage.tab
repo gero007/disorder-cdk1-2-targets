@@ -1,0 +1,58 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00681	Plectin	Plectin repeat	2687	2727
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00681	Plectin	Plectin repeat	2501	2541
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00681	Plectin	Plectin repeat	2405	2439
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00681	Plectin	Plectin repeat	2367	2407
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00681	Plectin	Plectin repeat	2291	2331
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00681	Plectin	Plectin repeat	1807	1847
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00681	Plectin	Plectin repeat	1769	1809
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00681	Plectin	Plectin repeat	1655	1695
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00681	Plectin	Plectin repeat	1578	1618
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00307	CH	Calponin homology (CH) domain	194	299
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00307	CH	Calponin homology (CH) domain	78	182
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	6769	6875
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	6663	6766
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	6551	6658
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	6442	6548
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	6332	6439
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	6223	6329
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	6113	6220
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	6004	6110
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	5780	5885
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	5453	5559
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	5344	5450
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	5234	5341
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	4908	5012
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	4798	4905
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	4465	4574
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	3999	4109
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF00435	Spectrin	Spectrin repeat	3882	3994
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF02187	GAS2	Growth-Arrest-Specific Protein 2 Domain	7122	7190
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF13499	EF-hand_7	EF-hand domain pair	7043	7107
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF17902	SH3_10	SH3 domain	857	923
+Q9UPN3	Microtubule-actin cross-linking factor 1, isoforms 1/2/3/5	MACF1_HUMAN	Homo sapiens	PF18373	Spectrin_like	Spectrin like domain	958	1035
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#5 mappings in 5 PDB chains in 3 PDB entries
+Q9UPN3	74	421	4z6g	Structure of NT domain	1	348	A	41	388
+Q9UPN3	7024	7108	5ve9	Structure of hACF7 EF1-EF2-GAR domains	7	91	A	7024	7108
+Q9UPN3	7024	7108	5ve9	Structure of hACF7 EF1-EF2-GAR domains	7	91	B	7024	7108
+Q9UPN3	7118	7191	5ve9	Structure of hACF7 EF1-EF2-GAR domains	1	74	C	7118	7191
+Q9UPN3	7113	7193	5x57	Structure of GAR domain of ACF7	1	81	A	18	98
+

@@ -1,0 +1,32 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+Q8IX03	Protein KIBRA	KIBRA_HUMAN	Homo sapiens	PF00397	WW	WW domain	8	37
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#10 mappings in 10 PDB chains in 5 PDB entries
+Q8IX03	638	785	2z0u	Crystal structure of C2 domain of KIBRA protein	8	155	A	None	148
+Q8IX03	638	785	2z0u	Crystal structure of C2 domain of KIBRA protein	8	155	B	None	148
+Q8IX03	658	785	6fd0	Human KIBRA C2 domain mutant M734I S735A	13	140	B	658	785
+Q8IX03	658	785	6fd0	Human KIBRA C2 domain mutant M734I S735A	13	140	A	658	785
+Q8IX03	658	785	6fjc	Human KIBRA C2 domain mutant C771A in complex with phosphatidylinositol 3,4,5-trisphosphate	13	140	B	658	785
+Q8IX03	658	785	6fjc	Human KIBRA C2 domain mutant C771A in complex with phosphatidylinositol 3,4,5-trisphosphate	13	140	A	658	785
+Q8IX03	658	785	6fb4	human KIBRA C2 domain mutant C771A	2	129	B	658	785
+Q8IX03	658	785	6fb4	human KIBRA C2 domain mutant C771A	2	129	A	658	785
+Q8IX03	658	785	6fjd	Human KIBRA C2 domain mutant C771A in complex with phosphatidylinositol 4,5-bisphosphate	13	140	B	658	785
+Q8IX03	658	785	6fjd	Human KIBRA C2 domain mutant C771A in complex with phosphatidylinositol 4,5-bisphosphate	13	140	A	658	785
+

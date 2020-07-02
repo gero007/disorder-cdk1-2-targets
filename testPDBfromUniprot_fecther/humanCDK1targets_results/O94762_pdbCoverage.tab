@@ -1,0 +1,39 @@
+#### Uniprot to Pfam mapping ####
+#### UnpAccession: accession of the Uniprot entry ####
+#### UnpId : id of the Uniprot entry ####
+#### UnpDescription : short description of UniProt entry ####
+#### Organism : scientific name of the source organism ####
+#### PfamId : id of Pfam family ####
+#### PfamName : name of Pfam family ####
+#### PfamDescription : short description of Pfam family ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence for the Pfam domain mapping ####
+#UnpAccession	UnpId	UnpDescription	Organism	PfamId	PfamName	PfamDescription	UnpRangeStart	UnpRangeEnd
+O94762	ATP-DEPENDENT DNA HELICASE Q5	RECQ5_HUMAN	Homo sapiens	PF00270	DEAD	DEAD/DEAH box helicase	31	203
+O94762	ATP-DEPENDENT DNA HELICASE Q5	RECQ5_HUMAN	Homo sapiens	PF00271	Helicase_C	Helicase conserved C-terminal domain	243	354
+O94762	ATP-DEPENDENT DNA HELICASE Q5	RECQ5_HUMAN	Homo sapiens	PF06959	RecQ5	RecQ helicase protein-like 5 (RecQ5)	625	827
+O94762	ATP-DEPENDENT DNA HELICASE Q5	RECQ5_HUMAN	Homo sapiens	PF16124	RecQ_Zn_bind	RecQ zinc-binding	365	435
+#### Uniprot to PDB mapping ####
+#### UnpAccession : accession of the UniProt entry ####
+#### UnpRangeStart, UnpRangeEnd : starting and ending indices in UniProt sequence corresponding to the PDB residue range ####
+#### PDBid : PDB entry id to which the PDB residue range belongs ####
+#### PDBtitle : Title of the PDB entry id ####
+#### PDBseqStart, PDBseqEnd : starting and ending indices in sequence of the PDB chain (SEQRES record) containing the mapped PDB residues ####
+#### PDBchain : PDB chain identifier of the PDB residues mapped to UniProt range ####
+#### PDBresidueNumberStart, PDBresidueNumberEnd : starting and ending residue numbers in PDB file for this mapping - sometimes the might contain an insertion code, e.g. 40:A ####
+#UnpAccession	UnpRangeStart	UnpRangeEnd	PDBid	PDBtitle	PDBseqStart	PDBseqEnd	PDBchain	PDBresidueNumberStart	PDBresidueNumberEnd
+#14 mappings in 14 PDB chains in 5 PDB entries
+O94762	10	453	5lb5	Crystal structure of human RECQL5 helicase in complex with ADP/Mg (tricilinc form).	2	445	C	None	453
+O94762	10	453	5lb5	Crystal structure of human RECQL5 helicase in complex with ADP/Mg (tricilinc form).	2	445	A	None	None
+O94762	10	453	5lb5	Crystal structure of human RECQL5 helicase in complex with ADP/Mg (tricilinc form).	2	445	D	None	453
+O94762	10	453	5lb5	Crystal structure of human RECQL5 helicase in complex with ADP/Mg (tricilinc form).	2	445	B	None	None
+O94762	11	526	5lb8	Crystal structure of human RECQL5 helicase APO form.	3	518	A	None	None
+O94762	11	526	5lb8	Crystal structure of human RECQL5 helicase APO form.	3	518	D	None	None
+O94762	11	453	5lba	Crystal structure of human RECQL5 helicase in complex with DSPL fragment(1-cyclohexyl-3-(oxolan-2-ylmethyl)urea, SGC - Diamond XChem I04-1 fragment screening.	3	445	B	11	None
+O94762	11	453	5lba	Crystal structure of human RECQL5 helicase in complex with DSPL fragment(1-cyclohexyl-3-(oxolan-2-ylmethyl)urea, SGC - Diamond XChem I04-1 fragment screening.	3	445	C	11	453
+O94762	11	453	5lba	Crystal structure of human RECQL5 helicase in complex with DSPL fragment(1-cyclohexyl-3-(oxolan-2-ylmethyl)urea, SGC - Diamond XChem I04-1 fragment screening.	3	445	A	11	None
+O94762	11	453	5lba	Crystal structure of human RECQL5 helicase in complex with DSPL fragment(1-cyclohexyl-3-(oxolan-2-ylmethyl)urea, SGC - Diamond XChem I04-1 fragment screening.	3	445	D	11	453
+O94762	11	453	5lb3	Crystal structure of human RECQL5 helicase in complex with ADP/Mg.	3	445	B	11	453
+O94762	11	453	5lb3	Crystal structure of human RECQL5 helicase in complex with ADP/Mg.	3	445	E	11	453
+O94762	515	620	4bk0	Crystal structure of the KIX domain of human RECQL5 (domain-swapped dimer)	6	111	A	None	None
+O94762	515	620	4bk0	Crystal structure of the KIX domain of human RECQL5 (domain-swapped dimer)	6	111	B	None	620
+
