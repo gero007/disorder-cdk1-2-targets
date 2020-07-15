@@ -99,7 +99,9 @@ colnames(xenopusDiso)<-"Sequence"
 xenopusDiso$ID <- str_extract(names(xenopus_MPI), regex( "(?<=\\|)(.*)"))
 row.names(xenopusDiso) <- NULL
 xenopusDiso$Length <-nchar(xenopusDiso$Sequence)
-
+xenopusDiso <- getIUpredPredDiso(df = xenopusDiso,disoPath = "predictions/IUpred_run_xenopus/",sequence_col = "Sequence",accession_col = "ID",length_col = "Length")
+xenopusDiso <- getVSLPredDiso(df = xenopusDiso,disoPath = "predictions/VSL2b_run_xenopus//",sequence_col = "Sequence",accession_col = "ID",length_col = "Length")
+xenopusDiso <- getSpotPredDiso(df = xenopusDiso,disoPath = "predictions/spot_run_xenopus/",sequence_col = "Sequence",accession_col = "ID",length_col = "Length")
 #################################
 ###### CDK1 targets data ########
 #################################
