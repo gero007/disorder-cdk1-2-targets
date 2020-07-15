@@ -58,7 +58,7 @@ yeastDiso <- merge.data.frame(yeastDiso,yeast_uniprot_table,by.x = "acc",by.y = 
 
 yeastDiso_full <- getMobiDB_PredDiso(yeastDiso,"acc",sequence_col = "Sequence")
 ## addd SPOT
-yeastDiso_full <- getSpotPredDiso(yeastDiso_full,disoPath = "spot_run_yeast/",accession_col = "acc",length_col = "Length",sequence_col = "Sequence")
+yeastDiso_full <- getSpotPredDiso(yeastDiso_full,disoPath = "predictions/spot_run_yeast/",accession_col = "acc",length_col = "Length",sequence_col = "Sequence")
 
 # HUMAN
 
@@ -72,7 +72,7 @@ humanDiso <- merge.data.frame(humanDiso,human_uniprot_table,by.x = "acc",by.y = 
 # the entry number 3972 in mobidb is broken. I remove it now
 humanDiso <- humanDiso[-3971,]
 humanDiso_full <- getMobiDB_PredDiso(humanDiso,"acc",sequence_col = "Sequence")
-humanDiso_full <- getSpotPredDiso(humanDiso_full,disoPath = "spot_run_human/",accession_col = "acc",length_col = "Length",sequence_col = "Sequence")
+humanDiso_full <- getSpotPredDiso(humanDiso_full,disoPath = "predictions/spot_run_human/",accession_col = "acc",length_col = "Length",sequence_col = "Sequence")
 
 # XENOPUS
 
@@ -99,9 +99,16 @@ colnames(xenopusDiso)<-"Sequence"
 xenopusDiso$ID <- str_extract(names(xenopus_MPI), regex( "(?<=\\|)(.*)"))
 row.names(xenopusDiso) <- NULL
 xenopusDiso$Length <-nchar(xenopusDiso$Sequence)
+<<<<<<< HEAD
 xenopusDiso <- getIUpredPredDiso(df = xenopusDiso,disoPath = "predictions/IUpred_run_xenopus/",sequence_col = "Sequence",accession_col = "ID",length_col = "Length")
 xenopusDiso <- getVSLPredDiso(df = xenopusDiso,disoPath = "predictions/VSL2b_run_xenopus//",sequence_col = "Sequence",accession_col = "ID",length_col = "Length")
 xenopusDiso <- getSpotPredDiso(df = xenopusDiso,disoPath = "predictions/spot_run_xenopus/",sequence_col = "Sequence",accession_col = "ID",length_col = "Length")
+=======
+xenopusDiso <- getIUpredPredDiso(df = xenopusDiso,disoPath = "predictions/IUpred_run_xenopus/",length_col = "Length",accession_col = "ID",sequence_col = "Sequence")
+xenopusDiso <- getVSLPredDiso(df = xenopusDiso,disoPath = "predictions/VSL2b_run_xenopus/",length_col = "Length",accession_col = "ID",sequence_col = "Sequence")
+xenopusDiso <- getSpotPredDiso(df = xenopusDiso,disoPath = "predictions/spot_run_xenopus//",length_col = "Length",accession_col = "ID",sequence_col = "Sequence")
+
+>>>>>>> 0ad29c19f01f53c4a479b5abc6496af35184c92c
 #################################
 ###### CDK1 targets data ########
 #################################
@@ -1403,6 +1410,23 @@ for (i in 1:length(human_idx_cols)) {
   human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,humanDiso_full[,human_idx_cols[i]]!="0")[,human_idx_cols[i]],","))))/human_proteome_length
 }
 
+xenopus_idx_cols <- c("iupred_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
+xenopus_organism <- (rep("xenopus",length(xenopus_idx_cols)))
+xenopus_proteome_length <- sum(xenopusDiso$Length)
+xenopus_diso_fraction <- numeric()
+xenopus_pval <- numeric()
+xenopus_commonOR <- numeric()
+for (i in 1:length(xenopus_idx_cols)) {
+  xenopusStratContingencyArray <- getStratContingencyArray(df = subset(xenopus_data,target=="Cdk1 target"),
+                                                    sequence_col = "Sequence",
+                                                    diso_index_col = xenopus_idx_cols[i],
+                                                    psites_col = "psite_CDK1"
+                                                    ) 
+  xenopus_CMHtest <- mantelhaen.test(xenopusStratContingencyArray)
+  xenopus_pval[i]<-xenopus_CMHtest$p.value
+  xenopus_commonOR[i]<-xenopus_CMHtest$estimate
+  xenopus_diso_fraction[i]<-(sum(lengths(strsplit(subset(xenopusDiso,xenopusDiso[,xenopus_idx_cols[i]]!="0")[,xenopus_idx_cols[i]],","))))/xenopus_proteome_length
+}
 
 yeastIntersect_CMH_data <- cbind(predictors,yeastIntersect_diso_fraction,yeastIntersect_pval,yeastIntersect_commonOR,yeastIntersect_organism)
 human_CMH_data <- cbind(predictors,human_diso_fraction,human_pval,human_commonOR,human_organism)
