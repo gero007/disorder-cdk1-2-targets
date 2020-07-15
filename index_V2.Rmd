@@ -99,17 +99,10 @@ colnames(xenopusDiso)<-"Sequence"
 xenopusDiso$ID <- str_extract(names(xenopus_MPI), regex( "(?<=\\|)(.*)"))
 row.names(xenopusDiso) <- NULL
 xenopusDiso$Length <-nchar(xenopusDiso$Sequence)
-<<<<<<< HEAD
 xenopusDiso <- getIUpredPredDiso(df = xenopusDiso,disoPath = "predictions/IUpred_run_xenopus/",sequence_col = "Sequence",accession_col = "ID",length_col = "Length")
 xenopusDiso <- getVSLPredDiso(df = xenopusDiso,disoPath = "predictions/VSL2b_run_xenopus//",sequence_col = "Sequence",accession_col = "ID",length_col = "Length")
 xenopusDiso <- getSpotPredDiso(df = xenopusDiso,disoPath = "predictions/spot_run_xenopus/",sequence_col = "Sequence",accession_col = "ID",length_col = "Length")
-=======
-xenopusDiso <- getIUpredPredDiso(df = xenopusDiso,disoPath = "predictions/IUpred_run_xenopus/",length_col = "Length",accession_col = "ID",sequence_col = "Sequence")
-xenopusDiso <- getVSLPredDiso(df = xenopusDiso,disoPath = "predictions/VSL2b_run_xenopus/",length_col = "Length",accession_col = "ID",sequence_col = "Sequence")
-xenopusDiso <- getSpotPredDiso(df = xenopusDiso,disoPath = "predictions/spot_run_xenopus//",length_col = "Length",accession_col = "ID",sequence_col = "Sequence")
 
->>>>>>> 0ad29c19f01f53c4a479b5abc6496af35184c92c
-#################################
 ###### CDK1 targets data ########
 #################################
 
