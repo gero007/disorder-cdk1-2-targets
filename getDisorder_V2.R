@@ -332,8 +332,8 @@ getIUpredPredDiso <- function(df,disoPath,accession_col,length_col=NULL,sequence
         disoSeqList[i]<-disoSeq
       }}
   }
-  output_data_frame$iupred_perc <- as.numeric(perc)
-  output_data_frame$iupred_disoIndexes <- disoIdxList
-  output_data_frame$iupred_disoSeq <- disoSeqList
+  output_data_frame$iupl_perc <- as.numeric(perc)
+  output_data_frame$iupl_disoIndexes <- disoIdxList
+  output_data_frame$iupl_disoSeq <- disoSeqList
   return(output_data_frame)
 }

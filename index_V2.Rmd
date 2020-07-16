@@ -266,9 +266,9 @@ yeastIntersect_CDK1_data <- subset(yeastIntersect_All_data, (target_all == "Cdk1
 
 #there's overlapping between the targets. I create 3 differents DF and I will merge them
 
-phosphosite_CDK1Target_HS <- read_delim("phosphosite_CDK1Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
-phosphosite_CDK2Target_HS <- read_delim("phosphosite_CDK2Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
-phosphosite_CDK3Target_HS <- read_delim("phosphosite_CDK3Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosite_CDK1Target_HS <- read_delim("PSP/phosphosite_CDK1Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosite_CDK2Target_HS <- read_delim("PSP/phosphosite_CDK2Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosite_CDK3Target_HS <- read_delim("PSP/phosphosite_CDK3Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
 
 phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDK1Target_HS,phosphosite_CDK2Target_HS,by = c("GENE","PROTEIN","ACC#","MOD_RSD"),all = T)
 colnames(phosphosite_CDKFamilyTarget_HS)[-(1:4)]<-c("METHOD.CDK1","LTP_LIT.CDK1","MS2_LIT.CDK1","MS2_CST.CDK1","Kinase.CDK1","METHOD.CDK2","LTP_LIT.CDK2","MS2_LIT.CDK2","MS2_CST.CDK2","Kinase.CDK2")
@@ -508,7 +508,7 @@ human_data <- human_data[,c("GENE","PROTEIN","ACC#","MOD_RSD","method","target",
 
 # ___________Phosphosite Human Universe_____________
 # Load all the phosphosites in the phosphosite plus database 
-human_universe_data <- read_delim("~/Downloads/PSP/Phosphorylation_site_dataset", 
+human_universe_data <- read_delim("PSP/Phosphorylation_site_dataset", 
     "\t", escape_double = FALSE, col_types = cols(HU_CHR_LOC = col_skip(), 
         SITE_GRP_ID = col_skip(), MW_kD = col_skip(), 
         DOMAIN = col_skip(), `SITE_+/-7_AA` = col_skip(), 
@@ -558,6 +558,26 @@ human_data<-merge.data.frame(human_data,humanDiso_full,by.x = "ACC#",by.y = "acc
 
 
 
+# ___________Phosphosite Xenopus Data_____________
+
+xenopus_data <- xenopus_data <- read_delim("all_phosphosites_xenopus_nr.tab", "\t", escape_double = FALSE, col_types = cols(`Leading proteins` = col_skip(), Protein = col_skip()), trim_ws = TRUE)
+xenopus_data <- xenopus_data %>% rename(ID=Proteins,psites=`Positions within proteins`,seqWindow=`Sequence window`,UID=`Unique identifier`) %>% group_by(ID) %>% summarise_at(c("psites","seqWindow","UID"),function(x){paste(x, collapse=",")})
+# The data has been opened by excel and some proteins have their names modified to be dates.
+xenopus_data$ID[grepl(x = xenopus_data$ID,pattern = "10-Sep")] <- "sep10"
+xenopus_data$ID[grepl(x = xenopus_data$ID,pattern = "11-Sep")] <- "sep11"
+xenopus_data$ID[grepl(x = xenopus_data$ID,pattern = "7-Sep")] <- "sep7"
+xenopus_data <- merge.data.frame(xenopus_data,xenopusDiso,by = "ID")
+
+# oscillatingV1 <-c("4et","aak1","abi2","acly","acrc","addg","adm1a","agfg1","aim1","ankh1","ankl2","anr17","apc1","aptx","arhb","ari1a","armc9","aspc1","at2b1","atad5","atrx","atx2l","bcl9","caf1b","camp1","CB055","cc155","cdc27","cdc6","cdca3","cdt1","chfr","chsp1","clip1","com1","cq028","CS021","cstf2","cytsb","dc1l2","dctn6","ddx3","dgcr8","dkc1","dnjc2","dock7","dons","dpoa2","dpola","ect2","eif3a","ell2","elv1a","elys","emal1","ep300","epa2a","erc6l","esco2","fbp1l","flip1","fnbp4","foxk2","fubp2","g3bp2","geph","gipc1","gle1","gpbl1","GTSE1","gwl","heat6","hmgx4","hnrpk","home2","huwe1","if4b","if4g2","ima4","inceb","ipp","kazrn","kd3ab","kdm3b","ki67","kif4","klc4","l14aa","lap2b","lemd1","lima1","lin54","lnp","lpp","lyric","m4k4","magi1","map4","map7","marcs","mcm10","mcm4","mcm6","mdc1","melk","missl","msh6","mta1","mta2","mtus1","neb1","nf2ip","nipa","np1l4","npat","nsd2","nsrp1","nu133","nu153","nup50","nup53","nup98","osb11","p121c","p66a","pacs1","paf","pcm1","pcnt","pdli5","phr4b","pica","pkcb1","plk1","pp14b","pp4r3","pphln","prc2b","prc2c","prcc","rab3i","rabek","rbm14","rbp2","ren3b","rfa1","rif1","rnf34","rnf4","rnh2b","set8b","sf3b1","slbp2","smc4","smca4","spag5","srrm2","srs11","ssbp3","t194a","t2fa","tacc3","tbc13","tcf20","tdif2","tdrkh","tfp11","tnik","tob1a","topk","tpr","tr61b","tri36","tsc2","ttk","ubn2","un13b","vrk3","wdr33","wdr70","wee2a","xpo5","xrn1","zar1l","zmym3","zn462","zo10","zo3")
+
+oscillatingV2 <- c("4et","abi2","acly","acrc","addg","adm1a","agfg1","aim1","ankl2","apc1","aptx","arhb","ari1a","armc9","aspc1","atad5","atx2l","bin1","caf1b","camp1","CB055","cc155","cdc27","cdca3","cdt1","CS021","cytsb","dc1l2","dctn6","dgcr8","dkc1","dnjc2","dock7","dons","dpoa2","dpola","ect2","eif3a","ell2","elys","emal1","eme2","ep300","epa2a","erc6l","esco2","exoc4","fbp1l","flip1","g3bp2","gipc1","GTSE1","gwl","heat6","hnrpk","home2","if4g2","inceb","ipp","kazrn","kd3ab","kdm3b","ks6c1","l14aa","lap2b","lemd1","lima1","lin54","lpp","lyric","map4","map7","marcs","mcm10","mcm4","melk","missl","mta2","mtus1","neb1","nf2ip","nipa","np1l4","npat","nsd2","nu133","nu153","nup50","nup53","nup98","nupl","osb11","p121c","p66a","pcdh1","pcm1","pcnt","pdli5","pdli7","phr4b","pica","pkcb1","plk1","pp4r3","pphln","prc2b","prcc","psip1","rbm14","recq4","ren3b","rfa1","rif1","rnf4","rnh2b","rtn4","sf3a1","sf3b1","sltm","smca4","sox13","spag5","srrm2","supt3","t194a","t2fa","tacc3","tbc13","tbcd8","tcf20","tdif2","tdrkh","thoc1","tnik","tob1a","tpx2a","tr61b","tri36","ttk","un13b","vrk3","wdr33","wdr70","wee2a","xrn1","zar1l","zc3hd","zmym3","zn462","zo3")
+
+xenopus_data <- xenopus_data %>% mutate(target=case_when(
+    ID %in% oscillatingV2 ~ "Cdk1 target",
+    TRUE ~ "Non Cdk1 target"
+))
+
+xenopus_data$psites <- lapply(xenopus_data$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 ```
 
 
@@ -1097,9 +1117,9 @@ ggpubr::theme_pubclean() +
 theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
 scale_y_continuous(limits = c(-20, 125), breaks = c(seq(0, 100, by = 10))) +
 scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
-geom_segment(aes(x = 0.75, y = 120, xend = 1.25, yend = 120),) + annotate(geom="text", x=1, y=125, label="***") +
-geom_segment(aes(x = 1.75, y = 120, xend = 2.25, yend = 120),) + annotate(geom="text", x=2, y=125, label="***") +
-geom_segment(aes(x = 2.75, y = 120, xend = 3.25, yend = 120),) + annotate(geom="text", x=3, y=125, label="***")
+geom_segment(aes(x = 0.75, y = 120, xend = 1.25, yend = 120)) + annotate(geom="text", x=1, y=125, label="***") +
+geom_segment(aes(x = 1.75, y = 120, xend = 2.25, yend = 120)) + annotate(geom="text", x=2, y=125, label="***") +
+geom_segment(aes(x = 2.75, y = 120, xend = 3.25, yend = 120)) + annotate(geom="text", x=3, y=125, label="***")
 
 
 ####################################
@@ -1135,9 +1155,44 @@ ggpubr::theme_pubclean() +
 theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
 scale_y_continuous(limits = c(-20, 125), breaks = c(seq(0, 100, by = 10))) +
 scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
-geom_segment(aes(x = 0.75, y = 120, xend = 1.25, yend = 120),) + annotate(geom="text", x=1, y=125, label="***") +
-geom_segment(aes(x = 1.75, y = 120, xend = 2.25, yend = 120),) + annotate(geom="text", x=2, y=125, label="***") +
-geom_segment(aes(x = 2.75, y = 120, xend = 3.25, yend = 120),) + annotate(geom="text", x=3, y=125, label="***")
+geom_segment(aes(x = 0.75, y = 120, xend = 1.25, yend = 120)) + annotate(geom="text", x=1, y=125, label="***") +
+geom_segment(aes(x = 1.75, y = 120, xend = 2.25, yend = 120)) + annotate(geom="text", x=2, y=125, label="***") +
+geom_segment(aes(x = 2.75, y = 120, xend = 3.25, yend = 120)) + annotate(geom="text", x=3, y=125, label="***")
+```
+
+### Xenopus  
+```{r xenopus disorder percentage,echo=FALSE,message=FALSE,warning=FALSE}
+
+##### Violion Plot version###########
+xenopus_disoPerc_cols_idx <-grep("_perc",colnames(xenopus_data))
+xenopus_reshaped_disoPerc <- melt(xenopus_data[,xenopus_disoPerc_cols_idx])
+colnames(xenopus_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
+xenopus_reshaped_disoPerc$target <- rep(xenopus_data$target,length(xenopus_disoPerc_cols_idx))
+xenopus_reshaped_disoPerc$Predictor <- factor(xenopus_reshaped_disoPerc$Predictor,levels = ordered(levels(xenopus_reshaped_disoPerc$Predictor)))
+
+ggplot(xenopus_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
+    geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
+    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+    ggpubr::theme_pubclean() + 
+    theme(text = element_text(size=20),axis.text.x = element_text(angle=45),legend.position = "none") + 
+    scale_y_continuous(limits = c(-20, 120), breaks = c(seq(0, 100, by = 10)))
+
+# Main Figure 4E
+xenopus_reshaped_disoPerc_figure <-  subset(xenopus_reshaped_disoPerc,(Predictor=="iupl_perc")|(Predictor=="vsl_perc")|(Predictor=="spot_perc"))
+
+xenopus_reshaped_disoPerc_figure$Predictor <- 
+  factor(xenopus_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
+
+ggplot(xenopus_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
+geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
+geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+ggpubr::theme_pubclean() +
+theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
+scale_y_continuous(limits = c(-20, 125), breaks = c(seq(0, 100, by = 10))) +
+scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
+geom_segment(aes(x = 0.75, y = 120, xend = 1.25, yend = 120)) + annotate(geom="text", x=1, y=125, label="***") +
+geom_segment(aes(x = 1.75, y = 120, xend = 2.25, yend = 120)) + annotate(geom="text", x=2, y=125, label="***") +
+geom_segment(aes(x = 2.75, y = 120, xend = 3.25, yend = 120)) + annotate(geom="text", x=3, y=125, label="***")
 ```
 
 For boths datasets there is a statistical significative increase in the percentage of predicted disorder aminoacids in yeast proteins for those proteins characterized as CDK1 targets. Moreover, for the Holt dataset a similar result is obtained if we skipped the CDK1 phosporylation site filter. That is, CDK1 targets defined as all the proteins with Serines and Threonines residues presenting a decrease on the phosphorylation upon CDK1 inhibition,regardles if they respect the minimal CDK1 phosphosite consensus motif, show an increase in the percentage of predicted disorder amino acids (<a href="supplementary/Supp.html">Supplementary</a> Fig X).
@@ -1209,6 +1264,37 @@ ggplot(human_iupl_obsVSexp_data) +
 #                                                       } else {return(length(index))}})
 # names(humanFullCons) <- NULL 
 
+#___xenopus USING IUPRED LONG___
+# adding number of consensus in total and in disorder
+
+xenopusMinCons <- sapply(xenopus_data$Sequence,function(x){index<-unlist(gregexpr("[ST]P",x),use.names = F)
+                                                      if (index[1]==-1) {return(0)
+                                                      } else {return(length(index))}})
+names(xenopusMinCons) <- NULL 
+
+expct_xenopusMinCons <- xenopusMinCons*(xenopus_data$iupl_perc/100)
+
+obsv_xenopusMinCons <- sapply(xenopus_data$iupl_disoSeq,function(x){index<-unlist(gregexpr("[ST]P",x),use.names = F)
+                                                      if (index[1]==-1) {return(0)
+                                                      } else {return(length(index))}})
+names(obsv_xenopusMinCons) <- NULL 
+xenopus_iupl_obsVSexp_data <- as.data.frame(cbind(expct_xenopusMinCons,obsv_xenopusMinCons,xenopus_data$target))
+colnames(xenopus_iupl_obsVSexp_data) <-c("expected","observed","target")
+xenopus_iupl_obsVSexp_data$expected <- as.numeric(as.character(xenopus_iupl_obsVSexp_data$expected))
+xenopus_iupl_obsVSexp_data$observed <- as.numeric(as.character(xenopus_iupl_obsVSexp_data$observed))
+xenopus_iupl_obsVSexp_data$target <- as.factor(xenopus_iupl_obsVSexp_data$target)
+
+ggplot(xenopus_iupl_obsVSexp_data) + 
+  geom_point(aes(x=observed,y=expected,color=target),size=2,alpha=0.5)+
+    geom_abline(color="darkslategrey",slope = 1,size=1,linetype = "dashed")+
+    ggpubr::theme_classic2() + 
+    theme(text = element_text(size=17),legend.position = "none") + 
+    scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed [S/T]P in IDR") +
+    scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected [S/T]P in IDR")
+# xenopusFullCons <- sapply(xenopus_All_data$Sequence,function(x){index<-unlist(gregexpr("[ST]P.[KR]",x),use.names = F)
+#                                                       if (index[1]==-1) {return(0)
+#                                                       } else {return(length(index))}})
+# names(xenopusFullCons) <- NULL 
 ```
 
 
@@ -1381,8 +1467,11 @@ for (i in 1:length(yeastIntersect_idx_cols)) {
   yeastIntersect_CMHtest <- mantelhaen.test(yeastStratContingencyArray)
   yeastIntersect_pval[i]<-yeastIntersect_CMHtest$p.value
   yeastIntersect_commonOR[i]<-yeastIntersect_CMHtest$estimate
+  # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
+  # yeastIntersect_diso_fraction[i] <-
+  #   (sum(lengths(strsplit(subset(yeastDiso_full,yeastDiso_full[, yeastIntersect_idx_cols[i]]!="0")[,yeastIntersect_idx_cols[i]],","))))/yeastIntersect_proteome_length
   yeastIntersect_diso_fraction[i] <-
-    (sum(lengths(strsplit(subset(yeastDiso_full,yeastDiso_full[, yeastIntersect_idx_cols[i]]!="0")[,yeastIntersect_idx_cols[i]],","))))/yeastIntersect_proteome_length
+    (sum(lengths(strsplit(subset(yeastDiso_full,!is.na(yeastDiso_full[, yeastIntersect_idx_cols[i]]))[,yeastIntersect_idx_cols[i]],","))))/yeastIntersect_proteome_length
 }
 
 human_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
@@ -1400,10 +1489,13 @@ for (i in 1:length(human_idx_cols)) {
   human_CMHtest <- mantelhaen.test(humanStratContingencyArray)
   human_pval[i]<-human_CMHtest$p.value
   human_commonOR[i]<-human_CMHtest$estimate
-  human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,humanDiso_full[,human_idx_cols[i]]!="0")[,human_idx_cols[i]],","))))/human_proteome_length
+  # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
+  # human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,humanDiso_full[,human_idx_cols[i]]!="0")[,human_idx_cols[i]],","))))/human_proteome_length
+  human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,!is.na(humanDiso_full[,human_idx_cols[i]]))[,human_idx_cols[i]],","))))/human_proteome_length
+
 }
 
-xenopus_idx_cols <- c("iupred_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
+xenopus_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
 xenopus_organism <- (rep("xenopus",length(xenopus_idx_cols)))
 xenopus_proteome_length <- sum(xenopusDiso$Length)
 xenopus_diso_fraction <- numeric()
@@ -1413,23 +1505,25 @@ for (i in 1:length(xenopus_idx_cols)) {
   xenopusStratContingencyArray <- getStratContingencyArray(df = subset(xenopus_data,target=="Cdk1 target"),
                                                     sequence_col = "Sequence",
                                                     diso_index_col = xenopus_idx_cols[i],
-                                                    psites_col = "psite_CDK1"
+                                                    psites_col = "psites"
                                                     ) 
   xenopus_CMHtest <- mantelhaen.test(xenopusStratContingencyArray)
   xenopus_pval[i]<-xenopus_CMHtest$p.value
   xenopus_commonOR[i]<-xenopus_CMHtest$estimate
-  xenopus_diso_fraction[i]<-(sum(lengths(strsplit(subset(xenopusDiso,xenopusDiso[,xenopus_idx_cols[i]]!="0")[,xenopus_idx_cols[i]],","))))/xenopus_proteome_length
+  # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
+  # xenopus_diso_fraction[i]<-(sum(lengths(strsplit(subset(xenopusDiso,xenopusDiso[,xenopus_idx_cols[i]]!="0")[,xenopus_idx_cols[i]],","))))/xenopus_proteome_length
+  xenopus_diso_fraction[i]<-(sum(lengths(strsplit(subset(xenopusDiso,!is.na(xenopusDiso[,xenopus_idx_cols[i]]))[,xenopus_idx_cols[i]],","))))/xenopus_proteome_length
 }
 
 yeastIntersect_CMH_data <- cbind(predictors,yeastIntersect_diso_fraction,yeastIntersect_pval,yeastIntersect_commonOR,yeastIntersect_organism)
 human_CMH_data <- cbind(predictors,human_diso_fraction,human_pval,human_commonOR,human_organism)
+xenopus_CMH_data <- cbind(predictors,xenopus_diso_fraction,xenopus_pval,xenopus_commonOR,xenopus_organism)
 
-
-predictorsCMH_data<-as.data.frame(rbind(yeastIntersect_CMH_data,human_CMH_data))
+predictorsCMH_data<-as.data.frame(rbind(yeastIntersect_CMH_data,human_CMH_data,xenopus_CMH_data))
 colnames(predictorsCMH_data) <- c("predictors","diso_fraction","pval","commonOR","organism")
-predictorsCMH_data$diso_fraction <- as.numeric(predictorsCMH_data$diso_fraction)
-predictorsCMH_data$pval <- as.numeric(predictorsCMH_data$pval)
-predictorsCMH_data$commonOR <- as.numeric(predictorsCMH_data$commonOR)
+predictorsCMH_data$diso_fraction <- as.numeric(as.character(predictorsCMH_data$diso_fraction))
+predictorsCMH_data$pval <- as.numeric(as.character(predictorsCMH_data$pval))
+predictorsCMH_data$commonOR <- as.numeric(as.character(predictorsCMH_data$commonOR))
 predictorsCMH_data$organism <- as.factor(predictorsCMH_data$organism)
 
 
