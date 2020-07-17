@@ -1,0 +1,24 @@
+IupredResult            Title
+countPhosphoDisordered
+                        Title
+countPhosphoDisordered.default
+                        Title
+filter.proteins         Title
+ggplot.IupredResult     Title
+iupred.predict.fastafile
+                        Predict
+phosphoStatus           Title
+phosphoStatus.IupredResult
+                        Title
+phosphoStatus.default   Title
+print.IupredResult      Title
+read.proteins           Title
+run.iupred.exe          Title
+setPhospho              setThreshold default result (stop error)
+setPhospho.IupredResult
+                        set the threshold on a IupredResult object
+setPhospho.default      setThreshold default result (stop error)
+setThreshold            Generic to set threshold value to object
+setThreshold.IupredResult
+                        set the threshold on a IupredResult object
+setThreshold.default    setThreshold default result (stop error)
