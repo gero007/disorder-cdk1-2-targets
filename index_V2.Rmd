@@ -270,6 +270,10 @@ phosphosite_CDK1Target_HS <- read_delim("PSP/PSP_CDK1_Target_HS.tab","\t", escap
 phosphosite_CDK2Target_HS <- read_delim("PSP/PSP_CDK2_Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
 phosphosite_CDK3Target_HS <- read_delim("PSP/PSP_CDK3_Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
 
+phosphosite_CDK1Target_HS <- phosphosite_CDK1Target_HS %>% rename(Kinase.CDK1 = KINASE)
+phosphosite_CDK2Target_HS <- phosphosite_CDK2Target_HS %>% rename(Kinase.CDK2 = KINASE)
+phosphosite_CDK3Target_HS <- phosphosite_CDK3Target_HS %>% rename(Kinase.CDK3 = KINASE)
+
 phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDK1Target_HS,phosphosite_CDK2Target_HS,by = c("GENE","PROTEIN","ACC#","MOD_RSD"),all = T)
 # colnames(phosphosite_CDKFamilyTarget_HS)[-(1:4)]<-c("METHOD.CDK1","LTP_LIT.CDK1","MS2_LIT.CDK1","MS2_CST.CDK1","Kinase.CDK1","METHOD.CDK2","LTP_LIT.CDK2","MS2_LIT.CDK2","MS2_CST.CDK2","Kinase.CDK2")
 phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDKFamilyTarget_HS,phosphosite_CDK3Target_HS,by = c("GENE","PROTEIN","ACC#","MOD_RSD"),all = T)
@@ -284,8 +288,8 @@ phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDKFamilyTarget_H
 # BIM iso2 = O43521-2 rows(62)
 # change  42-101: Missing.
 # phosphosite S44
-phosphosite_CDKFamilyTarget_HS$`ACC#`[62]<- "O43521"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[62]<-"S104"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[63]<- "O43521"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[63]<-"S104"
 
 #------------------
 
@@ -293,9 +297,9 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[62]<-"S104"
 # change  68-81: Missing.
 # phosphosite S146, S307
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[117:118]<- "P30305"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[117]<-"S160"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[118]<-"S321"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[125:126]<- "P30305"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[125]<-"S160"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[126]<-"S321"
 
 
 #------------------
@@ -304,8 +308,8 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[118]<-"S321"
 # change         1-697: Missing.     1984-1990: Missing.
 # phosphosite S763
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[183]<- "Q5TZA2"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[183]<-"S1460"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[193]<- "Q5TZA2"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[193]<-"S1460"
 
 #------------------
 
@@ -313,8 +317,8 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[183]<-"S1460"
 # change   1-93: MTPLCPRPAL...KAGGSPAPGP → MPCSE
 # phosphosite S11
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[214]<- "P33316"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[214]<-"S99"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[225]<- "P33316"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[225]<-"S99"
 
 #------------------
 
@@ -322,9 +326,9 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[214]<-"S99"
 # change   616-648: Missing.
 # phosphosite T60, S679
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[238:239]<- "P11171"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[252:253]<- "P11171"
 # T60 doesn't change
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[238]<-"S712"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[252]<-"S712"
 
 #------------------
 
@@ -332,8 +336,8 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[238]<-"S712"
 # change    326-340: Missing.
 # phosphosite T596
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[267]<- "Q08050"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[267]<-"T611"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[282]<- "Q08050"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[282]<-"T611"
 
 #------------------
 
@@ -341,8 +345,8 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[267]<-"T611"
 # change    35-45: Missing.
 # phosphosite T42
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[293]<- "P17096"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[293]<-"T53"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[311]<- "P17096"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[311]<-"T53"
 
 #------------------
 
@@ -350,8 +354,8 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[293]<-"T53"
 # change    35-45: Missing.
 # phosphosite S126
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[307]<- "Q9UK53"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[307]<-"S269"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[325]<- "Q9UK53"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[325]<-"S269"
 
 #------------------
 
@@ -359,14 +363,14 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[307]<-"S269"
 # change     125-375: Missing.     395-460: Missing.
 # phosphosite  T153 S202 T205 T212 T231 S235 S404
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[376:382]<- "P10636"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[379] <- "T470"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[376] <- "S519"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[380] <- "T522"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[381] <- "T529"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[382] <- "T548"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[377] <- "S552"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[378] <- "S721"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[407:413]<- "P10636"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[410] <- "T470"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[407] <- "S519"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[411] <- "T522"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[412] <- "T529"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[413] <- "T548"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[408] <- "S552"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[409] <- "S721"
 
 #------------------
 
@@ -374,12 +378,12 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[378] <- "S721"
 # change     393-409: Missing.     1502-1576: RHYDLNQLLE...FVLLHIDNSG → S
 # phosphosite T529 T536 S595 S606 T653
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[493:497]<- "P52948"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[495]<-"T546"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[496]<-"T553"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[493]<-"S612"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[494]<-"S623"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[497]<-"T670"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[561:568]<- "P52948"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[563]<-"T546"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[564]<-"T553"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[561]<-"S612"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[562]<-"S623"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[565]<-"T670"
 
 #------------------
 
@@ -387,8 +391,8 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[497]<-"T670"
 # change     1-41: MSASSSGGSP...PCGAPSVTVT → MKDRSSTPPL...LPKPSATSSQ.   65-83: Missing
 # phosphosite S796
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[500]<- "Q5BJF6"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[500]<-"S820"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[568]<- "Q5BJF6"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[568]<-"S820"
 
 #------------------
 
@@ -396,7 +400,7 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[500]<-"S820"
 # change      382-415: WLYWQPILTKMGFMSVILVGAFVGWTLFFQQNAL → PRLTDT
 # phosphosite S304
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[554]<- "P17706"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[625]<- "P17706"
 
 
 #------------------
@@ -406,13 +410,13 @@ phosphosite_CDKFamilyTarget_HS$`ACC#`[554]<- "P17706"
 #  change 1-5: MRIPV → MASDSIFESFPSYPQCFMRECILGMNPSRDVH, the difference is -27
 # phosphosites "S48"   "S276"   "S293"   "T300"   "S303"   "S424"
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[639:644]<- "Q01196"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[643]<-"S21"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[639]<-"S249"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[640]<-"S266"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[644]<-"S273"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[641]<-"S276"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[642]<-"S397"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[713:718]<- "Q01196"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[717]<-"S21"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[713]<-"S249"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[714]<-"S266"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[718]<-"S273"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[715]<-"S276"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[716]<-"S397"
 
 #------------------
 
@@ -420,8 +424,8 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[642]<-"S397"
 # change     1-25: MKKSYSGGTRTSSGRLRRLGDSSGP → MERDRIS
 # phosphosite T24
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[650]<- "Q9UHD8"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[650]<-"T38"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[725]<- "Q9UHD8"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[725]<-"T38"
 
 #------------------
 
@@ -429,17 +433,17 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[650]<-"T38"
 # change      1-37: Missing
 # phosphosite S331
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[663]<- "Q9UHD8"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[663]<-"S368"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[738]<- "Q9UHD8"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[738]<-"S368"
 
 #------------------
 
 # SORBS3  iso10 = O60504_VAR_055019 rows(679)
 # change      1canonical has an SP in that position. keeping the coordinates
 # phosphosite S563
-
-phosphosite_CDKFamilyTarget_HS$`ACC#`[679]<- "O60504"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[679]<-"S368"
+# 
+# phosphosite_CDKFamilyTarget_HS$`ACC#`[679]<- "O60504"
+# phosphosite_CDKFamilyTarget_HS$MOD_RSD[679]<-"S368"
 
 #------------------
 
@@ -447,7 +451,7 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[679]<-"S368"
 # change      1canonical has an SP in that position. keeping the coordinates
 # phosphosite S48 S333
 #S48 doesn't change, S333 isn't present. removal below
-phosphosite_CDKFamilyTarget_HS$`ACC#`[695:696]<- "O94901"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[775:776]<- "O94901"
 
 #------------------
 
@@ -455,8 +459,8 @@ phosphosite_CDKFamilyTarget_HS$`ACC#`[695:696]<- "O94901"
 # change      1-1: M → MGVFAVPPLSSDTM
 # phosphosite S674
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[771]<- "Q96T88"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[771]<-"S661"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[853]<- "Q96T88"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[853]<-"S661"
 
 #------------------
 
@@ -464,11 +468,11 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[771]<-"S661"
 # change      1-22: METPLDVLSRAASLVHADDEKR → MLFMKMDLLNYQYLDKMNNNIGILCYEG
 # phosphosite  S58 S155 T159 S280
 
-phosphosite_CDKFamilyTarget_HS$`ACC#`[786:789]<- "Q14135"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[788] <- "S52"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[786] <- "S149"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[789] <- "T153"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[787] <- "S274"
+phosphosite_CDKFamilyTarget_HS$`ACC#`[868:871]<- "Q14135"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[870] <- "S52"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[868] <- "S149"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[871] <- "T153"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[869] <- "S274"
 
 
 #------------------
@@ -480,22 +484,22 @@ phosphosite_CDKFamilyTarget_HS$MOD_RSD[787] <- "S274"
 # removal below
 
 
-phosphosite_CDKFamilyTarget_HS<- phosphosite_CDKFamilyTarget_HS[c(-371,-695),]
+phosphosite_CDKFamilyTarget_HS<- phosphosite_CDKFamilyTarget_HS[c(-402,-775),]
 
 
 
 #################################################################
 
-human_data <- phosphosite_CDKFamilyTarget_HS %>% unite(col = "kinase", Kinase.CDK1,Kinase.CDK2,Kinase.CDK3,sep = ",",remove = T,na.rm=T )
-human_data <- human_data %>% unite(col = "method", METHOD.CDK1,METHOD.CDK2,METHOD.CDK3,sep = ",",remove = T,na.rm=T )
+human_data <- phosphosite_CDKFamilyTarget_HS %>% unite(col = "KINASE", Kinase.CDK1,Kinase.CDK2,Kinase.CDK3,sep = ",",remove = T,na.rm=T )
+# human_data <- human_data %>% unite(col = "method", METHOD.CDK1,METHOD.CDK2,METHOD.CDK3,sep = ",",remove = T,na.rm=T )
 
 
-human_data <- human_data %>% group_by(`ACC#`,GENE,PROTEIN) %>% summarise_at(c("MOD_RSD","kinase","method"),function(x){paste(x, collapse=",")})
+human_data <- human_data %>% group_by(`ACC#`,GENE,PROTEIN) %>% summarise_at(c("MOD_RSD","KINASE"),function(x){paste(x, collapse=",")})
 
 human_data$MOD_RSD <- sapply(human_data$MOD_RSD, function(x){ return(paste(substr(strsplit(x,",")[[1]],start = 2,stop = 2000),collapse = ","))})
-human_data$kinase <- sapply(human_data$kinase, function(x){ return(paste(unique(strsplit(x,",")[[1]]),collapse = ","))})
+human_data$KINASE <- sapply(human_data$KINASE, function(x){ return(paste(unique(strsplit(x,",")[[1]]),collapse = ","))})
 # algunos valores tienen espacios, por eso el gsub
-human_data$method <- sapply(human_data$method, function(x){ return(paste(unique(gsub(" ", "", strsplit(x,",")[[1]], fixed = TRUE)),collapse = ","))})
+# human_data$method <- sapply(human_data$method, function(x){ return(paste(unique(gsub(" ", "", strsplit(x,",")[[1]], fixed = TRUE)),collapse = ","))})
 human_data$target <- rep("Cdk1 target",nrow(human_data))
 
 # human_data<-merge.data.frame(human_data,humanDiso_full,by.x = "ACC#",by.y = "acc",all.y = T)
@@ -504,7 +508,7 @@ human_data$target <- as.factor(human_data$target)
 human_data <- as.data.frame(human_data)
 
 human_data$psite_CDK1 <- lapply(human_data$MOD_RSD, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
-human_data <- human_data[,c("GENE","PROTEIN","ACC#","MOD_RSD","method","target","psite_CDK1","kinase")]
+human_data <- human_data[,c("GENE","PROTEIN","ACC#","MOD_RSD","target","psite_CDK1","KINASE")]
 
 # ___________Phosphosite Human Universe_____________
 # Load all the phosphosites in the phosphosite plus database 
