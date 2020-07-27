@@ -266,14 +266,14 @@ yeastIntersect_CDK1_data <- subset(yeastIntersect_All_data, (target_all == "Cdk1
 
 #there's overlapping between the targets. I create 3 differents DF and I will merge them
 
-phosphosite_CDK1Target_HS <- read_delim("PSP/phosphosite_CDK1Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
-phosphosite_CDK2Target_HS <- read_delim("PSP/phosphosite_CDK2Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
-phosphosite_CDK3Target_HS <- read_delim("PSP/phosphosite_CDK3Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosite_CDK1Target_HS <- read_delim("PSP/PSP_CDK1_Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosite_CDK2Target_HS <- read_delim("PSP/PSP_CDK2_Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosite_CDK3Target_HS <- read_delim("PSP/PSP_CDK3_Target_HS.tab","\t", escape_double = FALSE, trim_ws = TRUE)
 
 phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDK1Target_HS,phosphosite_CDK2Target_HS,by = c("GENE","PROTEIN","ACC#","MOD_RSD"),all = T)
-colnames(phosphosite_CDKFamilyTarget_HS)[-(1:4)]<-c("METHOD.CDK1","LTP_LIT.CDK1","MS2_LIT.CDK1","MS2_CST.CDK1","Kinase.CDK1","METHOD.CDK2","LTP_LIT.CDK2","MS2_LIT.CDK2","MS2_CST.CDK2","Kinase.CDK2")
+# colnames(phosphosite_CDKFamilyTarget_HS)[-(1:4)]<-c("METHOD.CDK1","LTP_LIT.CDK1","MS2_LIT.CDK1","MS2_CST.CDK1","Kinase.CDK1","METHOD.CDK2","LTP_LIT.CDK2","MS2_LIT.CDK2","MS2_CST.CDK2","Kinase.CDK2")
 phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDKFamilyTarget_HS,phosphosite_CDK3Target_HS,by = c("GENE","PROTEIN","ACC#","MOD_RSD"),all = T)
-colnames(phosphosite_CDKFamilyTarget_HS)[-(1:14)]<-c("METHOD.CDK3","LTP_LIT.CDK3","MS2_LIT.CDK3","MS2_CST.CDK3","Kinase.CDK3")
+# colnames(phosphosite_CDKFamilyTarget_HS)[-(1:14)]<-c("METHOD.CDK3","LTP_LIT.CDK3","MS2_LIT.CDK3","MS2_CST.CDK3","Kinase.CDK3")
 
 # rows (11,12,13,14,15,16,49,79,80,151,167,168,170,190,206,211,320,321,322,323,324,327,358,412,439,440,443,444,445,446,447,448,449,507,508,509,510,531,532,533,534,596,633,762,834,849,850,851,882)
 # having isoforms of the proteins. Convert them to the canonical form
