@@ -285,6 +285,13 @@ phosphosite_CDKFamilyTarget_HS <- merge.data.frame(phosphosite_CDKFamilyTarget_H
 
 ###############################SOLVED############################
 
+# vinexin iso10 = O60504_VAR_055019 rows(37)
+# phosphosite S563
+# No change in the sequence
+
+phosphosite_CDKFamilyTarget_HS$`ACC#`[755]<- "O60504"
+#------------------
+
 # BIM iso2 = O43521-2 rows(62)
 # change  42-101: Missing.
 # phosphosite S44
