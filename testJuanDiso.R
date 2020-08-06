@@ -1,4 +1,3 @@
-library(iupred)
 library(readr)
 library(dplyr)
 library(data.table)
@@ -14,7 +13,7 @@ significant_anova <- read_lines("utrech/Xen_phospho_ANOVApos.txt")
 # # Read in pre-calculated file or perform iupred
 # if (!file.exists("all-predictions.Rdata")) {
 #   all_predictions <-
-#     iupred.predict.fastafile("Xenopus_Database_MPI.FASTA",
+#     iupred.predict.fastafile("phosphositesbase_MPI.FASTA",
 #                              restrict = unique(all_protein_id_phospho
 #                                                $Protein),
 #                              idPattern = "^[^|]+\\|([^ ]+).*")
@@ -22,35 +21,59 @@ significant_anova <- read_lines("utrech/Xen_phospho_ANOVApos.txt")
 # } else {
 #   print ("Loading prepared file")
 #   load("all-predictions.Rdata")
-# }
-all_predictions <- list()
+
+
+
+
 disoPath <- "predictions/IUpred_run_xenopus/"
 file.names <- dir(disoPath, pattern =".iupred")
-for (disofile in file.names) {
-  id<-strsplit(x = disofile,split = ".",fixed = T)[[1]][1]
-  aux_table <- read_delim(paste(disoPath,disofile,sep = ""),"\t", escape_double = FALSE, col_names = FALSE,col_types = cols(X1 = col_integer(),X2 = col_character(),X3 = col_double()),comment = "#", trim_ws = TRUE)
+ids <-unlist(strsplit(x = file.names,split = ".iupred",fixed = T))
+all_predictions <- data.frame(ids)
+colnames(all_predictions) <- "ID"
+all_predictions$ID <- as.character(all_predictions$ID)
+positions <- list()
+scores <- list()
+disordered <- list()
+
+for (n in 1:length(file.names)) {
+  aux_table <- read_delim(paste(disoPath,file.names[n],sep = ""),"\t", escape_double = FALSE, col_names = FALSE,col_types = cols(X1 = col_integer(),X2 = col_character(),X3 = col_double()),comment = "#", trim_ws = TRUE)
+  aux_table <- as.data.frame(aux_table)
   colnames(aux_table) <- c("POS","RES","IUPRED_SCORE")
   aux_table$IUPRED_DISO <- aux_table$IUPRED_SCORE>=0.5
-  all_predictions[[id]]$`.sequence` <- paste(aux_table$RES,collapse = "")
-  all_predictions[[id]]$`.positions` <- aux_table$POS
-  all_predictions[[id]]$`.scores` <- aux_table$IUPRED_SCORE
-  all_predictions[[id]]$`.phospho` <- NULL
-  all_predictions[[id]]$`.accesion` <- id
-  all_predictions[[id]]$`.threshold` <- 0.5
-  all_predictions[[id]]$`.disordered` <- aux_table$IUPRED_DISO
-} 
+  all_predictions[n,"sequence"] <- paste(aux_table$RES,collapse = "")
+  positions[[n]] <- as.numeric(aux_table$POS)
+  scores[[n]] <- as.numeric(aux_table$IUPRED_SCORE)
+  # all_predictions[n,"phospho"] <- NULL
+  all_predictions[n,"threshold"] <- 0.5
+  disordered[[n]] <- which(aux_table$IUPRED_DISO)
+}
+all_predictions$positions <-positions
+all_predictions$IUPredScores <-scores
+all_predictions$disordered <-disordered
 
 # remove unannotated proteins
-all_protein_id_phospho <- all_protein_id_phospho[all_protein_id_phospho %in% names(all_predictions)]
+# all_protein_id_phospho <- all_protein_id_phospho[all_protein_id_phospho %in% all_predictions$ID]
+all_predictions_phospho <- subset(all_predictions, ID %in% all_protein_id_phospho)
+
 
 # Introduce phosphosites (from all_proteins variable) using the apply function
-apply(all_protein_id_phospho, MARGIN=1, FUN=function(x) {
-  all_predictions[[x[["Protein"]]]] <<- setPhospho(all_predictions[[x[["Protein"]]]] , as.numeric(x[["p-site"]]));
-  return(invisible());
-})
+phosphosites <- phosphosites <- read_delim("all_phosphosites_xenopus_nr.tab", "\t", escape_double = FALSE, col_types = cols(`Leading proteins` = col_skip(), Protein = col_skip()), trim_ws = TRUE)
+phosphosites <- phosphosites %>% rename(ID=Proteins,psites=`Positions within proteins`,seqWindow=`Sequence window`,UID=`Unique identifier`) %>% group_by(ID) %>% summarise_at(c("psites","seqWindow","UID"),function(x){paste(x, collapse=",")})
+# The data has been opened by excel and some proteins have their names modified to be dates.
+
+phosphosites$psites <- lapply(phosphosites$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
+
+all_predictions_phospho <- merge.data.frame(all_predictions_phospho,phosphosites,by = "ID")
+
+
+
+# apply(all_protein_id_phospho, MARGIN=1, FUN=function(x) {
+#   all_predictions[[x[["Protein"]]]] <<- setPhospho(all_predictions[[x[["Protein"]]]] , as.numeric(x[["p-site"]]));
+#   return(invisible());
+# })
 
 # Get the disordered/ordered phospho counts using countPhosphoDisordered
-phospho_relative_to_organization<- lapply(all_predictions, countPhosphoDisordered)
+all_predictions_phospho$phosphoDiso_obs<- lapply(all_predictions, function(x){})
 
 # unlist into data.table
 phospho_relative_to_organization <- rbindlist(phospho_relative_to_organization, id="protein")
@@ -65,7 +88,7 @@ phospho_region <- list(
 )
 
 # Calculate percentage of disordered region from all proteins
-disordered_fraction <- mapply(all_predictions, FUN=function(x) {sum(x$.disordered) / stringi::stri_length(x$.sequence)})
+disordered_fraction <- mapply(all_predictions, FUN=function(x) {sum(x$.disordered) / nchar(x$.sequence)})
 
 lapply(phospho_region, function(x) {
   x[,expected_disordered := (disordered + ordered)  * disordered_fraction[protein] ];
