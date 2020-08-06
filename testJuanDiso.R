@@ -65,7 +65,13 @@ phosphosites$psites <- lapply(phosphosites$psites, function(x){ return(as.numeri
 
 all_predictions_phospho <- merge.data.frame(all_predictions_phospho,phosphosites,by = "ID")
 
-
+phosphoDiso_obs <- list()
+phospho
+for (i in 1:nrow(all_predictions_phospho)) {
+  
+  
+  
+}
 
 # apply(all_protein_id_phospho, MARGIN=1, FUN=function(x) {
 #   all_predictions[[x[["Protein"]]]] <<- setPhospho(all_predictions[[x[["Protein"]]]] , as.numeric(x[["p-site"]]));
