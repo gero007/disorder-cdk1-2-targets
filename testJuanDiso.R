@@ -66,11 +66,11 @@ phosphosites$psites <- lapply(phosphosites$psites, function(x){ return(as.numeri
 all_predictions_phospho <- merge.data.frame(all_predictions_phospho,phosphosites,by = "ID")
 
 phosphoDiso_obs <- list()
-phospho
+phosphoDiso_expct_uni <- numeric()
 for (i in 1:nrow(all_predictions_phospho)) {
-  
-  
-  
+  diso_fraction <- length(all_predictions_phospho[i,"disordered"][[1]])/nchar(all_predictions_phospho[i,"sequence"])
+  phosphoDiso_expct_uni[i] <- length(all_predictions_phospho[i,"psites"][[1]])*diso_fraction
+  phosphoDiso_obs[[i]] <- sum(all_predictions_phospho[i,"psites"][[1]] %in% all_predictions_phospho[i,"disordered"][[1]])
 }
 
 # apply(all_protein_id_phospho, MARGIN=1, FUN=function(x) {
@@ -79,10 +79,12 @@ for (i in 1:nrow(all_predictions_phospho)) {
 # })
 
 # Get the disordered/ordered phospho counts using countPhosphoDisordered
-all_predictions_phospho$phosphoDiso_obs<- lapply(all_predictions, function(x){})
+# phospho_relative_to_organization<- lapply(all_predictions, countPhosphoDisordered)
+# phospho_relative_to_organization<- lapply(all_predictions, countPhosphoDisordered)
 
 # unlist into data.table
-phospho_relative_to_organization <- rbindlist(phospho_relative_to_organization, id="protein")
+# phospho_relative_to_organization <- rbindlist(phospho_relative_to_organization, id="protein")
+phospho_relative_to_organization <- rbindlist(phosphoDiso_obs, id="protein")
 
 # Convenient structure for batch processing
 phospho_region <- list(
