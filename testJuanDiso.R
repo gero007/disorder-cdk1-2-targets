@@ -65,13 +65,39 @@ phosphosites$psites <- lapply(phosphosites$psites, function(x){ return(as.numeri
 
 all_predictions_phospho <- merge.data.frame(all_predictions_phospho,phosphosites,by = "ID")
 
-phosphoDiso_obs <- list()
-phosphoDiso_expct_uni <- numeric()
+all_predictions_phospho <- all_predictions_phospho %>% mutate(anova_sig=case_when(
+  ID %in% significant_anova ~ "ANOVA Significant",
+  TRUE ~ "ANOVA Significant"
+))
+
+all_predictions_phospho <- all_predictions_phospho %>% mutate(cluster=case_when(
+  ID %in% cluster_oscillating ~ "Cluster D",
+  TRUE ~ "other"
+))
+
+phosphoDiso_obs <- numeric()
+phosphoDiso_expct <- numeric()
 for (i in 1:nrow(all_predictions_phospho)) {
-  diso_fraction <- length(all_predictions_phospho[i,"disordered"][[1]])/nchar(all_predictions_phospho[i,"sequence"])
-  phosphoDiso_expct_uni[i] <- length(all_predictions_phospho[i,"psites"][[1]])*diso_fraction
+  # diso_fraction <- length(all_predictions_phospho[i,"disordered"][[1]])/nchar(all_predictions_phospho[i,"sequence"])
+  # phosphoDiso_expct_uni[i] <- length(all_predictions_phospho[i,"psites"][[1]])*diso_fraction
+  # Fraction of Ser And Thr that fall in disorder region
+  TStotalIndexes <- as.numeric(gregexpr("S|T", all_predictions_phospho[i,"sequence"])[[1]]) 
+  TSinDiso_count <- sum(TStotalIndexes %in% all_predictions_phospho[i,"disordered"][[1]])
+  TSinDiso_fraction <- TSinDiso_count/length(TStotalIndexes)
+  phosphoDiso_expct[[i]] <- length(all_predictions_phospho[i,"psites"][[1]])*TSinDiso_fraction
   phosphoDiso_obs[[i]] <- sum(all_predictions_phospho[i,"psites"][[1]] %in% all_predictions_phospho[i,"disordered"][[1]])
 }
+
+all_predictions_phospho$psites_expct_diso <- phosphoDiso_expct
+all_predictions_phospho$psites_obsv_diso <- phosphoDiso_obs
+
+ggplot(all_predictions_phospho) + 
+  geom_point(aes(x=psites_obsv_diso,y=psites_expct_diso),size=2,alpha=0.5)+
+  geom_abline(color="darkslategrey",slope = 1,size=1,linetype = "dashed")+
+  ggpubr::theme_classic2() + 
+  theme(text = element_text(size=17),legend.position = "none") + 
+  scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed phospho S/T in IDR") +
+  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected phospho S/T in IDR")
 
 # apply(all_protein_id_phospho, MARGIN=1, FUN=function(x) {
 #   all_predictions[[x[["Protein"]]]] <<- setPhospho(all_predictions[[x[["Protein"]]]] , as.numeric(x[["p-site"]]));
@@ -94,6 +120,7 @@ phospho_region <- list(
   exit_metaphase = phospho_relative_to_organization[protein %in% cluster_exit_metaphase,],
   nonsignificant = phospho_relative_to_organization[! protein %in% significant_anova,]
 )
+
 
 # Calculate percentage of disordered region from all proteins
 disordered_fraction <- mapply(all_predictions, FUN=function(x) {sum(x$.disordered) / nchar(x$.sequence)})
