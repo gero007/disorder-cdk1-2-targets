@@ -65,7 +65,7 @@ phosphosites$psites <- lapply(phosphosites$psites, function(x){ return(as.numeri
 
 all_predictions_phospho <- merge.data.frame(all_predictions_phospho,phosphosites,by = "ID")
 
-<<<<<<< HEAD
+
 phosphoDiso_obs <- list()
 phosphoDiso_expct_uni <- numeric()
 for (i in 1:nrow(all_predictions_phospho)) {
@@ -74,7 +74,7 @@ for (i in 1:nrow(all_predictions_phospho)) {
   phosphoDiso_obs[[i]] <- sum(all_predictions_phospho[i,"psites"][[1]] %in% all_predictions_phospho[i,"disordered"][[1]])
 }
 
-=======
+
 all_predictions_phospho <- all_predictions_phospho %>% mutate(anova_sig=case_when(
   ID %in% significant_anova ~ "ANOVA Significant",
   TRUE ~ "ANOVA Significant"
@@ -109,7 +109,7 @@ ggplot(all_predictions_phospho) +
   scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed phospho S/T in IDR") +
   scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected phospho S/T in IDR")
 
->>>>>>> 776f8f5099c5555388e6c828051668b3911072d9
+
 # apply(all_protein_id_phospho, MARGIN=1, FUN=function(x) {
 #   all_predictions[[x[["Protein"]]]] <<- setPhospho(all_predictions[[x[["Protein"]]]] , as.numeric(x[["p-site"]]));
 #   return(invisible());
