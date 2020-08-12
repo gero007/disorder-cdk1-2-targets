@@ -21,7 +21,7 @@ library(reshape2)
 
 #Load data (beware that had to remove first useless three rows, otherwise everything was loaded as character)
 
-pSites_Median_Norm_Full_Matrix <- read.csv('All_pSites_ANOVA_Statistics.csv', stringsAsFactors = F)
+pSites_Median_Norm_Full_Matrix <- read.csv('utrech/Phosphoproteomics_Shotgun_Clustering_Gero/All_pSites_ANOVA_Statistics.csv', stringsAsFactors = F)
 str(pSites_Median_Norm_Full_Matrix)
 summary(pSites_Median_Norm_Full_Matrix)
 head(pSites_Median_Norm_Full_Matrix)

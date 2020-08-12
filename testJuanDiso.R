@@ -6,7 +6,7 @@ library(ggplot2)
 
 all_protein_id_phospho <- read_lines("utrech/Xen_phospho_allProteins.txt")
 cluster_oscillating <- read_lines("utrech/Xen_phospho_ClusterD.txt")
-# cluster_exit_metaphase <- read_file("")
+cluster_interphase <- read_lines("utrech/Xen_phospho_ClusterC.txt")
 significant_anova <- read_lines("utrech/Xen_phospho_ANOVApos.txt")
 
 
@@ -82,6 +82,7 @@ all_predictions_phospho <- all_predictions_phospho %>% mutate(anova_sig=case_whe
 
 all_predictions_phospho <- all_predictions_phospho %>% mutate(cluster=case_when(
   ID %in% cluster_oscillating ~ "Cluster D",
+  ID %in% cluster_interphase ~ "Cluster C",
   TRUE ~ "other"
 ))
 
@@ -132,10 +133,7 @@ phospho_region <- list(
   nonsignificant = phospho_relative_to_organization[! protein %in% significant_anova,]
 )
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 776f8f5099c5555388e6c828051668b3911072d9
 # Calculate percentage of disordered region from all proteins
 disordered_fraction <- mapply(all_predictions, FUN=function(x) {sum(x$.disordered) / nchar(x$.sequence)})
 
