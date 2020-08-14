@@ -36,7 +36,7 @@ bkgEstProbs <- colSums(alphabetFrequency(backgroundSeqs))[1:20]/sum(colSums(alph
 
 
 
-InformationContent_calculator <- function(sequences,backgroundProb){
+informationContent_calculator <- function(sequences,backgroundProb){
   if (var(nchar(sequences))!=0){
     stop("Sequences with different lenghts cannot be aligned")
   } else {
@@ -69,3 +69,59 @@ InformationContent_calculator <- function(sequences,backgroundProb){
   return(norm_out_matrix)
 }
 
+IC_matrix_list <- list()
+
+# Total
+IC_matrix_list[["All phosphosites"]] <- informationContent_calculator(phosphoSiteClusters$sequence,bkgEstProbs)
+IC_matrix_list[["Proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,type=="Proline directed")$sequence,bkgEstProbs)
+IC_matrix_list[["Non proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,type=="Non proline directed")$sequence,bkgEstProbs)
+
+# Cluster A (cluster3)
+
+IC_matrix_list[["Cluster A - All phosphosites"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster3")$sequence,bkgEstProbs)
+IC_matrix_list[["Cluster A - Proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster3" & type=="Proline directed")$sequence,bkgEstProbs)
+IC_matrix_list[["Cluster A - Non proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster3" & type=="Non proline directed")$sequence,bkgEstProbs)
+
+# Cluster B (cluster4)
+
+IC_matrix_list[["Cluster B - All phosphosites"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster4")$sequence,bkgEstProbs)
+IC_matrix_list[["Cluster B - Proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster4" & type=="Proline directed")$sequence,bkgEstProbs)
+IC_matrix_list[["Cluster B - Non proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster4" & type=="Non proline directed")$sequence,bkgEstProbs)
+
+# Cluster C (cluster1)
+
+IC_matrix_list[["Cluster C - All phosphosites"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster1")$sequence,bkgEstProbs)
+IC_matrix_list[["Cluster C - Proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster1" & type=="Proline directed")$sequence,bkgEstProbs)
+IC_matrix_list[["Cluster C - Non proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster1" & type=="Non proline directed")$sequence,bkgEstProbs)
+
+# Cluster D (cluster2)
+
+IC_matrix_list[["Cluster D - All phosphosites"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster2")$sequence,bkgEstProbs)
+IC_matrix_list[["Cluster D - Proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster2" & type=="Proline directed")$sequence,bkgEstProbs)
+IC_matrix_list[["Cluster D - Non proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster2" & type=="Non proline directed")$sequence,bkgEstProbs)
+
+# Plots
+  
+ggseqlogo(IC_matrix_list,seq_type='aa',method='custom',ncol = 3) + 
+  scale_y_continuous(limits = c(-0.5, 1),breaks = c(seq(-0.5, 1, by = 0.5)),expand = c(0,0)) + 
+  theme( axis.line.y = element_line(size = 0.5, linetype = "solid"),axis.ticks.y = element_line(size = 0.5, linetype = "solid")) + 
+  geom_hline(yintercept=0, linetype="solid",size = 0.5)
+
+
+# Plk: [D/N/E/Y]-X-[S/T]-[ ϕ /F; no P]-[ ϕ /X]
+Plk_motif_re <- "^.{13}[D|N|E|Y].[S|T][V|I||L|F|W|Y|M]" 
+# Aurora: R/K-X-S/T-[ ϕ /F; no P]
+Aurora_motif_re <- "^.{13}[R|K].[S|T][V|I||L|F|W|Y|M]" 
+# Nek: [F/L/M]-X-X-S/T-[ ϕ /F; no P]-[R/H/X]
+Nek_motif_re <- "^.{12}[F|L|M].{2}[S|T][V|I||L|F|W|Y|M][R|H|X]"  
+# Casein kinase 1: D/E-D/E-D/E-X-X-S/T-ϕ
+Csk1_motif_re <- "^.{10}[E|D][E|D][E|D].{2}[S|T][A|L|I|V]"
+# pS/pT-X-X-S/T-ϕ 
+Unknown_motif_re <- "^.{15}[S|T].{2}[S|T][A|L|I|V]"
+# Casein kinase 2: S/T-D/E-X-D/E
+Csk1_motif_re <- "^.{15}[S|T][E|D].[E|D]"
+# PKA: R-R/K-X-S-ϕ
+Pka_motif_re <- "^.{15}[S|T][E|D].[E|D]"
+
+
+phosphoSiteClusters$sequence[grep(Plk_motif_re,phosphoSiteClusters$sequence)]

@@ -1,11 +1,11 @@
 #install packages
 
-install.packages("tidyverse")
-install.packages("gplots")
-install.packages("devtools")
-library(devtools)
-install_github("jokergoo/ComplexHeatmap")
-install.packages("heatmap3")
+# install.packages("tidyverse")
+# install.packages("gplots")
+# install.packages("devtools")
+# library(devtools)
+# install_github("jokergoo/ComplexHeatmap")
+# install.packages("heatmap3")
 
 #Load packages#
 
