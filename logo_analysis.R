@@ -120,13 +120,28 @@ NonProlineDirectedMotifs[["Csk1_motif_re"]] <- "^.{10}[E|D][E|D][E|D].{2}[S|T][A
 # pS/pT-X-X-S/T-ϕ 
 NonProlineDirectedMotifs[["Unknown_motif_re"]] <- "^.{15}[S|T].{2}[S|T][A|L|I|V]"
 # Casein kinase 2: S/T-D/E-X-D/E
-NonProlineDirectedMotifs[["Csk1_motif_re"]] <- "^.{15}[S|T][E|D].[E|D]"
+NonProlineDirectedMotifs[["Csk2_motif_re"]] <- "^.{15}[S|T][E|D].[E|D]"
 # PKA: R-R/K-X-S-ϕ
 NonProlineDirectedMotifs[["Pka_motif_re"]] <- "^.{12}R[R|K].S[V|I||L|F|W|Y|M]"
 
 
-sapply(NonProlineDirectedMotifs, function(x){
-                                              length(grep(x,phosphoSiteClusters$sequence))
-                                              })
+NonProDirected_all_motifCounts <- sapply(NonProlineDirectedMotifs, function(x){
+  length(grep(x,subset(phosphoSiteClusters,type=="Non proline directed")$sequence))
+})
+NonProDirected_clusterA_motifCounts <- sapply(NonProlineDirectedMotifs, function(x){
+  length(grep(x,subset(phosphoSiteClusters,type=="Non proline directed" & Cluster=="cluster3")$sequence))
+})
+NonProDirected_clusterB_motifCounts <- sapply(NonProlineDirectedMotifs, function(x){
+  length(grep(x,subset(phosphoSiteClusters,type=="Non proline directed" & Cluster=="cluster4")$sequence))
+})
+NonProDirected_clusterC_motifCounts <- sapply(NonProlineDirectedMotifs, function(x){
+  length(grep(x,subset(phosphoSiteClusters,type=="Non proline directed" & Cluster=="cluster1")$sequence))
+})
+NonProDirected_clusterD_motifCounts <- sapply(NonProlineDirectedMotifs, function(x){
+  length(grep(x,subset(phosphoSiteClusters,type=="Non proline directed" & Cluster=="cluster2")$sequence))
+})
 
+NonProDirected_motifCounts_table <- rbind(NonProDirected_all_motifCounts,NonProDirected_clusterA_motifCounts,NonProDirected_clusterB_motifCounts,NonProDirected_clusterC_motifCounts,NonProDirected_clusterD_motifCounts)
 
+row.names(NonProDirected_motifCounts_table) <- c("Total","Cluster A","Cluster B","Cluster C","Cluster D")
+colnames(NonProDirected_motifCounts_table) <- c("Plk","Aurora","Nek","Ck1","Unknown","Ck2","Pka")
