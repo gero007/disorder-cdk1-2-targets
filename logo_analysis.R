@@ -133,36 +133,39 @@ kinaseMotifList[["Nek2/10"]] <- "^.{3}W[F|L|M|].RS[A|V|I||L|F|W|Y|M][R]"
 # Nek6/7/9:[F/L/M/W]-X-R-T-[V|I||L|F|W|Y|M][K/R][V|I||L|F|W|Y|M]
 kinaseMotifList[["Nek6/7/9"]] <- "^.{5}[L|M|F][D|E|N|Y][Y]S[A|V|I||L|F|W|Y|M]"
 
+# Casein kinase 1: D/E-D/E-D/E-X-X-S/T or # pS/pT-X-X-S/T 
+kinaseMotifList[["Ck1"]] <- "^((.{2}[E|D][E|D][E|D])|(.{4}[S|T]|)).{2}[S|T]"
 
-# Casein kinase 1: D/E-D/E-D/E-X-X-S/T-ϕ
-kinaseMotifList[["Csk1_motif_re"]] <- "^.{10}[E|D][E|D][E|D].{2}[S|T][A|L|I|V]"
-# pS/pT-X-X-S/T-ϕ 
-kinaseMotifList[["Unknown_motif_re"]] <- "^.{15}[S|T].{2}[S|T][A|L|I|V]"
-# Casein kinase 2: S/T-D/E-X-D/E
-kinaseMotifList[["Csk2_motif_re"]] <- "^.{15}[S|T][E|D].[E|D]"
+# Casein kinase 2: [pS/pT]-{P}-x-[E/D] or [pS/pT]-{P}-x-pS, (https://www.sciencedirect.com/science/article/pii/S2405580815000680)
+kinaseMotifList[["Ck2"]] <- "^.{6}[S|T][S|T].[E|D|S]"
+
 # PKA: R-R/K-X-S-ϕ
-kinaseMotifList[["Pka_motif_re"]] <- "^.{12}R[R|K].S[V|I||L|F|W|Y|M]"
+kinaseMotifList[["Pka"]] <- "^.{4}R[R|K].[S|T][V|I||L|F|W|Y|M]"
+
+# TOTAL
+kinaseMotifList[["Total"]] <- "^.{7}[S|T|Y]"
 
 
-motifCounts_all <- sapply(kinaseMotifList, function(x){
-  length(grep(x,subset(phosphoSiteClusters,type=="Non proline directed")$sequence_red))
-})
+
 motifCounts_clusterA <- sapply(kinaseMotifList, function(x){
-  length(grep(x,subset(phosphoSiteClusters,type=="Non proline directed" & Cluster=="cluster3")$sequence_red))
+  length(grep(x,subset(phosphoSiteClusters, Cluster=="cluster3")$sequence_red))
 })
 motifCounts_clusterB <- sapply(kinaseMotifList, function(x){
-  length(grep(x,subset(phosphoSiteClusters,type=="Non proline directed" & Cluster=="cluster4")$sequence_red))
+  length(grep(x,subset(phosphoSiteClusters, Cluster=="cluster4")$sequence_red))
 })
 motifCounts_clusterC <- sapply(kinaseMotifList, function(x){
-  length(grep(x,subset(phosphoSiteClusters,type=="Non proline directed" & Cluster=="cluster1")$sequence_red))
+  length(grep(x,subset(phosphoSiteClusters, Cluster=="cluster1")$sequence_red))
 })
 motifCounts_clusterD <- sapply(kinaseMotifList, function(x){
-  length(grep(x,subset(phosphoSiteClusters,type=="Non proline directed" & Cluster=="cluster2")$sequence_red))
+  length(grep(x,subset(phosphoSiteClusters, Cluster=="cluster2")$sequence_red))
+})
+motifCounts_all <- sapply(kinaseMotifList, function(x){
+  length(grep(x,subset(phosphoSiteClusters)$sequence_red))
 })
 
-motifCounts_table <- rbind(motifCounts_all,motifCounts_clusterA,motifCounts_clusterB,motifCounts_clusterC,motifCounts_clusterD)
+motifCounts_table <- rbind(motifCounts_clusterA,motifCounts_clusterB,motifCounts_clusterC,motifCounts_clusterD,motifCounts_all)
 
-row.names(NonProDirected_motifCounts_table) <- c("Total","Cluster A","Cluster B","Cluster C","Cluster D")
+row.names(motifCounts_table) <- c("Cluster A","Cluster B","Cluster C","Cluster D","Total")
 # colnames(NonProDirected_motifCounts_table) <- c("Plk","Aurora","Nek","Ck1","Unknown","Ck2","Pka")
 
 motifCounts_table
