@@ -142,6 +142,12 @@ kinaseMotifList[["Ck2"]] <- "^.{6}[S|T][S|T].[E|D|S]"
 # PKA: R-R/K-X-S-ϕ
 kinaseMotifList[["Pka"]] <- "^.{4}R[R|K].[S|T][V|I||L|F|W|Y|M]"
 
+# Cdk1 full
+kinaseMotifList[["Cdk full"]] <- "^.{7}[S|T]P.[K|R]"
+
+# Cddk minimal
+kinaseMotifList[["Cdk minimal"]] <- "^.{7}[S|T]P"
+
 # TOTAL
 kinaseMotifList[["Total"]] <- "^.{7}[S|T|Y]"
 
