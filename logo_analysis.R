@@ -117,21 +117,17 @@ kinaseMotifList <- list()
 # Plk: [D/N/E/Y]-X-[S/T]-[ ϕ /F; no P]-[ ϕ /X] 
 kinaseMotifList[["Plk"]] <- "^.{5}[D|N|E|Y].[S|T][A|V|I||L|F|W|Y|M]"
 
-# Plk1: [D/E]-X-[S/T]-[ϕ]-X-[D/E] (https://www.jbc.org/content/278/28/25277.long)
-kinaseMotifList[["Plk1"]] <- "^.{5}[D|E].[S|T][A|V|I||L|F|W|Y|M].[D|E]"
+# # Plk1: [D/E]-X-[S/T]-[ϕ]-X-[D/E] (https://www.jbc.org/content/278/28/25277.long)
+# kinaseMotifList[["Plk1"]] <- "^.{5}[D|E].[S|T][A|V|I||L|F|W|Y|M].[D|E]"
 
-# Aurora: R/K-X-S/T-[ ϕ /F; no P] -> [KR].[ST][^P] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2999863/#b29)
+# Aurora: R/K-X-S/T-[ ϕ /F; no P] -> [KR].[ST][^P] (https:///pwww.ncbi.nlm.nih.govmc/articles/PMC2999863/#b29)
 kinaseMotifList[["Aurora A/B"]] <- "^.{5}[R|K].[S|T][^P]" 
 
 # Nek:  (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6570481/)
-# Nek1/3/4:[F/L/M/W]-X-R-T-[V|I||L|F|W|Y|M][K/R][V|I||L|F|W|Y|M]
-kinaseMotifList[["Nek1/3/4"]] <- "^.{3}W[F|L|M|W].RT[A|V|I||L|F|W|Y|M][R|K][A|V|I||L|F|W|Y|M]"
-# Nek5/8:[F/L/M/W]-X-R-T-[V|I||L|F|W|Y|M][K/R][V|I||L|F|W|Y|M]
-kinaseMotifList[["Nek5/8"]] <- "^.{3}W[F|L|M|W].{2}T[M|F][R|K][A|V|I||L|F|W|Y|M]"
-# Nek2/10:[F/L/M/W]-X-R-T-[V|I||L|F|W|Y|M][K/R][V|I||L|F|W|Y|M]
-kinaseMotifList[["Nek2/10"]] <- "^.{3}W[F|L|M|].RS[A|V|I||L|F|W|Y|M][R]"
-# Nek6/7/9:[F/L/M/W]-X-R-T-[V|I||L|F|W|Y|M][K/R][V|I||L|F|W|Y|M]
-kinaseMotifList[["Nek6/7/9"]] <- "^.{5}[L|M|F][D|E|N|Y][Y]S[A|V|I||L|F|W|Y|M]"
+# Nek general: [L|M|F|W].[S|T][A|V|I||L|F|W|Y|M][K|R]
+kinaseMotifList[["Nek1/2/3/4/5/8/10"]] <- "^.{5}[L|M|F|W].[S|T][A|V|I||L|F|W|Y|M][K|R]"
+# Nek6/7/9":[F/L/M/W]-X-R-T
+kinaseMotifList[["Nek6/7/9"]] <- "^.{4}[L|M|F][D|E|N][D|E|Y]S[A|V|I||L|F|W|Y|M]"
 
 # Casein kinase 1: D/E-D/E-D/E-X-X-S/T or # pS/pT-X-X-S/T 
 kinaseMotifList[["Ck1"]] <- "^((.{2}[E|D][E|D][E|D])|(.{4}[S|T]|)).{2}[S|T]"
@@ -140,7 +136,7 @@ kinaseMotifList[["Ck1"]] <- "^((.{2}[E|D][E|D][E|D])|(.{4}[S|T]|)).{2}[S|T]"
 kinaseMotifList[["Ck2"]] <- "^.{6}[S|T][S|T].[E|D|S]"
 
 # PKA: R-R/K-X-S-ϕ
-kinaseMotifList[["Pka"]] <- "^.{4}R[R|K].[S|T][V|I||L|F|W|Y|M]"
+kinaseMotifList[["Pka"]] <- "^.{4}R[R|K].[S|T][A|V|I||L|F|W|Y|M]"
 
 # Cdk1 full
 kinaseMotifList[["Cdk full"]] <- "^.{7}[S|T]P.[K|R]"
@@ -166,7 +162,7 @@ motifCounts_clusterD <- sapply(kinaseMotifList, function(x){
   length(grep(x,subset(phosphoSiteClusters, Cluster=="cluster2")$sequence_red))
 })
 motifCounts_all <- sapply(kinaseMotifList, function(x){
-  length(grep(x,subset(phosphoSiteClusters)$sequence_red))
+  length(grep(x,phosphoSiteClusters$sequence_red))
 })
 
 motifCounts_table <- rbind(motifCounts_clusterA,motifCounts_clusterB,motifCounts_clusterC,motifCounts_clusterD,motifCounts_all)
