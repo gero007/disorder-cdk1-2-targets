@@ -12,6 +12,10 @@ phosphoSiteBackground <- read_delim("utrech/Phosphoproteomics_Shotgun_Clustering
                                     col_types = cols(
                                       ANOVA = col_factor(levels = c("+","-"))),
                                     trim_ws = TRUE)
+phosphoSiteBackground <- phosphoSiteBackground %>% mutate(type=case_when(
+  substr(sequence,start = 17,stop = 17) == "P" ~ "Proline directed",
+  TRUE ~ "Non proline directed"
+))
 
 phosphoSiteBackground <- phosphoSiteBackground %>% mutate(sequence_red=  substr(sequence,start = 9,stop = 23))
 
@@ -75,10 +79,10 @@ informationContent_calculator <- function(sequences,backgroundProb){
 
 IC_matrix_list <- list()
 
-# Total
-IC_matrix_list[["All phosphosites"]] <- informationContent_calculator(phosphoSiteClusters$sequence_red,bkgEstProbs)
-IC_matrix_list[["Proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,type=="Proline directed")$sequence_red,bkgEstProbs)
-IC_matrix_list[["Non proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,type=="Non proline directed")$sequence_red,bkgEstProbs)
+# Anova +
+IC_matrix_list[["ANOVA positive - All phosphosites"]] <- informationContent_calculator(phosphoSiteClusters$sequence_red,bkgEstProbs)
+IC_matrix_list[["ANOVA positive - Proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,type=="Proline directed")$sequence_red,bkgEstProbs)
+IC_matrix_list[["ANOVA positive - Non proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,type=="Non proline directed")$sequence_red,bkgEstProbs)
 
 # Cluster A (cluster3)
 
@@ -100,9 +104,14 @@ IC_matrix_list[["Cluster C - Non proline directed"]] <- informationContent_calcu
 
 # Cluster D (cluster2)
 
-IC_matrix_list[["Cluster D - All phosphosites"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster2")$sequence_red,bkgEstProbs)
-IC_matrix_list[["Cluster D - Proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster2" & type=="Proline directed")$sequence_red,bkgEstProbs)
-IC_matrix_list[["Cluster D - Non proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster2" & type=="Non proline directed")$sequence_red,bkgEstProbs)
+IC_matrix_list[["Cluster C - All phosphosites"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster2")$sequence_red,bkgEstProbs)
+IC_matrix_list[["Cluster C - Proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster2" & type=="Proline directed")$sequence_red,bkgEstProbs)
+IC_matrix_list[["Cluster C - Non proline directed"]] <- informationContent_calculator(subset(phosphoSiteClusters,Cluster=="cluster2" & type=="Non proline directed")$sequence_red,bkgEstProbs)
+
+# all phosphosites
+IC_matrix_list[["Whole set - All phosphosites"]] <- informationContent_calculator(phosphoSiteBackground$sequence_red,bkgEstProbs)
+IC_matrix_list[["Whole set - Proline directed"]] <- informationContent_calculator(subset(phosphoSiteBackground, type=="Proline directed")$sequence_red,bkgEstProbs)
+IC_matrix_list[["Whole set - Non proline directed"]] <- informationContent_calculator(subset(phosphoSiteBackground,type=="Non proline directed")$sequence_red,bkgEstProbs)
 
 # Plots
   
