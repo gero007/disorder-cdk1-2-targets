@@ -2,6 +2,8 @@ library(readr)
 library(dplyr)
 library(data.table)
 library(ggplot2)
+library(ggsci)
+library(scales)
 
 
 all_protein_id_phospho <- read_lines("utrech/Xen_phospho_allProteins.txt")
@@ -144,8 +146,16 @@ test_df <- test_df %>% mutate(state=case_when(
 ))
 
 ggplot(test_df,aes(x=positions,y=IUPredScores)) +
-  geom_line(color="darkslategrey") +
-  geom_segment(aes(color=state,x=positions,xend=positions,y=0,yend=IUPredScores),alpha=0.7,linejoin = "round") +
-  geom_hline(yintercept = 0.5,color="darkslategrey",size=1,linetype = "dashed") +
+  geom_col(aes(fill=state,color=state)) +
   ggpubr::theme_classic2() + 
-  theme(text = element_text(size=17),legend.position = "none")
+  theme(text = element_text(size=17),legend.position = "none") +
+  scale_x_continuous(limits = c(0, nrow(test_df)+1),breaks = c(seq(0, nrow(test_df)+1, by = 50)))+ xlab("Positions") +
+  scale_y_continuous(limits = c(-0.05, 1),breaks = c(seq(0,1,by=0.25))) + ylab("IUpred Scores") +
+  scale_fill_manual(values = pal_jco()(10)[c(4,3)]) +
+  scale_color_manual(values = pal_jco()(10)[c(4,3)]) +
+  annotate("point",x = c(120,246),y=rep(-0.02,2),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=4) +
+  annotate("point",x = c(45,120,150,246),y=rep(0,4),shape=25,color=pal_jco()(10)[10],fill=pal_jco()(10)[5],size=2)
+
+  
+  
+
