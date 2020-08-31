@@ -1,7 +1,8 @@
 To-do:
 
 1. Motif: polish the RE and add the counts for Holt and Human datasets
-2. Human dataset: check if it contains the data from the papers Dan sent. Add manually curated and other publications (new science advances and Helfrid)
+2. Human dataset: check if it contains the data from the papers Dan sent. Add manually curated and other publications (new science advances and Helfrid) - Lila took charge!
+(meeting pending)
 3. Juan disorder. Polish the plots and finish the scheme. Re- implement the disorder score plots and add the examples from Lila.
 4. Re-write the bioinformatic part of the paper.
 5. Uniform aesthetics
