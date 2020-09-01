@@ -89,6 +89,7 @@ all_predictions_phospho <- all_predictions_phospho %>% mutate(anova_sig=case_whe
 #   TRUE ~ "other"
 # ))
 
+phosphoDiso_ST <- list()
 phosphoDiso_obs <- numeric()
 phosphoDiso_expct <- numeric()
 phosphoDiso_expct_prob <- numeric()
@@ -99,11 +100,13 @@ for (i in 1:nrow(all_predictions_phospho)) {
   TStotalIndexes <- as.numeric(gregexpr("S|T", all_predictions_phospho[i,"sequence"])[[1]]) 
   TSinDiso_count <- sum(TStotalIndexes %in% all_predictions_phospho[i,"disordered"][[1]])
   TSinDiso_fraction <- TSinDiso_count/length(TStotalIndexes)
-  phosphoDiso_expct_prob[[i]] <- TSinDiso_fraction
-  phosphoDiso_expct[[i]] <- all_predictions_phospho[i,"psites_count"]*TSinDiso_fraction
-  phosphoDiso_obs[[i]] <- sum(all_predictions_phospho[i,"psites"][[1]] %in% all_predictions_phospho[i,"disordered"][[1]])
+  phosphoDiso_ST[[i]] <- TStotalIndexes
+  phosphoDiso_expct_prob[i] <- TSinDiso_fraction
+  phosphoDiso_expct[i] <- all_predictions_phospho[i,"psites_count"]*TSinDiso_fraction
+  phosphoDiso_obs[i] <- sum(all_predictions_phospho[i,"psites"][[1]] %in% all_predictions_phospho[i,"disordered"][[1]])
 }
 
+all_predictions_phospho$ST_residues <- phosphoDiso_ST
 all_predictions_phospho$psites_obsv_diso <- phosphoDiso_obs
 all_predictions_phospho$psites_expct_diso <- phosphoDiso_expct
 all_predictions_phospho$psites_expct_diso_prob <- phosphoDiso_expct_prob
@@ -114,11 +117,6 @@ all_predictions_phospho$psites_expct_diso_prob <- phosphoDiso_expct_prob
 # Binomial test:
 # Calculate percentage of disordered region from all proteins
 
-apply(all_predictions_phospho, 1, function(x){
-  
-  binom.test(x = x$psites_obsv_diso,n = x$psites_count,p = x$psites_expct_diso,
-              alternative = "greater")
-})
 
 all_predictions_phospho <- as.data.table(all_predictions_phospho)
 all_predictions_phospho[,binom := purrr::pmap(.(psites_obsv_diso, psites_count, psites_expct_diso_prob), binom.test, alternative="greater")]
@@ -130,7 +128,7 @@ all_predictions_phospho[,binom_sig := factor(ifelse(binom_q < 0.05, ifelse(binom
 
 ggplot(all_predictions_phospho) + 
   geom_point(aes(x=psites_obsv_diso,y=psites_expct_diso, colour = binom_sig),size=2,alpha=0.6)+
-  geom_abline(color="darkslategrey",slope = 1,size=1,linetype = "dashed")+
+  geom_abline(color="darkslategrey",slope = 1,size=0.5,linetype = "dashed")+
   ggpubr::theme_classic2() + 
   theme(text = element_text(size=17),legend.position = "none") + 
   scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed phospho S/T in IDR") +
@@ -138,24 +136,36 @@ ggplot(all_predictions_phospho) +
   scale_colour_manual(values = c("gray","orange","red"))
 
 
-test_df <- as.data.frame(cbind(all_predictions_phospho$positions[[1]],all_predictions_phospho$IUPredScores[[1]]))
-names(test_df) <- c("positions","IUPredScores")
-test_df <- test_df %>% mutate(state=case_when(
-  IUPredScores >= 0.5 ~ "Disordered",
-  TRUE ~ "Structured"
-))
+IUpredScoresPlotGenerator <- function(dataframe){
+  plotList <- list()
+  for(i in 1:nrow(dataframe)){
+    plotTittle <- dataframe[i,"ID"]
+    aux_df <-  as.data.frame(cbind(dataframe$positions[[i]],dataframe$IUPredScores[[i]]))
+    names(aux_df) <- c("positions","IUPredScores")
+    
+    plotList[[i]] <- ggplot(aux_df,aes(x=positions,y=IUPredScores)) +
+      geom_col(aes(fill=IUPredScores >= 0.5 ,color=IUPredScores >= 0.5)) +
+      ggpubr::theme_classic2() + 
+      theme(text = element_text(size=17),legend.position = "none") +
+      scale_x_continuous(limits = c(0, nrow(aux_df)+1),breaks = c(seq(0, nrow(aux_df)+1, by = 50)),expand = c(0.005,0.005))+ xlab("Positions") +
+      scale_y_continuous(limits = c(-0.05, 1),breaks = c(seq(0,1,by=0.25))) + ylab("IUpred Scores") +
+      scale_fill_manual(values = pal_jco()(10)[c(3,4)]) +
+      scale_color_manual(values = pal_jco()(10)[c(3,4)]) +
+      annotate("point",x = dataframe$psites[[i]],y=rep(-0.02,length(dataframe$psites[[i]])),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=4) +
+      annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape=25,color=pal_jco()(10)[10],fill=pal_jco()(10)[5],size=2) +
+      geom_hline(yintercept = 0.5,size=0.5,linetype = "dashed",color = "darkslategrey") + 
+      ggtitle(plotTittle)
+  }
+  names(plotList)<-dataframe$ID
+  if (returnPlots==F) { 
+    return(plotList)
+  } else {}
+}
 
-ggplot(test_df,aes(x=positions,y=IUPredScores)) +
-  geom_col(aes(fill=state,color=state)) +
-  ggpubr::theme_classic2() + 
-  theme(text = element_text(size=17),legend.position = "none") +
-  scale_x_continuous(limits = c(0, nrow(test_df)+1),breaks = c(seq(0, nrow(test_df)+1, by = 50)))+ xlab("Positions") +
-  scale_y_continuous(limits = c(-0.05, 1),breaks = c(seq(0,1,by=0.25))) + ylab("IUpred Scores") +
-  scale_fill_manual(values = pal_jco()(10)[c(4,3)]) +
-  scale_color_manual(values = pal_jco()(10)[c(4,3)]) +
-  annotate("point",x = c(120,246),y=rep(-0.02,2),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=4) +
-  annotate("point",x = c(45,120,150,246),y=rep(0,4),shape=25,color=pal_jco()(10)[10],fill=pal_jco()(10)[5],size=2)
-
-  
-  
-
+# test <- IUpredScoresPlotGenerator(all_predictions_phospho)
+#   
+# pdf("IUpredScores.pdf",width = 15,height = 3)
+#  for (plot in test) {
+#    print(plot)
+#  }
+# dev.off()
