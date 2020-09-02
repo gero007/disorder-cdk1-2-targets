@@ -6,6 +6,7 @@ library(ggsci)
 library(scales)
 
 
+
 all_protein_id_phospho <- read_lines("utrech/Xen_phospho_allProteins.txt")
 cluster_oscillating <- read_lines("utrech/Xen_phospho_ClusterD.txt")
 cluster_interphase <- read_lines("utrech/Xen_phospho_ClusterC.txt")
@@ -133,7 +134,7 @@ ggplot(all_predictions_phospho) +
   theme(text = element_text(size=17),legend.position = "none") + 
   scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed phospho S/T in IDR") +
   scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected phospho S/T in IDR") + 
-  scale_colour_manual(values = c("gray","orange","red"))
+  scale_colour_manual(values = pal_jco()(10)[c(3,2,4)])
 
 
 IUpredScoresPlotGenerator <- function(dataframe){
@@ -146,37 +147,30 @@ IUpredScoresPlotGenerator <- function(dataframe){
     plotList[[i]] <- ggplot(aux_df,aes(x=positions,y=IUPredScores)) +
       geom_col(aes(fill=IUPredScores >= 0.5 ,color=IUPredScores >= 0.5)) +
       ggpubr::theme_classic2() + 
-      theme(text = element_text(size=17),legend.position = "none") +
+      theme(text = element_text(size=19),legend.position = "none") +
       scale_x_continuous(limits = c(0, nrow(aux_df)+1),breaks = c(seq(0, nrow(aux_df)+1, by = 50)),expand = c(0.005,0.005))+ xlab("Positions") +
-      scale_y_continuous(limits = c(-0.05, 1),breaks = c(seq(0,1,by=0.25))) + ylab("IUpred Scores") +
+      scale_y_continuous(limits = c(-0.1, 1),breaks = c(seq(0,1,by=0.25)),expand = c(0.05,0.05)) + ylab("IUpred Scores") +
       scale_fill_manual(values = pal_jco()(10)[c(3,4)]) +
       scale_color_manual(values = pal_jco()(10)[c(3,4)]) +
-      annotate("point",x = dataframe$psites[[i]],y=rep(-0.02,length(dataframe$psites[[i]])),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=4) +
-      annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape=25,color=pal_jco()(10)[10],fill=pal_jco()(10)[5],size=2) +
+      annotate("point",x = dataframe$psites[[i]],y=rep(-0.06,length(dataframe$psites[[i]])),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=6) +
+      annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape=25,color=pal_jco()(10)[10],fill=pal_jco()(10)[5],size=4) +
       geom_hline(yintercept = 0.5,size=0.5,linetype = "dashed",color = "darkslategrey") + 
       ggtitle(plotTittle)
   }
   names(plotList)<-dataframe$ID
-  if (returnPlots==F) { 
-    return(plotList)
-  } else {}
+  return(plotList)
 }
 
-# test <- IUpredScoresPlotGenerator(all_predictions_phospho)
-#   
-# pdf("IUpredScores.pdf",width = 15,height = 3)
-#  for (plot in test) {
-#    print(plot)
-#  }
-# dev.off()
+plotList <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,binom_q < 0.05))
 
-#######################################  HUMAN  ###############################################################
+pdf("IUpredScores.pdf",width = 15,height = 3)
+ for (plot in plotList) {
+   print(plot)
+ }
+dev.off()
 
+#######################################  HUMAN (Lila subset) ###############################################################
 
-all_protein_id_phospho <- read_lines("utrech/Xen_phospho_allProteins.txt")
-cluster_oscillating <- read_lines("utrech/Xen_phospho_ClusterD.txt")
-cluster_interphase <- read_lines("utrech/Xen_phospho_ClusterC.txt")
-significant_anova <- read_lines("utrech/Xen_phospho_ANOVApos.txt")
 
 
 disoPath <- "predictions/IUpred_run_xenopus/"

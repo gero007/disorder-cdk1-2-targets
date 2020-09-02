@@ -34,6 +34,8 @@ library(AnnotationDbi)
 library(ggridges)
 library(hrbrthemes)
 library(ggrepel)
+library(ggsci)
+
 
 source("getDisorder_V2.R")
 source("contingencyTablesAnalysis_V2.R")
@@ -583,9 +585,14 @@ xenopus_data <- merge.data.frame(xenopus_data,xenopusDiso,by = "ID")
 
 oscillatingV2 <- c("4et","abi2","acly","acrc","addg","adm1a","agfg1","aim1","ankl2","apc1","aptx","arhb","ari1a","armc9","aspc1","atad5","atx2l","bin1","caf1b","camp1","CB055","cc155","cdc27","cdca3","cdt1","CS021","cytsb","dc1l2","dctn6","dgcr8","dkc1","dnjc2","dock7","dons","dpoa2","dpola","ect2","eif3a","ell2","elys","emal1","eme2","ep300","epa2a","erc6l","esco2","exoc4","fbp1l","flip1","g3bp2","gipc1","GTSE1","gwl","heat6","hnrpk","home2","if4g2","inceb","ipp","kazrn","kd3ab","kdm3b","ks6c1","l14aa","lap2b","lemd1","lima1","lin54","lpp","lyric","map4","map7","marcs","mcm10","mcm4","melk","missl","mta2","mtus1","neb1","nf2ip","nipa","np1l4","npat","nsd2","nu133","nu153","nup50","nup53","nup98","nupl","osb11","p121c","p66a","pcdh1","pcm1","pcnt","pdli5","pdli7","phr4b","pica","pkcb1","plk1","pp4r3","pphln","prc2b","prcc","psip1","rbm14","recq4","ren3b","rfa1","rif1","rnf4","rnh2b","rtn4","sf3a1","sf3b1","sltm","smca4","sox13","spag5","srrm2","supt3","t194a","t2fa","tacc3","tbc13","tbcd8","tcf20","tdif2","tdrkh","thoc1","tnik","tob1a","tpx2a","tr61b","tri36","ttk","un13b","vrk3","wdr33","wdr70","wee2a","xrn1","zar1l","zc3hd","zmym3","zn462","zo3")
 
-xenopus_data <- xenopus_data %>% mutate(target=case_when(
-    ID %in% oscillatingV2 ~ "Cdk1 target",
-    TRUE ~ "Non Cdk1 target"
+xenopus_data <- xenopus_data %>% mutate(target_clusterD=case_when(
+    ID %in% oscillatingV2 ~ "Oscillating",
+    TRUE ~ "Non Oscillating"
+))
+
+xenopus_data <- xenopus_data %>% mutate(target_clusterC=case_when(
+    ID %in% oscillatingV2 ~ "Oscillating",
+    TRUE ~ "Non Oscillating"
 ))
 
 xenopus_data$psites <- lapply(xenopus_data$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
@@ -1122,15 +1129,20 @@ yeastIntersect_reshaped_disoPerc_figure$Predictor <-
   factor(yeastIntersect_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
 
 ggplot(yeastIntersect_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
-geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+geom_violin(aes(fill=target,color=target),position=position_dodge(0.9),bw=10,alpha=0.7,trim = F) +
+geom_boxplot(aes(color=target),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
 ggpubr::theme_pubclean() +
 theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-scale_y_continuous(limits = c(-20, 125), breaks = c(seq(0, 100, by = 10))) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 10))) +
 scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
-geom_segment(aes(x = 0.75, y = 120, xend = 1.25, yend = 120)) + annotate(geom="text", x=1, y=125, label="***") +
-geom_segment(aes(x = 1.75, y = 120, xend = 2.25, yend = 120)) + annotate(geom="text", x=2, y=125, label="***") +
-geom_segment(aes(x = 2.75, y = 120, xend = 3.25, yend = 120)) + annotate(geom="text", x=3, y=125, label="***")
+geom_segment(aes(x = 0.75, y = 133, xend = 1.25, yend = 133)) + annotate(geom="text", x=1, y=135, label="***") +
+geom_segment(aes(x = 1.75, y = 133, xend = 2.25, yend = 133)) + annotate(geom="text", x=2, y=135, label="***") +
+geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="text", x=3, y=135, label="***") +
+scale_fill_manual(values = pal_jco()(10)[c(9,6)]) +
+scale_color_manual(values = pal_jco()(10)[c(9,6)])
+
+
+
 
 
 ####################################
@@ -1160,15 +1172,17 @@ human_reshaped_disoPerc_figure$Predictor <-
   factor(human_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
 
 ggplot(human_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
-geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+geom_violin(aes(fill=target,color=target),position=position_dodge(0.9),bw=10,alpha=0.7,trim = F) +
+geom_boxplot(aes(color=target),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
 ggpubr::theme_pubclean() +
 theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-scale_y_continuous(limits = c(-20, 125), breaks = c(seq(0, 100, by = 10))) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 10))) +
 scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
-geom_segment(aes(x = 0.75, y = 120, xend = 1.25, yend = 120)) + annotate(geom="text", x=1, y=125, label="***") +
-geom_segment(aes(x = 1.75, y = 120, xend = 2.25, yend = 120)) + annotate(geom="text", x=2, y=125, label="***") +
-geom_segment(aes(x = 2.75, y = 120, xend = 3.25, yend = 120)) + annotate(geom="text", x=3, y=125, label="***")
+geom_segment(aes(x = 0.75, y = 133, xend = 1.25, yend = 133)) + annotate(geom="text", x=1, y=135, label="***") +
+geom_segment(aes(x = 1.75, y = 133, xend = 2.25, yend = 133)) + annotate(geom="text", x=2, y=135, label="***") +
+geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="text", x=3, y=135, label="***") +
+scale_fill_manual(values = pal_jco()(10)[c(9,6)]) +
+scale_color_manual(values = pal_jco()(10)[c(9,6)])
 ```
 
 ### Xenopus  
@@ -1195,15 +1209,17 @@ xenopus_reshaped_disoPerc_figure$Predictor <-
   factor(xenopus_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
 
 ggplot(xenopus_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
-geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+geom_violin(aes(fill=target,color=target),position=position_dodge(0.9),bw=10,alpha=0.7,trim = F) +
+geom_boxplot(aes(color=target),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
 ggpubr::theme_pubclean() +
 theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-scale_y_continuous(limits = c(-20, 125), breaks = c(seq(0, 100, by = 10))) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 10))) +
 scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
-geom_segment(aes(x = 0.75, y = 120, xend = 1.25, yend = 120)) + annotate(geom="text", x=1, y=125, label="***") +
-geom_segment(aes(x = 1.75, y = 120, xend = 2.25, yend = 120)) + annotate(geom="text", x=2, y=125, label="***") +
-geom_segment(aes(x = 2.75, y = 120, xend = 3.25, yend = 120)) + annotate(geom="text", x=3, y=125, label="***")
+geom_segment(aes(x = 0.75, y = 133, xend = 1.25, yend = 133)) + annotate(geom="text", x=1, y=135, label="***") +
+geom_segment(aes(x = 1.75, y = 133, xend = 2.25, yend = 133)) + annotate(geom="text", x=2, y=135, label="***") +
+geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="text", x=3, y=135, label="***") +
+scale_fill_manual(values = pal_jco()(10)[c(9,6)]) +
+scale_color_manual(values = pal_jco()(10)[c(9,6)])
 ```
 
 For boths datasets there is a statistical significative increase in the percentage of predicted disorder aminoacids in yeast proteins for those proteins characterized as CDK1 targets. Moreover, for the Holt dataset a similar result is obtained if we skipped the CDK1 phosporylation site filter. That is, CDK1 targets defined as all the proteins with Serines and Threonines residues presenting a decrease on the phosphorylation upon CDK1 inhibition,regardles if they respect the minimal CDK1 phosphosite consensus motif, show an increase in the percentage of predicted disorder amino acids (<a href="supplementary/Supp.html">Supplementary</a> Fig X).
