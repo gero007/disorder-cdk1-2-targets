@@ -35,6 +35,7 @@ library(ggridges)
 library(hrbrthemes)
 library(ggrepel)
 library(ggsci)
+library(scales)
 
 
 source("getDisorder_V2.R")
@@ -590,10 +591,6 @@ xenopus_data <- xenopus_data %>% mutate(target_clusterD=case_when(
     TRUE ~ "Non Oscillating"
 ))
 
-xenopus_data <- xenopus_data %>% mutate(target_clusterC=case_when(
-    ID %in% oscillatingV2 ~ "Oscillating",
-    TRUE ~ "Non Oscillating"
-))
 
 xenopus_data$psites <- lapply(xenopus_data$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 ```
@@ -1129,17 +1126,17 @@ yeastIntersect_reshaped_disoPerc_figure$Predictor <-
   factor(yeastIntersect_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
 
 ggplot(yeastIntersect_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=target,color=target),position=position_dodge(0.9),bw=10,alpha=0.7,trim = F) +
+geom_violin(aes(fill=target,color=target),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
 geom_boxplot(aes(color=target),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
-ggpubr::theme_pubclean() +
-theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 10))) +
+ggpubr::theme_classic2() +
+theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
 scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
 geom_segment(aes(x = 0.75, y = 133, xend = 1.25, yend = 133)) + annotate(geom="text", x=1, y=135, label="***") +
 geom_segment(aes(x = 1.75, y = 133, xend = 2.25, yend = 133)) + annotate(geom="text", x=2, y=135, label="***") +
 geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="text", x=3, y=135, label="***") +
-scale_fill_manual(values = pal_jco()(10)[c(9,6)]) +
-scale_color_manual(values = pal_jco()(10)[c(9,6)])
+scale_fill_manual(values = pal_jco()(10)[c(2,5)]) +
+scale_color_manual(values = pal_jco()(10)[c(7,10)],guide=FALSE)
 
 
 
@@ -1172,17 +1169,18 @@ human_reshaped_disoPerc_figure$Predictor <-
   factor(human_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
 
 ggplot(human_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=target,color=target),position=position_dodge(0.9),bw=10,alpha=0.7,trim = F) +
+geom_violin(aes(fill=target,color=target),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
 geom_boxplot(aes(color=target),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
-ggpubr::theme_pubclean() +
-theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 10))) +
+ggpubr::theme_classic2() +
+theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
 scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
 geom_segment(aes(x = 0.75, y = 133, xend = 1.25, yend = 133)) + annotate(geom="text", x=1, y=135, label="***") +
 geom_segment(aes(x = 1.75, y = 133, xend = 2.25, yend = 133)) + annotate(geom="text", x=2, y=135, label="***") +
 geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="text", x=3, y=135, label="***") +
-scale_fill_manual(values = pal_jco()(10)[c(9,6)]) +
-scale_color_manual(values = pal_jco()(10)[c(9,6)])
+scale_fill_manual(values = pal_jco()(10)[c(2,5)]) +
+scale_color_manual(values = pal_jco()(10)[c(7,10)],guide=FALSE)
+
 ```
 
 ### Xenopus  
@@ -1192,12 +1190,13 @@ scale_color_manual(values = pal_jco()(10)[c(9,6)])
 xenopus_disoPerc_cols_idx <-grep("_perc",colnames(xenopus_data))
 xenopus_reshaped_disoPerc <- melt(xenopus_data[,xenopus_disoPerc_cols_idx])
 colnames(xenopus_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
-xenopus_reshaped_disoPerc$target <- rep(xenopus_data$target,length(xenopus_disoPerc_cols_idx))
+xenopus_reshaped_disoPerc$target_clusterD <- rep(xenopus_data$target_clusterD,length(xenopus_disoPerc_cols_idx))
+xenopus_reshaped_disoPerc$target_clusterD<- relevel(as.factor(xenopus_reshaped_disoPerc$target_clusterD),ref="Oscillating")
 xenopus_reshaped_disoPerc$Predictor <- factor(xenopus_reshaped_disoPerc$Predictor,levels = ordered(levels(xenopus_reshaped_disoPerc$Predictor)))
 
 ggplot(xenopus_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
-    geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
-    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+    geom_violin(aes(fill=target_clusterD),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
+    geom_boxplot(aes(fill=target_clusterD),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
     ggpubr::theme_pubclean() + 
     theme(text = element_text(size=20),axis.text.x = element_text(angle=45),legend.position = "none") + 
     scale_y_continuous(limits = c(-20, 120), breaks = c(seq(0, 100, by = 10)))
@@ -1209,17 +1208,17 @@ xenopus_reshaped_disoPerc_figure$Predictor <-
   factor(xenopus_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
 
 ggplot(xenopus_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=target,color=target),position=position_dodge(0.9),bw=10,alpha=0.7,trim = F) +
-geom_boxplot(aes(color=target),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
-ggpubr::theme_pubclean() +
-theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 10))) +
+geom_violin(aes(fill=target_clusterD,color=target_clusterD),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
+geom_boxplot(aes(color=target_clusterD),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
+ggpubr::theme_classic2() +
+theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
 scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
 geom_segment(aes(x = 0.75, y = 133, xend = 1.25, yend = 133)) + annotate(geom="text", x=1, y=135, label="***") +
 geom_segment(aes(x = 1.75, y = 133, xend = 2.25, yend = 133)) + annotate(geom="text", x=2, y=135, label="***") +
 geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="text", x=3, y=135, label="***") +
-scale_fill_manual(values = pal_jco()(10)[c(9,6)]) +
-scale_color_manual(values = pal_jco()(10)[c(9,6)])
+scale_fill_manual(values = pal_jco()(10)[c(2,5)]) +
+scale_color_manual(values = pal_jco()(10)[c(7,10)],guide=FALSE)
 ```
 
 For boths datasets there is a statistical significative increase in the percentage of predicted disorder aminoacids in yeast proteins for those proteins characterized as CDK1 targets. Moreover, for the Holt dataset a similar result is obtained if we skipped the CDK1 phosporylation site filter. That is, CDK1 targets defined as all the proteins with Serines and Threonines residues presenting a decrease on the phosphorylation upon CDK1 inhibition,regardles if they respect the minimal CDK1 phosphosite consensus motif, show an increase in the percentage of predicted disorder amino acids (<a href="supplementary/Supp.html">Supplementary</a> Fig X).
@@ -1477,11 +1476,11 @@ ggdotchart(predictorsCMH_data, x = "predictors", y = "commonOR",
 ###############################
 # Main fig 4e# Main fig 4e
 
-predictors <- c("IUPred long","SPOT","VSL2b")
+predictors <- c("IUPred","SPOT","VSL2b")
 
 
 yeastIntersect_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
-yeastIntersect_organism <- (rep("Yeast",length(yeastIntersect_idx_cols)))
+yeastIntersect_organism <- (rep("Yeast CDK targets",length(yeastIntersect_idx_cols)))
 yeastIntersect_proteome_length <- sum(yeastDiso_full$Length)
 yeastIntersect_diso_fraction <- numeric()
 yeastIntersect_pval <- numeric()
@@ -1502,7 +1501,7 @@ for (i in 1:length(yeastIntersect_idx_cols)) {
 }
 
 human_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
-human_organism <- (rep("Human",length(human_idx_cols)))
+human_organism <- (rep("Human CDK targets",length(human_idx_cols)))
 human_proteome_length <- sum(humanDiso_full$Length)
 human_diso_fraction <- numeric()
 human_pval <- numeric()
@@ -1523,13 +1522,13 @@ for (i in 1:length(human_idx_cols)) {
 }
 
 xenopus_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
-xenopus_organism <- (rep("xenopus",length(xenopus_idx_cols)))
+xenopus_organism <- (rep("Xenopus Oscillating",length(xenopus_idx_cols)))
 xenopus_proteome_length <- sum(xenopusDiso$Length)
 xenopus_diso_fraction <- numeric()
 xenopus_pval <- numeric()
 xenopus_commonOR <- numeric()
 for (i in 1:length(xenopus_idx_cols)) {
-  xenopusStratContingencyArray <- getStratContingencyArray(df = subset(xenopus_data,target=="Cdk1 target"),
+  xenopusStratContingencyArray <- getStratContingencyArray(df = subset(xenopus_data,target_clusterD=="Oscillating"),
                                                     sequence_col = "Sequence",
                                                     diso_index_col = xenopus_idx_cols[i],
                                                     psites_col = "psites"
@@ -1564,10 +1563,10 @@ ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=predic
     geom_label_repel(size=5)+
     theme_minimal(base_size = 15) +
     # ggpubr::theme_pubclean(base_size=15,) +
-    theme(legend.position = c(0.22,0.75),legend.box.just = "left",legend.box.margin = margin(2, 2, 2, 2),
+    theme(legend.position = c(0.22,0.75),legend.box.just = "center",legend.box.margin = margin(2, 2, 2, 2),
           legend.box.background = element_rect(color="darkslategrey"),panel.grid.minor = element_blank()) +
-    scale_color_gradient(low = "blue",high = "red",limits=c(0,0.5),breaks=c(0,0.25,0.5)) +
-    guides(position="bottom",color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "right"),shape=guide_legend(title="Organism"))
+    scale_color_gradient2(midpoint=0.30,low = pal_jco()(10)[3],mid = pal_jco()(10)[3],high = pal_jco()(10)[4],limits=c(0,0.5),breaks=c(0,0.25,0.5)) +
+    guides(position="bottom",color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "bottom",direction = "horizontal"),shape=guide_legend(title="Dataset"))
 
 
 ```
