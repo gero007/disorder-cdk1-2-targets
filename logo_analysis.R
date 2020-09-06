@@ -123,13 +123,13 @@ ggseqlogo(IC_matrix_list,seq_type='aa',method='custom',ncol = 3) +
 
 kinaseMotifList <- list()
 
-# Plk: [D/N/E/Y]-X-[S/T]-[ ϕ /F; no P]-[ ϕ /X] 
+# Plk: [D/N/E/Y]-X-[S/T]-[ ?? /F; no P]-[ ?? /X] 
 kinaseMotifList[["Plk"]] <- "^.{5}[D|N|E|Y].[S|T][A|V|I||L|F|W|Y|M]"
 
-# # Plk1: [D/E]-X-[S/T]-[ϕ]-X-[D/E] (https://www.jbc.org/content/278/28/25277.long)
+# # Plk1: [D/E]-X-[S/T]-[??]-X-[D/E] (https://www.jbc.org/content/278/28/25277.long)
 # kinaseMotifList[["Plk1"]] <- "^.{5}[D|E].[S|T][A|V|I||L|F|W|Y|M].[D|E]"
 
-# Aurora: R/K-X-S/T-[ ϕ /F; no P] -> [KR].[ST][^P] (https:///pwww.ncbi.nlm.nih.govmc/articles/PMC2999863/#b29)
+# Aurora: R/K-X-S/T-[ ?? /F; no P] -> [KR].[ST][^P] (https:///pwww.ncbi.nlm.nih.govmc/articles/PMC2999863/#b29)
 kinaseMotifList[["Aurora A/B"]] <- "^.{5}[R|K].[S|T][^P]" 
 
 # Nek:  (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6570481/)
@@ -144,7 +144,10 @@ kinaseMotifList[["Ck1"]] <- "^((.{2}[E|D][E|D][E|D])|(.{4}[S|T]|)).{2}[S|T]"
 # Casein kinase 2: [pS/pT]-{P}-x-[E/D] or [pS/pT]-{P}-x-pS, (https://www.sciencedirect.com/science/article/pii/S2405580815000680)
 kinaseMotifList[["Ck2"]] <- "^.{6}[S|T][S|T].[E|D|S]"
 
-# PKA: R-R/K-X-S-ϕ
+# CDC7: [E/D]-[pS/pT]-[E/D]-x-[E/D] 
+kinaseMotifList[["Cdc7"]] <- "^((.{7}[S|T][E|D].[E|D])|(.{7}[S|T][S|T][P]))"
+
+# PKA: R-R/K-X-S-??
 kinaseMotifList[["Pka"]] <- "^.{4}R[R|K].[S|T][A|V|I||L|F|W|Y|M]"
 
 # Cdk1 full

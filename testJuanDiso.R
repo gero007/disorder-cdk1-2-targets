@@ -167,15 +167,44 @@ IUpredScoresPlotGenerator <- function(dataframe){
   return(plotList)
 }
 
-ggplot(all_predictions_phospho) + 
-  geom_point(aes(x=psites_obsv_diso,y=psites_expct_diso, colour = binom_sig),size=2,alpha=0.80)+
-  geom_abline(color="darkslategrey",slope = 1,size=0.5,linetype = "dashed")+
-  ggpubr::theme_classic2() + 
-  theme(text = element_text(size=15),legend.position = c(0.32,0.82),legend.box.just = "left",legend.box.margin = margin(2, 2, 2, 2),legend.box.background = element_rect(color="darkslategrey"),legend.title = element_text(size = 13)) +
+
+melted_all_predictions_phospho <- all_predictions_phospho %>% melt(id.vars=c("ID","cluster","anova_sig"),value.name = "psites_diso",measure.vars=c("psites_expct_diso","psites_obsv_diso"))
+
+# ALL
+ggplot(melted_all_predictions_phospho) + 
+  geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable))+
+  ggpubr::theme_classic2()  + 
+  theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
+  geom_segment(aes(x = 1, y = 29.5, xend = 2, yend = 29.5)) + annotate(geom="text", x=1.5, y=30, label="***") +
   guides(color=guide_legend(title="Statistical significance")) +
-  scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed phospho S/T in IDR") +
-  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected phospho S/T in IDR") + 
-  scale_colour_manual(values = pal_jco()(10)[c(3,2,4)])
+  scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
+  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("S/T in IDR") + 
+  scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
+  scale_fill_manual(values = pal_jco()(10)[c(2,5)])
+
+# ANOVA +
+ggplot(subset(melted_all_predictions_phospho,anova_sig == "ANOVA Significant")) + 
+  geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable))+
+  ggpubr::theme_classic2()  + 
+  theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
+  geom_segment(aes(x = 1, y = 29.5, xend = 2, yend = 29.5)) + annotate(geom="text", x=1.5, y=30, label="***") +
+  guides(color=guide_legend(title="Statistical significance")) +
+  scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
+  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("S/T in IDR") + 
+  scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
+  scale_fill_manual(values = pal_jco()(10)[c(2,5)])
+
+# ClusterD
+ggplot(subset(melted_all_predictions_phospho,cluster == "Oscillating")) + 
+  geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable))+
+  ggpubr::theme_classic2()  + 
+  theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
+  geom_segment(aes(x = 1, y = 29.5, xend = 2, yend = 29.5)) + annotate(geom="text", x=1.5, y=30, label="***") +
+  guides(color=guide_legend(title="Statistical significance")) +
+  scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
+  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("S/T in IDR") + 
+  scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
+  scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
 # plotList <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,binom_q < 0.05))
 # 
@@ -184,6 +213,8 @@ ggplot(all_predictions_phospho) +
 #    print(plot)
 #  }
 # dev.off()
+
+
 
 #######################################  HUMAN (Lila subset) ###############################################################
 
