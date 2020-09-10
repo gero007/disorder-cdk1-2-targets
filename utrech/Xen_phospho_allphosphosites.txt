@@ -1,4 +1,4 @@
-Amino acid	Charge	Multiplicity	ANOVA Significant	Localization prob	Score	ANOVA q-value	Proteins	Positions within proteins	Leading proteins	Sequence window	Unique identifier									
+Amino acid	Charge	Multiplicity	ANOVA Significant	Localization prob	Score	ANOVA q-value	Proteins	Positions within proteins	Leading proteins	Sequence window	Unique identifier
 S	2	___1		0.847288	75.992	0.205141429	1433e	210	1433e	AKAAFDDAIAELDTLSEESYKDSTLIMQLLR	UID1
 S	2	___1		0.79035	170.42	0.91753492	1433z	232	1433z	TLIMQLLRDNLTLWTSDTQGDEAEQGEGGEN	UID2
 S	2	___1		1	91.961	0.552259983	2a5g	550	2a5g	AHKDLKKERPLVRRKSELPQDIYTMKALESH	UID4
