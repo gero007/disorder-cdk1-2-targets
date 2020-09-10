@@ -327,11 +327,17 @@ xenopus_data <- merge.data.frame(xenopus_data,xenopusDiso,by = "ID")
 
 # oscillatingV1 <-c("4et","aak1","abi2","acly","acrc","addg","adm1a","agfg1","aim1","ankh1","ankl2","anr17","apc1","aptx","arhb","ari1a","armc9","aspc1","at2b1","atad5","atrx","atx2l","bcl9","caf1b","camp1","CB055","cc155","cdc27","cdc6","cdca3","cdt1","chfr","chsp1","clip1","com1","cq028","CS021","cstf2","cytsb","dc1l2","dctn6","ddx3","dgcr8","dkc1","dnjc2","dock7","dons","dpoa2","dpola","ect2","eif3a","ell2","elv1a","elys","emal1","ep300","epa2a","erc6l","esco2","fbp1l","flip1","fnbp4","foxk2","fubp2","g3bp2","geph","gipc1","gle1","gpbl1","GTSE1","gwl","heat6","hmgx4","hnrpk","home2","huwe1","if4b","if4g2","ima4","inceb","ipp","kazrn","kd3ab","kdm3b","ki67","kif4","klc4","l14aa","lap2b","lemd1","lima1","lin54","lnp","lpp","lyric","m4k4","magi1","map4","map7","marcs","mcm10","mcm4","mcm6","mdc1","melk","missl","msh6","mta1","mta2","mtus1","neb1","nf2ip","nipa","np1l4","npat","nsd2","nsrp1","nu133","nu153","nup50","nup53","nup98","osb11","p121c","p66a","pacs1","paf","pcm1","pcnt","pdli5","phr4b","pica","pkcb1","plk1","pp14b","pp4r3","pphln","prc2b","prc2c","prcc","rab3i","rabek","rbm14","rbp2","ren3b","rfa1","rif1","rnf34","rnf4","rnh2b","set8b","sf3b1","slbp2","smc4","smca4","spag5","srrm2","srs11","ssbp3","t194a","t2fa","tacc3","tbc13","tcf20","tdif2","tdrkh","tfp11","tnik","tob1a","topk","tpr","tr61b","tri36","tsc2","ttk","ubn2","un13b","vrk3","wdr33","wdr70","wee2a","xpo5","xrn1","zar1l","zmym3","zn462","zo10","zo3")
 
-oscillatingV2 <- c("4et","abi2","acly","acrc","addg","adm1a","agfg1","aim1","ankl2","apc1","aptx","arhb","ari1a","armc9","aspc1","atad5","atx2l","bin1","caf1b","camp1","CB055","cc155","cdc27","cdca3","cdt1","CS021","cytsb","dc1l2","dctn6","dgcr8","dkc1","dnjc2","dock7","dons","dpoa2","dpola","ect2","eif3a","ell2","elys","emal1","eme2","ep300","epa2a","erc6l","esco2","exoc4","fbp1l","flip1","g3bp2","gipc1","GTSE1","gwl","heat6","hnrpk","home2","if4g2","inceb","ipp","kazrn","kd3ab","kdm3b","ks6c1","l14aa","lap2b","lemd1","lima1","lin54","lpp","lyric","map4","map7","marcs","mcm10","mcm4","melk","missl","mta2","mtus1","neb1","nf2ip","nipa","np1l4","npat","nsd2","nu133","nu153","nup50","nup53","nup98","nupl","osb11","p121c","p66a","pcdh1","pcm1","pcnt","pdli5","pdli7","phr4b","pica","pkcb1","plk1","pp4r3","pphln","prc2b","prcc","psip1","rbm14","recq4","ren3b","rfa1","rif1","rnf4","rnh2b","rtn4","sf3a1","sf3b1","sltm","smca4","sox13","spag5","srrm2","supt3","t194a","t2fa","tacc3","tbc13","tbcd8","tcf20","tdif2","tdrkh","thoc1","tnik","tob1a","tpx2a","tr61b","tri36","ttk","un13b","vrk3","wdr33","wdr70","wee2a","xrn1","zar1l","zc3hd","zmym3","zn462","zo3")
+clusterA <- read_lines(file = "xenopusclusterA_mpi.txt")
+clusterB <- read_lines(file = "xenopusclusterB_mpi.txt")
+clusterC <- read_lines(file = "xenopusclusterC_mpi.txt")
+clusterD <- read_lines(file = "xenopusclusterD_mpi.txt")
 
 xenopus_data <- xenopus_data %>% mutate(target_clusterD=case_when(
-    ID %in% oscillatingV2 ~ "Oscillating",
-    TRUE ~ "Non Oscillating"
+    ID %in% clusterA ~ "Cluster A",
+    ID %in% clusterB ~ "Cluster B",
+    ID %in% clusterC ~ "Cluster C",
+    ID %in% clusterD ~ "Cluster D",
+    TRUE ~ "Non Dynamic phosphorylation"
 ))
 
 
@@ -1355,9 +1361,25 @@ clusterC<-read_lines(file = "xenopusclusterC_uniprot.txt")
 
 clusterD<-read_lines(file = "xenopusclusterD_uniprot.txt")
 
-sets <- list("Human CDK targets"=human_CDKtargets,"Cluster C"=clusterC,"Cluster D"=clusterD)
+sets <- list("Human CDK targets"=human_CDKtargets,"Cluster B"=clusterB,"Cluster D"=clusterD)
 
 eulerr_options(fills=list(fill=pal_jco()(10)[c(4,1,5)],alpha=0.8),edges=list(col=pal_jco()(10)[c(9,6,10)]))
+plot(euler(sets, shape = "ellipse"), quantities = TRUE)
+
+
+# human_CDKtargets<-read_lines(file = "humanCDKtargets_uniprot.txt")
+# 
+# clusterA<-unique(read_lines(file = "xenopusclusterA_uniprot.txt"))
+# 
+# clusterB<-unique(read_lines(file = "xenopusclusterB_uniprot.txt"))
+# 
+# clusterC<-read_lines(file = "xenopusclusterC_uniprot.txt")
+# 
+# clusterD<-read_lines(file = "xenopusclusterD_uniprot.txt")
+# 
+sets <- list("Human CDK targets"=human_CDKtargets,"Cluster A"=clusterA,"Cluster B"=clusterB,"Cluster C"=clusterC,"Cluster D"=clusterD)
+
+eulerr_options(fills=list(fill=pal_jco()(10)[c(1,2,3,4,5)],alpha=0.8),edges=list(col=pal_jco()(10)[c(6,7,8,9,10)]))
 plot(euler(sets, shape = "ellipse"), quantities = TRUE)
 
 
