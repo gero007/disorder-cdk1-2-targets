@@ -1372,16 +1372,18 @@ eulerr_options(fills=list(fill=pal_jco()(10)[c(4,1,5)],alpha=0.8),edges=list(col
 plot(euler(sets, shape = "ellipse"), quantities = TRUE)
 
 
-# human_CDKtargets<-read_lines(file = "humanCDKtargets_uniprot.txt")
-# 
-# clusterA<-unique(read_lines(file = "xenopusclusterA_uniprot.txt"))
-# 
-# clusterB<-unique(read_lines(file = "xenopusclusterB_uniprot.txt"))
-# 
-# clusterC<-read_lines(file = "xenopusclusterC_uniprot.txt")
-# 
-# clusterD<-read_lines(file = "xenopusclusterD_uniprot.txt")
-# 
+human_CDKtargets_uniprot<-read_lines(file = "humanCDKtargets_uniprot.txt")
+
+clusterA_uniprot<-unique(read_lines(file = "xenopusclusterA_uniprot.txt"))
+
+clusterB_uniprot<-unique(read_lines(file = "xenopusclusterB_uniprot.txt"))
+
+clusterC_uniprot<-read_lines(file = "xenopusclusterC_uniprot.txt")
+
+clusterD_uniprot<-read_lines(file = "xenopusclusterD_uniprot.txt")
+
+# check  how many Human cdk targets are represented from the total
+
 sets <- list("Human CDK targets"=human_CDKtargets,"Cluster A"=clusterA,"Cluster B"=clusterB,"Cluster C"=clusterC,"Cluster D"=clusterD)
 
 eulerr_options(fills=list(fill=pal_jco()(10)[c(1,2,3,4,5)],alpha=0.8),edges=list(col=pal_jco()(10)[c(6,7,8,9,10)]))
