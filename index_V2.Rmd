@@ -1382,6 +1382,8 @@ clusterC_uniprot<-read_lines(file = "xenopusclusterC_uniprot.txt")
 
 clusterD_uniprot<-read_lines(file = "xenopusclusterD_uniprot.txt")
 
+all_dynamic <- Reduce(union,list(clusterA_uniprot,clusterB_uniprot,clusterC_uniprot,clusterD_uniprot))
+
 # check  how many Human cdk targets are represented from the total
 
 sets <- list("Human CDK targets"=human_CDKtargets,"Cluster A"=clusterA,"Cluster B"=clusterB,"Cluster C"=clusterC,"Cluster D"=clusterD)
