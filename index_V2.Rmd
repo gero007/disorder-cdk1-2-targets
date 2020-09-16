@@ -341,6 +341,10 @@ xenopus_data <- xenopus_data %>% mutate(cluster=case_when(
     TRUE ~ "Non Dynamic phosphorylation"
 ))
 
+xenopus_data <- xenopus_data %>% mutate(hCDK_target=case_when(
+    ID %in% hCDKtargets_mpi ~ TRUE,
+    TRUE ~ FALSE
+))
 
 xenopus_data$psites <- lapply(xenopus_data$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 xenopus_data$UID <- lapply(xenopus_data$UID, function(x){ return(as.character(strsplit(x,",")[[1]]))})
