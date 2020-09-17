@@ -332,7 +332,10 @@ clusterA <- read_lines(file = "xenopusclusterA_mpi.txt")
 clusterB <- read_lines(file = "xenopusclusterB_mpi.txt")
 clusterC <- read_lines(file = "xenopusclusterC_mpi.txt")
 clusterD <- read_lines(file = "xenopusclusterD_mpi.txt")
+humanCDKtargets <- read_lines(file = "humanCDKtargets_mpi.txt")
 
+
+# CHANGE!!!!!!!! if targets are share it only assings to the first one
 xenopus_data <- xenopus_data %>% mutate(cluster=case_when(
     ID %in% clusterA ~ "Cluster A",
     ID %in% clusterB ~ "Cluster B",
@@ -341,10 +344,18 @@ xenopus_data <- xenopus_data %>% mutate(cluster=case_when(
     TRUE ~ "Non Dynamic phosphorylation"
 ))
 
+<<<<<<< HEAD
 xenopus_data <- xenopus_data %>% mutate(hCDK_target=case_when(
     ID %in% hCDKtargets_mpi ~ TRUE,
     TRUE ~ FALSE
 ))
+=======
+xenopus_data <- xenopus_data %>% mutate(hCDKtarget=case_when(
+    ID %in% humanCDKtargets ~ TRUE,
+    TRUE ~ FALSE
+))
+
+>>>>>>> 853ff90092872ae495612d265a6f8fb9d3f77b88
 
 xenopus_data$psites <- lapply(xenopus_data$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 xenopus_data$UID <- lapply(xenopus_data$UID, function(x){ return(as.character(strsplit(x,",")[[1]]))})
