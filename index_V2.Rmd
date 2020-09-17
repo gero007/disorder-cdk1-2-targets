@@ -344,18 +344,12 @@ xenopus_data <- xenopus_data %>% mutate(cluster=case_when(
     TRUE ~ "Non Dynamic phosphorylation"
 ))
 
-<<<<<<< HEAD
-xenopus_data <- xenopus_data %>% mutate(hCDK_target=case_when(
-    ID %in% hCDKtargets_mpi ~ TRUE,
-    TRUE ~ FALSE
-))
-=======
+
 xenopus_data <- xenopus_data %>% mutate(hCDKtarget=case_when(
     ID %in% humanCDKtargets ~ TRUE,
     TRUE ~ FALSE
 ))
 
->>>>>>> 853ff90092872ae495612d265a6f8fb9d3f77b88
 
 xenopus_data$psites <- lapply(xenopus_data$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 xenopus_data$UID <- lapply(xenopus_data$UID, function(x){ return(as.character(strsplit(x,",")[[1]]))})
@@ -950,6 +944,49 @@ geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="t
 scale_fill_manual(values = pal_jco()(10)[c(2,5)]) +
 scale_color_manual(values = pal_jco()(10)[c(7,10)],guide=FALSE)
 
+wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="iupl_perc",conf.int=TRUE)
+wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="spot_perc",conf.int=TRUE)
+wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="vsl_perc",conf.int=TRUE)
+
+#iupl
+# wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="iupl_perc",conf.int=TRUE)
+# 
+# 	Wilcoxon rank sum test with continuity correction
+# 
+# data:  Percentage of disorder by target
+# W = 7724690, p-value < 2.2e-16
+# alternative hypothesis: true location shift is not equal to 0
+# 95 percent confidence interval:
+#  18.76134 22.78303
+# sample estimates:
+# difference in location 
+#               20.82746 
+#spot 
+# > wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="spot_perc",conf.int=TRUE)
+# 
+# 	Wilcoxon rank sum test with continuity correction
+# 
+# data:  Percentage of disorder by target
+# W = 7284012, p-value < 2.2e-16
+# alternative hypothesis: true location shift is not equal to 0
+# 95 percent confidence interval:
+#  16.56422 21.08343
+# sample estimates:
+# difference in location 
+#               18.81313 
+# 
+#vsl 
+# 	Wilcoxon rank sum test with continuity correction
+# 
+# data:  Percentage of disorder by target
+# W = 7364488, p-value < 2.2e-16
+# alternative hypothesis: true location shift is not equal to 0
+# 95 percent confidence interval:
+#  16.75808 20.99424
+# sample estimates:
+# difference in location 
+#               18.88492 
+
 ```
 
 ### Xenopus  
@@ -959,13 +996,23 @@ scale_color_manual(values = pal_jco()(10)[c(7,10)],guide=FALSE)
 xenopus_disoPerc_cols_idx <-grep("_perc",colnames(xenopus_data))
 xenopus_reshaped_disoPerc <- melt(xenopus_data[,xenopus_disoPerc_cols_idx])
 colnames(xenopus_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
-xenopus_reshaped_disoPerc$target_clusterD <- rep(xenopus_data$target_clusterD,length(xenopus_disoPerc_cols_idx))
-xenopus_reshaped_disoPerc$target_clusterD<- relevel(as.factor(xenopus_reshaped_disoPerc$target_clusterD),ref="Oscillating")
+xenopus_reshaped_disoPerc$cluster <- rep(xenopus_data$cluster,length(xenopus_disoPerc_cols_idx))
+xenopus_reshaped_disoPerc$cluster<- relevel(as.factor(xenopus_reshaped_disoPerc$cluster),ref="Non Dynamic phosphorylation")
+xenopus_reshaped_disoPerc <- xenopus_reshaped_disoPerc %>% mutate(dynamic=case_when(
+    cluster != "Non Dynamic phosphorylation" ~ "Dynamic",
+    TRUE ~ "Non dynamic"
+))
+xenopus_reshaped_disoPerc$dynamic<- relevel(as.factor(xenopus_reshaped_disoPerc$dynamic),ref="Dynamic")
+xenopus_reshaped_disoPerc$hCDKtarget <- rep(xenopus_data$hCDKtarget,length(xenopus_disoPerc_cols_idx))
+xenopus_reshaped_disoPerc <- xenopus_reshaped_disoPerc %>% mutate(hCDKtarget=case_when(
+    hCDKtarget  ~ "Human CDK target",
+    TRUE ~ "Other"
+))
 xenopus_reshaped_disoPerc$Predictor <- factor(xenopus_reshaped_disoPerc$Predictor,levels = ordered(levels(xenopus_reshaped_disoPerc$Predictor)))
 
 ggplot(xenopus_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
-    geom_violin(aes(fill=target_clusterD),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
-    geom_boxplot(aes(fill=target_clusterD),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
+    geom_violin(aes(fill=cluster),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
+    geom_boxplot(aes(fill=cluster),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
     ggpubr::theme_pubclean() + 
     theme(text = element_text(size=20),axis.text.x = element_text(angle=45),legend.position = "none") + 
     scale_y_continuous(limits = c(-20, 120), breaks = c(seq(0, 100, by = 10)))
@@ -977,8 +1024,19 @@ xenopus_reshaped_disoPerc_figure$Predictor <-
   factor(xenopus_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
 
 ggplot(xenopus_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=target_clusterD,color=target_clusterD),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
-geom_boxplot(aes(color=target_clusterD),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
+geom_violin(aes(fill=cluster,color=cluster),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
+geom_boxplot(aes(color=cluster),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
+ggpubr::theme_classic2() +
+theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
+scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
+scale_fill_manual(values = pal_jco()(10)[1:5]) +
+scale_color_manual(values = pal_jco()(10)[6:10],guide=FALSE)
+
+
+ggplot(xenopus_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
+geom_violin(aes(fill=dynamic,color=dynamic),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
+geom_boxplot(aes(color=dynamic),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
 ggpubr::theme_classic2() +
 theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
 scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
@@ -988,6 +1046,48 @@ geom_segment(aes(x = 1.75, y = 133, xend = 2.25, yend = 133)) + annotate(geom="t
 geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="text", x=3, y=135, label="***") +
 scale_fill_manual(values = pal_jco()(10)[c(2,5)]) +
 scale_color_manual(values = pal_jco()(10)[c(7,10)],guide=FALSE)
+
+wilcox.test(`Percentage of disorder`~dynamic,data=xenopus_reshaped_disoPerc_figure,subset = Predictor=="iupl_perc",conf.int=TRUE)
+wilcox.test(`Percentage of disorder`~dynamic,data=xenopus_reshaped_disoPerc_figure,subset = Predictor=="spot_perc",conf.int=TRUE)
+wilcox.test(`Percentage of disorder`~dynamic,data=xenopus_reshaped_disoPerc_figure,subset = Predictor=="vsl_perc",conf.int=TRUE)
+
+# iupl
+# 	Wilcoxon rank sum test with continuity correction
+# 
+# data:  Percentage of disorder by dynamic
+# W = 466876, p-value = 2.358e-13
+# alternative hypothesis: true location shift is not equal to 0
+# 95 percent confidence interval:
+#   6.152332 10.849034
+# sample estimates:
+# difference in location 
+#                8.458
+# 
+# spot
+# 	Wilcoxon rank sum test with continuity correction
+# 
+# data:  Percentage of disorder by dynamic
+# W = 425060, p-value = 4.832e-13
+# alternative hypothesis: true location shift is not equal to 0
+# 95 percent confidence interval:
+#   7.01991 12.27978
+# sample estimates:
+# difference in location 
+#               9.613809 
+# 
+# vsl	
+# Wilcoxon rank sum test with continuity correction
+# 
+# data:  Percentage of disorder by dynamic
+# W = 454542, p-value = 5.781e-10
+# alternative hypothesis: true location shift is not equal to 0
+# 95 percent confidence interval:
+#   5.641645 10.862103
+# sample estimates:
+# difference in location 
+#               8.265359 
+
+
 ```
 
 For boths datasets there is a statistical significative increase in the percentage of predicted disorder aminoacids in yeast proteins for those proteins characterized as CDK1 targets. Moreover, for the Holt dataset a similar result is obtained if we skipped the CDK1 phosporylation site filter. That is, CDK1 targets defined as all the proteins with Serines and Threonines residues presenting a decrease on the phosphorylation upon CDK1 inhibition,regardles if they respect the minimal CDK1 phosphosite consensus motif, show an increase in the percentage of predicted disorder amino acids (<a href="supplementary/Supp.html">Supplementary</a> Fig X).
@@ -1327,7 +1427,7 @@ ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=predic
     geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "darkslategrey")+
     annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8,size=5)+
     geom_vline(xintercept=log10(1), linetype="dashed", color = "darkslategrey")+
-    scale_y_continuous(limits = c(1,85)) +
+    scale_y_continuous(limits = c(1,100)) +
     xlim(-2, 2) +
     geom_label_repel(size=4.5)+
     theme_minimal(base_size = 15) +
