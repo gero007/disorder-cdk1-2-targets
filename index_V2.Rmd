@@ -336,20 +336,37 @@ humanCDKtargets <- read_lines(file = "humanCDKtargets_mpi.txt")
 
 
 # CHANGE!!!!!!!! if targets are share it only assings to the first one
-xenopus_data <- xenopus_data %>% mutate(cluster=case_when(
-    ID %in% clusterA ~ "Cluster A",
-    ID %in% clusterB ~ "Cluster B",
-    ID %in% clusterC ~ "Cluster C",
-    ID %in% clusterD ~ "Cluster D",
-    TRUE ~ "Non Dynamic phosphorylation"
+xenopus_data <- xenopus_data %>% mutate(cluster_A=case_when(
+    ID %in% clusterA ~ TRUE,
+    TRUE ~ FALSE
+))
+xenopus_data <- xenopus_data %>% mutate(cluster_B=case_when(
+    ID %in% clusterB ~ TRUE,
+    TRUE ~ FALSE
+))
+xenopus_data <- xenopus_data %>% mutate(cluster_C=case_when(
+    ID %in% clusterC ~ TRUE,
+    TRUE ~ FALSE
+))
+xenopus_data <- xenopus_data %>% mutate(cluster_D=case_when(
+    ID %in% clusterD ~ TRUE,
+    TRUE ~ FALSE
 ))
 
+xenopus_data <- xenopus_data %>% mutate(ANOVA=case_when(
+    ID %in% clusterD ~ TRUE,
+    TRUE ~ FALSE
+))
+
+xenopus_data <- xenopus_data %>% mutate(ANOVA=case_when(
+    (cluster_A | cluster_B | cluster_C | cluster_D) ~ "Dynamic",
+    TRUE ~ "Non Dynamic"
+))
 
 xenopus_data <- xenopus_data %>% mutate(hCDKtarget=case_when(
     ID %in% humanCDKtargets ~ TRUE,
     TRUE ~ FALSE
 ))
-
 
 xenopus_data$psites <- lapply(xenopus_data$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 xenopus_data$UID <- lapply(xenopus_data$UID, function(x){ return(as.character(strsplit(x,",")[[1]]))})
@@ -996,13 +1013,8 @@ wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,
 xenopus_disoPerc_cols_idx <-grep("_perc",colnames(xenopus_data))
 xenopus_reshaped_disoPerc <- melt(xenopus_data[,xenopus_disoPerc_cols_idx])
 colnames(xenopus_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
-xenopus_reshaped_disoPerc$cluster <- rep(xenopus_data$cluster,length(xenopus_disoPerc_cols_idx))
-xenopus_reshaped_disoPerc$cluster<- relevel(as.factor(xenopus_reshaped_disoPerc$cluster),ref="Non Dynamic phosphorylation")
-xenopus_reshaped_disoPerc <- xenopus_reshaped_disoPerc %>% mutate(dynamic=case_when(
-    cluster != "Non Dynamic phosphorylation" ~ "Dynamic",
-    TRUE ~ "Non dynamic"
-))
-xenopus_reshaped_disoPerc$dynamic<- relevel(as.factor(xenopus_reshaped_disoPerc$dynamic),ref="Dynamic")
+xenopus_reshaped_disoPerc$ANOVA <- rep(xenopus_data$ANOVA,length(xenopus_disoPerc_cols_idx))
+xenopus_reshaped_disoPerc$ANOVA<- relevel(as.factor(xenopus_reshaped_disoPerc$ANOVA),ref="Dynamic")
 xenopus_reshaped_disoPerc$hCDKtarget <- rep(xenopus_data$hCDKtarget,length(xenopus_disoPerc_cols_idx))
 xenopus_reshaped_disoPerc <- xenopus_reshaped_disoPerc %>% mutate(hCDKtarget=case_when(
     hCDKtarget  ~ "Human CDK target",
@@ -1024,8 +1036,8 @@ xenopus_reshaped_disoPerc_figure$Predictor <-
   factor(xenopus_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
 
 ggplot(xenopus_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=cluster,color=cluster),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
-geom_boxplot(aes(color=cluster),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
+geom_violin(aes(fill=ANOVA,color=ANOVA),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
+geom_boxplot(aes(color=ANOVA),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
 ggpubr::theme_classic2() +
 theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
 scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
@@ -1391,7 +1403,7 @@ for (i in 1:length(human_idx_cols)) {
 }
 
 xenopus_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
-xenopus_organism <- (rep("Xenopus Oscillating",length(xenopus_idx_cols)))
+xenopus_organism <- (rep("Xenopus dynamic",length(xenopus_idx_cols)))
 xenopus_proteome_length <- sum(xenopusDiso$Length)
 xenopus_diso_fraction <- numeric()
 xenopus_pval <- numeric()
@@ -1427,14 +1439,14 @@ ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=predic
     geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "darkslategrey")+
     annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8,size=5)+
     geom_vline(xintercept=log10(1), linetype="dashed", color = "darkslategrey")+
-    scale_y_continuous(limits = c(1,100)) +
+    scale_y_continuous(limits = c(1,110)) +
     xlim(-2, 2) +
     geom_label_repel(size=4.5)+
     theme_minimal(base_size = 15) +
     # ggpubr::theme_pubclean(base_size=15,) +
     theme(legend.position = c(0.26,0.75),legend.box.just = "center",legend.box.margin = margin(2, 2, 2, 2),
           legend.box.background = element_rect(color="darkslategrey"),panel.grid.minor = element_blank()) +
-    scale_color_gradient2(midpoint=0.30,low = pal_jco()(10)[3],mid = pal_jco()(10)[3],high = pal_jco()(10)[4],limits=c(0,0.5),breaks=c(0,0.25,0.5)) +
+    scale_color_gradient(low = pal_jco()(10)[1],high = pal_jco()(10)[4],limits=c(0.19,0.51),breaks=c(0.2,0.3,0.4,0.5)) +
     guides(position="bottom",color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "bottom",direction = "horizontal"),shape=guide_legend(title="Dataset"))
 
 

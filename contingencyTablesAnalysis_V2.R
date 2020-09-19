@@ -17,11 +17,14 @@ getStratContingencyArray <- function(df,sequence_col,diso_index_col,psites_col){
     nop <- length(which(!indexPhosphoST %in% indexDiso))
     ndnp <- length(which(indexNonPhosphoST %in% indexDiso))
     nonp<- length(which(!indexNonPhosphoST %in% indexDiso))
+    # stratContingencyArray[1,1,i]<-ndp
+    # stratContingencyArray[1,2,i]<-nop
+    # stratContingencyArray[2,1,i]<-ndnp
+    # stratContingencyArray[2,2,i]<-nonp
     stratContingencyArray[1,1,i]<-ndp
-    stratContingencyArray[1,2,i]<-nop
-    stratContingencyArray[2,1,i]<-ndnp
+    stratContingencyArray[1,2,i]<-ndnp
+    stratContingencyArray[2,1,i]<-nop
     stratContingencyArray[2,2,i]<-nonp
-    
     # indexProt <- 1:nchar(df[i,sequence_col])
     # indexDiso <- disorderedRegions[[i]]
     # indexOrd <- setdiff(indexProt,indexDiso)
