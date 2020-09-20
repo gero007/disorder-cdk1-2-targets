@@ -96,7 +96,7 @@ humanDiso_full <- getSpotPredDiso(humanDiso_full,disoPath = "predictions/spot_ru
 # xenopusDiso_full<-xenopusDiso_full[,-grep("jronn",colnames(xenopusDiso_full))]
 
 
-xenopus_MPI<-readAAStringSet("utrech/Xenopus_Database_MPI.FASTA",format = "fasta")
+xenopus_MPI<-readAAStringSet("utrech/db/Xenopus_Database_MPI.FASTA",format = "fasta")
 xenopusDiso<-as.data.frame(xenopus_MPI)
 colnames(xenopusDiso)<-"Sequence"
 xenopusDiso$ID <- str_extract(names(xenopus_MPI), regex( "(?<=\\|)(.*)"))
@@ -319,7 +319,7 @@ human_data<-merge.data.frame(human_data,humanDiso_full,by.x = "ACC#",by.y = "acc
 
 xenopus_data <- read_delim("all_phosphosites_xenopus_nr.tab", "\t", escape_double = FALSE, col_types = cols(`Leading proteins` = col_skip(), Protein = col_skip()), trim_ws = TRUE)
 
-xenopus_data <- xenopus_data %>% rename(ID=Proteins,psites=`Positions within proteins`,seqWindow=`Sequence window`,UID=`Unique identifier`) %>% group_by(ID) %>% summarise_at(c("psites","seqWindow","UID"),function(x){paste(x, collapse=",")})
+xenopus_data <- xenopus_data %>% dplyr::rename(ID=Proteins,psites=`Positions within proteins`,seqWindow=`Sequence window`,UID=`Unique identifier`) %>% group_by(ID) %>% summarise_at(c("psites","seqWindow","UID"),function(x){paste(x, collapse=",")})
 
 xenopus_ANOVA_data <- read_delim("utrech/Xen_phospho_AnovaPhosphosites.txt","\t", escape_double = FALSE, trim_ws = TRUE)
 
@@ -328,14 +328,13 @@ xenopus_ANOVA_data <- read_delim("utrech/Xen_phospho_AnovaPhosphosites.txt","\t"
 xenopus_data <- merge.data.frame(xenopus_data,xenopusDiso,by = "ID")
 
 
-clusterA <- read_lines(file = "xenopusclusterA_mpi.txt")
-clusterB <- read_lines(file = "xenopusclusterB_mpi.txt")
-clusterC <- read_lines(file = "xenopusclusterC_mpi.txt")
-clusterD <- read_lines(file = "xenopusclusterD_mpi.txt")
-humanCDKtargets <- read_lines(file = "humanCDKtargets_mpi.txt")
+clusterA <- read_lines(file = "utrech/ids/xenopusclusterA_mpi.txt")
+clusterB <- read_lines(file = "utrech/ids/xenopusclusterB_mpi.txt")
+clusterC <- read_lines(file = "utrech/ids/xenopusclusterC_mpi.txt")
+clusterD <- read_lines(file = "utrech/ids/xenopusclusterD_mpi.txt")
+humanCDKtargets <- read_lines(file = "utrech/ids/humanCDKtargets_mpi.txt")
 
 
-# CHANGE!!!!!!!! if targets are share it only assings to the first one
 xenopus_data <- xenopus_data %>% mutate(cluster_A=case_when(
     ID %in% clusterA ~ TRUE,
     TRUE ~ FALSE
@@ -1035,20 +1034,20 @@ xenopus_reshaped_disoPerc_figure <-  subset(xenopus_reshaped_disoPerc,(Predictor
 xenopus_reshaped_disoPerc_figure$Predictor <- 
   factor(xenopus_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
 
+# ggplot(xenopus_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
+# geom_violin(aes(fill=ANOVA,color=ANOVA),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
+# geom_boxplot(aes(color=ANOVA),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
+# ggpubr::theme_classic2() +
+# theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
+# scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
+# scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
+# scale_fill_manual(values = pal_jco()(10)[2:5]) +
+# scale_color_manual(values = pal_jco()(10)[7:10],guide=FALSE)
+
+
 ggplot(xenopus_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
 geom_violin(aes(fill=ANOVA,color=ANOVA),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
 geom_boxplot(aes(color=ANOVA),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
-ggpubr::theme_classic2() +
-theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
-scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
-scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
-scale_fill_manual(values = pal_jco()(10)[1:5]) +
-scale_color_manual(values = pal_jco()(10)[6:10],guide=FALSE)
-
-
-ggplot(xenopus_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=dynamic,color=dynamic),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
-geom_boxplot(aes(color=dynamic),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
 ggpubr::theme_classic2() +
 theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
 scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +

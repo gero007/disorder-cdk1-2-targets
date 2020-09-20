@@ -8,10 +8,13 @@ library(reshape2)
 
 
 
-all_protein_id_phospho <- read_lines("utrech/Xen_phospho_allProteins.txt")
-cluster_oscillating <- read_lines("utrech/Xen_phospho_ClusterD.txt")
-cluster_interphase <- read_lines("utrech/Xen_phospho_ClusterC.txt")
-significant_anova <- read_lines("utrech/Xen_phospho_ANOVApos.txt")
+all_protein_id_phospho <- read_lines("utrech/ids/xenopus_allphosphosites_mpi.txt")
+cluster_A <- read_lines("utrech/ids/xenopusclusterA_mpi.txt")
+cluster_B <- read_lines("utrech/ids/xenopusclusterB_mpi.txt")
+cluster_C <- read_lines("utrech/ids/xenopusclusterC_mpi.txt")
+cluster_D <- read_lines("utrech/ids/xenopusclusterD_mpi.txt")
+significant_anova <- Reduce(union, list(cluster_A,cluster_B,cluster_C,cluster_D))
+human_CDK1targets <- read_lines("utrech/ids/humanCDKtargets_mpi.txt")
 
 
 # # Read in pre-calculated file or perform iupred
@@ -58,7 +61,7 @@ all_predictions$disordered <-disordered
 # remove unannotated proteins
 # all_protein_id_phospho <- all_protein_id_phospho[all_protein_id_phospho %in% all_predictions$ID]
 all_predictions_phospho <- subset(all_predictions, ID %in% all_protein_id_phospho)
-
+all_predictions_phospho$length <- nchar(all_predictions_phospho$sequence)
 
 # Introduce phosphosites (from all_proteins variable) using the apply function
 phosphosites <- phosphosites <- read_delim("all_phosphosites_xenopus_nr.tab", "\t", escape_double = FALSE, col_types = cols(`Leading proteins` = col_skip(), Protein = col_skip()), trim_ws = TRUE)
@@ -80,23 +83,17 @@ all_predictions_phospho <- merge.data.frame(all_predictions_phospho,phosphosites
 
 
 all_predictions_phospho <- all_predictions_phospho %>% mutate(anova_sig=case_when(
-  ID %in% significant_anova ~ "ANOVA Significant",
-  TRUE ~ "ANOVA Non significant"
+  ID %in% significant_anova ~ "Dynamic",
+  TRUE ~ "Non dynamic"
 ))
 
-# all_predictions_phospho <- all_predictions_phospho %>% mutate(cluster=case_when(
-#   ID %in% cluster_oscillating ~ "Oscillating",
-#   TRUE ~ "other"
-# ))
 
-# Tested. The results coloring the points with the cluster is too confusing. The statistics will be used
-all_predictions_phospho <- all_predictions_phospho %>% mutate(cluster=case_when(
-  ID %in% cluster_oscillating ~ "Cluster D",
-  ID %in% cluster_interphase ~ "Cluster C",
+all_predictions_phospho <- all_predictions_phospho %>% mutate(hCDK1target=case_when(
+  ID %in% human_CDK1targets ~ "Human CDK1 target",
   TRUE ~ "other"
 ))
 
-all_predictions_phospho$cluster <- factor(all_predictions_phospho$cluster,levels=c("other","Cluster C","Cluster D"))
+
 
 phosphoDiso_ST <- list()
 phosphoDiso_obs <- numeric()
@@ -136,7 +133,7 @@ all_predictions_phospho[,binom_sig := factor(ifelse(binom_q < 0.05, ifelse(binom
 
 
 ggplot(all_predictions_phospho) + 
-  geom_point(aes(x=psites_obsv_diso,y=psites_expct_diso, colour = binom_sig,shape=cluster),size=2,alpha=0.80)+
+  geom_point(aes(x=psites_obsv_diso,y=psites_expct_diso, colour = binom_sig,shape=anova_sig),size=2,alpha=0.80)+
   geom_abline(color="darkslategrey",slope = 1,size=0.5,linetype = "dashed")+
   ggpubr::theme_classic2() + 
   theme(text = element_text(size=15),legend.position = c(0.32,0.82),legend.box.just = "left",legend.box.margin = margin(2, 2, 2, 2),legend.box.background = element_rect(color="darkslategrey"),legend.title = element_text(size = 13)) +
@@ -144,7 +141,7 @@ ggplot(all_predictions_phospho) +
   scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed phospho S/T in IDR") +
   scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(3,2,4)])+
-  scale_shape_manual(values = c(16,3,4))
+  scale_shape_manual(values = c(16,4,4))
 
 IUpredScoresPlotGenerator <- function(dataframe){
   plotList <- list()
@@ -171,7 +168,9 @@ IUpredScoresPlotGenerator <- function(dataframe){
 }
 
 
-melted_all_predictions_phospho <- all_predictions_phospho %>% melt(id.vars=c("ID","cluster","anova_sig"),value.name = "psites_diso",measure.vars=c("psites_expct_diso","psites_obsv_diso"))
+melted_all_predictions_phospho <- all_predictions_phospho %>% melt(id.vars=c("ID","anova_sig","hCDK1target","length"),value.name = "psites_diso",measure.vars=c("psites_expct_diso","psites_obsv_diso"))
+
+
 
 # ALL
 ggplot(melted_all_predictions_phospho) + 
@@ -181,31 +180,31 @@ ggplot(melted_all_predictions_phospho) +
   geom_segment(aes(x = 1, y = 29.5, xend = 2, yend = 29.5)) + annotate(geom="text", x=1.5, y=30, label="***") +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
 # ANOVA +
-ggplot(subset(melted_all_predictions_phospho,anova_sig == "ANOVA Significant")) + 
+ggplot(subset(melted_all_predictions_phospho,anova_sig == "Dynamic")) + 
   geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable))+
   ggpubr::theme_classic2()  + 
   theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
   geom_segment(aes(x = 1, y = 29.5, xend = 2, yend = 29.5)) + annotate(geom="text", x=1.5, y=30, label="***") +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
-# ClusterD
-ggplot(subset(melted_all_predictions_phospho,cluster == "Cluster D")) + 
+# HumanCDK targets
+ggplot(subset(melted_all_predictions_phospho,hCDK1target == "Human CDK1 target")) + 
   geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable))+
   ggpubr::theme_classic2()  + 
   theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
   geom_segment(aes(x = 1, y = 29.5, xend = 2, yend = 29.5)) + annotate(geom="text", x=1.5, y=30, label="***") +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
