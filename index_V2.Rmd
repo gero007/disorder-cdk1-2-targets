@@ -630,76 +630,60 @@ Nevertheless, inconsistencies in the measurements of the ratio of disordered ami
 If the percentage of disorder residues correlates well with one or more CDK phosphorylation target properties it could be informative regardless if the estimation is highly accurate.  
 
 ```{r composition ,echo=FALSE,message=FALSE,warning=FALSE,fig.height=10}
+##YEAST
 
-yeastSeq<-yeastDiso$sequence
-names(yeastSeq)<-yeastDiso$acc
-yeastSeq<-Biostrings::AAStringSet(yeastSeq)
+yeastSeq_all<-yeastDiso$Sequence
+names(yeastSeq_all)<-yeastDiso$acc
+yeastSeq_all<-Biostrings::AAStringSet(yeastSeq_all)
 
+yeastComp_all<-colSums(alphabetFrequency(yeastSeq_all))[1:20]/sum(colSums(alphabetFrequency(yeastSeq_all))[1:20])
 
-##DB##
-
-# Since the derived assesment of disorder doen't cover the whole proteome I redifine the universe to those protein that have been evaluated.
-yeastSeqDBDiso <- getDBDiso(yeastDiso,"sequences")
-yeastSeqDBDiso <- Biostrings::AAStringSet(unlist(yeastSeqDBDiso))
-yeastCompDBDiso<-colSums(alphabetFrequency(yeastSeqDBDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDBDiso))[1:20])
-
-yeastSeqDBAll <- yeastSeq[names(yeastSeq) %in% names(yeastSeqDBDiso)] 
-yeastCompDBALL<-colSums(alphabetFrequency(yeastSeqDBAll))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDBAll))[1:20])
-
-DBDifferentialComp <- sort((yeastCompDBDiso-yeastCompDBALL)/yeastCompDBALL,decreasing = T)
-
-######################Set the rainbow color palette for the DB set #####################
-colorPallete_DBOrdered <- rainbow(20)
-names(colorPallete_DBOrdered) <- reorder(names(DBDifferentialComp),-DBDifferentialComp)
+######################Set the rainbow color palette for yeast #####################
+colorPallete_YeastComp <- rainbow(20)
+names(colorPallete_YeastComp) <- levels(reorder(names(yeastComp_all),-yeastComp_all))
 ########################################################################################
 
-plotDBDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(DBDifferentialComp),-DBDifferentialComp), fill=reorder(names(DBDifferentialComp),-DBDifferentialComp), y=DBDifferentialComp),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("DB curated")
-##Derived##
+plotYeastComp <- ggplot()+geom_bar(aes(x=reorder(names(yeastComp_all),-yeastComp_all), fill=reorder(names(yeastComp_all),-yeastComp_all), y=yeastComp_all),stat="identity") + scale_fill_manual(values=colorPallete_YeastComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank(),axis.ticks.y = element_blank(),axis.text.y = element_blank()) + scale_y_continuous(breaks = seq(0,0.1,0.025),limits = c(0,0.1)) + ggtitle("Proteome Composition")
 
-# Since the derived assesment of disorder doen't cover the whole proteome I redifine the universe to those protein that have been evaluated.
-yeastSeqDerivedDiso <- getDerivedDiso(yeastDiso,"sequences")
-yeastSeqDerivedDiso <- Biostrings::AAStringSet(unlist(yeastSeqDerivedDiso))
-yeastCompDerivedDiso<-colSums(alphabetFrequency(yeastSeqDerivedDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDerivedDiso))[1:20])
+##Iupred##
 
-yeastSeqDerivedAll <- yeastSeq[names(yeastSeq) %in% names(yeastSeqDerivedDiso)] 
-yeastCompDerivedALL<-colSums(alphabetFrequency(yeastSeqDerivedAll))[1:20]/sum(colSums(alphabetFrequency(yeastSeqDerivedAll))[1:20])
 
-derivedDifferentialComp <- sort((yeastCompDerivedDiso-yeastCompDerivedALL)/yeastCompDerivedALL,decreasing = T)
+yeastSeqIupred_diso <- Biostrings::AAStringSet(yeastDiso_full$iupl_disoSeq)
+yeastCompIupred<-colSums(alphabetFrequency(yeastSeqIupred_diso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqIupred_diso))[1:20])
 
-plotDerivedDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(derivedDifferentialComp),-derivedDifferentialComp), fill=reorder(names(derivedDifferentialComp),-derivedDifferentialComp), y=derivedDifferentialComp),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("Derived disorder")
+
+yeastIupredDiffComp <- sort((yeastCompIupred-yeastComp_all)/yeastComp_all,decreasing = T)
+
+
+plotYeastIupred_DC <- ggplot()+geom_bar(aes(x=reorder(names(yeastIupredDiffComp),-yeastIupredDiffComp), fill=reorder(names(yeastIupredDiffComp),-yeastIupredDiffComp), y=yeastIupredDiffComp),stat="identity") + scale_fill_manual(values=colorPallete_YeastComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank()) + scale_y_continuous(breaks = c(-0.8,-0.4,0,0.4,0.8),limits = c(-0.9,0.9)) + ggtitle("IUpred")
+
+
 ##SPOT##
-yeastCompALL<-colSums(alphabetFrequency(yeastSeq))[1:20]/sum(colSums(alphabetFrequency(yeastSeq))[1:20])
 
-yeastSeqSpotDiso <- getSpotPredDiso(yeastDiso,"sequences","acc")
-yeastSeqSpotDiso <- Biostrings::AAStringSet(unlist(yeastSeqSpotDiso))
-yeastCompSpotDiso<-colSums(alphabetFrequency(yeastSeqSpotDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqSpotDiso))[1:20])
-spotDifferentialComp <- sort((yeastCompSpotDiso-yeastCompALL)/yeastCompALL,decreasing = T)
+yeastSeqSpot_diso <- Biostrings::AAStringSet(yeastDiso_full$spot_disoSeq)
+yeastCompSpot<-colSums(alphabetFrequency(yeastSeqSpot_diso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqSpot_diso))[1:20])
 
-plotSpotDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(spotDifferentialComp),-spotDifferentialComp), y=spotDifferentialComp,fill=reorder(names(spotDifferentialComp),-spotDifferentialComp)),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("SPOT predictor")
 
-##Simple##
+yeastSpotDiffComp <- sort((yeastCompSpot-yeastComp_all)/yeastComp_all,decreasing = T)
 
-yeastCompALL<-colSums(alphabetFrequency(yeastSeq))[1:20]/sum(colSums(alphabetFrequency(yeastSeq))[1:20])
 
-yeastSeqSimpleDiso <- getPredDiso(yeastDiso,"sequences")
-yeastSeqSimpleDiso <- Biostrings::AAStringSet(unlist(yeastSeqSimpleDiso))
-yeastCompSimpleDiso<-colSums(alphabetFrequency(yeastSeqSimpleDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqSimpleDiso))[1:20])
-SimpleDifferentialComp <- sort((yeastCompSimpleDiso-yeastCompALL)/yeastCompALL,decreasing = T)
+plotYeastSpot_DC <- ggplot()+geom_bar(aes(x=reorder(names(yeastSpotDiffComp),-yeastSpotDiffComp), fill=reorder(names(yeastSpotDiffComp),-yeastSpotDiffComp), y=yeastSpotDiffComp),stat="identity") + scale_fill_manual(values=colorPallete_YeastComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank()) + scale_y_continuous(breaks = c(-0.8,-0.4,0,0.4,0.8),limits = c(-0.9,0.9)) + ggtitle("SPOT")
 
-plotSimpleDifferentialComp <- ggplot()+geom_bar(aes(x=reorder(names(SimpleDifferentialComp),-SimpleDifferentialComp), y=SimpleDifferentialComp,fill=reorder(names(SimpleDifferentialComp),-SimpleDifferentialComp)),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("Simple predictor")
-##Lite##
 
-yeastSeqLiteDiso <- getPredLiteDiso(yeastDiso,"sequences")
-yeastSeqLiteAll <- yeastSeq[names(yeastSeq) %in% names(yeastSeqLiteDiso)] 
-yeastCompLiteALL<-colSums(alphabetFrequency(yeastSeqLiteAll))[1:20]/sum(colSums(alphabetFrequency(yeastSeqLiteAll))[1:20])
+##VSL##
 
-yeastSeqLiteDiso <- Biostrings::AAStringSet(unlist(yeastSeqLiteDiso))
-yeastCompLiteDiso<-colSums(alphabetFrequency(yeastSeqLiteDiso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqLiteDiso))[1:20])
-LiteDifferentialComp <- sort((yeastCompLiteDiso-yeastCompLiteALL)/yeastCompLiteALL,decreasing = T)
+yeastSeqVsl_diso <- Biostrings::AAStringSet(yeastDiso_full$spot_disoSeq)
+yeastCompVsl<-colSums(alphabetFrequency(yeastSeqVsl_diso))[1:20]/sum(colSums(alphabetFrequency(yeastSeqVsl_diso))[1:20])
 
-plotLiteDifferentialComp <- ggplot() + geom_bar(aes(x=reorder(names(LiteDifferentialComp),-LiteDifferentialComp), y=LiteDifferentialComp,fill=reorder(names(LiteDifferentialComp),-LiteDifferentialComp)),stat="identity") + scale_fill_manual(values=colorPallete_DBOrdered)+ theme_linedraw() + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank()) + scale_y_continuous(breaks = seq(-1,1,0.2),limits = c(-0.9,0.9)) + ggtitle("Lite predictor")
 
-fig<-ggarrange(plotDBDifferentialComp,plotDerivedDifferentialComp,plotSimpleDifferentialComp,plotLiteDifferentialComp,plotSpotDifferentialComp,ncol = 1)
+yeastVslDiffComp <- sort((yeastCompVsl-yeastComp_all)/yeastComp_all,decreasing = T)
+
+
+plotYeastVsl_DC <- ggplot()+geom_bar(aes(x=reorder(names(yeastVslDiffComp),-yeastVslDiffComp), fill=reorder(names(yeastVslDiffComp),-yeastVslDiffComp), y=yeastVslDiffComp),stat="identity") + scale_fill_manual(values=colorPallete_YeastComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank()) + scale_y_continuous(breaks = c(-0.8,-0.4,0,0.4,0.8),limits = c(-0.9,0.9)) + ggtitle("VSL2B")
+
+
+
+fig<-ggarrange(plotYeastComp,plotYeastIupred_DC,plotYeastSpot_DC,plotYeastVsl_DC,ncol = 1)
 annotate_figure(fig,left = text_grob("Comp. Disorder - Comp. Universe / Comp. Universe", rot = 90,size = 16))
 ```
 
