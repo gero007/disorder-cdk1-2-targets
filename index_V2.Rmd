@@ -747,8 +747,8 @@ annotate_figure(fig,left = text_grob("Comp. Disorder - Comp. Universe / Comp. Un
 ```{r xenopus composition ,echo=FALSE,message=FALSE,warning=FALSE,fig.height=10}
 ##XENOPUS
 
-xenopusSeq_all<-xenopusDiso$Sequence
-names(xenopusSeq_all)<-xenopusDiso$acc
+xenopusSeq_all<-xenopus_data$Sequence
+names(xenopusSeq_all)<-xenopus_data$acc
 xenopusSeq_all<-Biostrings::AAStringSet(xenopusSeq_all)
 
 xenopusComp_all<-colSums(alphabetFrequency(xenopusSeq_all))[1:20]/sum(colSums(alphabetFrequency(xenopusSeq_all))[1:20])
@@ -763,7 +763,7 @@ plotHumanComp <- ggplot()+geom_bar(aes(x=reorder(names(xenopusComp_all),-xenopus
 ##Iupred##
 
 
-xenopusSeqIupred_diso <- Biostrings::AAStringSet(xenopusDiso_full$iupl_disoSeq)
+xenopusSeqIupred_diso <- Biostrings::AAStringSet(xenopus_data$iupl_disoSeq)
 xenopusCompIupred<-colSums(alphabetFrequency(xenopusSeqIupred_diso))[1:20]/sum(colSums(alphabetFrequency(xenopusSeqIupred_diso))[1:20])
 
 
@@ -775,7 +775,7 @@ plotHumanIupred_DC <- ggplot()+geom_bar(aes(x=reorder(names(xenopusIupredDiffCom
 
 ##SPOT##
 
-xenopusSeqSpot_diso <- Biostrings::AAStringSet(xenopusDiso_full$spot_disoSeq[!is.na(xenopusDiso_full$spot_disoSeq)])
+xenopusSeqSpot_diso <- Biostrings::AAStringSet(xenopus_data$spot_disoSeq[!is.na(xenopus_data$spot_disoSeq)])
 xenopusCompSpot<-colSums(alphabetFrequency(xenopusSeqSpot_diso))[1:20]/sum(colSums(alphabetFrequency(xenopusSeqSpot_diso))[1:20])
 
 
@@ -787,7 +787,7 @@ plotHumanSpot_DC <- ggplot()+geom_bar(aes(x=reorder(names(xenopusSpotDiffComp),-
 
 ##VSL##
 
-xenopusSeqVsl_diso <- Biostrings::AAStringSet(xenopusDiso_full$vsl_disoSeq[!is.na(xenopusDiso_full$vsl_disoSeq)])
+xenopusSeqVsl_diso <- Biostrings::AAStringSet(xenopus_data$vsl_disoSeq[!is.na(xenopus_data$vsl_disoSeq)])
 xenopusCompVsl<-colSums(alphabetFrequency(xenopusSeqVsl_diso))[1:20]/sum(colSums(alphabetFrequency(xenopusSeqVsl_diso))[1:20])
 
 
