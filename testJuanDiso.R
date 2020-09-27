@@ -7,6 +7,33 @@ library(scales)
 library(reshape2)
 
 
+IUpredScoresPlotGenerator <- function(dataframe,id_col="ID",sites_col="psites"){
+  plotList <- list()
+  for(i in 1:nrow(dataframe)){
+    dataframe <-  as.data.frame(dataframe)
+    plotTittle <- dataframe[i,id_col]
+    aux_df <-  as.data.frame(cbind(dataframe[i,"positions"][[1]],dataframe[i,"IUPredScores"][[1]]))
+    names(aux_df) <- c("positions","IUPredScores")
+    
+    plotList[[i]] <- ggplot(aux_df,aes(x=positions,y=IUPredScores)) +
+      geom_col(aes(fill=IUPredScores >= 0.5 ,color=IUPredScores >= 0.5)) +
+      ggpubr::theme_classic2() + 
+      theme(text = element_text(size=19),legend.position = "none") +
+      scale_x_continuous(limits = c(0, nrow(aux_df)+1),breaks = c(seq(0, nrow(aux_df)+1, by = 100)),expand = c(0.005,0.005))+ xlab("Positions") +
+      scale_y_continuous(limits = c(-0.1, 1),breaks = c(seq(0,1,by=0.25)),expand = c(0.05,0.05)) + ylab("Score") +
+      scale_fill_manual(values = pal_jco()(10)[c(3,4)]) +
+      scale_color_manual(values = pal_jco()(10)[c(3,4)]) +
+      annotate("point",x = dataframe[i,sites_col][[1]],y=rep(-0.06,length(dataframe[i,sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=6) +
+      annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape=25,color=pal_jco()(10)[10],fill=pal_jco()(10)[5],size=4) +
+      geom_hline(yintercept = 0.5,size=0.5,linetype = "dashed",color = "darkslategrey") +
+      ggtitle(plotTittle)
+  }
+  names(plotList)<-dataframe[,id_col]
+  return(plotList)
+}
+
+
+
 
 all_protein_id_phospho <- read_lines("utrech/ids/xenopus_allphosphosites_mpi.txt")
 cluster_A <- read_lines("utrech/ids/xenopusclusterA_mpi.txt")
@@ -143,29 +170,7 @@ ggplot(all_predictions_phospho) +
   scale_colour_manual(values = pal_jco()(10)[c(3,2,4)])+
   scale_shape_manual(values = c(16,4,4))
 
-IUpredScoresPlotGenerator <- function(dataframe,id_col="ID",sites_col="psites"){
-  plotList <- list()
-  for(i in 1:nrow(dataframe)){
-    plotTittle <- dataframe[i,id_col]
-    aux_df <-  as.data.frame(cbind(dataframe[i,"positions"][[1]],dataframe[i,"IUPredScores"][[1]]))
-    names(aux_df) <- c("positions","IUPredScores")
-    
-    plotList[[i]] <- ggplot(aux_df,aes(x=positions,y=IUPredScores)) +
-      geom_col(aes(fill=IUPredScores >= 0.5 ,color=IUPredScores >= 0.5)) +
-      ggpubr::theme_classic2() + 
-      theme(text = element_text(size=19),legend.position = "none") +
-      scale_x_continuous(limits = c(0, nrow(aux_df)+1),breaks = c(seq(0, nrow(aux_df)+1, by = 100)),expand = c(0.005,0.005))+ xlab("Positions") +
-      scale_y_continuous(limits = c(-0.1, 1),breaks = c(seq(0,1,by=0.25)),expand = c(0.05,0.05)) + ylab("Score") +
-      scale_fill_manual(values = pal_jco()(10)[c(3,4)]) +
-      scale_color_manual(values = pal_jco()(10)[c(3,4)]) +
-      annotate("point",x = dataframe[i,sites_col][[1]],y=rep(-0.06,length(dataframe[i,sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=6) +
-      annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape=25,color=pal_jco()(10)[10],fill=pal_jco()(10)[5],size=4) +
-      geom_hline(yintercept = 0.5,size=0.5,linetype = "dashed",color = "darkslategrey") +
-      ggtitle(plotTittle)
-  }
-  names(plotList)<-dataframe[,id_col]
-  return(plotList)
-}
+
 
 
 melted_all_predictions_phospho <- all_predictions_phospho %>% melt(id.vars=c("ID","anova_sig","hCDK1target","length"),value.name = "psites_diso",measure.vars=c("psites_expct_diso","psites_obsv_diso"))
@@ -349,3 +354,10 @@ ggplot(human_data) +
 
 
 cdkTargetsPlots<- IUpredScoresPlotGenerator(subset(human_data,target=="Cdk1 target"),id_col = "ACC#",sites_col = "psites_CDK1")
+
+
+lila_ps_mitotic_ProDir <- lila_ps_mitotic_ProDir <- read_delim("lila_ps_mitotic_ProDir.tab","\t", escape_double = FALSE, col_types = cols(Pro_Directed_Psites = col_character()),trim_ws = TRUE)
+lila_ps_mitotic_ProDir <- merge.data.frame(lila_ps_mitotic_ProDir,human_data,all.x = T,by.x = "ID",by.y = "ACC#")
+lila_ps_mitotic_ProDir$Pro_Directed_Psites <- lapply(lila_ps_mitotic_ProDir$Pro_Directed_Psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
+
+PhaseSep_mitotic_PorDirPsites<- IUpredScoresPlotGenerator(lila_ps_mitotic_ProDir,id_col = "ID",sites_col = "Pro_Directed_Psites")
