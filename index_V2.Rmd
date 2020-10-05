@@ -211,7 +211,7 @@ rm(psites,consensus_psites)
 
 # The universe is the union between Holt and Ubersax
 yeastIntersect_All_data <- merge.data.frame(ubersax_data[,c("Entry","target","targetStrict")],
-                                            holt_data[,c("Uniprot","psite","consensus_psite","target_all","target_consensus")],
+                                            holt_data[,c("Uniprot","site","psite","consensus_psite","target_all","target_consensus")],
                                             by.x = "Entry", by.y = "Uniprot",all = T)
 
  yeastIntersect_All_data <- yeastIntersect_All_data %>% mutate(target_intersect=case_when(
@@ -1549,6 +1549,100 @@ ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=predic
 
 ```
 
+```{r CMH cdk1 psites vs other}
+predictors <- c("IUPred","SPOT","VSL2b")
+
+
+yeastIntersect_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
+yeastIntersect_organism <- (rep("Yeast CDK targets",length(yeastIntersect_idx_cols)))
+yeastIntersect_proteome_length <- sum(yeastDiso_full$Length)
+yeastIntersect_diso_fraction <- numeric()
+yeastIntersect_pval <- numeric()
+yeastIntersect_commonOR <- numeric()
+for (i in 1:length(yeastIntersect_idx_cols)) {
+  yeastStratContingencyArray <- getStratContingencyArrayPsites(df = subset(yeastIntersect_CDK1_data,target_intersect=="Cdk1 target"),
+                                                    sequence_col = "Sequence",
+                                                    diso_index_col = yeastIntersect_idx_cols[i],
+                                                    psites_col = "site",
+                                                    cdk1_psites_col = "psite" ) 
+  yeastIntersect_CMHtest <- mantelhaen.test(yeastStratContingencyArray)
+  yeastIntersect_pval[i]<-yeastIntersect_CMHtest$p.value
+  yeastIntersect_commonOR[i]<-yeastIntersect_CMHtest$estimate
+  # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
+  # yeastIntersect_diso_fraction[i] <-
+  #   (sum(lengths(strsplit(subset(yeastDiso_full,yeastDiso_full[, yeastIntersect_idx_cols[i]]!="0")[,yeastIntersect_idx_cols[i]],","))))/yeastIntersect_proteome_length
+  yeastIntersect_diso_fraction[i] <-
+    (sum(lengths(strsplit(subset(yeastDiso_full,!is.na(yeastDiso_full[, yeastIntersect_idx_cols[i]]))[,yeastIntersect_idx_cols[i]],","))))/yeastIntersect_proteome_length
+}
+
+human_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
+human_organism <- (rep("Human CDK targets",length(human_idx_cols)))
+human_proteome_length <- sum(humanDiso_full$Length)
+human_diso_fraction <- numeric()
+human_pval <- numeric()
+human_commonOR <- numeric()
+for (i in 1:length(human_idx_cols)) {
+  humanStratContingencyArray <- getStratContingencyArrayPsites(df = subset(human_data,target=="Cdk1 target"),
+                                                    sequence_col = "Sequence",
+                                                    diso_index_col = human_idx_cols[i],
+                                                    psites_col = "psite",
+                                                    cdk1_psites_col = "psite_CDK1") 
+  human_CMHtest <- mantelhaen.test(humanStratContingencyArray)
+  human_pval[i]<-human_CMHtest$p.value
+  human_commonOR[i]<-human_CMHtest$estimate
+  # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
+  # human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,humanDiso_full[,human_idx_cols[i]]!="0")[,human_idx_cols[i]],","))))/human_proteome_length
+  human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,!is.na(humanDiso_full[,human_idx_cols[i]]))[,human_idx_cols[i]],","))))/human_proteome_length
+
+}
+
+xenopus_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
+xenopus_organism <- (rep("Xenopus dynamic",length(xenopus_idx_cols)))
+xenopus_proteome_length <- sum(xenopusDiso$Length)
+xenopus_diso_fraction <- numeric()
+xenopus_pval <- numeric()
+xenopus_commonOR <- numeric()
+for (i in 1:length(xenopus_idx_cols)) {
+  xenopusStratContingencyArray <- getStratContingencyArrayPsites(df = subset(xenopus_data,cluster!="Non Dynamic phosphorylation"),
+                                                    sequence_col = "Sequence",
+                                                    diso_index_col = xenopus_idx_cols[i],
+                                                    psites_col = "psites",
+                                                    cdk1_psites_col = "anova_psites",) 
+  xenopus_CMHtest <- mantelhaen.test(xenopusStratContingencyArray)
+  xenopus_pval[i]<-xenopus_CMHtest$p.value
+  xenopus_commonOR[i]<-xenopus_CMHtest$estimate
+  # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
+  # xenopus_diso_fraction[i]<-(sum(lengths(strsplit(subset(xenopusDiso,xenopusDiso[,xenopus_idx_cols[i]]!="0")[,xenopus_idx_cols[i]],","))))/xenopus_proteome_length
+  xenopus_diso_fraction[i]<-(sum(lengths(strsplit(subset(xenopusDiso,!is.na(xenopusDiso[,xenopus_idx_cols[i]]))[,xenopus_idx_cols[i]],","))))/xenopus_proteome_length
+}
+
+yeastIntersect_CMH_data <- cbind(predictors,yeastIntersect_diso_fraction,yeastIntersect_pval,yeastIntersect_commonOR,yeastIntersect_organism)
+human_CMH_data <- cbind(predictors,human_diso_fraction,human_pval,human_commonOR,human_organism)
+xenopus_CMH_data <- cbind(predictors,xenopus_diso_fraction,xenopus_pval,xenopus_commonOR,xenopus_organism)
+
+predictorsCMH_data<-as.data.frame(rbind(yeastIntersect_CMH_data,human_CMH_data,xenopus_CMH_data))
+colnames(predictorsCMH_data) <- c("predictors","diso_fraction","pval","commonOR","organism")
+predictorsCMH_data$diso_fraction <- as.numeric(as.character(predictorsCMH_data$diso_fraction))
+predictorsCMH_data$pval <- as.numeric(as.character(predictorsCMH_data$pval))
+predictorsCMH_data$commonOR <- as.numeric(as.character(predictorsCMH_data$commonOR))
+predictorsCMH_data$organism <- as.factor(predictorsCMH_data$organism)
+
+
+ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=predictors)) + 
+    geom_point(aes(color=diso_fraction,shape=organism),size=3) + 
+    geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "darkslategrey")+
+    annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8,size=5)+
+    geom_vline(xintercept=log10(1), linetype="dashed", color = "darkslategrey")+
+    scale_y_continuous(limits = c(1,110)) +
+    xlim(-2, 2) +
+    geom_label_repel(size=4.5)+
+    theme_minimal(base_size = 15) +
+    # ggpubr::theme_pubclean(base_size=15,) +
+    theme(legend.position = c(0.26,0.75),legend.box.just = "center",legend.box.margin = margin(2, 2, 2, 2),
+          legend.box.background = element_rect(color="darkslategrey"),panel.grid.minor = element_blank()) +
+    scale_color_gradient(low = pal_jco()(10)[1],high = pal_jco()(10)[4],limits=c(0.19,0.51),breaks=c(0.2,0.3,0.4,0.5)) +
+    guides(position="bottom",color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "bottom",direction = "horizontal"),shape=guide_legend(title="Dataset"))
+```
 
  
 

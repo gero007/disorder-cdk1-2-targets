@@ -46,7 +46,42 @@ return(stratContingencyArray)
 
 
 
+# Calculate the contingency table for Psites diso vs struct and CDK vs other Kinases
 
+getStratContingencyArrayPsites <- function(df,sequence_col,diso_index_col,cdk1_psites_col,psites_col,min_num_psites=2){
+  
+  # indexST <- gregexpr("(S|T)",df[,sequence_col])
+  
+  stratContingencyArray <- array(dim = c(2,2,nrow(df)))
+  for (i in 1:nrow(df)) {
+    
+    
+    indexDiso <- as.numeric(strsplit(df[i,diso_index_col],",")[[1]])
+    indexCDKPhospho <- df[i,cdk1_psites_col][[1]]
+    indexAllPhospho <- df[i,psites_col][[1]]
+    indexOthersPhospho <- setdiff(indexAllPhospho,indexCDKPhospho)
+    
+    nCdkDiso <- sum(indexCDKPhospho %in% indexDiso)
+    nCdkStruct <- sum(!indexCDKPhospho %in% indexDiso)
+    nOtherDiso <- sum(indexOthersPhospho %in% indexDiso)
+    nOtherStruct<- sum(!indexOthersPhospho %in% indexDiso)
+    if(length(indexAllPhospho)>=min_num_psites){
+      stratContingencyArray[1,1,i]<-nCdkDiso
+      stratContingencyArray[1,2,i]<-nCdkStruct
+      stratContingencyArray[2,1,i]<-nOtherDiso
+      stratContingencyArray[2,2,i]<-nOtherStruct
+    } else {stratContingencyArray[,,i] <- rep(0,4) }
+
+    
+  }
+  filteredStratContingencyArray <- numeric()
+  for(contArray in stratContingencyArray){
+    if(!is.null(contArray)){
+      filteredStratContingencyArray<-c(filteredStratContingencyArray,contArray)}
+  }
+  filteredStratContingencyArray <- array(filteredStratContingencyArray,dim = c(2,2,length(filteredStratContingencyArray)/4))
+  return(filteredStratContingencyArray)
+}
 
 
 
