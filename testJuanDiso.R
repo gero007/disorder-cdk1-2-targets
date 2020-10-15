@@ -14,12 +14,24 @@ IUpredScoresPlotGenerator <- function(dataframe,id_col="ID",sites_col="psites"){
     plotTittle <- dataframe[i,id_col]
     aux_df <-  as.data.frame(cbind(dataframe[i,"positions"][[1]],dataframe[i,"IUPredScores"][[1]]))
     names(aux_df) <- c("positions","IUPredScores")
+    breaksXaxis <- c(seq(0, nrow(aux_df), by = as.integer(nrow(aux_df)/10)))
+    if (nrow(aux_df) < 100) {
+      breaksXaxis <- c(seq(0, nrow(aux_df), by = 20))
+    } else if (quantity > 100  &quantity <= 500) {
+      breaksXaxis <- c(seq(0, nrow(aux_df), by = 50))
+    } else if (quantity > 500  &quantity <= 1000) {
+      breaksXaxis <- c(seq(0, nrow(aux_df), by = 100))
+    } else if (quantity > 1000  &quantity <= 2000) {
+      breaksXaxis <- c(seq(0, nrow(aux_df), by = 200))
+    } else {
+      breaksXaxis <- c(seq(0, nrow(aux_df), by = 500))
+    }
     
     plotList[[i]] <- ggplot(aux_df,aes(x=positions,y=IUPredScores)) +
       geom_col(aes(fill=IUPredScores >= 0.5 ,color=IUPredScores >= 0.5)) +
       ggpubr::theme_classic2() + 
       theme(text = element_text(size=19),legend.position = "none") +
-      scale_x_continuous(limits = c(0, nrow(aux_df)+1),breaks = c(seq(0, nrow(aux_df)+1, by = 100)),expand = c(0.005,0.005))+ xlab("Positions") +
+      scale_x_continuous(limits = c(0, nrow(aux_df)+1),breaks = breaksXaxis,expand = c(0.005,0.005))+ xlab("Positions") +
       scale_y_continuous(limits = c(-0.1, 1),breaks = c(seq(0,1,by=0.25)),expand = c(0.05,0.05)) + ylab("Score") +
       scale_fill_manual(values = pal_jco()(10)[c(3,4)]) +
       scale_color_manual(values = pal_jco()(10)[c(3,4)]) +
@@ -179,41 +191,41 @@ melted_all_predictions_phospho <- all_predictions_phospho %>% melt(id.vars=c("ID
 
 # ALL
 ggplot(melted_all_predictions_phospho) + 
-  geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable))+
+  geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable),outlier.shape = NA)+
   ggpubr::theme_classic2()  + 
   theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-  geom_segment(aes(x = 1, y = 29.5, xend = 2, yend = 29.5)) + annotate(geom="text", x=1.5, y=30, label="***") +
+  geom_segment(aes(x = 1, y = 10.1, xend = 2, yend = 10.1)) + annotate(geom="text", x=1.5, y=10.3, label="***",size=10) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 11),breaks = c(seq(0, 11, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
 # ANOVA +
 ggplot(subset(melted_all_predictions_phospho,anova_sig == "Dynamic")) + 
-  geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable))+
+  geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable),outlier.shape = NA)+
   ggpubr::theme_classic2()  + 
   theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-  geom_segment(aes(x = 1, y = 29.5, xend = 2, yend = 29.5)) + annotate(geom="text", x=1.5, y=30, label="***") +
+  geom_segment(aes(x = 1, y = 10.1, xend = 2, yend = 10.1)) + annotate(geom="text", x=1.5, y=10.3, label="***",size=10) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 11),breaks = c(seq(0, 11, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
-# HumanCDK targets
-ggplot(subset(melted_all_predictions_phospho,hCDK1target == "Human CDK1 target")) + 
-  geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable))+
+# HumanCDK targets in Dynamic
+ggplot(subset(melted_all_predictions_phospho,hCDK1target == "Human CDK1 target" & anova_sig == "Dynamic")) + 
+  geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable),outlier.shape = NA)+
   ggpubr::theme_classic2()  + 
   theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-  geom_segment(aes(x = 1, y = 29.5, xend = 2, yend = 29.5)) + annotate(geom="text", x=1.5, y=30, label="***") +
+  geom_segment(aes(x = 1, y = 10.1, xend = 2, yend = 10.1)) + annotate(geom="text", x=1.5, y=10.3, label="***",size=10) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 11),breaks = c(seq(0, 11, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
-# plotList <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,binom_q < 0.05))
+plotList <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,anova_sig == "Dynamic"))
 # 
 # pdf("IUpredScores.pdf",width = 15,height = 3)
 #  for (plot in plotList) {
