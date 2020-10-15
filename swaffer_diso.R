@@ -71,7 +71,17 @@ swaffer_CDK_psites <- swaffer_CDK_psites %>% mutate(location_iupl=case_when(
 
 swaffer_CDK_psites$iupl_score <- apply(swaffer_CDK_psites, 1, function(x){subset(swaffer_diso,Uniprot==x["UNIPROT ID"])[,"IUPredScores"][[1]][as.numeric(x["Positions"])]}) #as.numeric(x["Positions"])
 
-waffer_CDK_psites$iupl_score_norm <- apply(swaffer_CDK_psites, 1, function(x){subset(swaffer_diso,Uniprot==x["UNIPROT ID"])[,"IUPredScores"][[1]][as.numeric(x["Positions"])]/subset(swaffer_diso,Uniprot==x["UNIPROT ID"])$iupl_perc})
+swaffer_CDK_psites$iupl_score_norm <- apply(swaffer_CDK_psites, 1, function(x){subset(swaffer_diso,Uniprot==x["UNIPROT ID"])[,"IUPredScores"][[1]][as.numeric(x["Positions"])]/subset(swaffer_diso,Uniprot==x["UNIPROT ID"])$iupl_perc})
+
+swaffer_CDK_psites$iupl_score_envir <- apply(swaffer_CDK_psites, 1, function(x){
+  
+  if(as.numeric(x["Positions"])-15 > 1){sIndex<-as.numeric(x["Positions"])-15} else {sIndex<-1}
+  if(as.numeric(x["Positions"])+15 < subset(swaffer_diso,Uniprot==x["UNIPROT ID"])[,"Length"]){eIndex<-as.numeric(x["Positions"])+15} else {eIndex<-subset(swaffer_diso,Uniprot==x["UNIPROT ID"])[,"Length"]}
+  
+  return(sum(subset(swaffer_diso,Uniprot==x["UNIPROT ID"])[,"IUPredScores"][[1]][sIndex:eIndex])/31)
+  
+  })
+
 
 ggplot(swaffer_CDK_psites) + 
   geom_point(aes(x=IC50_nMInhib_1,y=IC50_nMInhib_2, colour = `Cell cycle dynamics`,shape=location_iupl),size=2,alpha=0.80)+
@@ -84,7 +94,10 @@ ggplot(swaffer_CDK_psites) +
   scale_y_continuous(limits = c(-0.1, 1),breaks = c(seq(0,1,by=0.25)),expand = c(0.05,0.05)) + ylab("Score")
 
 
-ggplot(swaffer_CDK_psites) +  geom_dotplot(aes(x=`Cell cycle dynamics`, y = iupl_score, fill=`Amino acid`),binaxis='y', stackdir='center',binwidth = 0.03,position=position_dodge(1))
+ggplot(swaffer_CDK_psites) +  geom_dotplot(aes(x=`Cell cycle dynamics`, y = iupl_score, fill=`Amino acid`),binaxis='y', stackdir='center',binwidth = 0.01,position=position_dodge(1))
 
+ggplot(swaffer_CDK_psites) +  geom_dotplot(aes(x=`Cell cycle dynamics`, y = iupl_score_norm, fill=`Amino acid`),binaxis='y', stackdir='center',binwidth = 0.1,position=position_dodge(1))
+
+ggplot(swaffer_CDK_psites) +  geom_dotplot(aes(x=`Cell cycle dynamics`, y = iupl_score_envir, fill=`Amino acid`),binaxis='y', stackdir='center',binwidth = 0.01,position=position_dodge(1))
 
 
