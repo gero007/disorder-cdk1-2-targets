@@ -17,11 +17,11 @@ IUpredScoresPlotGenerator <- function(dataframe,id_col="ID",sites_col="psites"){
     breaksXaxis <- c(seq(0, nrow(aux_df), by = as.integer(nrow(aux_df)/10)))
     if (nrow(aux_df) < 100) {
       breaksXaxis <- c(seq(0, nrow(aux_df), by = 20))
-    } else if (quantity > 100  &quantity <= 500) {
+    } else if (nrow(aux_df) > 100  & nrow(aux_df) <= 500) {
       breaksXaxis <- c(seq(0, nrow(aux_df), by = 50))
-    } else if (quantity > 500  &quantity <= 1000) {
+    } else if (nrow(aux_df) > 500  & nrow(aux_df) <= 1000) {
       breaksXaxis <- c(seq(0, nrow(aux_df), by = 100))
-    } else if (quantity > 1000  &quantity <= 2000) {
+    } else if (nrow(aux_df) > 1000  & nrow(aux_df) <= 2000) {
       breaksXaxis <- c(seq(0, nrow(aux_df), by = 200))
     } else {
       breaksXaxis <- c(seq(0, nrow(aux_df), by = 500))
