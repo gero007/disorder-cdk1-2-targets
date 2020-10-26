@@ -1,0 +1,13 @@
+Inter section between xenopus data in the different stages of the in vivo experiment and manually curated Human CDK targets.
+a. 
+
+Predicted disorder and phosphorylation in Xenopus.
+b. We show the disorder score calculated with IUPRED over the protein length of cdc6, mcm4, rif1 and elys. Regions with scores greater than 0.5 (in red) are considered to be disordered and scores lesser than 0.5 (in grey) represent structured regions. The Ser and Thr residues of the protein were marked with blue triangles and phosphorylated sites with yellow circles and oranges circles for those phosphorylations showing a dynamic behavior throughout the cell cycle.
+
+Scheme of expected versus observed phosphorylation in disorder regions. 
+c. We modeled the expected number of phosphorylatable residues (Ser and Thr) in structured and disordered regions independently of their lenghts. In this way we take into account the effect of the compositional bias in disordered regions when compared with the rest of the protein.
+
+Observed vs. expected phosphorylated Ser and Thr in disordered regions. 
+d.For all the available phosphorylated proteins in Human and Xenopus datasets we calculated the expected number of Serines and Threonines in disordered regions and we compared it with what was observed. Statistical significance was calculated with the binomial test and corrected for multiple hypothesis testing by calculating the false discovery rate (FDR). 5% and 1% of FDR tresholds are marked in yellow and red respectively. The crosses show those proteins with at least one dynamic phsophorylation in xenopus or CDK1 subfamily targets for Humans.
+
+e. 

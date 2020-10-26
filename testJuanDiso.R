@@ -7,7 +7,7 @@ library(scales)
 library(reshape2)
 
 
-IUpredScoresPlotGenerator <- function(dataframe,id_col="ID",sites_col="psites"){
+IUpredScoresPlotGenerator <- function(dataframe,id_col="ID",sites_col="psites",subset_sites_col="anova_psites"){
   plotList <- list()
   for(i in 1:nrow(dataframe)){
     dataframe <-  as.data.frame(dataframe)
@@ -35,8 +35,9 @@ IUpredScoresPlotGenerator <- function(dataframe,id_col="ID",sites_col="psites"){
       scale_y_continuous(limits = c(-0.1, 1),breaks = c(seq(0,1,by=0.25)),expand = c(0.05,0.05)) + ylab("Score") +
       scale_fill_manual(values = pal_jco()(10)[c(3,4)]) +
       scale_color_manual(values = pal_jco()(10)[c(3,4)]) +
-      annotate("point",x = dataframe[i,sites_col][[1]],y=rep(-0.06,length(dataframe[i,sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=6) +
-      annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape=25,color=pal_jco()(10)[10],fill=pal_jco()(10)[5],size=4) +
+      annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape="|",color=pal_jco()(10)[1],fill=pal_jco()(10)[1],size=8) +
+      annotate("point",x = dataframe[i,sites_col][[1]],y=rep(-0.08,length(dataframe[i,sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=6) +
+      annotate("point",x = dataframe[i,subset_sites_col][[1]],y=rep(-0.08,length(dataframe[i,subset_sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill="olivedrab3",size=6) +
       geom_hline(yintercept = 0.5,size=0.5,linetype = "dashed",color = "darkslategrey") +
       ggtitle(plotTittle)
   }
@@ -54,6 +55,7 @@ cluster_C <- read_lines("utrech/ids/xenopusclusterC_mpi.txt")
 cluster_D <- read_lines("utrech/ids/xenopusclusterD_mpi.txt")
 significant_anova <- Reduce(union, list(cluster_A,cluster_B,cluster_C,cluster_D))
 human_CDK1targets <- read_lines("utrech/ids/humanCDKtargets_mpi.txt")
+xenopus_ANOVA_data <- read_delim("utrech/Xen_phospho_AnovaPhosphosites.txt","\t", escape_double = FALSE, trim_ws = TRUE)
 
 
 # # Read in pre-calculated file or perform iupred
@@ -109,6 +111,8 @@ phosphosites <- phosphosites %>% rename(ID=Proteins,psites=`Positions within pro
 
 phosphosites$psites <- lapply(phosphosites$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 phosphosites$psites_count <- sapply(phosphosites$psites, length)
+phosphosites$UID <- lapply(phosphosites$UID, function(x){ return(as.character(strsplit(x,",")[[1]]))})
+phosphosites$anova_psites <- apply(phosphosites, 1, function(x){x$psites[x$UID %in% xenopus_ANOVA_data$UID]})
 all_predictions_phospho <- merge.data.frame(all_predictions_phospho,phosphosites,by = "ID")
 
 
