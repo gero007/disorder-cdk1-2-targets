@@ -988,14 +988,21 @@ yeastIntersect_reshaped_disoPerc <- melt(yeastIntersect_All_data[,yeastIntersect
 colnames(yeastIntersect_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
 yeastIntersect_reshaped_disoPerc$target <- rep(yeastIntersect_All_data$target_intersect,length(yeastIntersect_disoPerc_cols_idx))
 yeastIntersect_reshaped_disoPerc$target<- relevel(as.factor(yeastIntersect_reshaped_disoPerc$target),ref="Non Cdk1 target")
-yeastIntersect_reshaped_disoPerc$Predictor <- factor(yeastIntersect_reshaped_disoPerc$Predictor,levels = ordered(levels(yeastIntersect_reshaped_disoPerc$Predictor)))
+yeastIntersect_reshaped_disoPerc$Predictor <- factor(as.character(yeastIntersect_reshaped_disoPerc$Predictor),levels =  c("pfilt_perc","seg_perc","dis465_perc","disHL_perc","espD_perc","espN_perc","espX_perc","glo_perc","iupl_perc","iups_perc","jronn_perc","vsl_perc","spot_perc"))
 
 ggplot(yeastIntersect_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
-    geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
-    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
-    ggpubr::theme_pubclean() + 
-    theme(text = element_text(size=20),axis.text.x = element_text(angle=45),legend.position = "none") + 
-    scale_y_continuous(limits = c(-20, 120), breaks = c(seq(0, 100, by = 10)))
+    geom_violin(aes(fill=target),position=position_dodge(0.9),bw=7,alpha=1,trim = F) +
+    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.15,outlier.size = 0.0001) +
+ggpubr::theme_classic2() +
+theme(
+  text = element_text(size=20),
+  legend.position = "none",legend.title = element_blank(),
+  axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed"),axis.text.x =element_text(angle=45, hjust = 1)
+  ) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
+scale_x_discrete(labels = c("Pfilt", "SEG","DisEMBL-465","DisEMBL-HotLoops","ESpritz-DisProt","ESpritz-NMR","ESpritz-Xray","GlobPlot","IUPred-Long","IUPred-Short","JRONN","VSL2b","SPOT")) + xlab(NULL) +
+scale_fill_manual(values = pal_jco()(10)[c(5,2)]) +
+scale_color_manual(values = pal_jco()(10)[c(10,7)],guide=FALSE)
 
 # Main Figure 4E
 yeastIntersect_reshaped_disoPerc_figure <-  subset(yeastIntersect_reshaped_disoPerc,(Predictor=="iupl_perc")|(Predictor=="vsl_perc")|(Predictor=="spot_perc"))
@@ -1032,14 +1039,21 @@ human_reshaped_disoPerc <- melt(human_data[,human_disoPerc_cols_idx])
 colnames(human_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
 human_reshaped_disoPerc$target <- rep(human_data$target,length(human_disoPerc_cols_idx))
 human_reshaped_disoPerc$target<- relevel(as.factor(human_reshaped_disoPerc$target),ref="Non Cdk1 target")
-human_reshaped_disoPerc$Predictor <- factor(human_reshaped_disoPerc$Predictor,levels = ordered(levels(human_reshaped_disoPerc$Predictor)))
+human_reshaped_disoPerc$Predictor <- factor(as.character(human_reshaped_disoPerc$Predictor),levels = c("pfilt_perc","seg_perc","dis465_perc","disHL_perc","espD_perc","espN_perc","espX_perc","glo_perc","iupl_perc","iups_perc","jronn_perc","vsl_perc","spot_perc"))
 
 ggplot(human_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
-    geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=0.5,trim = F) +
-    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.05,outlier.size = 0.0001) +
-    ggpubr::theme_pubclean() + 
-    theme(text = element_text(size=20),axis.text.x = element_text(angle=45),legend.position = "none") + 
-    scale_y_continuous(limits = c(-20, 120), breaks = c(seq(0, 100, by = 10)))
+    geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=1,trim = F) +
+    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.15,outlier.size = 0.0001) +
+ggpubr::theme_classic2() +
+theme(
+  text = element_text(size=20),
+  legend.position = "none",legend.title = element_blank(),
+  axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed"),axis.text.x =element_text(angle=45, hjust = 1)
+  ) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
+scale_x_discrete(labels = c("Pfilt", "SEG","DisEMBL-465","DisEMBL-HotLoops","ESpritz-DisProt","ESpritz-NMR","ESpritz-Xray","GlobPlot","IUPred-Long","IUPred-Short","JRONN","VSL2b","SPOT")) + xlab(NULL) +
+scale_fill_manual(values = pal_jco()(10)[c(5,2)]) +
+scale_color_manual(values = pal_jco()(10)[c(10,7)],guide=FALSE)
 
 # Main Figure 4E
 human_reshaped_disoPerc_figure <-  subset(human_reshaped_disoPerc,(Predictor=="iupl_perc")|(Predictor=="vsl_perc")|(Predictor=="spot_perc"))
