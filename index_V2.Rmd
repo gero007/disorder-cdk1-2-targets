@@ -1522,7 +1522,7 @@ xenopus_diso_fraction <- numeric()
 xenopus_pval <- numeric()
 xenopus_commonOR <- numeric()
 for (i in 1:length(xenopus_idx_cols)) {
-  xenopusStratContingencyArray <- getStratContingencyArray(df = subset(xenopus_data,cluster!="Non Dynamic phosphorylation"),
+  xenopusStratContingencyArray <- getStratContingencyArray(df = subset(xenopus_data,ANOVA=="Dynamic"),
                                                     sequence_col = "Sequence",
                                                     diso_index_col = xenopus_idx_cols[i],
                                                     psites_col = "anova_psites"
