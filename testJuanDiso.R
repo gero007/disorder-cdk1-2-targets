@@ -339,4 +339,4 @@ lila_ps_mitotic_ProDir <- read_delim("lila_ps_mitotic_ProDir.tab","\t", escape_d
 lila_ps_mitotic_ProDir <- merge.data.frame(lila_ps_mitotic_ProDir,human_data,all.x = T,by.x = "ID",by.y = "ACC#")
 lila_ps_mitotic_ProDir$Pro_Directed_Psites <- lapply(lila_ps_mitotic_ProDir$Pro_Directed_Psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 
-PhaseSep_mitotic_PorDirPsites<- IUpredScoresPlotGenerator(lila_ps_mitotic_ProDir,id_col = "ID",sites_col = "Pro_Directed_Psites",sequence_col = "sequence",highlightSP = T)
+PhaseSep_mitotic_PorDirPsites<- IUpredScoresPlotGenerator(lila_ps_mitotic_ProDir,id_col = "ID",sites_col = "Pro_Directed_Psites",subset_sites_col = "psites_CDK1")

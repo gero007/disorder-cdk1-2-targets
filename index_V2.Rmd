@@ -271,7 +271,7 @@ human_universe_data <- read_delim("PSP/Phosphorylation_site_dataset",
         LT_LIT = col_skip(), MS_LIT = col_skip(), 
         MS_CST = col_skip(), `CST_CAT#` = col_skip()), 
     trim_ws = TRUE)
-human_universe_data<-rename(human_universe_data,c(`ACC#`=ACC_ID))
+human_universe_data<-reshape::rename(human_universe_data,c(ACC_ID="ACC#"))
 # Select human proteins
 human_universe_data <- subset(human_universe_data, ORGANISM == "human")
 # Remove all information related to isoforms
@@ -291,7 +291,7 @@ human_data <- merge.data.frame(x = human_data,y = human_universe_data,by = c("AC
 #remove PROTEIN and GENE comumns from x, and rename the y columns
 human_data$GENE_CDK1<-NULL
 human_data$PROTEIN_CDK1<-NULL
-human_data <- rename(human_data,c(PROTEIN=PROTEIN_ALL,GENE=GENE_ALL))
+human_data <- reshape::rename(human_data,c(PROTEIN_ALL="PROTEIN",GENE_ALL="GENE"))
 # Adding the target category "Non Cdk1 target"
 levels(human_data$target) <- c("Cdk1 target","Non Cdk1 target")
 human_data$target[is.na(human_data$target)]<-"Non Cdk1 target"
@@ -697,7 +697,7 @@ humanSeq_all<-Biostrings::AAStringSet(humanSeq_all)
 humanComp_all<-colSums(alphabetFrequency(humanSeq_all))[1:20]/sum(colSums(alphabetFrequency(humanSeq_all))[1:20])
 
 ######################Set the rainbow color palette for human #####################
-colorPallete_XenopusComp <- rainbow(20)
+colorPallete_HumanComp <- rainbow(20)
 names(colorPallete_HumanComp) <- levels(reorder(names(humanComp_all),-humanComp_all))
 ########################################################################################
 
@@ -744,6 +744,8 @@ plotHumanVsl_DC <- ggplot()+geom_bar(aes(x=reorder(names(humanVslDiffComp),-huma
 fig<-ggarrange(plotHumanComp,plotHumanIupred_DC,plotHumanSpot_DC,plotHumanVsl_DC,ncol = 1)
 annotate_figure(fig,left = text_grob("Comp. Disorder - Comp. Universe / Comp. Universe", rot = 90,size = 16))
 ```
+
+
 ```{r xenopus composition ,echo=FALSE,message=FALSE,warning=FALSE,fig.height=10}
 ##XENOPUS
 
@@ -754,11 +756,11 @@ xenopusSeq_all<-Biostrings::AAStringSet(xenopusSeq_all)
 xenopusComp_all<-colSums(alphabetFrequency(xenopusSeq_all))[1:20]/sum(colSums(alphabetFrequency(xenopusSeq_all))[1:20])
 
 ######################Set the rainbow color palette for xenopus #####################
-colorPallete_HumanComp <- rainbow(20)
-names(colorPallete_HumanComp) <- levels(reorder(names(xenopusComp_all),-xenopusComp_all))
+colorPallete_XenopusComp <- rainbow(20)
+names(colorPallete_XenopusComp) <- levels(reorder(names(xenopusComp_all),-xenopusComp_all))
 ########################################################################################
 
-plotHumanComp <- ggplot()+geom_bar(aes(x=reorder(names(xenopusComp_all),-xenopusComp_all), fill=reorder(names(xenopusComp_all),-xenopusComp_all), y=xenopusComp_all),stat="identity") + scale_fill_manual(values=colorPallete_HumanComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank(),axis.ticks.y = element_blank(),axis.text.y = element_blank()) + scale_y_continuous(breaks = seq(0,0.1,0.025),limits = c(0,0.1)) + ggtitle("Proteome Composition")
+plotXenopusComp <- ggplot()+geom_bar(aes(x=reorder(names(xenopusComp_all),-xenopusComp_all), fill=reorder(names(xenopusComp_all),-xenopusComp_all), y=xenopusComp_all),stat="identity") + scale_fill_manual(values=colorPallete_XenopusComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank(),axis.ticks.y = element_blank(),axis.text.y = element_blank()) + scale_y_continuous(breaks = seq(0,0.1,0.025),limits = c(0,0.1)) + ggtitle("Proteome Composition")
 
 ##Iupred##
 
@@ -770,7 +772,7 @@ xenopusCompIupred<-colSums(alphabetFrequency(xenopusSeqIupred_diso))[1:20]/sum(c
 xenopusIupredDiffComp <- sort((xenopusCompIupred-xenopusComp_all)/xenopusComp_all,decreasing = T)
 
 
-plotHumanIupred_DC <- ggplot()+geom_bar(aes(x=reorder(names(xenopusIupredDiffComp),-xenopusIupredDiffComp), fill=reorder(names(xenopusIupredDiffComp),-xenopusIupredDiffComp), y=xenopusIupredDiffComp),stat="identity") + scale_fill_manual(values=colorPallete_HumanComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank()) + scale_y_continuous(breaks = c(-0.8,-0.4,0,0.4,0.8),limits = c(-0.9,0.9)) + ggtitle("IUpred")
+plotXenopusIupred_DC <- ggplot()+geom_bar(aes(x=reorder(names(xenopusIupredDiffComp),-xenopusIupredDiffComp), fill=reorder(names(xenopusIupredDiffComp),-xenopusIupredDiffComp), y=xenopusIupredDiffComp),stat="identity") + scale_fill_manual(values=colorPallete_XenopusComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank()) + scale_y_continuous(breaks = c(-0.8,-0.4,0,0.4,0.8),limits = c(-0.9,0.9)) + ggtitle("IUpred")
 
 
 ##SPOT##
@@ -782,7 +784,7 @@ xenopusCompSpot<-colSums(alphabetFrequency(xenopusSeqSpot_diso))[1:20]/sum(colSu
 xenopusSpotDiffComp <- sort((xenopusCompSpot-xenopusComp_all)/xenopusComp_all,decreasing = T)
 
 
-plotHumanSpot_DC <- ggplot()+geom_bar(aes(x=reorder(names(xenopusSpotDiffComp),-xenopusSpotDiffComp), fill=reorder(names(xenopusSpotDiffComp),-xenopusSpotDiffComp), y=xenopusSpotDiffComp),stat="identity") + scale_fill_manual(values=colorPallete_HumanComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank()) + scale_y_continuous(breaks = c(-0.8,-0.4,0,0.4,0.8),limits = c(-0.9,0.9)) + ggtitle("SPOT")
+plotXenopusSpot_DC <- ggplot()+geom_bar(aes(x=reorder(names(xenopusSpotDiffComp),-xenopusSpotDiffComp), fill=reorder(names(xenopusSpotDiffComp),-xenopusSpotDiffComp), y=xenopusSpotDiffComp),stat="identity") + scale_fill_manual(values=colorPallete_XenopusComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank()) + scale_y_continuous(breaks = c(-0.8,-0.4,0,0.4,0.8),limits = c(-0.9,0.9)) + ggtitle("SPOT")
 
 
 ##VSL##
@@ -794,11 +796,11 @@ xenopusCompVsl<-colSums(alphabetFrequency(xenopusSeqVsl_diso))[1:20]/sum(colSums
 xenopusVslDiffComp <- sort((xenopusCompVsl-xenopusComp_all)/xenopusComp_all,decreasing = T)
 
 
-plotHumanVsl_DC <- ggplot()+geom_bar(aes(x=reorder(names(xenopusVslDiffComp),-xenopusVslDiffComp), fill=reorder(names(xenopusVslDiffComp),-xenopusVslDiffComp), y=xenopusVslDiffComp),stat="identity") + scale_fill_manual(values=colorPallete_HumanComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank()) + scale_y_continuous(breaks = c(-0.8,-0.4,0,0.4,0.8),limits = c(-0.9,0.9)) + ggtitle("VSL2B")
+plotXenopusVsl_DC <- ggplot()+geom_bar(aes(x=reorder(names(xenopusVslDiffComp),-xenopusVslDiffComp), fill=reorder(names(xenopusVslDiffComp),-xenopusVslDiffComp), y=xenopusVslDiffComp),stat="identity") + scale_fill_manual(values=colorPallete_XenopusComp)+ theme_linedraw(base_size = 15) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),panel.grid.major.x = element_blank(),panel.grid.minor.y = element_blank()) + scale_y_continuous(breaks = c(-0.8,-0.4,0,0.4,0.8),limits = c(-0.9,0.9)) + ggtitle("VSL2B")
 
 
 
-fig<-ggarrange(plotHumanComp,plotHumanIupred_DC,plotHumanSpot_DC,plotHumanVsl_DC,ncol = 1)
+fig<-ggarrange(plotXenopusComp,plotXenopusIupred_DC,plotXenopusSpot_DC,plotXenopusVsl_DC,ncol = 1)
 annotate_figure(fig,left = text_grob("Comp. Disorder - Comp. Universe / Comp. Universe", rot = 90,size = 16))
 ```
 
@@ -992,7 +994,7 @@ yeastIntersect_reshaped_disoPerc$Predictor <- factor(as.character(yeastIntersect
 
 ggplot(yeastIntersect_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
     geom_violin(aes(fill=target),position=position_dodge(0.9),bw=7,alpha=1,trim = F) +
-    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.15,outlier.size = 0.0001) +
+    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.10,outlier.size = 0.0001) +
 ggpubr::theme_classic2() +
 theme(
   text = element_text(size=20),
@@ -1043,7 +1045,7 @@ human_reshaped_disoPerc$Predictor <- factor(as.character(human_reshaped_disoPerc
 
 ggplot(human_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
     geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=1,trim = F) +
-    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.15,outlier.size = 0.0001) +
+    geom_boxplot(aes(fill=target),position=position_dodge(0.9),width=0.10,outlier.size = 0.0001) +
 ggpubr::theme_classic2() +
 theme(
   text = element_text(size=20),
