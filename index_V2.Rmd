@@ -1672,13 +1672,12 @@ Holt paper
 ```{r Compare papers,echo=FALSE,message=FALSE,warning=FALSE}
 
 
-# sets <- list(Ubersax_cdkTargets=CDK1targetSacCer$Entry[CDK1targetSacCer$`P-Score`>=2],
-#              Ubersax_nonCdkTargets=CDK1targetSacCer$Entry[CDK1targetSacCer$`P-Score`<2],
-#              Holt_cdkTargets=cdkTargetList,
-#              Holt_nonCdkTargets=nonCdkTargetList)
-# 
-# eulerr_options(fills=list(fill=c("darkolivegreen1","deeppink3","darkcyan","darkorange1"),alpha=0.4))
-# plot(euler(sets, shape = "ellipse"), quantities = TRUE)
+sets <- list(Ubersax_cdkTargets=ubersax_data$Entry[ubersax_data$`P-Score`>=2],
+             Holt_cdkTargets=subset(holt_data,target_all=="Cdk1 target",)$Uniprot,
+             Holt_nonCdkTargets=subset(holt_data,target_consensus=="Cdk1 target",)$Uniprot)
+
+eulerr_options(fills=list(fill=c("darkolivegreen1","deeppink3","darkcyan","darkorange1"),alpha=0.4))
+plot(euler(sets, shape = "ellipse"), quantities = TRUE)
 
 
 ```
@@ -1689,7 +1688,7 @@ Considering the analysis performed previously, It seems evident that disorder re
 <a href="supplementary/Supp.html">Supplementary</a>
 
 ```{r save_env,echo=FALSE,message=FALSE,warning=FALSE}
-save.image("~/projects/cdk1_cyclinB1/phase_separation/disorder/disoWS.RData")
+# save.image("~/projects/cdk1_cyclinB1/phase_separation/disorder/disoWS.RData")
 ```
 
 

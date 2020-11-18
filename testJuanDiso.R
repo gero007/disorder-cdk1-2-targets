@@ -67,8 +67,9 @@ all_predictions_phospho$length <- nchar(all_predictions_phospho$sequence)
 
 # Introduce phosphosites (from all_proteins variable) using the apply function
 phosphosites <- phosphosites <- read_delim("all_phosphosites_xenopus_nr.tab", "\t", escape_double = FALSE, col_types = cols(`Leading proteins` = col_skip(), Protein = col_skip()), trim_ws = TRUE)
-phosphosites <- phosphosites %>% rename(ID=Proteins,psites=`Positions within proteins`,seqWindow=`Sequence window`,UID=`Unique identifier`) %>% group_by(ID) %>% summarise_at(c("psites","seqWindow","UID"),function(x){paste(x, collapse=",")})
+phosphosites <- phosphosites %>% dplyr::rename(ID=Proteins,psites=`Positions within proteins`,seqWindow=`Sequence window`,UID=`Unique identifier`) %>% group_by(ID) %>% summarise_at(c("psites","seqWindow","UID"),function(x){paste(x, collapse=",")})
 # The data has been opened by excel and some proteins have their names modified to be dates.
+
 
 phosphosites$psites <- lapply(phosphosites$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 phosphosites$psites_count <- sapply(phosphosites$psites, length)
@@ -140,7 +141,7 @@ ggplot(all_predictions_phospho) +
   geom_point(aes(x=psites_obsv_diso,y=psites_expct_diso, colour = binom_sig,shape=anova_sig),size=2,alpha=0.80)+
   geom_abline(color="darkslategrey",slope = 1,size=0.5,linetype = "dashed")+
   ggpubr::theme_classic2() + 
-  theme(text = element_text(size=15),legend.position = c(0.32,0.82),legend.box.just = "left",legend.box.margin = margin(2, 2, 2, 2),legend.box.background = element_rect(color="darkslategrey"),legend.title = element_text(size = 13)) +
+  theme(text = element_text(size=15),legend.position = c(0.32,0.60),legend.box.just = "left",legend.box.margin = margin(2, 2, 2, 2),legend.box.background = element_rect(color="darkslategrey"),legend.title = element_text(size = 13)) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed phospho S/T in IDR") +
   scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected phospho S/T in IDR") + 
@@ -320,10 +321,10 @@ ggplot(human_data) +
   geom_point(aes(x=psites_obsv_diso,y=psites_expct_diso, colour = binom_sig,shape=target),size=2,alpha=0.80)+
   geom_abline(color="darkslategrey",slope = 1,size=0.5,linetype = "dashed")+
   ggpubr::theme_classic2() + 
-  theme(text = element_text(size=15),legend.position = c(0.32,0.82),legend.box.just = "left",legend.box.margin = margin(2, 2, 2, 2),legend.box.background = element_rect(color="darkslategrey"),legend.title = element_text(size = 13)) +
+  theme(text = element_text(size=15),legend.position = c(0.32,0.60),legend.box.just = "left",legend.box.margin = margin(2, 2, 2, 2),legend.box.background = element_rect(color="darkslategrey"),legend.title = element_text(size = 13)) +
   guides(color=guide_legend(title="Statistical significance")) +
-  scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed phospho S/T in IDR") +
-  scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected phospho S/T in IDR") + 
+  scale_x_continuous(limits = c(0, 60),breaks = c(seq(0, 60, by = 10)))+ xlab("Observed phospho S/T in IDR") +
+  scale_y_continuous(limits = c(0, 60),breaks = c(seq(0, 60, by = 10)))+ ylab("Expected phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(3,2,4)])+
   scale_shape_manual(values = c(16,4,4))
 
