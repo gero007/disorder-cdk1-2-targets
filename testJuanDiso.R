@@ -145,7 +145,7 @@ ggplot(all_predictions_phospho) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ xlab("Observed phospho S/T in IDR") +
   scale_y_continuous(limits = c(0, 30),breaks = c(seq(0, 30, by = 5)))+ ylab("Expected phospho S/T in IDR") + 
-  scale_colour_manual(values = pal_jco()(10)[c(3,2,4)])+
+  scale_colour_manual(values = c(pal_jco()(10)[3],"#ffdd15ff",pal_jco()(10)[4]))+
   scale_shape_manual(values = c(16,4,4))
 
 
@@ -192,6 +192,8 @@ ggplot(subset(melted_all_predictions_phospho,hCDK1target == "Human CDK1 target" 
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
 plotList <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,anova_sig == "Dynamic"))
+
+
 # 
 # pdf("IUpredScores.pdf",width = 15,height = 3)
 #  for (plot in plotList) {
@@ -201,6 +203,15 @@ plotList <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,anova_sig =
 
 lilaSetXenopus <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,ID %in% c("coil","npm","ki67","tp53b","nup53","nup98")),sites_col = "psites")
 
+JM_highly_phospho_mlos <- c("cndd3","dnli1","ube4b","tsc2","at2b1","rptor","caf1b","pcm1","abcf1","gemi5","cq028","tdrkh","tdrd6","ctr9","sf3b1","rbp2","armc9","chsp1","dkc1","eif3a","tacc3")
+
+plotList_JM_highly_phospho_mlos <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,ID %in% JM_highly_phospho_mlos))
+
+pdf("../exportImages/pdfs/suppFig5/IUpredScores_plotList_JM_highly_phospho_mlos",width = 15,height = 3)
+ for (plot in plotList_JM_highly_phospho_mlos) {
+   print(plot)
+ }
+dev.off()
 
 
 #######################################  HUMAN (Lila subset) ###############################################################
@@ -325,7 +336,7 @@ ggplot(human_data) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_continuous(limits = c(0, 60),breaks = c(seq(0, 60, by = 10)))+ xlab("Observed phospho S/T in IDR") +
   scale_y_continuous(limits = c(0, 60),breaks = c(seq(0, 60, by = 10)))+ ylab("Expected phospho S/T in IDR") + 
-  scale_colour_manual(values = pal_jco()(10)[c(3,2,4)])+
+  scale_colour_manual(values = c(pal_jco()(10)[3],"#ffdd15ff",pal_jco()(10)[4]))+
   scale_shape_manual(values = c(16,4,4))
 
 
@@ -333,7 +344,7 @@ ggplot(human_data) +
 
 
 
-cdkTargetsPlots<- IUpredScoresPlotGenerator(subset(human_data,target=="Cdk1 target"),id_col = "ACC#",sites_col = "psites_CDK1")
+# cdkTargetsPlots<- IUpredScoresPlotGenerator(subset(human_data,target=="Cdk1 target"),id_col = "ACC#",sites_col = "psites_CDK1")
 
 
 lila_ps_mitotic_ProDir <- read_delim("lila_ps_mitotic_ProDir.tab","\t", escape_double = FALSE, col_types = cols(Pro_Directed_Psites = col_character()),trim_ws = TRUE)

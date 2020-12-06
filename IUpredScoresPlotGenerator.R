@@ -29,11 +29,11 @@ IUpredScoresPlotGenerator <- function(dataframe,id_col="ID",sites_col="psites",s
         theme(text = element_text(size=19),legend.position = "none") +
         scale_x_continuous(limits = c(0, nrow(aux_df)+1),breaks = breaksXaxis,expand = c(0.005,0.005))+ xlab("Positions") +
         scale_y_continuous(limits = c(-0.1, 1),breaks = c(seq(0,1,by=0.25)),expand = c(0.05,0.05)) + ylab("Score") +
-        scale_fill_manual(values = pal_jco()(10)[c(3,4)]) +
-        scale_color_manual(values = pal_jco()(10)[c(3,4)]) +
+        scale_fill_manual(values = c(pal_jco()(10)[3],"#f6921eff")) +
+        scale_color_manual(values = c(pal_jco()(10)[3],"#f6921eff")) +
         annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape="|",color=pal_jco()(10)[1],fill=pal_jco()(10)[1],size=8) +
         annotate("point",x = STP_sites,y=rep(0,length(STP_sites)),shape="|",color="deeppink4",fill="deeppink4",size=8) +
-        annotate("point",x = dataframe[i,sites_col][[1]],y=rep(-0.08,length(dataframe[i,sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=6) +
+        annotate("point",x = dataframe[i,sites_col][[1]],y=rep(-0.08,length(dataframe[i,sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill="#ffdd15ff",size=6) +
         annotate("point",x = dataframe[i,subset_sites_col][[1]],y=rep(-0.08,length(dataframe[i,subset_sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill="olivedrab3",size=6) +
         geom_hline(yintercept = 0.5,size=0.5,linetype = "dashed",color = "darkslategrey") +
         ggtitle(plotTittle)
@@ -45,10 +45,10 @@ IUpredScoresPlotGenerator <- function(dataframe,id_col="ID",sites_col="psites",s
         theme(text = element_text(size=19),legend.position = "none") +
         scale_x_continuous(limits = c(0, nrow(aux_df)+1),breaks = breaksXaxis,expand = c(0.005,0.005))+ xlab("Positions") +
         scale_y_continuous(limits = c(-0.1, 1),breaks = c(seq(0,1,by=0.25)),expand = c(0.05,0.05)) + ylab("Score") +
-        scale_fill_manual(values = pal_jco()(10)[c(3,4)]) +
-        scale_color_manual(values = pal_jco()(10)[c(3,4)]) +
+        scale_fill_manual(values = c(pal_jco()(10)[3],"#f6921eff")) +
+        scale_color_manual(values = c(pal_jco()(10)[3],"#f6921eff")) +
         annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape="|",color=pal_jco()(10)[1],fill=pal_jco()(10)[1],size=8) +
-        annotate("point",x = dataframe[i,sites_col][[1]],y=rep(-0.08,length(dataframe[i,sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill=pal_jco()(10)[2],size=6) +
+        annotate("point",x = dataframe[i,sites_col][[1]],y=rep(-0.08,length(dataframe[i,sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill="#ffdd15ff",size=6) +
         annotate("point",x = dataframe[i,subset_sites_col][[1]],y=rep(-0.08,length(dataframe[i,subset_sites_col][[1]])),shape=21,color=pal_jco()(10)[8],fill="olivedrab3",size=6) +
         geom_hline(yintercept = 0.5,size=0.5,linetype = "dashed",color = "darkslategrey") +
         ggtitle(plotTittle)
