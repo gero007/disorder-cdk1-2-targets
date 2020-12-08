@@ -1,5 +1,5 @@
 library(readr)
-library(ggseqlogo)
+# library(ggseqlogo)
 library(Biostrings)
 require(ggplot2)
 require(ggseqlogo)
@@ -7,7 +7,7 @@ library(dplyr)
 library(stringr)
 
 
-phosphoSiteBackground <- read_delim("utrech/Phosphoproteomics_Shotgun_Clustering_Gero/allPhosphosites_background.tab", "\t",
+phosphoSiteBackground <- readr::read_delim("utrech/Phosphoproteomics_Shotgun_Clustering_Gero/allPhosphosites_background.tab", "\t",
                                     escape_double = FALSE,
                                     col_types = cols(
                                       ANOVA = col_factor(levels = c("+","-"))),
@@ -21,7 +21,7 @@ phosphoSiteBackground <- phosphoSiteBackground %>% mutate(sequence_red=  substr(
 
 #______________________________________________________________________________________________________________________________________#
 
-phosphoSiteClusters <- read_delim("utrech/Phosphoproteomics_Shotgun_Clustering_Gero/clusterGero.tsb", "\t",
+phosphoSiteClusters <- readr::read_delim("utrech/Phosphoproteomics_Shotgun_Clustering_Gero/clusterGero.tsb", "\t",
                                   escape_double = FALSE, 
                                   col_types = cols(
                                     Cluster = col_factor(levels = c("cluster1","cluster2", "cluster3", "cluster4")),
