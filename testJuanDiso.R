@@ -17,7 +17,7 @@ cluster_D <- read_lines("utrech/ids/xenopusclusterD_mpi.txt")
 significant_anova <- Reduce(union, list(cluster_A,cluster_B,cluster_C,cluster_D))
 human_CDK1targets <- read_lines("utrech/ids/humanCDKtargets_mpi.txt")
 xenopus_ANOVA_data <- read_delim("utrech/Xen_phospho_AnovaPhosphosites.txt","\t", escape_double = FALSE, trim_ws = TRUE)
-
+xenopus_extract_ANOVA_data <- read_delim("utrech/Xen_Extracts_phospho_AnovaPhosphosites.txt","\t", escape_double = FALSE, trim_ws = TRUE)
 
 # # Read in pre-calculated file or perform iupred
 # if (!file.exists("all-predictions.Rdata")) {
@@ -66,7 +66,13 @@ all_predictions_phospho <- subset(all_predictions, ID %in% all_protein_id_phosph
 all_predictions_phospho$length <- nchar(all_predictions_phospho$sequence)
 
 # Introduce phosphosites (from all_proteins variable) using the apply function
-phosphosites <- phosphosites <- read_delim("all_phosphosites_xenopus_nr.tab", "\t", escape_double = FALSE, col_types = cols(`Leading proteins` = col_skip(), Protein = col_skip()), trim_ws = TRUE)
+phosphosites <- read_delim("all_phosphosites_xenopus_nr.tab", "\t", escape_double = FALSE, col_types = cols(`Leading proteins` = col_skip(), Protein = col_skip()), trim_ws = TRUE)
+
+# Add phosphosites from the extracts!!! uncomment if wanted.
+phosphosites_extracts <- read_delim("all_phosphosites_xenopus_extracts_nr.tab", "\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosites <- rbind(phosphosites,phosphosites_extracts)
+
+
 phosphosites <- phosphosites %>% dplyr::rename(ID=Proteins,psites=`Positions within proteins`,seqWindow=`Sequence window`,UID=`Unique identifier`) %>% group_by(ID) %>% summarise_at(c("psites","seqWindow","UID"),function(x){paste(x, collapse=",")})
 # The data has been opened by excel and some proteins have their names modified to be dates.
 
@@ -74,7 +80,13 @@ phosphosites <- phosphosites %>% dplyr::rename(ID=Proteins,psites=`Positions wit
 phosphosites$psites <- lapply(phosphosites$psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 phosphosites$psites_count <- sapply(phosphosites$psites, length)
 phosphosites$UID <- lapply(phosphosites$UID, function(x){ return(as.character(strsplit(x,",")[[1]]))})
-phosphosites$anova_psites <- apply(phosphosites, 1, function(x){x$psites[x$UID %in% xenopus_ANOVA_data$UID]})
+
+xenopus_dynamic <- xenopus_ANOVA_data$UID
+# Add phosphosites from the extracts!!! uncomment if wanted.
+xenopus_dynamic <- c(xenopus_dynamic,xenopus_extract_ANOVA_data$UID)
+#
+
+phosphosites$anova_psites <- apply(phosphosites, 1, function(x){x$psites[x$UID %in% xenopus_dynamic]})
 all_predictions_phospho <- merge.data.frame(all_predictions_phospho,phosphosites,by = "ID")
 
 
@@ -203,9 +215,9 @@ plotList <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,anova_sig =
 
 lilaSetXenopus <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,ID %in% c("coil","npm","ki67","tp53b","nup53","nup98")),sites_col = "psites")
 
-JM_highly_phospho_mlos <- c("cndd3","dnli1","ube4b","tsc2","at2b1","rptor","caf1b","pcm1","abcf1","gemi5","cq028","tdrkh","tdrd6","ctr9","sf3b1","rbp2","armc9","chsp1","dkc1","eif3a","tacc3")
-
-plotList_JM_highly_phospho_mlos <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,ID %in% JM_highly_phospho_mlos))
+# JM_highly_phospho_mlos <- c("cndd3","dnli1","ube4b","tsc2","at2b1","rptor","caf1b","pcm1","abcf1","gemi5","cq028","tdrkh","tdrd6","ctr9","sf3b1","rbp2","armc9","chsp1","dkc1","eif3a","tacc3")
+# 
+# plotList_JM_highly_phospho_mlos <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,ID %in% JM_highly_phospho_mlos))
 
 pdf("../exportImages/pdfs/suppFig5/IUpredScores_plotList_JM_highly_phospho_mlos",width = 15,height = 3)
  for (plot in plotList_JM_highly_phospho_mlos) {
