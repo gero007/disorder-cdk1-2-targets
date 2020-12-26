@@ -139,7 +139,7 @@ kinaseMotifList[["Nek1/2/3/4/5/8/10"]] <- "^.{5}[L|M|F|W].[S|T][A|V|I||L|F|W|Y|M
 kinaseMotifList[["Nek6/7/9"]] <- "^.{4}[L|M|F][D|E|N][D|E|Y]S[A|V|I||L|F|W|Y|M]"
 
 # Casein kinase 1: D/E-D/E-D/E-X-X-S/T or # pS/pT-X-X-S/T 
-kinaseMotifList[["Ck1"]] <- "^((.{2}[E|D][E|D][E|D])|(.{4}[S|T]|)).{2}[S|T]"
+kinaseMotifList[["Ck1"]] <- "^((.{2}[E|D][E|D][E|D])|(.{4}[S|T])).{2}[S|T]"
 
 # Casein kinase 2: [pS/pT]-{P}-x-[E/D] or [pS/pT]-{P}-x-pS, (https://www.sciencedirect.com/science/article/pii/S2405580815000680)
 kinaseMotifList[["Ck2"]] <- "^.{6}[S|T][S|T].[E|D|S]"
@@ -183,3 +183,27 @@ row.names(motifCounts_table) <- c("Cluster A","Cluster B","Cluster C","Cluster D
 # colnames(NonProDirected_motifCounts_table) <- c("Plk","Aurora","Nek","Ck1","Unknown","Ck2","Pka")
 
 motifCounts_table
+
+
+#=====================| Count without overlapps |=====================
+
+countMotifs <- function(motif_list, sequences){
+  # plk <- length(grep(x,motif_list[["Plk"]]))
+  # aurora <- length(grep(x,motif_list[["Aurora A/B"]]))
+  # ck <- length(grep(x,motif_list[["Ck1"]]) | grep(x,motif_list[["Ck2"]]))
+  # ddk <- length(grep(x,motif_list[["Cdc7"]]))
+  # cdk_min <- length(grep(x,motif_list[["Cdk minimal"]]))
+  # cdk_full <- length(grep(x,motif_list[["Cdk full"]]))
+  # total <- length(grep(x,motif_list[["Total"]]))
+  plk <- grepl(motif_list[["Plk"]],sequences)
+  aurora <- grepl(motif_list[["Aurora A/B"]],sequences)
+  ck <- grepl(motif_list[["Ck1"]],sequences) | grepl(motif_list[["Ck2"]],sequences)
+  ddk <- grepl(motif_list[["Cdc7"]],sequences)
+  cdk_min <- grepl(motif_list[["Cdk minimal"]],sequences)
+  cdk_full <- grepl(motif_list[["Cdk full"]],sequences)
+  total <- grepl(motif_list[["Total"]],sequences)
+  
+  output <- list(plk,aurora,ck,ddk,cdk_min,cdk_full,total)
+  names(output) <- c("plk","aurora","ck","ddk","cdk_min","cdk_full","total")
+  return(output)
+}
