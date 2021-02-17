@@ -1174,9 +1174,9 @@ geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="t
 scale_fill_manual(values = pal_jco()(10)[c(5,2)]) +
 scale_color_manual(values = pal_jco()(10)[c(10,7)],guide=FALSE)
 
-wilcox.test(`Percentage of disorder`~dynamic,data=xenopus_reshaped_disoPerc_figure,subset = Predictor=="iupl_perc",conf.int=TRUE)
-wilcox.test(`Percentage of disorder`~dynamic,data=xenopus_reshaped_disoPerc_figure,subset = Predictor=="spot_perc",conf.int=TRUE)
-wilcox.test(`Percentage of disorder`~dynamic,data=xenopus_reshaped_disoPerc_figure,subset = Predictor=="vsl_perc",conf.int=TRUE)
+wilcox.test(`Percentage of disorder`~ANOVA,data=xenopus_reshaped_disoPerc_figure,subset = Predictor=="iupl_perc",conf.int=TRUE)
+wilcox.test(`Percentage of disorder`~ANOVA,data=xenopus_reshaped_disoPerc_figure,subset = Predictor=="spot_perc",conf.int=TRUE)
+wilcox.test(`Percentage of disorder`~ANOVA,data=xenopus_reshaped_disoPerc_figure,subset = Predictor=="vsl_perc",conf.int=TRUE)
 
 # iupl
 # 	Wilcoxon rank sum test with continuity correction
@@ -1549,8 +1549,8 @@ predictorsCMH_data$commonOR <- as.numeric(as.character(predictorsCMH_data$common
 predictorsCMH_data$organism <- as.factor(predictorsCMH_data$organism)
 
 
-ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=predictors)) + 
-    geom_point(aes(color=diso_fraction,shape=organism),size=3) + 
+ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=organism)) + 
+    geom_point(aes(color=diso_fraction,shape=predictors),size=3) + 
     geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "darkslategrey")+
     annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8,size=5)+
     geom_vline(xintercept=log10(1), linetype="dashed", color = "darkslategrey")+
@@ -1564,6 +1564,85 @@ ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=predic
     scale_color_gradient(low = pal_jco()(10)[1],high = pal_jco()(10)[4],limits=c(0.19,0.51),breaks=c(0.2,0.3,0.4,0.5)) +
     guides(position="bottom",color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "bottom",direction = "horizontal"),shape=guide_legend(title="Dataset"))
 
+#__________________________________________
+#TEST addition of human non CDK targets
+
+getStratContingencyArray_MOD <- function(df,sequence_col,disordered_index_list,phosphosite_regex="[ST]P",pSitesCol=NULL,nonPsitesCol=NULL){
+    
+    disorderedRegions <- disordered_index_list
+    indexST <- gregexpr("[ST]",df[,sequence_col])
+    if(is.null(pSitesCol)){
+        indexSTP <- gregexpr(phosphosite_regex,df[,sequence_col])
+    } else {
+        indexSTP_cdk <- strsplit(df[,pSitesCol],",")
+    }
+    
+    stratContingencyArray <- array(dim = c(2,2,nrow(df)))
+    for (i in 1:nrow(df)) {
+        
+        
+        indexDiso <- disorderedRegions[[i]]
+        indexPhosphoST <- as.numeric(indexSTP[[i]])
+        indexNonPhosphoST <- setdiff(as.numeric(indexST[[i]]),indexPhosphoST)
+        
+        ndp <- length(which(indexPhosphoST %in% indexDiso))
+        nop <- length(which(!indexPhosphoST %in% indexDiso))
+        ndnp <- length(which(indexNonPhosphoST %in% indexDiso))
+        nonp<- length(which(!indexNonPhosphoST %in% indexDiso))
+        stratContingencyArray[1,1,i]<-ndp
+        stratContingencyArray[1,2,i]<-nop
+        stratContingencyArray[2,1,i]<-ndnp
+        stratContingencyArray[2,2,i]<-nonp
+
+        
+    }
+    return(stratContingencyArray)
+}
+
+
+humanNonCDK_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
+humanNonCDK_organism <- (rep("Human Non CDK targets",length(humanNonCDK_idx_cols)))
+humanNonCDK_proteome_length <- sum(humanDiso_full$Length)
+humanNonCDK_diso_fraction <- numeric()
+humanNonCDK_pval <- numeric()
+humanNonCDK_commonOR <- numeric()
+for (i in 1:length(humanNonCDK_idx_cols)) {
+  humanNonCDKStratContingencyArray <- getStratContingencyArray(df = subset(human_data,target=="Non Cdk1 target"),
+                                                    sequence_col = "Sequence",
+                                                    diso_index_col = humanNonCDK_idx_cols[i],
+                                                    psites_col = "psite"
+                                                    ) 
+  humanNonCDK_CMHtest <- mantelhaen.test(humanNonCDKStratContingencyArray)
+  humanNonCDK_pval[i]<-humanNonCDK_CMHtest$p.value
+  humanNonCDK_commonOR[i]<-humanNonCDK_CMHtest$estimate
+  # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
+  # human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,humanDiso_full[,human_idx_cols[i]]!="0")[,human_idx_cols[i]],","))))/human_proteome_length
+  humanNonCDK_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,!is.na(humanDiso_full[,humanNonCDK_idx_cols[i]]))[,humanNonCDK_idx_cols[i]],","))))/humanNonCDK_proteome_length
+
+}
+
+predictorsCMH_data<-as.data.frame(rbind(yeastIntersect_CMH_data,human_CMH_data,xenopus_CMH_data))
+colnames(predictorsCMH_data) <- c("predictors","diso_fraction","pval","commonOR","organism")
+predictorsCMH_data$diso_fraction <- as.numeric(as.character(predictorsCMH_data$diso_fraction))
+predictorsCMH_data$pval <- as.numeric(as.character(predictorsCMH_data$pval))
+predictorsCMH_data$commonOR <- as.numeric(as.character(predictorsCMH_data$commonOR))
+predictorsCMH_data$organism <- as.factor(predictorsCMH_data$organism)
+
+
+ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=organism)) + 
+    geom_point(aes(color=diso_fraction,shape=predictors),size=3) + 
+    geom_hline(yintercept=-log10(0.05), linetype="dashed", color = "darkslategrey")+
+    annotate(geom = "text",label="p-value = 0.05",x=-2,y=-log10(0.05),hjust=0,vjust=-0.8,size=5)+
+    geom_vline(xintercept=log10(1), linetype="dashed", color = "darkslategrey")+
+    scale_y_continuous(limits = c(1,110)) +
+    xlim(-2, 2) +
+    geom_label_repel(size=4.5)+
+    theme_minimal(base_size = 15) +
+    # ggpubr::theme_pubclean(base_size=15,) +
+    theme(legend.position = c(0.26,0.75),legend.box.just = "center",legend.box.margin = margin(2, 2, 2, 2),
+          legend.box.background = element_rect(color="darkslategrey"),panel.grid.minor = element_blank()) +
+    scale_color_gradient(low = pal_jco()(10)[1],high = pal_jco()(10)[4],limits=c(0.19,0.51),breaks=c(0.2,0.3,0.4,0.5)) +
+    guides(position="bottom",color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "bottom",direction = "horizontal"),shape=guide_legend(title="Dataset"))
 
 ```
 
