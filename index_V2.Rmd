@@ -19,7 +19,7 @@ library(GGally)
 library(vcd)
 library(kableExtra)
 library(ggpubr)
-library(Rcpi)
+# library(Rcpi)
 #if fails => sudo R CMD javareconf; reinstall; reboot R
 library(Biostrings)
 library(eulerr)
@@ -1479,16 +1479,27 @@ yeastIntersect_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoInde
 yeastIntersect_organism <- (rep("Yeast CDK targets",length(yeastIntersect_idx_cols)))
 yeastIntersect_proteome_length <- sum(yeastDiso_full$Length)
 yeastIntersect_diso_fraction <- numeric()
-yeastIntersect_pval <- numeric()
-yeastIntersect_commonOR <- numeric()
+yeastIntersect_CMHpval <- numeric()
+yeastIntersect_CMHcommonOR <- numeric()
+yeastIntersect_FisherPval <- numeric()
+yeastIntersect_FisherOR <- numeric()
 for (i in 1:length(yeastIntersect_idx_cols)) {
   yeastStratContingencyArray <- getStratContingencyArray(df = subset(yeastIntersect_CDK1_data,target_intersect=="Cdk1 target"),
                                                     sequence_col = "Sequence",
                                                     diso_index_col = yeastIntersect_idx_cols[i],
                                                     psites_col = "psite") 
   yeastIntersect_CMHtest <- mantelhaen.test(yeastStratContingencyArray)
-  yeastIntersect_pval[i]<-yeastIntersect_CMHtest$p.value
-  yeastIntersect_commonOR[i]<-yeastIntersect_CMHtest$estimate
+  yeastIntersect_CMHpval[i]<-yeastIntersect_CMHtest$p.value
+  yeastIntersect_CMHcommonOR[i]<-yeastIntersect_CMHtest$estimate
+  
+  yeastContingency <- matrix(c(sum(yeastStratContingencyArray[1,1,]),
+                               sum(yeastStratContingencyArray[1,2,]),
+                               sum(yeastStratContingencyArray[2,1,]),
+                               sum(yeastStratContingencyArray[2,2,])),
+                             nrow = 2,byrow = T)
+  yeastIntersect_FisherTest <- fisher.test(yeastContingency)
+  yeastIntersect_FisherPval[i]<-yeastIntersect_FisherTest$p.value
+  yeastIntersect_FisherOR[i]<-yeastIntersect_FisherTest$estimate
   # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
   # yeastIntersect_diso_fraction[i] <-
   #   (sum(lengths(strsplit(subset(yeastDiso_full,yeastDiso_full[, yeastIntersect_idx_cols[i]]!="0")[,yeastIntersect_idx_cols[i]],","))))/yeastIntersect_proteome_length
@@ -1500,8 +1511,10 @@ human_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
 human_organism <- (rep("Human CDK targets",length(human_idx_cols)))
 human_proteome_length <- sum(humanDiso_full$Length)
 human_diso_fraction <- numeric()
-human_pval <- numeric()
-human_commonOR <- numeric()
+human_CMHpval <- numeric()
+human_CMHcommonOR <- numeric()
+human_FisherPval <- numeric()
+human_FisherOR <- numeric()
 for (i in 1:length(human_idx_cols)) {
   humanStratContingencyArray <- getStratContingencyArray(df = subset(human_data,target=="Cdk1 target"),
                                                     sequence_col = "Sequence",
@@ -1509,8 +1522,17 @@ for (i in 1:length(human_idx_cols)) {
                                                     psites_col = "psite_CDK1"
                                                     ) 
   human_CMHtest <- mantelhaen.test(humanStratContingencyArray)
-  human_pval[i]<-human_CMHtest$p.value
-  human_commonOR[i]<-human_CMHtest$estimate
+  human_CMHpval[i]<-human_CMHtest$p.value
+  human_CMHcommonOR[i]<-human_CMHtest$estimate
+  
+  humanContingency <- matrix(c(sum(humanStratContingencyArray[1,1,]),
+                               sum(humanStratContingencyArray[1,2,]),
+                               sum(humanStratContingencyArray[2,1,]),
+                               sum(humanStratContingencyArray[2,2,])),
+                             nrow = 2,byrow = T)
+  human_FisherTest <- fisher.test(humanContingency)
+  human_FisherPval[i]<-human_FisherTest$p.value
+  human_FisherOR[i]<-human_FisherTest$estimate
   # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
   # human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,humanDiso_full[,human_idx_cols[i]]!="0")[,human_idx_cols[i]],","))))/human_proteome_length
   human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,!is.na(humanDiso_full[,human_idx_cols[i]]))[,human_idx_cols[i]],","))))/human_proteome_length
@@ -1521,8 +1543,10 @@ xenopus_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
 xenopus_organism <- (rep("Xenopus dynamic",length(xenopus_idx_cols)))
 xenopus_proteome_length <- sum(xenopusDiso$Length)
 xenopus_diso_fraction <- numeric()
-xenopus_pval <- numeric()
-xenopus_commonOR <- numeric()
+xenopus_CMHpval <- numeric()
+xenopus_CMHcommonOR <- numeric()
+xenopus_FisherPval <- numeric()
+xenopus_FisherOR <- numeric()
 for (i in 1:length(xenopus_idx_cols)) {
   xenopusStratContingencyArray <- getStratContingencyArray(df = subset(xenopus_data,ANOVA=="Dynamic"),
                                                     sequence_col = "Sequence",
@@ -1530,16 +1554,26 @@ for (i in 1:length(xenopus_idx_cols)) {
                                                     psites_col = "anova_psites"
                                                     ) 
   xenopus_CMHtest <- mantelhaen.test(xenopusStratContingencyArray)
-  xenopus_pval[i]<-xenopus_CMHtest$p.value
-  xenopus_commonOR[i]<-xenopus_CMHtest$estimate
+  xenopus_CMHpval[i]<-xenopus_CMHtest$p.value
+  xenopus_CMHcommonOR[i]<-xenopus_CMHtest$estimate
+  
+  
+  xenopusContingency <- matrix(c(sum(xenopusStratContingencyArray[1,1,]),
+                               sum(xenopusStratContingencyArray[1,2,]),
+                               sum(xenopusStratContingencyArray[2,1,]),
+                               sum(xenopusStratContingencyArray[2,2,])),
+                             nrow = 2,byrow = T)
+  xenopus_FisherTest <- fisher.test(xenopusContingency)
+  xenopus_FisherPval[i]<-xenopus_FisherTest$p.value
+  xenopus_FisherOR[i]<-xenopus_FisherTest$estimate
   # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
   # xenopus_diso_fraction[i]<-(sum(lengths(strsplit(subset(xenopusDiso,xenopusDiso[,xenopus_idx_cols[i]]!="0")[,xenopus_idx_cols[i]],","))))/xenopus_proteome_length
   xenopus_diso_fraction[i]<-(sum(lengths(strsplit(subset(xenopusDiso,!is.na(xenopusDiso[,xenopus_idx_cols[i]]))[,xenopus_idx_cols[i]],","))))/xenopus_proteome_length
 }
 
-yeastIntersect_CMH_data <- cbind(predictors,yeastIntersect_diso_fraction,yeastIntersect_pval,yeastIntersect_commonOR,yeastIntersect_organism)
-human_CMH_data <- cbind(predictors,human_diso_fraction,human_pval,human_commonOR,human_organism)
-xenopus_CMH_data <- cbind(predictors,xenopus_diso_fraction,xenopus_pval,xenopus_commonOR,xenopus_organism)
+yeastIntersect_CMH_data <- cbind(predictors,yeastIntersect_diso_fraction,yeastIntersect_CMHpval,yeastIntersect_CMHcommonOR,yeastIntersect_organism)
+human_CMH_data <- cbind(predictors,human_diso_fraction,human_CMHpval,human_CMHcommonOR,human_organism)
+xenopus_CMH_data <- cbind(predictors,xenopus_diso_fraction,xenopus_CMHpval,xenopus_CMHcommonOR,xenopus_organism)
 
 predictorsCMH_data<-as.data.frame(rbind(yeastIntersect_CMH_data,human_CMH_data,xenopus_CMH_data))
 colnames(predictorsCMH_data) <- c("predictors","diso_fraction","pval","commonOR","organism")
@@ -1547,6 +1581,21 @@ predictorsCMH_data$diso_fraction <- as.numeric(as.character(predictorsCMH_data$d
 predictorsCMH_data$pval <- as.numeric(as.character(predictorsCMH_data$pval))
 predictorsCMH_data$commonOR <- as.numeric(as.character(predictorsCMH_data$commonOR))
 predictorsCMH_data$organism <- as.factor(predictorsCMH_data$organism)
+
+
+
+yeastIntersect_Fisher_data <- cbind(predictors,yeastIntersect_diso_fraction,yeastIntersect_FisherPval,yeastIntersect_FisherOR,yeastIntersect_organism)
+human_Fisher_data <- cbind(predictors,human_diso_fraction,human_FisherPval,human_FisherOR,human_organism)
+xenopus_Fisher_data <- cbind(predictors,xenopus_diso_fraction,xenopus_FisherPval,xenopus_FisherOR,xenopus_organism)
+
+predictorsFisher_data<-as.data.frame(rbind(yeastIntersect_Fisher_data,human_Fisher_data,xenopus_Fisher_data))
+colnames(predictorsFisher_data) <- c("predictors","diso_fraction","pval","OR","organism")
+predictorsFisher_data$diso_fraction <- as.numeric(as.character(predictorsFisher_data$diso_fraction))
+predictorsFisher_data$pval <- as.numeric(as.character(predictorsFisher_data$pval))
+predictorsFisher_data$OR <- as.numeric(as.character(predictorsFisher_data$OR))
+predictorsFisher_data$organism <- as.factor(predictorsFisher_data$organism)
+
+
 
 
 ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=organism)) + 
