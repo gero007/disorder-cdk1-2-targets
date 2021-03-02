@@ -172,7 +172,7 @@ phosphosite_CDKFamilyTarget_HS$`ACC#`[712:717]<- "Q01196"
 phosphosite_CDKFamilyTarget_HS$MOD_RSD[716]<-"S21"
 phosphosite_CDKFamilyTarget_HS$MOD_RSD[712]<-"S249"
 phosphosite_CDKFamilyTarget_HS$MOD_RSD[713]<-"S266"
-phosphosite_CDKFamilyTarget_HS$MOD_RSD[717]<-"S273"
+phosphosite_CDKFamilyTarget_HS$MOD_RSD[717]<-"T273"
 phosphosite_CDKFamilyTarget_HS$MOD_RSD[714]<-"S276"
 phosphosite_CDKFamilyTarget_HS$MOD_RSD[715]<-"S397"
 
