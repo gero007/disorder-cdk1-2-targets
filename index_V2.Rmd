@@ -1474,6 +1474,18 @@ ggdotchart(predictorsCMH_data, x = "predictors", y = "commonOR",
 
 predictors <- c("IUPred","SPOT","VSL2b")
 
+#__________________________________________
+#TEST addition of human MAPK
+
+mapk_data <- read_delim("PSP/MAPK/PSP_MAPK_Target_HS.tab", 
+    "\t", escape_double = FALSE, col_types = cols(MAPK_MOD_RSD = col_character()), 
+    trim_ws = TRUE)
+
+mapk_data$psite_MAPK <- lapply(mapk_data$MAPK_MOD_RSD, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
+
+human_data<-merge.data.frame(human_data, mapk_data, by = c("GENE","PROTEIN","ACC#"),all.x = T)
+#__________________________________________
+
 
 yeastIntersect_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
 yeastIntersect_organism <- (rep("Yeast CDK targets",length(yeastIntersect_idx_cols)))
@@ -1539,6 +1551,38 @@ for (i in 1:length(human_idx_cols)) {
 
 }
 
+#__________________________________________
+#TEST addition of human MAPK
+human_mapk_organism <- (rep("Human MAPK targets",length(human_idx_cols)))
+human_mapk_CMHpval <- numeric()
+human_mapk_CMHcommonOR <- numeric()
+human_mapk_FisherPval <- numeric()
+human_mapk_FisherOR <- numeric()
+for (i in 1:length(human_idx_cols)) {
+  humanStratContingencyArray <- getStratContingencyArray(df = subset(human_data,!is.na(MAPK_KINASE)),
+                                                    sequence_col = "Sequence",
+                                                    diso_index_col = human_idx_cols[i],
+                                                    psites_col = "psite_MAPK"
+                                                    ) 
+  human_mapk_CMHtest <- mantelhaen.test(humanStratContingencyArray)
+  human_mapk_CMHpval[i]<-human_mapk_CMHtest$p.value
+  human_mapk_CMHcommonOR[i]<-human_mapk_CMHtest$estimate
+  
+  humanContingency <- matrix(c(sum(humanStratContingencyArray[1,1,]),
+                               sum(humanStratContingencyArray[1,2,]),
+                               sum(humanStratContingencyArray[2,1,]),
+                               sum(humanStratContingencyArray[2,2,])),
+                             nrow = 2,byrow = T)
+  human_mapk_FisherTest <- fisher.test(humanContingency)
+  human_mapk_FisherPval[i]<-human_mapk_FisherTest$p.value
+  human_mapk_FisherOR[i]<-human_mapk_FisherTest$estimate
+  # Here I removed the proteins with zero prediction of disorder for calculating the fraction of disorder residues in the set. I should keep those and remove the NAs
+  # human_diso_fraction[i]<-(sum(lengths(strsplit(subset(humanDiso_full,humanDiso_full[,human_idx_cols[i]]!="0")[,human_idx_cols[i]],","))))/human_proteome_length
+
+}
+#__________________________________________
+
+
 xenopus_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
 xenopus_organism <- (rep("Xenopus dynamic",length(xenopus_idx_cols)))
 xenopus_proteome_length <- sum(xenopusDiso$Length)
@@ -1571,11 +1615,13 @@ for (i in 1:length(xenopus_idx_cols)) {
   xenopus_diso_fraction[i]<-(sum(lengths(strsplit(subset(xenopusDiso,!is.na(xenopusDiso[,xenopus_idx_cols[i]]))[,xenopus_idx_cols[i]],","))))/xenopus_proteome_length
 }
 
+#CMH
 yeastIntersect_CMH_data <- cbind(predictors,yeastIntersect_diso_fraction,yeastIntersect_CMHpval,yeastIntersect_CMHcommonOR,yeastIntersect_organism)
 human_CMH_data <- cbind(predictors,human_diso_fraction,human_CMHpval,human_CMHcommonOR,human_organism)
+human_MAPK_CMH_data <- cbind(predictors,human_diso_fraction,human_mapk_CMHpval,human_mapk_CMHcommonOR,human_mapk_organism)
 xenopus_CMH_data <- cbind(predictors,xenopus_diso_fraction,xenopus_CMHpval,xenopus_CMHcommonOR,xenopus_organism)
 
-predictorsCMH_data<-as.data.frame(rbind(yeastIntersect_CMH_data,human_CMH_data,xenopus_CMH_data))
+predictorsCMH_data<-as.data.frame(rbind(yeastIntersect_CMH_data,human_CMH_data,human_MAPK_CMH_data,xenopus_CMH_data))
 colnames(predictorsCMH_data) <- c("predictors","diso_fraction","pval","commonOR","organism")
 predictorsCMH_data$diso_fraction <- as.numeric(as.character(predictorsCMH_data$diso_fraction))
 predictorsCMH_data$pval <- as.numeric(as.character(predictorsCMH_data$pval))
@@ -1583,12 +1629,13 @@ predictorsCMH_data$commonOR <- as.numeric(as.character(predictorsCMH_data$common
 predictorsCMH_data$organism <- as.factor(predictorsCMH_data$organism)
 
 
-
+#FISHER
 yeastIntersect_Fisher_data <- cbind(predictors,yeastIntersect_diso_fraction,yeastIntersect_FisherPval,yeastIntersect_FisherOR,yeastIntersect_organism)
 human_Fisher_data <- cbind(predictors,human_diso_fraction,human_FisherPval,human_FisherOR,human_organism)
+human_MAPK_Fisher_data <- cbind(predictors,human_diso_fraction,human_mapk_FisherPval,human_mapk_FisherOR,human_mapk_organism)
 xenopus_Fisher_data <- cbind(predictors,xenopus_diso_fraction,xenopus_FisherPval,xenopus_FisherOR,xenopus_organism)
 
-predictorsFisher_data<-as.data.frame(rbind(yeastIntersect_Fisher_data,human_Fisher_data,xenopus_Fisher_data))
+predictorsFisher_data<-as.data.frame(rbind(yeastIntersect_Fisher_data,human_Fisher_data,human_MAPK_Fisher_data,xenopus_Fisher_data))
 colnames(predictorsFisher_data) <- c("predictors","diso_fraction","pval","OR","organism")
 predictorsFisher_data$diso_fraction <- as.numeric(as.character(predictorsFisher_data$diso_fraction))
 predictorsFisher_data$pval <- as.numeric(as.character(predictorsFisher_data$pval))
@@ -1612,6 +1659,10 @@ ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=organi
           legend.box.background = element_rect(color="darkslategrey"),panel.grid.minor = element_blank()) +
     scale_color_gradient(low = pal_jco()(10)[1],high = pal_jco()(10)[4],limits=c(0.19,0.51),breaks=c(0.2,0.3,0.4,0.5)) +
     guides(position="bottom",color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "bottom",direction = "horizontal"),shape=guide_legend(title="Dataset"))
+
+
+
+
 
 #__________________________________________
 #TEST addition of human non CDK targets

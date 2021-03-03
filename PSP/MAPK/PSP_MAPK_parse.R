@@ -75,8 +75,13 @@ mapk_data <- phosphosite_MAPKFamilyTarget_HS %>% unite(col = "KINASE",
 
 mapk_data <- mapk_data %>% group_by(`ACC#`,GENE,PROTEIN) %>% summarise_at(c("MOD_RSD","KINASE"),function(x){paste(x, collapse=",")})
 
-mapk_data$MOD_RSD <- sapply(mapk_data$MOD_RSD, function(x){ return(paste(substr(strsplit(x,",")[[1]],start = 2,stop = 2000),collapse = ","))})
-mapk_data$KINASE <- sapply(mapk_data$KINASE, function(x){ return(paste(unique(strsplit(x,",")[[1]]),collapse = ","))})
+mapk_data$MAPK_MOD_RSD <- sapply(mapk_data$MOD_RSD, function(x){ return(paste(substr(strsplit(x,",")[[1]],start = 2,stop = 2000),collapse = ","))})
+mapk_data$MAPK_KINASE <- sapply(mapk_data$KINASE, function(x){ return(paste(unique(strsplit(x,",")[[1]]),collapse = ","))})
+
+mapk_data$MOD_RSD <- NULL
+mapk_data$KINASE <- NULL
+
+write.table(mapk_data,file = "PSP/MAPK/PSP_MAPK_Target_HS.tab",quote = F,sep = "\t",row.names = F)
 # algunos valores tienen espacios, por eso el gsub
 # human_data$method <- sapply(human_data$method, function(x){ return(paste(unique(gsub(" ", "", strsplit(x,",")[[1]], fixed = TRUE)),collapse = ","))})
 
