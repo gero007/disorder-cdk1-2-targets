@@ -313,6 +313,24 @@ human_data<-merge.data.frame(human_data,humanDiso_full,by.x = "ACC#",by.y = "acc
 # human_data$`[ST]-P`<-humanMinCons
 # rm(humanFullCons,humanMinCons)
 
+#__________________________________________
+#TEST addition of human MAPK
+
+mapk_data <- read_delim("PSP/MAPK/PSP_MAPK_Target_HS.tab", 
+    "\t", escape_double = FALSE, col_types = cols(MAPK_MOD_RSD = col_character()), 
+    trim_ws = TRUE)
+
+mapk_data$psite_MAPK <- lapply(mapk_data$MAPK_MOD_RSD, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
+
+human_data<-merge.data.frame(human_data, mapk_data, by = c("GENE","PROTEIN","ACC#"),all.x = T)
+
+human_data <- human_data %>% mutate(target_mapk=case_when(
+    !is.na(MAPK_MOD_RSD) ~ "mapk target",
+    TRUE ~ "Non mapk target"
+))
+#__________________________________________
+
+
 
 
 # ___________Phosphosite Xenopus Data_____________
@@ -1042,6 +1060,11 @@ colnames(human_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
 human_reshaped_disoPerc$target <- rep(human_data$target,length(human_disoPerc_cols_idx))
 human_reshaped_disoPerc$target<- relevel(as.factor(human_reshaped_disoPerc$target),ref="Non Cdk1 target")
 human_reshaped_disoPerc$Predictor <- factor(as.character(human_reshaped_disoPerc$Predictor),levels = c("pfilt_perc","seg_perc","dis465_perc","disHL_perc","espD_perc","espN_perc","espX_perc","glo_perc","iupl_perc","iups_perc","jronn_perc","vsl_perc","spot_perc"))
+# TEST -> MAPK added________
+human_reshaped_disoPerc$target_mapk <- rep(human_data$target_mapk,length(human_disoPerc_cols_idx))
+human_reshaped_disoPerc$target_mapk<- relevel(as.factor(human_reshaped_disoPerc$target_mapk),ref="Non mapk target")
+#_____________________________
+
 
 ggplot(human_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
     geom_violin(aes(fill=target),position=position_dodge(0.9),bw=5,alpha=1,trim = F) +
@@ -1079,6 +1102,28 @@ scale_color_manual(values = pal_jco()(10)[c(10,7)],guide=FALSE)
 wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="iupl_perc",conf.int=TRUE)
 wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="spot_perc",conf.int=TRUE)
 wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="vsl_perc",conf.int=TRUE)
+
+# TEST -> MAPK added________
+
+
+ggplot(human_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
+geom_violin(aes(fill=target_mapk,color=target_mapk),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
+geom_boxplot(aes(color=target_mapk),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
+ggpubr::theme_classic2() +
+theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
+scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
+geom_segment(aes(x = 0.75, y = 133, xend = 1.25, yend = 133)) + annotate(geom="text", x=1, y=135, label="***") +
+geom_segment(aes(x = 1.75, y = 133, xend = 2.25, yend = 133)) + annotate(geom="text", x=2, y=135, label="***") +
+geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="text", x=3, y=135, label="***") +
+scale_fill_manual(values = pal_jco()(10)[c(5,2)]) +
+scale_color_manual(values = pal_jco()(10)[c(10,7)],guide=FALSE)
+
+wilcox.test(`Percentage of disorder`~target_mapk,data=human_reshaped_disoPerc_figure,subset = Predictor=="iupl_perc",conf.int=TRUE)
+wilcox.test(`Percentage of disorder`~target_mapk,data=human_reshaped_disoPerc_figure,subset = Predictor=="spot_perc",conf.int=TRUE)
+wilcox.test(`Percentage of disorder`~target_mapk,data=human_reshaped_disoPerc_figure,subset = Predictor=="vsl_perc",conf.int=TRUE)
+#__________________________
+
 
 #iupl
 # wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="iupl_perc",conf.int=TRUE)
@@ -1474,17 +1519,6 @@ ggdotchart(predictorsCMH_data, x = "predictors", y = "commonOR",
 
 predictors <- c("IUPred","SPOT","VSL2b")
 
-#__________________________________________
-#TEST addition of human MAPK
-
-mapk_data <- read_delim("PSP/MAPK/PSP_MAPK_Target_HS.tab", 
-    "\t", escape_double = FALSE, col_types = cols(MAPK_MOD_RSD = col_character()), 
-    trim_ws = TRUE)
-
-mapk_data$psite_MAPK <- lapply(mapk_data$MAPK_MOD_RSD, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
-
-human_data<-merge.data.frame(human_data, mapk_data, by = c("GENE","PROTEIN","ACC#"),all.x = T)
-#__________________________________________
 
 
 yeastIntersect_idx_cols <- c("iupl_disoIndexes","spot_disoIndexes","vsl_disoIndexes" )
