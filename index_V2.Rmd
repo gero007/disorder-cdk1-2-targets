@@ -328,6 +328,13 @@ human_data <- human_data %>% mutate(target_mapk=case_when(
     !is.na(MAPK_MOD_RSD) ~ "mapk target",
     TRUE ~ "Non mapk target"
 ))
+
+human_data <- human_data %>% mutate(target_all=case_when(
+    target_mapk=="mapk target" & target=="Cdk1 target" ~ "CDK & MAPK",
+    target_mapk=="mapk target" ~ "MAPK",
+    target=="Cdk1 target" ~ "CDK",
+    TRUE ~ "Phosphoproteins"
+))
 #__________________________________________
 
 
@@ -1063,6 +1070,9 @@ human_reshaped_disoPerc$Predictor <- factor(as.character(human_reshaped_disoPerc
 # TEST -> MAPK added________
 human_reshaped_disoPerc$target_mapk <- rep(human_data$target_mapk,length(human_disoPerc_cols_idx))
 human_reshaped_disoPerc$target_mapk<- relevel(as.factor(human_reshaped_disoPerc$target_mapk),ref="Non mapk target")
+
+human_reshaped_disoPerc$target_all <- rep(human_data$target_all,length(human_disoPerc_cols_idx))
+human_reshaped_disoPerc$target_all<- relevel(as.factor(human_reshaped_disoPerc$target_all),ref="Phosphoproteins")
 #_____________________________
 
 
@@ -1122,6 +1132,17 @@ scale_color_manual(values = pal_jco()(10)[c(10,7)],guide=FALSE)
 wilcox.test(`Percentage of disorder`~target_mapk,data=human_reshaped_disoPerc_figure,subset = Predictor=="iupl_perc",conf.int=TRUE)
 wilcox.test(`Percentage of disorder`~target_mapk,data=human_reshaped_disoPerc_figure,subset = Predictor=="spot_perc",conf.int=TRUE)
 wilcox.test(`Percentage of disorder`~target_mapk,data=human_reshaped_disoPerc_figure,subset = Predictor=="vsl_perc",conf.int=TRUE)
+
+
+ggplot(human_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
+geom_violin(aes(fill=target_all,color=target_all),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
+geom_boxplot(aes(color=target_all),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
+ggpubr::theme_classic2() +
+theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
+scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
+scale_fill_manual(values = pal_jco()(10)[c(5,2,3,4)]) +
+scale_color_manual(values = pal_jco()(10)[c(10,7,8,9)],guide=FALSE)
 #__________________________
 
 
@@ -1777,6 +1798,17 @@ ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=organi
           legend.box.background = element_rect(color="darkslategrey"),panel.grid.minor = element_blank()) +
     scale_color_gradient(low = pal_jco()(10)[1],high = pal_jco()(10)[4],limits=c(0.19,0.51),breaks=c(0.2,0.3,0.4,0.5)) +
     guides(position="bottom",color = guide_colourbar(title = "Disorder fraction",title.position = "top",label.position = "bottom",direction = "horizontal"),shape=guide_legend(title="Dataset"))
+
+
+#________________________________
+# Test lollipop plots
+predictorsCMH_data %>% unite(col = "group",organism,predictors,sep = "-",remove = F) %>% ggplot(aes(x=group, y=commonOR)) +
+    geom_segment( aes(xend=group, yend=0)) +
+    geom_point(aes(color=predictors),size=12) +
+    theme_bw(base_size = 15) +
+    coord_flip() +
+    scale_color_manual(values = pal_jco()(10)[c(5,3,4)],guide=FALSE)+
+    xlab("")
 
 ```
 
