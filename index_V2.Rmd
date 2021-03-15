@@ -1936,6 +1936,57 @@ Considering the analysis performed previously, It seems evident that disorder re
 # save.image("~/projects/cdk1_cyclinB1/phase_separation/disorder/disoWS.RData")
 ```
 
+```{r mapk vs CDK, echo=FALSE}
+
+mapk_iupred_psites <- apply(subset(human_data,target_mapk=="mapk target"),MARGIN = 1,function(x){
+indexDiso <- as.numeric(strsplit(x$iupl_disoIndexes,",")[[1]])
+sum(x$psite_MAPK %in% indexDiso)
+})
+mapk_vsl2b_psites <- apply(subset(human_data,target_mapk=="mapk target"),MARGIN = 1,function(x){
+indexDiso <- as.numeric(strsplit(x$vsl_disoIndexes,",")[[1]])
+sum(x$psite_MAPK %in% indexDiso)
+})
+mapk_spot_psites <- apply(subset(human_data,target_mapk=="mapk target"),MARGIN = 1,function(x){
+indexDiso <- as.numeric(strsplit(x$spot_disoIndexes,",")[[1]])
+sum(x$psite_MAPK %in% indexDiso)
+})
+cdk_spot_psites <- apply(subset(human_data,target=="Cdk1 target"),MARGIN = 1,function(x){
+indexDiso <- as.numeric(strsplit(x$spot_disoIndexes,",")[[1]])
+sum(x$psite_CDK1 %in% indexDiso)
+})
+cdk_vsl2b_psites <- apply(subset(human_data,target=="Cdk1 target"),MARGIN = 1,function(x){
+indexDiso <- as.numeric(strsplit(x$vsl_disoIndexes,",")[[1]])
+sum(x$psite_CDK1 %in% indexDiso)
+})
+cdk_iupred_psites <- apply(subset(human_data,target=="Cdk1 target"),MARGIN = 1,function(x){
+indexDiso <- as.numeric(strsplit(x$iupl_disoIndexes,",")[[1]])
+sum(x$psite_CDK1 %in% indexDiso)
+})
+
+psites_in_diso <- as.data.frame(rbind(
+cbind(mapk_iupred_psites,rep("MAPK",length(mapk_iupred_psites)),rep("IUpred-MAPK",length(mapk_iupred_psites))),
+cbind(mapk_vsl2b_psites,rep("MAPK",length(mapk_vsl2b_psites)),rep("VSL2B-MAPK",length(mapk_vsl2b_psites))),
+cbind(mapk_spot_psites,rep("MAPK",length(mapk_spot_psites)),rep("SPOT-MAPK",length(mapk_spot_psites))),
+cbind(cdk_iupred_psites,rep("CDK",length(cdk_iupred_psites)),rep("IUpred-CDK",length(cdk_iupred_psites))),
+cbind(cdk_vsl2b_psites,rep("CDK",length(cdk_vsl2b_psites)),rep("VSL2B-CDK",length(cdk_vsl2b_psites))),
+cbind(cdk_spot_psites,rep("CDK",length(cdk_spot_psites)),rep("SPOT-CDK",length(cdk_spot_psites)))
+))
+
+row.names(psites_in_diso) <- NULL
+colnames(psites_in_diso) <- c("psites_diso","kinase","group")
+
+psites_in_diso$psites_diso <- as.numeric(psites_in_diso$psites_diso)
+
+ggplot(psites_in_diso,aes(x=group, y=psites_in_diso)) +
+geom_violin(aes(fill=kinase,color=kinase),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
+geom_boxplot(aes(color=kinase),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
+ggpubr::theme_classic2() +
+theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
+scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
+scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
+scale_fill_manual(values = pal_jco()(10)[c(5,2,3,4)]) +
+scale_color_manual(values = pal_jco()(10)[c(10,7,8,9)],guide=FALSE)
+```
 
 ```{r venn phase sep, echo=FALSE}
 
