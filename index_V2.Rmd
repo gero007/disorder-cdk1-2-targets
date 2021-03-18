@@ -329,9 +329,25 @@ human_data <- human_data %>% mutate(target_mapk=case_when(
     TRUE ~ "Non mapk target"
 ))
 
+aurk_data <- read_delim("PSP/AURK/PSP_AURK_Target_HS.tab", 
+    "\t", escape_double = FALSE, col_types = cols(AURK_MOD_RSD = col_character()), 
+    trim_ws = TRUE)
+
+aurk_data$psite_aurk <- lapply(aurk_data$AURK_MOD_RSD, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
+
+human_data<-merge.data.frame(human_data, aurk_data, by = c("GENE","PROTEIN","ACC#"),all.x = T)
+
+human_data <- human_data %>% mutate(target_aurk=case_when(
+    !is.na(AURK_MOD_RSD) ~ "aurk target",
+    TRUE ~ "Non aurk target"
+))
+
 human_data <- human_data %>% mutate(target_all=case_when(
+    target_mapk=="mapk target" & target=="Cdk1 target" & target_aurk=="aurk target" ~ "CDK & MAPK & AURK",
     target_mapk=="mapk target" & target=="Cdk1 target" ~ "CDK & MAPK",
+    target_aurk=="aurk target" & target=="Cdk1 target" ~ "CDK & AURK",
     target_mapk=="mapk target" ~ "MAPK",
+    target_aurk=="aurk target" ~ "AURK",
     target=="Cdk1 target" ~ "CDK",
     TRUE ~ "Phosphoproteins"
 ))
