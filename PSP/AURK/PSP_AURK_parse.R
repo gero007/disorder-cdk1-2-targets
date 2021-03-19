@@ -52,6 +52,21 @@ aurk_data$AURK_KINASE <- sapply(aurk_data$KINASE, function(x){ return(paste(uniq
 aurk_data$MOD_RSD <- NULL
 aurk_data$KINASE <- NULL
 
+#Add targets from Kettenbach et al. form Gerber's lab
+
+gerber_list <- read_lines("PSP/AURK/gerber_aurk_list")
+
+gerber_matrix <- str_split_fixed(gerber_list,"_\\(",2)
+
+gerber_matrix[,2] <- trimws(gerber_matrix[,2],which = "right",whitespace = "\\)")
+gerber_data <- as.data.frame(gerber_matrix) %>% group_by(V1) %>% summarise_at(c("V2"),function(x){paste(x, collapse=":")})
+
+for (i in 1:nrow(gerber_data)) {
+  id <- gerber_data[i,V1]
+  sites_raw <- gerber_data[i,V2]
+  sites_raw
+}
+
 write.table(aurk_data,file = "PSP/AURK/PSP_AURK_Target_HS.tab",quote = F,sep = "\t",row.names = F)
 # algunos valores tienen espacios, por eso el gsub
 # human_data$method <- sapply(human_data$method, function(x){ return(paste(unique(gsub(" ", "", strsplit(x,",")[[1]], fixed = TRUE)),collapse = ","))})
