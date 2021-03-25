@@ -364,3 +364,15 @@ lila_ps_mitotic_ProDir <- merge.data.frame(lila_ps_mitotic_ProDir,human_data,all
 lila_ps_mitotic_ProDir$Pro_Directed_Psites <- lapply(lila_ps_mitotic_ProDir$Pro_Directed_Psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 
 PhaseSep_mitotic_PorDirPsites<- IUpredScoresPlotGenerator(lila_ps_mitotic_ProDir,id_col = "ID",sites_col = "Pro_Directed_Psites",subset_sites_col = "psites_CDK1")
+
+
+# ______________________________________________________TEST ALL KINASES________________________________________________________
+
+all_predictions_V2<-merge.data.frame(all_predictions,human_data[,c("ACC#","psite_CDK1","psite_MAPK","psite_aurk","target_all")],by.x = "ID",by.y = "ACC#",all.x = T)
+
+
+
+IUpredScoresPlotGenerator_AllKinases(subset(all_predictions_V2,target_all=="CDK & MAPK & AURK"),id_col="ID",sites_CDK="psite_CDK1",sites_MAPK="psite_MAPK",sites_AURK="psite_aurk",sequence_col="sequence")
+
+
+
