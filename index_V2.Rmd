@@ -329,13 +329,13 @@ human_data <- human_data %>% mutate(target_mapk=case_when(
     TRUE ~ "Non mapk target"
 ))
 
-aurk_data <- read_delim("PSP/AURK/PSP_AURK_Target_HS.tab", 
+aurk_data <- read_delim("PSP/AURK/PSP-Gerber_data_curated.tab", 
     "\t", escape_double = FALSE, col_types = cols(AURK_MOD_RSD = col_character()), 
     trim_ws = TRUE)
 
 aurk_data$psite_aurk <- lapply(aurk_data$AURK_MOD_RSD, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 
-human_data<-merge.data.frame(human_data, aurk_data, by = c("GENE","PROTEIN","ACC#"),all.x = T)
+human_data<-merge.data.frame(human_data, aurk_data, by = c("ACC#"),all.x = T)
 
 human_data <- human_data %>% mutate(target_aurk=case_when(
     !is.na(AURK_MOD_RSD) ~ "aurk target",

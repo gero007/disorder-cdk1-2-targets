@@ -92,7 +92,9 @@ IUpredScoresPlotGenerator_AllKinases <- function(dataframe,id_col="ID",sites_CDK
       scale_y_continuous(limits = c(-0.25, 1),breaks = c(seq(0,1,by=0.25)),expand = c(0.05,0.05)) + ylab("Score") +
       scale_fill_manual(values = c(pal_jco()(10)[3],"#f6921eff")) +
       scale_color_manual(values = c(pal_jco()(10)[3],"#f6921eff")) +
-      annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape="|",color=pal_jco()(10)[1],fill=pal_jco()(10)[1],size=8) +
+      annotate("point",x = dataframe$ST_residues[[i]],y=rep(0,length(dataframe$ST_residues[[i]])),shape="|",color=pal_jco()(10)[1],fill=pal_jco()(10)[1],size=10) +
+      annotate("point",x = dataframe[i,sites_MAPK][[1]],y=rep(-0.1,length(dataframe[i,sites_MAPK])),shape="|",color=pal_jco()(10)[1],fill=pal_jco()(10)[1],size=10) +
+      annotate("point",x = dataframe[i,sites_AURK][[1]],y=rep(-0.2,length(dataframe[i,sites_AURK][[1]])),shape="|",color=pal_jco()(10)[1],fill=pal_jco()(10)[1],size=10) +
       annotate("point",x = dataframe[i,sites_CDK][[1]],y=rep(-0.08,length(dataframe[i,sites_CDK][[1]])),shape=21,color=pal_jco()(10)[8],fill="#ffdd15ff",size=6) +
       annotate("point",x = dataframe[i,sites_MAPK][[1]],y=rep(-0.16,length(dataframe[i,sites_MAPK][[1]])),shape=21,color=pal_jco()(10)[8],fill="olivedrab3",size=6) +
       annotate("point",x = dataframe[i,sites_AURK][[1]],y=rep(-0.24,length(dataframe[i,sites_AURK][[1]])),shape=21,color=pal_jco()(10)[8],fill="firebrick3",size=6) +

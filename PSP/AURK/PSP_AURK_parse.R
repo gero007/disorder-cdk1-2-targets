@@ -59,10 +59,15 @@ aurk_data$KINASE <- NULL
 # gerber_matrix <- str_split_fixed(gerber_list,"_\\(",2)
 # 
 # gerber_matrix[,2] <- trimws(gerber_matrix[,2],which = "right",whitespace = "\\)")
-# gerber_data <- as.data.frame(gerber_matrix) %>% group_by(V1) %>% summarise_at(c("V2"),function(x){paste(x, collapse=";")})
+# gerber_data <- as.data.frame(gerber_matrix) %>% group_by(V1) %>% summarise_at(c("V2"),function(x){paste(x, collapse=":")})
 # 
 # colnames(gerber_data)<-c("ACC#","gerber_sites")
+# gerber_data$gerber_sites<-str_replace_all(gerber_data$gerber_sites, ",", "-")
+# gerber_data$gerber_sites<-str_replace_all(gerber_data$gerber_sites, ":", ";")
+# 
 # gerber_data<-merge.data.frame(gerber_data,aurk_data,all = T,by = "ACC#")
+# gerber_data$AURK_MOD_RSD<-str_replace_all(gerber_data$AURK_MOD_RSD, ",", ";")
+# 
 # write.table(gerber_data,file = "PSP/AURK/gerber_data.tab",quote = F,sep = "\t",row.names = F)
 
 write.table(aurk_data,file = "PSP/AURK/PSP_AURK_Target_HS.tab",quote = F,sep = "\t",row.names = F)

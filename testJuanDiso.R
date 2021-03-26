@@ -317,7 +317,7 @@ for (i in 1:nrow(human_data)) {
   # diso_fraction <- length(all_predictions_phospho[i,"disordered"][[1]])/nchar(all_predictions_phospho[i,"sequence"])
   # phosphoDiso_expct_uni[i] <- length(all_predictions_phospho[i,"psites"][[1]])*diso_fraction
   # Fraction of Ser And Thr that fall in disorder region
-  TStotalIndexes <- as.numeric(gregexpr("S|T", human_data[i,"sequence"])[[1]]) 
+  TStotalIndexes <- as.numeric(gregexpr("S|T", human_data[i,"Sequence"])[[1]]) 
   TSinDiso_count <- sum(TStotalIndexes %in% human_data[i,"disordered"][[1]])
   TSinDiso_fraction <- TSinDiso_count/length(TStotalIndexes)
   phosphoDiso_ST[[i]] <- TStotalIndexes
@@ -368,11 +368,11 @@ PhaseSep_mitotic_PorDirPsites<- IUpredScoresPlotGenerator(lila_ps_mitotic_ProDir
 
 # ______________________________________________________TEST ALL KINASES________________________________________________________
 
-all_predictions_V2<-merge.data.frame(all_predictions,human_data[,c("ACC#","psite_CDK1","psite_MAPK","psite_aurk","target_all")],by.x = "ID",by.y = "ACC#",all.x = T)
+all_predictions_V2<-merge.data.frame(all_predictions,human_data[,c("ACC#","psite_CDK1","psite_MAPK","psite_aurk","target_all","ST_residues")],by.x = "ID",by.y = "ACC#",all.x = T)
 
 
 
-IUpredScoresPlotGenerator_AllKinases(subset(all_predictions_V2,target_all=="CDK & MAPK & AURK"),id_col="ID",sites_CDK="psite_CDK1",sites_MAPK="psite_MAPK",sites_AURK="psite_aurk",sequence_col="sequence")
+test<-IUpredScoresPlotGenerator_AllKinases(subset(all_predictions_V2,target_all=="CDK & MAPK & AURK"),id_col="ID",sites_CDK="psite_CDK1",sites_MAPK="psite_MAPK",sites_AURK="psite_aurk",sequence_col="Sequence")
 
 
 
