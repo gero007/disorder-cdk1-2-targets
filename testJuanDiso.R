@@ -372,7 +372,7 @@ all_predictions_V2<-merge.data.frame(all_predictions,human_data[,c("ACC#","psite
 
 
 
-test<-IUpredScoresPlotGenerator_AllKinases(subset(all_predictions_V2,target_all=="CDK & MAPK & AURK"),id_col="ID",sites_CDK="psite_CDK1",sites_MAPK="psite_MAPK",sites_AURK="psite_aurk",sequence_col="Sequence")
+multipleTargetsDisoPlots <- IUpredScoresPlotGenerator_AllKinases(subset(all_predictions_V2,target_all=="CDK & MAPK & AURK"),id_col="ID",sites_CDK="psite_CDK1",sites_MAPK="psite_MAPK",sites_AURK="psite_aurk",sequence_col="Sequence")
 
 
 
