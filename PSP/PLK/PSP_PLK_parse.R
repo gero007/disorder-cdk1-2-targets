@@ -51,15 +51,15 @@ plk_data <- phosphosite_PLKFamilyTarget_HS %>% unite(col = "KINASE",
 
 plk_data <- plk_data %>% group_by(`ACC#`,GENE,PROTEIN) %>% summarise_at(c("MOD_RSD","KINASE"),function(x){paste(x, collapse=",")})
 
-plk_data$AURK_MOD_RSD <- sapply(plk_data$MOD_RSD, function(x){ return(paste(substr(strsplit(x,",")[[1]],start = 2,stop = 2000),collapse = ","))})
-plk_data$AURK_KINASE <- sapply(plk_data$KINASE, function(x){ return(paste(unique(strsplit(x,",")[[1]]),collapse = ","))})
+plk_data$PLK_MOD_RSD <- sapply(plk_data$MOD_RSD, function(x){ return(paste(substr(strsplit(x,",")[[1]],start = 2,stop = 2000),collapse = ","))})
+plk_data$PLK_KINASE <- sapply(plk_data$KINASE, function(x){ return(paste(unique(strsplit(x,",")[[1]]),collapse = ","))})
 
 plk_data$MOD_RSD <- NULL
 plk_data$KINASE <- NULL
 
 #Add targets from Kettenbach et al. form Gerber's lab
 
-# gerber_list <- read_lines("PSP/AURK/gerber_aurk_list")
+# gerber_list <- read_lines("PSP/PLK/gerber_plk_list")
 # 
 # gerber_matrix <- str_split_fixed(gerber_list,"_\\(",2)
 # 
@@ -70,12 +70,12 @@ plk_data$KINASE <- NULL
 # gerber_data$gerber_sites<-str_replace_all(gerber_data$gerber_sites, ",", "-")
 # gerber_data$gerber_sites<-str_replace_all(gerber_data$gerber_sites, ":", ";")
 # 
-# gerber_data<-merge.data.frame(gerber_data,aurk_data,all = T,by = "ACC#")
-# gerber_data$AURK_MOD_RSD<-str_replace_all(gerber_data$AURK_MOD_RSD, ",", ";")
+# gerber_data<-merge.data.frame(gerber_data,plk_data,all = T,by = "ACC#")
+# gerber_data$PLK_MOD_RSD<-str_replace_all(gerber_data$PLK_MOD_RSD, ",", ";")
 # 
-# write.table(gerber_data,file = "PSP/AURK/gerber_data.tab",quote = F,sep = "\t",row.names = F)
+# write.table(gerber_data,file = "PSP/PLK/gerber_data.tab",quote = F,sep = "\t",row.names = F)
 
-write.table(aurk_data,file = "PSP/AURK/PSP_AURK_Target_HS.tab",quote = F,sep = "\t",row.names = F)
+write.table(plk_data,file = "PSP/PLK//PSP_PLK_Target_HS.tab",quote = F,sep = "\t",row.names = F)
 # algunos valores tienen espacios, por eso el gsub
 # human_data$method <- sapply(human_data$method, function(x){ return(paste(unique(gsub(" ", "", strsplit(x,",")[[1]], fixed = TRUE)),collapse = ","))})
 
