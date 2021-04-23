@@ -368,25 +368,38 @@ human_data <- human_data %>% mutate(target_nek=case_when(
     TRUE ~ "Non plk target"
 ))
 
+dyrk_data <- read_delim("PSP/DYRK/PSP_DYRK_Target_HS.tab", 
+    "\t", escape_double = FALSE, col_types = cols(DYRK_MOD_RSD = col_character()), 
+    trim_ws = TRUE)
 
-human_data <- human_data %>% mutate(target_all=case_when(
-    target_plk=="plk target" & target_mapk=="mapk target" & target=="Cdk1 target" & target_aurk=="aurk target" ~ "CDK & MAPK & AURK & PLK",
-    target_mapk=="mapk target" & target=="Cdk1 target" & target_aurk=="aurk target" ~ "CDK & MAPK & AURK",
-    target_mapk=="mapk target" & target=="Cdk1 target" & target_plk=="plk target" ~ "CDK & MAPK & PLK",
-    target_aurk=="aurk target" & target=="Cdk1 target" & target_plk=="plk target" ~ "CDK & AURK & PLK",
-    target_mapk=="mapk target" & target_plk=="plk target" & target_aurk=="aurk target" ~ "PLK & MAPK & AURK",
-    target_mapk=="mapk target" & target=="Cdk1 target" ~ "CDK & MAPK",
-    target_aurk=="aurk target" & target=="Cdk1 target" ~ "CDK & AURK",
-    target_aurk=="aurk target" & target=="mapk target" ~ "MAPK & AURK",
-    target_plk=="plk target" & target=="Cdk1 target" ~ "CDK & PLK",
-    target_aurk=="aurk target" & target_plk=="plk target" ~ "PLK & AURK",
-    target_plk=="plk target" & target=="mapk target" ~ "MAPK & PLK",
-    target_mapk=="mapk target" ~ "MAPK",
-    target_aurk=="aurk target" ~ "AURK",
-    target_plk=="plk target" ~ "PLK",
-    target=="Cdk1 target" ~ "CDK",
-    TRUE ~ "Phosphoproteins"
+dyrk_data$psite_dyrk <- lapply(dyrk_data$DYRK_MOD_RSD, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
+
+human_data<-merge.data.frame(human_data, dyrk_data, by = c("ACC#"),all.x = T)
+
+human_data <- human_data %>% mutate(target_dyrk=case_when(
+    !is.na(DYRK_MOD_RSD) ~ "plk target",
+    TRUE ~ "Non plk target"
 ))
+
+
+# human_data <- human_data %>% mutate(target_all=case_when(
+#     target_plk=="plk target" & target_mapk=="mapk target" & target=="Cdk1 target" & target_aurk=="aurk target" ~ "CDK & MAPK & AURK & PLK",
+#     target_mapk=="mapk target" & target=="Cdk1 target" & target_aurk=="aurk target" ~ "CDK & MAPK & AURK",
+#     target_mapk=="mapk target" & target=="Cdk1 target" & target_plk=="plk target" ~ "CDK & MAPK & PLK",
+#     target_aurk=="aurk target" & target=="Cdk1 target" & target_plk=="plk target" ~ "CDK & AURK & PLK",
+#     target_mapk=="mapk target" & target_plk=="plk target" & target_aurk=="aurk target" ~ "PLK & MAPK & AURK",
+#     target_mapk=="mapk target" & target=="Cdk1 target" ~ "CDK & MAPK",
+#     target_aurk=="aurk target" & target=="Cdk1 target" ~ "CDK & AURK",
+#     target_aurk=="aurk target" & target=="mapk target" ~ "MAPK & AURK",
+#     target_plk=="plk target" & target=="Cdk1 target" ~ "CDK & PLK",
+#     target_aurk=="aurk target" & target_plk=="plk target" ~ "PLK & AURK",
+#     target_plk=="plk target" & target=="mapk target" ~ "MAPK & PLK",
+#     target_mapk=="mapk target" ~ "MAPK",
+#     target_aurk=="aurk target" ~ "AURK",
+#     target_plk=="plk target" ~ "PLK",
+#     target=="Cdk1 target" ~ "CDK",
+#     TRUE ~ "Phosphoproteins"
+# ))
 #__________________________________________
 
 
