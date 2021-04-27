@@ -1,6 +1,7 @@
 library(readr)
 library(ggplot2)
 library(ggpubr)
+library(dplyr)
 
 aurk_homologs <- read_delim("utrech/kinases_homologs/aurk_humanHomologs_mapped.tab", 
                                         "\t", escape_double = FALSE, trim_ws = TRUE)
@@ -307,6 +308,36 @@ xen_cluster6 <- data.frame(target_number=c(aurk_cluster6,cdk_cluster6,dyrk_clust
                            subset=rep("cluster 6",6))
 extractBarPlotData <- rbind(extractBarPlotData,xen_cluster6)
 
+##Maping all mitosis
+mitosis_ids <- unique(c(cluster1_ids,cluster2_ids,cluster3_ids))
+aurk_mitosis <- sum(aurk_homologs$Xenopus %in% mitosis_ids)
+cdk_mitosis <- sum(cdk_homologs$Xenopus %in% mitosis_ids)
+dyrk_mitosis <- sum(dyrk_homologs$Xenopus %in% mitosis_ids)
+mapk_mitosis <- sum(mapk_homologs$Xenopus %in% mitosis_ids)
+nek_mitosis <- sum(nek_homologs$Xenopus %in% mitosis_ids)
+plk_mitosis <- sum(plk_homologs$Xenopus %in% mitosis_ids)
+
+xen_mitosis <- data.frame(target_number=c(aurk_mitosis,cdk_mitosis,dyrk_mitosis,mapk_mitosis,nek_mitosis,plk_mitosis ),
+                          kinase=c("AURK","CDK","DYRK","MAPK","NEK","PLK"),
+                          subset=rep("mitosis",6))
+extractBarPlotData <- rbind(extractBarPlotData,xen_mitosis)
+
+
+##Maping all interphase
+interphase_ids <- unique(c(cluster4_ids,cluster5_ids,cluster6_ids))
+aurk_interphase <- sum(aurk_homologs$Xenopus %in% interphase_ids)
+cdk_interphase <- sum(cdk_homologs$Xenopus %in% interphase_ids)
+dyrk_interphase <- sum(dyrk_homologs$Xenopus %in% interphase_ids)
+mapk_interphase <- sum(mapk_homologs$Xenopus %in% interphase_ids)
+nek_interphase <- sum(nek_homologs$Xenopus %in% interphase_ids)
+plk_interphase <- sum(plk_homologs$Xenopus %in% interphase_ids)
+
+xen_interphase <- data.frame(target_number=c(aurk_interphase,cdk_interphase,dyrk_interphase,mapk_interphase,nek_interphase,plk_interphase ),
+                           kinase=c("AURK","CDK","DYRK","MAPK","NEK","PLK"),
+                           subset=rep("interphase",6))
+extractBarPlotData <- rbind(extractBarPlotData,xen_interphase)
+
+
 
 # Calculate the proporttions
 extractBarPlotData$perc_of_subsets <- c(subset(extractBarPlotData,subset=="Total")$target_number / subset(extractBarPlotData,subset=="Total")$target_number,
@@ -315,7 +346,9 @@ extractBarPlotData$perc_of_subsets <- c(subset(extractBarPlotData,subset=="Total
                                  subset(extractBarPlotData,subset=="cluster 3")$target_number / length(cluster3_ids),
                                  subset(extractBarPlotData,subset=="cluster 4")$target_number / length(cluster4_ids),
                                  subset(extractBarPlotData,subset=="cluster 5")$target_number / length(cluster5_ids),
-                                 subset(extractBarPlotData,subset=="cluster 6")$target_number / length(cluster6_ids))
+                                 subset(extractBarPlotData,subset=="cluster 6")$target_number / length(cluster6_ids),
+                                 subset(extractBarPlotData,subset=="mitosis")$target_number / length(mitosis_ids),
+                                 subset(extractBarPlotData,subset=="interphase")$target_number / length(interphase_ids))
 
 extractBarPlotData$perc_of_subsets <- extractBarPlotData$perc_of_subsets*100
 
@@ -325,20 +358,24 @@ extractBarPlotData$perc_of_targets <- c(subset(extractBarPlotData,subset=="Total
                                         subset(extractBarPlotData,subset=="cluster 3")$target_number / subset(extractBarPlotData,subset=="Total")$target_number,
                                         subset(extractBarPlotData,subset=="cluster 4")$target_number / subset(extractBarPlotData,subset=="Total")$target_number,
                                         subset(extractBarPlotData,subset=="cluster 5")$target_number / subset(extractBarPlotData,subset=="Total")$target_number,
-                                        subset(extractBarPlotData,subset=="cluster 6")$target_number / subset(extractBarPlotData,subset=="Total")$target_number)
+                                        subset(extractBarPlotData,subset=="cluster 6")$target_number / subset(extractBarPlotData,subset=="Total")$target_number,
+                                        subset(extractBarPlotData,subset=="mitosis")$target_number / subset(extractBarPlotData,subset=="Total")$target_number,
+                                        subset(extractBarPlotData,subset=="interphase")$target_number / subset(extractBarPlotData,subset=="Total")$target_number)
 
 extractBarPlotData$perc_of_targets <- extractBarPlotData$perc_of_targets*100
 
 #Double Norm counts per 100 target per 100 in the cluster
-extractBarPlotData$doubleNorm <- c((subset(extractBarPlotData,subset=="Total")$target_number*1000) / (subset(extractBarPlotData,subset=="Total")$target_number * subset(extractBarPlotData,subset=="Total")$target_number),
-                                        (subset(extractBarPlotData,subset=="cluster 1")$target_number*1000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster1_ids)),
-                                        (subset(extractBarPlotData,subset=="cluster 2")$target_number*1000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster2_ids)),
-                                        (subset(extractBarPlotData,subset=="cluster 3")$target_number*1000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster3_ids)),
-                                        (subset(extractBarPlotData,subset=="cluster 4")$target_number*1000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster4_ids)),
-                                        (subset(extractBarPlotData,subset=="cluster 5")$target_number*1000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster5_ids)),
-                                        (subset(extractBarPlotData,subset=="cluster 6")$target_number*1000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster6_ids)))
+extractBarPlotData$doubleNorm <- c((subset(extractBarPlotData,subset=="Total")$target_number*10000) / (subset(extractBarPlotData,subset=="Total")$target_number * subset(extractBarPlotData,subset=="Total")$target_number),
+                                        (subset(extractBarPlotData,subset=="cluster 1")$target_number*10000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster1_ids)),
+                                        (subset(extractBarPlotData,subset=="cluster 2")$target_number*10000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster2_ids)),
+                                        (subset(extractBarPlotData,subset=="cluster 3")$target_number*10000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster3_ids)),
+                                        (subset(extractBarPlotData,subset=="cluster 4")$target_number*10000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster4_ids)),
+                                        (subset(extractBarPlotData,subset=="cluster 5")$target_number*10000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster5_ids)),
+                                        (subset(extractBarPlotData,subset=="cluster 6")$target_number*10000) / (subset(extractBarPlotData,subset=="Total")$target_number * length(cluster6_ids)),
+                                        (subset(extractBarPlotData,subset=="mitosis")$target_number*10000) / (subset(extractBarPlotData,subset=="Total")$target_number*length(mitosis_ids)),
+                                        (subset(extractBarPlotData,subset=="interphase")$target_number*10000) / (subset(extractBarPlotData,subset=="Total")$target_number*length(interphase_ids)))
 #
-
+#Plots per clusters
 pe_subset_1 <- ggplot(subset(extractBarPlotData,subset=="cluster 1")) + geom_bar(aes(x=kinase,y=perc_of_subsets,color=kinase,fill=kinase),stat = "identity") + theme_classic2() + ylim(0,40) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank()) + ggtitle("Cluster 1")
 pe_subset_2 <- ggplot(subset(extractBarPlotData,subset=="cluster 2")) + geom_bar(aes(x=kinase,y=perc_of_subsets,color=kinase,fill=kinase),stat = "identity") + theme_classic2() + ylim(0,40) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank()) + ggtitle("Cluster 2")
 pe_subset_3 <- ggplot(subset(extractBarPlotData,subset=="cluster 3")) + geom_bar(aes(x=kinase,y=perc_of_subsets,color=kinase,fill=kinase),stat = "identity") + theme_classic2() + ylim(0,40) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank()) + ggtitle("Cluster 3")
@@ -370,4 +407,28 @@ pe_double_5 <- ggplot(subset(extractBarPlotData,subset=="cluster 5")) + geom_bar
 pe_double_6 <- ggplot(subset(extractBarPlotData,subset=="cluster 6")) + geom_bar(aes(x=kinase,y=doubleNorm,color=kinase,fill=kinase),stat = "identity") + theme_classic2() + ylim(0,20) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank()) + ggtitle("Cluster 6")
 
 p_double_all <- ggarrange(pe_double_1,pe_double_2,pe_double_3,pe_double_4,pe_double_5,pe_double_6,ncol = 6,nrow = 1,common.legend = T)
-annotate_figure(p_double_all,left = text_grob("target in cluster / (n° targtets*cluster size)", rot = 90,size = 16))
+annotate_figure(p_double_all,left = text_grob("targets in cluster \n per 100 targets per 100 elements in cluster", rot = 90,size = 16))
+
+
+# Plots Mitosis vs Interphase
+
+pe_subset_mito <- ggplot(subset(extractBarPlotData,subset=="mitosis")) + geom_bar(aes(x=kinase,y=perc_of_subsets,color=kinase,fill=kinase),stat = "identity") + theme_classic2() + ylim(0,30) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank()) + ggtitle("Mitosis")
+pe_subset_inter <- ggplot(subset(extractBarPlotData,subset=="interphase")) + geom_bar(aes(x=kinase,y=perc_of_subsets,color=kinase,fill=kinase),stat = "identity") + theme_classic2() + ylim(0,30) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank()) + ggtitle("Interphase")
+
+p_subset_all <- ggarrange(pe_subset_mito,pe_subset_inter,ncol = 2,nrow = 1,common.legend = T)
+annotate_figure(p_subset_all,left = text_grob("% of subset", rot = 90,size = 16))
+
+
+pe_target_mito <- ggplot(subset(extractBarPlotData,subset=="mitosis")) + geom_bar(aes(x=kinase,y=perc_of_targets,color=kinase,fill=kinase),stat = "identity") + theme_classic2() + ylim(0,40) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank()) + ggtitle("Mitosis")
+pe_target_inter <- ggplot(subset(extractBarPlotData,subset=="interphase")) + geom_bar(aes(x=kinase,y=perc_of_targets,color=kinase,fill=kinase),stat = "identity") + theme_classic2() + ylim(0,40) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank()) + ggtitle("Interphase")
+
+p_target_all <- ggarrange(pe_target_mito,pe_target_inter,ncol = 2,nrow = 1,common.legend = T)
+annotate_figure(p_target_all,left = text_grob("% of targets", rot = 90,size = 16))
+
+
+
+pe_double_mito <- ggplot(subset(extractBarPlotData,subset=="mitosis")) + geom_bar(aes(x=kinase,y=doubleNorm,color=kinase,fill=kinase),stat = "identity") + theme_classic2() + ylim(0,7) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank()) + ggtitle("Mitosis")
+pe_double_inter <- ggplot(subset(extractBarPlotData,subset=="interphase")) + geom_bar(aes(x=kinase,y=doubleNorm,color=kinase,fill=kinase),stat = "identity") + theme_classic2() + ylim(0,7) + theme(legend.position="none",axis.title.x =  element_blank(),axis.title.y =  element_blank(),axis.ticks.x = element_blank(),axis.text.x = element_blank()) + ggtitle("Interphase")
+
+p_double_all <- ggarrange(pe_double_mito,pe_double_inter,ncol = 2,nrow = 1,common.legend = T)
+annotate_figure(p_double_all,left = text_grob("targets in cluster \n per 100 targets per 100 elements in cluster ", rot = 90,size = 16))
