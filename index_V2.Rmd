@@ -364,8 +364,8 @@ nek_data$psite_nek <- lapply(nek_data$NEK_MOD_RSD, function(x){ return(as.numeri
 human_data<-merge.data.frame(human_data, nek_data, by = c("ACC#"),all.x = T)
 
 human_data <- human_data %>% mutate(target_nek=case_when(
-    !is.na(NEK_MOD_RSD) ~ "plk target",
-    TRUE ~ "Non plk target"
+    !is.na(NEK_MOD_RSD) ~ "nek target",
+    TRUE ~ "Non nek target"
 ))
 
 dyrk_data <- read_delim("PSP/DYRK/PSP_DYRK_Target_HS.tab", 
@@ -377,8 +377,8 @@ dyrk_data$psite_dyrk <- lapply(dyrk_data$DYRK_MOD_RSD, function(x){ return(as.nu
 human_data<-merge.data.frame(human_data, dyrk_data, by = c("ACC#"),all.x = T)
 
 human_data <- human_data %>% mutate(target_dyrk=case_when(
-    !is.na(DYRK_MOD_RSD) ~ "plk target",
-    TRUE ~ "Non plk target"
+    !is.na(DYRK_MOD_RSD) ~ "dyrk target",
+    TRUE ~ "Non dyrk target"
 ))
 
 
@@ -1033,9 +1033,9 @@ Correcting for number of moles in the reaction or for number of Eq of [ST]-P sit
 ```{r Ubersax disorder percentage,echo=FALSE,message=FALSE,warning=FALSE}
 
 ubersax_disoPerc_cols_idx <-grep("_perc",colnames(ubersax_data))
-ubersax_reshaped_disoPerc <- melt(Ubersax_data[,ubersax_disoPerc_cols_idx])
+ubersax_reshaped_disoPerc <- melt(ubersax_data[,ubersax_disoPerc_cols_idx])
 colnames(ubersax_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
-ubersax_reshaped_disoPerc$target <- rep(Ubersax_data$target,length(ubersax_disoPerc_cols_idx))
+ubersax_reshaped_disoPerc$target <- rep(ubersax_data$target,length(ubersax_disoPerc_cols_idx))
 ubersax_reshaped_disoPerc$Predictor <- factor(ubersax_reshaped_disoPerc$Predictor,levels = ordered(levels(ubersax_reshaped_disoPerc$Predictor)))
 
 ggplot(ubersax_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
@@ -1132,13 +1132,7 @@ colnames(human_reshaped_disoPerc) <- c("Predictor","Percentage of disorder")
 human_reshaped_disoPerc$target <- rep(human_data$target,length(human_disoPerc_cols_idx))
 human_reshaped_disoPerc$target<- relevel(as.factor(human_reshaped_disoPerc$target),ref="Non Cdk1 target")
 human_reshaped_disoPerc$Predictor <- factor(as.character(human_reshaped_disoPerc$Predictor),levels = c("pfilt_perc","seg_perc","dis465_perc","disHL_perc","espD_perc","espN_perc","espX_perc","glo_perc","iupl_perc","iups_perc","jronn_perc","vsl_perc","spot_perc"))
-# TEST -> MAPK added________
-human_reshaped_disoPerc$target_mapk <- rep(human_data$target_mapk,length(human_disoPerc_cols_idx))
-human_reshaped_disoPerc$target_mapk<- relevel(as.factor(human_reshaped_disoPerc$target_mapk),ref="Non mapk target")
 
-human_reshaped_disoPerc$target_all <- rep(human_data$target_all,length(human_disoPerc_cols_idx))
-human_reshaped_disoPerc$target_all<- relevel(as.factor(human_reshaped_disoPerc$target_all),ref="Phosphoproteins")
-#_____________________________
 
 
 ggplot(human_reshaped_disoPerc,aes(x=Predictor, y=`Percentage of disorder`)) +
