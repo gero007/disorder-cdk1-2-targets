@@ -125,7 +125,7 @@ for (i in 1:nrow(all_predictions_phospho)) {
   TSinDiso_fraction <- TSinDiso_count/length(TStotalIndexes)
   phosphoDiso_ST[[i]] <- TStotalIndexes
   phosphoDiso_expct_prob[i] <- TSinDiso_fraction
-  phosphoDiso_expct[i] <- all_predictions_phospho[i,"psites_count"]*TSinDiso_fraction
+  phosphoDiso_expct[i] <- all_predictions_phospho[i,"psites_count"][[1]]*TSinDiso_fraction
   phosphoDiso_obs[i] <- sum(all_predictions_phospho[i,"psites"][[1]] %in% all_predictions_phospho[i,"disordered"][[1]])
 }
 
@@ -172,10 +172,10 @@ ggplot(melted_all_predictions_phospho) +
   geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable),outlier.shape = NA)+
   ggpubr::theme_classic2()  + 
   theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-  geom_segment(aes(x = 1, y = 10.1, xend = 2, yend = 10.1)) + annotate(geom="text", x=1.5, y=10.3, label="***",size=10) +
+  geom_segment(aes(x = 1, y = 28.1, xend = 2, yend = 28.1)) + annotate(geom="text", x=1.5, y=28.3, label="***",size=10) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 11),breaks = c(seq(0, 11, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 31),breaks = c(seq(0, 30, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
@@ -184,10 +184,10 @@ ggplot(subset(melted_all_predictions_phospho,anova_sig == "Dynamic")) +
   geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable),outlier.shape = NA)+
   ggpubr::theme_classic2()  + 
   theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-  geom_segment(aes(x = 1, y = 10.1, xend = 2, yend = 10.1)) + annotate(geom="text", x=1.5, y=10.3, label="***",size=10) +
+  geom_segment(aes(x = 1, y = 28.1, xend = 2, yend = 28.1)) + annotate(geom="text", x=1.5, y=28.3, label="***",size=10) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 11),breaks = c(seq(0, 11, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 31),breaks = c(seq(0, 30, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
@@ -196,12 +196,15 @@ ggplot(subset(melted_all_predictions_phospho,hCDK1target == "Human CDK1 target" 
   geom_boxplot(aes(y=psites_diso,x=variable, fill = variable,color = variable),outlier.shape = NA)+
   ggpubr::theme_classic2()  + 
   theme(text = element_text(size=20),legend.position = "none",axis.ticks.x = element_blank()) +
-  geom_segment(aes(x = 1, y = 10.1, xend = 2, yend = 10.1)) + annotate(geom="text", x=1.5, y=10.3, label="***",size=10) +
+  geom_segment(aes(x = 1, y = 28.1, xend = 2, yend = 28.1)) + annotate(geom="text", x=1.5, y=28.3, label="*",size=10) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 11),breaks = c(seq(0, 11, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 31),breaks = c(seq(0, 30, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
+
+# tests
+wilcox.test(psites_diso~variable,data=subset(melted_all_predictions_phospho,hCDK1target == "Human CDK1 target" & anova_sig == "Dynamic"))
 
 plotList <- IUpredScoresPlotGenerator(subset(all_predictions_phospho,anova_sig == "Dynamic"))
 
@@ -317,12 +320,12 @@ for (i in 1:nrow(human_data)) {
   # diso_fraction <- length(all_predictions_phospho[i,"disordered"][[1]])/nchar(all_predictions_phospho[i,"sequence"])
   # phosphoDiso_expct_uni[i] <- length(all_predictions_phospho[i,"psites"][[1]])*diso_fraction
   # Fraction of Ser And Thr that fall in disorder region
-  TStotalIndexes <- as.numeric(gregexpr("S|T", human_data[i,"Sequence"])[[1]]) 
+  TStotalIndexes <- as.numeric(gregexpr("S|T", human_data[i,"sequence"])[[1]]) 
   TSinDiso_count <- sum(TStotalIndexes %in% human_data[i,"disordered"][[1]])
   TSinDiso_fraction <- TSinDiso_count/length(TStotalIndexes)
   phosphoDiso_ST[[i]] <- TStotalIndexes
   phosphoDiso_expct_prob[i] <- TSinDiso_fraction
-  phosphoDiso_expct[i] <- human_data[i,"psites_count"]*TSinDiso_fraction
+  phosphoDiso_expct[i] <- human_data[i,"psites_count"][[1]]*TSinDiso_fraction
   phosphoDiso_obs[i] <- sum(human_data[i,"psites"][[1]] %in% human_data[i,"disordered"][[1]])
 }
 

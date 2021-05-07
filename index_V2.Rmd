@@ -1156,8 +1156,8 @@ human_reshaped_disoPerc_figure$Predictor <-
   factor(human_reshaped_disoPerc_figure$Predictor, c("iupl_perc","spot_perc","vsl_perc"))
 
 ggplot(human_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=target,color=target),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
-geom_boxplot(aes(color=target),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
+geom_violin(aes(fill=target),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
+geom_boxplot(aes(color=target),position=position_dodge(0.9),width=0.4,outlier.shape = NA) +
 ggpubr::theme_classic2() +
 theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
 scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
@@ -1172,36 +1172,52 @@ wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,
 wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="spot_perc",conf.int=TRUE)
 wilcox.test(`Percentage of disorder`~target,data=human_reshaped_disoPerc_figure,subset = Predictor=="vsl_perc",conf.int=TRUE)
 
-# TEST -> MAPK added________
+# All kinases - non overlapped analysis________
 
 
-ggplot(human_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=target_mapk,color=target_mapk),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
-geom_boxplot(aes(color=target_mapk),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
+#Human
+
+phosphoProteome_human_disoPerc <- subset(human_data,target=="Non Cdk1 target" &
+                                         target_mapk=="Non mapk target" &
+                                         target_aurk=="Non aurk target" &
+                                         target_plk=="Non plk target" &
+                                         target_nek=="Non nek target" &
+                                         target_dyrk=="Non dyrk target")[,c("iupl_perc","spot_perc","vsl_perc")]
+human_disoPerc_data <- cbind(phosphoProteome_human_disoPerc,subset=rep("Phosphoproteome",nrow(phosphoProteome_human_disoPerc)))
+
+cdk_human_disoPerc <- subset(human_data,target=="Cdk1 target")[,c("iupl_perc","spot_perc","vsl_perc")]
+human_disoPerc_data <- rbind(human_disoPerc_data,cbind(cdk_human_disoPerc,subset=rep("CDK",nrow(cdk_human_disoPerc))))
+
+mapk_human_disoPerc <- subset(human_data,target_mapk=="mapk target")[,c("iupl_perc","spot_perc","vsl_perc")]
+human_disoPerc_data <- rbind(human_disoPerc_data,cbind(mapk_human_disoPerc,subset=rep("MAPK",nrow(mapk_human_disoPerc))))
+
+aurk_human_disoPerc <- subset(human_data,target_aurk=="aurk target")[,c("iupl_perc","spot_perc","vsl_perc")]
+human_disoPerc_data <- rbind(human_disoPerc_data,cbind(aurk_human_disoPerc,subset=rep("AURK",nrow(aurk_human_disoPerc))))
+
+plk_human_disoPerc <- subset(human_data,target_plk=="plk target")[,c("iupl_perc","spot_perc","vsl_perc")]
+human_disoPerc_data <- rbind(human_disoPerc_data,cbind(plk_human_disoPerc,subset=rep("PLK",nrow(plk_human_disoPerc))))
+
+nek_human_disoPerc <- subset(human_data,target_nek=="nek target")[,c("iupl_perc","spot_perc","vsl_perc")]
+human_disoPerc_data <- rbind(human_disoPerc_data,cbind(nek_human_disoPerc,subset=rep("NEK",nrow(nek_human_disoPerc))))
+
+dyrk_human_disoPerc <- subset(human_data,target_dyrk=="dyrk target")[,c("iupl_perc","spot_perc","vsl_perc")]
+human_disoPerc_data <- rbind(human_disoPerc_data,cbind(dyrk_human_disoPerc,subset=rep("DYRK",nrow(dyrk_human_disoPerc))))
+
+human_disoPerc_data$subset <- forcats::as_factor(human_disoPerc_data$subset)
+
+human_disoPerc_data <- melt(human_disoPerc_data,id.vars = "subset",variable.name = "Predictor",value.name = "Percentage of disorder")
+
+
+
+ggplot(human_disoPerc_data,aes(x=Predictor, y=`Percentage of disorder`)) +
+geom_violin(aes(fill=subset),position=position_dodge(0.8),trim = F,adjust = 1) +
+geom_boxplot(aes(color=subset),position=position_dodge(0.8),width=0.15,outlier.shape = NA) +
 ggpubr::theme_classic2() +
 theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
 scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
 scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
-geom_segment(aes(x = 0.75, y = 133, xend = 1.25, yend = 133)) + annotate(geom="text", x=1, y=135, label="***") +
-geom_segment(aes(x = 1.75, y = 133, xend = 2.25, yend = 133)) + annotate(geom="text", x=2, y=135, label="***") +
-geom_segment(aes(x = 2.75, y = 133, xend = 3.25, yend = 133)) + annotate(geom="text", x=3, y=135, label="***") +
-scale_fill_manual(values = pal_jco()(10)[c(5,2)]) +
-scale_color_manual(values = pal_jco()(10)[c(10,7)],guide=FALSE)
-
-wilcox.test(`Percentage of disorder`~target_mapk,data=human_reshaped_disoPerc_figure,subset = Predictor=="iupl_perc",conf.int=TRUE)
-wilcox.test(`Percentage of disorder`~target_mapk,data=human_reshaped_disoPerc_figure,subset = Predictor=="spot_perc",conf.int=TRUE)
-wilcox.test(`Percentage of disorder`~target_mapk,data=human_reshaped_disoPerc_figure,subset = Predictor=="vsl_perc",conf.int=TRUE)
-
-
-ggplot(human_reshaped_disoPerc_figure,aes(x=Predictor, y=`Percentage of disorder`)) +
-geom_violin(aes(fill=target_all,color=target_all),position=position_dodge(0.9),bw=10,alpha=1,trim = F) +
-geom_boxplot(aes(color=target_all),position=position_dodge(0.9),width=0.4,outlier.size = 0.0001) +
-ggpubr::theme_classic2() +
-theme(text = element_text(size=20),legend.position = "bottom",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
-scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
-scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
-scale_fill_manual(values = pal_jco()(10)[c(5,2,3,4)]) +
-scale_color_manual(values = pal_jco()(10)[c(10,7,8,9)],guide=FALSE)
+scale_fill_manual(values = c("#ffdd15ff",pal_tron()(7)[c(3,4,1,2,5,6)])) + guides(fill = guide_legend(nrow = 1)) +
+scale_color_manual(values = c("#ffdd15ff",pal_tron()(7)[c(3,4,1,2,5,6)]),guide=FALSE)
 #__________________________
 
 
