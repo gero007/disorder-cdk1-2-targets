@@ -17,7 +17,7 @@ cluster_D <- read_lines("utrech/ids/xenopusclusterD_mpi.txt")
 significant_anova <- Reduce(union, list(cluster_A,cluster_B,cluster_C,cluster_D))
 human_CDK1targets <- read_lines("utrech/ids/humanCDKtargets_mpi.txt")
 xenopus_ANOVA_data <- read_delim("utrech/Xen_phospho_AnovaPhosphosites.txt","\t", escape_double = FALSE, trim_ws = TRUE)
-# xenopus_extract_ANOVA_data <- read_delim("utrech/Xen_Extracts_phospho_AnovaPhosphosites.txt","\t", escape_double = FALSE, trim_ws = TRUE)
+xenopus_extract_ANOVA_data <- read_delim("utrech/Xen_Extracts_phospho_AnovaPhosphosites.txt","\t", escape_double = FALSE, trim_ws = TRUE)
 
 # # Read in pre-calculated file or perform iupred
 # if (!file.exists("all-predictions.Rdata")) {
@@ -69,8 +69,8 @@ all_predictions_phospho$length <- nchar(all_predictions_phospho$sequence)
 phosphosites <- read_delim("all_phosphosites_xenopus_nr.tab", "\t", escape_double = FALSE, col_types = cols(`Leading proteins` = col_skip(), Protein = col_skip()), trim_ws = TRUE)
 
 # Add phosphosites from the extracts!!! uncomment if wanted. 
-# phosphosites_extracts <- read_delim("all_phosphosites_xenopus_extracts_nr.tab", "\t", escape_double = FALSE, trim_ws = TRUE)
-# phosphosites <- rbind(phosphosites,phosphosites_extracts)
+phosphosites_extracts <- read_delim("all_phosphosites_xenopus_extracts_nr.tab", "\t", escape_double = FALSE, trim_ws = TRUE)
+phosphosites <- rbind(phosphosites,phosphosites_extracts)
 
 
 phosphosites <- phosphosites %>% dplyr::rename(ID=Proteins,psites=`Positions within proteins`,seqWindow=`Sequence window`,UID=`Unique identifier`) %>% group_by(ID) %>% summarise_at(c("psites","seqWindow","UID"),function(x){paste(x, collapse=",")})
@@ -175,7 +175,7 @@ ggplot(melted_all_predictions_phospho) +
   geom_segment(aes(x = 1, y = 16.1, xend = 2, yend = 16.1)) + annotate(geom="text", x=1.5, y=16.3, label="***",size=10) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 20),breaks = c(seq(0, 16, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 31),breaks = c(seq(0, 30, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
@@ -187,7 +187,7 @@ ggplot(subset(melted_all_predictions_phospho,anova_sig == "Dynamic")) +
   geom_segment(aes(x = 1, y = 16.1, xend = 2, yend = 16.1)) + annotate(geom="text", x=1.5, y=16.3, label="***",size=10) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 20),breaks = c(seq(0, 16, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 31),breaks = c(seq(0, 30, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
@@ -199,7 +199,7 @@ ggplot(subset(melted_all_predictions_phospho,hCDK1target == "Human CDK1 target" 
   geom_segment(aes(x = 1, y = 16.1, xend = 2, yend = 16.1)) + annotate(geom="text", x=1.5, y=16.3, label="*",size=10) +
   guides(color=guide_legend(title="Statistical significance")) +
   scale_x_discrete(labels = c("Expected","Observed")) + xlab(element_blank()) +
-  scale_y_continuous(limits = c(0, 20),breaks = c(seq(0, 16, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
+  scale_y_continuous(limits = c(0, 31),breaks = c(seq(0, 30, by = 2)),expand = c(0.05,0.05))+ ylab("Phospho S/T in IDR") + 
   scale_colour_manual(values = pal_jco()(10)[c(7,10)]) +
   scale_fill_manual(values = pal_jco()(10)[c(2,5)])
 
@@ -266,7 +266,7 @@ all_predictions$length <- nchar(all_predictions$sequence)
 
 
 
-human_data <- read_delim("PSP/human_data_curated.tab", 
+human_data <- read_delim("PSP/human_data_curated_V2_cleaned.tab", 
                          "\t", escape_double = FALSE, col_types = cols(MOD_RSD = col_character()), 
                          trim_ws = TRUE)
 
@@ -367,7 +367,7 @@ lila_ps_mitotic_ProDir <- merge.data.frame(lila_ps_mitotic_ProDir,human_data,all
 lila_ps_mitotic_ProDir$Pro_Directed_Psites <- lapply(lila_ps_mitotic_ProDir$Pro_Directed_Psites, function(x){ return(as.numeric(strsplit(x,",")[[1]]))})
 
 PhaseSep_mitotic_PorDirPsites<- IUpredScoresPlotGenerator(lila_ps_mitotic_ProDir,id_col = "ID",sites_col = "Pro_Directed_Psites",subset_sites_col = "psites_CDK1")
-
+names(PhaseSep_mitotic_PorDirPsites) <- lila_ps_mitotic_ProDir$Gene
 
 # ______________________________________________________TEST ALL KINASES________________________________________________________
 

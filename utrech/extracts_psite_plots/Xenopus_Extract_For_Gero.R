@@ -26,7 +26,7 @@ library(ggsci)
 
 getwd()
 
-pSites_ANOVASig_Zscored <- read.csv('Phosphosites_XL_Extract_ANOVA0.05_MedianNorm_Avgs_Zsocred_CorrectGroups.csv', stringsAsFactors = F)
+pSites_ANOVASig_Zscored <- read.csv('utrech/extracts_psite_plots/Phosphosites_XL_Extract_ANOVA0.05_MedianNorm_Avgs_Zsocred_CorrectGroups.csv', stringsAsFactors = F)
 str(pSites_ANOVASig_Zscored)
 summary(pSites_ANOVASig_Zscored)
 head(pSites_ANOVASig_Zscored)
@@ -169,12 +169,12 @@ Cluster6 <- pSites_with_clusters_fromHM_Scaled[pSites_with_clusters_fromHM_Scale
 
 #writing tables
 
-write.table(Cluster1, file = "Cluster1.txt", sep="\t", quote=F, row.names=FALSE)
-write.table(Cluster2, file = "Cluster2.txt", sep="\t", quote=F, row.names=FALSE)
-write.table(Cluster3, file = "Cluster3.txt", sep="\t", quote=F, row.names=FALSE)
-write.table(Cluster4, file = "Cluster4.txt", sep="\t", quote=F, row.names=FALSE)
-write.table(Cluster5, file = "Cluster5.txt", sep="\t", quote=F, row.names=FALSE)
-write.table(Cluster6, file = "Cluster6.txt", sep="\t", quote=F, row.names=FALSE)
+write.table(Cluster1, file = "utrech/extracts_psite_plots/Cluster1.txt", sep="\t", quote=F, row.names=FALSE)
+write.table(Cluster2, file = "utrech/extracts_psite_plots/Cluster2.txt", sep="\t", quote=F, row.names=FALSE)
+write.table(Cluster3, file = "utrech/extracts_psite_plots/Cluster3.txt", sep="\t", quote=F, row.names=FALSE)
+write.table(Cluster4, file = "utrech/extracts_psite_plots/Cluster4.txt", sep="\t", quote=F, row.names=FALSE)
+write.table(Cluster5, file = "utrech/extracts_psite_plots/Cluster5.txt", sep="\t", quote=F, row.names=FALSE)
+write.table(Cluster6, file = "utrech/extracts_psite_plots/Cluster6.txt", sep="\t", quote=F, row.names=FALSE)
 
 #transforming to matrix
 
@@ -206,7 +206,7 @@ Cluster6_matrix <- Cluster6_matrix[, -c(1, 9)]
 
 #Loading data before Z-scoring in order to plot trends of normalized intensities per bio replicate with ggplot
 
-pSites_ANOVASig_Normalized <- read.csv('Phosphosites_XL_Extract_ANOVASig_Norm_NoOA.csv', stringsAsFactors = F)
+pSites_ANOVASig_Normalized <- read.csv('utrech/extracts_psite_plots/Phosphosites_XL_Extract_ANOVASig_Norm_NoOA.csv', stringsAsFactors = F)
 
 #Creating unique useful identifier
 
@@ -264,7 +264,7 @@ pSites_with_clusters_fromHM_Normalized_tidy$Cluster <- as.factor(pSites_with_clu
 #Writing table to get sequences and clusters for motif analysis
 
 write.table(pSites_with_clusters_fromHM_Normalized_tidy,
-            file = "pSites_with_clusters_fromHM_Normalized_tidy.txt", sep="\t", 
+            file = "utrech/extracts_psite_plots/pSites_with_clusters_fromHM_Normalized_tidy.txt", sep="\t", 
             quote=F, row.names=FALSE)
 
 
@@ -351,10 +351,10 @@ y + scale_color_tron()
 
 #loading hits per motif
 
-load('Hits_Aurora_All.RData')
-load('Hits_Cdc7_All.RData')
-load('Hits_CdkMinimal_All.RData')
-load('Hits_CdkFull_All.RData')
+load('utrech/extracts_psite_plots/Hits_Aurora_All.RData')
+load('utrech/extracts_psite_plots/Hits_Cdc7_All.RData')
+load('utrech/extracts_psite_plots/Hits_CdkMinimal_All.RData')
+load('utrech/extracts_psite_plots/Hits_CdkFull_All.RData')
 Hits_Aurora_All_List
 Hits_Cdc7_All_List
 Hits_Cdk_Minimal_All_List
@@ -428,11 +428,12 @@ z + scale_color_tron()
 
 # Danger: Gero's code ahead
 
-z1 <- ggplot(data = subset(pSites_with_clusters_fromHM_Normalized_tidy_TxAsNumeric_v2_WithMotif, Cluster %in% c('cluster4', 'cluster5', 'cluster6') & Time_Or_Treatment<=120), 
+# Interphase
+interphasePsitesPlot_1 <- ggplot(data = subset(pSites_with_clusters_fromHM_Normalized_tidy_TxAsNumeric_v2_WithMotif, Cluster %in% c('cluster4', 'cluster5', 'cluster6') & Time_Or_Treatment<=120), 
              aes(x = Time_Or_Treatment, y = value, color = Motif)) +
   #geom_jitter(size = 2, shape = 21, stroke = 1.3)+
   geom_smooth(se = TRUE, alpha = 0.2, span = 0.65, method = 'loess')+
-  theme_bw() + coord_cartesian(ylim=c(-1.1,1.1), xlim=c(0,130))+
+  theme_bw() + coord_cartesian(ylim=c(-2.7,1.1), xlim=c(0,130))+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.border = element_blank(), 
         axis.line = element_line(colour = "black", size = 0.25),axis.ticks = element_line(size = 0.25),
         axis.text.x = element_text(size = 14, color = 'black'),axis.text.y = element_text(size = 14, color = 'black'),
@@ -442,19 +443,51 @@ z1 <- ggplot(data = subset(pSites_with_clusters_fromHM_Normalized_tidy_TxAsNumer
   xlab('Time (min)') +
   # ggtitle('Interphase phosphorylations clusters 4, 5, 6)') + 
   scale_x_continuous(breaks=c(0,30,60,90,120))
-z1 <- z1 + scale_color_tron()
+interphasePsitesPlot_1 <- interphasePsitesPlot_1 + scale_color_tron()
 
 
-z2 <- ggplot(data = subset(pSites_with_clusters_fromHM_Normalized_tidy_TxAsNumeric_v2_WithMotif, Cluster %in% c('cluster4', 'cluster5', 'cluster6') & Time_Or_Treatment>120),
+interphasePsitesPlot_2 <- ggplot(data = subset(pSites_with_clusters_fromHM_Normalized_tidy_TxAsNumeric_v2_WithMotif, Cluster %in% c('cluster4', 'cluster5', 'cluster6') & Time_Or_Treatment>120),
              aes(x = Time_Or_Treatment, y = value, color = Motif)) +
-  geom_point(stat = "summary",fun = "mean", size = 15,shape="-") +
-  theme_bw() + coord_cartesian(ylim=c(-1.1,1.1), xlim=c(130,170))+
+  geom_point(stat = "summary",fun = "mean", size = 15,shape=4,stroke = 2) +
+  theme_bw() + coord_cartesian(ylim=c(-2.7,1.1), xlim=c(130,170))+
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.border = element_blank(), 
         axis.line = element_line(colour = "black", size = 0.25),axis.line.y = element_blank(),axis.ticks = element_blank(),
         axis.text.x = element_text(size = 14, color = 'black'),axis.text.y = element_blank(),
         axis.title.y = element_blank(), axis.title.x = element_blank(), plot.title = element_text(size = 18), 
         legend.title = element_text(size = 9, color = 'black'), legend.text = element_text(size = 9, color = 'black'), legend.position = 'top') +  
   scale_x_continuous(breaks=c(150),labels = c("Mitosis"))
-z2 <- z2 + scale_color_tron()
+interphasePsitesPlot_2 <- interphasePsitesPlot_2 + scale_color_tron()
 
-ggarrange(z1,z2,ncol = 2,nrow = 1,align = "h",widths = c(13,4),common.legend = T)
+ggarrange(interphasePsitesPlot_1,interphasePsitesPlot_2,ncol = 2,nrow = 1,align = "h",widths = c(13,4),common.legend = T)
+
+# Mitosis
+mphasePsitesPlot_1 <- ggplot(data = subset(pSites_with_clusters_fromHM_Normalized_tidy_TxAsNumeric_v2_WithMotif, Cluster %in% c('cluster1', 'cluster2', 'cluster3') & Time_Or_Treatment<=120), 
+                                 aes(x = Time_Or_Treatment, y = value, color = Motif)) +
+  #geom_jitter(size = 2, shape = 21, stroke = 1.3)+
+  geom_smooth(se = TRUE, alpha = 0.2, span = 0.65, method = 'loess')+
+  theme_bw() + coord_cartesian(ylim=c(-2.7,1.1), xlim=c(0,130))+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.border = element_blank(), 
+        axis.line = element_line(colour = "black", size = 0.25),axis.ticks = element_line(size = 0.25),
+        axis.text.x = element_text(size = 14, color = 'black'),axis.text.y = element_text(size = 14, color = 'black'),
+        axis.title.y = element_text(size = 16, color = 'black'), axis.title.x = element_text(size = 16, color = 'black'), plot.title = element_text(size = 18), 
+        legend.title = element_text(size = 9, color = 'black'), legend.text = element_text(size = 9, color = 'black'), legend.position = 'top') +  
+  ylab('Normalized Intensity') +
+  xlab('Time (min)') +
+  # ggtitle('Interphase phosphorylations clusters 4, 5, 6)') + 
+  scale_x_continuous(breaks=c(0,30,60,90,120))
+mphasePsitesPlot_1 <- mphasePsitesPlot_1 + scale_color_tron()
+
+
+mphasePsitesPlot_2 <- ggplot(data = subset(pSites_with_clusters_fromHM_Normalized_tidy_TxAsNumeric_v2_WithMotif, Cluster %in% c('cluster1', 'cluster2', 'cluster3') & Time_Or_Treatment>120),
+                                 aes(x = Time_Or_Treatment, y = value, color = Motif)) +
+  geom_point(stat = "summary",fun = "mean", size = 5,shape=4,stroke = 2) +
+  theme_bw() + coord_cartesian(ylim=c(-2.7,1.1), xlim=c(130,170))+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.border = element_blank(), 
+        axis.line = element_line(colour = "black", size = 0.25),axis.line.y = element_blank(),axis.ticks = element_blank(),
+        axis.text.x = element_text(size = 14, color = 'black'),axis.text.y = element_blank(),
+        axis.title.y = element_blank(), axis.title.x = element_blank(), plot.title = element_text(size = 18), 
+        legend.title = element_text(size = 9, color = 'black'), legend.text = element_text(size = 9, color = 'black'), legend.position = 'top') +  
+  scale_x_continuous(breaks=c(150),labels = c("Mitosis"))
+mphasePsitesPlot_2 <- mphasePsitesPlot_2 + scale_color_tron()
+
+ggarrange(mphasePsitesPlot_1,mphasePsitesPlot_2,ncol = 2,nrow = 1,align = "h",widths = c(13,4),common.legend = T)
