@@ -2011,7 +2011,7 @@ ggplot(predictorsCMH_data,aes(x = log10(commonOR), y = -log10(pval),label=organi
 
 
 #________________________________
-# Test lollipop plots
+# Lollipop plots for CDK targets
 cdkLollipopPlots <- subset(predictorsFisher_data,grepl(pattern = "CDK|dynamic",organism)) %>%  
     mutate(organism=factor(organism,c("Yeast CDK targets","Human CDK targets","Xenopus dynamic"))) %>% 
     ggplot(aes(x=organism, y=OR)) +
@@ -2028,6 +2028,21 @@ cdkLollipopPlots <- subset(predictorsFisher_data,grepl(pattern = "CDK|dynamic",o
 svg(filename = "../exportImages/subm2_V1/cdkLollipop.svg",width = 40,height = 3)
 cdkLollipopPlots
 dev.off()
+
+# Lollipop plots for other human kinases targets
+
+otherKinasesLollipopPlots <- subset(predictorsFisher_data,grepl(pattern = "MAPK|AURK|PLK|NEK|DYRK",organism)) %>%  
+    mutate(organism=factor(organism,c("Human DYRK targets","Human NEK targets","Human PLK targets","Human AURK targets","Human MAPK targets"))) %>% 
+    ggplot(aes(x=organism, y=OR)) +
+    geom_segment( aes(xend=organism, yend=0)) +
+    geom_point(aes(color=organism,guide=F),size=12) +
+    theme_linedraw(base_size = 22)+
+    theme(panel.grid.major.y = element_blank())+
+    scale_y_continuous(limits = c(0,5),minor_breaks = c(0:5),breaks = seq(0,5,1),expand = c(0,0)) +
+    coord_flip() +
+    facet_wrap(~predictors,ncol=3)+
+    scale_color_manual(values = pal_tron()(7)[c(3,4,1,2,5,6)])+
+    xlab("")
 
 ```
 
