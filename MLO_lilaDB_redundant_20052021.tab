@@ -165,7 +165,7 @@ Q8IXJ6	Nucleoli
 Q8IZL8	Nucleoli
 Q8N122	Stress granules
 Q8NBZ0	Nucleoli
-Q8NBZ0	PML body
+Q8NBZ0	PML bodies
 Q8NCD3	Nucleoli
 Q8WUM0	NPC
 Q8WX93	Stress granules
@@ -227,7 +227,7 @@ Q9BUJ2	Stress granules
 Q12906	Nucleoli
 Q12906	P-bodies
 Q9UFC0	Nucleoli
-O94776	Mediator complex
+O94776	Superenhancers-Mediator
 Q9Y314	Stress granules
 Q9Y266	Stress granules
 Q7Z417	Stress granules
@@ -246,13 +246,13 @@ P18887	Nucleoli
 Q86VM9	Speckles
 P05114	Stress granules
 Q53HL2	Nucleoli 
-O60583	Mediator complex
-O75175	P-body
+O60583	Superenhancers-Mediator
+O75175	P-bodies
 O75175	PML bodies
 Q5HYJ3	Speckles
 Q5HYJ3	Nucleoli
 Q92794	Nucleoli
-Q92794	PML body
+Q92794	PML bodies
 Q02241	Stress granules
 Q02241	P-bodies
 Q8N9T8	Nucleoli
@@ -291,9 +291,9 @@ Q8WYP5	NPC
 Q96HC4	Stress granules
 Q96PZ2	Nucleoli
 Q9BVJ6	Nucleoli
-Q9NPI6	P-body
+Q9NPI6	P-bodies
 Q9Y2X3	Nucleoli
-Q9Y2X3	P bodies
+Q9Y2X3	P-bodies
 Q92945	Stress granules
 O75151	Nucleoli
 O76021	Nucleoli
