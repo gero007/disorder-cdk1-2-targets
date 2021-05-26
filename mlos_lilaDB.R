@@ -5,7 +5,7 @@ library(tidyr)
 
 redundant_MLO_lilaDB <-  read_delim("MLO_lilaDB_redundant_20052021.tab", "\t", escape_double = FALSE, trim_ws = TRUE)
 
-MLO_lilaDB_nr <- redundant_MLO_lilaDB %>% group_by(`ACC#`) %>% summarise_at("body",function(x){paste(x,collapse = ",")})
+MLO_lilaDB_nr <- redundant_MLO_lilaDB %>% group_by(`ACC#`) %>% summarise_at("body",function(x){paste(unique(x),collapse = ",")})
 
 
 
@@ -23,3 +23,4 @@ MLO_lilaDB_nr <- MLO_lilaDB_nr %>% mutate(human=case_when(
   TRUE ~ "Non Cdk target"
 ))
 
+write.table(MLO_lilaDB_nr,"MLO_lilaDB_nr_260521.tab",sep = "\t",quote = F,row.names = F)
