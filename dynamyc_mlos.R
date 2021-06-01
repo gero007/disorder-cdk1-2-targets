@@ -14,7 +14,7 @@ MLO_lilaDB_expanded <- merge.data.frame(MLO_lilaDB_nr,MLO_human,all = T,by.x = "
 
 MLO_lilaDB_expanded <- MLO_lilaDB_expanded %>% unite("MLO", body:MLOs, na.rm = TRUE, remove = TRUE,sep = ",")
 
-MLO_lilaDB_expanded <- MLO_lilaDB_expanded %>% group_by(uniprot) %>% summarise_at("MLO",function(x){paste(x,collapse = ",")})
+MLO_lilaDB_expanded <- MLO_lilaDB_expanded %>% group_by(uniprot) %>% summarise_at("MLO",function(x){paste(unique(x),collapse = ",")})
 
 MLO_lilaDB_expanded <- subset(MLO_lilaDB_expanded,MLO!="")
 

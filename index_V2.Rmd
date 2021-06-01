@@ -2224,6 +2224,10 @@ scale_y_continuous(limits = c(-20, 135), breaks = c(seq(0, 100, by = 20))) +
 scale_x_discrete(labels = c("IUPred", "SPOT","VSL2b")) + xlab(NULL) +
 scale_fill_manual(values = pal_jco()(10)[c(5,2,3,4)]) +
 scale_color_manual(values = pal_jco()(10)[c(10,7,8,9)],guide=FALSE)
+
+# Understand the lower quartile of the disorder percentage
+
+
 ```
 
 ```{r venn phase sep, echo=FALSE}
