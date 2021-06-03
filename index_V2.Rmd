@@ -1265,7 +1265,7 @@ iupl_dunnnMat[is.na(iupl_dunnnMat)] <- 1
 
 
 # iupl_dunnnMat_ord <- reorder_mat(iupl_dunnnMat)
-iupl_upper_tri <- get_upper_tri(iupl_dunnnMat_ord)
+iupl_upper_tri <- get_upper_tri(iupl_dunnnMat)
 # Melt the correlation matrix
 melted_iupl_dunnnMat <- melt(iupl_upper_tri, na.rm = TRUE)
 melted_iupl_dunnnMat$value_log <- -log10(melted_iupl_dunnnMat$value)
@@ -1310,7 +1310,7 @@ spot_dunnnMat[is.na(spot_dunnnMat)] <- 1
 
 
 # spot_dunnnMat_ord <- reorder_mat(spot_dunnnMat)
-spot_upper_tri <- get_upper_tri(spot_dunnnMat_ord)
+spot_upper_tri <- get_upper_tri(spot_dunnnMat)
 # Melt the correlation matrix
 melted_spot_dunnnMat <- melt(spot_upper_tri, na.rm = TRUE)
 melted_spot_dunnnMat$value_log <- -log10(melted_spot_dunnnMat$value)
@@ -1355,7 +1355,7 @@ vsl_dunnnMat[is.na(vsl_dunnnMat)] <- 1
 
 
 # vsl_dunnnMat_ord <- reorder_mat(vsl_dunnnMat)
-vsl_upper_tri <- get_upper_tri(vsl_dunnnMat_ord)
+vsl_upper_tri <- get_upper_tri(vsl_dunnnMat)
 # Melt the correlation matrix
 melted_vsl_dunnnMat <- melt(vsl_upper_tri, na.rm = TRUE)
 melted_vsl_dunnnMat$value_log <- -log10(melted_vsl_dunnnMat$value)
