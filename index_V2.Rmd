@@ -1275,7 +1275,7 @@ melted_iupl_dunnnMat$value<- prettyNum(melted_iupl_dunnnMat$value, format = "e",
 ggplot(melted_iupl_dunnnMat, aes(Var2, Var1, fill = value_log))+
     geom_tile(color = "white")+
     geom_text(aes(Var2, Var1, label = value), color = "white", size = 4,fontface = "bold") +
-    scale_fill_gradient(low = "red", high = "blue", 
+    scale_fill_gradient(low = pal_jco()(10)[4],high = pal_jco()(10)[1], 
                         limit = c(-log10(0.05),10), space = "Lab", 
                         name="P-value",
                         breaks=c(-log10(0.05),5,10),labels=c("0.05","10e-5","<10e-10")) +
@@ -1320,7 +1320,7 @@ melted_spot_dunnnMat$value<- prettyNum(melted_spot_dunnnMat$value, format = "e",
 ggplot(melted_spot_dunnnMat, aes(Var2, Var1, fill = value_log))+
     geom_tile(color = "white")+
     geom_text(aes(Var2, Var1, label = value), color = "white", size = 4,fontface = "bold") +
-    scale_fill_gradient(low = "red", high = "blue", 
+    scale_fill_gradient(low = pal_jco()(10)[4],high = pal_jco()(10)[1], 
                         limit = c(-log10(0.05),10), space = "Lab", 
                         name="P-value",
                         breaks=c(-log10(0.05),5,10),labels=c("0.05","10e-5","<10e-10")) +
@@ -1365,7 +1365,7 @@ melted_vsl_dunnnMat$value<- prettyNum(melted_vsl_dunnnMat$value, format = "e", d
 ggplot(melted_vsl_dunnnMat, aes(Var2, Var1, fill = value_log))+
     geom_tile(color = "white")+
     geom_text(aes(Var2, Var1, label = value), color = "white", size = 4,fontface = "bold") +
-    scale_fill_gradient(low = "red", high = "blue", 
+    scale_fill_gradient(low = pal_jco()(10)[4],high = pal_jco()(10)[1], 
                         limit = c(-log10(0.05),10), space = "Lab", 
                         name="P-value",
                         breaks=c(-log10(0.05),5,10),labels=c("0.05","10e-5","<10e-10")) +
