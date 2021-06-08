@@ -12,7 +12,7 @@ psap_xenopus <- read_delim("Guido/prediction_RF_xenopus_first_0to100_gero.tab",
 xenopus_psap_data <- cbind(psap_xenopus,subset=rep("Proteome",nrow(psap_xenopus)))
 
 phosphoproteomic_xenopus_psap <- psap_xenopus[psap_xenopus$acc %in% xenopus_data$ID,]
-xenopus_psap_data <- rbind(xenopus_psap_data,cbind(phosphoproteomic_xenopus_psap,subset=rep("Phosphoproteome",nrow(phosphoproteomic_xenopus_psap))))
+xenopus_psap_data <- rbind(xenopus_psap_data,cbind(phosphoproteomic_xenopus_psap,subset=rep("Phospho-\nproteome",nrow(phosphoproteomic_xenopus_psap))))
 
 dynamic_xenopus_psap <- psap_xenopus[psap_xenopus$acc %in% unique(xenopus_ANOVA_data$Proteins),]
 xenopus_psap_data <- rbind(xenopus_psap_data,cbind(dynamic_xenopus_psap,subset=rep(" Dynamic",nrow(dynamic_xenopus_psap))))
@@ -44,7 +44,7 @@ ggplot(xenopus_psap_data) + geom_violin(aes(x=subset,y=average,fill=subset),trim
 human_psap_data <- cbind(psap_human,subset=rep("Proteome",nrow(psap_human)))
 
 phosphoproteomic_human_psap <- psap_human[psap_human$acc %in% human_data$`ACC#`,]
-human_psap_data <- rbind(human_psap_data,cbind(phosphoproteomic_human_psap,subset=rep("Phosphoproteome",nrow(phosphoproteomic_human_psap))))
+human_psap_data <- rbind(human_psap_data,cbind(phosphoproteomic_human_psap,subset=rep("Phospho-\nproteome",nrow(phosphoproteomic_human_psap))))
 
 cdk_human_psap <- psap_human[psap_human$acc %in% subset(human_data,target=="Cdk1 target")$`ACC#`,]
 human_psap_data <- rbind(human_psap_data,cbind(cdk_human_psap,subset=rep("CDK",nrow(cdk_human_psap))))
@@ -72,4 +72,4 @@ ggplot(human_psap_data) + geom_violin(aes(x=subset,y=average,fill=subset),trim =
   theme(text = element_text(size=20),legend.position = "none",legend.title = element_blank(),axis.ticks.x = element_blank(),panel.grid.major.y = element_line(colour = "grey",linetype = "dashed")) +
   scale_y_continuous(name = "PSAP score",limits = c(-0.20, 1.2), breaks = c(seq(0, 1, by = 0.2))) +
   scale_x_discrete() + xlab(NULL) +
-  scale_fill_manual(values = c("#00adeeff","#ffdd15ff",pal_tron()(7)[3,4,1,2,5,6]))
+  scale_fill_manual(values = c("#00adeeff","#ffdd15ff",pal_tron()(7)[c(3,4,1,2,5,6)]))
